@@ -1,9 +1,10 @@
 import { Label } from "@/components/ui/label";
 import { cardItems } from "./utils";
+import { PageContainer } from "@/components";
 
 const HowTo = () => {
   return (
-    <section className="container flex flex-col text-center">
+    <PageContainer className="flex flex-col text-center">
       <Label className="font-sans text-4xl font-bold">
         How To use <span className="text-green-500">i</span>charge
       </Label>
@@ -23,7 +24,7 @@ const HowTo = () => {
           </div>
         ))}
       </div>
-    </section>
+    </PageContainer>
   );
 };
 

@@ -10,4 +10,6 @@ export type IconName =
   | "ic_svl_ib"
   | "ic_svl_ig"
   | "ic_svl_sib"
-  | "ic_svl_sig";
+  | "ic_svl_sig"
+  | "ic_maya"
+  | "ic_pldt";

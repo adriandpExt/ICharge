@@ -7,9 +7,7 @@ const Layout = ({ children }: PropsWithChildren) => {
     <>
       <NavBar />
       <Separator />
-      <main className="container mx-auto flex items-center py-24 md:py-32">
-        {children}
-      </main>
+      <main className="container mx-auto">{children}</main>
     </>
   );
 };

@@ -10,7 +10,7 @@ export const Drawer = () => {
   return (
     <Sheet>
       <SheetTrigger>
-        <Menu className="inline-flex md:hidden" />
+        <Menu className="inline-flex lg:hidden" />
       </SheetTrigger>
       <SheetContent side={"left"} className="space-y-5 text-center">
         <div className="flex items-center">
