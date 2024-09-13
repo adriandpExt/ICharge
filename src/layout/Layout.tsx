@@ -1,15 +1,13 @@
-import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/nav-bar";
+import { Separator } from "@/components/ui/separator";
 import { PropsWithChildren } from "react";
 
-const Layout = (props: PropsWithChildren) => {
-  const { children } = props;
+const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <NavBar />
-      <main>{children}</main>
-
-      <Footer />
+      <Separator />
+      <main className="container mx-auto">{children}</main>
     </>
   );
 };
