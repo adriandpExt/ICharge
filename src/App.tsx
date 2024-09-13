@@ -1,4 +1,4 @@
-import HowTo from "./layout/how-to/HowTo";
+import HowTo from "./screens/how-to/HowTo";
 import Layout from "./layout/Layout";
 
 const App = () => {
