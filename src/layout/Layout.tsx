@@ -1,15 +1,15 @@
-import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/nav-bar";
+import { Separator } from "@/components/ui/separator";
+import { PropsWithChildren } from "react";
 
-const Layout = () => {
+const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <NavBar />
-      <main className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
-        body
+      <Separator />
+      <main className="container mx-auto flex items-center py-24 md:py-32">
+        {children}
       </main>
-      <main>body</main>
-      <Footer />
     </>
   );
 };
