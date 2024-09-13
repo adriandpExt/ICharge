@@ -3,7 +3,7 @@ import { cardItems } from "./utils";
 
 const HowTo = () => {
   return (
-    <section className="container flex flex-col text-center ">
+    <section className="container flex h-screen flex-col py-5 text-center">
       <Label className="font-sans text-4xl font-bold">
         How To use <span className="text-green-500">i</span>charge
       </Label>
