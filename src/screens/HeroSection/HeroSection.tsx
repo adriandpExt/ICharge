@@ -1,4 +1,5 @@
 import powerbank from "@/assets/Products/powerbank.png";
+import hub from "@/assets/Products/icharge Dodeca.png";
 
 const HeroSection = () => {
   return (
@@ -48,8 +49,24 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hidden space-y-6 text-center lg:flex lg:text-start">
+      <div className="hidden lg:flex lg:text-start">
         <img src={powerbank} alt="powerbank" className="h-[608px] w-[302px]" />
+        <div className="z-40 pl-10">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Simply</h2>
+          <h1 className="mb-4 text-4xl font-bold md:text-5xl">
+            SCAN
+            <br />
+            CHARGE,
+            <br />& GO!
+          </h1>
+        </div>
+        <div className="absolute bottom-24 right-80">
+          <img
+            src={hub}
+            alt="Small cube-shaped device"
+            className="z-10 h-[357px] w-[412px]"
+          />
+        </div>
       </div>
     </section>
   );
