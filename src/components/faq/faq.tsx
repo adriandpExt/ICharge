@@ -160,7 +160,7 @@ export default function FAQPage() {
   return (
     <div className="flex h-screen flex-col bg-background">
       {/* Header */}
-      <header className="bg-primary px-8 py-4 text-primary-foreground">
+      <header className="bg-gray-800 px-8 py-4 text-primary-foreground">
         <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
       </header>
 
@@ -176,7 +176,7 @@ export default function FAQPage() {
                 onClick={() => setSelectedCategory(category.category)}
                 className={`mb-2 block w-full rounded px-4 py-2 text-left ${
                   selectedCategory === category.category
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-gray-800 text-primary-foreground"
                     : "hover:bg-primary/10"
                 }`}
               >

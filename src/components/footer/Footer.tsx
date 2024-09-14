@@ -51,12 +51,12 @@ export const Footer = () => {
           <div className="space-y-4">
             <img
               src="/placeholder.svg?height=30&width=100"
-              alt="Nosh logo"
+              alt=" logo"
               className="h-8"
             />
             <img
               src="/placeholder.svg?height=30&width=100"
-              alt="Joos Solar logo"
+              alt=" logo"
               className="h-8"
             />
           </div>
@@ -99,7 +99,7 @@ export const Footer = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <p>&copy; 2024 Joos Power</p>
+        <p>&copy; 2024 Quanta Dance, Inc</p>
       </div>
     </footer>
   );

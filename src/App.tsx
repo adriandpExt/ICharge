@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import HeroSection from "./screens/HeroSection";
 import HowTo from "./screens/how-to";
 import Service from "./screens/Service";
+import ProductRange from "./components/product/product";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Service />
         <About />
         <HowTo />
+        <ProductRange />
       </Layout>
     </>
   );
