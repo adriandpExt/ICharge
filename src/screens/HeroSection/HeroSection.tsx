@@ -3,7 +3,7 @@ import hub from "@/assets/Products/icharge Dodeca.png";
 
 const HeroSection = () => {
   return (
-    <section className="mx-auto grid h-screen w-10/12 place-items-center gap-10 py-20 pb-5 md:py-32 lg:grid-cols-2">
+    <section className="mx-auto grid h-full w-10/12 place-items-center gap-10 py-20 pb-5 md:py-32 lg:grid-cols-2">
       <div className="space-y-6 text-center lg:text-start">
         <div className="text-5xl font-bold md:text-6xl">
           <h1 className="inline">
