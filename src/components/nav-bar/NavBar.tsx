@@ -12,14 +12,17 @@ export const NavBar = () => {
 
         <nav className="hidden space-x-6 md:flex">
           {linkList.map((item) => (
-            <a href="#" className="text-gray-600 hover:text-gray-800">
+            <a
+              href="#"
+              className="font-semibold text-gray-600 hover:text-gray-900"
+            >
               {item}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Button variant="outline" className="hidden lg:inline-flex">
+          <Button className="hidden bg-green-500 hover:bg-green-800 lg:inline-flex">
             Android
           </Button>
           <Sun />

@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Mail } from "lucide-react";
 
 import { PageContainer } from "@/components";
+
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
 
 const Partner = () => {
   const [toggleDemo, setToggleDemo] = useState<boolean>(false);
