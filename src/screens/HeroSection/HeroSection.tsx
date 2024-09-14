@@ -49,8 +49,20 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hidden lg:flex lg:text-start">
-        <img src={powerbank} alt="powerbank" className="h-[608px] w-[302px]" />
+      <div className="hidden lg:text-start xl:flex">
+        <div className="relative inline-block">
+          <img
+            src={powerbank}
+            alt="Wall-mounted icharge unit"
+            className="h-[608px] w-[302px]"
+          />
+          <img
+            src={hub}
+            alt="Portable icharge unit"
+            className="absolute -bottom-16 -right-32 h-[357px] w-[412px]"
+          />
+        </div>
+
         <div className="z-40 pl-10">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Simply</h2>
           <h1 className="mb-4 text-4xl font-bold md:text-5xl">
@@ -59,13 +71,6 @@ const HeroSection = () => {
             CHARGE,
             <br />& GO!
           </h1>
-        </div>
-        <div className="absolute bottom-24 right-80">
-          <img
-            src={hub}
-            alt="Small cube-shaped device"
-            className="z-10 h-[357px] w-[412px]"
-          />
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ const HowTo = () => {
       <p className="mx-auto mb-8 mt-4 text-xl text-muted-foreground md:w-3/4">
         Step-by-step guide to use icharge
       </p>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {cardItems.map(({ title, description, icons }) => (
           <div className="rounded-lg border bg-muted/50 text-card-foreground shadow-sm">
             <div className="flex flex-col space-y-1.5 p-6">
