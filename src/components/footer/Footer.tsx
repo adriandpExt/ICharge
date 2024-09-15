@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 import { SvgIcons } from "../svg-icons";
 import RenderGridItem from "./RenderGridItem";
 
@@ -16,12 +18,23 @@ import { IconName } from "../svg-icons/utils";
 export const Footer = () => {
   const year = new Date();
 
-  const renderInfo = () => {
+  const navigate = useNavigate();
+
+  const handleNavigateHome = () => {
+    navigate("/");
+  };
+
+  const renderIconButton = () => {
+    return (
+      <Button variant={"icon"} className="h-24" onClick={handleNavigateHome}>
+        <SvgIcons name={"ic_svl_gs2"} size={200} />
+      </Button>
+    );
+  };
+  const renderInfoDesktop = () => {
     return (
       <div className="hidden w-full grid-cols-4 gap-4 p-5 px-20 lg:grid">
-        <Button variant={"icon"} className="h-24">
-          <SvgIcons name={"ic_svl_gs2"} size={200} />
-        </Button>
+        {renderIconButton()}
 
         <div className="flex flex-col items-center">
           <h2 className="mb-2 text-lg font-bold">{renderItems.follow.title}</h2>
@@ -29,11 +42,12 @@ export const Footer = () => {
           <div className="flex flex-row items-center gap-3">
             {renderItems.follow.items.map((item) => (
               <Avatar
+                key={item.path}
                 className="hover:cursor-pointer"
-                onClick={() => alert(item)}
+                onClick={handleNavigateHome}
               >
                 <AvatarFallback className="bg-[#61DAFB]">
-                  <SvgIcons name={item as IconName} size={20} />
+                  <SvgIcons name={item.icon as IconName} size={20} />
                 </AvatarFallback>
               </Avatar>
             ))}
@@ -52,12 +66,11 @@ export const Footer = () => {
       </div>
     );
   };
-  return (
-    <footer className="border-t-2 py-10">
-      {renderInfo()}
 
+  const renderInfoMobile = () => {
+    return (
       <div className="flex flex-col px-20 lg:hidden">
-        <SvgIcons name={"ic_svl_gs2"} size={200} />
+        {renderIconButton()}
 
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
@@ -65,9 +78,9 @@ export const Footer = () => {
               {renderItems.follow.title}
             </AccordionTrigger>
             <AccordionContent className="items-center space-y-3">
-              {renderItems.follow.label.map((item) => (
-                <Button variant="link" key={item}>
-                  {item}
+              {renderItems.follow.items.map((item) => (
+                <Button variant="link" key={item.path}>
+                  {item.label}
                 </Button>
               ))}
             </AccordionContent>
@@ -92,14 +105,22 @@ export const Footer = () => {
             </AccordionTrigger>
             <AccordionContent className="items-center space-y-3">
               {renderItems.about.items.map((item) => (
-                <Button variant={"link"} key={item}>
-                  {item}
-                </Button>
+                <Link to={item.path} key={item.path}>
+                  <Button variant={"link"}>{item.label}</Button>
+                </Link>
               ))}
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </div>
+    );
+  };
+
+  return (
+    <footer className="border-t-2 py-10">
+      {renderInfoDesktop()}
+
+      {renderInfoMobile()}
 
       <p className="py-10 text-center font-semibold">
         &copy; {year.getFullYear()}

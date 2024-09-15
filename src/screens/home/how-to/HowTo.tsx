@@ -23,8 +23,12 @@ const HowTo = () => {
         Step-by-step guide to use icharge
       </p>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {cardItems.map(({ title, description, icons }) => (
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
+        {cardItems.map(({ title, description, icons }, ids) => (
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
+            key={ids}
+          >
             <Card className="bg-muted/50 text-card-foreground shadow-sm">
               <CardHeader className="flex flex-col space-y-1.5 p-6">
                 <CardTitle className="grid place-items-center gap-4 text-2xl font-semibold leading-none tracking-tight">

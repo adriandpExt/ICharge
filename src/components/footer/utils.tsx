@@ -1,8 +1,15 @@
 export const renderItems = {
   follow: {
     title: "Follow Us",
-    items: ["ic_facebook", "ic_tiktok", "ic_instagram"],
-    label: ["Facebook", "TikTok", "Instagram"],
+    items: [
+      {
+        path: "/facebook",
+        label: "Facebook",
+        icon: "ic_facebook",
+      },
+      { path: "/tiktok", label: "TikTok", icon: "ic_tiktok" },
+      { path: "/instagram", label: "Instagram", icon: "ic_instagram" },
+    ],
   },
   platforms: {
     title: "Platforms",
@@ -10,6 +17,12 @@ export const renderItems = {
   },
   about: {
     title: "About",
-    items: ["Features", "FAQ"],
+    items: [
+      {
+        path: "/features",
+        label: "Features",
+      },
+      { path: "/faqs", label: "FAQ" },
+    ],
   },
 };
