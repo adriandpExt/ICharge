@@ -1,5 +1,6 @@
 import powerbank from "@/assets/Products/powerbank.png";
 import hub from "@/assets/Products/icharge Dodeca.png";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
@@ -38,15 +39,9 @@ const HeroSection = () => {
           on the go.
         </p>
 
-        <div className="space-y-4 md:space-x-4 md:space-y-0">
-          <a
-            rel="noreferrer noopener"
-            href="#cta"
-            className="inline-flex h-10 w-full items-center justify-center whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:w-1/3"
-          >
-            Get Started
-          </a>
-        </div>
+        <Button className="inline-flex h-10 w-full items-center justify-center whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:w-1/3">
+          Get Started
+        </Button>
       </div>
 
       <div className="hidden lg:flex lg:text-start">

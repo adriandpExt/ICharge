@@ -1,18 +1,15 @@
+import { Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
-
-import About from "./screens/about/About";
-import HeroSection from "./screens/HeroSection";
-import HowTo from "./screens/how-to";
-import Partner from "./screens/partner";
+import Home from "./screens/home";
 
 const App = () => {
   return (
     <>
       <Layout>
-        <HeroSection />
-        <About />
-        <HowTo />
-        <Partner />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/faq" element={<>Fuck</>} />
+        </Routes>
       </Layout>
     </>
   );

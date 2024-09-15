@@ -9,6 +9,9 @@ import {
 } from "@/components/ui/accordion";
 
 import { renderItems } from "./utils";
+import { Avatar, AvatarFallback } from "../ui/avatar";
+import { Button } from "../ui/button";
+import { IconName } from "../svg-icons/utils";
 
 export const Footer = () => {
   const year = new Date();
@@ -16,16 +19,32 @@ export const Footer = () => {
   const renderInfo = () => {
     return (
       <div className="hidden w-full grid-cols-4 gap-4 p-5 px-20 lg:grid">
-        <SvgIcons name={"ic_svl_gs2"} size={150} />
+        <Button variant={"icon"} className="h-24">
+          <SvgIcons name={"ic_svl_gs2"} size={200} />
+        </Button>
 
-        <RenderGridItem
-          title={renderItems.follow.title}
-          items={renderItems.follow.items}
-        />
+        <div className="flex flex-col items-center">
+          <h2 className="mb-2 text-lg font-bold">{renderItems.follow.title}</h2>
+
+          <div className="flex flex-row items-center gap-3">
+            {renderItems.follow.items.map((item) => (
+              <Avatar
+                className="hover:cursor-pointer"
+                onClick={() => alert(item)}
+              >
+                <AvatarFallback className="bg-[#61DAFB]">
+                  <SvgIcons name={item as IconName} size={20} />
+                </AvatarFallback>
+              </Avatar>
+            ))}
+          </div>
+        </div>
+
         <RenderGridItem
           title={renderItems.platforms.title}
           items={renderItems.platforms.items}
         />
+
         <RenderGridItem
           title={renderItems.about.title}
           items={renderItems.about.items}
@@ -38,16 +57,18 @@ export const Footer = () => {
       {renderInfo()}
 
       <div className="flex flex-col px-20 lg:hidden">
-        <SvgIcons name={"ic_svl_gs2"} size={150} />
+        <SvgIcons name={"ic_svl_gs2"} size={200} />
 
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="font-bold">
               {renderItems.follow.title}
             </AccordionTrigger>
-            <AccordionContent className="space-y-3">
-              {renderItems.follow.items.map((item) => (
-                <p key={item}>{item}</p>
+            <AccordionContent className="items-center space-y-3">
+              {renderItems.follow.label.map((item) => (
+                <Button variant="link" key={item}>
+                  {item}
+                </Button>
               ))}
             </AccordionContent>
           </AccordionItem>
@@ -56,9 +77,11 @@ export const Footer = () => {
             <AccordionTrigger className="font-bold">
               {renderItems.platforms.title}
             </AccordionTrigger>
-            <AccordionContent className="space-y-3">
+            <AccordionContent className="items-center space-y-3">
               {renderItems.platforms.items.map((item) => (
-                <p key={item}>{item}</p>
+                <Button variant={"link"} key={item}>
+                  {item}
+                </Button>
               ))}
             </AccordionContent>
           </AccordionItem>
@@ -67,9 +90,11 @@ export const Footer = () => {
             <AccordionTrigger className="font-bold">
               {renderItems.about.title}
             </AccordionTrigger>
-            <AccordionContent className="space-y-3">
+            <AccordionContent className="items-center space-y-3">
               {renderItems.about.items.map((item) => (
-                <p key={item}>{item}</p>
+                <Button variant={"link"} key={item}>
+                  {item}
+                </Button>
               ))}
             </AccordionContent>
           </AccordionItem>
