@@ -4,6 +4,7 @@ import HeroSection from "./screens/HeroSection";
 import HowTo from "./screens/how-to";
 import Service from "./screens/Service";
 import ProductRange from "./components/product/product";
+import SpotlightStories from "./components/spotlight-stories/spotlight";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Service />
         <About />
         <ProductRange />
+        <SpotlightStories />
         <HowTo />
       </Layout>
     </>
