@@ -1,6 +1,7 @@
+"use client";
+
 import { useState, useRef, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Products from "@/assets/Products/QC-RC.png";
 
 interface Product {
@@ -53,14 +54,17 @@ export default function ProductRange() {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX.current - touchEndX.current > 75) {
-      // Swipe left
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
-    } else if (touchEndX.current - touchStartX.current > 75) {
-      // Swipe right
-      setCurrentIndex(
-        (prevIndex) => (prevIndex - 1 + products.length) % products.length,
-      );
+    const touchDiff = touchStartX.current - touchEndX.current;
+    if (Math.abs(touchDiff) > 75) {
+      if (touchDiff > 0) {
+        // Swipe left
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+      } else {
+        // Swipe right
+        setCurrentIndex(
+          (prevIndex) => (prevIndex - 1 + products.length) % products.length,
+        );
+      }
     }
   };
 
@@ -74,44 +78,28 @@ export default function ProductRange() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="mb-8 text-center text-4xl font-bold">Product Range</h1>
       {isMobile ? (
-        <div
-          className="relative"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div className="flex justify-center">
-            <div className="w-64 text-center">
-              <img
-                src={products[currentIndex].image}
-                alt={products[currentIndex].name}
-                className="mx-auto mb-4"
-              />
-              <h2 className="mb-2 text-xl font-semibold">
-                {products[currentIndex].name}
-              </h2>
-              <p className="text-sm">{products[currentIndex].description}</p>
-            </div>
+        <div className="relative overflow-hidden">
+          <div
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            {products.map((product, index) => (
+              <div key={index} className="w-full flex-shrink-0 px-4">
+                <div className="mx-auto w-64 text-center">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="mx-auto mb-4"
+                  />
+                  <h2 className="mb-2 text-xl font-semibold">{product.name}</h2>
+                  <p className="text-sm">{product.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <button
-            className="absolute left-0 top-1/2 -translate-y-1/2 transform"
-            onClick={() =>
-              setCurrentIndex(
-                (prevIndex) =>
-                  (prevIndex - 1 + products.length) % products.length,
-              )
-            }
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          <button
-            className="absolute right-0 top-1/2 -translate-y-1/2 transform"
-            onClick={() =>
-              setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length)
-            }
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
           <div className="mt-4 flex justify-center">
             {products.map((_, index) => (
               <div
