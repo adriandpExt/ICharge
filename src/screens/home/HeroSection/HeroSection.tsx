@@ -1,9 +1,10 @@
 // import video from "@/assets/iCharge.mov";
+import { PageContainer } from "@/components";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="mx-auto grid h-screen w-10/12 place-items-center gap-10 py-20 pb-5 md:py-32 lg:grid-cols-2">
+    <PageContainer className="w-full">
       <video
         muted
         loop
@@ -17,7 +18,7 @@ const HeroSection = () => {
         Your browser does not support the video tag.
       </video>
       <div className="space-y-6 text-center lg:text-start">
-        <div className="text-5xl font-bold md:text-6xl">
+        <div className="text-3xl font-bold md:text-6xl">
           <h1 className="inline">
             <span className="text-green-500">i</span>
             <span className="inline text-gray-600 dark:text-gray-400">
@@ -56,7 +57,7 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-    </section>
+    </PageContainer>
   );
 };
 
