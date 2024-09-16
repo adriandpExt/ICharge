@@ -26,10 +26,10 @@ const HowTo = () => {
         {cardItems.map(({ title, description, icons }, ids) => (
           <motion.div
             whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 1 }}
+            whileTap={{ scale: 1.1 }}
             key={ids}
           >
-            <Card className="bg-muted/50 text-card-foreground shadow-sm">
+            <Card className="bg-muted/50 text-card-foreground">
               <CardHeader className="flex flex-col space-y-1.5 p-6">
                 <CardTitle className="grid place-items-center gap-4 text-2xl font-semibold leading-none tracking-tight">
                   {icons}

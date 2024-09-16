@@ -5,8 +5,10 @@ import { Menu, Zap } from "lucide-react";
 import { Button } from "../ui/button";
 
 import { linkList } from "./utils";
+import useStore from "@/store/useStore";
 
 export const Drawer = () => {
+  const { scrollToSection } = useStore();
   return (
     <Sheet>
       <SheetTrigger>
@@ -21,8 +23,13 @@ export const Drawer = () => {
         </div>
 
         <div className="flex flex-col space-y-2">
-          {linkList.map((item, index) => (
-            <Button key={index} variant={"ghost"} className="font-semibold">
+          {linkList.map(({ item, id }, index) => (
+            <Button
+              key={index}
+              variant={"ghost"}
+              className="font-semibold"
+              onClick={() => scrollToSection(id)}
+            >
               {item}
             </Button>
           ))}

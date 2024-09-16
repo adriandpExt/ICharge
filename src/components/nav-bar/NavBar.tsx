@@ -20,14 +20,14 @@ export const NavBar = () => {
 
         <nav className="hidden space-x-6 md:flex">
           {linkList.map(({ item, id }) => (
-            <a
+            <Button
               key={item}
-              href="#"
-              className="font-semibold text-gray-600 hover:text-gray-900"
+              variant="link"
+              className="font-semibold text-gray-600 hover:text-gray-900 hover:no-underline"
               onClick={() => scrollToSection(id)}
             >
               {item}
-            </a>
+            </Button>
           ))}
         </nav>
 
