@@ -1,4 +1,9 @@
-import { Award } from "lucide-react";
+import {
+  Award,
+  BatteryCharging,
+  ScanLine,
+  SlidersVertical,
+} from "lucide-react";
 import { ReactNode } from "react";
 
 interface CardItems {
@@ -16,16 +21,16 @@ export const cardItems: CardItems[] = [
   {
     title: "Scan",
     description: "Scan the QR code on the charging station",
-    icons: <Award size={40} color="green" />,
+    icons: <ScanLine size={40} color="green" />,
   },
   {
     title: "Charge",
     description: "Enjoy charging",
-    icons: <Award size={40} color="green" />,
+    icons: <BatteryCharging size={40} color="green" />,
   },
   {
     title: "Return",
     description: "Return the powerbank to the station",
-    icons: <Award size={40} color="green" />,
+    icons: <SlidersVertical size={40} color="green" />,
   },
 ];
