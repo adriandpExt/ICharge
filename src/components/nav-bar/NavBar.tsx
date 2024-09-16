@@ -8,8 +8,6 @@ import { useStore } from "@/store/useStore";
 import Drawer from "./Drawer";
 
 import { linkList } from "./utils";
-import { SvgIcons } from "../svg-icons";
-import { useStore } from "@/store/useStore";
 
 export const NavBar = () => {
   const { scrollToSection } = useStore();
@@ -36,7 +34,6 @@ export const NavBar = () => {
           <Button
             variant="outline"
             className="hidden bg-green-500 hover:bg-green-800 lg:inline-flex"
-            onClick={() => scrollToSection("howToPage")}
           >
             Android
           </Button>
