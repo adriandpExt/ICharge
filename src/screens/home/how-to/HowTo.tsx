@@ -15,7 +15,7 @@ import { cardItems } from "./utils";
 
 const HowTo = () => {
   return (
-    <PageContainer className="flex flex-col text-center">
+    <PageContainer className="flex flex-col text-center" id="howToPage">
       <Label className="font-sans text-4xl font-bold">
         How To use <span className="text-green-500">i</span>charge
       </Label>
