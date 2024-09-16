@@ -1,9 +1,17 @@
-import powerbank from "@/assets/Products/powerbank.png";
-import hub from "@/assets/Products/icharge Dodeca.png";
+import video from "@/assets/iCharge.mov";
 
 const HeroSection = () => {
   return (
     <section className="mx-auto grid h-screen w-10/12 place-items-center gap-10 py-20 pb-5 md:py-32 lg:grid-cols-2">
+      <video
+        muted
+        loop
+        className="absolute inset-0 left-0 top-0 -z-30 h-full w-full object-cover"
+        autoPlay
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="space-y-6 text-center lg:text-start">
         <div className="text-5xl font-bold md:text-6xl">
           <h1 className="inline">
@@ -48,22 +56,8 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-
       <div className="hidden lg:text-start xl:flex">
-        <div className="relative inline-block">
-          <img
-            src={powerbank}
-            alt="Wall-mounted icharge unit"
-            className="h-[608px] w-[302px]"
-          />
-          <img
-            src={hub}
-            alt="Portable icharge unit"
-            className="absolute -bottom-16 -right-32 h-[357px] w-[412px]"
-          />
-        </div>
-
-        <div className="z-40 pl-10">
+        <div className="z-40 pl-10 text-white">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Simply</h2>
           <h1 className="mb-4 text-4xl font-bold md:text-5xl">
             SCAN
