@@ -12,18 +12,19 @@ import { linkList } from "./utils";
 export const NavBar = () => {
   const { scrollToSection } = useStore();
   return (
-    <div className="absolute top-0 w-full border-b-2">
+    <div className="fixed top-0 w-full border-b-2">
       <header className="container mx-auto flex h-14 items-center justify-between px-4 py-6 transition-all">
-        <Button variant={"icon"} onClick={() => scrollToSection("howToPage")}>
+        <Button variant={"icon"}>
           <SvgIcons name="ic_svl_gs2" size={150} />
         </Button>
 
         <nav className="hidden space-x-6 md:flex">
-          {linkList.map((item) => (
+          {linkList.map(({ item, id }) => (
             <a
               key={item}
               href="#"
               className="font-semibold text-gray-600 hover:text-gray-900"
+              onClick={() => scrollToSection(id)}
             >
               {item}
             </a>

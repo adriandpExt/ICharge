@@ -17,7 +17,6 @@ export const useStore = create<AppState>((set) => ({
   scrollToSection: (id) => {
     const section = document.getElementById(id);
     if (section) {
-      set({ activeSection: id });
       section.scrollIntoView({ behavior: "smooth" });
     }
   },
