@@ -9,8 +9,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  // CarouselNext,
+  // CarouselPrevious,
 } from "@/components/ui/carousel";
 import Products from "@/assets/Products/QC-RC.png";
 
@@ -131,8 +131,8 @@ const About = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {/* <CarouselPrevious />
+          <CarouselNext /> */}
         </Carousel>
       </div>
       <div className="hidden grid-cols-5 gap-8 md:grid">
