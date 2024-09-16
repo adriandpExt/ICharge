@@ -38,7 +38,7 @@ export const NavBar = () => {
           >
             Android
           </Button>
-          <Sun />
+          <Sun className="text-gray-600" />
 
           <Drawer />
         </div>
