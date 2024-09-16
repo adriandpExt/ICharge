@@ -19,7 +19,7 @@ const Partner = () => {
   return (
     <PageContainer
       id="partner"
-      className="my-24 place-items-center items-center py-16 sm:my-32 lg:grid lg:grid-cols-2"
+      className="my-24 place-items-center items-center sm:my-32 lg:grid lg:grid-cols-2"
     >
       <div className="lg:col-start-1">
         <h2 className="text-3xl font-bold md:text-4xl">
