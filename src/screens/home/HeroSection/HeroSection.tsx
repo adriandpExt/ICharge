@@ -56,17 +56,6 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-      <div className="hidden lg:text-start xl:flex">
-        <div className="z-40 pl-10 text-white">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Simply</h2>
-          <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-            SCAN
-            <br />
-            CHARGE,
-            <br />& GO!
-          </h1>
-        </div>
-      </div>
     </section>
   );
 };
