@@ -1,4 +1,5 @@
 import video from "@/assets/iCharge.mov";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
@@ -6,7 +7,7 @@ const HeroSection = () => {
       <video
         muted
         loop
-        className="absolute inset-0 left-0 top-0 -z-30 h-full w-full object-cover"
+        className="absolute inset-0 left-0 top-0 -z-30 h-full w-full object-cover brightness-[30%]"
         autoPlay
       >
         <source src={video} type="video/mp4" />
@@ -40,20 +41,16 @@ const HeroSection = () => {
           </h2>
         </div>
 
-        <p className="mx-auto text-xl text-muted-foreground md:w-10/12 lg:mx-0">
+        <p className="mx-auto text-xl text-white md:w-10/12 lg:mx-0">
           icharge offers a one-stop self-service mobile power bank rental
           service, providing a solution for charging your mobile devices while
           on the go.
         </p>
 
         <div className="space-y-4 md:space-x-4 md:space-y-0">
-          <a
-            rel="noreferrer noopener"
-            href="#cta"
-            className="inline-flex h-10 w-full items-center justify-center whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:w-1/3"
-          >
+          <Button className="inline-flex h-10 place-items-center text-sm text-primary-foreground bg-black bg-opacity-50 w-40">
             Get Started
-          </a>
+          </Button>
         </div>
       </div>
     </section>
