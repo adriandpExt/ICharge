@@ -1,4 +1,4 @@
-import video from "@/assets/iCharge.mov";
+// import video from "@/assets/iCharge.mov";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -10,7 +10,10 @@ const HeroSection = () => {
         className="absolute inset-0 left-0 top-0 -z-30 h-full w-full object-cover brightness-[30%]"
         autoPlay
       >
-        <source src={video} type="video/mp4" />
+        <source
+          src="https://joospower.com/wp-content/uploads/2023/10/Joos-Advert-final.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
       <div className="space-y-6 text-center lg:text-start">
