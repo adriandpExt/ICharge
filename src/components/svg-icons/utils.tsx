@@ -12,4 +12,7 @@ export type IconName =
   | "ic_svl_sib"
   | "ic_svl_sig"
   | "ic_maya"
-  | "ic_pldt";
+  | "ic_pldt"
+  | "ic_facebook"
+  | "ic_tiktok"
+  | "ic_instagram";
