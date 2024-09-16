@@ -48,7 +48,7 @@ const HeroSection = () => {
         </p>
 
         <div className="space-y-4 md:space-x-4 md:space-y-0">
-          <Button className="inline-flex h-10 place-items-center text-sm text-primary-foreground bg-black bg-opacity-50 w-40">
+          <Button className="inline-flex h-10 w-40 place-items-center bg-green-500 bg-opacity-50 text-sm text-primary-foreground hover:bg-green-600">
             Get Started
           </Button>
         </div>
