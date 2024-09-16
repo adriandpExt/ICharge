@@ -12,7 +12,7 @@ import { linkList } from "./utils";
 export const NavBar = () => {
   const { scrollToSection } = useStore();
   return (
-    <div className="fixed top-0 w-full border-b-2">
+    <div className="sticky top-0 z-50 w-full border-b-2 backdrop-blur-sm">
       <header className="container mx-auto flex h-14 items-center justify-between px-4 py-6 transition-all">
         <Button variant={"icon"}>
           <SvgIcons name="ic_svl_gs2" size={150} />
