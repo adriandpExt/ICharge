@@ -8,11 +8,35 @@ import { useStore } from "@/store/useStore";
 import Drawer from "./Drawer";
 
 import { linkList } from "./utils";
+import { useEffect, useState } from "react";
 
 export const NavBar = () => {
   const { scrollToSection } = useStore();
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="sticky top-0 z-50 w-full border-b-2 backdrop-blur-sm">
+    <div
+      className={`sticky top-0 z-50 w-full backdrop-blur-sm transition-all ${
+        isScrolled ? "bg-white" : "bg-transparent"
+      }`}
+    >
       <header className="container mx-auto flex h-14 items-center justify-between px-4 py-6 transition-all">
         <Button variant={"icon"}>
           <SvgIcons name="ic_svl_gs2" size={150} />
@@ -23,7 +47,7 @@ export const NavBar = () => {
             <Button
               key={item}
               variant="link"
-              className="font-semibold text-gray-600 hover:text-gray-900 hover:no-underline"
+              className={`font-semibold hover:text-gray-500 hover:no-underline ${isScrolled ? "text-black" : "text-white"}`}
               onClick={() => scrollToSection(id)}
             >
               {item}
