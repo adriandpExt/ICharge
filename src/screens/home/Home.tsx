@@ -3,6 +3,7 @@ import About from "./about";
 import HeroSection from "./HeroSection";
 import HowTo from "./how-to";
 import Partner from "./partner";
+import Features from "../features/Features";
 
 const Home = (): ReactElement => {
   return (
@@ -10,6 +11,7 @@ const Home = (): ReactElement => {
       <HeroSection />
       <About />
       <HowTo />
+      <Features />
       <Partner />
     </>
   );

@@ -1,9 +1,43 @@
 // import video from "@/assets/iCharge.mov";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
     <section className="mx-auto grid h-screen w-10/12 place-items-center gap-10 py-20 pb-5 md:py-32 lg:grid-cols-2">
+      <motion.div
+        className="absolute -z-20 h-[25rem] w-[25rem] rounded-3xl bg-green-500 bg-opacity-25"
+        initial={"-40vw"}
+        animate={{
+          x: ["-40vw", "35vw", "-40vw", "35vw"],
+          rotate: [90, 180, 270, -270, -180, 90],
+          y: ["30%", "-100%"],
+          scale: [1, 0.5],
+        }}
+        transition={{
+          duration: 60,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+        }}
+      ></motion.div>
+      <motion.div
+        className="absolute -z-20 h-[15rem] w-[15rem] rounded-3xl bg-blue-500 bg-opacity-25"
+        initial={{ x: "35vw", y: "20vh" }}
+        animate={{
+          x: ["35vw", "-40vw", "35vw", "40vw"],
+          rotate: [90, 180, 270, -270, -180, 90],
+          y: ["30%", "-100%"],
+          scale: [1.2, 0.2],
+        }}
+        transition={{
+          duration: 60,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+        }}
+      ></motion.div>
+
       <video
         muted
         loop

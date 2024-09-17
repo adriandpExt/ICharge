@@ -94,7 +94,7 @@ const About = () => {
       </h2>
 
       <div className="flex flex-wrap items-center justify-evenly gap-10 pb-36 pt-20">
-        <img src={maya} alt="maya" className="h-16 object-contain md:h-24" />{" "}
+        <img src={maya} alt="maya" className="h-16 object-contain md:h-24" />
         <img src={pldt} alt="pldt" className="h-16 object-contain md:h-24" />
       </div>
 
