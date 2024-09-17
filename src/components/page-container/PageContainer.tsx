@@ -13,7 +13,7 @@ export const PageContainer = ({
   className,
 }: PageContainerProps) => {
   return (
-    <section className={cn("mt-10 h-full p-10", className)} id={id}>
+    <section className={cn("h-full px-10 py-16", className)} id={id}>
       {children}
     </section>
   );
