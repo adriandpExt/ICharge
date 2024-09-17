@@ -17,7 +17,7 @@ const HeroSection = () => {
         Your browser does not support the video tag.
       </video>
       <div className="space-y-6 text-center lg:text-start">
-        <div className="text-5xl font-bold md:text-6xl">
+        <div className="text-3xl font-bold md:text-6xl lg:text-5xl">
           <h1 className="inline">
             <span className="text-green-500">i</span>
             <span className="inline text-gray-600 dark:text-gray-400">
