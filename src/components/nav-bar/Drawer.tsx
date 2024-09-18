@@ -54,10 +54,15 @@ export const Drawer = () => {
                 }
               />
             </SelectTrigger>
-            <SelectContent>
+
+            <SelectContent className="flex flex-col items-center">
               <SelectGroup className="text-center">
-                <SelectItem value="chinese">Chinese</SelectItem>
-                <SelectItem value="english">English</SelectItem>
+                <SelectItem value="chinese" className="text-center">
+                  Chinese
+                </SelectItem>
+                <SelectItem value="english" className="text-center">
+                  English
+                </SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

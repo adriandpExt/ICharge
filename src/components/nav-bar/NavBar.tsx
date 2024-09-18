@@ -30,7 +30,7 @@ export const NavBar = () => {
 
   const renderNavibation = () => {
     return (
-      <nav className="hidden space-x-6 md:flex">
+      <nav className="hidden space-x-6 lg:flex">
         {linkList.map(({ item, id }, index) => (
           <>
             <Button
@@ -59,12 +59,12 @@ export const NavBar = () => {
       }`}
     >
       <Button variant={"icon"}>
-        <SvgIcons name="ic_svl_g2" size={150} />
+        <SvgIcons name="ic_svl_ig" size={60} />
       </Button>
 
       {renderNavibation()}
 
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center">
         <Button
           size={"icon"}
           variant={"ghost"}
@@ -78,23 +78,23 @@ export const NavBar = () => {
           />
         </Button>
 
-        <Button
-          className={`hidden w-40 rounded-full bg-green-500 hover:bg-green-800 lg:inline-flex ${isScroll ? "text-black" : "text-white"}`}
-        >
-          Android
-        </Button>
         <Drawer />
+
         <Select>
-          <SelectTrigger className="hidden w-auto items-center justify-start space-x-2 whitespace-nowrap border-white text-white lg:flex">
+          <SelectTrigger
+            className={`hidden w-auto items-center justify-start space-x-2 whitespace-nowrap lg:flex ${isScroll ? "text-black" : "text-white"}`}
+          >
             <SelectValue
               placeholder={
                 <div className="flex items-center gap-1">
-                  <Globe /> Language
+                  <Globe />
                 </div>
               }
             />
           </SelectTrigger>
-          <SelectContent className="border-white text-white">
+          <SelectContent
+            className={`${isScroll ? "text-black" : "text-white"}`}
+          >
             <SelectGroup>
               <SelectItem value="chinese">
                 <div className="flex items-center">

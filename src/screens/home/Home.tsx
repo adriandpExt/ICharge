@@ -10,8 +10,8 @@ const Home = (): ReactElement => {
     <>
       <HeroSection />
       <CarouselCompany />
-      <About />
       <HowTo />
+      <About />
       <Partner />
     </>
   );
