@@ -73,7 +73,7 @@ const About = () => {
 
   const renderAboutCompany = () => {
     return (
-      <>
+      <div className="">
         <h2 className="text-3xl font-bold md:text-4xl">
           <span className="text-green-500">About </span>
           Company
@@ -83,7 +83,7 @@ const About = () => {
           Quanta Dance, Inc. provides services in IoT, eCommerce, Payment and
           other technologies.
         </p>
-      </>
+      </div>
     );
   };
 
@@ -94,11 +94,21 @@ const About = () => {
       </h2>
 
       <div className="flex flex-wrap items-center justify-evenly gap-10 pb-36 pt-20">
-        <img src={maya} alt="maya" className="h-16 object-contain md:h-24" />{" "}
-        <img src={pldt} alt="pldt" className="h-16 object-contain md:h-24" />
+        <img
+          src={maya}
+          alt="maya"
+          className="h-16 object-contain md:h-24"
+          data-aos="fade-right"
+        />{" "}
+        <img
+          src={pldt}
+          alt="pldt"
+          className="h-16 object-contain md:h-24"
+          data-aos="fade-left"
+        />
       </div>
 
-      <Card className="w-full bg-gray-100 p-5">
+      <Card className="w-full bg-gray-100 p-5" data-aos="fade-down">
         <div className="flex flex-col-reverse gap-8 px-6 md:flex-row md:gap-12">
           <img src={pilot} alt="pilot" className="w-[300px] object-contain" />
 
