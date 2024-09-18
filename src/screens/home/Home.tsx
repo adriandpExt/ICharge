@@ -3,6 +3,7 @@ import About from "./about";
 import HeroSection from "./HeroSection";
 import HowTo from "./how-to";
 import Partner from "./partner";
+import Features from "./features/Features";
 import CarouselCompany from "../company-carousel/CompanyCarousel";
 
 const Home = (): ReactElement => {
@@ -10,8 +11,9 @@ const Home = (): ReactElement => {
     <>
       <HeroSection />
       <CarouselCompany />
-      <HowTo />
+      <Features />
       <About />
+      <HowTo />
       <Partner />
     </>
   );
