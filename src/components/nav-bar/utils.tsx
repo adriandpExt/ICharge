@@ -5,16 +5,17 @@ interface LinkList {
 
 export const linkList: LinkList[] = [
   {
-    // ["How To", "Features", "Partner with Us"]
-    item: "How To",
+    item: "Sectors",
     id: "howToPage",
   },
   {
-    item: "Features",
+    item: "Partner with Us",
     id: "features",
   },
+  { item: "Sustainability", id: "news" },
   {
-    item: "Partner with Us",
+    item: "News",
     id: "partner",
   },
+  { item: "Customer Service", id: "contact" },
 ];

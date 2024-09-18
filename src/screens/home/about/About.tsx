@@ -88,7 +88,7 @@ const About = () => {
   };
 
   return (
-    <PageContainer id="about">
+    <PageContainer id="about" className="dark:bg-background">
       <h2 className="mb-8 text-center text-2xl font-bold text-primary">
         Partners and Businesses
       </h2>
