@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Card } from "@/components/ui/card";
+import Dunkin from "@/assets/Products/dunkin.png";
 
 const SCROLL_SPEED = 0.5;
 
@@ -9,12 +10,12 @@ interface Logo {
 }
 
 const logos: Logo[] = [
-  { name: "Robinsons Malls", src: "/placeholder.svg?height=40&width=120" },
-  { name: "Dunkin", src: "/placeholder.svg?height=40&width=120" },
-  { name: "Ayala Malls", src: "/placeholder.svg?height=40&width=120" },
-  { name: "Mary Grace", src: "/placeholder.svg?height=40&width=120" },
-  { name: "Ikea", src: "/placeholder.svg?height=40&width=120" },
-  { name: "Google", src: "/placeholder.svg?height=40&width=120" },
+  { name: "Robinsons Malls", src: Dunkin },
+  { name: "Dunkin", src: Dunkin },
+  { name: "Ayala Malls", src: Dunkin },
+  { name: "Mary Grace", src: Dunkin },
+  { name: "Ikea", src: Dunkin },
+  { name: "Google", src: Dunkin },
 ];
 
 const CarouselCompany: React.FC = () => {
