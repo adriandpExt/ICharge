@@ -42,7 +42,7 @@ const CarouselCompany: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden bg-background py-12">
+    <div className="] relative -top-40 w-full overflow-hidden rounded-tl-3xl rounded-tr-3xl bg-[#fff] py-10 md:rounded-tl-[4rem] md:rounded-tr-[4rem]">
       <h2 className="mb-8 text-center text-2xl font-bold text-primary">
         Our Trusted Partners
       </h2>

@@ -19,12 +19,12 @@ const Partner = () => {
   return (
     <PageContainer
       id="partner"
-      className="my-24 place-items-center items-center sm:my-32 lg:grid lg:grid-cols-2"
+      className="place-items-center items-center md:grid lg:grid-cols-2"
     >
       <div className="lg:col-start-1">
         <h2 className="text-3xl font-bold md:text-4xl">
           Partner with us and power your shops with
-          <span className="mx-2 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-transparent">
+          <span className="mx-2 bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-green-500">
             icharge
           </span>{" "}
           today

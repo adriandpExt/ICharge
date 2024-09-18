@@ -8,11 +8,11 @@ import applestore from "@/assets/icons/ic_apple.svg";
 
 const HeroSection = () => {
   return (
-    <section className="mx-auto grid h-screen w-10/12 place-items-center gap-10 lg:grid-cols-2">
+    <section className="grid h-[90vh] w-full place-items-start md:grid-cols-2 md:place-items-center">
       <video
         muted
         loop
-        className="absolute inset-0 left-0 top-0 -z-30 h-full w-full object-cover brightness-[30%]"
+        className="absolute inset-0 left-0 top-0 -z-30 h-[90vh] w-full object-cover brightness-[30%]"
         autoPlay
       >
         <source
@@ -21,7 +21,10 @@ const HeroSection = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="space-y-5 text-center lg:text-start" data-aos="fade-up">
+      <div
+        className="space-y-5 px-10 text-center lg:text-start"
+        data-aos="fade-up"
+      >
         <div className="text-3xl font-bold md:text-6xl lg:text-5xl">
           <h1 className="inline">
             <span className="text-green-500">i</span>
@@ -59,8 +62,10 @@ const HeroSection = () => {
           <Button className="h-14 w-full gap-2 rounded-full bg-opacity-50 bg-gradient-to-l from-[#066C01] to-[#5AFF52] text-sm text-primary-foreground md:w-48">
             Get Started <ArrowRight />
           </Button>
-          <img src={playstore} alt="ic_playstore" />
-          <img src={applestore} alt="ic_apple" />
+          <div className="flex items-center justify-evenly md:block md:space-y-2">
+            <img src={playstore} alt="ic_playstore" className="w-32 md:w-40" />
+            <img src={applestore} alt="ic_apple" className="w-32 md:w-40" />
+          </div>
         </div>
       </div>
     </section>
