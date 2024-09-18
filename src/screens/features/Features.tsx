@@ -62,7 +62,7 @@ const Features = () => {
     setOpen((open) => !open);
   };
   return (
-    <section className="flex h-screen w-full flex-col place-items-center bg-[url('@/assets/bgCarousel.png')] bg-cover bg-no-repeat py-20">
+    <section className="flex h-fit w-full flex-col place-items-center bg-[url('@/assets/bgCarousel.png')] bg-cover bg-no-repeat pt-20 pb-32">
       <h1 className="mb-14 text-center font-mono text-5xl font-semibold text-white lg:text-[96px]">
         PRODUCTS
       </h1>

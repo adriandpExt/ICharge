@@ -9,10 +9,10 @@ const ProductModal = ({ item, open, handleOpenChange }: ProdModal) => {
         style={{ borderRadius: "2.5rem" }}
       >
         <div className="space-y-5 p-0 lg:hidden">
-          <h1 className="text-xl font-bold tracking-tighter text-white">
+          <h1 className="text-xl font-bold tracking-tighter text-white font-sans">
             {item.name}
           </h1>
-          <h1 className="text-md font-semibold text-white">
+          <h1 className="text-md font-semibold text-white font-sans">
             {item.description}
           </h1>
         </div>
@@ -23,10 +23,10 @@ const ProductModal = ({ item, open, handleOpenChange }: ProdModal) => {
           />
         </div>
         <div className="hidden space-y-10 py-10 lg:block">
-          <h1 className="text-7xl font-bold tracking-tighter text-white">
+          <h1 className="text-7xl font-bold tracking-tighter font-sans text-white">
             {item.name}
           </h1>
-          <h1 className="font-semibold text-white">{item.description}</h1>
+          <h1 className="font-semibold text-white font-sans">{item.description}</h1>
         </div>
       </DialogContent>
     </Dialog>
