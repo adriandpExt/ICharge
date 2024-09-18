@@ -73,7 +73,7 @@ const About = () => {
 
   const renderAboutCompany = () => {
     return (
-      <>
+      <div className="">
         <h2 className="text-3xl font-bold md:text-4xl">
           <span className="text-green-500">About </span>
           Company
@@ -83,24 +83,32 @@ const About = () => {
           Quanta Dance, Inc. provides services in IoT, eCommerce, Payment and
           other technologies.
         </p>
-      </>
+      </div>
     );
   };
 
   return (
     <PageContainer id="about">
-      <section></section>
-
-      <h2 className="mb-8 text-center text-2xl font-bold dark:text-foreground">
+      <h2 className="mb-8 text-center text-2xl font-bold text-primary">
         Partners and Businesses
       </h2>
 
       <div className="flex flex-wrap items-center justify-evenly gap-10 pb-36 pt-20">
-        <img src={maya} alt="maya" className="h-16 object-contain md:h-24" />{" "}
-        <img src={pldt} alt="pldt" className="h-16 object-contain md:h-24" />
+        <img
+          src={maya}
+          alt="maya"
+          className="h-16 object-contain md:h-24"
+          data-aos="fade-right"
+        />{" "}
+        <img
+          src={pldt}
+          alt="pldt"
+          className="h-16 object-contain md:h-24"
+          data-aos="fade-left"
+        />
       </div>
 
-      <Card className="w-full bg-gray-100 p-5">
+      <Card className="w-full bg-gray-100 p-5" data-aos="fade-down">
         <div className="flex flex-col-reverse gap-8 px-6 md:flex-row md:gap-12">
           <img src={pilot} alt="pilot" className="w-[300px] object-contain" />
 
@@ -111,8 +119,9 @@ const About = () => {
         </div>
       </Card>
 
-      <h1 className="title mb-8 mt-10 text-center">Product Range</h1>
-
+      <h1 className="mb-8 mt-10 text-center text-4xl font-bold">
+        Product Range
+      </h1>
       <div className="md:hidden">
         <Carousel className="mx-auto w-full max-w-xs">
           <CarouselContent>
@@ -136,7 +145,6 @@ const About = () => {
           <CarouselNext /> */}
         </Carousel>
       </div>
-
       <div className="hidden grid-cols-5 gap-8 md:grid">
         {products.map((product, index) => (
           <div key={index} className="text-center">

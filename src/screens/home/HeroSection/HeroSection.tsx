@@ -21,7 +21,7 @@ const HeroSection = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="space-y-5 text-center lg:text-start">
+      <div className="space-y-5 text-center lg:text-start" data-aos="fade-up">
         <div className="text-3xl font-bold md:text-6xl lg:text-5xl">
           <h1 className="inline">
             <span className="text-green-500">i</span>
