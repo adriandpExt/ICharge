@@ -13,8 +13,10 @@ export const linkList: LinkList[] = [
     item: "Features",
     id: "features",
   },
+  { item: "News", id: "news" },
   {
     item: "Partner with Us",
     id: "partner",
   },
+  { item: "Contact Us", id: "contact" },
 ];

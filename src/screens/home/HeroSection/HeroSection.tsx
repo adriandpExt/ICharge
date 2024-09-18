@@ -1,9 +1,14 @@
 // import video from "@/assets/iCharge.mov";
+
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+import playstore from "@/assets/icons/ic_playstore.svg";
+import applestore from "@/assets/icons/ic_apple.svg";
 
 const HeroSection = () => {
   return (
-    <section className="mx-auto grid h-screen w-10/12 place-items-center gap-10 py-20 pb-5 md:py-32 lg:grid-cols-2">
+    <section className="mx-auto grid h-screen w-10/12 place-items-center gap-10 lg:grid-cols-2">
       <video
         muted
         loop
@@ -16,7 +21,7 @@ const HeroSection = () => {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="space-y-6 text-center lg:text-start">
+      <div className="space-y-5 text-center lg:text-start">
         <div className="text-3xl font-bold md:text-6xl lg:text-5xl">
           <h1 className="inline">
             <span className="text-green-500">i</span>
@@ -29,7 +34,7 @@ const HeroSection = () => {
 
           <h2 className="inline text-gray-600 dark:text-gray-400">
             Stay
-            <span className="ml-3 inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] bg-clip-text text-transparent">
+            <span className="ml-3 inline bg-gradient-to-r from-[#00FF8C] via-[#1fc0f1] to-[#00FBFF] bg-clip-text text-transparent">
               Powered
             </span>
           </h2>
@@ -38,7 +43,7 @@ const HeroSection = () => {
 
           <h2 className="inline text-gray-600 dark:text-gray-400">
             Stay
-            <span className="ml-3 inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] bg-clip-text text-transparent">
+            <span className="ml-3 inline bg-gradient-to-r from-[#00FBFF] via-[#1fc0f1] to-[#00FF8C] bg-clip-text text-transparent">
               Connected
             </span>
           </h2>
@@ -50,10 +55,12 @@ const HeroSection = () => {
           on the go.
         </p>
 
-        <div className="space-y-4 md:space-x-4 md:space-y-0">
-          <Button className="inline-flex h-10 w-40 place-items-center bg-green-500 bg-opacity-50 text-sm text-primary-foreground hover:bg-green-600">
-            Get Started
+        <div className="items-center space-y-4">
+          <Button className="h-14 w-full gap-2 rounded-full bg-opacity-50 bg-gradient-to-l from-[#066C01] to-[#5AFF52] text-sm text-primary-foreground md:w-48">
+            Get Started <ArrowRight />
           </Button>
+          <img src={playstore} alt="ic_playstore" />
+          <img src={applestore} alt="ic_apple" />
         </div>
       </div>
     </section>

@@ -15,4 +15,6 @@ export type IconName =
   | "ic_pldt"
   | "ic_facebook"
   | "ic_tiktok"
-  | "ic_instagram";
+  | "ic_instagram"
+  | "ic_playstore"
+  | "ic_apple";
