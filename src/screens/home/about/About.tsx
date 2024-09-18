@@ -89,7 +89,9 @@ const About = () => {
 
   return (
     <PageContainer id="about">
-      <h2 className="mb-8 text-center text-2xl font-bold text-primary">
+      <section></section>
+
+      <h2 className="mb-8 text-center text-2xl font-bold dark:text-foreground">
         Partners and Businesses
       </h2>
 
@@ -109,9 +111,8 @@ const About = () => {
         </div>
       </Card>
 
-      <h1 className="mb-8 mt-10 text-center text-4xl font-bold">
-        Product Range
-      </h1>
+      <h1 className="title mb-8 mt-10 text-center">Product Range</h1>
+
       <div className="md:hidden">
         <Carousel className="mx-auto w-full max-w-xs">
           <CarouselContent>
@@ -135,6 +136,7 @@ const About = () => {
           <CarouselNext /> */}
         </Carousel>
       </div>
+
       <div className="hidden grid-cols-5 gap-8 md:grid">
         {products.map((product, index) => (
           <div key={index} className="text-center">
