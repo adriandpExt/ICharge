@@ -1,32 +1,35 @@
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-} from "@/components/ui/alert-dialog";
+import { Dialog, DialogContent } from "@/components/dialog/Dialog";
+import { ProdModal } from "./types";
 
-interface ProductModal {
-  item: number;
-  open: boolean;
-  handleOpenChange: () => void;
-}
-
-const ProductModal = ({ item, open, handleOpenChange }: ProductModal) => {
+const ProductModal = ({ item, open, handleOpenChange }: ProdModal) => {
   return (
-    <AlertDialog open={open} onOpenChange={handleOpenChange}>
-        <AlertDialogContent className="bg-blend-lighten">
-          <AlertDialogHeader>
-            <AlertDialogDescription>{item}</AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-    </AlertDialog>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      <DialogContent
+        className="sm:max-h-md grid h-[615px] w-[90%] grid-cols-1 border-x-[1.5px] border-y-2 border-green-500 border-x-green-600 border-y-green-500 bg-black/25 p-20 shadow-inner shadow-green-700 backdrop-blur-2xl lg:w-[1024px] lg:grid-cols-2"
+        style={{ borderRadius: "2.5rem" }}
+      >
+        <div className="space-y-5 p-0 lg:hidden">
+          <h1 className="text-xl font-bold tracking-tighter text-white">
+            {item.name}
+          </h1>
+          <h1 className="text-md font-semibold text-white">
+            {item.description}
+          </h1>
+        </div>
+        <div>
+          <img
+            src={item.image}
+            className="relative h-[307.5px] w-[100%] object-contain lg:top-[32%]"
+          />
+        </div>
+        <div className="hidden space-y-10 py-10 lg:block">
+          <h1 className="text-7xl font-bold tracking-tighter text-white">
+            {item.name}
+          </h1>
+          <h1 className="font-semibold text-white">{item.description}</h1>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
