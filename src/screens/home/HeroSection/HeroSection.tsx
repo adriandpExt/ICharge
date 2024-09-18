@@ -52,7 +52,7 @@ const HeroSection = () => {
         <p className="mx-auto text-xl text-white md:w-10/12 lg:mx-0">
           icharge offers a one-stop self-service mobile power bank rental
           service, providing a solution for charging your mobile devices while
-          on the go.
+          on the go. sakjdkhsa dhksad sakjdSA KJfdsakj dsakjgfdsg j
         </p>
 
         <div className="items-center space-y-4">
