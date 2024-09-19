@@ -17,4 +17,6 @@ export type IconName =
   | "ic_tiktok"
   | "ic_instagram"
   | "ic_playstore"
-  | "ic_apple";
+  | "ic_apple"
+  | "ic_uk_flag"
+  | "ic_ph_flag";
