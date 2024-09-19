@@ -14,6 +14,8 @@ const HeroSection = () => {
         loop
         className="absolute inset-0 left-0 top-0 h-[90vh] w-full object-cover brightness-[30%]"
         autoPlay
+        playsInline
+        disablePictureInPicture
       >
         <source
           src="https://joospower.com/wp-content/uploads/2023/10/Joos-Advert-final.mp4"
