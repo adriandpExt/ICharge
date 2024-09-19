@@ -22,7 +22,11 @@ const HowTo = () => {
       <p className="mx-auto mb-8 mt-4 text-xl text-muted-foreground md:w-3/4">
         Step-by-step guide to use icharge
       </p>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div
+        className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+        data-aos="fade-left"
+        data-aos-duration="800"
+      >
         {cardItems.map(({ title, description, icons }, ids) => (
           <motion.div
             whileHover={{ scale: 1.2 }}
