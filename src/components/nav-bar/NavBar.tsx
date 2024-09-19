@@ -17,7 +17,8 @@ import { Globe, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 export const NavBar = () => {
   const { theme, setTheme } = useTheme();
 
@@ -25,6 +26,7 @@ export const NavBar = () => {
 
   const { i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleValueChange = (value: string) => {
     setSelectedLanguage(value);
@@ -44,25 +46,28 @@ export const NavBar = () => {
   const renderNavibation = () => {
     return (
       <nav className="hidden space-x-6 lg:flex">
-        {linkList.map((item, index) => (
-          <>
-            <Button
-              key={index}
-              variant="link"
-              className={`font-semibold hover:text-gray-500 hover:no-underline ${
-                isScroll ? "text-black" : "text-white"
-              } `}
-            >
-              <Link to={item.path as string}>{item.label}</Link>
-            </Button>
-            {index < linkList.length - 1 && (
-              <Separator
-                orientation="vertical"
-                className={`mx-4 h-8 ${isScroll ? "bg-black" : "bg-white"}`}
-              />
-            )}
-          </>
-        ))}
+        {linkList.map((item, index) => {
+          const isActive = location.pathname === item.path; // Check if the current path matches the link path
+
+          return (
+            <div key={item.path} className="flex items-center">
+              <Button
+                variant="link"
+                className={`font-poppins hover:text-gray-500 hover:no-underline ${
+                  isActive ? "font-bold text-white underline" : ""
+                } ${isScroll ? "text-black" : "text-white"}`}
+              >
+                <Link to={item.path as string}>{item.label}</Link>
+              </Button>
+              {index < linkList.length - 1 && (
+                <Separator
+                  orientation="vertical"
+                  className={`mx-4 h-8 ${isScroll ? "bg-black" : "bg-white"}`}
+                />
+              )}
+            </div>
+          );
+        })}
       </nav>
     );
   };
