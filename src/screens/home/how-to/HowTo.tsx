@@ -15,9 +15,9 @@ import { cardItems } from "./utils";
 
 const HowTo = () => {
   return (
-    <PageContainer className="flex flex-col text-center" id="howToPage">
-      <Label className="font-sans text-4xl font-bold">
-        How To use <span className="text-green-500">i</span>charge
+    <PageContainer className="flex flex-col" id="howToPage">
+      <Label className="font-sans text-4xl font-bold dark:text-white">
+        How To use iCharge
       </Label>
       <p className="mx-auto mb-8 mt-4 text-xl text-muted-foreground md:w-3/4">
         Step-by-step guide to use icharge

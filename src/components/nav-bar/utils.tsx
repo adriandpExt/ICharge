@@ -1,21 +1,22 @@
-interface LinkList {
-  item: string;
-  id: string;
+import { RouteObject } from "react-router-dom";
+
+interface LinkList extends Omit<RouteObject, "children"> {
+  label: string;
 }
 
 export const linkList: LinkList[] = [
   {
-    item: "Sectors",
-    id: "howToPage",
+    label: "Sectors",
+    path: "sectors",
   },
   {
-    item: "Partner with Us",
-    id: "features",
+    label: "Partner with Us",
+    path: "partner",
   },
-  { item: "Sustainability", id: "news" },
+  { label: "Sustainability", path: "sustainability" },
   {
-    item: "News",
-    id: "partner",
+    label: "News",
+    path: "news",
   },
-  { item: "Customer Service", id: "contact" },
+  { label: "Customer Service", path: "customer-service" },
 ];

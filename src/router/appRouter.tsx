@@ -15,6 +15,14 @@ const router: RouteObject[] = [
         element: <Home />,
       },
       {
+        path: "sectors",
+        element: <>Sectors</>,
+      },
+      { path: "partner", element: <>Partber</> },
+      { path: "sustainability", element: <>Sustainability</> },
+      { path: "news", element: <>NEWS</> },
+      { path: "customer-service", element: <>Customer Service</> },
+      {
         path: "faqs",
         element: <Faqs />,
       },
@@ -22,6 +30,6 @@ const router: RouteObject[] = [
   },
 ];
 
-const appRouter = createBrowserRouter(router)
+const appRouter = createBrowserRouter(router);
 
 export default appRouter;

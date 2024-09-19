@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useStore } from "@/store/useStore";
+
 import useScroll from "@/hooks/useScroll";
 import Drawer from "./Drawer";
 import { linkList } from "./utils";
@@ -17,13 +17,14 @@ import { Globe, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 export const NavBar = () => {
-  const { scrollToSection } = useStore();
   const { theme, setTheme } = useTheme();
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
 
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const handleValueChange = (value: string) => {
     setSelectedLanguage(value);
@@ -36,20 +37,23 @@ export const NavBar = () => {
 
   const isScroll = useScroll(window.innerHeight);
 
+  const handleBackHome = () => {
+    return navigate("/");
+  };
+
   const renderNavibation = () => {
     return (
       <nav className="hidden space-x-6 lg:flex">
-        {linkList.map(({ item, id }, index) => (
+        {linkList.map((item, index) => (
           <>
             <Button
-              key={item}
+              key={index}
               variant="link"
               className={`font-semibold hover:text-gray-500 hover:no-underline ${
                 isScroll ? "text-black" : "text-white"
               } `}
-              onClick={() => scrollToSection(id)}
             >
-              {item}
+              <Link to={item.path as string}>{item.label}</Link>
             </Button>
             {index < linkList.length - 1 && (
               <Separator
@@ -69,7 +73,7 @@ export const NavBar = () => {
         isScroll ? "bg-white" : "bg-transparent"
       }`}
     >
-      <Button variant={"icon"}>
+      <Button variant={"icon"} onClick={handleBackHome}>
         <SvgIcons name="ic_svl_ig" size={60} />
       </Button>
 
