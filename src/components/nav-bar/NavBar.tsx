@@ -1,73 +1,140 @@
-import { Sun } from "lucide-react";
-
 import { Button } from "../ui/button";
-
 import { SvgIcons } from "../svg-icons";
-import { useStore } from "@/store/useStore";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
+import useScroll from "@/hooks/useScroll";
 import Drawer from "./Drawer";
-
 import { linkList } from "./utils";
-import { useEffect, useState } from "react";
-
+import { Separator } from "../ui/separator";
+import { Globe, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 export const NavBar = () => {
-  const { scrollToSection } = useStore();
+  const { theme, setTheme } = useTheme();
 
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+  const { i18n } = useTranslation();
+  const navigate = useNavigate();
 
-    window.addEventListener("scroll", handleScroll);
+  const handleValueChange = (value: string) => {
+    setSelectedLanguage(value);
+    handleChangeLanguage(value);
+  };
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const handleChangeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
+  const isScroll = useScroll(window.innerHeight);
+
+  const handleBackHome = () => {
+    return navigate("/");
+  };
+
+  const renderNavibation = () => {
+    return (
+      <nav className="hidden space-x-6 lg:flex">
+        {linkList.map((item, index) => (
+          <>
+            <Button
+              key={index}
+              variant="link"
+              className={`font-semibold hover:text-gray-500 hover:no-underline ${
+                isScroll ? "text-black" : "text-white"
+              } `}
+            >
+              <Link to={item.path as string}>{item.label}</Link>
+            </Button>
+            {index < linkList.length - 1 && (
+              <Separator
+                orientation="vertical"
+                className={`mx-4 h-8 ${isScroll ? "bg-black" : "bg-white"}`}
+              />
+            )}
+          </>
+        ))}
+      </nav>
+    );
+  };
 
   return (
-    <div
-      className={`sticky top-0 z-50 w-full backdrop-blur-sm transition-all ${
-        isScrolled ? "bg-white" : "bg-transparent"
+    <header
+      className={`sticky top-0 z-50 mx-auto flex h-28 w-full items-center justify-between px-4 py-6 backdrop-blur-sm transition-all ${
+        isScroll ? "bg-white" : "bg-transparent"
       }`}
     >
-      <header className="container mx-auto flex h-14 items-center justify-between px-4 py-6 transition-all">
-        <Button variant={"icon"}>
-          <SvgIcons name="ic_svl_gs2" size={150} />
+      <Button variant={"icon"} onClick={handleBackHome}>
+        <SvgIcons name="ic_svl_ig" size={60} />
+      </Button>
+
+      {renderNavibation()}
+
+      <div className="flex items-center">
+        <Button
+          size={"icon"}
+          variant={"ghost"}
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        >
+          <Sun
+            className={`${
+              isScroll ? "text-black" : "text-white"
+            } h-[1.5rem] w-[1.3rem] dark:hidden`}
+          />
+          <Moon
+            className={`${
+              isScroll ? "text-black" : "text-white"
+            } hidden h-5 w-5 dark:block`}
+          />
         </Button>
 
-        <nav className="hidden space-x-6 md:flex">
-          {linkList.map(({ item, id }) => (
-            <Button
-              key={item}
-              variant="link"
-              className={`font-semibold hover:text-gray-500 hover:no-underline ${isScrolled ? "text-black" : "text-white"}`}
-              onClick={() => scrollToSection(id)}
-            >
-              {item}
-            </Button>
-          ))}
-        </nav>
+        <Drawer />
 
-        <div className="flex items-center space-x-4">
-          <Button
-            variant="outline"
-            className="hidden bg-green-500 hover:bg-green-800 lg:inline-flex"
+        {/* Language Selection */}
+        <Select onValueChange={handleValueChange} value={selectedLanguage}>
+          <SelectTrigger
+            className={`hidden w-auto items-center justify-start space-x-2 whitespace-nowrap lg:flex ${
+              isScroll ? "text-black" : "text-white"
+            }`}
           >
-            Android
-          </Button>
-          <Sun className="text-gray-600" />
-
-          <Drawer />
-        </div>
-      </header>
-    </div>
+            <SelectValue
+              placeholder={
+                <div className="flex items-center gap-1">
+                  <Globe />
+                </div>
+              }
+            />
+          </SelectTrigger>
+          <SelectContent
+            className={`${isScroll ? "text-black" : "text-white"}`}
+          >
+            <SelectGroup>
+              <SelectItem value="en">
+                <div className="flex items-center">
+                  <SvgIcons name="ic_uk_flag" size={30} />
+                  <span className="ml-2">En</span>
+                </div>
+              </SelectItem>
+              <SelectItem value="ph">
+                <div className="flex items-center">
+                  <SvgIcons name="ic_ph_flag" size={30} />
+                  <span className="ml-2">Ph</span>
+                </div>
+              </SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+    </header>
   );
 };
 
