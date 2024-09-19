@@ -5,12 +5,12 @@ import { AosInitializer } from "./lib/aosInitializer";
 
 const App = () => {
   return (
-    <>
+    <div className="dark:bg-black">
       <Layout>
         <AosInitializer />
         <Outlet />
       </Layout>
-    </>
+    </div>
   );
 };
 
