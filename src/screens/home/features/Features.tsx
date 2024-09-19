@@ -26,7 +26,7 @@ const Features = () => {
   };
   return (
     <section className="flex h-fit w-full flex-col place-items-center bg-[url('@/assets/bgCarousel.png')] bg-cover bg-no-repeat pb-32 pt-20">
-      <h1 className="mb-14 text-center font-mono text-5xl font-semibold text-white lg:text-[96px]">
+      <h1 className="font-poppins mb-14 text-center text-5xl font-semibold text-white lg:text-[96px]">
         PRODUCTS
       </h1>
       <Carousel opts={{ align: "center" }} className="w-[95%] lg:w-[85%]">

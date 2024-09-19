@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: lexendDeca;
+  src: url("./assets/font/LexendDeca-Regular.ttf");
+}
+
+@font-face {
+  font-family: poppins;
+  src: url("./assets/font/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: staatliches;
+  src: url("./assets/font/Staatliches-Regular.ttf");
+}
+
 @layer base {
   :root {
     --background: #ffffff; /* 0 0% 100% */
