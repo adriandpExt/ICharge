@@ -13,7 +13,7 @@ export const linkList: LinkList[] = [
     label: "Partner with Us",
     path: "/partner",
   },
-  { label: "Sustainability", path: "sustainability" },
+  { label: "Sustainability", path: "/sustainability" },
   {
     label: "News",
     path: "/news",
