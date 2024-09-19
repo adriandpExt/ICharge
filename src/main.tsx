@@ -4,7 +4,7 @@ import { RouterProvider } from "react-router-dom";
 
 import "virtual:svg-icons-register";
 import "./index.css";
-import appRouter from "./lib/appRouter.tsx";
+import appRouter from "./router/appRouter.tsx";
 import { ThemeProvider } from "./components/theme-provider/ThemeProvider.tsx";
 
 import "@/i18n/index.ts";

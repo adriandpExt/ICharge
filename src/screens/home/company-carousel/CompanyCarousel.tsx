@@ -44,7 +44,7 @@ const CarouselCompany: React.FC = () => {
 
   return (
     <div className="relative -top-40 w-full overflow-hidden rounded-tl-3xl rounded-tr-3xl border-2 border-green-400 bg-[#043B00] py-10 shadow-xl md:rounded-bl-[4rem] md:rounded-br-[4rem] md:rounded-tl-[4rem] md:rounded-tr-[4rem]">
-      <h2 className="mb-8 text-center text-2xl font-bold text-white">
+      <h2 className="font-poppins mb-8 text-center text-2xl font-bold text-white">
         Our Trusted Partners
       </h2>
       <div ref={scrollRef} className="flex items-center gap-12 px-12">
