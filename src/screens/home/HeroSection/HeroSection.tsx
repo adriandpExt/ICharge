@@ -12,7 +12,7 @@ const HeroSection = () => {
       <video
         muted
         loop
-        className="absolute inset-0 left-0 top-0 h-[90vh] w-full object-cover brightness-[30%]"
+        className="absolute inset-0 left-0 top-0 h-[90vh] w-full rounded-bl-[4rem] rounded-br-[4rem] border-b-2 border-white object-cover shadow-2xl brightness-[30%]"
         autoPlay
         playsInline
         disablePictureInPicture
