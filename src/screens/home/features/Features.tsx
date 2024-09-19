@@ -73,16 +73,16 @@ const Features = () => {
               key={index}
               className="flex w-full justify-center lg:basis-1/3"
             >
-              <Card className="rounded-[2.5rem] border-x-[1.5px] border-y-2 border-x-green-600 border-y-green-500 bg-black/25 shadow-inner shadow-green-700">
+              <Card className="rounded-[2.5rem] border-x-[1.5px] border-y-2 border-b-2 border-x-green-600 border-y-green-500  shadow-inner shadow-green-700">
                 <CardContent className="flex h-[439px] w-[358px] flex-col place-content-center items-center space-y-5 rounded-[2.5rem] border-0 p-0">
                   <div
-                    className="inherit absolute -z-50 flex h-[439px] w-[358px] rounded-[2.5rem] border-[#414141] bg-[#414141]/50 bg-black backdrop-blur-xl lg:basis-1/3"
+                    className="inherit absolute -z-50 flex h-[439px] w-[358px] rounded-[2.5rem] border-[#414141] bg-[#414141]/50 backdrop-blur-lg lg:basis-1/3"
                     style={{
                       clipPath: " polygon(100% 0%, 0% 0%, 0% 63%, 100% 23%)",
                     }}
                   ></div>
                   <div
-                    className="inherit absolute -z-50 h-[439px] w-[358px] rounded-[2.5rem] bg-green-400/20 backdrop-blur-xl"
+                    className="inherit absolute -z-50 h-[439px] w-[358px] rounded-[3rem] bg-green-400/20 backdrop-blur-lg"
                     style={{
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
                     }}
