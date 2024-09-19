@@ -2,8 +2,19 @@ import { Dialog, DialogContent } from "@/components/dialog/Dialog";
 import { ProdModal } from "../types";
 import SubLabel from "./SubLabel";
 import BgPolygon from "./BgPolygon";
+import { useEffect } from "react";
 
 const ProductModal = ({ item, open, handleOpenChange }: ProdModal) => {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [open]);
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
