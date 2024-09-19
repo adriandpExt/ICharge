@@ -1,4 +1,3 @@
-import React from "react";
 import { ProdModal } from "../types";
 import { Separator } from "@/components/ui/separator";
 
