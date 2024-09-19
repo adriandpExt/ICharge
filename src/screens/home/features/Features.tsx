@@ -7,52 +7,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import ProductModal from "./ProductModal";
+import ProductModal from "./components/ProductModal";
 
-import Products from "@/assets/Products/icharge Dodeca.png";
-import Products2 from "@/assets/Products/QC-RC.2.png";
-import Products3 from "@/assets/Products/icharge Tower.png";
-import Products4 from "@/assets/Products/icharge Hexa.png";
-import Products5 from "@/assets/Products/QC-SQ.png";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-
-const products: Product[] = [
-  {
-    name: "ICharge",
-    image: Products,
-    description:
-      "Compact, portable, and powerful, our power bank is perfect for on-the-go charging needs.",
-  },
-  {
-    name: "ICHARGE13",
-    image: Products2,
-    description: "Perfect for venues with available countertop space.",
-  },
-  {
-    name: "ICHARGE12",
-    image: Products3,
-    description: "Perfect for all venues... no countertop space? No problem!",
-  },
-  {
-    name: "ICharge",
-    image: Products4,
-    description: "Perfect for higher footfall areas with limited space.",
-  },
-  {
-    name: "ICharge",
-    image: Products5,
-    description: "Perfect advertising solution with maximum charging capacity.",
-  },
-];
+import { initValue, products } from "./utils";
 
 const Features = () => {
   const [open, setOpen] = useState(false);
-  const [content, setContent] = useState<Product>({
-    name: "",
-    image: "",
-    description: "",
-  });
+  const [content, setContent] = useState<Product>(initValue);
   const handleOpen = (e: { stopPropagation: () => void }, item: Product) => {
     e.stopPropagation();
     setContent(item);
@@ -73,7 +36,7 @@ const Features = () => {
               key={index}
               className="flex w-full justify-center lg:basis-1/3"
             >
-              <Card className="rounded-[2.5rem] border-x-[1.5px] border-y-2 border-b-2 border-x-green-600 border-y-green-500  shadow-inner shadow-green-700">
+              <Card className="rounded-[2.5rem] border-x-[1.5px] border-y-2 border-b-2 border-x-green-600 border-y-green-500 shadow-inner shadow-green-700">
                 <CardContent className="flex h-[439px] w-[358px] flex-col place-content-center items-center space-y-5 rounded-[2.5rem] border-0 p-0">
                   <div
                     className="inherit absolute -z-50 flex h-[439px] w-[358px] rounded-[2.5rem] border-[#414141] bg-[#414141]/50 backdrop-blur-lg lg:basis-1/3"
