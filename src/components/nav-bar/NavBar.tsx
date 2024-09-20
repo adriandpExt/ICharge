@@ -75,7 +75,7 @@ export const NavBar = () => {
   return (
     <header
       className={`sticky top-0 z-50 mx-auto flex h-28 w-full items-center justify-between px-4 py-6 backdrop-blur-sm transition-all ${
-        isScroll ? "border-b-2 bg-white" : "bg-transparent"
+        isScroll ? "border-b-[1px] bg-white" : "bg-transparent"
       }`}
     >
       <Button variant={"icon"} onClick={handleBackHome}>
