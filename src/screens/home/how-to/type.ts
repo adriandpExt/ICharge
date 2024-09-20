@@ -1,3 +1,5 @@
+import { PropsWithChildren } from "react";
+
 export interface StepCardProps {
   stepNumber: number;
   title: string;
@@ -6,7 +8,7 @@ export interface StepCardProps {
   currentStep: number;
   onClick: () => void;
 }
-export interface HowToCardProps {
+export interface HowToCardProps extends PropsWithChildren {
   className?: string;
   imgClassName: string;
   even: boolean;
