@@ -2,6 +2,8 @@ import App from "@/App";
 import ErrorScreen from "@/screens/error-screen/ErrorScreen";
 import Faqs from "@/screens/faqs/Faqs";
 import Home from "@/screens/home/Home";
+import News from "@/screens/news/News";
+import Sectors from "@/screens/sectors";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const router: RouteObject[] = [
@@ -16,12 +18,12 @@ const router: RouteObject[] = [
       },
       {
         path: "sectors",
-        element: <>Sectors</>,
+        element: <Sectors />,
       },
-      { path: "partner", element: <>Partber</> },
-      { path: "sustainability", element: <>Sustainability</> },
-      { path: "news", element: <>NEWS</> },
-      { path: "customer-service", element: <>Customer Service</> },
+      { path: "partner", element: <News /> },
+      { path: "sustainability", element: <News /> },
+      { path: "news", element: <News /> },
+      { path: "customer-service", element: <News /> },
       {
         path: "faqs",
         element: <Faqs />,

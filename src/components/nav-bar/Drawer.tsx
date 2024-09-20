@@ -5,7 +5,7 @@ import { Globe, Menu } from "lucide-react";
 import { Button } from "../ui/button";
 
 import { linkList } from "./utils";
-import useStore from "@/store/useStore";
+
 import useScroll from "@/hooks/useScroll";
 import { SvgIcons } from "../svg-icons";
 import {
@@ -16,9 +16,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { Link } from "react-router-dom";
 
 export const Drawer = () => {
-  const { scrollToSection } = useStore();
   const isScroll = useScroll(window.innerHeight);
 
   return (
@@ -33,14 +33,9 @@ export const Drawer = () => {
         <SvgIcons name={"ic_svl_g2"} size={150} />
 
         <div className="flex flex-col space-y-2">
-          {linkList.map(({ item, id }, index) => (
-            <Button
-              key={index}
-              variant={"ghost"}
-              className="font-semibold"
-              onClick={() => scrollToSection(id)}
-            >
-              {item}
+          {linkList.map((item, index) => (
+            <Button key={index} variant={"ghost"} className="font-semibold">
+              <Link to={item.path as string}>{item.label}</Link>
             </Button>
           ))}
           <Button variant="outline">Android</Button>
