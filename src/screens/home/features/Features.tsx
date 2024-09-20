@@ -57,13 +57,13 @@ const Features = () => {
                     style={{
                       clipPath: " polygon(100% 0%, 0% 0%, 0% 63%, 100% 23%)",
                     }}
-                  ></div>
+                  />
                   <div
                     className="inherit absolute -z-50 h-[439px] w-[358px] rounded-[3rem] bg-green-400/20 backdrop-blur-lg"
                     style={{
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
                     }}
-                  ></div>
+                  />
                   <img
                     src={data.image}
                     className="h-[50%] w-auto object-contain"
