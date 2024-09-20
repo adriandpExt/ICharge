@@ -156,8 +156,9 @@ const HowTo = () => {
           HOW TO USE ICHARGE?
         </Label>
         <div className="mx-auto flex w-[80%] grid-cols-9 flex-col p-2 md:grid">
-          {stepCard.map((card) => (
+          {stepCard.map((card, index) => (
             <StepCard
+              key={index}
               stepNumber={card.stepNumber}
               title={card.title}
               description={card.description}
