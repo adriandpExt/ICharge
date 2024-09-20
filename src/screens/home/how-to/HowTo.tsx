@@ -57,21 +57,19 @@ const StepCard = ({
       onClick={onClick} // Clicking this will toggle the active state
     >
       {stepNumber % 2 === 0 ? (
-        <div className="col-start-1 col-end-5 hidden w-full flex-col items-start justify-center lg:flex">
-          {isActive && (
-            <>
-              {/* Details are only shown when isActive is true */}
-              <div data-aos="fade-up">
-                <Label className="font-lexendDeca text-5xl font-bold">
-                  {title}
-                </Label>
-                <p className="text-start font-lexendDeca text-xl">
-                  {description}
-                </p>
-              </div>
-            </>
-          )}
-        </div>
+        isActive ? (
+          <div
+            className="col-start-1 col-end-5 hidden w-full flex-col items-end justify-center space-y-3 lg:flex"
+            data-aos="zoom-in"
+          >
+            <Label className="font-lexendDeca text-5xl font-bold">
+              {title}
+            </Label>
+            <p className="text-end font-lexendDeca text-xl">{description}</p>
+          </div>
+        ) : (
+          <></>
+        )
       ) : (
         <HowToCard
           className={cn(
@@ -117,22 +115,16 @@ const StepCard = ({
             throw new Error("Function not implemented.");
           }}
         />
-      ) : (
-        <div className="col-start-6 col-end-12 hidden w-full flex-col items-start justify-center lg:flex">
-          {isActive && (
-            <>
-              {/* Details are only shown when isActive is true */}
-              <div data-aos="fade-up">
-                <Label className="font-lexendDeca text-5xl font-bold">
-                  {title}
-                </Label>
-                <p className="text-start font-lexendDeca text-xl">
-                  {description}
-                </p>
-              </div>
-            </>
-          )}
+      ) : isActive ? (
+        <div
+          className="col-start-6 col-end-12 hidden w-full flex-col items-start justify-center space-y-3 lg:flex"
+          data-aos="zoom-in"
+        >
+          <Label className="font-lexendDeca text-5xl font-bold">{title}</Label>
+          <p className="text-start font-lexendDeca text-xl">{description}</p>
         </div>
+      ) : (
+        <></>
       )}
     </div>
   );
