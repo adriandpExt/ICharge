@@ -26,7 +26,7 @@ const Features = () => {
   };
   return (
     <section className="flex h-fit w-full flex-col place-items-center bg-[url('@/assets/bgCarousel.png')] bg-cover bg-no-repeat pb-32 pt-20">
-      <h1 className="font-poppins mb-14 text-center text-5xl font-semibold text-white lg:text-[96px]">
+      <h1 className="mb-14 text-center font-poppins text-5xl font-semibold text-white lg:text-[96px]">
         PRODUCTS
       </h1>
       <Carousel opts={{ align: "center" }} className="w-[95%] lg:w-[85%]">
@@ -43,13 +43,13 @@ const Features = () => {
                     style={{
                       clipPath: " polygon(100% 0%, 0% 0%, 0% 63%, 100% 23%)",
                     }}
-                  ></div>
+                  />
                   <div
                     className="inherit absolute -z-50 h-[439px] w-[358px] rounded-[3rem] bg-green-400/20 backdrop-blur-lg"
                     style={{
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
                     }}
-                  ></div>
+                  />
                   <img
                     src={data.image}
                     className="h-[50%] w-auto object-contain"
