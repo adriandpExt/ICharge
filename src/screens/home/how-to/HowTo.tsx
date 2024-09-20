@@ -54,11 +54,23 @@ const StepCard = ({
   return (
     <div
       className={`flex ${stepNumber % 2 === 0 ? "gap-10" : "flex-row-reverse gap-10"} md:contents lg:gap-0`}
+      onClick={onClick} // Clicking this will toggle the active state
     >
       {stepNumber % 2 === 0 ? (
         <div className="col-start-1 col-end-5 hidden w-full flex-col items-start justify-center lg:flex">
-          <Label className="font-lexendDeca text-5xl font-bold">{title}</Label>
-          <p className="text-start font-lexendDeca text-xl">{description}</p>
+          {isActive && (
+            <>
+              {/* Details are only shown when isActive is true */}
+              <div data-aos="fade-up">
+                <Label className="font-lexendDeca text-5xl font-bold">
+                  {title}
+                </Label>
+                <p className="text-start font-lexendDeca text-xl">
+                  {description}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       ) : (
         <HowToCard
@@ -67,8 +79,10 @@ const StepCard = ({
             cardStyle,
           )}
           imgClassName={imgClassName}
-          onClick={onClick}
           even={stepNumber % 2 === 0}
+          onClick={function (): void {
+            throw new Error("Function not implemented.");
+          }}
         />
       )}
       <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
@@ -98,13 +112,26 @@ const StepCard = ({
             cardStyle,
           )}
           imgClassName={imgClassName}
-          onClick={onClick}
           even={stepNumber % 2 === 0}
+          onClick={function (): void {
+            throw new Error("Function not implemented.");
+          }}
         />
       ) : (
         <div className="col-start-6 col-end-12 hidden w-full flex-col items-start justify-center lg:flex">
-          <Label className="font-lexendDeca text-5xl font-bold">{title}</Label>
-          <p className="text-start font-lexendDeca text-xl">{description}</p>
+          {isActive && (
+            <>
+              {/* Details are only shown when isActive is true */}
+              <div data-aos="fade-up">
+                <Label className="font-lexendDeca text-5xl font-bold">
+                  {title}
+                </Label>
+                <p className="text-start font-lexendDeca text-xl">
+                  {description}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       )}
     </div>
@@ -119,7 +146,7 @@ const HowTo = () => {
       id="howToPage"
     >
       <div className="space-y-14 lg:space-y-28">
-        <Label className="font-poppins text-3xl lg:text-7xl font-bold">
+        <Label className="font-poppins text-3xl font-bold lg:text-7xl">
           HOW TO USE ICHARGE?
         </Label>
         <div className="mx-auto flex w-[80%] grid-cols-9 flex-col p-2 md:grid">
