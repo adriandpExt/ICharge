@@ -1,10 +1,10 @@
+import { ReactNode } from "react";
 import {
   Award,
   BatteryCharging,
   ScanLine,
   SlidersVertical,
 } from "lucide-react";
-import { ReactNode } from "react";
 
 interface CardItems {
   title: string;
@@ -34,3 +34,22 @@ export const cardItems: CardItems[] = [
     icons: <SlidersVertical size={40} color="green" />,
   },
 ];
+
+export const handleLenght = (step: number) => {
+  if (step === 1) {
+    return {
+      item: "items-end",
+      height: "h-1/2",
+    };
+  } else if (step === 4) {
+    return {
+      item: "items-start",
+      height: "h-1/2",
+    };
+  } else {
+    return {
+      item: "items-center",
+      height: "h-full",
+    };
+  }
+};
