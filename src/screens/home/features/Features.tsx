@@ -16,6 +16,7 @@ import { initValue, products } from "./utils";
 const Features = () => {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState<Product>(initValue);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const handleOpen = (e: { stopPropagation: () => void }, item: Product) => {
     e.stopPropagation();
     setContent(item);
@@ -24,12 +25,25 @@ const Features = () => {
   const handleOpenChange = () => {
     setOpen((open) => !open);
   };
+  const handleCarouselChange = (index: number) => {
+    setCurrentIndex(index);
+  };
   return (
     <section className="flex h-fit w-full flex-col place-items-center bg-[url('@/assets/bgCarousel.png')] bg-cover bg-no-repeat pb-32 pt-20">
       <h1 className="mb-14 text-center font-poppins text-5xl font-semibold text-white lg:text-[96px]">
         PRODUCTS
       </h1>
-      <Carousel opts={{ align: "center" }} className="w-[95%] lg:w-[85%]">
+      <Carousel
+        opts={{ align: "center" }}
+        className="w-[95%] lg:w-[85%]"
+        setApi={(api) => {
+          if (api !== undefined) {
+            api.on("select", () =>
+              handleCarouselChange(api.selectedScrollSnap()),
+            );
+          }
+        }}
+      >
         <CarouselContent>
           {products.map((data, index) => (
             <CarouselItem
@@ -72,6 +86,16 @@ const Features = () => {
         <CarouselPrevious className="hidden aspect-square scale-150 rounded-e-none border-x-[0.5px] border-green-500 border-t-[1.5] bg-black/50 text-white shadow-inner shadow-green-700 hover:bg-black/40 hover:text-white lg:flex" />
         <CarouselNext className="hidden aspect-square scale-150 rounded-s-none border-x-[0.5px] border-green-500 border-b-[1.5] bg-black/50 text-white shadow-inner shadow-green-700 hover:bg-black/40 hover:text-white lg:flex" />
       </Carousel>
+
+      <div className="mt-5 flex justify-center lg:hidden">
+        {products.map((_, index) => (
+          <div
+            key={index}
+            className={`mx-2 h-3 w-3 cursor-pointer rounded-full ${currentIndex === index ? "bg-opacity-100" : "bg-opacity-25"} bg-white`}
+            onClick={() => setCurrentIndex(index)}
+          />
+        ))}
+      </div>
       <ProductModal
         item={content}
         open={open}

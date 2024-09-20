@@ -3,12 +3,20 @@ export const renderItems = {
     title: "Follow Us",
     items: [
       {
-        path: "/facebook",
+        path: "https://www.facebook.com/icharge.official/",
         label: "Facebook",
         icon: "ic_facebook",
       },
-      { path: "/tiktok", label: "TikTok", icon: "ic_tiktok" },
-      { path: "/instagram", label: "Instagram", icon: "ic_instagram" },
+      {
+        path: "https://www.instagram.com/keep_icharge/",
+        label: "Instagram",
+        icon: "ic_instagram",
+      },
+      {
+        path: "https://www.tiktok.com/@keep_icharge",
+        label: "TikTok",
+        icon: "ic_tiktok",
+      },
     ],
   },
   platforms: {

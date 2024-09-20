@@ -37,7 +37,7 @@ const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
           className="h-48 border-2 border-white"
         />
         <div className="space-y-5">
-          <h1 className="font-sans text-xl">Size</h1>
+          <h1 className="font-sans text-xl">Wattage</h1>
           <h1 className="font-sans">Standby {wattage.standBy}W</h1>
           <h1 className="font-sans">Full load {wattage.fullLoad}W</h1>
         </div>

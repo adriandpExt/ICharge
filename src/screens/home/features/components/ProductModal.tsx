@@ -3,6 +3,7 @@ import { ProdModal } from "../types";
 import SubLabel from "./SubLabel";
 import BgPolygon from "./BgPolygon";
 import { useEffect } from "react";
+import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 
 const ProductModal = ({ item, open, handleOpenChange }: ProdModal) => {
   useEffect(() => {
@@ -37,6 +38,8 @@ const ProductModal = ({ item, open, handleOpenChange }: ProdModal) => {
           />
         </div>
         <SubLabel item={item} />
+        <DialogTitle></DialogTitle>
+        <DialogDescription></DialogDescription>
       </DialogContent>
     </Dialog>
   );
