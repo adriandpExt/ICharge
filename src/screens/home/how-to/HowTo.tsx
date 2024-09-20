@@ -26,7 +26,7 @@ const HowTo = () => {
         <Label className="font-poppins text-4xl font-bold">
           How To use iCharge?
         </Label>
-        <div className="mx-auto flex w-full lg:w-[80%] grid-cols-9 flex-col p-2 md:grid">
+        <div className="mx-auto flex w-[80%] grid-cols-9 flex-col p-2 md:grid">
           <div className="flex flex-row-reverse gap-10 md:contents lg:gap-0 h-1/4">
             <HowToCard
               className={cn(
