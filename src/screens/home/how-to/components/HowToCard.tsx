@@ -1,11 +1,6 @@
 import { cn } from "@/lib/utils";
+import { HowToCardProps } from "../type";
 
-interface HowToCardProps {
-  className?: string;
-  imgClassName: string;
-  even: boolean;
-  onClick: () => void;
-}
 const HowToCard = ({
   className,
   even = false,
