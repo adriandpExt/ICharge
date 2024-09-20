@@ -20,10 +20,10 @@ const router: RouteObject[] = [
         path: "sectors",
         element: <Sectors />,
       },
-      { path: "partner", element: <>Partber</> },
-      { path: "sustainability", element: <>Sustainability</> },
+      { path: "partner", element: <News /> },
+      { path: "sustainability", element: <News /> },
       { path: "news", element: <News /> },
-      { path: "customer-service", element: <>Customer Service</> },
+      { path: "customer-service", element: <News /> },
       {
         path: "faqs",
         element: <Faqs />,

@@ -63,7 +63,9 @@ const HeroSection = () => {
             Get Started <ArrowRight />
           </Button>
           <div className="flex items-center justify-evenly md:block md:space-y-2">
+            
             <img src={playstore} alt="ic_playstore" className="w-32 md:w-40" />
+
             <img src={applestore} alt="ic_apple" className="w-32 md:w-40" />
           </div>
         </div>
