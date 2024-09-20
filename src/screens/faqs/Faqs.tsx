@@ -158,7 +158,7 @@ export const FAQPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(faqData[0].category);
 
   return (
-    <div className="mt-10 flex h-screen flex-col bg-background">
+    <div className="mt-10 flex h-screen flex-col bg-background dark:bg-white">
       {/* Header */}
       <header className="bg-gray-800 px-8 py-4 text-primary-foreground">
         <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
