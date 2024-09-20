@@ -4,6 +4,8 @@ import { SvgIcons } from "../svg-icons";
 import playstore from "@/assets/icons/ic_playstore.svg";
 import applestore from "@/assets/icons/ic_apple.svg";
 import { Link } from "react-router-dom";
+import { renderItems } from "../footer/utils";
+import { IconName } from "../svg-icons/utils";
 
 export const Footer = () => {
   return (
@@ -14,22 +16,46 @@ export const Footer = () => {
           <div className="col-span-1 hidden md:col-span-2 md:flex lg:col-span-1">
             <SvgIcons name="ic_svl_g1" size={200} />
           </div>
-
           <div>
-            <h3 className="mb-4 flex text-xl font-semibold">Platforms</h3>
-            <div className="flex space-x-4">
-              <SvgIcons name="ic_facebook" size={24} />
-              <SvgIcons name="ic_instagram" size={24} />
-              <SvgIcons name="ic_tiktok" size={24} />
+            {/* Follow Us */}
+            <div>
+              <h3 className="mb-4 flex text-xl font-semibold">
+                {renderItems.follow.title}
+              </h3>
+              <div className="flex space-x-4">
+                {renderItems.follow.items.map((item) => (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    target={item.path.startsWith("http") ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
+                  >
+                    <SvgIcons name={item.icon as IconName} size={24} />{" "}
+                    {/* Type assertion */}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
           {/* Platforms */}
           <div>
             <h3 className="mb-4 text-xl font-semibold">Platforms</h3>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={""}>Web</Link>
-              <Link to={""}>iOS</Link>
-              <Link to={""}>Android</Link>
+              <Link to={"#web"}>Web</Link>
+              <Link
+                to={"https://apps.apple.com/us/app/icharge-ph/id6478515634"}
+                target="_blank"
+              >
+                iOS
+              </Link>
+              <Link
+                to={
+                  "https://play.google.com/store/apps/details?id=com.phl.charge"
+                }
+                target="_blank"
+              >
+                Android
+              </Link>
             </ul>
           </div>
 
@@ -37,8 +63,8 @@ export const Footer = () => {
           <div>
             <h3 className="mb-4 text-xl font-semibold">About Us</h3>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={""}>Features</Link>
-              <Link to={""}>FAQs</Link>
+              <Link to={"/features"}>Features</Link>
+              <Link to={"/faqs"}>FAQs</Link>
             </ul>
           </div>
 
@@ -72,13 +98,28 @@ export const Footer = () => {
             <div className="mt-5 grid grid-cols-1 place-items-center">
               <h3 className="mb-4 text-xl font-semibold">Download the App</h3>
               <div className="flex">
-                <img
-                  src={playstore}
-                  alt="Google Play"
-                  width={100}
-                  height={48}
-                />
-                <img src={applestore} alt="App Store" width={100} height={48} />
+                <Link
+                  to="https://play.google.com/store/apps/details?id=com.phl.charge"
+                  target="_blank"
+                >
+                  <img
+                    src={playstore}
+                    alt="Google Play"
+                    width={100}
+                    height={48}
+                  />
+                </Link>
+                <Link
+                  to="https://apps.apple.com/us/app/icharge-ph/id6478515634"
+                  target="_blank"
+                >
+                  <img
+                    src={applestore}
+                    alt="App Store"
+                    width={100}
+                    height={48}
+                  />
+                </Link>
               </div>
             </div>
           </div>
