@@ -19,11 +19,11 @@ const HowTo = () => {
   };
   return (
     <PageContainer
-      className="flex flex-col bg-black text-center"
+      className="flex flex-col dark:bg-black text-center dark:text-white"
       id="howToPage"
     >
-      <div className="space-y-14 lg:space-y-32 text-white">
-        <Label className="font-poppins text-4xl font-bold dark:text-white">
+      <div className="space-y-14 lg:space-y-32">
+        <Label className="font-poppins text-4xl font-bold">
           How To use iCharge?
         </Label>
         <div className="mx-auto flex w-full lg:w-[80%] grid-cols-9 flex-col p-2 md:grid">
