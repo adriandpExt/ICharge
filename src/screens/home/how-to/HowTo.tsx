@@ -81,7 +81,7 @@ const StepCard = ({
         >
           {isActive ? (
             <div className="shadow-inner-large z-10 flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden">
-              <Label className="font-lexendDeca text-2xl font-bold">
+              <Label className="font-lexendDeca text-lg font-bold">
                 {title.toUpperCase()}
               </Label>
             </div>
@@ -121,7 +121,7 @@ const StepCard = ({
         >
           {isActive ? (
             <div className="shadow-inner-large flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden">
-              <Label className="font-lexendDeca text-2xl font-bold">
+              <Label className="font-lexendDeca text-lg font-bold">
                 {title.toUpperCase()}
               </Label>
             </div>
