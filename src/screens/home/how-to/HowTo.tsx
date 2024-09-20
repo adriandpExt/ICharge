@@ -6,6 +6,7 @@ import HowToCard from "./components/HowToCard";
 import { Label } from "@/components/ui/label";
 import { handleLenght } from "./utils";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 const stepCard: Omit<StepCardProps, "currentStep" | "onClick">[] = [
   {
@@ -80,11 +81,16 @@ const StepCard = ({
           even={stepNumber % 2 === 0}
         >
           {isActive ? (
-            <div className="shadow-inner-large z-10 flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="shadow-inner-large flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden"
+            >
               <Label className="font-lexendDeca text-lg font-bold">
                 {title.toUpperCase()}
               </Label>
-            </div>
+            </motion.div>
           ) : (
             <></>
           )}
@@ -120,11 +126,16 @@ const StepCard = ({
           even={stepNumber % 2 === 0}
         >
           {isActive ? (
-            <div className="shadow-inner-large flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="shadow-inner-large flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden"
+            >
               <Label className="font-lexendDeca text-lg font-bold">
                 {title.toUpperCase()}
               </Label>
-            </div>
+            </motion.div>
           ) : (
             <></>
           )}
