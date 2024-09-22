@@ -73,7 +73,7 @@ const StepCard = ({
       ) : (
         <HowToCard
           className={cn(
-            "col-start-1 col-end-5 rotate-[-135deg] lg:rotate-[45deg] lg:p-14",
+            "col-start-1 col-end-5 rotate-[-135deg] md:rotate-[45deg] lg:p-14 md:-ml-20",
             cardStyle,
           )}
           imgClassName={imgClassName}
@@ -113,7 +113,7 @@ const StepCard = ({
       {stepNumber % 2 === 0 ? (
         <HowToCard
           className={cn(
-            "col-start-6 col-end-12 rotate-[-135deg] lg:ml-20 lg:p-14",
+            "col-start-6 col-end-12 rotate-[-135deg] lg:ml-20 lg:p-14 md:ml-20",
             cardStyle,
           )}
           imgClassName={imgClassName}
