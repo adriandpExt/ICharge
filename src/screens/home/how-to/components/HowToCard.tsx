@@ -10,7 +10,7 @@ const HowToCard = ({
   return (
     <div
       className={cn(
-        "rounded-eyedrop aspect-square w-full p-5 shadow-inner shadow-slate-200",
+        "rounded-eyedrop aspect-square w-full p-5 dark:shadow-inner shadow-slate-200",
         className,
       )}
     >

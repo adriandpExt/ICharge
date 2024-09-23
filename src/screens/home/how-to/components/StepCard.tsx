@@ -16,10 +16,12 @@ const StepCard = ({
   onClick,
 }: StepCardProps) => {
   const isActive = currentStep === stepNumber;
-  const cardStyle = isActive ? "bg-green-900/90" : "bg-slate-700";
+  const cardStyle = isActive
+    ? "bg-green-500/40 dark:bg-green-900/90 dark:shadow-inner-card"
+    : "bg-green-300/20 dark:bg-[#323232]/70 dark:shadow-inner-card";
   const avatarStyle = isActive
-    ? "bg-gradient-to-t from-green-500 to-green-800"
-    : "dark:bg-white dark:text-black bg-black text-white";
+    ? "bg-gradient-to-t from-green-500 to-green-800 text-white"
+    : "dark:bg-white dark:text-black bg-slate-200 text-black";
 
   return (
     <div
@@ -58,7 +60,7 @@ const StepCard = ({
               transition={{ duration: 0.2, ease: "easeInOut" }}
               className="shadow-inner-large flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden"
             >
-              <Label className="font-lexendDeca text-md font-bold">
+              <Label className="text-md font-lexendDeca font-bold">
                 {title.toUpperCase()}
               </Label>
             </motion.div>
@@ -75,7 +77,10 @@ const StepCard = ({
           )}
         >
           <div
-            className={cn("w-2 bg-slate-400", handleLenght(stepNumber).height)}
+            className={cn(
+              "w-2 bg-slate-200 dark:bg-slate-400",
+              handleLenght(stepNumber).height,
+            )}
           />
         </div>
         <div
@@ -103,7 +108,7 @@ const StepCard = ({
               transition={{ duration: 0.2, ease: "easeInOut" }}
               className="shadow-inner-large flex h-full w-full place-content-center items-center rounded-full bg-white lg:hidden"
             >
-              <Label className="font-lexendDeca text-md font-bold">
+              <Label className="text-md font-lexendDeca font-bold">
                 {title.toUpperCase()}
               </Label>
             </motion.div>
