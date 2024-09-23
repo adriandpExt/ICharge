@@ -15,7 +15,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-6">
           {/* Logo and social media */}
           <div className="col-span-1 hidden md:col-span-2 md:flex lg:col-span-1">
-            <SvgIcons name="ic_svl_g1" size={200} />
+            <SvgIcons name="ic_footer_logo" size={200} />
           </div>
           <div>
             {/* Follow Us */}
