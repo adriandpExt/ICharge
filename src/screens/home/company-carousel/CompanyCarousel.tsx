@@ -49,10 +49,7 @@ export default function Component() {
   }, [controls, width]);
 
   return (
-    <div
-      className="container relative mx-auto overflow-hidden rounded-3xl border-green-400 bg-green-100"
-      data-aos="zoom-in"
-    >
+    <div className="container relative mx-auto overflow-hidden border-green-400 bg-green-100 lg:rounded-3xl">
       <div className="bg-green-300 bg-gradient-to-b p-4">
         <h2 className="text-center text-2xl font-extrabold text-black">
           Our Trusted Partners
