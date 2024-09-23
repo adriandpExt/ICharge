@@ -14,22 +14,25 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
+import { PageContainer } from "@/components";
+import { Label } from "@/components/ui/label";
 
 export default function BookDemoCard() {
   return (
-    <div className="container mx-auto pb-16">
-      <Card className="mx-auto w-full pb-14 shadow-xl shadow-black/30">
+    <PageContainer>
+      <Card className="mx-auto w-full bg-white pb-14 shadow-xl shadow-black/30">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-2xl font-bold">
             <MapPin className="h-6 w-6 text-green-300" />
-            Book a demo!
+            <Label variant={"subtitle"}>Book a demo!</Label>
           </CardTitle>
         </CardHeader>
+
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <label htmlFor="reason" className="text-sm font-medium">
+            <Label variant={"subtitle"} htmlFor="reason">
               What brings you here today?*
-            </label>
+            </Label>
             <Select>
               <SelectTrigger id="reason">
                 <SelectValue placeholder="Please Select" />
@@ -44,23 +47,25 @@ export default function BookDemoCard() {
               </SelectContent>
             </Select>
           </div>
-          <p className="text-sm text-gray-500">
+
+          <Label variant={"default"} className="text-gray-500">
             We need the contact information you provide to us to contact you
             about our products and services. You may unsubscribe from these
             communications at any time. For information on how to unsubscribe,
             as well as our privacy practices and commitment to protecting your
             privacy, please review our Privacy Policy.
-          </p>
+          </Label>
           <div className="flex h-[78px] items-center justify-center rounded bg-gray-100 text-sm text-gray-400">
             reCAPTCHA placeholder
           </div>
         </CardContent>
+
         <CardFooter>
-          <Button className="w-full bg-green-700 hover:bg-green-600">
+          <Button className="w-full bg-green-700 text-white hover:bg-green-600">
             Submit
           </Button>
         </CardFooter>
       </Card>
-    </div>
+    </PageContainer>
   );
 }
