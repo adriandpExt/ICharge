@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
-import playstore from "@/assets/icons/ic_playstore.svg";
-import applestore from "@/assets/icons/ic_apple.svg";
 import { useState } from "react";
 import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
+import playstore from "@/assets/icons/ic_playstore_hero.svg";
+import applestore from "@/assets/icons/ic_apple_hero.svg";
 
 const HeroSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -29,7 +29,7 @@ const HeroSection = () => {
       </video>
 
       <div
-        className="space-y-5 px-10 text-center lg:text-start"
+        className="space-y-5 px-10 text-center lg:pl-52 lg:text-start"
         data-aos="fade-up"
       >
         <div className="font-bold">
@@ -61,7 +61,6 @@ const HeroSection = () => {
             </span>
           </Label>
         </div>
-
         <Label
           variant={"subtitle"}
           className="mx-auto text-sm text-white md:w-10/12 lg:mx-0 lg:text-xl"
@@ -75,10 +74,29 @@ const HeroSection = () => {
           <Button className="h-14 w-full gap-2 rounded-full bg-opacity-50 bg-gradient-to-l from-[#066C01] to-[#5AFF52] font-lexendDeca text-sm text-primary-foreground md:w-48">
             Get Started <ArrowRight />
           </Button>
-          <div className="flex items-center justify-evenly md:justify-center md:gap-5 lg:block lg:space-y-2">
-            <img src={playstore} alt="ic_playstore" className="w-32 md:w-40" />
-
-            <img src={applestore} alt="ic_apple" className="w-32 md:w-40" />
+          <div className="flex items-center justify-evenly md:block md:space-y-2">
+            <Link
+              to="https://play.google.com/store/apps/details?id=com.phl.charge"
+              target="_blank"
+            >
+              <img
+                src={playstore}
+                alt="ic_playstore_hero"
+                className="w-32 md:mb-1 md:w-40"
+                width={180.32}
+                height={48.72}
+              />
+            </Link>
+            <Link
+              to={"https://apps.apple.com/us/app/icharge-ph/id6478515634"}
+              target="_blank"
+            >
+              <img
+                src={applestore}
+                alt="ic_apple_hero"
+                className="w-32 md:w-40"
+              />
+            </Link>
           </div>
         </div>
       </div>

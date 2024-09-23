@@ -1,11 +1,12 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SvgIcons } from "../svg-icons";
-import playstore from "@/assets/icons/ic_playstore.svg";
-import applestore from "@/assets/icons/ic_apple.svg";
+import playstore from "@/assets/icons/ic_playstore_footer.svg";
+import applestore from "@/assets/icons/ic_apple_footer.svg";
 import { Link } from "react-router-dom";
 import { renderItems } from "../footer/utils";
 import { IconName } from "../svg-icons/utils";
+import { Label } from "@/components/ui/label";
 
 export const Footer = () => {
   return (
@@ -19,9 +20,9 @@ export const Footer = () => {
           <div>
             {/* Follow Us */}
             <div>
-              <h3 className="mb-4 flex text-xl font-semibold">
+              <Label className="mb-4 flex text-xl font-semibold">
                 {renderItems.follow.title}
-              </h3>
+              </Label>
               <div className="flex space-x-4">
                 {renderItems.follow.items.map((item) => (
                   <Link
@@ -39,14 +40,16 @@ export const Footer = () => {
           </div>
           {/* Platforms */}
           <div>
-            <h3 className="mb-4 text-xl font-semibold">Platforms</h3>
+            <Label className="mb-4 text-xl font-semibold">Platforms</Label>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={"#web"}>Web</Link>
+              <Link to={"#web"}>
+                <Label>Web</Label>
+              </Link>
               <Link
                 to={"https://apps.apple.com/us/app/icharge-ph/id6478515634"}
                 target="_blank"
               >
-                iOS
+                <Label>iOS</Label>
               </Link>
               <Link
                 to={
@@ -54,37 +57,51 @@ export const Footer = () => {
                 }
                 target="_blank"
               >
-                Android
+                <Label>Android</Label>
               </Link>
             </ul>
           </div>
 
           {/* About Us */}
           <div>
-            <h3 className="mb-4 text-xl font-semibold">About Us</h3>
+            <Label className="mb-4 text-xl font-semibold">About Us</Label>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={"/features"}>Features</Link>
-              <Link to={"/faqs"}>FAQs</Link>
+              <Link to={"/features"}>
+                <Label>Features</Label>
+              </Link>
+              <Link to={"/faqs"}>
+                <Label>FAQs</Label>
+              </Link>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="mb-4 text-xl font-semibold">Company</h3>
+            <Label className="mb-4 text-xl font-semibold">Company</Label>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={""}>Partner with Us</Link>
-              <Link to={""}>Contact</Link>
-              <Link to={""}>Support</Link>
-              <Link to={""}>User Agreement</Link>
+              <Link to={""}>
+                <Label>Partner with Us</Label>
+              </Link>
+              <Link to={""}>
+                <Label>Contact</Label>
+              </Link>
+              <Link to={""}>
+                <Label>Support</Label>
+              </Link>
+              <Link to={""}>
+                <Label>User Agreement</Label>
+              </Link>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div className="col-span-1 text-center md:col-span-2 lg:col-span-1 lg:text-start">
-            <h3 className="mb-4 text-2xl font-bold">
+            <Label className="mb-4 text-2xl font-bold">
               Stay in the loop with everything you need to know.
-            </h3>
-            <p className="mb-4">Join our newsletter</p>
+            </Label>
+            <div>
+              <Label className="mb-4">Join our newsletter</Label>
+            </div>
             <div className="grid-col grid gap-2 sm:flex-row">
               <Input
                 type="email"
@@ -95,18 +112,21 @@ export const Footer = () => {
                 Subscribe
               </Button>
             </div>
-            <div className="mt-5 grid grid-cols-1 place-items-center">
-              <h3 className="mb-4 text-xl font-semibold">Download the App</h3>
+            <div className="al mt-5 grid grid-cols-1">
+              <Label className="mb-1 text-left text-xl font-semibold">
+                Download the App
+              </Label>
               <div className="flex">
                 <Link
                   to="https://play.google.com/store/apps/details?id=com.phl.charge"
                   target="_blank"
+                  className="mr-1"
                 >
                   <img
                     src={playstore}
                     alt="Google Play"
-                    width={100}
-                    height={48}
+                    width={180.32}
+                    height={48.72}
                   />
                 </Link>
                 <Link
@@ -116,8 +136,8 @@ export const Footer = () => {
                   <img
                     src={applestore}
                     alt="App Store"
-                    width={100}
-                    height={48}
+                    width={180.32}
+                    height={48.72}
                   />
                 </Link>
               </div>
@@ -127,7 +147,7 @@ export const Footer = () => {
 
         {/* Bottom section */}
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
-          <p>&copy; 2024 Quanta Dance, Inc</p>
+          <Label>&copy; 2024 Quanta Dance, Inc</Label>
           <div className="mt-4 flex gap-4 sm:mt-0">
             <a href="#" className="hover:underline">
               Terms
