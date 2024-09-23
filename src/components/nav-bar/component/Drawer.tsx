@@ -34,11 +34,10 @@ export const Drawer = () => {
 
         <div className="flex flex-col space-y-2">
           {linkList.map((item, index) => (
-            <Button key={index} variant={"ghost"} className="font-semibold">
+            <Button key={index} variant={"ghost"}>
               <Link to={item.path as string}>{item.label}</Link>
             </Button>
           ))}
-          <Button variant="outline">Android</Button>
 
           <Select>
             <SelectTrigger className="flex w-auto items-center justify-center space-x-2 whitespace-nowrap">

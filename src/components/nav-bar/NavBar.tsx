@@ -62,7 +62,7 @@ export const NavBar = () => {
       }`}
     >
       <Button variant={"icon"} onClick={handleBackHome}>
-        <SvgIcons name="ic_svl_ig" size={60} />
+        <SvgIcons name="ic_svl_gs2" size={150} />
       </Button>
 
       {renderNavibation()}
