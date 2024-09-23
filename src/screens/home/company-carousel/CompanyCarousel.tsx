@@ -1,12 +1,13 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Dunkin from "@/assets/Products/dunkin.png";
 import Ikea from "@/assets/Products/ikea.png";
 import MaryGrace from "@/assets/Products/marygrace.png";
 import AyalaMalls from "@/assets/Products/ayalamalls.png";
 import Robinsons from "@/assets/Products/robinsons.png";
 import Angkan from "@/assets/Products/angkan.png";
+import { useAnimation, useDragControls, motion } from "framer-motion";
 
-const SCROLL_SPEED = 0.5;
+// const SCROLL_SPEED = 0.5;
 
 interface Logo {
   name: string;
@@ -22,54 +23,69 @@ const logos: Logo[] = [
   { name: "Google", src: Angkan },
 ];
 
-const CarouselCompany: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
+export default function Component() {
+  const [width, setWidth] = useState(0);
+  const carousel = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const dragControls = useDragControls();
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
-
-    const totalWidth = scrollContainer.scrollWidth;
-    let currentPosition = 0;
-
-    const scroll = () => {
-      currentPosition -= SCROLL_SPEED;
-      if (currentPosition <= -totalWidth / 2) {
-        currentPosition = 0;
-      }
-      scrollContainer.style.transform = `translateX(${currentPosition}px)`;
-      requestAnimationFrame(scroll);
-    };
-
-    const animationFrameId = requestAnimationFrame(scroll);
-
-    return () => cancelAnimationFrame(animationFrameId);
+    if (carousel.current) {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }
   }, []);
+
+  useEffect(() => {
+    const infiniteScroll = async () => {
+      while (true) {
+        await controls.start({
+          x: -width,
+          transition: { duration: 20, ease: "linear" },
+        });
+        await controls.start({ x: 0, transition: { duration: 0 } });
+      }
+    };
+    infiniteScroll();
+  }, [controls, width]);
 
   return (
     <div
-      className="relative -top-40 w-full overflow-hidden rounded-tl-3xl rounded-tr-3xl border-2 border-green-400 bg-[#043B00] py-10 shadow-xl md:rounded-bl-[4rem] md:rounded-br-[4rem] md:rounded-tl-[4rem] md:rounded-tr-[4rem]"
-      data-aos="flip-up"
+      className="container relative mx-auto overflow-hidden rounded-3xl border-green-400 bg-green-100"
+      data-aos="zoom-in"
     >
-      <h2 className="mb-8 text-center font-poppins text-2xl font-bold text-white">
-        Our Trusted Partners
-      </h2>
-      <div ref={scrollRef} className="flex items-center gap-12 px-12">
-        {[...logos, ...logos].map((logo, index) => (
-          <div
-            key={index}
-            className="flex h-24 w-48 shrink-0 items-center justify-center border-0 p-4 transition-all"
+      <div className="bg-green-300 bg-gradient-to-b p-4">
+        <h2 className="text-center text-2xl font-extrabold text-black">
+          Our Trusted Partners
+        </h2>
+      </div>
+      <div className="flex h-36 place-items-center p-4">
+        <motion.div
+          ref={carousel}
+          className="cursor-grab overflow-hidden"
+          whileTap={{ cursor: "grabbing" }}
+        >
+          <motion.div
+            drag="x"
+            dragControls={dragControls}
+            dragConstraints={{ right: 0, left: -width }}
+            animate={controls}
+            className="flex"
           >
-            <img
-              src={logo.src}
-              alt={logo.name}
-              className="max-h-full max-w-full object-contain"
-            />
-          </div>
-        ))}
+            {[...logos, ...logos].map((logo, index) => (
+              <motion.div
+                key={index}
+                className="mx-4 flex h-16 min-w-[150px] items-center justify-center"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="max-h-full max-w-full"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
-};
-
-export default CarouselCompany;
+}

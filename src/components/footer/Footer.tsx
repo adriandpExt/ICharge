@@ -80,7 +80,7 @@ export const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-1">
+          <div className="col-span-1 text-center md:col-span-2 lg:col-span-1 lg:text-start">
             <h3 className="mb-4 text-2xl font-bold">
               Stay in the loop with everything you need to know.
             </h3>

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import {
   Accordion,
@@ -158,7 +156,7 @@ export const FAQPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(faqData[0].category);
 
   return (
-    <div className="mt-10 flex h-screen flex-col bg-background dark:bg-white">
+    <div className="mt-10 flex h-screen flex-col bg-background dark:bg-green-300">
       {/* Header */}
       <header className="bg-gray-800 px-8 py-4 text-primary-foreground">
         <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
