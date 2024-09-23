@@ -17,8 +17,8 @@ const StepCard = ({
 }: StepCardProps) => {
   const isActive = currentStep === stepNumber;
   const cardStyle = isActive
-    ? "bg-green-500/40 dark:bg-green-900/90"
-    : "bg-green-300/20 dark:bg-slate-700";
+    ? "bg-green-500/40 dark:bg-green-900/90 dark:shadow-inner-card"
+    : "bg-green-300/20 dark:bg-[#323232]/70 dark:shadow-inner-card";
   const avatarStyle = isActive
     ? "bg-gradient-to-t from-green-500 to-green-800 text-white"
     : "dark:bg-white dark:text-black bg-slate-200 text-black";
