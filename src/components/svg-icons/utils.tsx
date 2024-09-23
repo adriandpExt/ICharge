@@ -19,4 +19,8 @@ export type IconName =
   | "ic_playstore"
   | "ic_apple"
   | "ic_uk_flag"
-  | "ic_ph_flag";
+  | "ic_ph_flag"
+  | "ic_apple_hero"
+  | "ic_apple_footer"
+  | "ic_playstore_hero"
+  | "ic_playstore_footer";
