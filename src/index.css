@@ -92,14 +92,14 @@
     font-size: small;
   }
   .shadow-inner-large {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.5),
-        inset 2px 0 4px rgba(0, 0, 0, 0.5),
-        inset -2px 0 4px rgba(0, 0, 0, 0.5);
-
+    box-shadow:
+      inset 0 2px 4px rgba(0, 0, 0, 0.5),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.5),
+      inset 2px 0 4px rgba(0, 0, 0, 0.5),
+      inset -2px 0 4px rgba(0, 0, 0, 0.5);
   }
   .rounded-eyedrop {
-    border-radius: 9999px 150rem 9999px 9999px ;
+    border-radius: 9999px 150rem 9999px 9999px;
     /* Equivalent to rounded-full */
   }
 }

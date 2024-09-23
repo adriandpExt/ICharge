@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import { Moon, Sun } from "lucide-react";
+// import { Moon, Sun } from "lucide-react";
 
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
@@ -9,13 +9,13 @@ import { SvgIcons } from "../svg-icons";
 
 import useScroll from "@/hooks/useScroll";
 
-import { useTheme } from "@/hooks/useTheme";
+// import { useTheme } from "@/hooks/useTheme";
 
 import { Drawer, Language } from "./component";
 import { linkList } from "./utils";
 
 export const NavBar = () => {
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -57,7 +57,7 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex h-10 w-full items-center justify-between px-4 py-6 backdrop-blur-sm transition-all md:h-28 ${
+      className={`relative top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:h-28 ${
         isScroll ? "border-b-[1px] bg-white" : "bg-transparent"
       }`}
     >
