@@ -74,7 +74,7 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex h-28 w-full items-center justify-between px-4 py-6 backdrop-blur-sm transition-all ${
+      className={`sticky top-0 z-50 mx-auto flex h-10 w-full items-center justify-between px-4 py-6 backdrop-blur-sm transition-all md:h-28 ${
         isScroll ? "border-b-[1px] bg-white" : "bg-transparent"
       }`}
     >
@@ -85,7 +85,7 @@ export const NavBar = () => {
       {renderNavibation()}
 
       <div className="flex items-center">
-        <Button
+        {/* <Button
           size={"icon"}
           variant={"ghost"}
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -100,7 +100,7 @@ export const NavBar = () => {
               isScroll ? "text-black" : "text-white"
             } hidden h-5 w-5 dark:block`}
           />
-        </Button>
+        </Button> */}
 
         <Drawer />
 
