@@ -39,7 +39,7 @@ const HowTo = () => {
   const [step, setStep] = useState(1);
   return (
     <PageContainer
-      className="flex flex-col text-center dark:bg-black dark:text-white"
+      className="container mx-auto flex flex-col text-center dark:bg-black dark:text-white"
       id="howToPage"
     >
       <div className="space-y-14 lg:space-y-28">
