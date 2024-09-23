@@ -2,12 +2,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import { Globe, Menu } from "lucide-react";
 
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
-import { linkList } from "./utils";
+import { linkList } from "../utils";
 
 import useScroll from "@/hooks/useScroll";
-import { SvgIcons } from "../svg-icons";
+import { SvgIcons } from "../../svg-icons";
 import {
   Select,
   SelectContent,
@@ -15,7 +15,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
+} from "../../ui/select";
 import { Link } from "react-router-dom";
 
 export const Drawer = () => {
@@ -39,6 +39,7 @@ export const Drawer = () => {
             </Button>
           ))}
           <Button variant="outline">Android</Button>
+
           <Select>
             <SelectTrigger className="flex w-auto items-center justify-center space-x-2 whitespace-nowrap">
               <SelectValue

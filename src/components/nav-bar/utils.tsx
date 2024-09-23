@@ -20,3 +20,16 @@ export const linkList: LinkList[] = [
   },
   { label: "Customer Service", path: "/customer-service" },
 ];
+
+export const language = [
+  {
+    id: "en",
+    icons: "ic_uk_flag",
+    label: "En",
+  },
+  {
+    id: "ph",
+    icons: "ic_ph_flag",
+    label: "Ph",
+  },
+];

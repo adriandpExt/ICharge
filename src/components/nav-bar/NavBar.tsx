@@ -1,41 +1,24 @@
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
+import { Moon, Sun } from "lucide-react";
+
 import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
+
 import { SvgIcons } from "../svg-icons";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 import useScroll from "@/hooks/useScroll";
-import Drawer from "./Drawer";
-import { linkList } from "./utils";
-import { Separator } from "../ui/separator";
-import { Globe, Moon, Sun } from "lucide-react";
+
 import { useTheme } from "@/hooks/useTheme";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+
+import { Drawer, Language } from "./component";
+import { linkList } from "./utils";
 
 export const NavBar = () => {
   const { theme, setTheme } = useTheme();
 
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
-
-  const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-
-  const handleValueChange = (value: string) => {
-    setSelectedLanguage(value);
-    handleChangeLanguage(value);
-  };
-
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
 
   const isScroll = useScroll(window.innerHeight);
 
@@ -47,7 +30,7 @@ export const NavBar = () => {
     return (
       <nav className="hidden space-x-6 lg:flex">
         {linkList.map((item, index) => {
-          const isActive = location.pathname === item.path; // Check if the current path matches the link path
+          const isActive = location.pathname === item.path;
 
           return (
             <div key={item.path} className="flex items-center">
@@ -105,39 +88,7 @@ export const NavBar = () => {
         <Drawer />
 
         {/* Language Selection */}
-        <Select onValueChange={handleValueChange} value={selectedLanguage}>
-          <SelectTrigger
-            className={`hidden w-auto items-center justify-start space-x-2 whitespace-nowrap lg:flex ${
-              isScroll ? "text-black" : "text-white"
-            }`}
-          >
-            <SelectValue
-              placeholder={
-                <div className="flex items-center gap-1">
-                  <Globe />
-                </div>
-              }
-            />
-          </SelectTrigger>
-          <SelectContent
-            className={`${isScroll ? "text-black" : "text-white"}`}
-          >
-            <SelectGroup>
-              <SelectItem value="en">
-                <div className="flex items-center">
-                  <SvgIcons name="ic_uk_flag" size={30} />
-                  <span className="ml-2">En</span>
-                </div>
-              </SelectItem>
-              <SelectItem value="ph">
-                <div className="flex items-center">
-                  <SvgIcons name="ic_ph_flag" size={30} />
-                  <span className="ml-2">Ph</span>
-                </div>
-              </SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+        <Language />
       </div>
     </header>
   );

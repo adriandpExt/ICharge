@@ -7,7 +7,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <NavBar />
-      <main className="container mx-auto dark:bg-background">{children}</main>
+      <main className="bg-[#F5F7F8]">{children}</main>
       <Footer />
     </>
   );
