@@ -16,7 +16,7 @@ const Home = (): ReactElement => {
       <CarouselCompany />
       <WhyICharge />
       <Services />
-      {/* <HowTo /> */}
+      <HowTo />
       <Features />
       <Sector />
       <BookDemo />
