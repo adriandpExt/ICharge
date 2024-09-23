@@ -16,7 +16,7 @@ const StepCard = ({
   onClick,
 }: StepCardProps) => {
   const isActive = currentStep === stepNumber;
-  const cardStyle = isActive ? "bg-green-900/90" : "bg-slate-700";
+  const cardStyle = isActive ? "bg-green-500/50 dark:bg-green-900/90" : "bg-green-300/25 dark:bg-slate-700";
   const avatarStyle = isActive
     ? "bg-gradient-to-t from-green-500 to-green-800"
     : "dark:bg-white dark:text-black bg-black text-white";
