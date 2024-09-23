@@ -1,4 +1,3 @@
-import Like from "@/assets/like.png";
 import CostEffective from "@/assets/costeffective.svg";
 import Convenience from "@/assets/convenience.svg";
 import FLexible from "@/assets/flexible.svg";
@@ -30,11 +29,14 @@ export default function WhyICharge() {
             <h2 className="mb-4 text-2xl font-semibold sm:text-3xl lg:text-4xl">
               Convenience
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl">
+            <Label
+              variant="default"
+              className="text-base sm:text-lg lg:text-xl"
+            >
               Offering rentable power banks enhances the convenience of your
               location, which can lead to increased foot traffic, longer and
               frequent visits.
-            </p>
+            </Label>
           </div>
         </div>
 
