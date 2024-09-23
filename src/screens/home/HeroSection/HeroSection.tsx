@@ -29,7 +29,7 @@ const HeroSection = () => {
       </video>
 
       <div
-        className="space-y-5 px-10 text-center lg:text-start"
+        className="space-y-5 px-10 text-center lg:pl-52 lg:text-start"
         data-aos="fade-up"
       >
         <div className="font-bold">
