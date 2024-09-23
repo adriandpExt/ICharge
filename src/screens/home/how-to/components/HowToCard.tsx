@@ -16,7 +16,7 @@ const HowToCard = ({
     >
       <div
         className={cn(
-          `aspect-square w-full rotate-[135deg] rounded-full border-2 text-black ${even ? "lg:rotate-[-225deg]" : "lg:rotate-[-45deg]"} shadow-inner-large bg-cover bg-center bg-no-repeat p-0`,
+          `aspect-square w-full rotate-[135deg] rounded-full border-2 text-black ${even ? "md:rotate-[-225deg]" : "md:rotate-[-45deg]"} shadow-inner-large bg-cover bg-center bg-no-repeat p-0`,
           imgClassName,
         )}
       >
