@@ -28,14 +28,14 @@ const Features = () => {
     setCurrentIndex(index);
   };
   return (
-    <section className="h-fit w-full bg-[url('@/assets/bgCarouselCrop.png')] from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
+    <section className="h-fit w-full bg-[url('@/assets/bgCarouselCrop.png')] from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br overflow-hidden">
       <div className="container mx-auto flex flex-col place-items-center">
         <h1 className="mb-14 text-center font-poppins text-5xl font-semibold text-white lg:text-[96px]">
           PRODUCTS
         </h1>
         <Carousel
           opts={{ align: "center" }}
-          className="w-[95%] lg:h-[100%] lg:w-[90%]"
+          className="w-[95%] lg:h-[100%] lg:w-[95%]"
           setApi={(api) => {
             if (api !== undefined) {
               api.on("select", () =>
@@ -50,15 +50,15 @@ const Features = () => {
                 key={index}
                 className="flex h-[50rem] w-full items-center justify-center lg:basis-1/3"
               >
-                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-0 px-5 shadow-2xl shadow-black md:h-[35rem] lg:w-[25rem]">
+                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-0 px-5 shadow-2xl shadow-black md:h-[35rem] lg:w-[20rem]">
                   <div
-                    className="absolute -z-50 flex h-[50svh] w-[80svw] rounded-[3rem] border-x-0 border-t-2 border-green-400 bg-[#414141]/50 shadow-inner shadow-[#414141] backdrop-blur-lg md:h-[35rem] lg:w-[25rem]"
+                    className="absolute -z-50 h-[50svh] w-[80svw] rounded-[3rem] border-x-0 border-t-2 border-green-400 bg-[#414141]/50 shadow-inner shadow-[#414141] backdrop-blur-lg md:h-[35rem] lg:w-[20rem]"
                     style={{
                       clipPath: "polygon(100% 0%, 0% 0%, 0% 65%, 100% 25%)",
                     }}
                   />
                   <div
-                    className="absolute -z-50 h-[48svh] w-[80svw] rounded-[3rem] border-x-0 border-b-2 border-green-400 bg-green-400/20 shadow-inner shadow-green-400 backdrop-blur-lg md:h-[33.6rem] lg:w-[25rem]"
+                    className="absolute -z-50 h-[48svh] w-[80svw] rounded-[3rem] border-x-0 border-b-2 border-green-400 bg-green-400/20 shadow-inner shadow-green-400 backdrop-blur-lg md:h-[33.6rem] lg:w-[20rem]"
                     style={{
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
                     }}

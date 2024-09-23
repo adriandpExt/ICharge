@@ -1,20 +1,27 @@
 import Like from "@/assets/like.png";
-
+import CostEffective from "@/assets/costeffective.svg";
+import Convenience from "@/assets/convenience.svg";
+import FLexible from "@/assets/flexible.svg";
+import { Label } from "@/components/ui/label";
 export default function WhyICharge() {
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <h1 className="mb-12 text-center text-4xl font-bold sm:text-5xl lg:text-6xl">
-        WHY ICHARGE?
+        WHY{" "}
+        <Label variant={"default"} className="text-5xl lg:text-6xl">
+          <span className="text-green-500">I</span>
+          <span className="text-black">Charge?</span>
+        </Label>
       </h1>
 
       <div className="space-y-24 sm:space-y-36">
         <div
           className="flex flex-col items-center gap-8 sm:flex-row"
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
-          <div className="flex h-48 w-48 shrink-0 items-center justify-center rounded-full bg-green-200 sm:h-56 sm:w-56 lg:h-64 lg:w-64">
+          <div className="flex h-48 w-48 shrink-0 items-center justify-center sm:h-56 sm:w-56 lg:h-64 lg:w-64">
             <img
-              src={Like}
+              src={Convenience}
               alt="Convenience"
               className="h-full w-full text-green-600"
             />
@@ -33,11 +40,11 @@ export default function WhyICharge() {
 
         <div
           className="flex flex-col items-center gap-8 sm:flex-row-reverse"
-          data-aos="fade-left"
+          data-aos="fade-up"
         >
-          <div className="flex h-48 w-48 shrink-0 items-center justify-center rounded-full bg-green-200 sm:h-56 sm:w-56 lg:h-64 lg:w-64">
+          <div className="round flex h-48 w-48 shrink-0 items-center justify-center sm:h-56 sm:w-56 lg:h-64 lg:w-64">
             <img
-              src={Like}
+              src={CostEffective}
               alt="Cost-effective"
               className="h-full w-full text-green-600"
             />
@@ -56,11 +63,11 @@ export default function WhyICharge() {
 
         <div
           className="flex flex-col items-center gap-8 sm:flex-row"
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
-          <div className="flex h-48 w-48 shrink-0 items-center justify-center rounded-full bg-green-200 sm:h-56 sm:w-56 lg:h-64 lg:w-64">
+          <div className="flex h-48 w-48 shrink-0 items-center justify-center sm:h-56 sm:w-56 lg:h-64 lg:w-64">
             <img
-              src={Like}
+              src={FLexible}
               alt="Flexible"
               className="h-full w-full text-green-600"
             />
