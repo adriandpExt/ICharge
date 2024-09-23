@@ -29,9 +29,9 @@ const Features = () => {
     setCurrentIndex(index);
   };
   const carouselItemDarkTop =
-    "dark:border-t-2 dark:border-green-400 dark:bg-[#414141]/50 shadow-inner dark:shadow-[#414141]";
+    "dark:border-t-2 dark:border-green-400 dark:bg-[#2E3935] shadow-inner dark:shadow-[#414141]";
   const carouselItemDarkBottom =
-    "dark:border-b-2 dark:border-green-400 dark:bg-green-400/20 dark:shadow-green-400";
+    "dark:border-b-2 dark:border-green-400 dark:bg-[#194B21]/50 dark:shadow-green-400";
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
@@ -70,7 +70,7 @@ const Features = () => {
                     className={cn(
                       "absolute -z-50 h-[38svh] w-[80svw] rounded-[3rem] shadow-inner md:h-[28.8rem] lg:w-[25rem]",
                       carouselItemDarkBottom,
-                      "border-2 border-[#B7FAB1] bg-[#E0EEDE]",
+                      "border-x-[1] border-[#B7FAB1] bg-[#E0EEDE]",
                     )}
                     style={{
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
