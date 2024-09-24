@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { renderItems } from "../footer/utils";
 import { IconName } from "../svg-icons/utils";
 import { Label } from "@/components/ui/label";
+import { ArrowRight } from "lucide-react";
 
 export const Footer = () => {
   const handleClick = () => {
@@ -112,8 +113,8 @@ export const Footer = () => {
                 placeholder="Enter your email..."
                 className="border-green-700 bg-white text-black"
               />
-              <Button className="bg-green-500 text-black hover:bg-green-600">
-                Subscribe
+              <Button variant={"default"}>
+                Subscribe <ArrowRight />
               </Button>
             </div>
             <div className="al mt-5 grid grid-cols-1 place-items-center lg:text-start">
