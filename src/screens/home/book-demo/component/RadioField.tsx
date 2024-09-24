@@ -7,12 +7,13 @@ import {
 } from "@/components/ui/form";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { FormFieldProps, LabelValue } from "../types";
+import { FieldValues } from "react-hook-form";
 
-interface RadioField extends FormFieldProps {
+interface RadioField<T extends FieldValues> extends FormFieldProps<T> {
   options: LabelValue[];
 }
 
-export const RadioField = (props: RadioField) => {
+export const RadioField = <T extends FieldValues>(props: RadioField<T>) => {
   const { control, name, label, options } = props;
   return (
     <FormField
