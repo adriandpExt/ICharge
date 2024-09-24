@@ -71,7 +71,10 @@ const HeroSection = () => {
         </Label>
 
         <div className="items-center space-y-4">
-          <Button className="h-14 w-full gap-2 rounded-full bg-opacity-50 bg-gradient-to-l from-[#066C01] to-[#5AFF52] font-lexendDeca text-sm text-primary-foreground md:w-48">
+          <Button
+            variant="default"
+            className="h-14 w-full gap-2 rounded-full bg-opacity-50 md:w-48"
+          >
             Get Started <ArrowRight />
           </Button>
           <div className="flex items-center justify-evenly md:block md:space-y-2">

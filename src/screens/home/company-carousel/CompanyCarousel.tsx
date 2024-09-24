@@ -6,6 +6,7 @@ import AyalaMalls from "@/assets/Products/ayalamalls.png";
 import Robinsons from "@/assets/Products/robinsons.png";
 import Angkan from "@/assets/Products/angkan.png";
 import { useAnimation, useDragControls, motion } from "framer-motion";
+import { Label } from "@/components/ui/label";
 
 // const SCROLL_SPEED = 0.5;
 
@@ -50,17 +51,13 @@ export default function Component() {
 
   return (
     <div className="container relative mx-auto overflow-hidden border-green-400 bg-green-100 lg:rounded-3xl">
-      <div className="bg-green-300 bg-gradient-to-b p-4">
-        <h2 className="text-center text-2xl font-extrabold text-black">
+      <div className="flex flex-col bg-green-300 bg-gradient-to-b p-4">
+        <Label className="text-center text-2xl font-extrabold text-black">
           Our Trusted Partners
-        </h2>
+        </Label>
       </div>
       <div className="flex h-36 place-items-center p-4">
-        <motion.div
-          ref={carousel}
-          className="cursor-grab overflow-hidden"
-          whileTap={{ cursor: "grabbing" }}
-        >
+        <motion.div ref={carousel} className="overflow-hidden">
           <motion.div
             drag="x"
             dragControls={dragControls}
