@@ -156,23 +156,25 @@ export const FAQPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(faqData[0].category);
 
   return (
-    <div className="flex h-screen flex-col bg-background dark:bg-green-300">
+    <div className="flex min-h-screen flex-col bg-background">
       {/* Header */}
-      <header className="bg-white px-8 py-4 text-primary-foreground">
-        <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
+      <header className="bg-primary px-8 py-4 text-primary-foreground">
+        <h1 className="text-2xl font-bold md:text-3xl">
+          Frequently Asked Questions
+        </h1>
       </header>
 
       {/* Main content */}
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
-        <div className="w-64 overflow-y-auto bg-secondary p-4">
-          <h2 className="mb-4 text-3xl font-semibold">Categories</h2>
+        <div className="hidden w-64 overflow-y-auto bg-secondary p-4 md:block">
+          <h2 className="mb-4 text-xl font-semibold">Categories</h2>
           <nav>
             {faqData.map((category) => (
               <button
                 key={category.category}
                 onClick={() => setSelectedCategory(category.category)}
-                className={`mb-2 block w-full rounded px-4 py-2 text-left text-xl ${
+                className={`mb-2 block w-full rounded px-4 py-2 text-left ${
                   selectedCategory === category.category
                     ? "bg-green-500 text-primary-foreground"
                     : "hover:bg-primary/10"
@@ -185,24 +187,47 @@ export const FAQPage = () => {
         </div>
 
         {/* FAQ content */}
-        <div className="flex-1 overflow-hidden p-8">
-          <ScrollArea className="h-full">
-            <h2 className="mb-6 text-4xl font-bold">{selectedCategory}</h2>
-            {faqData
-              .find((category) => category.category === selectedCategory)
-              ?.items.map((item, index) => (
-                <Accordion
-                  key={index}
-                  type="single"
-                  collapsible
-                  className="mb-4"
+        <div className="flex-1 overflow-hidden p-4 md:p-8">
+          <ScrollArea className="h-[calc(100vh-8rem)]">
+            <div className="space-y-6">
+              {/* Mobile category selector */}
+              <div className="md:hidden">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full rounded border border-input bg-background bg-white p-2"
                 >
-                  <AccordionItem value={`item-${index}`}>
-                    <AccordionTrigger>{item.question}</AccordionTrigger>
-                    <AccordionContent>{item.answer}</AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              ))}
+                  {faqData.map((category) => (
+                    <option key={category.category} value={category.category}>
+                      {category.category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <h2 className="text-2xl font-bold md:text-3xl">
+                {selectedCategory}
+              </h2>
+              {faqData
+                .find((category) => category.category === selectedCategory)
+                ?.items.map((item, index) => (
+                  <Accordion
+                    key={index}
+                    type="single"
+                    collapsible
+                    className="mb-4"
+                  >
+                    <AccordionItem value={`item-${index}`}>
+                      <AccordionTrigger className="text-lg md:text-xl">
+                        {item.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-base md:text-lg">
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ))}
+            </div>
           </ScrollArea>
         </div>
       </div>
