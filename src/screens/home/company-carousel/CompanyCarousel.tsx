@@ -57,11 +57,7 @@ export default function Component() {
         </Label>
       </div>
       <div className="flex h-36 place-items-center p-4">
-        <motion.div
-          ref={carousel}
-          className="cursor-grab overflow-hidden"
-          whileTap={{ cursor: "grabbing" }}
-        >
+        <motion.div ref={carousel} className="overflow-hidden">
           <motion.div
             drag="x"
             dragControls={dragControls}

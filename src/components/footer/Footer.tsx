@@ -9,8 +9,12 @@ import { IconName } from "../svg-icons/utils";
 import { Label } from "@/components/ui/label";
 
 export const Footer = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
   return (
-    <footer className="bg-[#022700] p-6 text-white md:p-10">
+    <footer className="bg-customGreen p-6 text-white md:p-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-6">
           {/* Logo and social media */}
@@ -69,7 +73,7 @@ export const Footer = () => {
               <Link to={"/features"}>
                 <Label>Features</Label>
               </Link>
-              <Link to={"/faqs"}>
+              <Link to={"/faqs"} onClick={handleClick}>
                 <Label>FAQs</Label>
               </Link>
             </ul>

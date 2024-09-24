@@ -156,9 +156,9 @@ export const FAQPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(faqData[0].category);
 
   return (
-    <div className="mt-10 flex h-screen flex-col bg-background dark:bg-green-300">
+    <div className="flex h-screen flex-col bg-background dark:bg-green-300">
       {/* Header */}
-      <header className="bg-gray-800 px-8 py-4 text-primary-foreground">
+      <header className="bg-white px-8 py-4 text-primary-foreground">
         <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
       </header>
 
@@ -166,15 +166,15 @@ export const FAQPage = () => {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <div className="w-64 overflow-y-auto bg-secondary p-4">
-          <h2 className="mb-4 text-xl font-semibold">Categories</h2>
+          <h2 className="mb-4 text-3xl font-semibold">Categories</h2>
           <nav>
             {faqData.map((category) => (
               <button
                 key={category.category}
                 onClick={() => setSelectedCategory(category.category)}
-                className={`mb-2 block w-full rounded px-4 py-2 text-left ${
+                className={`mb-2 block w-full rounded px-4 py-2 text-left text-xl ${
                   selectedCategory === category.category
-                    ? "bg-gray-800 text-primary-foreground"
+                    ? "bg-green-500 text-primary-foreground"
                     : "hover:bg-primary/10"
                 }`}
               >
@@ -187,7 +187,7 @@ export const FAQPage = () => {
         {/* FAQ content */}
         <div className="flex-1 overflow-hidden p-8">
           <ScrollArea className="h-full">
-            <h2 className="mb-6 text-2xl font-bold">{selectedCategory}</h2>
+            <h2 className="mb-6 text-4xl font-bold">{selectedCategory}</h2>
             {faqData
               .find((category) => category.category === selectedCategory)
               ?.items.map((item, index) => (
