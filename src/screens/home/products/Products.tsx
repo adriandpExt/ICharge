@@ -35,7 +35,7 @@ const Features = () => {
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
-        <h1 className="mb-14 text-center font-poppins text-5xl font-semibold text-black lg:text-[96px]">
+        <h1 className="lg:mb-14 text-center font-poppins text-5xl font-semibold text-black lg:text-[96px]">
           PRODUCTS
         </h1>
         <Carousel
@@ -53,12 +53,12 @@ const Features = () => {
             {products.map((data, index) => (
               <CarouselItem
                 key={index}
-                className="flex h-[40rem] w-full items-center justify-center lg:basis-1/3"
+                className="flex h-[30rem] md:h-[40rem] w-full items-center justify-center lg:basis-1/3"
               >
-                <div className="flex h-[40svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 shadow-md shadow-black/40 sm:p-10 md:h-[30rem] lg:w-[25rem] lg:px-10">
+                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 shadow-md shadow-black/40 sm:p-10 md:h-[30rem] lg:w-[25rem] lg:px-10">
                   <div
                     className={cn(
-                      "absolute -z-40 h-[40svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
+                      "absolute -z-40 h-[50svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
                       carouselItemDarkTop,
                       "border-0 bg-[#C7E9C0]",
                     )}
@@ -68,7 +68,7 @@ const Features = () => {
                   />
                   <div
                     className={cn(
-                      "absolute -z-50 h-[38svh] w-[80svw] rounded-[3rem] shadow-inner md:h-[28.8rem] lg:w-[25rem]",
+                      "absolute -z-50 h-[48svh] w-[80svw] rounded-[3rem] shadow-inner md:h-[28.8rem] lg:w-[25rem]",
                       carouselItemDarkBottom,
                       "border-[#B7FAB1] border-x-[1] bg-[#E0EEDE]",
                     )}
