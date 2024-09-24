@@ -35,7 +35,7 @@ const Features = () => {
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
-        <h1 className="lg:mb-14 text-center font-poppins text-5xl font-semibold text-black lg:text-[96px]">
+        <h1 className="text-center font-staatliches text-6xl text-black dark:text-white lg:mb-14">
           PRODUCTS
         </h1>
         <Carousel
@@ -53,7 +53,7 @@ const Features = () => {
             {products.map((data, index) => (
               <CarouselItem
                 key={index}
-                className="flex h-[30rem] md:h-[40rem] w-full items-center justify-center lg:basis-1/3"
+                className="custom-lg:basisOneThird flex h-[30rem] w-full items-center justify-center md:h-[40rem]"
               >
                 <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 shadow-md shadow-black/40 sm:p-10 md:h-[30rem] lg:w-[25rem] lg:px-10">
                   <div
@@ -96,21 +96,21 @@ const Features = () => {
           </CarouselContent>
           <CarouselPrevious
             className={cn(
-              "hidden aspect-square scale-150 rounded-e-none text-green-500 hover:text-green-200 lg:flex",
+              "custom-lg:flex hidden aspect-square scale-150 rounded-e-none text-green-500 hover:text-green-200",
               "dark:border-x-[0.5px] dark:border-t-[1.5] dark:bg-black/50 dark:text-white dark:shadow-inner dark:shadow-green-700 dark:hover:bg-black/40",
               "border-[#D1F9C9] bg-[#E0EFDF]",
             )}
           />
           <CarouselNext
             className={cn(
-              "hidden aspect-square scale-150 rounded-s-none text-green-500 hover:text-green-200 lg:flex",
+              "custom-lg:flex hidden aspect-square scale-150 rounded-s-none text-green-500 hover:text-green-200",
               "dark:border-x-[0.5px] dark:border-t-[1.5] dark:bg-black/50 dark:text-white dark:shadow-inner dark:shadow-green-700 dark:hover:bg-black/40",
               "border-[#D1F9C9] bg-[#E0EFDF]",
             )}
           />
         </Carousel>
 
-        <div className="mt-5 flex justify-center lg:hidden">
+        <div className="custom-lg:hidden mt-5 flex justify-center">
           {products.map((_, index) => (
             <div
               key={index}
