@@ -23,16 +23,6 @@ const sectorsDesktop: SectorProps[] = [
   { name: "", col: 2, row: 7 },
 ];
 
-// const sectorsMobile = [
-//   { name: "", col: 2, row: 2 },
-//   { name: "RETAIL", col: 1, row: 3 },
-//   { name: "TRANSPORT", col: 2, row: 3 },
-//   { name: "HOSPITALITY", col: 2, row: 4 },
-//   { name: "EVENTS", col: 1, row: 5 },
-//   { name: "HEALTHCARE", col: 2, row: 5 },
-//   { name: "", col: 2, row: 6 },
-// ];
-
 const Sector = (): ReactElement => {
   const renderSectors = (
     sectors: { name: string; col: number; row: number }[],
@@ -86,16 +76,19 @@ const Sector = (): ReactElement => {
 
   return (
     <PageContainer className="flex flex-col lg:h-[85svh]">
-      <h1 className="pb-14 text-center font-staatliches text-6xl dark:text-white">
+      <Label
+        variant="title"
+        className="pb-14 text-center text-6xl dark:text-white"
+      >
         Sectors
-      </h1>
-      <Label className="flex text-center text-3xl custom-lg:hidden">
+      </Label>
+      <Label className="custom-lg:hidden flex text-center text-3xl">
         NOT SUPPORTED (TO BE UPDATED)
       </Label>
       <Card
-        className="inherit absolute mx-auto hidden w-fit translate-x-[13.5%] translate-y-[8%] border-0 shadow-none custom-lg:grid"
+        className="inherit custom-lg:grid absolute mx-auto hidden w-fit translate-x-[13.5%] translate-y-[8%] border-0 shadow-none"
         style={{
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: "repeat(2, 1fr)",
           gridTemplateRows: "repeat(4, 1fr)",
           columnGap: 130,
           rowGap: 10,
@@ -104,16 +97,6 @@ const Sector = (): ReactElement => {
         {/* Desktop layout */}
         {renderSectors(sectorsDesktop)}
 
-        {/* Mobile layout */}
-        {/* <Card
-          className="relative grid gap-1 border-0 shadow-none lg:hidden"
-          style={{
-            gridTemplateColumns: "repeat(1, 1fr)",
-            gridTemplateRows: "repeat(6, 1fr)",
-          }}
-        >
-          {renderSectors(sectorsMobile)}
-        </Card> */}
       </Card>
     </PageContainer>
   );
