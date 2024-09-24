@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -25,7 +25,8 @@ import { Label } from "@/components/ui/label";
 
 import { PageContainer, SvgIcons } from "@/components";
 
-import { issueLabelValue, issueType, sector } from "./utils";
+import { formSchema, issueLabelValue, issueType, sector } from "./utils";
+
 import {
   Form,
   RadioField,
@@ -34,6 +35,7 @@ import {
   TextField,
 } from "./component";
 
+type FormValues = z.infer<typeof formSchema>;
 export default function BookDemoCard() {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -41,35 +43,61 @@ export default function BookDemoCard() {
     setSelectedOption(value);
   };
 
-  const formSchema = z.object({
-    firstName: z.string({
-      required_error: "first name is required",
-      invalid_type_error: "first name must be a string",
-    }),
-    lastName: z.string({
-      required_error: "last name is required",
-      invalid_type_error: "last name must be a string",
-    }),
-    email: z
-      .string({
-        required_error: "email is required",
-        invalid_type_error: "email must be a string",
-      })
-      .email("must be a valid email"),
-    address: z.string({
-      required_error: "address is required",
-      invalid_type_error: "address must be a string",
-    }),
-    issue: z.string({ required_error: "issue is required" }),
-    explainIssue: z.string().optional(),
-  });
-
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      address: "",
+      issue: "",
+      phoneNumber: "",
+      companyName: "",
+      sector: "",
+      country: "",
+      explainIssue: "",
+      interestedIcharge: "",
+      additionalInformation: "",
+    },
   });
 
-  const handleSubmit = () => {
-    console.log("hellow world");
+  const getCleanedData = (data: FormValues, selectedOption: string | null) => {
+    const commonFields = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+    };
+
+    switch (selectedOption) {
+      case "I have an issue with my power bank/ICharge station":
+        return {
+          ...commonFields,
+          address: data.address,
+          issue: data.issue,
+          explainIssue: data.explainIssue,
+        };
+      case "I want a ICharge station":
+        return {
+          ...commonFields,
+          phoneNumber: data.phoneNumber,
+          companyName: data.companyName,
+          sector: data.sector,
+          interestedIcharge: data.interestedIcharge,
+        };
+      case "I want to bring ICharge to my country":
+        return {
+          ...commonFields,
+          phoneNumber: data.phoneNumber,
+          country: data.country,
+          additionalInformation: data.additionalInformation,
+        };
+      default:
+        return commonFields;
+    }
+  };
+  const handleSubmit: SubmitHandler<FormValues> = (data) => {
+    const cleanedData = getCleanedData(data, selectedOption);
+    console.log("Form data:", cleanedData);
   };
 
   const renderIssue = () => {
@@ -160,12 +188,12 @@ export default function BookDemoCard() {
   };
   return (
     <PageContainer>
-      <Card className="grid grid-cols-2 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6]">
-        <div className="grid h-full w-full place-items-center rounded-bl-xl rounded-tl-xl bg-[url('@/assets/modern-man-using-smartphone-city-2.png')] bg-cover bg-no-repeat">
+      <Card className="grid grid-cols-1 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:grid-cols-2">
+        <div className="hidden h-full w-full rounded-bl-xl rounded-tl-xl bg-cover bg-no-repeat lg:grid lg:place-items-center lg:bg-[url('@/assets/modern-man-using-smartphone-city-2.png')]">
           <SvgIcons name="ic_footer_logo" size={200} />
         </div>
 
-        <Form forms={form} onSubmit={handleSubmit}>
+        <Form<FormValues> forms={form} onSubmit={handleSubmit}>
           <CardHeader>
             <CardTitle>
               <Label variant={"title"}> BOOK A DEMO</Label>
@@ -186,7 +214,7 @@ export default function BookDemoCard() {
                   }
                 />
               </SelectTrigger>
-              <SelectContent className="border-white bg-gray-200">
+              <SelectContent className="w-80 whitespace-pre-wrap border-white bg-gray-200 md:w-full lg:w-full">
                 {issueType.map((item) => (
                   <SelectItem
                     value={item.value}

@@ -43,7 +43,7 @@ const HowTo = () => {
       id="howToPage"
     >
       <div className="space-y-14 lg:space-y-28">
-        <Label className="font-poppins text-3xl font-bold lg:text-7xl">
+        <Label className="font-staatliches text-6xl dark:text-white">
           HOW TO USE ICHARGE?
         </Label>
         <div className="mx-auto flex w-[80%] grid-cols-9 flex-col p-2 md:grid md:w-[70%]">

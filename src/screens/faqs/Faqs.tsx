@@ -1,11 +1,14 @@
+"use client";
+
 import { useState } from "react";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { ScrollArea } from "@/components/ui/scroll-area";
+} from "@/components/ui/customUI/accordion";
+import { Label } from "@/components/ui/label";
 
 const faqData = [
   {
@@ -152,87 +155,65 @@ const faqData = [
   },
 ];
 
-export const FAQPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState(faqData[0].category);
+export default function FullScreenResponsiveFAQAccordion() {
+  const [activeCategory, setActiveCategory] = useState(faqData[0].category);
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      {/* Header */}
-      <header className="bg-primary px-8 py-4 text-primary-foreground">
-        <h1 className="text-2xl font-bold md:text-3xl">
-          Frequently Asked Questions
-        </h1>
-      </header>
+    <div className="flex min-h-screen flex-col p-4 md:p-8 lg:p-12">
+      <Label className="mb-6 text-center text-3xl font-bold md:text-4xl lg:mb-10 lg:text-5xl">
+        FREQUENTLY ASKED QUESTIONS
+      </Label>
 
-      {/* Main content */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
-        <div className="hidden w-64 overflow-y-auto bg-secondary p-4 md:block">
-          <h2 className="mb-4 text-xl font-semibold">Categories</h2>
-          <nav>
-            {faqData.map((category) => (
-              <button
+      <div className="mb-6 flex flex-wrap justify-center gap-2 lg:mb-10">
+        {faqData.map((category) => (
+          <Label className="font-bold">
+            <button
+              key={category.category}
+              className={`rounded-full px-3 py-2 text-sm transition-colors duration-200 md:px-4 md:py-2 md:text-base lg:text-lg ${
+                activeCategory === category.category
+                  ? "bg-green-500 text-white"
+                  : "bg-green-100 text-gray-800 hover:bg-green-200"
+              }`}
+              onClick={() => setActiveCategory(category.category)}
+            >
+              {category.category}
+            </button>
+          </Label>
+        ))}
+      </div>
+
+      <div className="flex-grow overflow-auto">
+        {faqData.map(
+          (category) =>
+            activeCategory === category.category && (
+              <Accordion
                 key={category.category}
-                onClick={() => setSelectedCategory(category.category)}
-                className={`mb-2 block w-full rounded px-4 py-2 text-left ${
-                  selectedCategory === category.category
-                    ? "bg-green-500 text-primary-foreground"
-                    : "hover:bg-primary/10"
-                }`}
+                type="single"
+                collapsible
+                className="container relative mx-auto space-y-2"
               >
-                {category.category}
-              </button>
-            ))}
-          </nav>
-        </div>
-
-        {/* FAQ content */}
-        <div className="flex-1 overflow-hidden p-4 md:p-8">
-          <ScrollArea className="h-[calc(100vh-8rem)]">
-            <div className="space-y-6">
-              {/* Mobile category selector */}
-              <div className="md:hidden">
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full rounded border border-input bg-background bg-white p-2"
-                >
-                  {faqData.map((category) => (
-                    <option key={category.category} value={category.category}>
-                      {category.category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <h2 className="text-2xl font-bold md:text-3xl">
-                {selectedCategory}
-              </h2>
-              {faqData
-                .find((category) => category.category === selectedCategory)
-                ?.items.map((item, index) => (
-                  <Accordion
+                {category.items.map((item, index) => (
+                  <AccordionItem
                     key={index}
-                    type="single"
-                    collapsible
-                    className="mb-4"
+                    value={`item-${index}`}
+                    className="border-none"
                   >
-                    <AccordionItem value={`item-${index}`}>
-                      <AccordionTrigger className="text-lg md:text-xl">
-                        {item.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-base md:text-lg">
-                        {item.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
+                    <AccordionTrigger className="rounded-lg bg-green-500 px-4 py-3 text-left text-base hover:bg-green-600 md:text-lg lg:text-xl">
+                      <div className="flex w-full items-center justify-between">
+                        <Label className="text-base font-semibold">
+                          {item.question}
+                        </Label>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-sm md:text-base lg:text-lg">
+                      <Label className="text-base">{item.answer}</Label>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-            </div>
-          </ScrollArea>
-        </div>
+              </Accordion>
+            ),
+        )}
       </div>
     </div>
   );
-};
-
-export default FAQPage;
+}
