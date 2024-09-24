@@ -8,8 +8,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { FieldValues } from "react-hook-form";
 
-export const TextField = (props: FormFieldProps) => {
+export const TextField = <T extends FieldValues>(props: FormFieldProps<T>) => {
   const { control, name, label } = props;
 
   return (

@@ -7,8 +7,9 @@ import {
 } from "@/components/ui/form";
 import { Textarea as ShadTextArea } from "@/components/ui/textarea";
 import { FormFieldProps } from "../types";
+import { FieldValues } from "react-hook-form";
 
-export const TextArea = (props: FormFieldProps) => {
+export const TextArea = <T extends FieldValues>(props: FormFieldProps<T>) => {
   const { control, name, label } = props;
   return (
     <FormField

@@ -15,11 +15,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { FieldValues } from "react-hook-form";
 
-interface SelectFieldProps extends FormFieldProps {
+interface SelectFieldProps<T extends FieldValues> extends FormFieldProps<T> {
   options: LabelValue[];
 }
-export const SelectField = (props: SelectFieldProps) => {
+export const SelectField = <T extends FieldValues>(
+  props: SelectFieldProps<T>,
+) => {
   const { control, name, label, options } = props;
 
   return (
