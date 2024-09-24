@@ -120,3 +120,21 @@
     /* Equivalent to rounded-full */
   }
 }
+
+@media (min-width: 1281px) {
+  .custom-lg\:hidden {
+    display: none;
+  }
+  .custom-lg\:block {
+    display: block;
+  }
+  .custom-lg\:flex {
+    display: flex;
+  }
+  .custom-lg\:grid {
+    display: grid;
+  }
+  .custom-lg\:basisOneThird {
+    flex-basis: 33.33333%;
+  }
+}

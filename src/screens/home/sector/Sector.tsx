@@ -89,11 +89,11 @@ const Sector = (): ReactElement => {
       <h1 className="pb-14 text-center font-staatliches text-6xl dark:text-white">
         Sectors
       </h1>
-      <Label className="flex text-center text-3xl lg:hidden">
+      <Label className="flex text-center text-3xl custom-lg:hidden">
         NOT SUPPORTED (TO BE UPDATED)
       </Label>
       <Card
-        className="inherit absolute mx-auto hidden w-fit translate-x-[13.5%] translate-y-[8%] border-0 shadow-none lg:grid"
+        className="inherit absolute mx-auto hidden w-fit translate-x-[13.5%] translate-y-[8%] border-0 shadow-none custom-lg:grid"
         style={{
           gridTemplateColumns: "repeat(4, 1fr)",
           gridTemplateRows: "repeat(4, 1fr)",
