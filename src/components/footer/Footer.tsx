@@ -43,7 +43,7 @@ export const Footer = () => {
             </div>
           </div>
           {/* Platforms */}
-          <div>
+          <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">Platforms</Label>
             <ul className="grid grid-cols-1 space-y-2">
               <Link to={"#web"}>
@@ -67,7 +67,7 @@ export const Footer = () => {
           </div>
 
           {/* About Us */}
-          <div>
+          <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">About Us</Label>
             <ul className="grid grid-cols-1 space-y-2">
               <Link to={"/features"}>
@@ -80,7 +80,7 @@ export const Footer = () => {
           </div>
 
           {/* Company */}
-          <div>
+          <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">Company</Label>
             <ul className="grid grid-cols-1 space-y-2">
               <Link to={""}>
@@ -116,7 +116,7 @@ export const Footer = () => {
                 Subscribe
               </Button>
             </div>
-            <div className="al mt-5 grid grid-cols-1">
+            <div className="al mt-5 grid grid-cols-1 place-items-center lg:text-start">
               <Label className="mb-1 text-left text-xl font-semibold">
                 Download the App
               </Label>

@@ -35,7 +35,7 @@ const Features = () => {
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
-        <h1 className="mb-14 text-center font-poppins text-5xl font-semibold text-white lg:text-[96px]">
+        <h1 className="mb-14 text-center font-poppins text-5xl font-semibold text-black lg:text-[96px]">
           PRODUCTS
         </h1>
         <Carousel
@@ -70,7 +70,7 @@ const Features = () => {
                     className={cn(
                       "absolute -z-50 h-[38svh] w-[80svw] rounded-[3rem] shadow-inner md:h-[28.8rem] lg:w-[25rem]",
                       carouselItemDarkBottom,
-                      "border-x-[1] border-[#B7FAB1] bg-[#E0EEDE]",
+                      "border-[#B7FAB1] border-x-[1] bg-[#E0EEDE]",
                     )}
                     style={{
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
