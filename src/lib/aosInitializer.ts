@@ -16,7 +16,10 @@ export const AosInitializer = () => {
       setModalRendered(true);
     }, 3000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      AOS.refresh(); // Refresh AOS on unmount
+    };
   }, []);
 
   return null;

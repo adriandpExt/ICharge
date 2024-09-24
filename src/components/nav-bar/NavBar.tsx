@@ -1,25 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
-// import { Moon, Sun } from "lucide-react";
-
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-
 import { SvgIcons } from "../svg-icons";
-
 import useScroll from "@/hooks/useScroll";
-
-// import { useTheme } from "@/hooks/useTheme";
-
 import { Drawer, Language } from "./component";
 import { linkList } from "./utils";
 
 export const NavBar = () => {
-  // const { theme, setTheme } = useTheme();
-
   const navigate = useNavigate();
   const location = useLocation();
-
   const isScroll = useScroll(window.innerHeight);
 
   const handleBackHome = () => {
@@ -57,9 +46,7 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:h-28 ${
-        isScroll ? "border-b-[1px] bg-white" : "bg-transparent"
-      }`}
+      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 transition-all lg:relative lg:h-28 ${location.pathname === "/faqs" ? "bg-customGreen" : ""}`}
     >
       <Button variant={"icon"} onClick={handleBackHome}>
         <SvgIcons name="ic_svl_gs2" size={150} />
@@ -68,26 +55,7 @@ export const NavBar = () => {
       {renderNavibation()}
 
       <div className="flex items-center">
-        {/* <Button
-          size={"icon"}
-          variant={"ghost"}
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        >
-          <Sun
-            className={`${
-              isScroll ? "text-black" : "text-white"
-            } h-[1.5rem] w-[1.3rem] dark:hidden`}
-          />
-          <Moon
-            className={`${
-              isScroll ? "text-black" : "text-white"
-            } hidden h-5 w-5 dark:block`}
-          />
-        </Button> */}
-
         <Drawer />
-
-        {/* Language Selection */}
         <Language />
       </div>
     </header>

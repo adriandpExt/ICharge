@@ -9,8 +9,12 @@ import { IconName } from "../svg-icons/utils";
 import { Label } from "@/components/ui/label";
 
 export const Footer = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
   return (
-    <footer className="bg-[#022700] p-6 text-white md:p-10">
+    <footer className="bg-customGreen p-6 text-white md:p-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-6">
           {/* Logo and social media */}
@@ -39,7 +43,7 @@ export const Footer = () => {
             </div>
           </div>
           {/* Platforms */}
-          <div>
+          <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">Platforms</Label>
             <ul className="grid grid-cols-1 space-y-2">
               <Link to={"#web"}>
@@ -63,20 +67,20 @@ export const Footer = () => {
           </div>
 
           {/* About Us */}
-          <div>
+          <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">About Us</Label>
             <ul className="grid grid-cols-1 space-y-2">
               <Link to={"/features"}>
                 <Label>Features</Label>
               </Link>
-              <Link to={"/faqs"}>
+              <Link to={"/faqs"} onClick={handleClick}>
                 <Label>FAQs</Label>
               </Link>
             </ul>
           </div>
 
           {/* Company */}
-          <div>
+          <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">Company</Label>
             <ul className="grid grid-cols-1 space-y-2">
               <Link to={""}>
@@ -112,7 +116,7 @@ export const Footer = () => {
                 Subscribe
               </Button>
             </div>
-            <div className="al mt-5 grid grid-cols-1">
+            <div className="al mt-5 grid grid-cols-1 place-items-center lg:text-start">
               <Label className="mb-1 text-left text-xl font-semibold">
                 Download the App
               </Label>
