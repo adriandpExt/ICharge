@@ -61,6 +61,7 @@ const HeroSection = () => {
             </span>
           </Label>
         </div>
+
         <Label
           variant={"subtitle"}
           className="mx-auto text-sm text-white md:w-10/12 lg:mx-0 lg:text-xl"
@@ -77,7 +78,7 @@ const HeroSection = () => {
           >
             Get Started <ArrowRight />
           </Button>
-          <div className="flex items-center justify-center md:block md:space-y-2">
+          <div className="flex items-center justify-center lg:block lg:space-y-2">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"
