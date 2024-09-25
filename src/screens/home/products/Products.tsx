@@ -56,7 +56,7 @@ const Features = () => {
                 key={index}
                 className="custom-lg:basisOneThird flex h-[30rem] w-full items-center justify-center md:h-[40rem]"
               >
-                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 shadow-md shadow-black/40 sm:px-10 md:h-[30rem] lg:w-[25rem] lg:px-10">
+                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 shadow-md shadow-black/40 md:h-[30rem] lg:w-[25rem] lg:px-10">
                   <div
                     className={cn(
                       "absolute -z-40 h-[50svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
