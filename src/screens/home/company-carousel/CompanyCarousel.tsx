@@ -1,14 +1,14 @@
 import { useRef, useEffect, useState } from "react";
+import { useAnimation, useDragControls, motion } from "framer-motion";
+
 import Dunkin from "@/assets/Products/dunkin.png";
 import Ikea from "@/assets/Products/ikea.png";
 import MaryGrace from "@/assets/Products/marygrace.png";
 import AyalaMalls from "@/assets/Products/ayalamalls.png";
 import Robinsons from "@/assets/Products/robinsons.png";
 import Angkan from "@/assets/Products/angkan.png";
-import { useAnimation, useDragControls, motion } from "framer-motion";
-import { Label } from "@/components/ui/label";
 
-// const SCROLL_SPEED = 0.5;
+import { Label } from "@/components/ui/label";
 
 interface Logo {
   name: string;
@@ -52,7 +52,7 @@ export default function Component() {
   return (
     <div className="container relative mx-auto overflow-hidden border-green-400 bg-green-100 lg:rounded-3xl">
       <div className="flex flex-col bg-green-300 bg-gradient-to-b p-4">
-        <Label className="text-center text-2xl font-extrabold text-black">
+        <Label variant={"title"} className="text-center text-2xl">
           Our Trusted Partners
         </Label>
       </div>
