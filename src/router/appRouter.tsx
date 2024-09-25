@@ -4,6 +4,7 @@ import Faqs from "@/screens/faqs/Faqs";
 import Home from "@/screens/home/Home";
 import News from "@/screens/news/News";
 import Partner from "@/screens/partner/partner";
+import Sustainablity from "@/screens/sustainability/sustainability";
 import Sectors from "@/screens/sectors";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
@@ -22,7 +23,7 @@ const router: RouteObject[] = [
         element: <Sectors />,
       },
       { path: "partner", element: <Partner /> },
-      { path: "sustainability", element: <>Sustainablity</> },
+      { path: "sustainability", element: <Sustainablity /> },
       { path: "news", element: <News /> },
       { path: "customer-service", element: <>Customer service</> },
       {

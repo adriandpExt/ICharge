@@ -18,7 +18,7 @@ export const linkList: LinkList[] = [
     label: "News",
     path: "/news",
   },
-  { label: "Customer Service", path: "/customer-service" },
+  { label: "Customer Service", path: "/faqs" },
 ];
 
 export const language = [
