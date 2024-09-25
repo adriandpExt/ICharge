@@ -1,9 +1,9 @@
 import enTranslation from "./en.json";
 import phTranslation from "./ph.json";
 
-export const resources = {
+export default {
   en: {
-    translations: enTranslation,
+    translation: enTranslation,
   },
   ph: {
     translation: phTranslation,

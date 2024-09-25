@@ -1,5 +1,31 @@
 {
-  "i": "I",
-  "charge": "Charge",
-  "stay": "Stay"
+  "home": {
+    "companyCarousel": {
+      "label": "Our Trusted Partners"
+    },
+    "whyIcharge": {
+      "label": "BAKIT "
+    },
+    "convenience": {
+      "label": "Ang pag-aalok ng mga nauupahang power bank ay nagpapahusay sa kaginhawahan ng iyong lokasyon, na maaaring humantong sa pagtaas ng trapiko sa paa, mas mahaba at madalas na pagbisita."
+    },
+    "costEffective": {
+      "label": "Sa napakababang halaga na P19.00 kada 30 minuto, mahikayat ang mga parokyano na manatili nang mas matagal at mag-enjoy nang higit pa sa kung ano ang inaalok ng iyong venue, at sa gayon ay mapapalakas ang pangkalahatang kasiyahan ng customer."
+    },
+    "flexible": {
+      "label": "Gumagana ang iCharge sa walang kahirap-hirap at walang putol na pagsasama sa isang malawak na hanay ng mga negosyo at lugar, na nag-aalok ng maaasahan at flexible na suporta saanman ang lokasyon."
+    },
+    "WeOfferServicesThatFitsYourNeeds": {
+      "label": "NAG-aalok KAMI NG MGA SERBISYONG ANGKOP SA IYONG MGA PANGANGAILANGAN"
+    },
+    "FreeUseOfEquipment": {
+      "label": "Libreng Paggamit ng Kagamitan"
+    },
+    "SaleOfEquipment": {
+      "label": "Pagbebenta ng Kagamitan"
+    },
+    "LeaseOfEquipment": {
+      "label": "Pag-upa ng Kagamitan"
+    }
+  }
 }
