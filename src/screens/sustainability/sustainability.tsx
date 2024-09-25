@@ -1,7 +1,7 @@
 import React from "react";
 import WorkInProgress from "../workinprogress/wip";
 
-const News = () => {
+const sustainability = () => {
   return (
     <div className="flex h-screen justify-center bg-background">
       <WorkInProgress />
@@ -9,4 +9,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default sustainability;

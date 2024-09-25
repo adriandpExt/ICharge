@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 
 import {
@@ -9,6 +7,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/customUI/accordion";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const faqData = [
   {
@@ -157,16 +157,38 @@ const faqData = [
 
 export default function FullScreenResponsiveFAQAccordion() {
   const [activeCategory, setActiveCategory] = useState(faqData[0].category);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex min-h-screen flex-col p-4 md:p-8 lg:p-12">
+    <div className="flex h-full flex-col md:pb-28">
+      <section className="grid h-[50vh] w-full">
+        <div className="absolute inset-0 h-[50vh] w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-center brightness-[30%]" />
+
+        <div className="relative mx-auto flex max-w-3xl flex-col place-items-center pt-4 text-center text-white md:pt-16">
+          <h1 className="text-3xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
+            CUSTOMER SERVICE
+          </h1>
+          <p className="mb-6 text-base sm:mb-8 sm:text-lg">
+            Use the form below to send us an email and we will respond within 12
+            hours. If you need an immediate answer, our Customer Service team is
+            just a click away, chat with us!
+          </p>
+          <Button
+            variant={"custombutton"}
+            className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
+          >
+            Chat with Us
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+          </Button>
+        </div>
+      </section>
       <Label className="mb-6 text-center text-3xl font-bold md:text-4xl lg:mb-10 lg:text-5xl">
         FREQUENTLY ASKED QUESTIONS
       </Label>
 
       <div className="mb-6 flex flex-wrap justify-center gap-2 lg:mb-10">
         {faqData.map((category) => (
-          <Label className="font-bold">
+          <Label className="font-bold" key={category.category}>
             <button
               key={category.category}
               className={`rounded-full px-3 py-2 text-sm transition-colors duration-200 md:px-4 md:py-2 md:text-base lg:text-lg ${
@@ -182,7 +204,7 @@ export default function FullScreenResponsiveFAQAccordion() {
         ))}
       </div>
 
-      <div className="flex-grow overflow-auto">
+      <div className="mb-28 h-[70vh] flex-grow">
         {faqData.map(
           (category) =>
             activeCategory === category.category && (
@@ -198,7 +220,14 @@ export default function FullScreenResponsiveFAQAccordion() {
                     value={`item-${index}`}
                     className="border-none"
                   >
-                    <AccordionTrigger className="rounded-lg bg-green-500 px-4 py-3 text-left text-base hover:bg-green-600 md:text-lg lg:text-xl">
+                    <AccordionTrigger
+                      className={`rounded-lg ${
+                        openIndex === index ? "bg-green-400" : "bg-green-100"
+                      } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
+                      onClick={() =>
+                        setOpenIndex(openIndex === index ? null : index)
+                      }
+                    >
                       <div className="flex w-full items-center justify-between">
                         <Label className="text-base font-semibold">
                           {item.question}

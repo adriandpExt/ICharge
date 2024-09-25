@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { initValue, products } from "./utils";
 import { cn } from "@/lib/utils";
+import { Label } from "@/components/ui/label";
+import SvgIcons from "@/components/svg-icons/SvgIcons";
 
 const Features = () => {
   const [open, setOpen] = useState(false);
@@ -35,9 +37,9 @@ const Features = () => {
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
-        <h1 className="text-center font-staatliches text-6xl text-black dark:text-white lg:mb-14">
+        <Label className="text-center font-staatliches text-6xl text-black dark:text-white lg:mb-14">
           PRODUCTS
-        </h1>
+        </Label>
         <Carousel
           opts={{ align: "center" }}
           className="w-[95%] lg:h-[100%] lg:w-[95%]"
@@ -55,7 +57,7 @@ const Features = () => {
                 key={index}
                 className="custom-lg:basisOneThird flex h-[30rem] w-full items-center justify-center md:h-[40rem]"
               >
-                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 shadow-md shadow-black/40 sm:p-10 md:h-[30rem] lg:w-[25rem] lg:px-10">
+                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 shadow-md shadow-black/40 md:h-[30rem] lg:w-[25rem] lg:px-10">
                   <div
                     className={cn(
                       "absolute -z-40 h-[50svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
@@ -76,6 +78,9 @@ const Features = () => {
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
                     }}
                   />
+                  <div className="flex h-fit w-full justify-start">
+                    <SvgIcons name="ic_svl_ig" size={50} />
+                  </div>
                   <img
                     src={data.image}
                     className="h-[50%] w-auto object-contain"

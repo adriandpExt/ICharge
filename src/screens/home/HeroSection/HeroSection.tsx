@@ -7,9 +7,11 @@ import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 import playstore from "@/assets/icons/ic_playstore_hero.svg";
 import applestore from "@/assets/icons/ic_apple_hero.svg";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const { t } = useTranslation();
   return (
     <section className="grid h-[90vh] w-full place-items-center lg:grid-cols-2">
       <video
@@ -45,7 +47,7 @@ const HeroSection = () => {
           >
             Stay
             <span className="ml-3 bg-gradient-to-r from-[#00FF8C] via-[#1fc0f1] to-[#00FBFF] bg-clip-text text-transparent">
-              Powered
+              {t("charge")}
             </span>
           </Label>
 
@@ -61,6 +63,7 @@ const HeroSection = () => {
             </span>
           </Label>
         </div>
+
         <Label
           variant={"subtitle"}
           className="mx-auto text-sm text-white md:w-10/12 lg:mx-0 lg:text-xl"
@@ -77,7 +80,7 @@ const HeroSection = () => {
           >
             Get Started <ArrowRight />
           </Button>
-          <div className="flex items-center justify-evenly md:block md:space-y-2">
+          <div className="flex items-center justify-center lg:block lg:space-y-2">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"
