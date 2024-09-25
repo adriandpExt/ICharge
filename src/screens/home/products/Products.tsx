@@ -78,7 +78,7 @@ const Features = () => {
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
                     }}
                   />
-                  <div className="flex h-fit w-full justify-start">
+                  <div className="hidden h-fit w-full justify-start lg:flex">
                     <SvgIcons name="ic_svl_ig" size={50} />
                   </div>
                   <img
