@@ -157,6 +157,7 @@ const faqData = [
 
 export default function FullScreenResponsiveFAQAccordion() {
   const [activeCategory, setActiveCategory] = useState(faqData[0].category);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <div className="flex h-full flex-col md:p-8">
@@ -219,7 +220,14 @@ export default function FullScreenResponsiveFAQAccordion() {
                     value={`item-${index}`}
                     className="border-none"
                   >
-                    <AccordionTrigger className="rounded-lg bg-green-500 px-4 py-3 text-left text-base hover:bg-green-600 md:text-lg lg:text-xl">
+                    <AccordionTrigger
+                      className={`rounded-lg ${
+                        openIndex === index ? "bg-green-400" : "bg-green-100"
+                      } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
+                      onClick={() =>
+                        setOpenIndex(openIndex === index ? null : index)
+                      }
+                    >
                       <div className="flex w-full items-center justify-between">
                         <Label className="text-base font-semibold">
                           {item.question}
