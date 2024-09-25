@@ -12,7 +12,9 @@ export default function WhyICharge() {
     <PageContainer className="flex flex-col sm:px-6 lg:px-8">
       <Label className="mb-12 text-center text-4xl sm:text-5xl lg:text-6xl">
         {t(LocalizationKey.home.whyIcharge)}
-        <span className="font-poppins text-6xl text-green-500">I</span>
+        <span className="font-poppins text-4xl text-green-500 sm:text-5xl lg:text-6xl">
+          I
+        </span>
         Charge
       </Label>
 
