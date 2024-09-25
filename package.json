@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -54,7 +54,7 @@
     "i18next": "^23.15.1",
     "i18next-browser-languagedetector": "^8.0.0",
     "input-otp": "^1.2.4",
-    "lottie-react": "^2.4.0",
+    "lottie-light-react": "^2.4.0",
     "lucide": "^0.441.0",
     "lucide-react": "^0.441.0",
     "next-themes": "^0.3.0",

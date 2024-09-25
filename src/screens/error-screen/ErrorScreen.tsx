@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { useNavigate } from "react-router-dom";
 import { PageContainer } from "@/components";
 import NotFound from "@/assets/404.json";
-import Lottie from "lottie-react";
+import Lottie from "lottie-light-react";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 

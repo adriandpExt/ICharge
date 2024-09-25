@@ -54,7 +54,7 @@ export default function Component() {
   }, [controls, width]);
 
   return (
-    <div className="container relative mx-auto overflow-hidden border-green-400 bg-green-100 lg:rounded-3xl">
+    <div className="container relative mx-auto overflow-hidden border-green-400 bg-green-100 md:rounded-3xl">
       <div className="flex flex-col bg-green-300 bg-gradient-to-b p-4">
         <Label variant={"title"} className="text-center text-2xl">
           {t(LocalizationKey.home.companyCarousel)}
