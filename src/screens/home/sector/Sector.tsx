@@ -66,7 +66,7 @@ const Sector = (): ReactElement => {
               "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
             transform: transform(sector.row),
           }}
-          className={`flex h-[200px] ${colorHex(sector)} w-[200px] items-center justify-center border-0 text-center font-staatliches text-sm text-white transition-all duration-300 dark:text-black lg:text-2xl`}
+          className={`flex h-[200px] w-[200px] items-center justify-center border-0 text-center font-staatliches text-sm text-white transition-all duration-300 dark:text-black lg:text-2xl ${colorHex(sector)}`}
         >
           {sector.name}
         </Card>
