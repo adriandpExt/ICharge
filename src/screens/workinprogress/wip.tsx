@@ -1,5 +1,5 @@
-import wipAnimation from "@/assets/wip.json";
-import Lottie from "lottie-light-react";
+// import wipAnimation from "@/assets/wip.json";
+// import Lottie from "lottie-light-react";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -13,11 +13,11 @@ export default function WorkInProgress() {
 
   return (
     <div className="flex h-screen flex-col items-center p-4 text-center">
-      <Lottie
+      {/* <Lottie
         animationData={wipAnimation}
         loop={true}
         className="h-[300px] w-[300px] md:h-[500px] md:w-[500px] lg:h-[700px] lg:w-[700px]"
-      />
+      /> */}
       <h2 className="mt-4 text-xl font-bold md:text-2xl">Under Construction</h2>
       <p className="mt-2 text-sm text-muted-foreground md:text-base">
         We're currently working on this feature. Check back soon!
