@@ -93,7 +93,7 @@ const Sector = (): ReactElement => {
         NOT SUPPORTED (TO BE UPDATED)
       </Label>
       <Card
-        className="inherit absolute mx-auto hidden w-fit translate-x-[13.5%] translate-y-[8%] border-0 shadow-none custom-lg:grid"
+        className="inherit custom-lg:grid absolute mx-auto hidden w-fit pl-28 translate-y-[8%] border-0 shadow-none"
         style={{
           gridTemplateColumns: "repeat(4, 1fr)",
           gridTemplateRows: "repeat(4, 1fr)",
@@ -103,17 +103,6 @@ const Sector = (): ReactElement => {
       >
         {/* Desktop layout */}
         {renderSectors(sectorsDesktop)}
-
-        {/* Mobile layout */}
-        {/* <Card
-          className="relative grid gap-1 border-0 shadow-none lg:hidden"
-          style={{
-            gridTemplateColumns: "repeat(1, 1fr)",
-            gridTemplateRows: "repeat(6, 1fr)",
-          }}
-        >
-          {renderSectors(sectorsMobile)}
-        </Card> */}
       </Card>
     </PageContainer>
   );
