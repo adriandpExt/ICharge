@@ -39,19 +39,19 @@ const Sector = (): ReactElement => {
     const transform = (row: number): string => {
       switch (row) {
         case 1:
-          return "translateX(125%) translateY(0)";
+          return "translateX(126%) translateY(0)";
         case 2:
           return "translateX(208.5%) translateY(-50%)";
         case 3:
-          return "translateY(-100%) translateX(125%)";
+          return "translateX(126%) translateY(-100%)";
         case 4:
           return "translateX(208.5%) translateY(-150%)";
         case 5:
-          return "translateY(-200%) translateX(125%)";
+          return "translateX(126%) translateY(-200%)";
         case 6:
           return "translateX(208.5%) translateY(-250%)";
         case 7:
-          return "translateY(-300%) translateX(125%)";
+          return "translateX(126%) translateY(-300%)";
       }
       return "";
     };
@@ -66,7 +66,7 @@ const Sector = (): ReactElement => {
               "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
             transform: transform(sector.row),
           }}
-          className={`flex h-[200px] ${colorHex(sector)} w-[190px] items-center justify-center border-0 text-center font-staatliches text-sm text-white transition-all duration-300 dark:text-black lg:text-2xl`}
+          className={`flex h-[200px] ${colorHex(sector)} w-[200px] items-center justify-center border-0 text-center font-staatliches text-sm text-white transition-all duration-300 dark:text-black lg:text-2xl`}
         >
           {sector.name}
         </Card>
@@ -75,16 +75,24 @@ const Sector = (): ReactElement => {
   };
 
   return (
-    <PageContainer className="flex flex-col lg:h-[85svh]">
+    <PageContainer className="custom-lg:h-[85svh] flex flex-col">
       <Label
         variant="title"
         className="pb-14 text-center text-6xl dark:text-white"
       >
         Sectors
       </Label>
-      <Label className="custom-lg:hidden flex text-center text-3xl">
-        NOT SUPPORTED (TO BE UPDATED)
-      </Label>
+      <Card
+        style={{
+          clipPath:
+            "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
+        }}
+        className={`custom-lg:hidden flex h-[200px] w-[200px] items-center justify-center self-center border-0 bg-[#32802E] text-sm text-white transition-all duration-300 dark:text-black lg:text-2xl`}
+      >
+        <Label variant="title" className="text-4xl">
+          SECTORS
+        </Label>
+      </Card>
       <Card
         className="inherit custom-lg:grid absolute mx-auto hidden w-fit translate-x-[13.5%] translate-y-[8%] border-0 shadow-none"
         style={{
