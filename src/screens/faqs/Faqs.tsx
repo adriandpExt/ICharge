@@ -159,11 +159,11 @@ export default function FullScreenResponsiveFAQAccordion() {
   const [activeCategory, setActiveCategory] = useState(faqData[0].category);
 
   return (
-    <div className="flex h-full flex-col md:p-8">
+    <div className="flex h-full flex-col md:pb-28">
       <section className="grid h-[50vh] w-full">
         <div className="absolute inset-0 h-[50vh] w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-center brightness-[30%]" />
 
-        <div className="relative mx-auto flex max-w-3xl flex-col text-center text-white md:pt-16">
+        <div className="relative mx-auto flex max-w-3xl flex-col place-items-center pt-4 text-center text-white md:pt-16">
           <h1 className="text-3xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
             CUSTOMER SERVICE
           </h1>
@@ -174,7 +174,7 @@ export default function FullScreenResponsiveFAQAccordion() {
           </p>
           <Button
             variant={"custombutton"}
-            className="h-12 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
+            className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
           >
             Chat with Us
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -203,7 +203,7 @@ export default function FullScreenResponsiveFAQAccordion() {
         ))}
       </div>
 
-      <div className="mb-28 h-[40vh] flex-grow">
+      <div className="mb-28 h-[70vh] flex-grow">
         {faqData.map(
           (category) =>
             activeCategory === category.category && (
