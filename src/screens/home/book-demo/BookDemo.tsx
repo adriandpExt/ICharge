@@ -190,7 +190,7 @@ export default function BookDemoCard() {
     <PageContainer>
       <Card className="grid grid-cols-1 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:grid-cols-2">
         <div className="hidden h-full w-full rounded-bl-xl rounded-tl-xl bg-cover bg-no-repeat lg:grid lg:place-items-center lg:bg-[url('@/assets/modern-man-using-smartphone-city-2.png')]">
-          <SvgIcons name="ic_footer_logo" size={200} />
+          <SvgIcons name="ic_footer_logo" size={500} />
         </div>
 
         <Form<FormValues> forms={form} onSubmit={handleSubmit}>
