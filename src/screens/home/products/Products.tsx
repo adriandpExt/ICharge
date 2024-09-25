@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { initValue, products } from "./utils";
 import { cn } from "@/lib/utils";
+import { Label } from "@/components/ui/label";
 import SvgIcons from "@/components/svg-icons/SvgIcons";
 
 const Features = () => {
@@ -36,9 +37,9 @@ const Features = () => {
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
-        <h1 className="text-center font-staatliches text-6xl text-black dark:text-white lg:mb-14">
+        <Label className="text-center font-staatliches text-6xl text-black dark:text-white lg:mb-14">
           PRODUCTS
-        </h1>
+        </Label>
         <Carousel
           opts={{ align: "center" }}
           className="w-[95%] lg:h-[100%] lg:w-[95%]"
