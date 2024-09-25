@@ -7,9 +7,11 @@ import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 import playstore from "@/assets/icons/ic_playstore_hero.svg";
 import applestore from "@/assets/icons/ic_apple_hero.svg";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const { t } = useTranslation();
   return (
     <section className="grid h-[90vh] w-full place-items-center lg:grid-cols-2">
       <video
@@ -45,7 +47,7 @@ const HeroSection = () => {
           >
             Stay
             <span className="ml-3 bg-gradient-to-r from-[#00FF8C] via-[#1fc0f1] to-[#00FBFF] bg-clip-text text-transparent">
-              Powered
+              {t("charge")}
             </span>
           </Label>
 
