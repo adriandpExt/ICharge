@@ -160,11 +160,11 @@ export default function FullScreenResponsiveFAQAccordion() {
 
   return (
     <div className="flex h-full flex-col md:p-8">
-      <section className="grid h-[60vh] w-full">
-        <div className="absolute inset-0 h-[60vh] w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-center brightness-[30%]" />
+      <section className="grid h-[50vh] w-full">
+        <div className="absolute inset-0 h-[50vh] w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-center brightness-[30%]" />
 
-        <div className="relative mx-auto flex max-w-3xl flex-col place-content-center text-center text-white">
-          <h1 className="text-4xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
+        <div className="relative mx-auto flex max-w-3xl flex-col text-center text-white md:pt-16">
+          <h1 className="text-3xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
             CUSTOMER SERVICE
           </h1>
           <p className="mb-6 text-base sm:mb-8 sm:text-lg">
@@ -174,7 +174,7 @@ export default function FullScreenResponsiveFAQAccordion() {
           </p>
           <Button
             variant={"custombutton"}
-            className="h-12 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg"
+            className="h-12 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
           >
             Chat with Us
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
