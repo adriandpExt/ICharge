@@ -1,4 +1,3 @@
-import React from "react";
 import WorkInProgress from "../workinprogress/wip";
 
 const sustainability = () => {
