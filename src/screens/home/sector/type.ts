@@ -6,4 +6,5 @@ export interface SectorProps {
 
 export interface PolygonProps {
   sectors: SectorProps[];
+  isTransform: boolean;
 }
