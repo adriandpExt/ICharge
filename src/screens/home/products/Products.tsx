@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { initValue, products } from "./utils";
 import { cn } from "@/lib/utils";
+import SvgIcons from "@/components/svg-icons/SvgIcons";
 
 const Features = () => {
   const [open, setOpen] = useState(false);
@@ -55,7 +56,7 @@ const Features = () => {
                 key={index}
                 className="custom-lg:basisOneThird flex h-[30rem] w-full items-center justify-center md:h-[40rem]"
               >
-                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 shadow-md shadow-black/40 sm:p-10 md:h-[30rem] lg:w-[25rem] lg:px-10">
+                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 shadow-md shadow-black/40 sm:px-10 md:h-[30rem] lg:w-[25rem] lg:px-10">
                   <div
                     className={cn(
                       "absolute -z-40 h-[50svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
@@ -76,6 +77,9 @@ const Features = () => {
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
                     }}
                   />
+                  <div className="flex h-fit w-full justify-start">
+                    <SvgIcons name="ic_svl_ig" size={50} />
+                  </div>
                   <img
                     src={data.image}
                     className="h-[50%] w-auto object-contain"
