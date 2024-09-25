@@ -9,6 +9,9 @@ import Robinsons from "@/assets/Products/robinsons.png";
 import Angkan from "@/assets/Products/angkan.png";
 
 import { Label } from "@/components/ui/label";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
+// import LocalizationKey from "@/i18n/key";
 
 interface Logo {
   name: string;
@@ -29,6 +32,7 @@ export default function Component() {
   const carousel = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   const dragControls = useDragControls();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (carousel.current) {
@@ -53,7 +57,7 @@ export default function Component() {
     <div className="container relative mx-auto overflow-hidden border-green-400 bg-green-100 lg:rounded-3xl">
       <div className="flex flex-col bg-green-300 bg-gradient-to-b p-4">
         <Label variant={"title"} className="text-center text-2xl">
-          Our Trusted Partners
+          {t(LocalizationKey.home.companyCarousel)}
         </Label>
       </div>
       <div className="flex h-36 place-items-center p-4">
