@@ -1,13 +1,8 @@
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-
+import { Link } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
 
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "../../ui/button";
-
-import { linkList } from "../utils";
-
-import useScroll from "@/hooks/useScroll";
-import { SvgIcons } from "../../svg-icons";
 import {
   Select,
   SelectContent,
@@ -16,17 +11,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../ui/select";
-import { Link } from "react-router-dom";
+
+import { SvgIcons } from "../../svg-icons";
+
+import { linkList } from "../utils";
 
 export const Drawer = () => {
-  const isScroll = useScroll(window.innerHeight);
-
   return (
     <Sheet>
       <SheetTrigger>
-        <Menu
-          className={`inline-flex lg:hidden ${isScroll ? "text-black" : "text-white"}`}
-        />
+        <Menu className={`inline-flex text-white lg:hidden`} />
       </SheetTrigger>
 
       <SheetContent side={"left"} className="space-y-5 bg-white text-center">

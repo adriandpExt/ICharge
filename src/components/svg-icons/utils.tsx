@@ -24,4 +24,5 @@ export type IconName =
   | "ic_apple_footer"
   | "ic_playstore_hero"
   | "ic_footer_logo"
-  | "ic_playstore_footer";
+  | "ic_playstore_footer"
+  | "ic_icharge_white";

@@ -77,7 +77,7 @@ const HeroSection = () => {
           >
             Get Started <ArrowRight />
           </Button>
-          <div className="flex items-center justify-evenly md:block md:space-y-2">
+          <div className="flex items-center justify-center md:block md:space-y-2">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"

@@ -25,11 +25,13 @@ export const NavBar = () => {
             <div key={item.path} className="flex items-center">
               <Button
                 variant="link"
-                className={`font-poppins hover:text-gray-500 hover:no-underline ${
+                className={`hover:text-gray-500 hover:no-underline ${
                   isActive ? "font-bold text-white underline" : ""
                 } ${isScroll ? "text-black" : "text-white"}`}
               >
-                <Link to={item.path as string}>{item.label}</Link>
+                <Link to={item.path as string} className="font-poppins">
+                  {item.label}
+                </Link>
               </Button>
               {index < linkList.length - 1 && (
                 <Separator
@@ -46,12 +48,14 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:h-28 ${
-        isScroll ? "border-b-[1px] bg-white" : "bg-transparent"
+      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:h-28 ${location.pathname !== "/" && "bg-gradient-to-t from-[#055c00] to-[#022700]"} ${
+        isScroll
+          ? "border-b-[1px] bg-gradient-to-t from-[#055c00] to-[#022700]"
+          : "bg-transparent"
       }`}
     >
       <Button variant={"icon"} onClick={handleBackHome}>
-        <SvgIcons name="ic_svl_gs2" size={150} />
+        <SvgIcons name="ic_icharge_white" size={150} />
       </Button>
 
       {renderNavibation()}
