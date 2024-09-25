@@ -46,7 +46,9 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 transition-all lg:relative lg:h-28 ${location.pathname === "/faqs" ? "bg-customGreen" : ""}`}
+      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:h-28 ${
+        isScroll ? "border-b-[1px] bg-white" : "bg-transparent"
+      }`}
     >
       <Button variant={"icon"} onClick={handleBackHome}>
         <SvgIcons name="ic_svl_gs2" size={150} />
