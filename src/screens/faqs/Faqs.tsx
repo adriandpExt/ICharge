@@ -188,7 +188,7 @@ export default function FullScreenResponsiveFAQAccordion() {
 
       <div className="mb-6 flex flex-wrap justify-center gap-2 lg:mb-10">
         {faqData.map((category) => (
-          <Label className="font-bold">
+          <Label className="font-bold" key={category.category}>
             <button
               key={category.category}
               className={`rounded-full px-3 py-2 text-sm transition-colors duration-200 md:px-4 md:py-2 md:text-base lg:text-lg ${
