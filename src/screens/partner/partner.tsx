@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Manusingphone from "@/assets/modern-man-using-smartphone-city.png";
+import { Label } from "@/components/ui/label";
 
 const Partner = () => {
   const features = [
@@ -44,19 +45,19 @@ const Partner = () => {
   ];
   return (
     <div className="flex h-full flex-col md:pb-28">
-      <section className="grid h-[50vh] w-full">
-        <div className="absolute inset-0 h-[50vh] w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-center brightness-[30%]" />
+      <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
+        <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
 
-        <div className="relative mx-auto flex max-w-3xl flex-col place-items-center pt-4 text-center text-white md:pt-16">
-          <h1 className="text-3xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
+        <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
+          <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
             PARTNER WITH US
-          </h1>
-          <p className="mb-6 text-base sm:mb-8 sm:text-lg">
+          </Label>
+          <Label className="mb-6 text-xl text-white sm:mb-8 lg:text-2xl">
             ICharge is the leading brand in smartphone charging across Western
             markets. Start your scalable business venture today & begin to reap
             the rewards from providing the leading charging solution to your
             chosen market!
-          </p>
+          </Label>
           <Button
             variant={"custombutton"}
             className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
@@ -65,7 +66,7 @@ const Partner = () => {
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
-      </section>
+      </div>
       <div className="container mx-auto px-4 py-8">
         <h1 className="mb-8 text-center text-4xl font-bold">WHY ICHARGE?</h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

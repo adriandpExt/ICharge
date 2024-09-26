@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 const Sectors = () => {
   return (
     <>
-      <section className="h-fulls w-full">
+      <section className="h-full w-full">
         <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
           <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
 

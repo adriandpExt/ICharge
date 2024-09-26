@@ -161,7 +161,7 @@ export default function FullScreenResponsiveFAQAccordion() {
 
   return (
     <div className="flex h-full flex-col md:pb-28">
-      <section className="grid h-[50vh] w-full">
+      {/* <section className="grid h-[50vh] w-full">
         <div className="absolute inset-0 h-[50vh] w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-center brightness-[30%]" />
 
         <div className="relative mx-auto flex max-w-3xl flex-col place-items-center pt-4 text-center text-white md:pt-16">
@@ -181,7 +181,28 @@ export default function FullScreenResponsiveFAQAccordion() {
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
-      </section>
+      </section> */}
+      <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white pb-5">
+        <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
+
+        <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
+          <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
+            CUSTOMER SERVICE
+          </Label>
+          <Label className="mb-6 text-xl text-white sm:mb-8 lg:text-2xl">
+            Use the form below to send us an email and we will respond within 12
+            hours. If you need an immediate answer, our Customer Service team is
+            just a click away, chat with us!
+          </Label>
+          <Button
+            variant={"custombutton"}
+            className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
+          >
+            Chat with Us
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+          </Button>
+        </div>
+      </div>
       <Label className="mb-6 text-center text-3xl font-bold md:text-4xl lg:mb-10 lg:text-5xl">
         FREQUENTLY ASKED QUESTIONS
       </Label>

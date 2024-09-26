@@ -7,9 +7,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <NavBar />
-      <main className="bg-[url('@/assets/landing_bg.svg')] bg-cover bg-no-repeat">
-        {children}
-      </main>
+      <main className="dark:bg-white">{children}</main>
       <Footer />
     </>
   );
