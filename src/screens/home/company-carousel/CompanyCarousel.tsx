@@ -56,7 +56,7 @@ export default function Component() {
             {[...logos, ...logos].map((logo, index) => (
               <CarouselItem
                 key={index}
-                className="mx-4 flex h-16 min-w-[150px] basis-1/5 items-center justify-center"
+                className="mx-4 flex h-16 min-w-[150px] basis-1/12 items-center justify-center"
               >
                 <img
                   src={logo.src}
