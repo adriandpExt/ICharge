@@ -30,21 +30,28 @@ export default function Component() {
 
   useEffect(() => {
     const carouselElement = carousel.current;
+    let scrollPosition = 0;
+    const scrollStep = 1; // Adjust the scroll speed
+    const scrollInterval = 20; // Interval in milliseconds
+
     if (carouselElement) {
       const scrollWidth = carouselElement.scrollWidth;
-      let scrollPosition = 0;
 
-      const scrollStep = 1; // Adjust the scroll speed
       const startInfiniteScroll = () => {
         scrollPosition += scrollStep;
         if (scrollPosition >= scrollWidth / 2) {
           scrollPosition = 0;
         }
         carouselElement.scrollTo(scrollPosition, 0);
-        requestAnimationFrame(startInfiniteScroll);
       };
 
-      startInfiniteScroll();
+      // Use setInterval for controlled scrolling
+      const interval = setInterval(startInfiniteScroll, scrollInterval);
+
+      // Clear interval on component unmount
+      return () => {
+        clearInterval(interval);
+      };
     }
   }, []);
 
