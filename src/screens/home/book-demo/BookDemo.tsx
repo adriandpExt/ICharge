@@ -261,7 +261,7 @@ export default function BookDemoCard() {
             <Button
               type="submit"
               variant={"default"}
-              className="border-2 border-green-600 shadow-xl"
+              className="h-12 rounded-xl shadow-xl"
             >
               Continue <ArrowRight />
             </Button>
