@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Dunkin from "@/assets/Products/dunkin.png";
 import Ikea from "@/assets/Products/ikea.png";
 import MaryGrace from "@/assets/Products/marygrace.png";
@@ -26,33 +26,43 @@ const logos: Logo[] = [
 
 export default function Component() {
   const carousel = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(true);
   const { t } = useTranslation();
 
   useEffect(() => {
     const carouselElement = carousel.current;
+    let animationFrameId: number;
     let scrollPosition = 0;
-    const scrollStep = 1; // Adjust the scroll speed
-    const scrollInterval = 20; // Interval in milliseconds
+    const scrollStep = 0.5; // Reduced scroll speed
 
-    if (carouselElement) {
-      const scrollWidth = carouselElement.scrollWidth;
+    const startInfiniteScroll = () => {
+      if (!carouselElement || !isVisible) return;
 
-      const startInfiniteScroll = () => {
-        scrollPosition += scrollStep;
-        if (scrollPosition >= scrollWidth / 2) {
-          scrollPosition = 0;
-        }
-        carouselElement.scrollTo(scrollPosition, 0);
-      };
+      scrollPosition += scrollStep;
+      if (scrollPosition >= carouselElement.scrollWidth / 2) {
+        scrollPosition = 0;
+      }
+      carouselElement.scrollTo(scrollPosition, 0);
+      animationFrameId = requestAnimationFrame(startInfiniteScroll);
+    };
 
-      // Use setInterval for controlled scrolling
-      const interval = setInterval(startInfiniteScroll, scrollInterval);
+    animationFrameId = requestAnimationFrame(startInfiniteScroll);
 
-      // Clear interval on component unmount
-      return () => {
-        clearInterval(interval);
-      };
-    }
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [isVisible]);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      setIsVisible(!document.hidden);
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   return (
