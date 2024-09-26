@@ -50,7 +50,9 @@ export default function Component() {
             dragFree: true,
             duration: 10000,
           }}
-          plugins={[AutoPlay({ playOnInit: true, delay: 0 })]}
+          plugins={[
+            AutoPlay({ playOnInit: true, delay: 0, stopOnInteraction: false }),
+          ]}
         >
           <CarouselContent>
             {[...logos, ...logos].map((logo, index) => (
