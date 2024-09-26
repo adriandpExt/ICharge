@@ -1,4 +1,3 @@
-import { useRef, useEffect, useState } from "react";
 import Dunkin from "@/assets/Products/dunkin.png";
 import Ikea from "@/assets/Products/ikea.png";
 import MaryGrace from "@/assets/Products/marygrace.png";
@@ -8,6 +7,12 @@ import Angkan from "@/assets/Products/angkan.png";
 import { Label } from "@/components/ui/label";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import AutoPlay from "embla-carousel-autoplay";
 
 // Logos array
 interface Logo {
@@ -25,45 +30,7 @@ const logos: Logo[] = [
 ];
 
 export default function Component() {
-  const carousel = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(true);
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const carouselElement = carousel.current;
-    let animationFrameId: number;
-    let scrollPosition = 0;
-    const scrollStep = 0.5; // Reduced scroll speed
-
-    const startInfiniteScroll = () => {
-      if (!carouselElement || !isVisible) return;
-
-      scrollPosition += scrollStep;
-      if (scrollPosition >= carouselElement.scrollWidth / 2) {
-        scrollPosition = 0;
-      }
-      carouselElement.scrollTo(scrollPosition, 0);
-      animationFrameId = requestAnimationFrame(startInfiniteScroll);
-    };
-
-    animationFrameId = requestAnimationFrame(startInfiniteScroll);
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [isVisible]);
-
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      setIsVisible(!document.hidden);
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
-  }, []);
 
   return (
     <div className="container relative mx-auto overflow-hidden border-green-400 bg-green-100 lg:rounded-3xl">
@@ -73,23 +40,36 @@ export default function Component() {
         </Label>
       </div>
       <div className="flex h-36 place-items-center p-4">
-        <div
-          ref={carousel}
-          className="flex space-x-8 overflow-hidden whitespace-nowrap"
+        <Carousel
+          className="flex overflow-hidden whitespace-nowrap"
+          opts={{
+            align: "start",
+            loop: true,
+            skipSnaps: false,
+            inViewThreshold: 0,
+            dragFree: true,
+            duration: 10000,
+          }}
+          plugins={[
+            AutoPlay({ playOnInit: true, delay: 0, stopOnInteraction: false }),
+          ]}
         >
-          {[...logos, ...logos].map((logo, index) => (
-            <div
-              key={index}
-              className="mx-4 flex h-16 min-w-[150px] items-center justify-center"
-            >
-              <img
-                src={logo.src}
-                alt={logo.name}
-                className="max-h-full max-w-full"
-              />
-            </div>
-          ))}
-        </div>
+          <CarouselContent>
+            {[...logos, ...logos].map((logo, index) => (
+              <CarouselItem
+                key={index}
+                className="mx-4 flex h-16 min-w-[150px] basis-1/12 items-center justify-center"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="max-h-full max-w-full"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="py-2 text-center text-sm text-muted-foreground"></div>
+        </Carousel>
       </div>
     </div>
   );
