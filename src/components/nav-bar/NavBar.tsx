@@ -1,10 +1,23 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
-import { SvgIcons } from "../svg-icons";
+
 import useScroll from "@/hooks/useScroll";
+
+import { SvgIcons } from "../svg-icons";
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Drawer, Language } from "./component";
 import { linkList } from "./utils";
+
+import { Label } from "../ui/label";
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -15,34 +28,78 @@ export const NavBar = () => {
     return navigate("/");
   };
 
-  const renderNavibation = () => {
+  const renderNavigation = () => {
     return (
-      <nav className="hidden space-x-6 lg:flex">
-        {linkList.map((item, index) => {
-          const isActive = location.pathname === item.path;
+      <NavigationMenu className="hidden gap-5 lg:flex">
+        <NavigationMenuList>
+          {linkList.map((item, index) => {
+            const isActive = location.pathname === item.path;
 
-          return (
-            <div key={item.path} className="flex items-center">
-              <Button
-                variant="link"
-                className={`hover:text-gray-500 hover:no-underline ${
-                  isActive ? "font-bold text-white underline" : ""
-                } ${isScroll ? "text-black" : "text-white"}`}
-              >
-                <Link to={item.path as string} className="font-poppins">
-                  {item.label}
-                </Link>
-              </Button>
-              {index < linkList.length - 1 && (
-                <Separator
-                  orientation="vertical"
-                  className={`mx-4 h-8 ${isScroll ? "bg-black" : "bg-white"}`}
-                />
-              )}
-            </div>
-          );
-        })}
-      </nav>
+            return (
+              <NavigationMenuItem key={index}>
+                {item?.subChild && item.subChild.length > 0 ? (
+                  <>
+                    <NavigationMenuTrigger
+                      className={`w-full list-none font-normal text-white hover:text-gray-500 focus:text-white ${isScroll ? "text-black" : "text-white"} `}
+                    >
+                      {item.label}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid w-[400px] gap-3 border-r-4 border-t-4 border-white bg-white py-4 shadow-inner shadow-white">
+                        <ul className="items-center space-y-1">
+                          {item.subChild.map((sub) => (
+                            <li
+                              className="flex items-center gap-2 px-5 hover:bg-[#033800] hover:text-white"
+                              key={sub.label}
+                            >
+                              <Button
+                                variant="link"
+                                className="gap-2 bg-none py-7 text-left text-black hover:no-underline"
+                              >
+                                <Avatar>
+                                  <AvatarFallback className="bg-[#38D430]">
+                                    <SvgIcons name="ic_apple" size={20} />
+                                  </AvatarFallback>
+                                </Avatar>
+
+                                <div className="flex flex-col whitespace-pre-wrap">
+                                  <Label
+                                    variant={"default"}
+                                    className="hover:text-white"
+                                  >
+                                    {sub.label}
+                                  </Label>
+                                  <Label
+                                    variant={"default"}
+                                    className="text-xs text-gray-500"
+                                  >
+                                    {sub.sublabel}
+                                  </Label>
+                                </div>
+                              </Button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </NavigationMenuContent>
+                  </>
+                ) : (
+                  <Button
+                    variant="link"
+                    className={`font-normal hover:text-gray-500 hover:no-underline ${
+                      isActive ? "font-bold text-white underline" : ""
+                    } ${isScroll ? "text-black" : "text-white"}`}
+                  >
+                    <Link to={item.path as string} className="font-poppins">
+                      {item.label}
+                    </Link>
+                  </Button>
+                )}
+              </NavigationMenuItem>
+            );
+          })}
+        </NavigationMenuList>
+      </NavigationMenu>
     );
   };
 
@@ -58,7 +115,7 @@ export const NavBar = () => {
         <SvgIcons name="ic_icharge_white" size={150} />
       </Button>
 
-      {renderNavibation()}
+      {renderNavigation()}
 
       <div className="flex items-center">
         <Drawer />
