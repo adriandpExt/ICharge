@@ -107,15 +107,20 @@ export const Footer = () => {
             <div>
               <Label className="mb-4">Join our newsletter</Label>
             </div>
-            <div className="grid-col grid gap-2 sm:flex-row">
-              <Input
-                type="email"
-                placeholder="Enter your email..."
-                className="border-green-700 bg-white text-black"
-              />
-              <Button variant={"default"}>
-                Subscribe <ArrowRight />
-              </Button>
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <div className="flex flex-grow">
+                <Input
+                  type="email"
+                  placeholder="Enter your email..."
+                  className="flex-grow border-white bg-green-900 text-white placeholder:text-xs"
+                />
+                <Button
+                  variant={"default"}
+                  className="ml-2 w-24 rounded-xl bg-[#38D430]"
+                >
+                  Subscribe <ArrowRight />
+                </Button>
+              </div>
             </div>
             <div className="al mt-5 grid grid-cols-1 place-items-center lg:text-start">
               <Label className="mb-1 text-left text-xl font-semibold">

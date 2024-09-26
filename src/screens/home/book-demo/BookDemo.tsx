@@ -188,9 +188,12 @@ export default function BookDemoCard() {
   };
   return (
     <PageContainer>
-      <Card className="grid grid-cols-1 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:grid-cols-2">
-        <div className="hidden h-full w-full rounded-bl-xl rounded-tl-xl bg-cover bg-no-repeat lg:grid lg:place-items-center lg:bg-[url('@/assets/modern-man-using-smartphone-city-2.png')]">
-          <SvgIcons name="ic_footer_logo" size={500} />
+      <Card className="grid grid-cols-1 rounded-[36px] border-0 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:grid-cols-2">
+        <div className="relative hidden h-full w-full rounded-bl-[36px] rounded-tl-[36px] bg-cover bg-no-repeat lg:grid lg:place-items-center lg:bg-[url('@/assets/modern-man-using-smartphone-city-2.png')]">
+          <div className="absolute inset-0 rounded-bl-[36px] rounded-tl-[36px] bg-[#067100] opacity-60" />
+          <div className="relative z-10 rounded-bl-[36px] rounded-tl-[36px]">
+            <SvgIcons name="ic_footer_logo" size={500} />
+          </div>
         </div>
 
         <Form<FormValues> forms={form} onSubmit={handleSubmit}>
@@ -258,7 +261,7 @@ export default function BookDemoCard() {
             <Button
               type="submit"
               variant={"default"}
-              className="border-2 border-green-600 shadow-xl"
+              className="h-12 rounded-xl shadow-xl"
             >
               Continue <ArrowRight />
             </Button>
