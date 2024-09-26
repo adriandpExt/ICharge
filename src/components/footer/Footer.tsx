@@ -93,8 +93,8 @@ export const Footer = () => {
               <Link to={""}>
                 <Label>Support</Label>
               </Link>
-              <Link to={""}>
-                <Label>User Agreement</Label>
+              <Link to={"/user-agreement"} onClick={handleClick}>
+                <a>User Agreement</a>
               </Link>
             </ul>
           </div>
@@ -159,15 +159,15 @@ export const Footer = () => {
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
           <Label>&copy; 2024 Quanta Dance, Inc</Label>
           <div className="mt-4 flex gap-4 sm:mt-0">
-            <a href="#" className="hover:underline">
-              Terms
-            </a>
-            <a href="#" className="hover:underline">
-              Privacy
-            </a>
-            <a href="#" className="hover:underline">
-              Cookies
-            </a>
+            <Link to={"/terms-and-conditions"} onClick={handleClick}>
+              <a>Terms</a>
+            </Link>
+            <Link to={"/privacy"} onClick={handleClick}>
+              <a>Privacy</a>
+            </Link>
+            <Link to={"/cookies"} onClick={handleClick}>
+              <a>Cookies</a>
+            </Link>
           </div>
         </div>
       </div>

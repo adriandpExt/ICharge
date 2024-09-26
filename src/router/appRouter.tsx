@@ -4,9 +4,13 @@ import Faqs from "@/screens/faqs/Faqs";
 import Home from "@/screens/home/Home";
 import News from "@/screens/news/News";
 import Partner from "@/screens/partner/partner";
+import Termsandcondition from "@/screens/terms-and-conditions/terms";
 import Sustainablity from "@/screens/sustainability/sustainability";
+import UserAgreement from "@/screens/user-agreement/useragreement";
 import Sectors from "@/screens/sectors";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
+import Privacy from "@/screens/privacy/privacy";
+import Cookies from "@/screens/cookies/cookies";
 
 const router: RouteObject[] = [
   {
@@ -29,6 +33,22 @@ const router: RouteObject[] = [
       {
         path: "faqs",
         element: <Faqs />,
+      },
+      {
+        path: "terms-and-conditions",
+        element: <Termsandcondition />,
+      },
+      {
+        path: "user-agreement",
+        element: <UserAgreement />,
+      },
+      {
+        path: "privacy",
+        element: <Privacy />,
+      },
+      {
+        path: "cookies",
+        element: <Cookies />,
       },
     ],
   },
