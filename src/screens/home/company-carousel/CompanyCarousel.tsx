@@ -31,14 +31,15 @@ export default function Component() {
   useEffect(() => {
     const carouselElement = carousel.current;
     if (carouselElement) {
-      const scrollWidth = carouselElement.scrollWidth;
+      const scrollWidth =
+        carouselElement.scrollWidth - carouselElement.clientWidth; // Corrected for visible width
       let scrollPosition = 0;
 
       const scrollStep = 1; // Adjust the scroll speed
       const startInfiniteScroll = () => {
         scrollPosition += scrollStep;
-        if (scrollPosition >= scrollWidth / 2) {
-          scrollPosition = 0;
+        if (scrollPosition >= scrollWidth) {
+          scrollPosition = 0; // Reset when reaching the end
         }
         carouselElement.scrollTo(scrollPosition, 0);
         requestAnimationFrame(startInfiniteScroll);
