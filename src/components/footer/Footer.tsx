@@ -1,100 +1,105 @@
-import { ArrowRight, Facebook, Twitter, Instagram } from "lucide-react";
-import { Button } from "../ui/button";
+import { Zap } from "lucide-react";
 
 export const Footer = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
   return (
-    <footer className="bg-gray-800 px-4 py-12 text-white lg:px-8">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
-        <div className="space-y-4 text-center md:text-left">
-          <h2 className="text-lg font-bold">ICharge</h2>
-          <div className="flex justify-center space-x-2 md:justify-start">
-            <Button className="border-white text-white hover:bg-white hover:text-gray-800">
-              Joos for Business <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+    <footer className="bg-white px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col items-center space-y-8 sm:flex-row sm:items-start sm:justify-between sm:space-x-8 sm:space-y-0">
+          <div className="flex flex-col items-center sm:items-start">
+            <Zap className="h-8 w-8 text-green-500" />
+            <span className="ml-2 text-2xl font-bold text-gray-800">
+              icharge
+            </span>
           </div>
-          <Button className="bg-orange-500 text-white hover:bg-orange-600">
-            Get the App <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <div className="mt-8">
-            <h2 className="mb-2 text-lg font-bold">GET IN TOUCH</h2>
-            <p>Customer Support</p>
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+              Follow US
+            </h3>
+            <ul className="flex flex-col items-center space-y-2 sm:items-start">
+              {["Facebook", "TikTok", "Instagram"].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-
-        <div className="text-center md:text-left">
-          <h2 className="mb-4 text-lg font-bold">IMPORTANT LINKS</h2>
-          <ul className="space-y-2">
-            {[
-              "About Us",
-              "FAQ",
-              "Partner with Us",
-              "Privacy Policy",
-              "Terms & Conditions",
-              "User Agreement",
-            ].map((link, index) => (
-              <li key={index}>
-                <a
-                  href="#"
-                  className={
-                    index === 2 ? "text-orange-500" : "hover:text-orange-500"
-                  }
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="text-center md:text-left">
-          <h2 className="mb-4 text-lg font-bold">Platforms</h2>
-          <div className="space-y-4">
-            <img
-              src="/placeholder.svg?height=30&width=100"
-              alt=" logo"
-              className="h-8"
-            />
-            <img
-              src="/placeholder.svg?height=30&width=100"
-              alt=" logo"
-              className="h-8"
-            />
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+              Platforms
+            </h3>
+            <ul className="flex flex-col items-center space-y-2 sm:items-start">
+              {["Web", "iOS", "Android"].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
-        </div>
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+              About
+            </h3>
+            <ul className="flex flex-col items-center space-y-2 sm:items-start">
+              {["Features", "FAQ"].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
 
-        <div className="text-center md:text-left">
-          <h2 className="mb-4 text-lg font-bold">DOWNLOAD THE APP</h2>
-          <div className="mb-6 flex flex-col space-y-2">
-            {["Google Play", "App Store"].map((alt, index) => (
-              <img
-                key={index}
-                src={`/placeholder.svg?height=40&width=135`}
-                alt={`Download on ${alt}`}
-                className="mx-auto h-10 md:mx-0"
+          {/* Newsletter */}
+          <div className="col-span-1 text-center md:col-span-2 lg:col-span-1 lg:text-start">
+            <Label className="mb-4 text-2xl font-bold">
+              Stay in the loop with everything you need to know.
+            </Label>
+            <div>
+              <Label className="mb-4">Join our newsletter</Label>
+            </div>
+            <div className="grid-col grid gap-2 sm:flex-row">
+              <Input
+                type="email"
+                placeholder="Enter your email..."
+                className="border-green-700 bg-white text-black"
               />
-            ))}
+              <Button variant={"default"}>
+                Subscribe <ArrowRight />
+              </Button>
+            </div>
+            <div className="al mt-5 grid grid-cols-1 place-items-center lg:text-start">
+              <Label className="mb-1 text-left text-xl font-semibold">
+                Download the App
+              </Label>
+              <div className="flex">
+                <Link
+                  to="https://play.google.com/store/apps/details?id=com.phl.charge"
+                  target="_blank"
+                  className="mr-1"
+                >
+                  <img
+                    src={playstore}
+                    alt="Google Play"
+                    width={180.32}
+                    height={48.72}
+                  />
+                </Link>
+                <Link
+                  to="https://apps.apple.com/us/app/icharge-ph/id6478515634"
+                  target="_blank"
+                >
+                  <img
+                    src={applestore}
+                    alt="App Store"
+                    width={180.32}
+                    height={48.72}
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
-          <h2 className="mb-4 text-lg font-bold">SOCIAL NETWORKS</h2>
-          <div className="flex justify-center space-x-4 md:justify-start">
-            <a
-              href="#"
-              className="rounded-full bg-orange-500 p-2 hover:bg-orange-600"
-            >
-              <Facebook className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="rounded-full bg-orange-500 p-2 hover:bg-orange-600"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="rounded-full bg-orange-500 p-2 hover:bg-orange-600"
-            >
-              <Instagram className="h-5 w-5" />
-            </a>
-          </div>
+        </div>
+        <div className="mt-8 border-t border-gray-200 pt-8">
+          <p className="text-center text-base text-gray-400">
+            © 2024 Quanta Dance, Inc
+          </p>
         </div>
       </div>
 

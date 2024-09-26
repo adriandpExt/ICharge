@@ -12,4 +12,17 @@ export type IconName =
   | "ic_svl_sib"
   | "ic_svl_sig"
   | "ic_maya"
-  | "ic_pldt";
+  | "ic_pldt"
+  | "ic_facebook"
+  | "ic_tiktok"
+  | "ic_instagram"
+  | "ic_playstore"
+  | "ic_apple"
+  | "ic_uk_flag"
+  | "ic_ph_flag"
+  | "ic_apple_hero"
+  | "ic_apple_footer"
+  | "ic_playstore_hero"
+  | "ic_footer_logo"
+  | "ic_playstore_footer"
+  | "ic_icharge_white";

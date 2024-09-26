@@ -13,7 +13,7 @@ export const PageContainer = ({
   className,
 }: PageContainerProps) => {
   return (
-    <section className={cn("py-5", className)} id={id}>
+    <section className={cn("h-screen py-5", className)} id={id}>
       {children}
     </section>
   );
