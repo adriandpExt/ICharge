@@ -75,33 +75,28 @@ const HeroSection = () => {
 
         <div className="items-center space-y-4">
           <Button
-            variant="default"
-            className="h-14 w-full gap-2 rounded-full bg-opacity-50 md:w-48"
+            type="submit"
+            variant={"default"}
+            className="h-12 w-40 rounded-xl shadow-xl"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(90, 255, 82, 0.2) 0%, rgba(6, 108, 1, 0.4) 100%)",
+            }}
           >
-            Get Started <ArrowRight />
+            Continue <ArrowRight />
           </Button>
           <div className="flex items-center justify-center lg:block lg:space-y-2">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"
             >
-              <img
-                src={playstore}
-                alt="ic_playstore_hero"
-                className="w-32 md:mb-1 md:w-40"
-                width={180.32}
-                height={48.72}
-              />
+              <img src={playstore} alt="ic_playstore_hero" className="w-48" />
             </Link>
             <Link
               to={"https://apps.apple.com/us/app/icharge-ph/id6478515634"}
               target="_blank"
             >
-              <img
-                src={applestore}
-                alt="ic_apple_hero"
-                className="w-32 md:w-40"
-              />
+              <img src={applestore} alt="ic_apple_hero" className="w-48" />
             </Link>
           </div>
         </div>
