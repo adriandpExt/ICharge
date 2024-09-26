@@ -18,7 +18,7 @@ const Home = (): ReactElement => {
       <Services />
       <Products />
       <HowTo />
-      asdsa
+
       <Sector />
       <BookDemo />
     </>
