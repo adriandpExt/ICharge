@@ -73,7 +73,7 @@ const HeroSection = () => {
           on the go.
         </Label>
 
-        <div className="items-center space-y-4">
+        <div className="items-center space-y-4 lg:w-48">
           <Button
             type="submit"
             variant={"default"}
