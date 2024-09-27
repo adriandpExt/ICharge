@@ -3,7 +3,7 @@ import { Label } from "@/components/ui/label";
 import { ReactElement } from "react";
 import { HexGrid, Layout } from "react-hexgrid";
 import SectorPolygon from "./component/SectorPolygon";
-import Filters from "./component/filters";
+import Filters from "./component/Filters";
 
 const Sector = (): ReactElement => {
   return (
