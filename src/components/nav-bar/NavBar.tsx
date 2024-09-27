@@ -54,11 +54,8 @@ export const NavBar = () => {
                       >
                         <ul className="items-center space-y-1 rounded">
                           {item.subChild.map((sub) => (
-                            <Link to={sub.path as string}>
-                              <li
-                                className="flex items-center gap-2 px-5 hover:bg-[#464745] hover:text-white"
-                                key={sub.label}
-                              >
+                            <Link to={sub.path as string} key={sub.label}>
+                              <li className="flex items-center gap-2 px-5 hover:bg-[#464745] hover:text-white">
                                 <Button
                                   variant="link"
                                   className="gap-2 bg-none py-7 text-left text-white hover:no-underline"

@@ -21,7 +21,7 @@ const SectionItem = (props: SectionItemProps) => {
         {links.map((link) => (
           <li key={link.label}>
             <Link to={link.path} onClick={onClick}>
-              {link.label}
+              <Label>{link.label}</Label>
             </Link>
           </li>
         ))}
