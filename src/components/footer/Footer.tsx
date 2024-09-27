@@ -36,8 +36,7 @@ export const Footer = () => {
                     target={item.path.startsWith("http") ? "_blank" : "_self"}
                     rel="noopener noreferrer"
                   >
-                    <SvgIcons name={item.icon as IconName} size={24} />{" "}
-                    {/* Type assertion */}
+                    <SvgIcons name={item.icon as IconName} size={24} />
                   </Link>
                 ))}
               </div>
@@ -47,23 +46,25 @@ export const Footer = () => {
           <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">Platforms</Label>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={"#web"}>
-                <Label>Web</Label>
-              </Link>
-              <Link
-                to={"https://apps.apple.com/us/app/icharge-ph/id6478515634"}
-                target="_blank"
-              >
-                <Label>iOS</Label>
-              </Link>
-              <Link
-                to={
-                  "https://play.google.com/store/apps/details?id=com.phl.charge"
-                }
-                target="_blank"
-              >
-                <Label>Android</Label>
-              </Link>
+              <li>
+                <Link to="#web">Web</Link>
+              </li>
+              <li>
+                <Link
+                  to="https://apps.apple.com/us/app/icharge-ph/id6478515634"
+                  target="_blank"
+                >
+                  iOS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="https://play.google.com/store/apps/details?id=com.phl.charge"
+                  target="_blank"
+                >
+                  Android
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -71,12 +72,14 @@ export const Footer = () => {
           <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">About Us</Label>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={"/features"}>
-                <Label>Features</Label>
-              </Link>
-              <Link to={"/faqs"} onClick={handleClick}>
-                <Label>FAQs</Label>
-              </Link>
+              <li>
+                <Link to="/features">Features</Link>
+              </li>
+              <li>
+                <Link to="/faqs" onClick={handleClick}>
+                  FAQs
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -84,18 +87,20 @@ export const Footer = () => {
           <div className="text-center lg:text-start">
             <Label className="mb-4 text-xl font-semibold">Company</Label>
             <ul className="grid grid-cols-1 space-y-2">
-              <Link to={""}>
-                <Label>Partner with Us</Label>
-              </Link>
-              <Link to={""}>
-                <Label>Contact</Label>
-              </Link>
-              <Link to={""}>
-                <Label>Support</Label>
-              </Link>
-              <Link to={"/user-agreement"} onClick={handleClick}>
-                <a>User Agreement</a>
-              </Link>
+              <li>
+                <Link to="">Partner with Us</Link>
+              </li>
+              <li>
+                <Link to="">Contact</Link>
+              </li>
+              <li>
+                <Link to="">Support</Link>
+              </li>
+              <li>
+                <Link to="/user-agreement" onClick={handleClick}>
+                  User Agreement
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -115,14 +120,14 @@ export const Footer = () => {
                   className="flex-grow border-white bg-green-900 text-white placeholder:text-xs"
                 />
                 <Button
-                  variant={"default"}
+                  variant="default"
                   className="ml-2 w-24 rounded-xl bg-[#38D430]"
                 >
                   Subscribe <ArrowRight />
                 </Button>
               </div>
             </div>
-            <div className="al mt-5 grid grid-cols-1 place-items-center lg:text-start">
+            <div className="mt-5 grid grid-cols-1 place-items-center lg:text-start">
               <Label className="mb-1 text-left text-xl font-semibold">
                 Download the App
               </Label>
@@ -159,14 +164,14 @@ export const Footer = () => {
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
           <Label>&copy; 2024 Quanta Dance, Inc</Label>
           <div className="mt-4 flex gap-4 sm:mt-0">
-            <Link to={"/terms-and-conditions"} onClick={handleClick}>
-              <a>Terms</a>
+            <Link to="/terms-and-conditions" onClick={handleClick}>
+              Terms
             </Link>
-            <Link to={"/privacy"} onClick={handleClick}>
-              <a>Privacy</a>
+            <Link to="/privacy" onClick={handleClick}>
+              Privacy
             </Link>
-            <Link to={"/cookies"} onClick={handleClick}>
-              <a>Cookies</a>
+            <Link to="/cookies" onClick={handleClick}>
+              Cookies
             </Link>
           </div>
         </div>
