@@ -1,5 +1,3 @@
-import React from "react";
-
 const useragreement = () => {
   return (
     <div className="flex min-h-screen items-center justify-center p-4 text-gray-800">
