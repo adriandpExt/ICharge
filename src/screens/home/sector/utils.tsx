@@ -1,23 +1,24 @@
-import { SectorProps } from "./type";
+import { HexGridProps } from "./type";
 
-export const sectorsDesktop: SectorProps[] = [
-  { name: "", col: 1, row: 1 },
-  { name: "", col: 1, row: 2 },
-  { name: "", col: 1, row: 3 },
-  { name: "HOSPITALITY", col: 2, row: 1 },
-  { name: "TRANSPORT", col: 2, row: 2 },
-  { name: "RETAIL", col: 2, row: 3 },
-  { name: "EVENTS", col: 3, row: 1 },
-  { name: "HEALTHCARE", col: 3, row: 3 },
-  { name: "", col: 4, row: 1 },
-  { name: "", col: 3, row: 2 },
-  { name: "", col: 4, row: 3 },
+export const sectorsDesktop: HexGridProps[] = [
+  { name: "HEALTHCARE", q: 0, r: 0, s: 0, navigation: "healthcare" },
+  { name: "RETAIL", q: 1, r: 0, s: -1, navigation: "retail" },
+  { name: "EVENTS", q: 0, r: -1, s: 1, navigation: "events" },
+  { name: "TRANSPORT", q: -1, r: 0, s: 1, navigation: "transport" },
+  { name: "HOSPITALITY", q: -2, r: 1, s: 1, navigation: "hospitality" },
+  { name: "", q: -2, r: 0, s: 1 },
+  { name: "", q: 0, r: 1, s: 1 },
+  { name: "", q: 0, r: 1, s: -1 },
+  { name: "", q: -1, r: 1, s: 0 },
+  { name: "", q: 1, r: -1, s: 0 },
+  { name: "", q: -1, r: -1, s: 2 },
+  { name: "", q: 0, r: -2, s: 2 },
 ];
 
-export const sectorMobile: SectorProps[] = [
-  { name: "HOSPITALITY", col: 1, row: 1 },
-  { name: "TRANSPORT", col: 1, row: 2 },
-  { name: "RETAIL", col: 1, row: 3 },
-  { name: "EVENTS", col: 1, row: 4 },
-  { name: "HEALTHCARE", col: 1, row: 5 },
+export const sectorMobile: HexGridProps[] = [
+  { name: "HEALTHCARE", q: 0, r: -1, s: 1 },
+  { name: "RETAIL", q: 0, r: -2, s: 2 },
+  { name: "EVENTS", q: 0, r: 0, s: 0 },
+  { name: "TRANSPORT", q: 0, r: 1, s: -1 },
+  { name: "HOSPITALITY", q: 0, r: 2, s: -2 },
 ];
