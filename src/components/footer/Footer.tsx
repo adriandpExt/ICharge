@@ -128,7 +128,7 @@ export const Footer = () => {
           <div className="mt-4 flex gap-4 sm:mt-0">
             {bottomLinks.map((item) => (
               <Link to={item.path} key={item.path} onClick={handleClick}>
-                {item.label}
+                <Label>{item.label}</Label>
               </Link>
             ))}
           </div>
