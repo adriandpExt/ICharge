@@ -52,7 +52,7 @@ const Partner = () => {
           <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
             PARTNER WITH US
           </Label>
-          <Label className="mb-6 text-xl text-white sm:mb-8 lg:text-2xl">
+          <Label className="text-md mb-6 text-white sm:mb-8 lg:text-2xl">
             ICharge is the leading brand in smartphone charging across Western
             markets. Start your scalable business venture today & begin to reap
             the rewards from providing the leading charging solution to your

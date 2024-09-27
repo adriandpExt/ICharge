@@ -179,7 +179,7 @@ export default function FullScreenResponsiveFAQAccordion() {
           <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
             CUSTOMER SERVICE
           </Label>
-          <Label className="mb-6 text-xl text-white sm:mb-8 lg:text-2xl">
+          <Label className="text-md mb-6 text-white sm:mb-8 lg:text-2xl">
             Use the form below to send us an email and we will respond within 12
             hours. If you need an immediate answer, our Customer Service team is
             just a click away, chat with us!
