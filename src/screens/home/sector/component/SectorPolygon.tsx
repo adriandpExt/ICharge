@@ -1,44 +1,86 @@
-import { Card } from "@/components/ui/card";
-import { PolygonProps, SectorProps } from "../type";
-import { ReactElement } from "react";
+import { PolygonProps } from "../type";
+import { ReactElement, useState } from "react";
+import { Hexagon, Text } from "react-hexgrid";
+import { sectorsDesktop } from "../utils";
+import { useNavigate } from "react-router-dom";
 
-const SectorPolygon = ({ sectors, isTransform }: PolygonProps): ReactElement[] => {
-  const colorHex = ({ name }: SectorProps): string => {
-    if (name !== "") {
-      return "bg-[#D4EAD3] hover:bg-[#94E290] hover:shadow-inner-hex text-black";
+const SectorPolygon = ({
+  platform = "desktop",
+}: PolygonProps): ReactElement[] | ReactElement => {
+  const setHexColor = (name: string) => {
+    if (name) {
+      return "fill-[#D4EAD3] hover:fill-[#94E290]";
     } else {
-      return "bg-slate-400/25 shadow-inner-hex";
+      return "fill-slate-400/5";
     }
   };
-  const transform = (row: number): string => {
-    switch (row) {
-      case 1:
-        return "translateX(0%) translateY(0)";
-      case 2:
-        return "translateX(82.5%) translateY(-50%)";
-      case 3:
-        return "translateX(0%) translateY(-100%)";
-    }
-    return "";
+  const [hoveredHex, setHoveredHex] = useState<number | null>();
+  const navigate = useNavigate();
+  const handleNavigate = (location: string) => {
+    window.scrollTo(0, 0);
+    navigate(`sectors/${platform === "mobile" ? "" : location}`);
   };
 
-  return sectors.map((sector) => {
-    return (
-      <Card
-        key={`${sector.name}-${sector.col}-${sector.row}`}
-        style={{
-          gridColumn: sector.col,
-          gridRow: sector.row,
-          clipPath:
-            "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
-          transform: isTransform ? transform(sector.row) : "",
-        }}
-        className={`flex h-[17rem] w-[17rem] lg:w-[200px] lg:h-[200px] items-center justify-center border-0 bg-[#D4EAD3] text-center font-staatliches transition-all duration-300 dark:text-black text-3xl ${colorHex(sector)}`}
+  return platform === "desktop" ? (
+    sectorsDesktop.map(({ name, q, r, s, navigation }, index) => {
+      return (
+        <Hexagon
+          q={q}
+          r={r}
+          s={s}
+          className={setHexColor(name)}
+          key={index}
+          style={{
+            stroke: "gray",
+            strokeWidth: "0.05",
+            backdropFilter: `blur(12px)`,
+            WebkitBackdropFilter: `blur(12px)`,
+          }}
+          filter={
+            hoveredHex === index && name !== "" ? "url(#inner-shadow)" : ""
+          }
+          onMouseEnter={() => setHoveredHex(index)}
+          onMouseLeave={() => setHoveredHex(null)}
+          onClick={() => handleNavigate(navigation as string)}
+        >
+          <Text
+            fontSize={3.5}
+            className="fill-black font-staatliches tracking-wide"
+            style={{
+              strokeWidth: "0",
+              clipPath:
+                "polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)",
+            }}
+          >
+            {name}
+          </Text>
+        </Hexagon>
+      );
+    })
+  ) : (
+    <svg
+      viewBox="0 0 400 400"
+      width="100%"
+      height="100%"
+      onClick={() => handleNavigate("")}
+    >
+      <polygon
+        points="100,0 300,0 400,200 300,400 100,400 0,200"
+        fill="#94E290"
+        filter="url(#inner-shadow-mobile)"
+      />
+      <text
+        x="200"
+        y="200"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="70"
+        className="font-staatliches tracking-wide"
       >
-        {sector.name}
-      </Card>
-    );
-  });
+        SECTORS
+      </text>
+    </svg>
+  );
 };
 
 export default SectorPolygon;

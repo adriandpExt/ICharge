@@ -2,7 +2,7 @@ import { memo } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { ArrowRight, LockIcon } from "lucide-react";
+import { ArrowRight, ShoppingBag } from "lucide-react";
 
 import { Label } from "@/components/ui/label";
 
@@ -54,13 +54,14 @@ const HeroSection = memo(function HeroSection() {
       <div className="absolute inset-0 bg-green-500 bg-cover bg-bottom bg-no-repeat" />
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
         <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
-          PARTNER WITH US
+          Sustainability
         </Label>
         <Label className="mb-6 text-xl text-white sm:mb-8 lg:text-2xl">
-          ICharge is the leading brand in smartphone charging across Western
-          markets. Start your scalable business venture today & begin to reap
-          the rewards from providing the leading charging solution to your
-          chosen market!
+          At ICharge, we are all about doing business the right way. Beyond
+          offering a cutting-edge power bank sharing service, we are on a
+          mission to use our influence for good. Our commitment to
+          sustainability is not just a tagline; it's about making sure we run
+          things responsibly and ethically in our day-to-day operations
         </Label>
         <Button
           variant="outline"
@@ -100,18 +101,34 @@ const FeatureCard = memo(function FeatureCard({
   description: string;
 }) {
   return (
-    <Card className="h-[450px] overflow-hidden border-opacity-20 bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter">
-      <CardHeader className="flex place-items-center pb-4">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-500">
-          <LockIcon className="text-white" size={24} />
-        </div>
-        <CardTitle className="text-xl font-semibold text-white">
-          Powering Change with Joos Solar
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-2 text-sm text-white">
-        <p className="text-sm text-muted-foreground">{description}</p>
-      </CardContent>
+    <Card className="h-[550px] overflow-hidden rounded-3xl border-0 bg-white/20 backdrop-blur-md">
+      <div className="m-7 flex h-[500px] flex-col overflow-hidden rounded-2xl border-4 border-green-500">
+        <CardHeader className="flex-grow-0 pb-0 pt-6">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-500">
+            <ShoppingBag className="h-10 w-10 text-white" />
+          </div>
+          <CardTitle className="mb-2 text-center text-2xl font-bold text-white">
+            Powering Change with Joos Solar
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex-grow space-y-4 px-6 pb-6 text-white">
+          <ul className="list-inside list-disc space-y-2 text-sm">
+            <li>
+              We launched Joos Solar in 2023 to champion renewable energy and a
+              greener future.
+            </li>
+            <li>
+              Our solar solutions facilitate an affordable and seamless
+              transition to clean energy.
+            </li>
+            <li>
+              We empower homes, businesses and our existing partners to reduce
+              their carbon footprint.
+            </li>
+          </ul>
+          <p className="text-sm text-white/80">{description}</p>
+        </CardContent>
+      </div>
     </Card>
   );
 });
