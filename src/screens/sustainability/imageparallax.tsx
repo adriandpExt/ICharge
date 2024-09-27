@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import backgroundImage from "@/assets/man-using-smartphone.png"; // Adjust this path to match your project structure
+import backgroundImage from "@/assets/man-using-smartphone.png";
 
 export default function ImageParallax() {
   const container = useRef<HTMLDivElement>(null);

@@ -6,8 +6,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { FormFieldProps, LabelValue } from "../types";
+
 import { FieldValues } from "react-hook-form";
+import { FormFieldProps, LabelValue } from "./types";
 
 interface RadioField<T extends FieldValues> extends FormFieldProps<T> {
   options: LabelValue[];
@@ -40,7 +41,7 @@ export const RadioField = <T extends FieldValues>(props: RadioField<T>) => {
               ))}
             </RadioGroup>
           </FormControl>
-          <FormMessage className="font-poppins" />
+          <FormMessage className="font-poppins text-destructive" />
         </FormItem>
       )}
     />

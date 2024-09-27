@@ -1,3 +1,7 @@
+import { FormFieldProps } from "./types";
+
+import { FieldValues } from "react-hook-form";
+
 import {
   FormControl,
   FormField,
@@ -6,11 +10,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Textarea as ShadTextArea } from "@/components/ui/textarea";
-import { FormFieldProps } from "../types";
-import { FieldValues } from "react-hook-form";
+import { cn } from "@/lib/utils";
 
-export const TextArea = <T extends FieldValues>(props: FormFieldProps<T>) => {
-  const { control, name, label } = props;
+interface TextAreaProps<T extends FieldValues> extends FormFieldProps<T> {
+  className?: string;
+}
+
+export const TextArea = <T extends FieldValues>(props: TextAreaProps<T>) => {
+  const { control, name, label, className } = props;
   return (
     <FormField
       control={control}
@@ -21,7 +28,12 @@ export const TextArea = <T extends FieldValues>(props: FormFieldProps<T>) => {
           <FormControl>
             <ShadTextArea
               {...field}
-              className="h-20 resize-none border-white bg-gray-200 placeholder:text-gray-500"
+              className={
+                (cn(
+                  "h-20 resize-none border-white bg-gray-200 placeholder:text-gray-500",
+                ),
+                className)
+              }
               placeholder="Please Input..."
             />
           </FormControl>

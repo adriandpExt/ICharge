@@ -26,14 +26,13 @@ import { Label } from "@/components/ui/label";
 import { PageContainer, SvgIcons } from "@/components";
 
 import { formSchema, issueLabelValue, issueType, sector } from "./utils";
-
 import {
   Form,
   RadioField,
   SelectField,
   TextArea,
   TextField,
-} from "./component";
+} from "@/components/forms";
 
 type FormValues = z.infer<typeof formSchema>;
 export default function BookDemoCard() {

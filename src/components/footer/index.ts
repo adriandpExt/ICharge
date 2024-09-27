@@ -1,2 +1,2 @@
 export * from "./Footer";
-export * from "./RenderGridItem";
+export * from "./SectionItem";
