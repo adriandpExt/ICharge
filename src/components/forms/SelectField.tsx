@@ -1,4 +1,4 @@
-import { FormFieldProps, LabelValue } from "../types";
+import { FormFieldProps, LabelValue } from "./types";
 
 import {
   FormControl,

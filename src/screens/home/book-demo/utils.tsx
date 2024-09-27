@@ -1,4 +1,5 @@
-import { IssueType, LabelValue } from "./types";
+import { LabelValue } from "@/components/forms/types";
+import { IssueType } from "./types";
 import { z } from "zod";
 
 export const issueType: IssueType[] = [
