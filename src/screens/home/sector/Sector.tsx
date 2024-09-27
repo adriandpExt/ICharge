@@ -1,42 +1,37 @@
 import { PageContainer } from "@/components";
-import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { ReactElement } from "react";
+import { HexGrid, Layout } from "react-hexgrid";
 import SectorPolygon from "./component/SectorPolygon";
-import { sectorMobile, sectorsDesktop } from "./utils";
+import Filters from "./component/filters";
 
 const Sector = (): ReactElement => {
   return (
     <PageContainer className="flex flex-col">
       <Label
         variant="title"
-        className="pb-14 text-center text-6xl dark:text-white"
+        className="hidden text-center text-6xl dark:text-white lg:block lg:pb-14"
       >
         Sectors
       </Label>
-      <Card
-        className="custom-lg:grid mx-auto hidden w-fit self-center border-0 shadow-none"
-        style={{
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gridTemplateRows: "repeat(3, 1fr)",
-          columnGap: 130,
-          rowGap: 10,
-        }}
-      >
-        {/* Desktop layout */}
-        {<SectorPolygon sectors={sectorsDesktop} isTransform />}
-      </Card>
-      <Card
-        className="custom-lg:hidden mx-auto grid w-fit self-center border-0 shadow-none"
-        style={{
-          gridTemplateColumns: "repeat(1, 1fr)",
-          gridTemplateRows: "repeat(5, 1fr)",
-          rowGap: 10,
-        }}
-      >
-        {/* Mobile layout */}
-        {<SectorPolygon sectors={sectorMobile} isTransform={false} />}
-      </Card>
+      <Filters />
+      {/* Desktop Sector */}
+      <div className="hidden justify-center lg:flex">
+        <HexGrid width={1200} height={800} viewBox="-62 -63 100 100">
+          <Layout
+            size={{ x: 13, y: 13 }}
+            flat={true}
+            spacing={1.1}
+            origin={{ x: 0, y: 0 }}
+          >
+            <SectorPolygon platform="desktop" />
+          </Layout>
+        </HexGrid>
+      </div>
+      {/* Mobile Sector */}
+      <div className="flex justify-center lg:hidden">
+        <SectorPolygon platform="mobile" />
+      </div>
     </PageContainer>
   );
 };

@@ -1,10 +1,11 @@
-export interface SectorProps {
+export interface HexGridProps {
   name: string;
-  col: number;
-  row: number;
+  q: number;
+  s: number;
+  r: number;
+  navigation?: string;
 }
 
 export interface PolygonProps {
-  sectors: SectorProps[];
-  isTransform: boolean;
+  platform?: "desktop" | "mobile";
 }
