@@ -17,31 +17,31 @@ export const linkList: LinkList[] = [
     path: "/sectors",
     subChild: [
       {
-        path: "/sector/hospitality",
+        path: "/sectors/hospitality",
         label: "Hospitality",
         icon: "ic_hospitality",
         sublabel: "Bars, Restaurant, coffee, shops, lounges",
       },
       {
-        path: "/sector/transport",
+        path: "/sectors/transport",
         label: "Transport",
         icon: "ic_retail",
         sublabel: "Airports, Transport hubs, bus terminals, train stations",
       },
       {
-        path: "/sector/healthcare",
+        path: "/sectors/healthcare",
         label: "Healthcare",
         icon: "ic_healthcare",
         sublabel: "Hospitals, Clinic, gyms, wellness centers",
       },
       {
-        path: "/sector/events",
+        path: "/sectors/events",
         label: "Events",
         icon: "ic_events",
         sublabel: "Concert Venues, festivals, exhibitions, sports arenas",
       },
       {
-        path: "/sector/retail",
+        path: "/sectors/retail",
         label: "Retail",
         icon: "ic_retail",
         sublabel: "Shopping malls, supermarkets, department stores, boutiques",

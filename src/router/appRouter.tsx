@@ -11,6 +11,7 @@ import Sectors from "@/screens/sectors";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Privacy from "@/screens/privacy/privacy";
 import Cookies from "@/screens/cookies/cookies";
+import Hospitality from "@/screens/sectors/hospitality/Hospitality";
 
 const router: RouteObject[] = [
   {
@@ -25,6 +26,16 @@ const router: RouteObject[] = [
       {
         path: "sectors",
         element: <Sectors />,
+        children: [
+          {
+            index: true,
+            element: <Hospitality />,
+          },
+          {
+            path: "hospitality",
+            element: <Hospitality />,
+          },
+        ],
       },
       { path: "partner", element: <Partner /> },
       { path: "sustainability", element: <Sustainablity /> },
