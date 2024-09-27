@@ -11,7 +11,18 @@ const SectorPolygon = ({
     if (name) {
       return "fill-[#D4EAD3] hover:fill-[#94E290]";
     } else {
-      return "fill-slate-400/5";
+      return "fill-white";
+    }
+  };
+  const hexFilter = (
+    currentIndex: number,
+    hoveredHex: number | null | undefined,
+    name: string,
+  ) => {
+    if (hoveredHex === currentIndex && name !== "") {
+      return "url(#inner-shadow)";
+    } else {
+      return "url(#inner-shadow-light)";
     }
   };
   const [hoveredHex, setHoveredHex] = useState<number | null>();
@@ -36,12 +47,10 @@ const SectorPolygon = ({
             backdropFilter: `blur(12px)`,
             WebkitBackdropFilter: `blur(12px)`,
           }}
-          filter={
-            hoveredHex === index && name !== "" ? "url(#inner-shadow)" : ""
-          }
+          filter={hexFilter(index, hoveredHex, name)}
           onMouseEnter={() => setHoveredHex(index)}
           onMouseLeave={() => setHoveredHex(null)}
-          onClick={() => handleNavigate(navigation as string)}
+          onClick={name ? () => handleNavigate(navigation as string) : undefined}
         >
           <Text
             fontSize={3.5}
