@@ -12,7 +12,7 @@ import { ArrowRight } from "lucide-react";
 
 const faqData = [
   {
-    category: "Renting and Returning",
+    category: "Rent",
     items: [
       {
         question: "How do I rent the power bank?",
@@ -30,27 +30,31 @@ const faqData = [
         answer:
           "If the station is empty, locate the next nearer station via the app.",
       },
-      {
-        question: "How do I return the power bank?",
-        answer:
-          "To return, simply push the power bank into an empty slot in the same station. Push it in all the way until it clicks and wait for the app to show your rental recap — contact in-app support if it doesn't.",
-      },
+    ],
+  },
+  {
+    category: "Return",
+    items: [
       {
         question:
           "What do I do if the station I want to return my power bank to is full?",
         answer:
           "Make sure that you only return the powerbank to the same station that you rented to there is always a slot for each powerbank.",
       },
+      {
+        question: "How do I return the power bank?",
+        answer:
+          "To return, simply push the power bank into an empty slot in the same station. Push it in all the way until it clicks and wait for the app to show your rental recap — contact in-app support if it doesn't.",
+      },
     ],
   },
   {
-    category: "Troubleshooting",
+    category: "Order",
     items: [
       {
-        question:
-          "What do I do if power bank does not eject but the running order starts running?",
+        question: "How do I report a faulty power bank?",
         answer:
-          'First refresh the order page and check whether the order has ended. If it\'s still running, select "Customer service" button on the running order and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end and you can proceed to start renting again.',
+          "Please report a faulty power bank via the app, or contact in-App support team.",
       },
       {
         question:
@@ -59,25 +63,15 @@ const faqData = [
           'First check and confirm the power bank is properly and fully inserted. Refresh the order page to check if order page have stopped (poor network might delay responses). If order is still running, press "Customer service" button on the home page and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end. We will investigate and reply to you in 3 working days.',
       },
       {
-        question: "How do I report a faulty power bank?",
-        answer:
-          "Please report a faulty power bank via the app, or contact in-App support team.",
-      },
-      {
         question:
-          "What happens if I rent the power bank and there is no cable?",
+          "What do I do if power bank does not eject but the running order starts running?",
         answer:
-          "If there is no cable present, first return the power bank and report within the app prompt. You will not be charged for this rental. Please then continue to rent another power bank.",
-      },
-      {
-        question: "My power bank does not charge my phone, what do I do?",
-        answer:
-          "Make sure the cable is properly plugged into your device. We recommend you remove any thick phone case to allow the cable to go all the way in. If you still don't see a charge, return the power bank into the station and contact us via in-app support.",
+          'First refresh the order page and check whether the order has ended. If it\'s still running, select "Customer service" button on the running order and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end and you can proceed to start renting again.',
       },
     ],
   },
   {
-    category: "Charges and Payments",
+    category: "Power bank",
     items: [
       {
         question: "What happens if I lose/don't return a power bank?",
@@ -85,14 +79,31 @@ const faqData = [
           "You will need to pay a penalty. The price will show in the app, If you decide not to return it you cannot withdraw your security deposit anymore.",
       },
       {
-        question: "How much is a power bank to rent?",
+        question: "How do you check the charge level of the power bank?",
         answer:
-          "Please take note that price varies depends on the location of the station. Price plan also displays after scanning station QR code.",
+          "Simply press the button on the front of the power bank and the Led indicators will reflect the level of power",
       },
       {
-        question: "How do I pay for the rental charges?",
+        question: "My power bank does not charge my phone, what do I do?",
         answer:
-          "After logging in for the first time, you will be prompted to add a valid credit/debit card. Upon returning the power bank, rental charges will be automatically deducted from the defaulted card. Should the payment failed, an unpaid order will be shown on homepage when you login again and you will have to manually complete the payment for normal service to resume.",
+          "Make sure the cable is properly plugged into your device. We recommend you remove any thick phone case to allow the cable to go all the way in. If you still don't see a charge, return the power bank into the station and contact us via in-app support.",
+      },
+      {
+        question:
+          "What happens if I rent the power bank and there is no cable?",
+        answer:
+          "If there is no cable present, first return the power bank and report within the app prompt. You will not be charged for this rental. Please then continue to rent another power bank.",
+      },
+    ],
+  },
+
+  {
+    category: "Charges",
+    items: [
+      {
+        question: "What do I do if I am overcharged?",
+        answer:
+          "Please contact in-App support team and we will happily help you out.",
       },
       {
         question:
@@ -101,9 +112,29 @@ const faqData = [
           "This information is shown within the app as soon as you start renting the power bank. The time is shown along with the exact cost it accumulates.",
       },
       {
-        question: "What do I do if I am overcharged?",
+        question: "How do I pay for the rental charges?",
         answer:
-          "Please contact in-App support team and we will happily help you out.",
+          "After logging in for the first time, you will be prompted to add a valid credit/debit card. Upon returning the power bank, rental charges will be automatically deducted from the defaulted card. Should the payment failed, an unpaid order will be shown on homepage when you login again and you will have to manually complete the payment for normal service to resume.",
+      },
+      {
+        question: "How much is a power bank to rent?",
+        answer:
+          "Please take note that price varies depends on the location of the station. Price plan also displays after scanning station QR code.",
+      },
+    ],
+  },
+  {
+    category: "E-Wallet",
+    items: [
+      {
+        question: "If I am issued a refund how long will it take?",
+        answer:
+          "In the case of a reversal customer won't see a refund credit on their statement— you will just see the original authorisation drop off their statement entirely after a few days. There will be no payment , and no refund. It'll appear as if the whole transaction never happened. Your bank should be able to confirm this for them. Depending on your card issuer, the original charge will disappear from pending charges 7 working days later.",
+      },
+      {
+        question: "How to refund my deposit?",
+        answer:
+          '1. Go to "Wallet page" , press "refund " button and submit. 2. Refund will be returned to the same bank account that you use to top up.',
       },
       {
         question: "Why do I need to use my credit/debit card?",
@@ -113,22 +144,7 @@ const faqData = [
     ],
   },
   {
-    category: "Refunds and Deposits",
-    items: [
-      {
-        question: "How to refund my deposit?",
-        answer:
-          '1. Go to "Wallet page" , press "refund " button and submit. 2. Refund will be returned to the same bank account that you use to top up.',
-      },
-      {
-        question: "If I am issued a refund how long will it take?",
-        answer:
-          "In the case of a reversal customer won't see a refund credit on their statement— you will just see the original authorisation drop off their statement entirely after a few days. There will be no payment , and no refund. It'll appear as if the whole transaction never happened. Your bank should be able to confirm this for them. Depending on your card issuer, the original charge will disappear from pending charges 7 working days later.",
-      },
-    ],
-  },
-  {
-    category: "App and Technical Issues",
+    category: "Account",
     items: [
       {
         question:
@@ -136,20 +152,15 @@ const faqData = [
         answer:
           "This relies on your phone having enough mobile signal to receive it. You may need to step into a better signal range. Otherwise please ensure that you have entered a correct mobile number. If you are using email, please remember to check junk mail. If nothing else works, then contact in-App support team and we will help get an account setup for you.",
       },
+    ],
+  },
+  {
+    category: "Others",
+    items: [
       {
         question: "The App is not working. What should I do?",
         answer:
           "You can first try to refresh your app. If this does not work please delete and re-install the app. If this doesn't help, contact the support team e-mail: ichargebgc@gmail.com and we will help you out!",
-      },
-    ],
-  },
-  {
-    category: "Power Bank Usage",
-    items: [
-      {
-        question: "How do you check the charge level of the power bank?",
-        answer:
-          "Simply press the button on the front of the power bank and the Led indicators will reflect the level of power",
       },
     ],
   },
