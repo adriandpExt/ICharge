@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
-
+import { IconName } from "../svg-icons/utils";
 import useScroll from "@/hooks/useScroll";
 
 import { SvgIcons } from "../svg-icons";
@@ -45,39 +45,47 @@ export const NavBar = () => {
                       {item.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="grid w-[400px] gap-3 border-r-4 border-t-4 border-white bg-white py-4 shadow-inner shadow-white">
-                        <ul className="items-center space-y-1">
+                      <div
+                        className="grid w-[400px] gap-3 rounded-[1rem] py-4 shadow-inner shadow-green-100"
+                        style={{
+                          background:
+                            "radial-gradient(circle, rgba(20, 20, 20, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%)",
+                        }}
+                      >
+                        <ul className="items-center space-y-1 rounded">
                           {item.subChild.map((sub) => (
-                            <li
-                              className="flex items-center gap-2 px-5 hover:bg-[#033800] hover:text-white"
-                              key={sub.label}
-                            >
-                              <Button
-                                variant="link"
-                                className="gap-2 bg-none py-7 text-left text-black hover:no-underline"
+                            <Link to={sub.path as string}>
+                              <li
+                                className="flex items-center gap-2 px-5 hover:bg-[#2e551e] hover:text-white"
+                                key={sub.label}
                               >
-                                <Avatar>
-                                  <AvatarFallback className="bg-[#38D430]">
-                                    <SvgIcons name="ic_apple" size={20} />
-                                  </AvatarFallback>
-                                </Avatar>
+                                <Button
+                                  variant="link"
+                                  className="gap-2 bg-none py-7 text-left text-white hover:no-underline"
+                                >
+                                  <Avatar>
+                                    <AvatarFallback className="bg-[#1e581b]">
+                                      <SvgIcons
+                                        name={sub.icon as IconName}
+                                        size={20}
+                                      />
+                                    </AvatarFallback>
+                                  </Avatar>
 
-                                <div className="flex flex-col whitespace-pre-wrap">
-                                  <Label
-                                    variant={"default"}
-                                    className="hover:text-white"
-                                  >
-                                    {sub.label}
-                                  </Label>
-                                  <Label
-                                    variant={"default"}
-                                    className="text-xs text-gray-500"
-                                  >
-                                    {sub.sublabel}
-                                  </Label>
-                                </div>
-                              </Button>
-                            </li>
+                                  <div className="flex flex-col whitespace-pre-wrap">
+                                    <Label variant={"default"}>
+                                      {sub.label}
+                                    </Label>
+                                    <Label
+                                      variant={"default"}
+                                      className="text-[10px] text-gray-300"
+                                    >
+                                      {sub.sublabel}
+                                    </Label>
+                                  </div>
+                                </Button>
+                              </li>
+                            </Link>
                           ))}
                         </ul>
                       </div>
