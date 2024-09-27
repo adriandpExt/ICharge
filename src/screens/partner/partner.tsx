@@ -44,7 +44,7 @@ const Partner = () => {
     },
   ];
   return (
-    <div className="flex h-full flex-col md:pb-28">
+    <div className="flex h-full flex-col">
       <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
         <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
 
@@ -67,31 +67,33 @@ const Partner = () => {
           </Button>
         </div>
       </div>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="mb-8 text-center text-4xl font-bold">WHY ICHARGE?</h1>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden rounded-3xl bg-green-100"
-            >
-              <img
-                src={feature.image}
-                width={400}
-                height={200}
-                alt={feature.title}
-                className="h-[350px] w-full object-cover"
-              />
-              <CardHeader>
-                <CardTitle>{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+      <div className="relative overflow-hidden bg-[url('@/assets/landing_bg.svg')] bg-cover bg-fixed bg-center">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="mb-8 text-center text-4xl font-bold">WHY ICHARGE?</h1>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className="overflow-hidden rounded-3xl bg-green-100"
+              >
+                <img
+                  src={feature.image}
+                  width={400}
+                  height={200}
+                  alt={feature.title}
+                  className="h-[350px] w-full object-cover"
+                />
+                <CardHeader>
+                  <CardTitle>{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
