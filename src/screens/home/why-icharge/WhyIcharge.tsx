@@ -5,7 +5,8 @@ import { Label } from "@/components/ui/label";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
 import { PageContainer } from "@/components";
-export default function WhyICharge() {
+
+const WhyICharge = () => {
   const { t } = useTranslation();
 
   return (
@@ -87,4 +88,6 @@ export default function WhyICharge() {
       </div>
     </PageContainer>
   );
-}
+};
+
+export default WhyICharge;
