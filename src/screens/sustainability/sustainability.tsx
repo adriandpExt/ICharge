@@ -21,7 +21,7 @@ const Sustainability = () => {
         </div>
       </main>
 
-      <main className="relative mt-[30rem] pb-10 md:mt-[45rem]">
+      <main className="relative mt-[30rem] px-5 pb-10 md:mt-[45rem]">
         <div className="container mx-auto grid grid-cols-1 place-items-center gap-5 md:grid-cols-2 lg:grid-cols-3">
           <SustainablityCard />
           <SustainablityCard />
