@@ -53,14 +53,14 @@ const Gallery = () => {
         <CarouselContent>
           {carouselContents.map(({ image }, index) => (
             <CarouselItem
-              className="flex h-[25rem] w-full items-center justify-center md:basis-1/3"
+              className="flex h-[25rem] w-full items-center justify-center lg:basis-1/3"
               key={index}
             >
               <CardContent
                 className={cn(
                   "h-[20rem] w-[25rem] rounded-2xl",
                   image,
-                  currentIndex === index - 1 && "md:scale-125",
+                  currentIndex === index - 1 && "lg:scale-125",
                 )}
               />
             </CarouselItem>

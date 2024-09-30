@@ -28,12 +28,12 @@ const CaseStudy = () => {
   return (
     <PageContainer>
       <Card className="grid grid-cols-1 rounded-[36px] border-0 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:grid-cols-3">
-        <div className="relative col-start-1 col-end-1 hidden h-full w-full rounded-bl-[36px] rounded-tl-[36px] bg-cover bg-no-repeat lg:grid lg:place-items-center lg:bg-[url('@/assets/modern-man-using-smartphone-city-2.png')]" />
-        <CardContent className="col-start-2 col-end-4 flex flex-col space-y-5 p-20">
-          <Label variant="title" className="text-7xl">
+        <div className="relative col-start-1 col-end-1 hidden h-full w-full rounded-bl-[36px] rounded-tl-[36px] bg-cover bg-no-repeat md:grid lg:place-items-center lg:bg-[url('@/assets/modern-man-using-smartphone-city-2.png')]" />
+        <CardContent className="md:col-start-2 md:col-end-4 flex flex-col space-y-5 p-20">
+          <Label variant="title" className="md:text-7xl text-5xl">
             LAINES CASE STUDY
           </Label>
-          <Label className="text-2xl">
+          <Label className="lg:text-2xl text-lg">
             Laines has pulled over 160 million pints at over 100 bars.
             Digitalization makes having a low maintenance phone charging
             solution essential to it's continued success.
