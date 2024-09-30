@@ -17,8 +17,10 @@ const Benefits = () => {
         </Label>
       </div>
       <div className="padding-5 flex w-full flex-col items-center space-y-10 lg:flex-row lg:space-x-10 lg:space-y-0">
-        {featureCardValue.map(({ description, title }) => {
-          return <FeatureCard description={description} title={title} />;
+        {featureCardValue.map(({ description, title }, index) => {
+          return (
+            <FeatureCard key={index} description={description} title={title} />
+          );
         })}
       </div>
     </PageContainer>
