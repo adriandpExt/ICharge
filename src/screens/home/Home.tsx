@@ -7,7 +7,7 @@ import CarouselCompany from "./company-carousel";
 import Sector from "./sector";
 import Services from "./service/service";
 import WhyICharge from "./why-icharge/WhyIcharge";
-import BookDemo from "./book-demo/BookDemo";
+import BookDemo from "@/components/book-demo";
 
 const Home = (): ReactElement => {
   return (

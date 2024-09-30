@@ -1,8 +1,8 @@
 import Benefits from "./components/Benefits";
-import BookDemoCard from "./components/BookDemo";
 import CaseStudy from "./components/CaseStudy";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
+import BookDemo from "@/components/book-demo";
 
 const Hospitality = () => {
   return (
@@ -11,7 +11,7 @@ const Hospitality = () => {
       <Benefits />
       <CaseStudy />
       <Gallery />
-      <BookDemoCard />
+      <BookDemo />
     </section>
   );
 };
