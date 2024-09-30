@@ -7,11 +7,10 @@ import Partner from "@/screens/partner/partner";
 import Termsandcondition from "@/screens/terms-and-conditions/terms";
 import Sustainablity from "@/screens/sustainability/sustainability";
 import UserAgreement from "@/screens/user-agreement/useragreement";
-import Sectors from "@/screens/sectors";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Privacy from "@/screens/privacy/privacy";
 import Cookies from "@/screens/cookies/cookies";
-import Hospitality from "@/screens/sectors/hospitality/Hospitality";
+import { sectorRoutes } from "@/screens/sectors/routes";
 
 const router: RouteObject[] = [
   {
@@ -23,20 +22,7 @@ const router: RouteObject[] = [
         index: true,
         element: <Home />,
       },
-      {
-        path: "sectors",
-        element: <Sectors />,
-        children: [
-          {
-            index: true,
-            element: <Hospitality />,
-          },
-          {
-            path: "hospitality",
-            element: <Hospitality />,
-          },
-        ],
-      },
+      ...sectorRoutes,
       { path: "partner", element: <Partner /> },
       { path: "sustainability", element: <Sustainablity /> },
       { path: "news", element: <News /> },
