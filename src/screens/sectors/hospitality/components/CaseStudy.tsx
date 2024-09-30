@@ -36,11 +36,11 @@ const CaseStudy = () => {
           <Label className="text-2xl">
             Laines has pulled over 160 million pints at over 100 bars.
             Digitalization makes having a low maintenance phone charging
-            solution essential to it's continued success
+            solution essential to it's continued success.
           </Label>
 
           <div>
-            <Label className="text-2xl">
+            <Label className="hidden text-2xl md:flex">
               Here's some highlight of Icharge x Laine's partnership:
             </Label>
           </div>

@@ -53,22 +53,31 @@ const Gallery = () => {
         <CarouselContent>
           {carouselContents.map(({ image }, index) => (
             <CarouselItem
-              className="flex h-[25rem] w-full basis-1/3 items-center justify-center"
+              className="flex h-[25rem] w-full items-center justify-center md:basis-1/3"
               key={index}
             >
               <CardContent
                 className={cn(
                   "h-[20rem] w-[25rem] rounded-2xl",
                   image,
-                  currentIndex === index - 1 && "scale-125",
+                  currentIndex === index - 1 && "md:scale-125",
                 )}
               />
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className="custom-lg:hidden flex justify-center">
+          {carouselContents.map((_, index) => (
+            <div
+              key={index}
+              className={`mx-2 h-3 w-3 cursor-pointer rounded-full ${currentIndex === index ? "bg-opacity-100" : "bg-opacity-25"} bg-green-500`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
+        </div>
       </Carousel>
       <div className="flex flex-col space-y-5">
-        <Label variant="title" className="text-7xl">
+        <Label variant="title" className="text-5xl lg:text-7xl">
           SUPERCHARGE YOUR VENUE WITH ICHARGE.
         </Label>
       </div>
