@@ -1,3 +1,4 @@
+import { useState } from "react"; // Import useState
 import { Link } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
 
@@ -31,6 +32,13 @@ import { linkList } from "../utils";
 import { Label } from "@/components/ui/label";
 
 export const Drawer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeDrawer = () => {
+    setIsOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   const renderDrawerMenu = () => {
     return linkList.map((item, index) =>
       item.subChild && item.subChild.length > 0 ? (
@@ -43,7 +51,7 @@ export const Drawer = () => {
               <ul className="space-y-2">
                 {item.subChild.map((child, childIndex) => (
                   <li key={childIndex}>
-                    <Link to={child.path as string}>
+                    <Link to={child.path as string} onClick={closeDrawer}>
                       <Label>{child.label}</Label>
                     </Link>
                   </li>
@@ -53,7 +61,12 @@ export const Drawer = () => {
           </AccordionItem>
         </Accordion>
       ) : (
-        <Button key={index} variant="ghost" className="justify-start">
+        <Button
+          key={index}
+          variant="ghost"
+          className="justify-start"
+          onClick={closeDrawer}
+        >
           <Link to={item.path as string} className="font-poppins">
             {item.label}
           </Link>
@@ -63,11 +76,13 @@ export const Drawer = () => {
   };
 
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger>
-        <Menu className={`inline-flex text-white lg:hidden`} />
+        <Menu
+          className={`inline-flex text-white lg:hidden`}
+          onClick={() => setIsOpen(true)}
+        />
       </SheetTrigger>
-
       <SheetContent side={"left"} className="space-y-5 bg-white">
         <SheetHeader>
           <SheetTitle>
