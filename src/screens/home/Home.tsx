@@ -11,7 +11,7 @@ import BookDemo from "@/components/book-demo";
 
 const Home = (): ReactElement => {
   return (
-    <div className="bg-[url('@/assets/landing_bg.svg')] bg-cover bg-no-repeat">
+    <>
       <HeroSection />
       <CarouselCompany />
       <WhyICharge />
@@ -21,7 +21,7 @@ const Home = (): ReactElement => {
 
       <Sector />
       <BookDemo />
-    </div>
+    </>
   );
 };
 
