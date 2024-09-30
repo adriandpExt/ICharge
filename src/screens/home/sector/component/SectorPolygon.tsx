@@ -9,7 +9,7 @@ const SectorPolygon = ({
 }: PolygonProps): ReactElement[] | ReactElement => {
   const setHexColor = (name: string) => {
     if (name) {
-      return "fill-[#D4EAD3] hover:fill-[#94E290]";
+      return "fill-[#D4EAD3] hover:fill-[#94E290] hover:cursor-pointer";
     } else {
       return "fill-white";
     }
@@ -50,7 +50,9 @@ const SectorPolygon = ({
           filter={hexFilter(index, hoveredHex, name)}
           onMouseEnter={() => setHoveredHex(index)}
           onMouseLeave={() => setHoveredHex(null)}
-          onClick={name ? () => handleNavigate(navigation as string) : undefined}
+          onClick={
+            name ? () => handleNavigate(navigation as string) : undefined
+          }
         >
           <Text
             fontSize={3.5}

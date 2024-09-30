@@ -3,15 +3,32 @@ import { NavBar } from "@/components/nav-bar";
 import Alertcookies from "@/screens/cookies/cookiesalert";
 
 import { PropsWithChildren } from "react";
+import { useLocation } from "react-router-dom";
+
+const backgroundStyles: Record<string, string> = {
+  "/sustainability":
+    "bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-fixed bg-center",
+  "/": "bg-[url('@/assets/landing_bg.svg')] bg-cover bg-no-repeat bg-center",
+};
 
 const Layout = ({ children }: PropsWithChildren) => {
+  const location = useLocation();
+
+  const dynamicBG = backgroundStyles[location.pathname] || "";
+
   return (
-    <>
-      <NavBar />
-      <main className="dark:bg-white">{children}</main>
-      <Alertcookies />
-      <Footer />
-    </>
+    <div className={`${dynamicBG} relative`}>
+      {location.pathname === "/sustainability" && (
+        <div className="absolute inset-0 z-0 bg-black opacity-50" />
+      )}
+
+      <div className="relative z-10">
+        <NavBar />
+        <main>{children}</main>
+        <Alertcookies />
+        <Footer />
+      </div>
+    </div>
   );
 };
 
