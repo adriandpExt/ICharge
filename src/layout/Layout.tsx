@@ -1,20 +1,19 @@
 import { Footer } from "@/components";
 import { NavBar } from "@/components/nav-bar";
 import Alertcookies from "@/screens/cookies/cookiesalert";
+import clsx from "clsx";
 
 import { PropsWithChildren } from "react";
 import { useLocation } from "react-router-dom";
 
-const backgroundStyles: Record<string, string> = {
-  "/sustainability":
-    "bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-fixed bg-center",
-  "/": "bg-[url('@/assets/landing_bg.svg')] bg-cover bg-no-repeat bg-center",
-};
-
 const Layout = ({ children }: PropsWithChildren) => {
   const location = useLocation();
 
-  const dynamicBG = backgroundStyles[location.pathname] || "";
+  const dynamicBG = clsx(
+    location.pathname === "/sustainability"
+      ? "bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-fixed bg-center "
+      : "bg-[url('@/assets/landing_bg.svg')] bg-cover bg-no-repeat bg-center",
+  );
 
   return (
     <div className={`${dynamicBG} relative`}>
