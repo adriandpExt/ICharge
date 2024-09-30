@@ -5,7 +5,7 @@ import Home from "@/screens/home/Home";
 import News from "@/screens/news/News";
 import Partner from "@/screens/partner/partner";
 import Termsandcondition from "@/screens/terms-and-conditions/terms";
-import Sustainablity from "@/screens/sustainability/sustainability";
+import Sustainability from "@/screens/sustainability";
 import UserAgreement from "@/screens/user-agreement/useragreement";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Privacy from "@/screens/privacy/privacy";
@@ -24,7 +24,7 @@ const router: RouteObject[] = [
       },
       ...sectorRoutes,
       { path: "partner", element: <Partner /> },
-      { path: "sustainability", element: <Sustainablity /> },
+      { path: "sustainability", element: <Sustainability /> },
       { path: "news", element: <News /> },
       { path: "customer-service", element: <>Customer service</> },
       {
