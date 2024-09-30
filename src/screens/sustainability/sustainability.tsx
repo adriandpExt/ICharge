@@ -50,13 +50,13 @@ export default function Partner() {
 
 const HeroSection = memo(function HeroSection() {
   return (
-    <div className="relative h-[50vh] border-b-2 border-white">
-      <div className="absolute inset-0 bg-green-500 bg-cover bg-bottom bg-no-repeat" />
+    <div className="relative h-[50vh] border-0">
+      <div className="absolute inset-0 bg-[url('@/assets/bggreenwave.png')] bg-cover bg-bottom bg-no-repeat" />
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
         <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
           Sustainability
         </Label>
-        <Label className="mb-6 text-xl text-white sm:mb-8 lg:text-2xl">
+        <Label className="text-md mb-6 text-start text-white sm:mb-8 lg:text-2xl">
           At ICharge, we are all about doing business the right way. Beyond
           offering a cutting-edge power bank sharing service, we are on a
           mission to use our influence for good. Our commitment to

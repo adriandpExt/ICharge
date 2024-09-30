@@ -49,19 +49,19 @@ export const NavBar = () => {
                         className="grid w-[400px] gap-3 rounded-[1rem] py-4 shadow-inner shadow-green-100"
                         style={{
                           background:
-                            "radial-gradient(circle, rgba(20, 20, 20, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%)",
+                            "radial-gradient(circle, rgb(50, 50, 50) 0%, rgb(20, 20, 20) 100%)",
                         }}
                       >
                         <ul className="items-center space-y-1 rounded">
                           {item.subChild.map((sub) => (
                             <Link to={sub.path as string} key={sub.label}>
-                              <li className="flex items-center gap-2 px-5 hover:bg-[#2e551e] hover:text-white">
+                              <li className="flex items-center gap-2 px-5 hover:bg-[#464745] hover:text-white">
                                 <Button
                                   variant="link"
                                   className="gap-2 bg-none py-7 text-left text-white hover:no-underline"
                                 >
                                   <Avatar>
-                                    <AvatarFallback className="bg-[#1e581b]">
+                                    <AvatarFallback className="bg-[#21851c]">
                                       <SvgIcons
                                         name={sub.icon as IconName}
                                         size={20}

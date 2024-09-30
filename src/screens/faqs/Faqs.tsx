@@ -171,36 +171,15 @@ export default function FullScreenResponsiveFAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex h-full flex-col md:pb-28">
-      {/* <section className="grid h-[50vh] w-full">
-        <div className="absolute inset-0 h-[50vh] w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-center brightness-[30%]" />
-
-        <div className="relative mx-auto flex max-w-3xl flex-col place-items-center pt-4 text-center text-white md:pt-16">
-          <h1 className="text-3xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
-            CUSTOMER SERVICE
-          </h1>
-          <p className="mb-6 text-base sm:mb-8 sm:text-lg">
-            Use the form below to send us an email and we will respond within 12
-            hours. If you need an immediate answer, our Customer Service team is
-            just a click away, chat with us!
-          </p>
-          <Button
-            variant={"custombutton"}
-            className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
-          >
-            Chat with Us
-            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-          </Button>
-        </div>
-      </section> */}
-      <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white pb-5">
+    <div className="flex h-full flex-col">
+      <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
         <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
           <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
             CUSTOMER SERVICE
           </Label>
-          <Label className="mb-6 text-xl text-white sm:mb-8 lg:text-2xl">
+          <Label className="text-md mb-6 text-white sm:mb-8 lg:text-2xl">
             Use the form below to send us an email and we will respond within 12
             hours. If you need an immediate answer, our Customer Service team is
             just a click away, chat with us!
@@ -214,66 +193,68 @@ export default function FullScreenResponsiveFAQAccordion() {
           </Button>
         </div>
       </div>
-      <Label className="mb-6 text-center text-3xl font-bold md:text-4xl lg:mb-10 lg:text-5xl">
-        FREQUENTLY ASKED QUESTIONS
-      </Label>
+      <div className="relative overflow-hidden bg-[url('@/assets/landing_bg.svg')] bg-cover bg-fixed bg-center pt-5 text-center">
+        <Label className="lg:text-5x mb-6 text-3xl font-bold md:text-4xl lg:mb-10">
+          FREQUENTLY ASKED QUESTIONS
+        </Label>
 
-      <div className="mb-6 flex flex-wrap justify-center gap-2 lg:mb-10">
-        {faqData.map((category) => (
-          <Label className="font-bold" key={category.category}>
-            <button
-              key={category.category}
-              className={`rounded-full px-3 py-2 text-sm transition-colors duration-200 md:px-4 md:py-2 md:text-base lg:text-lg ${
-                activeCategory === category.category
-                  ? "bg-green-500 text-white"
-                  : "bg-green-100 text-gray-800 hover:bg-green-200"
-              }`}
-              onClick={() => setActiveCategory(category.category)}
-            >
-              {category.category}
-            </button>
-          </Label>
-        ))}
-      </div>
-
-      <div className="mb-28 h-[70vh] flex-grow">
-        {faqData.map(
-          (category) =>
-            activeCategory === category.category && (
-              <Accordion
+        <div className="mb-6 flex flex-wrap justify-center gap-2 lg:mb-10">
+          {faqData.map((category) => (
+            <Label className="font-bold" key={category.category}>
+              <button
                 key={category.category}
-                type="single"
-                collapsible
-                className="container relative mx-auto space-y-2"
+                className={`rounded-full px-3 py-2 text-sm transition-colors duration-200 md:px-4 md:py-2 md:text-base lg:text-lg ${
+                  activeCategory === category.category
+                    ? "bg-green-500 text-white"
+                    : "bg-green-100 text-gray-800 hover:bg-green-200"
+                }`}
+                onClick={() => setActiveCategory(category.category)}
               >
-                {category.items.map((item, index) => (
-                  <AccordionItem
-                    key={index}
-                    value={`item-${index}`}
-                    className="border-none"
-                  >
-                    <AccordionTrigger
-                      className={`rounded-lg ${
-                        openIndex === index ? "bg-green-400" : "bg-green-100"
-                      } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
-                      onClick={() =>
-                        setOpenIndex(openIndex === index ? null : index)
-                      }
+                {category.category}
+              </button>
+            </Label>
+          ))}
+        </div>
+
+        <div className="mb-28 h-[70vh] flex-grow">
+          {faqData.map(
+            (category) =>
+              activeCategory === category.category && (
+                <Accordion
+                  key={category.category}
+                  type="single"
+                  collapsible
+                  className="container relative mx-auto space-y-2"
+                >
+                  {category.items.map((item, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="border-none"
                     >
-                      <div className="flex w-full items-center justify-between">
-                        <Label className="text-base font-semibold">
-                          {item.question}
-                        </Label>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-sm md:text-base lg:text-lg">
-                      <Label className="text-base">{item.answer}</Label>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            ),
-        )}
+                      <AccordionTrigger
+                        className={`rounded-lg ${
+                          openIndex === index ? "bg-green-400" : "bg-green-100"
+                        } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
+                        onClick={() =>
+                          setOpenIndex(openIndex === index ? null : index)
+                        }
+                      >
+                        <div className="flex w-full items-center justify-between">
+                          <Label className="text-base font-semibold">
+                            {item.question}
+                          </Label>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-sm md:text-base lg:text-lg">
+                        <Label className="text-base">{item.answer}</Label>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              ),
+          )}
+        </div>
       </div>
     </div>
   );
