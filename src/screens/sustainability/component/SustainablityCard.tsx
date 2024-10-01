@@ -9,14 +9,14 @@ const SustainablityCard = (): ReactElement => {
         <CardHeader className="flex flex-col items-center justify-center">
           <SvgIcons name="ic_lock" size={80} />
           <CardTitle className="text-center text-[20px] text-white">
-            Powering Change with Joos Solar
+            Powering Change with Icharge
           </CardTitle>
         </CardHeader>
 
         <CardContent>
           <ul className="list-disc space-y-2 text-[12px] text-white">
             <li className="font-poppins">
-              and a greener future. We launched Joos Solar in 2023 to champion
+              and a greener future. We launched Icharge in 2023 to champion
               renewable energy
             </li>
             <li>
