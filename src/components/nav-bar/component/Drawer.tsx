@@ -32,11 +32,11 @@ import { linkList } from "../utils";
 import { Label } from "@/components/ui/label";
 
 export const Drawer = () => {
-  const [isOpen, setIsOpen] = useState(false); // State for drawer open/close
+  const [isOpen, setIsOpen] = useState(false);
 
   const closeDrawer = () => {
-    setIsOpen(false); // Close the drawer
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    setIsOpen(false);
+    window.scrollTo(0, 0);
   };
 
   const renderDrawerMenu = () => {
@@ -77,8 +77,6 @@ export const Drawer = () => {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      {" "}
-      {/* Control open state */}
       <SheetTrigger>
         <Menu
           className={`inline-flex text-white lg:hidden`}
@@ -107,18 +105,10 @@ export const Drawer = () => {
 
               <SelectContent className="flex flex-col items-center">
                 <SelectGroup className="text-center">
-                  <SelectItem
-                    value="chinese"
-                    className="text-center"
-                    onClick={closeDrawer}
-                  >
+                  <SelectItem value="chinese" className="text-center">
                     Chinese
                   </SelectItem>
-                  <SelectItem
-                    value="english"
-                    className="text-center"
-                    onClick={closeDrawer}
-                  >
+                  <SelectItem value="english" className="text-center">
                     English
                   </SelectItem>
                 </SelectGroup>

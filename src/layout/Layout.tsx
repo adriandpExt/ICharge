@@ -11,14 +11,14 @@ const Layout = ({ children }: PropsWithChildren) => {
 
   const dynamicBG = clsx(
     location.pathname === "/sustainability"
-      ? "bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-fixed bg-center "
+      ? "bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-fixed bg-bottom "
       : "bg-[url('@/assets/landing_bg.svg')] bg-cover bg-no-repeat bg-center",
   );
 
   return (
     <div className={`${dynamicBG} relative`}>
       {location.pathname === "/sustainability" && (
-        <div className="absolute inset-0 z-0 bg-black opacity-50" />
+        <div className="absolute inset-0 z-0 bg-black opacity-65" />
       )}
 
       <div className="relative z-10">
