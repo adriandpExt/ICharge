@@ -1,2 +1,2 @@
 export * from "./CookieAlert";
-export * from "./Cookies";
+export * from "./Kookie";
