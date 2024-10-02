@@ -7,7 +7,7 @@ const Sustainabilities = () => {
       <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
           <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
-            Sustainability
+            Sustainability shiTTTTTTTTTTTT
           </Label>
 
           <Label className="md:text-md mb-6 text-start text-sm text-white sm:mb-8 lg:text-2xl">
