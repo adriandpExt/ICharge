@@ -30,4 +30,5 @@ export type IconName =
   | "ic_healthcare"
   | "ic_events"
   | "ic_retail"
-  | "ic_icharge_white";
+  | "ic_icharge_white"
+  | "ic_lock";

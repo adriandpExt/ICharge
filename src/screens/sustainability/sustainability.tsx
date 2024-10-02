@@ -1,15 +1,16 @@
 import { Label } from "@/components/ui/label";
+import SustainablityCard from "./component/SustainablityCard";
 
-const sustainability = () => {
+const Sustainability = () => {
   return (
-    <section>
-      <div className="absolute inset-0 flex h-full w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat lg:h-[65vh]">
+    <section className="pt-[43vh]">
+      <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
           <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
             Sustainability
           </Label>
 
-          <Label className="text-md mb-6 text-start text-white sm:mb-8 lg:text-2xl">
+          <Label className="md:text-md mb-6 text-start text-sm text-white sm:mb-8 lg:text-2xl">
             At ICharge, we are all about doing business the right way. Beyond
             offering a cutting-edge power bank sharing service, we are on a
             mission to use our influence for good. Our commitment to
@@ -17,16 +18,20 @@ const sustainability = () => {
             things responsibly and ethically in our day-to-day operations.
           </Label>
         </div>
-      </div>
+      </main>
 
-      <div className="h-screen text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, non esse
-        totam autem eveniet voluptatibus assumenda sapiente ratione natus quo
-        fuga quas maiores odit facere iusto dignissimos, officia, deleniti
-        minima.
-      </div>
+      <main className="relative mt-20 px-5 pb-10 sm:mt-24 md:mt-32 lg:mt-36 xl:mt-40">
+        <div className="container mx-auto grid grid-cols-1 place-items-center gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <SustainablityCard />
+          <SustainablityCard />
+          <SustainablityCard />
+          <SustainablityCard />
+          <SustainablityCard />
+          <SustainablityCard />
+        </div>
+      </main>
     </section>
   );
 };
 
-export default sustainability;
+export default Sustainability;

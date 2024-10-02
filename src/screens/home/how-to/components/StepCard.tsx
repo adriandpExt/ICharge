@@ -29,21 +29,15 @@ const StepCard = ({
       onClick={onClick} // Clicking this will toggle the active state
     >
       {stepNumber % 2 === 0 ? (
-        isActive ? (
-          <div
-            className="col-start-1 col-end-5 hidden w-full flex-col items-end justify-center space-y-3 lg:flex"
-            data-aos="zoom-in"
-          >
-            <Label className="font-lexendDeca text-5xl font-bold">
-              {title}
-            </Label>
-            <Label className="text-end font-lexendDeca text-xl">
-              {description}
-            </Label>
-          </div>
-        ) : (
-          <></>
-        )
+        <div
+          className="col-start-1 col-end-5 hidden w-full flex-col items-end justify-center space-y-3 lg:flex"
+          data-aos="zoom-in"
+        >
+          <Label className="font-lexendDeca text-5xl font-bold">{title}</Label>
+          <Label className="text-end font-lexendDeca text-xl">
+            {description}
+          </Label>
+        </div>
       ) : (
         <HowToCard
           className={cn(
@@ -116,7 +110,7 @@ const StepCard = ({
             <></>
           )}
         </HowToCard>
-      ) : isActive ? (
+      ) : (
         <div
           className="col-start-6 col-end-12 hidden w-full flex-col items-start justify-center space-y-3 lg:flex"
           data-aos="zoom-in"
@@ -126,8 +120,6 @@ const StepCard = ({
             {description}
           </Label>
         </div>
-      ) : (
-        <></>
       )}
     </div>
   );

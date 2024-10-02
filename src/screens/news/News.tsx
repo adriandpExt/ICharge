@@ -1,11 +1,7 @@
-import WorkInProgress from "../workinprogress/wip";
+import WorkInProgress from "../workinprogress";
 
 const News = () => {
-  return (
-    <div className="flex h-screen justify-center bg-background">
-      <WorkInProgress />
-    </div>
-  );
+  return <WorkInProgress />;
 };
 
 export default News;

@@ -1,185 +1,111 @@
+import { Faqs } from "./types";
+
 import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import BookDemo from "@/components/book-demo";
+
+import { faqData } from "./utils";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/customUI/accordion";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+} from "./component/accordion";
 
-const faqData = [
-  {
-    category: "Rent",
-    items: [
-      {
-        question: "How do I rent the power bank?",
-        answer:
-          "You have to first download the xxx app available in the App Store or Google Play. You'll need to create or log into a xxx account, providing a valid mobile number or email and entering the four-digit one-time-passcode SMS we send to that number or email. Tap on \"Scan to rent\" in the app's home screen, scan the QR code in front of a station. This will release a power bank for you to use on the go. If you're seeking a station, explore the map in the app.",
-      },
-      {
-        question:
-          "What do I do if I cannot release a power bank from the station?",
-        answer:
-          "Please reach out to in-app support team and we will happily take you through the installation process and try and remedy this for you.",
-      },
-      {
-        question: "What do I do if the station is empty?",
-        answer:
-          "If the station is empty, locate the next nearer station via the app.",
-      },
-    ],
-  },
-  {
-    category: "Return",
-    items: [
-      {
-        question:
-          "What do I do if the station I want to return my power bank to is full?",
-        answer:
-          "Make sure that you only return the powerbank to the same station that you rented to there is always a slot for each powerbank.",
-      },
-      {
-        question: "How do I return the power bank?",
-        answer:
-          "To return, simply push the power bank into an empty slot in the same station. Push it in all the way until it clicks and wait for the app to show your rental recap — contact in-app support if it doesn't.",
-      },
-    ],
-  },
-  {
-    category: "Order",
-    items: [
-      {
-        question: "How do I report a faulty power bank?",
-        answer:
-          "Please report a faulty power bank via the app, or contact in-App support team.",
-      },
-      {
-        question:
-          "What do I do if I already returned power bank but the order is still running?",
-        answer:
-          'First check and confirm the power bank is properly and fully inserted. Refresh the order page to check if order page have stopped (poor network might delay responses). If order is still running, press "Customer service" button on the home page and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end. We will investigate and reply to you in 3 working days.',
-      },
-      {
-        question:
-          "What do I do if power bank does not eject but the running order starts running?",
-        answer:
-          'First refresh the order page and check whether the order has ended. If it\'s still running, select "Customer service" button on the running order and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end and you can proceed to start renting again.',
-      },
-    ],
-  },
-  {
-    category: "Power bank",
-    items: [
-      {
-        question: "What happens if I lose/don't return a power bank?",
-        answer:
-          "You will need to pay a penalty. The price will show in the app, If you decide not to return it you cannot withdraw your security deposit anymore.",
-      },
-      {
-        question: "How do you check the charge level of the power bank?",
-        answer:
-          "Simply press the button on the front of the power bank and the Led indicators will reflect the level of power",
-      },
-      {
-        question: "My power bank does not charge my phone, what do I do?",
-        answer:
-          "Make sure the cable is properly plugged into your device. We recommend you remove any thick phone case to allow the cable to go all the way in. If you still don't see a charge, return the power bank into the station and contact us via in-app support.",
-      },
-      {
-        question:
-          "What happens if I rent the power bank and there is no cable?",
-        answer:
-          "If there is no cable present, first return the power bank and report within the app prompt. You will not be charged for this rental. Please then continue to rent another power bank.",
-      },
-    ],
-  },
-
-  {
-    category: "Charges",
-    items: [
-      {
-        question: "What do I do if I am overcharged?",
-        answer:
-          "Please contact in-App support team and we will happily help you out.",
-      },
-      {
-        question:
-          "How do I check how long I have the power bank for and how much it has cost me?",
-        answer:
-          "This information is shown within the app as soon as you start renting the power bank. The time is shown along with the exact cost it accumulates.",
-      },
-      {
-        question: "How do I pay for the rental charges?",
-        answer:
-          "After logging in for the first time, you will be prompted to add a valid credit/debit card. Upon returning the power bank, rental charges will be automatically deducted from the defaulted card. Should the payment failed, an unpaid order will be shown on homepage when you login again and you will have to manually complete the payment for normal service to resume.",
-      },
-      {
-        question: "How much is a power bank to rent?",
-        answer:
-          "Please take note that price varies depends on the location of the station. Price plan also displays after scanning station QR code.",
-      },
-    ],
-  },
-  {
-    category: "E-Wallet",
-    items: [
-      {
-        question: "If I am issued a refund how long will it take?",
-        answer:
-          "In the case of a reversal customer won't see a refund credit on their statement— you will just see the original authorisation drop off their statement entirely after a few days. There will be no payment , and no refund. It'll appear as if the whole transaction never happened. Your bank should be able to confirm this for them. Depending on your card issuer, the original charge will disappear from pending charges 7 working days later.",
-      },
-      {
-        question: "How to refund my deposit?",
-        answer:
-          '1. Go to "Wallet page" , press "refund " button and submit. 2. Refund will be returned to the same bank account that you use to top up.',
-      },
-      {
-        question: "Why do I need to use my credit/debit card?",
-        answer:
-          "A credit/debit card is required as a form of security to encourage fair and safe usage of our services.",
-      },
-    ],
-  },
-  {
-    category: "Account",
-    items: [
-      {
-        question:
-          "I have not received a verification code for the app. What should I do?",
-        answer:
-          "This relies on your phone having enough mobile signal to receive it. You may need to step into a better signal range. Otherwise please ensure that you have entered a correct mobile number. If you are using email, please remember to check junk mail. If nothing else works, then contact in-App support team and we will help get an account setup for you.",
-      },
-    ],
-  },
-  {
-    category: "Others",
-    items: [
-      {
-        question: "The App is not working. What should I do?",
-        answer:
-          "You can first try to refresh your app. If this does not work please delete and re-install the app. If this doesn't help, contact the support team e-mail: ichargebgc@gmail.com and we will help you out!",
-      },
-    ],
-  },
-];
+import wave from "@/assets/bg_green_wave.png";
 
 export default function FullScreenResponsiveFAQAccordion() {
-  const [activeCategory, setActiveCategory] = useState(faqData[0].category);
+  const [activeCategory, setActiveCategory] = useState<Faqs | null>(
+    faqData[0] || null,
+  );
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const handleSetOpenIndex = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const renderAccordionMenu = () => {
+    return (
+      <div className="container mx-auto mb-6 grid grid-cols-1 gap-2 px-3 md:grid-cols-2 lg:mb-10 lg:grid-cols-3">
+        {faqData.map((category) => (
+          <Label className="font-bold" key={category.category}>
+            <Button
+              variant={"custombutton"}
+              className={`h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg ${
+                activeCategory?.category === category.category
+                  ? "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e] text-white"
+                  : "bg-green-100 text-gray-800 hover:bg-green-200"
+              }`}
+              onClick={() => setActiveCategory(category)}
+            >
+              {category.category}
+            </Button>
+          </Label>
+        ))}
+      </div>
+    );
+  };
+
+  const renderAccordionQnA = () => {
+    return (
+      <div className="mb-28 h-full flex-grow px-3">
+        {faqData.map(
+          (category) =>
+            activeCategory?.category === category.category && (
+              <Accordion
+                key={category.category}
+                type="single"
+                collapsible
+                className="container relative mx-auto space-y-2"
+              >
+                {category.items.map((item, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="border-none"
+                  >
+                    <AccordionTrigger
+                      className={`rounded-lg ${
+                        openIndex === index ? "bg-green-400" : "bg-green-100"
+                      } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
+                      onClick={() => handleSetOpenIndex(index)}
+                    >
+                      <div className="flex w-full items-center justify-between">
+                        <Label className="text-base font-semibold">
+                          {item.question}
+                        </Label>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-left text-sm md:text-base lg:text-lg">
+                      <Label className="text-base">{item.answer}</Label>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            ),
+        )}
+      </div>
+    );
+  };
   return (
-    <div className="flex h-full flex-col">
-      <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
-        <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
+    <section>
+      <main className="col-start-1 row-start-1 grid h-[65vh] w-full place-items-center">
+        <img
+          loading="lazy"
+          src={wave}
+          alt="wave"
+          className="col-start-1 row-start-1 grid h-[65vh] w-full bg-cover bg-bottom bg-no-repeat brightness-[30%]"
+        />
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
           <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
             CUSTOMER SERVICE
           </Label>
-          <Label className="text-md mb-6 text-white sm:mb-8 lg:text-2xl">
+          <Label className="sm:text-md mb-6 text-white sm:mb-8 lg:text-2xl">
             Use the form below to send us an email and we will respond within 12
             hours. If you need an immediate answer, our Customer Service team is
             just a click away, chat with us!
@@ -192,70 +118,19 @@ export default function FullScreenResponsiveFAQAccordion() {
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
-      </div>
-      <div className="relative overflow-hidden bg-[url('@/assets/landing_bg.svg')] bg-cover bg-fixed bg-center pt-5 text-center">
-        <Label className="lg:text-5x mb-6 text-3xl font-bold md:text-4xl lg:mb-10">
+      </main>
+
+      <main>
+        <Label className="mb-6 flex flex-col py-10 text-center text-3xl font-bold md:text-4xl lg:mb-10 lg:text-5xl">
           FREQUENTLY ASKED QUESTIONS
         </Label>
 
-        <div className="mb-6 flex flex-wrap justify-center gap-2 lg:mb-10">
-          {faqData.map((category) => (
-            <Label className="font-bold" key={category.category}>
-              <button
-                key={category.category}
-                className={`rounded-full px-3 py-2 text-sm transition-colors duration-200 md:px-4 md:py-2 md:text-base lg:text-lg ${
-                  activeCategory === category.category
-                    ? "bg-green-500 text-white"
-                    : "bg-green-100 text-gray-800 hover:bg-green-200"
-                }`}
-                onClick={() => setActiveCategory(category.category)}
-              >
-                {category.category}
-              </button>
-            </Label>
-          ))}
-        </div>
+        {renderAccordionMenu()}
 
-        <div className="mb-28 h-[70vh] flex-grow">
-          {faqData.map(
-            (category) =>
-              activeCategory === category.category && (
-                <Accordion
-                  key={category.category}
-                  type="single"
-                  collapsible
-                  className="container relative mx-auto space-y-2"
-                >
-                  {category.items.map((item, index) => (
-                    <AccordionItem
-                      key={index}
-                      value={`item-${index}`}
-                      className="border-none"
-                    >
-                      <AccordionTrigger
-                        className={`rounded-lg ${
-                          openIndex === index ? "bg-green-400" : "bg-green-100"
-                        } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
-                        onClick={() =>
-                          setOpenIndex(openIndex === index ? null : index)
-                        }
-                      >
-                        <div className="flex w-full items-center justify-between">
-                          <Label className="text-base font-semibold">
-                            {item.question}
-                          </Label>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-sm md:text-base lg:text-lg">
-                        <Label className="text-base">{item.answer}</Label>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              ),
-          )}
-        </div>
-      </div>
-    </div>
+        {renderAccordionQnA()}
+
+        <BookDemo />
+      </main>
+    </section>
   );
 }

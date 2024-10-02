@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export default function WorkInProgress() {
+const WorkInProgress = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
@@ -12,7 +12,7 @@ export default function WorkInProgress() {
   };
 
   return (
-    <div className="flex h-screen flex-col items-center p-4 text-center">
+    <div className="flex h-full flex-col items-center p-4 text-center">
       <Lottie
         animationData={wipAnimation}
         loop={true}
@@ -32,4 +32,6 @@ export default function WorkInProgress() {
       </Button>
     </div>
   );
-}
+};
+
+export default WorkInProgress;
