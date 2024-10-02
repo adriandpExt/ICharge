@@ -5,7 +5,7 @@ import App from "@/App";
 import ErrorScreen from "@/screens/error-screen";
 
 import { sectorRoutes } from "@/screens/sectors/routes";
-import { Cookies } from "@/screens/cookies";
+import { Kookie } from "@/screens/cookies";
 
 import Home from "@/screens/home";
 import Partner from "@/screens/partner";
@@ -49,7 +49,7 @@ const router: RouteObject[] = [
       },
       {
         path: "cookies",
-        element: <Cookies />,
+        element: <Kookie />,
       },
     ],
   },
