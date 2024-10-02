@@ -1,5 +1,5 @@
 import { useState } from "react"; // Import useState
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
 
 import {
@@ -32,11 +32,18 @@ import { linkList } from "../utils";
 import { Label } from "@/components/ui/label";
 
 export const Drawer = () => {
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const closeDrawer = () => {
     setIsOpen(false);
     window.scrollTo(0, 0);
+  };
+
+  const handleNavigate = () => {
+    navigate("/");
+    closeDrawer();
   };
 
   const renderDrawerMenu = () => {
@@ -85,7 +92,7 @@ export const Drawer = () => {
       </SheetTrigger>
       <SheetContent side={"left"} className="space-y-5 bg-white">
         <SheetHeader>
-          <SheetTitle>
+          <SheetTitle onClick={handleNavigate}>
             <SvgIcons name={"ic_svl_g2"} size={150} />
           </SheetTitle>
 
