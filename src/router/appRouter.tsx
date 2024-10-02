@@ -5,7 +5,6 @@ import App from "@/App";
 import ErrorScreen from "@/screens/error-screen";
 
 import { sectorRoutes } from "@/screens/sectors/routes";
-import { Kookie } from "@/screens/cookies";
 
 import Home from "@/screens/home";
 import Partner from "@/screens/partner";
@@ -15,6 +14,7 @@ import Faqs from "@/screens/faqs";
 import TermsAndConditions from "@/screens/terms-and-conditions";
 import UserAgreement from "@/screens/user-agreement";
 import Privacy from "@/screens/privacy";
+import { Cookie } from "@/screens/cookies";
 
 const router: RouteObject[] = [
   {
@@ -49,7 +49,7 @@ const router: RouteObject[] = [
       },
       {
         path: "cookies",
-        element: <Kookie />,
+        element: <Cookie />,
       },
     ],
   },
