@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export default function WorkInProgress() {
+const WorkInProgress = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
@@ -32,4 +32,6 @@ export default function WorkInProgress() {
       </Button>
     </div>
   );
-}
+};
+
+export default WorkInProgress;
