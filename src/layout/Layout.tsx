@@ -1,10 +1,10 @@
-import { Footer } from "@/components";
-import { NavBar } from "@/components/nav-bar";
-import Alertcookies from "@/screens/cookies/cookiesalert";
-import clsx from "clsx";
-
 import { PropsWithChildren } from "react";
 import { useLocation } from "react-router-dom";
+
+import clsx from "clsx";
+
+import { Footer, NavBar } from "@/components";
+import { CookieAlert } from "@/screens/cookies";
 
 const Layout = ({ children }: PropsWithChildren) => {
   const location = useLocation();
@@ -24,7 +24,7 @@ const Layout = ({ children }: PropsWithChildren) => {
       <div className="relative z-10">
         <NavBar />
         <main>{children}</main>
-        <Alertcookies />
+        <CookieAlert />
         <Footer />
       </div>
     </div>

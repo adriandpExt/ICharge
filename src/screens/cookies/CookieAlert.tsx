@@ -1,23 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
 
-export default function CookieConsentBanner() {
-  // Check local storage directly to determine if the banner should be visible
+export const CookieAlert = () => {
   const [isVisible, setIsVisible] = useState(() => {
-    // Return false if consent is already given, otherwise true
     return localStorage.getItem("cookieConsent") !== "true";
   });
 
   const handleAgree = () => {
-    localStorage.setItem("cookieConsent", "true"); // Store user's consent
-    setIsVisible(false); // Immediately hide the banner
+    localStorage.setItem("cookieConsent", "true");
+    setIsVisible(false);
   };
 
   const handleDecline = () => {
-    setIsVisible(false); // Hide the banner on decline
+    setIsVisible(false);
   };
 
-  // If not visible, return null to prevent rendering
   if (!isVisible) return null;
 
   return (
@@ -46,4 +43,6 @@ export default function CookieConsentBanner() {
       </div>
     </Card>
   );
-}
+};
+
+export default CookieAlert;

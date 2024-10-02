@@ -1,16 +1,20 @@
-import App from "@/App";
-import ErrorScreen from "@/screens/error-screen/ErrorScreen";
-import Faqs from "@/screens/faqs/Faqs";
-import Home from "@/screens/home/Home";
-import News from "@/screens/news/News";
-import Partner from "@/screens/partner/partner";
-import Termsandcondition from "@/screens/terms-and-conditions/terms";
-import Sustainability from "@/screens/sustainability";
-import UserAgreement from "@/screens/user-agreement/useragreement";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
-import Privacy from "@/screens/privacy/privacy";
-import Cookies from "@/screens/cookies/cookies";
+
+import App from "@/App";
+
+import ErrorScreen from "@/screens/error-screen";
+
 import { sectorRoutes } from "@/screens/sectors/routes";
+import { Cookies } from "@/screens/cookies";
+
+import Home from "@/screens/home";
+import Partner from "@/screens/partner";
+import Sustainability from "@/screens/sustainability";
+import News from "@/screens/news/News";
+import Faqs from "@/screens/faqs";
+import TermsAndConditions from "@/screens/terms-and-conditions";
+import UserAgreement from "@/screens/user-agreement";
+import Privacy from "@/screens/privacy";
 
 const router: RouteObject[] = [
   {
@@ -33,7 +37,7 @@ const router: RouteObject[] = [
       },
       {
         path: "terms-and-conditions",
-        element: <Termsandcondition />,
+        element: <TermsAndConditions />,
       },
       {
         path: "user-agreement",
