@@ -24,7 +24,15 @@ const Header = ({ title }: Omit<FeatureCardProps, "description">) => {
               options that keep patrons connected while the dine, drink, or
               relax
             </Label>
-            <Button className="custom-green flex h-fit w-fit rounded-2xl py-5 text-3xl md:px-10">
+            <Button
+              className="custom-green flex h-fit w-fit rounded-2xl py-5 text-3xl md:px-10"
+              onClick={() =>
+                window.scrollTo({
+                  top: document.getElementById("bookDemo")?.offsetTop,
+                  behavior: "smooth",
+                })
+              }
+            >
               BOOK A DEMO
               <ArrowRight size={50} className="ml-5 hidden md:block" />
               <ArrowRight size={30} className="ml-5 block md:hidden" />

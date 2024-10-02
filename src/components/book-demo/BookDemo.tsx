@@ -187,7 +187,10 @@ export default function BookDemoCard() {
   };
   return (
     <PageContainer>
-      <Card className="grid grid-cols-1 rounded-[36px] border-0 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:grid-cols-2">
+      <Card
+        className="grid grid-cols-1 rounded-[36px] border-0 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:grid-cols-2"
+        id="bookDemo"
+      >
         <div className="relative hidden h-full w-full rounded-bl-[36px] rounded-tl-[36px] bg-cover bg-no-repeat lg:grid lg:place-items-center lg:bg-[url('@/assets/modern-man-using-smartphone-city-2.png')]">
           <div className="absolute inset-0 rounded-bl-[36px] rounded-tl-[36px] bg-[#067100] opacity-60" />
           <div className="relative z-10 rounded-bl-[36px] rounded-tl-[36px]">
