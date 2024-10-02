@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-export const Kookie = (): ReactElement => {
+export const Cookie = (): ReactElement => {
   return (
     <div className="flex min-h-screen items-center justify-center p-4 text-gray-800">
       <div className="w-full max-w-3xl overflow-y-auto rounded-lg p-6 shadow-lg md:p-10">
@@ -137,4 +137,4 @@ export const Kookie = (): ReactElement => {
   );
 };
 
-export default Kookie;
+export default Cookie;

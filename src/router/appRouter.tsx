@@ -5,16 +5,16 @@ import App from "@/App";
 import ErrorScreen from "@/screens/error-screen";
 
 import { sectorRoutes } from "@/screens/sectors/routes";
-import { Kookie } from "@/screens/cookies";
 
 import Home from "@/screens/home";
-import Partner from "@/screens/partner";
-import Sustainability from "@/screens/sustainability";
+import Sustainabilities from "@/screens/sustainability";
 import News from "@/screens/news/News";
 import Faqs from "@/screens/faqs";
 import TermsAndConditions from "@/screens/terms-and-conditions";
-import UserAgreement from "@/screens/user-agreement";
-import Privacy from "@/screens/privacy";
+import Partners from "@/screens/partner/Partners";
+import UserAgreements from "@/screens/user-agreement/UserAgreements";
+import Privacies from "@/screens/privacy/Privacies";
+import Cookie from "@/screens/cookies/Cookie";
 
 const router: RouteObject[] = [
   {
@@ -27,8 +27,8 @@ const router: RouteObject[] = [
         element: <Home />,
       },
       ...sectorRoutes,
-      { path: "partner", element: <Partner /> },
-      { path: "sustainability", element: <Sustainability /> },
+      { path: "partner", element: <Partners /> },
+      { path: "sustainability", element: <Sustainabilities /> },
       { path: "news", element: <News /> },
       { path: "customer-service", element: <>Customer service</> },
       {
@@ -41,15 +41,15 @@ const router: RouteObject[] = [
       },
       {
         path: "user-agreement",
-        element: <UserAgreement />,
+        element: <UserAgreements />,
       },
       {
         path: "privacy",
-        element: <Privacy />,
+        element: <Privacies />,
       },
       {
         path: "cookies",
-        element: <Kookie />,
+        element: <Cookie />,
       },
     ],
   },

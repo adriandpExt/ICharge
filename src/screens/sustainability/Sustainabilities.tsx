@@ -1,7 +1,7 @@
 import { Label } from "@/components/ui/label";
 import SustainablityCard from "./component/SustainablityCard";
 
-const Sustainability = () => {
+const Sustainabilities = () => {
   return (
     <section className="pt-[43vh]">
       <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
@@ -34,4 +34,4 @@ const Sustainability = () => {
   );
 };
 
-export default Sustainability;
+export default Sustainabilities;
