@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 
 import { features } from "./utils";
 
-const Partner = () => {
+const Partners = () => {
   return (
     <div className="flex h-full flex-col">
       <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
@@ -69,4 +69,4 @@ const Partner = () => {
   );
 };
 
-export default Partner;
+export default Partners;

@@ -1,4 +1,4 @@
-const Privacy = () => {
+const Privacies = () => {
   return (
     <div className="flex min-h-screen items-center justify-center p-4 text-gray-800">
       <div className="w-full max-w-3xl overflow-y-auto rounded-lg p-6 shadow-lg md:p-10">
@@ -135,4 +135,4 @@ const Privacy = () => {
   );
 };
 
-export default Privacy;
+export default Privacies;
