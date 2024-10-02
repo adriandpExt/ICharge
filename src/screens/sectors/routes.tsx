@@ -8,10 +8,6 @@ export const sectorRoutes: RouteObject[] = [
     element: <Sectors />,
     children: [
       {
-        index: true,
-        element: <Sectors />,
-      },
-      {
         path: "hospitality",
         element: <SectorPage title="HOSPITALITY" />,
       },
