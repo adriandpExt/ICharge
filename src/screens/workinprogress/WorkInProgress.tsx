@@ -12,7 +12,7 @@ const WorkInProgress = () => {
   };
 
   return (
-    <div className="flex h-screen flex-col items-center p-4 text-center">
+    <div className="flex h-full flex-col items-center p-4 text-center">
       <Lottie
         animationData={wipAnimation}
         loop={true}
