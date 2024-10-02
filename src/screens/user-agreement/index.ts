@@ -1,1 +1,1 @@
-export { default } from "./useragreement";
+export { default } from "./UserAgreement";
