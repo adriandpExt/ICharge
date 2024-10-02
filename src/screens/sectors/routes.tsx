@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 import Sectors from "./Sectors";
-import Hospitality from "./hospitality/Hospitality";
+import SectorPage from "./sector-pages/SectorPage";
 
 export const sectorRoutes: RouteObject[] = [
   {
@@ -8,28 +8,24 @@ export const sectorRoutes: RouteObject[] = [
     element: <Sectors />,
     children: [
       {
-        index: true,
-        element: <Hospitality />,
-      },
-      {
         path: "hospitality",
-        element: <Hospitality />,
+        element: <SectorPage title="HOSPITALITY" />,
       },
       {
         path: "transport",
-        element: <>Transport</>,
+        element: <SectorPage title="TRANSPORT" />,
       },
       {
         path: "healthcare",
-        element: <>Health Care</>,
+        element: <SectorPage title="HEALTHCARE" />,
       },
       {
         path: "events",
-        element: <>Events</>,
+        element: <SectorPage title="EVENTS" />,
       },
       {
         path: "retail",
-        element: <>Retail</>,
+        element: <SectorPage title="RETAIL" />,
       },
     ],
   },
