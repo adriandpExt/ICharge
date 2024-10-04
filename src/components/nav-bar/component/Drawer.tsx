@@ -24,26 +24,20 @@ import {
   SelectValue,
 } from "../../ui/select";
 import { SvgIcons } from "../../svg-icons";
-import i18n from "@/i18n";
+
 import { language, linkList } from "../utils";
 import { Label } from "@/components/ui/label";
 import { IconName } from "@/components/svg-icons/utils";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
 export const Drawer = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
+
+  const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
 
   const closeDrawer = () => {
     setIsOpen(false);
     window.scrollTo(0, 0);
-  };
-  const handleValueChange = (value: string) => {
-    setSelectedLanguage(value);
-    handleChangeLanguage(value);
-  };
-
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
   };
 
   const renderDrawerMenu = () => {
