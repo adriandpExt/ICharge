@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useCallback, useMemo } from "react"; // Added useCallback and useMemo
+import { Link, useNavigate } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
 import {
   Sheet,
@@ -12,7 +12,6 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "../../ui/button";
 import {
@@ -28,33 +27,45 @@ import i18n from "@/i18n";
 import { language, linkList } from "../utils";
 import { Label } from "@/components/ui/label";
 import { IconName } from "@/components/svg-icons/utils";
+import { AccordionTrigger } from "./accordion";
 
 export const Drawer = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const closeDrawer = () => {
+  const handleBackHome = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  const closeDrawer = useCallback(() => {
     setIsOpen(false);
     window.scrollTo(0, 0);
-  };
-  const handleValueChange = (value: string) => {
+  }, []);
+
+  const handleValueChange = useCallback((value: string) => {
     setSelectedLanguage(value);
-    handleChangeLanguage(value);
-  };
+    i18n.changeLanguage(value);
+  }, []);
 
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
-
-  const renderDrawerMenu = () => {
+  const renderDrawerMenu = useMemo(() => {
     return linkList.map((item, index) =>
       item.subChild && item.subChild.length > 0 ? (
-        <Accordion key={index} type="single" collapsible>
-          <AccordionItem value={`item-${index}`} className="border-b-0">
-            <AccordionTrigger className="px-4 py-2 font-[600] hover:no-underline">
+        <Accordion
+          key={index}
+          type="single"
+          collapsible
+          className="w-full rounded-lg hover:bg-[#38D430]"
+        >
+          <AccordionItem
+            value={`item-${index}`}
+            className="flex flex-col justify-between border-b-0"
+          >
+            <AccordionTrigger className="px-4 font-[600]">
+              {item.icon && <item.icon className="mr-2 text-green-500" />}{" "}
               {item.label}
             </AccordionTrigger>
-            <AccordionContent className="px-4 text-left">
+            <AccordionContent className="px-4 text-left text-white">
               <ul className="space-y-2">
                 {item.subChild.map((child, childIndex) => (
                   <li key={childIndex}>
@@ -71,40 +82,54 @@ export const Drawer = () => {
         <Button
           key={index}
           variant="ghost"
-          className="justify-start"
+          className="flex items-center justify-start rounded-xl active:bg-[#38D430]"
           onClick={closeDrawer}
         >
+          {item.icon && <item.icon className="mr-2 text-green-500" />}
           <Link to={item.path as string} className="font-poppins">
-            {item.label}
+            <Label>{item.label}</Label>
           </Link>
         </Button>
       ),
     );
-  };
+  }, [closeDrawer]);
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger>
         <Menu
-          className={`inline-flex text-white lg:hidden`}
+          className="inline-flex text-white lg:hidden"
           onClick={() => setIsOpen(true)}
         />
       </SheetTrigger>
-      <SheetContent side={"left"} className="space-y-5 bg-white">
+      <SheetContent side="left" className="bg-white">
         <SheetHeader>
-          <SheetTitle>
-            <SvgIcons name={"ic_svl_g2"} size={150} />
+          <SheetTitle
+            className="flex justify-center"
+            onClick={() => {
+              handleBackHome();
+              closeDrawer();
+            }}
+          >
+            <SvgIcons name="ic_svl_g2" size={150} />
           </SheetTitle>
 
           <div className="flex flex-col space-y-2">
-            {renderDrawerMenu()}
+            {renderDrawerMenu}
 
-            <Select onValueChange={handleValueChange} value={selectedLanguage}>
-              <SelectTrigger className="flex w-auto items-center justify-center space-x-2 whitespace-nowrap">
+            <Select
+              onValueChange={(value) => {
+                handleValueChange(value);
+                closeDrawer();
+              }}
+              value={selectedLanguage}
+            >
+              <SelectTrigger className="flex w-auto items-center justify-between space-x-5 whitespace-nowrap">
                 <SelectValue
                   placeholder={
-                    <div className="flex items-center justify-center gap-1">
-                      <Globe /> Language
+                    <div className="flex items-center gap-3">
+                      <Globe className="text-green-500" />
+                      <Label className="font-poppins">Language</Label>
                     </div>
                   }
                 />
@@ -113,7 +138,11 @@ export const Drawer = () => {
               <SelectContent className="flex flex-col items-center">
                 <SelectGroup>
                   {language.map((item) => (
-                    <SelectItem value={item.id} key={item.id}>
+                    <SelectItem
+                      value={item.id}
+                      key={item.id}
+                      onClick={closeDrawer}
+                    >
                       <div className="flex items-center">
                         <SvgIcons name={item.icons as IconName} size={30} />
                         <span className="ml-2">{item.label}</span>
