@@ -23,8 +23,8 @@ export default function FullScreenResponsiveFAQAccordion() {
 
   const faqData = t("customer.faqData", { returnObjects: true }) as Faqs[];
 
-  const [activeCategory, setActiveCategory] = useState<Faqs | null>(
-    faqData[0] || null,
+  const [activeCategory, setActiveCategory] = useState<string>(
+    t(faqData[0]?.category),
   );
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -40,11 +40,11 @@ export default function FullScreenResponsiveFAQAccordion() {
             <Button
               variant={"custombutton"}
               className={`h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg ${
-                activeCategory?.category === category.category
+                activeCategory === t(category.category)
                   ? "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e] text-white"
                   : "bg-green-100 text-gray-800 hover:bg-green-200"
               }`}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => setActiveCategory(category.category)}
             >
               {t(category.category)}
             </Button>
@@ -59,7 +59,7 @@ export default function FullScreenResponsiveFAQAccordion() {
       <div className="mb-28 h-full flex-grow px-3">
         {faqData.map(
           (category) =>
-            activeCategory?.category === category.category && (
+            activeCategory === t(category.category) && (
               <Accordion
                 key={category.category}
                 type="single"

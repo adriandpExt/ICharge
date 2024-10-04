@@ -85,16 +85,16 @@
         "category": "Pag-troubleshoot",
         "items": [
           {
-            "question": "What do I do if I cannot release a power bank from the station?",
-            "answer": "Please reach out to in-app support team and we will happily take you through the installation process and try and remedy this for you."
+            "question": "Ano ang gagawin ko kung hindi ako makapaglabas ng power bank mula sa istasyon?",
+            "answer": "Mangyaring makipag-ugnayan sa in-app na koponan ng suporta at malugod naming dadalhin ka sa proseso ng pag-install at subukan at ayusin ito para sa iyo."
           },
           {
-            "question": "What do I do if power bank does not eject but the running order starts running?",
-            "answer": "First refresh the order page and check whether the order has ended. If it\"s still running, select `Customer service` button on the running order and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end and you can proceed to start renting again."
+            "question": "Ano ang gagawin ko kung ang power bank ay hindi nag-eject ngunit ang tumatakbong order ay nagsimulang tumakbo?",
+            "answer": "I-refresh muna ang page ng order at tingnan kung natapos na ang order. Kung tumatakbo pa rin ito, piliin ang button na `Customer service` sa tumatakbong order at sundin ang sunud-sunod na mga tagubilin. (Kakailanganin mong magsumite ng malinaw na larawan na may front view ng istasyon kasama ang QR code na malinaw na nakasaad) . Matatapos ang order at maaari kang magpatuloy sa muling pagrenta."
           },
           {
-            "question": "What do I do if I already returned power bank but the order is still running?",
-            "answer": "First check and confirm the power bank is properly and fully inserted. Refresh the order page to check if order page have stopped (poor network might delay responses). If order is still running, press `Customer service`` button on the home page and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end. We will investigate and reply to you in 3 working days."
+            "question": "Ano ang gagawin ko kung naibalik ko na ang power bank ngunit tumatakbo pa rin ang order?",
+            "answer": "Suriin muna at kumpirmahin na ang power bank ay maayos at ganap na naipasok. I-refresh ang page ng order para tingnan kung huminto na ang page ng order (maaaring maantala ng mahinang network ang mga tugon). Kung tumatakbo pa rin ang order, pindutin ang `Customer service`` na button sa home page at sundin ang sunud-sunod na mga tagubilin. (Kailangan mong magsumite ng malinaw na larawan na may front view ng istasyon kasama ang QR code na malinaw na nakasaad). Matatapos na ang order. Sisiyasatin at tutugon kami sa iyo sa loob ng 3 araw ng trabaho."
           }
         ]
       },
@@ -102,20 +102,20 @@
         "category": "Mga Pagsingil at Pagbayad",
         "items": [
           {
-            "question": "How much is a power bank to rent?",
-            "answer": "Please take note that price varies depends on the location of the station. Price plan also displays after scanning station QR code."
+            "question": "Magkano ang rentahan ng power bank?",
+            "answer": "Mangyaring tandaan na ang presyo ay nag-iiba depende sa lokasyon ng istasyon. Ipinapakita rin ang plano ng presyo pagkatapos ng pag-scan ng QR code ng istasyon."
           },
           {
-            "question": "How do I check how long I have the power bank for and how much it has cost me?",
-            "answer": "This information is shown within the app as soon as you start renting the power bank. The time is shown along with the exact cost it accumulates."
+            "question": "Paano ko malalaman kung gaano katagal mayroon akong power bank at kung magkano ang halaga nito sa akin?",
+            "answer": "Ang impormasyong ito ay ipinapakita sa loob ng app sa sandaling simulan mo ang pagrenta ng power bank. Ang oras ay ipinapakita kasama ang eksaktong halaga na naipon nito."
           },
           {
-            "question": "How do I pay for the rental charges?",
-            "answer": "After logging in for the first time, you will be prompted to add a valid credit/debit card. Upon returning the power bank, rental charges will be automatically deducted from the defaulted card. Should the payment failed, an unpaid order will be shown on homepage when you login again and you will have to manually complete the payment for normal service to resume."
+            "question": "Paano ako magbabayad para sa mga singil sa pag-upa?",
+            "answer": "Pagkatapos mag-log in sa unang pagkakataon, ipo-prompt kang magdagdag ng wastong credit/debit card. Sa pagbabalik ng power bank, ang mga singil sa pag-upa ay awtomatikong ibabawas mula sa na-default na card. Kung nabigo ang pagbabayad, ang isang hindi nabayarang order ay ipapakita sa homepage kapag muli kang nag-log in at kailangan mong manu-manong kumpletuhin ang pagbabayad para sa normal na serbisyo upang maipagpatuloy."
           },
           {
-            "question": "What do I do if I am overcharged?",
-            "answer": "Please contact in-App support team and we will happily help you out."
+            "question": "Ano ang gagawin ko kung na-overcharge ako?",
+            "answer": "Mangyaring makipag-ugnayan sa in-App na koponan ng suporta at malugod naming tutulungan ka."
           }
         ]
       },
@@ -123,16 +123,16 @@
         "category": "Mga Refund at Deposito",
         "items": [
           {
-            "question": "How to refund my deposit?",
-            "answer": "1. Go to `Wallet page` , press `refund` button and submit. 2. Refund will be returned to the same bank account that you use to top up."
+            "question": "Paano i-refund ang aking deposito?",
+            "answer": "1. Pumunta sa `Wallet page` , pindutin ang `refund` na button at isumite. 2. Ibabalik ang refund sa parehong bank account na ginamit mo para mag-top up."
           },
           {
-            "question": "If I am issued a refund how long will it take?",
-            "answer": "In the case of a reversal customer won't see a refund credit on their statement— you will just see the original authorisation drop off their statement entirely after a few days. There will be no payment , and no refund. It'll appear as if the whole transaction never happened. Your bank should be able to confirm this for them. Depending on your card issuer, the original charge will disappear from pending charges 7 working days later."
+            "question": "Kung bibigyan ako ng refund gaano katagal ito?",
+            "answer": "Sa kaso ng pagbaligtad na customer ay hindi makakakita ng refund credit sa kanilang statement— makikita mo na lang ang orihinal na awtorisasyon na ibinaba ang kanilang statement nang buo pagkatapos ng ilang araw. Walang babayaran, at walang refund. Lalabas na parang hindi nangyari ang buong transaksyon. Dapat na makumpirma ito ng iyong bangko para sa kanila. Depende sa iyong nagbigay ng card, mawawala ang orihinal na singil sa mga nakabinbing singil makalipas ang 7 araw ng trabaho."
           },
           {
-            "question": "Why do I need to use my credit/debit card?",
-            "answer": "A credit/debit card is required as a form of security to encourage fair and safe usage of our services."
+            "question": "Bakit kailangan kong gamitin ang aking credit/debit card?",
+            "answer": "Ang isang credit/debit card ay kinakailangan bilang isang paraan ng seguridad upang hikayatin ang patas at ligtas na paggamit ng aming mga serbisyo."
           }
         ]
       },
@@ -141,16 +141,16 @@
         "category": "Mga Isyu sa App at Teknikal",
         "items": [
           {
-            "question": "I have not received a verification code for the app. What should I do?",
-            "answer": "This relies on your phone having enough mobile signal to receive it. You may need to step into a better signal range. Otherwise please ensure that you have entered a correct mobile number. If you are using email, please remember to check junk mail. If nothing else works, then contact in-App support team and we will help get an account setup for you."
+            "question": "Hindi ako nakatanggap ng verification code para sa app. Ano ang dapat kong gawin?",
+            "answer": "Ito ay umaasa sa iyong telepono na may sapat na mobile signal upang matanggap ito. Maaaring kailanganin mong humakbang sa mas magandang hanay ng signal. Kung hindi, pakitiyak na naglagay ka ng tamang numero ng mobile. Kung gumagamit ka ng email, mangyaring tandaan na suriin ang junk mail. Kung wala nang iba pang gumagana, pagkatapos ay makipag-ugnayan sa in-App na team ng suporta at tutulong kami sa pagkuha ng setup ng account para sa iyo."
           },
           {
-            "question": "The App is not working. What should I do?",
-            "answer": "You can first try to refresh your app. If this does not work please delete and re-install the app. If this doesn't help, contact the support team e-mail: ichargebgc@gmail.com and we will help you out!"
+            "question": "Ang App ay hindi gumagana. Ano ang dapat kong gawin?",
+            "answer": "Maaari mo munang subukang i-refresh ang iyong app. Kung hindi ito gumana mangyaring tanggalin at muling i-install ang app. Kung hindi ito makakatulong, makipag-ugnayan sa e-mail ng team ng suporta: ichargebgc@gmail.com at tutulungan ka namin!"
           },
           {
-            "question": "How do I report a faulty power bank?",
-            "answer": "Please report a faulty power bank via the app, or contact in-App support team."
+            "question": "Paano ako mag-uulat ng may sira na power bank?",
+            "answer": "Mangyaring mag-ulat ng may sira na power bank sa pamamagitan ng app, o makipag-ugnayan sa in-App support team."
           }
         ]
       },
@@ -158,20 +158,20 @@
         "category": "Paggamit ng Power Bank",
         "items": [
           {
-            "question": "What happens if I lose/don't return a power bank?",
-            "answer": "You will need to pay a penalty. The price will show in the app, If you decide not to return it you cannot withdraw your security deposit anymore."
+            "question": "Ano ang mangyayari kung mawala/hindi ako magbabalik ng power bank?",
+            "answer": "Kakailanganin mong magbayad ng multa. Ang presyo ay ipapakita sa app, Kung magpasya kang huwag ibalik ito hindi mo na maaaring bawiin ang iyong security deposit."
           },
           {
-            "question": "How do you check the charge level of the power bank?",
-            "answer": "Simply press the button on the front of the power bank and the Led indicators will reflect the level of power"
+            "question": "Paano mo suriin ang antas ng singil ng power bank?",
+            "answer": "Pindutin lang ang button sa harap ng power bank at makikita ng mga Led indicator ang antas ng kapangyarihan"
           },
           {
-            "question": "My power bank does not charge my phone, what do I do?",
-            "answer": "Make sure the cable is properly plugged into your device. We recommend you remove any thick phone case to allow the cable to go all the way in. If you still don't see a charge, return the power bank into the station and contact us via in-app support."
+            "question": "Ang aking power bank ay hindi nagcha-charge ng aking telepono, ano ang gagawin ko?",
+            "answer": "Tiyaking nakasaksak nang maayos ang cable sa iyong device. Inirerekomenda naming tanggalin mo ang anumang makapal na case ng telepono upang payagan ang cable na pumasok nang buo. Kung wala ka pa ring nakikitang charge, ibalik ang power bank sa istasyon at makipag-ugnayan sa amin sa pamamagitan ng in-app na suporta."
           },
           {
-            "question": "What happens if I rent the power bank and there is no cable?",
-            "answer": "If there is no cable present, first return the power bank and report within the app prompt. You will not be charged for this rental. Please then continue to rent another power bank."
+            "question": "Ano ang mangyayari kung nagrenta ako ng power bank at walang cable?",
+            "answer": "Kung walang cable, ibalik muna ang power bank at iulat sa prompt ng app. Hindi ka sisingilin para sa rental na ito. Mangyaring pagkatapos ay magpatuloy sa pagrenta ng isa pang power bank."
           }
         ]
       }
