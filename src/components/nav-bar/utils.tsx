@@ -50,7 +50,7 @@ export const linkList: LinkList[] = [
     path: "/partner",
     icon: Handshake,
   },
-  { label: "Sustainability", icon: Leaf, path: "/sustainability" }, // Removed the icon property
+  { label: "Sustainability", icon: Leaf, path: "/sustainability" },
   {
     label: "News",
     path: "/news",
