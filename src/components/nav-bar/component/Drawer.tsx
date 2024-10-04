@@ -1,7 +1,6 @@
-import { useState } from "react"; // Import useState
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
-
 import {
   Sheet,
   SheetContent,
@@ -15,7 +14,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
 import { Button } from "../../ui/button";
 import {
   Select,
@@ -25,18 +23,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../ui/select";
-
 import { SvgIcons } from "../../svg-icons";
-
-import { linkList } from "../utils";
+import i18n from "@/i18n";
+import { language, linkList } from "../utils";
 import { Label } from "@/components/ui/label";
+import { IconName } from "@/components/svg-icons/utils";
 
 export const Drawer = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
 
   const closeDrawer = () => {
     setIsOpen(false);
     window.scrollTo(0, 0);
+  };
+  const handleValueChange = (value: string) => {
+    setSelectedLanguage(value);
+    handleChangeLanguage(value);
+  };
+
+  const handleChangeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
   const renderDrawerMenu = () => {
@@ -92,7 +99,7 @@ export const Drawer = () => {
           <div className="flex flex-col space-y-2">
             {renderDrawerMenu()}
 
-            <Select>
+            <Select onValueChange={handleValueChange} value={selectedLanguage}>
               <SelectTrigger className="flex w-auto items-center justify-center space-x-2 whitespace-nowrap">
                 <SelectValue
                   placeholder={
@@ -104,13 +111,15 @@ export const Drawer = () => {
               </SelectTrigger>
 
               <SelectContent className="flex flex-col items-center">
-                <SelectGroup className="text-center">
-                  <SelectItem value="chinese" className="text-center">
-                    Chinese
-                  </SelectItem>
-                  <SelectItem value="english" className="text-center">
-                    English
-                  </SelectItem>
+                <SelectGroup>
+                  {language.map((item) => (
+                    <SelectItem value={item.id} key={item.id}>
+                      <div className="flex items-center">
+                        <SvgIcons name={item.icons as IconName} size={30} />
+                        <span className="ml-2">{item.label}</span>
+                      </div>
+                    </SelectItem>
+                  ))}
                 </SelectGroup>
               </SelectContent>
             </Select>

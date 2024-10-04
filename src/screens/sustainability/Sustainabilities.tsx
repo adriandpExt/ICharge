@@ -6,11 +6,14 @@ const Sustainabilities = () => {
     <section className="pt-[43vh]">
       <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
-          <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
+          <Label variant={"title"} className="text-white sm:mb-6">
             Sustainability
           </Label>
 
-          <Label className="md:text-md mb-6 text-start text-sm text-white sm:mb-8 lg:text-2xl">
+          <Label
+            variant={"subtitle"}
+            className="mb-6 text-start text-white sm:mb-8"
+          >
             At ICharge, we are all about doing business the right way. Beyond
             offering a cutting-edge power bank sharing service, we are on a
             mission to use our influence for good. Our commitment to

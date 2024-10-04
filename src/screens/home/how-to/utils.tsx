@@ -1,16 +1,11 @@
-import { ReactNode } from "react";
+import { CardItems } from "./type";
+
 import {
   Award,
   BatteryCharging,
   ScanLine,
   SlidersVertical,
 } from "lucide-react";
-
-interface CardItems {
-  title: string;
-  description: string;
-  icons: ReactNode;
-}
 
 export const cardItems: CardItems[] = [
   {

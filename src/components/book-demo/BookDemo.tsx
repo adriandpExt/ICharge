@@ -201,7 +201,7 @@ export default function BookDemoCard() {
         <Form<FormValues> forms={form} onSubmit={handleSubmit}>
           <CardHeader>
             <CardTitle>
-              <Label variant={"title"}> BOOK A DEMO</Label>
+              <Label variant={"heading1"}> BOOK A DEMO</Label>
             </CardTitle>
             <CardDescription>
               <Label variant={"default"}>What&apos;s bring you here?</Label>

@@ -11,9 +11,9 @@ const WhyICharge = () => {
 
   return (
     <PageContainer className="flex flex-col sm:px-6 lg:px-8">
-      <Label className="mb-12 text-center text-4xl sm:text-5xl lg:text-6xl">
+      <Label variant={"heading1"} className="mb-12 text-center">
         {t(LocalizationKey.home.whyIcharge)}
-        <span className="font-poppins text-4xl text-green-500 sm:text-5xl lg:text-6xl">
+        <span className="font-staatliches text-4xl font-bold text-green-500 md:text-5xl">
           I
         </span>
         Charge
@@ -32,15 +32,10 @@ const WhyICharge = () => {
             />
           </div>
           <div className="text-center sm:text-left">
-            <Label className="mb-4 block text-2xl font-semibold sm:text-3xl lg:text-4xl">
+            <Label variant="heading2" className="mb-4 block">
               Convenience
             </Label>
-            <Label
-              variant="default"
-              className="text-base sm:text-lg lg:text-xl"
-            >
-              {t(LocalizationKey.home.convenience)}
-            </Label>
+            <Label variant="body">{t(LocalizationKey.home.convenience)}</Label>
           </div>
         </div>
 
@@ -56,10 +51,10 @@ const WhyICharge = () => {
             />
           </div>
           <div className="text-center sm:text-right">
-            <Label className="mb-4 block text-2xl font-semibold sm:text-3xl lg:text-4xl">
+            <Label variant={"heading2"} className="mb-4 block">
               Cost-effective
             </Label>
-            <Label className="text-base sm:text-lg lg:text-xl">
+            <Label variant={"body"}>
               {t(LocalizationKey.home.costEffective)}
             </Label>
           </div>
@@ -77,12 +72,10 @@ const WhyICharge = () => {
             />
           </div>
           <div className="text-center sm:text-left">
-            <Label className="mb-4 block text-2xl font-semibold sm:text-3xl lg:text-4xl">
+            <Label variant={"heading2"} className="mb-4 block">
               Flexible
             </Label>
-            <Label className="text-base sm:text-lg lg:text-xl">
-              {t(LocalizationKey.home.flexible)}
-            </Label>
+            <Label variant={"body"}>{t(LocalizationKey.home.flexible)}</Label>
           </div>
         </div>
       </div>

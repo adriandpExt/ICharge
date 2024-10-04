@@ -7,16 +7,16 @@ import { Label } from "@/components/ui/label";
 import { features } from "./utils";
 
 const Partners = () => {
-  return (
-    <div className="flex h-full flex-col">
+  const banner = () => {
+    return (
       <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
         <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
-          <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
+          <Label variant="title" className="text-white sm:mb-6">
             PARTNER WITH US
           </Label>
-          <Label className="text-md mb-6 text-white sm:mb-8 lg:text-2xl">
+          <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
             ICharge is the leading brand in smartphone charging across Western
             markets. Start your scalable business venture today & begin to reap
             the rewards from providing the leading charging solution to your
@@ -31,13 +31,20 @@ const Partners = () => {
           </Button>
         </div>
       </div>
+    );
+  };
 
-      <div className="container mx-auto space-y-20 px-4 py-8">
-        <Label
-          variant={"default"}
-          className="flex flex-col text-center text-4xl font-bold"
-        >
-          WHY ICHARGE?
+  return (
+    <section className="flex h-full flex-col">
+      {banner()}
+
+      <div className="flex flex-col space-y-20 px-4 py-8">
+        <Label variant={"heading1"} className="text-center">
+          WHY
+          <span className="pl-2 font-staatliches text-4xl font-bold text-green-500 md:text-5xl">
+            I
+          </span>
+          CHARGE?
         </Label>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -57,15 +64,15 @@ const Partners = () => {
                 <CardTitle>{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">
+                <Label className="text-muted-foreground">
                   {feature.description}
-                </p>
+                </Label>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

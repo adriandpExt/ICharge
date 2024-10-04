@@ -1,13 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import LocalizationKey from "@/i18n/key";
 import { TagIcon, KeyIcon, Lock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Component() {
+  const { t } = useTranslation();
   return (
-    <div className="w-full">
+    <section className="w-full pb-32">
       <div className="container mx-auto flex flex-col p-6 md:p-12">
-        <Label className="mb-20 text-center text-2xl font-bold md:text-3xl">
-          WE OFFER SERVICES THAT FITS YOUR NEEDS
+        <Label variant={"heading1"} className="mb-20 text-center">
+          {t(LocalizationKey.home.weOfferServicesThatFitsYourNeeds)}
         </Label>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <Card className="bg-green relative border-0 bg-green-50 bg-gradient-to-b from-green-100 p-12 shadow-md">
@@ -18,7 +21,7 @@ export default function Component() {
                 <TagIcon className="h-16 w-16 text-white" />
               </div>
               <Label className="text-center text-2xl font-semibold">
-                Free Use of Equipment
+                {t(LocalizationKey.home.freeUseOfEquipment)}
               </Label>
             </CardContent>
           </Card>
@@ -32,7 +35,7 @@ export default function Component() {
                 <Lock className="h-16 w-16 text-white" />
               </div>
               <Label className="text-center text-2xl font-semibold">
-                Sale of Equipment
+                {t(LocalizationKey.home.saleOfEquipment)}
               </Label>
             </CardContent>
           </Card>
@@ -46,12 +49,12 @@ export default function Component() {
                 <KeyIcon className="h-16 w-16 text-white" />
               </div>
               <Label className="text-center text-2xl font-semibold">
-                Lease of Equipment
+                {t(LocalizationKey.home.leaseOfEquipment)}
               </Label>
             </CardContent>
           </Card>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

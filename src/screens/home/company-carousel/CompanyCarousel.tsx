@@ -1,33 +1,15 @@
-import Dunkin from "@/assets/Products/dunkin.png";
-import Ikea from "@/assets/Products/ikea.png";
-import MaryGrace from "@/assets/Products/marygrace.png";
-import AyalaMalls from "@/assets/Products/ayalamalls.png";
-import Robinsons from "@/assets/Products/robinsons.png";
-import Angkan from "@/assets/Products/angkan.png";
-import { Label } from "@/components/ui/label";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
+import AutoPlay from "embla-carousel-autoplay";
+
+import { Label } from "@/components/ui/label";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import AutoPlay from "embla-carousel-autoplay";
 
-// Logos array
-interface Logo {
-  name: string;
-  src: string;
-}
-
-const logos: Logo[] = [
-  { name: "Robinsons Malls", src: Dunkin },
-  { name: "Dunkin", src: Ikea },
-  { name: "Ayala Malls", src: MaryGrace },
-  { name: "Mary Grace", src: AyalaMalls },
-  { name: "Ikea", src: Robinsons },
-  { name: "Google", src: Angkan },
-];
+import { logos } from "./utils";
 
 export default function Component() {
   const { t } = useTranslation();
