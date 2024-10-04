@@ -13,10 +13,10 @@ const Partners = () => {
         <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
-          <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
+          <Label variant="title" className="text-white sm:mb-6">
             PARTNER WITH US
           </Label>
-          <Label className="text-md mb-6 text-white sm:mb-8 lg:text-2xl">
+          <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
             ICharge is the leading brand in smartphone charging across Western
             markets. Start your scalable business venture today & begin to reap
             the rewards from providing the leading charging solution to your
@@ -34,8 +34,8 @@ const Partners = () => {
 
       <div className="container mx-auto space-y-20 px-4 py-8">
         <Label
-          variant={"default"}
-          className="flex flex-col text-center text-4xl font-bold"
+          variant={"heading1"}
+          className="flex flex-col text-center text-4xl"
         >
           WHY ICHARGE?
         </Label>
@@ -57,9 +57,9 @@ const Partners = () => {
                 <CardTitle>{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">
+                <Label className="text-muted-foreground">
                   {feature.description}
-                </p>
+                </Label>
               </CardContent>
             </Card>
           ))}

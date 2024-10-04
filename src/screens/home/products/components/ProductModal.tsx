@@ -19,7 +19,7 @@ const ProductModal = ({ item, open, handleOpenChange }: ProdModal) => {
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
-        className="sm:max-h-md grid h-[615px] w-[90%] grid-cols-1 border-0 bg-black/25 p-20 shadow-inner shadow-green-700 lg:w-[1024px] lg:grid-cols-2"
+        className="grid h-[500px] w-[90%] grid-cols-1 overflow-hidden border-0 bg-black/25 p-20 shadow-inner shadow-green-700 sm:h-[600px] lg:w-[1024px] lg:grid-cols-2"
         style={{ borderRadius: "2.5rem" }}
       >
         <BgPolygon />

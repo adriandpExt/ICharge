@@ -25,7 +25,7 @@ export const products: Product[] = [
     },
   },
   {
-    name: "ICHARGE13",
+    name: "ICHARGE 13",
     image: Products2,
     description: "Perfect for venues with available countertop space.",
     subLabel: {
@@ -42,7 +42,7 @@ export const products: Product[] = [
     },
   },
   {
-    name: "ICHARGE12",
+    name: "ICHARGE 12",
     image: Products3,
     description: "Perfect for all venues... no countertop space? No problem!",
     subLabel: {
@@ -111,4 +111,3 @@ export const initValue: Product = {
     },
   },
 };
- 
