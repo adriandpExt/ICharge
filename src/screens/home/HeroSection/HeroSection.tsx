@@ -1,34 +1,21 @@
-// import video from "@/assets/iCharge.mov";
-
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { useState } from "react";
-import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
-import playstore from "@/assets/icons/ic_playstore_hero.svg";
+import { ArrowRight } from "lucide-react";
 import applestore from "@/assets/icons/ic_apple_hero.svg";
 import { useTranslation } from "react-i18next";
 
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+
+import playstore from "@/assets/icons/ic_playstore_hero.svg";
+
+import VideoComponent from "./VideoComponent";
+
 const HeroSection = () => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const { t } = useTranslation();
+
   return (
     <section className="grid h-[90vh] w-full place-items-center lg:grid-cols-2">
-      <video
-        muted
-        loop
-        autoPlay
-        playsInline
-        className={`absolute inset-0 h-[90vh] w-full rounded-bl-[5rem] border-b-2 border-white object-cover shadow-2xl brightness-[30%] transition-opacity duration-1000 ${
-          isVideoLoaded ? "opacity-100" : "opacity-0"
-        }`}
-        onLoadedData={() => setIsVideoLoaded(true)}
-      >
-        <source
-          src="https://joospower.com/wp-content/uploads/2023/10/Joos-Advert-final.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <VideoComponent />
 
       <div
         className="space-y-5 px-10 text-center lg:pl-52 lg:text-start"
