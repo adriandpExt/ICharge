@@ -4,9 +4,9 @@ import { TagIcon, KeyIcon, Lock } from "lucide-react";
 
 export default function Component() {
   return (
-    <div className="w-full">
+    <div className="w-full pb-32">
       <div className="container mx-auto flex flex-col p-6 md:p-12">
-        <Label className="mb-20 text-center text-2xl font-bold md:text-3xl">
+        <Label variant={"heading1"} className="mb-20 text-center">
           WE OFFER SERVICES THAT FITS YOUR NEEDS
         </Label>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

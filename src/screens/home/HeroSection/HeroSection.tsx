@@ -53,7 +53,7 @@ const HeroSection = () => {
 
         <Label
           variant={"subtitle"}
-          className="mx-auto text-sm text-white md:w-10/12 lg:mx-0 lg:text-xl"
+          className="mx-auto text-white md:w-10/12 lg:mx-0"
         >
           icharge offers a one-stop self-service mobile power bank rental
           service, providing a solution for charging your mobile devices while

@@ -124,11 +124,11 @@ export const Footer = () => {
 
         {/* Bottom section */}
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
-          <Label>&copy; 2024 Quanta Dance, Inc</Label>
+          <Label variant={"default"}>&copy; 2024 Quanta Dance, Inc</Label>
           <div className="mt-4 flex gap-4 sm:mt-0">
             {bottomLinks.map((item) => (
               <Link to={item.path} key={item.path} onClick={handleClick}>
-                <Label>{item.label}</Label>
+                <Label variant={"default"}>{item.label}</Label>
               </Link>
             ))}
           </div>

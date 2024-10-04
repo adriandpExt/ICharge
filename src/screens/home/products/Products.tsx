@@ -37,7 +37,10 @@ const Features = () => {
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
-        <Label className="text-center font-staatliches text-6xl text-black dark:text-white lg:mb-14">
+        <Label
+          variant={"heading1"}
+          className="text-center text-black dark:text-white lg:mb-14"
+        >
           PRODUCTS
         </Label>
         <Carousel
