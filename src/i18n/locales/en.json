@@ -15,7 +15,7 @@
     "flexible": {
       "label": "iCharge works to effortlessly and seamlessly integrate with a wide range of businesses and venues, offering reliable and flexible support no matter the location."
     },
-    "weOfferServicesThatFitsYourNeeds": {
+    "WeOfferServices": {
       "label": "WE OFFER SERVICES THAT FITS YOUR NEEDS"
     },
     "freeUseOfEquipment": {
@@ -26,6 +26,33 @@
     },
     "leaseOfEquipment": {
       "label": "Lease of Equipment"
+    },
+    "howtoUseIcharge": {
+      "label": "HOW TO USE ICHARGE?"
+    },
+    "scan": {
+      "label": "Scan"
+    },
+    "scanDescription": {
+      "label": "Scan QR code provided at any iCharge stations to start your rental."
+    },
+    "topUp": {
+      "label": "Top up"
+    },
+    "topUpDescription": {
+      "label": "Top up your credit using Maya and Gcash."
+    },
+    "charge": {
+      "label": "Charge"
+    },
+    "chargeDescription": {
+      "label": "Get the powerbank from the machine and charge your device whenever you want."
+    },
+    "return": {
+      "label": "Return"
+    },
+    "returnDescription": {
+      "label": "Return by inserting the powerbank in position to an empty slot at any machine near you."
     }
   },
   "customer": {

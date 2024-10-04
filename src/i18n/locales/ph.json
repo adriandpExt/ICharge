@@ -15,17 +15,44 @@
     "flexible": {
       "label": "Gumagana ang iCharge sa walang kahirap-hirap at walang putol na pagsasama sa isang malawak na hanay ng mga negosyo at lugar, na nag-aalok ng maaasahan at flexible na suporta saanman ang lokasyon."
     },
-    "WeOfferServicesThatFitsYourNeeds": {
+    "WeOfferServices": {
       "label": "NAG-aalok KAMI NG MGA SERBISYONG ANGKOP SA IYONG MGA PANGANGAILANGAN"
     },
-    "FreeUseOfEquipment": {
+    "freeUseOfEquipment": {
       "label": "Libreng Paggamit ng Kagamitan"
     },
-    "SaleOfEquipment": {
+    "saleOfEquipment": {
       "label": "Pagbebenta ng Kagamitan"
     },
-    "LeaseOfEquipment": {
+    "leaseOfEquipment": {
       "label": "Pag-upa ng Kagamitan"
+    },
+    "howtoUseIcharge": {
+      "label": "Paano Gamitin ang ICharge"
+    },
+    "scan": {
+      "label": "I-Scan"
+    },
+    "scanDescription": {
+      "label": "I-scan ang QR code na makikita sa kahit anong iCharge station upang simulan ang iyong renta."
+    },
+    "topUp": {
+      "label": "Top up"
+    },
+    "topUpDescription": {
+      "label": "I-top up ang iyong credit gamit ang Maya at Gcash."
+    },
+    "charge": {
+      "label": "I-Charge"
+    },
+    "chargeDescription": {
+      "label": "Kunin ang powerbank mula sa makina at i-charge ang iyong device kahit saan mo gusto."
+    },
+    "return": {
+      "label": "Ibalik"
+    },
+    "returnDescription": {
+      "label": "Ibalik ang powerbank sa pamamagitan ng pagpasok nito sa bakanteng slot sa alinmang makina na malapit sa iyo."
     }
   },
   "customer": {
