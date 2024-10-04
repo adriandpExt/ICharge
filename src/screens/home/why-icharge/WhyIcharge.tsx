@@ -13,7 +13,7 @@ const WhyICharge = () => {
     <PageContainer className="flex flex-col sm:px-6 lg:px-8">
       <Label variant={"heading1"} className="mb-12 text-center">
         {t(LocalizationKey.home.whyIcharge)}
-        <span className="font-poppins text-4xl text-green-500 sm:text-5xl lg:text-6xl">
+        <span className="font-staatliches text-4xl font-bold text-green-500 md:text-5xl">
           I
         </span>
         Charge

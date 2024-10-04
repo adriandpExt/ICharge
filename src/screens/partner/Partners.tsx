@@ -7,8 +7,8 @@ import { Label } from "@/components/ui/label";
 import { features } from "./utils";
 
 const Partners = () => {
-  return (
-    <div className="flex h-full flex-col">
+  const banner = () => {
+    return (
       <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
         <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
 
@@ -31,13 +31,20 @@ const Partners = () => {
           </Button>
         </div>
       </div>
+    );
+  };
 
-      <div className="container mx-auto space-y-20 px-4 py-8">
-        <Label
-          variant={"heading1"}
-          className="flex flex-col text-center text-4xl"
-        >
-          WHY ICHARGE?
+  return (
+    <section className="flex h-full flex-col">
+      {banner()}
+
+      <div className="flex flex-col space-y-20 px-4 py-8">
+        <Label variant={"heading1"} className="text-center">
+          WHY
+          <span className="pl-2 font-staatliches text-4xl font-bold text-green-500 md:text-5xl">
+            I
+          </span>
+          CHARGE?
         </Label>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -65,7 +72,7 @@ const Partners = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

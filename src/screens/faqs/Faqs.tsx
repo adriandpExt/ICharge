@@ -102,10 +102,10 @@ export default function FullScreenResponsiveFAQAccordion() {
         />
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
-          <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
+          <Label variant={"title"} className="text-white sm:mb-6">
             CUSTOMER SERVICE
           </Label>
-          <Label className="sm:text-md mb-6 text-white sm:mb-8 lg:text-2xl">
+          <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
             Use the form below to send us an email and we will respond within 12
             hours. If you need an immediate answer, our Customer Service team is
             just a click away, chat with us!
@@ -121,7 +121,10 @@ export default function FullScreenResponsiveFAQAccordion() {
       </main>
 
       <main>
-        <Label className="mb-6 flex flex-col py-10 text-center text-3xl font-bold md:text-4xl lg:mb-10 lg:text-5xl">
+        <Label
+          variant="heading1"
+          className="mb-6 flex flex-col py-10 text-center font-bold lg:mb-10"
+        >
           FREQUENTLY ASKED QUESTIONS
         </Label>
 

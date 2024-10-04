@@ -10,8 +10,11 @@ const labelVariants = cva(
     variants: {
       variant: {
         default: "font-poppins text-sm",
-        title: "font-staatliches text-6xl",
-        subtitle: "font-lexendDeca text-xl",
+        body: "font-poppins text-sm sm:text-lg lg:text-xl",
+        title: "font-staatliches text-5xl",
+        subtitle: "font-poppins text-sm lg:text-xl",
+        heading1: "font-staatliches text-4xl font-bold md:text-5xl ",
+        heading2: "font-poppins text-2xl font-semibold sm:text-3xl lg:text-4xl",
       },
     },
     defaultVariants: {
