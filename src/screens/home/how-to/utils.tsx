@@ -1,4 +1,4 @@
-import { CardItems, StepCardProps } from "./type";
+import { CardItems } from "./type";
 
 import {
   Award,
@@ -48,33 +48,3 @@ export const handleLenght = (step: number) => {
     };
   }
 };
-
-export const stepCard: Omit<StepCardProps, "currentStep" | "onClick">[] = [
-  {
-    stepNumber: 1,
-    title: "Scan",
-    description:
-      "Scan QR code provided at any icharge stations to start your rental.",
-    imgClassName: "bg-[url('@/assets/timeline1.png')]",
-  },
-  {
-    stepNumber: 2,
-    title: "Top up",
-    description: "Top up your credit using Maya and Gcash.",
-    imgClassName: "bg-[url('@/assets/timeline2.png')]",
-  },
-  {
-    stepNumber: 3,
-    title: "Charge",
-    description:
-      "Get the powerbank from the machine and charge your device whenever you want.",
-    imgClassName: "bg-[url('@/assets/timeline3.png')]",
-  },
-  {
-    stepNumber: 4,
-    title: "Return",
-    description:
-      "Return by inserting the powerbank in position to an empty slot at any machine near you.",
-    imgClassName: "bg-[url('@/assets/timeline4.png')]",
-  },
-];
