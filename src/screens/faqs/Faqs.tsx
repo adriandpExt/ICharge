@@ -1,6 +1,5 @@
 import { Faqs } from "./types";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
@@ -23,10 +22,14 @@ export default function FullScreenResponsiveFAQAccordion() {
 
   const faqData = t("customer.faqData", { returnObjects: true }) as Faqs[];
 
-  const [activeCategory, setActiveCategory] = useState<Faqs | null>(
-    faqData[0] || null,
-  );
+  const [activeCategory, setActiveCategory] = useState<Faqs | null>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (faqData.length > 0) {
+      setActiveCategory(faqData[0]);
+    }
+  }, [faqData]);
 
   const handleSetOpenIndex = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -40,7 +43,7 @@ export default function FullScreenResponsiveFAQAccordion() {
             <Button
               variant={"custombutton"}
               className={`h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg ${
-                activeCategory?.category === category.category
+                activeCategory?.category === t(category.category)
                   ? "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e] text-white"
                   : "bg-green-100 text-gray-800 hover:bg-green-200"
               }`}
@@ -59,7 +62,7 @@ export default function FullScreenResponsiveFAQAccordion() {
       <div className="mb-28 h-full flex-grow px-3">
         {faqData.map(
           (category) =>
-            activeCategory?.category === category.category && (
+            activeCategory?.category === t(category.category) && (
               <Accordion
                 key={category.category}
                 type="single"
@@ -95,6 +98,7 @@ export default function FullScreenResponsiveFAQAccordion() {
       </div>
     );
   };
+
   return (
     <section>
       <main className="col-start-1 row-start-1 grid h-[65vh] w-full place-items-center">
