@@ -9,13 +9,13 @@ const Sector = (): ReactElement => {
   return (
     <PageContainer className="flex flex-col">
       <Label
-        variant="title"
-        className="hidden text-center text-6xl dark:text-white lg:block lg:pb-14"
+        variant="heading1"
+        className="hidden text-center dark:text-white lg:block lg:pb-14"
       >
         Sectors
       </Label>
       <Filters />
-      {/* Desktop Sector */}
+
       <div className="hidden justify-center lg:flex">
         <HexGrid width={1200} height={800} viewBox="-62 -63 100 100">
           <Layout
@@ -28,7 +28,7 @@ const Sector = (): ReactElement => {
           </Layout>
         </HexGrid>
       </div>
-      {/* Mobile Sector */}
+
       <div className="flex justify-center lg:hidden">
         <SectorPolygon platform="mobile" />
       </div>

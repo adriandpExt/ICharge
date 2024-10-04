@@ -2,12 +2,12 @@ import { Faqs } from "./types";
 
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import BookDemo from "@/components/book-demo";
-
-import { faqData } from "./utils";
 
 import {
   Accordion,
@@ -19,6 +19,10 @@ import {
 import wave from "@/assets/bg_green_wave.png";
 
 export default function FullScreenResponsiveFAQAccordion() {
+  const { t } = useTranslation();
+
+  const faqData = t("customer.faqData", { returnObjects: true }) as Faqs[];
+
   const [activeCategory, setActiveCategory] = useState<Faqs | null>(
     faqData[0] || null,
   );
@@ -42,7 +46,7 @@ export default function FullScreenResponsiveFAQAccordion() {
               }`}
               onClick={() => setActiveCategory(category)}
             >
-              {category.category}
+              {t(category.category)}
             </Button>
           </Label>
         ))}
@@ -76,12 +80,12 @@ export default function FullScreenResponsiveFAQAccordion() {
                     >
                       <div className="flex w-full items-center justify-between">
                         <Label className="text-base font-semibold">
-                          {item.question}
+                          {t(item.question)}
                         </Label>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-left text-sm md:text-base lg:text-lg">
-                      <Label className="text-base">{item.answer}</Label>
+                      <Label className="text-base">{t(item.answer)}</Label>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -102,10 +106,10 @@ export default function FullScreenResponsiveFAQAccordion() {
         />
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
-          <Label className="text-3xl font-bold text-white sm:mb-6 sm:text-5xl lg:text-6xl">
+          <Label variant={"title"} className="text-white sm:mb-6">
             CUSTOMER SERVICE
           </Label>
-          <Label className="sm:text-md mb-6 text-white sm:mb-8 lg:text-2xl">
+          <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
             Use the form below to send us an email and we will respond within 12
             hours. If you need an immediate answer, our Customer Service team is
             just a click away, chat with us!
@@ -121,8 +125,11 @@ export default function FullScreenResponsiveFAQAccordion() {
       </main>
 
       <main>
-        <Label className="mb-6 flex flex-col py-10 text-center text-3xl font-bold md:text-4xl lg:mb-10 lg:text-5xl">
-          FREQUENTLY ASKED QUESTIONS
+        <Label
+          variant="heading1"
+          className="mb-6 flex flex-col py-10 text-center font-bold lg:mb-10"
+        >
+          {t(LocalizationKey.customer.heading)}
         </Label>
 
         {renderAccordionMenu()}

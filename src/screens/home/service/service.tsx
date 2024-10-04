@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next";
 export default function Component() {
   const { t } = useTranslation();
   return (
-    <div className="w-full">
+    <section className="w-full pb-32">
       <div className="container mx-auto flex flex-col p-6 md:p-12">
-        <Label className="mb-20 text-center text-2xl font-bold md:text-3xl">
+        <Label variant={"heading1"} className="mb-20 text-center">
           {t(LocalizationKey.home.weOfferServicesThatFitsYourNeeds)}
         </Label>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -55,6 +55,6 @@ export default function Component() {
           </Card>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

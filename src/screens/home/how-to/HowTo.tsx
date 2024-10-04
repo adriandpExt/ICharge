@@ -1,8 +1,10 @@
-import { useState } from "react";
 import { StepCardProps } from "./type";
+
+import { useState } from "react";
 
 import { PageContainer } from "@/components";
 import { Label } from "@/components/ui/label";
+
 import StepCard from "./components/StepCard";
 import LocalizationKey from "@/i18n/key";
 import { useTranslation } from "react-i18next";
@@ -43,7 +45,7 @@ const HowTo = () => {
       id="howToPage"
     >
       <div className="space-y-14 lg:space-y-28">
-        <Label className="font-staatliches text-6xl dark:text-white">
+        <Label variant={"heading1"} className="dark:text-white">
           {t(LocalizationKey.home.howtoUseIcharge)}
         </Label>
         <div className="mx-auto flex w-[80%] grid-cols-9 flex-col p-2 md:grid md:w-[70%]">

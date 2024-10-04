@@ -54,5 +54,127 @@
     "returnDescription": {
       "label": "Ibalik ang powerbank sa pamamagitan ng pagpasok nito sa bakanteng slot sa alinmang makina na malapit sa iyo."
     }
+  },
+  "customer": {
+    "heading": {
+      "label": "MGA MADALAS NA TANONG"
+    },
+    "faqData": [
+      {
+        "category": "Pag-upa at Pagbalik",
+        "items": [
+          {
+            "question": "Paano ako magrerenta ng power bank?",
+            "answer": "Kailangan mo munang i-download ang xxx app na available sa App Store o Google Play. Kakailanganin mong gumawa o mag-log in sa isang xxx account, na nagbibigay ng wastong mobile number o email at ilagay ang apat na digit na one-time-passcode na SMS na ipinapadala namin sa numero o email na iyon. I-tap ang \"I-scan para magrenta\" sa home screen ng app, i-scan ang QR code sa harap ng isang istasyon. Maglalabas ito ng power bank para magamit mo on the go. Kung naghahanap ka ng istasyon, galugarin ang mapa sa app."
+          },
+          {
+            "question": "Paano ko ibabalik ang power bank?",
+            "answer": "Para bumalik, itulak lang ang power bank sa isang bakanteng slot sa parehong istasyon. Itulak ito hanggang sa mag-click ito at hintayin na ipakita ng app ang iyong recap sa pagrenta — makipag-ugnayan sa in-app na suporta kung hindi."
+          },
+          {
+            "question": "Ano ang gagawin ko kung puno na ang istasyong gusto kong ibalik ang aking power bank?",
+            "answer": "Siguraduhin na ibinalik mo lang ang powerbank sa parehong istasyon na iyong nirentahan na palaging may puwang para sa bawat powerbank."
+          },
+          {
+            "question": "Ano ang gagawin ko kung walang laman ang istasyon?",
+            "answer": "Kung walang laman ang istasyon, hanapin ang susunod na malapit na istasyon sa pamamagitan ng app."
+          }
+        ]
+      },
+      {
+        "category": "Pag-troubleshoot",
+        "items": [
+          {
+            "question": "What do I do if I cannot release a power bank from the station?",
+            "answer": "Please reach out to in-app support team and we will happily take you through the installation process and try and remedy this for you."
+          },
+          {
+            "question": "What do I do if power bank does not eject but the running order starts running?",
+            "answer": "First refresh the order page and check whether the order has ended. If it\"s still running, select `Customer service` button on the running order and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end and you can proceed to start renting again."
+          },
+          {
+            "question": "What do I do if I already returned power bank but the order is still running?",
+            "answer": "First check and confirm the power bank is properly and fully inserted. Refresh the order page to check if order page have stopped (poor network might delay responses). If order is still running, press `Customer service`` button on the home page and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end. We will investigate and reply to you in 3 working days."
+          }
+        ]
+      },
+      {
+        "category": "Mga Pagsingil at Pagbayad",
+        "items": [
+          {
+            "question": "How much is a power bank to rent?",
+            "answer": "Please take note that price varies depends on the location of the station. Price plan also displays after scanning station QR code."
+          },
+          {
+            "question": "How do I check how long I have the power bank for and how much it has cost me?",
+            "answer": "This information is shown within the app as soon as you start renting the power bank. The time is shown along with the exact cost it accumulates."
+          },
+          {
+            "question": "How do I pay for the rental charges?",
+            "answer": "After logging in for the first time, you will be prompted to add a valid credit/debit card. Upon returning the power bank, rental charges will be automatically deducted from the defaulted card. Should the payment failed, an unpaid order will be shown on homepage when you login again and you will have to manually complete the payment for normal service to resume."
+          },
+          {
+            "question": "What do I do if I am overcharged?",
+            "answer": "Please contact in-App support team and we will happily help you out."
+          }
+        ]
+      },
+      {
+        "category": "Mga Refund at Deposito",
+        "items": [
+          {
+            "question": "How to refund my deposit?",
+            "answer": "1. Go to `Wallet page` , press `refund` button and submit. 2. Refund will be returned to the same bank account that you use to top up."
+          },
+          {
+            "question": "If I am issued a refund how long will it take?",
+            "answer": "In the case of a reversal customer won't see a refund credit on their statement— you will just see the original authorisation drop off their statement entirely after a few days. There will be no payment , and no refund. It'll appear as if the whole transaction never happened. Your bank should be able to confirm this for them. Depending on your card issuer, the original charge will disappear from pending charges 7 working days later."
+          },
+          {
+            "question": "Why do I need to use my credit/debit card?",
+            "answer": "A credit/debit card is required as a form of security to encourage fair and safe usage of our services."
+          }
+        ]
+      },
+
+      {
+        "category": "Mga Isyu sa App at Teknikal",
+        "items": [
+          {
+            "question": "I have not received a verification code for the app. What should I do?",
+            "answer": "This relies on your phone having enough mobile signal to receive it. You may need to step into a better signal range. Otherwise please ensure that you have entered a correct mobile number. If you are using email, please remember to check junk mail. If nothing else works, then contact in-App support team and we will help get an account setup for you."
+          },
+          {
+            "question": "The App is not working. What should I do?",
+            "answer": "You can first try to refresh your app. If this does not work please delete and re-install the app. If this doesn't help, contact the support team e-mail: ichargebgc@gmail.com and we will help you out!"
+          },
+          {
+            "question": "How do I report a faulty power bank?",
+            "answer": "Please report a faulty power bank via the app, or contact in-App support team."
+          }
+        ]
+      },
+      {
+        "category": "Paggamit ng Power Bank",
+        "items": [
+          {
+            "question": "What happens if I lose/don't return a power bank?",
+            "answer": "You will need to pay a penalty. The price will show in the app, If you decide not to return it you cannot withdraw your security deposit anymore."
+          },
+          {
+            "question": "How do you check the charge level of the power bank?",
+            "answer": "Simply press the button on the front of the power bank and the Led indicators will reflect the level of power"
+          },
+          {
+            "question": "My power bank does not charge my phone, what do I do?",
+            "answer": "Make sure the cable is properly plugged into your device. We recommend you remove any thick phone case to allow the cable to go all the way in. If you still don't see a charge, return the power bank into the station and contact us via in-app support."
+          },
+          {
+            "question": "What happens if I rent the power bank and there is no cable?",
+            "answer": "If there is no cable present, first return the power bank and report within the app prompt. You will not be charged for this rental. Please then continue to rent another power bank."
+          }
+        ]
+      }
+    ]
   }
 }

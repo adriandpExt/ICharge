@@ -1,3 +1,4 @@
+import { Label } from "@/components/ui/label";
 import { ProdModal } from "../types";
 import { Separator } from "@/components/ui/separator";
 
@@ -8,38 +9,38 @@ const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
     subLabel: { slot, size, wattage },
   } = item;
   return (
-    <div className="hidden space-y-10 py-10 lg:block">
-      <h1 className="font-sans text-7xl font-bold tracking-tighter text-white">
+    <div className="hidden space-y-10 py-10 lg:flex lg:flex-col">
+      <Label variant={"heading1"} className="tracking-wider text-white">
         {name}
-      </h1>
-      <h1 className="font-sans font-semibold text-white">{description}</h1>
+      </Label>
+      <Label className="font-semibold text-white">{description}</Label>
       <div className="flex h-fit justify-between text-center text-white">
         <Separator
           orientation="vertical"
           className="h-48 border-2 border-white"
         />
-        <div className="space-y-5">
-          <h1 className="font-sans text-xl">Slot</h1>
-          <h1 className="font-sans">{slot}</h1>
+        <div className="flex flex-col space-y-5">
+          <Label className="text-xl">Slot</Label>
+          <Label>{slot}</Label>
         </div>
         <Separator
           orientation="vertical"
           className="h-48 border-2 border-white"
         />
-        <div className="space-y-5">
-          <h1 className="font-sans text-xl">Size</h1>
-          <h1 className="font-sans">H {size.h}mm</h1>
-          <h1 className="font-sans">L {size.l}mm</h1>
-          <h1 className="font-sans">W {size.w}mm</h1>
+        <div className="flex flex-col space-y-5">
+          <Label className="text-xl">Size</Label>
+          <Label>H {size.h}mm</Label>
+          <Label>L {size.l}mm</Label>
+          <Label>W {size.w}mm</Label>
         </div>
         <Separator
           orientation="vertical"
           className="h-48 border-2 border-white"
         />
-        <div className="space-y-5">
-          <h1 className="font-sans text-xl">Wattage</h1>
-          <h1 className="font-sans">Standby {wattage.standBy}W</h1>
-          <h1 className="font-sans">Full load {wattage.fullLoad}W</h1>
+        <div className="flex flex-col space-y-5">
+          <Label className="text-xl">Wattage</Label>
+          <Label>Standby {wattage.standBy}W</Label>
+          <Label>Full load {wattage.fullLoad}W</Label>
         </div>
         <Separator
           orientation="vertical"

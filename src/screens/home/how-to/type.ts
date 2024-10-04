@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 
 export interface StepCardProps {
   stepNumber: number;
@@ -13,4 +13,10 @@ export interface HowToCardProps extends PropsWithChildren {
   imgClassName: string;
   even: boolean;
   onClick: () => void;
+}
+
+export interface CardItems {
+  title: string;
+  description: string;
+  icons: ReactNode;
 }

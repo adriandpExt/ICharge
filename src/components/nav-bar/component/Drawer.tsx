@@ -1,4 +1,4 @@
-import { useState } from "react"; // Import useState
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
 import {
