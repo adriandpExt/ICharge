@@ -2,12 +2,12 @@ import { Faqs } from "./types";
 
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import BookDemo from "@/components/book-demo";
-
-import { faqData } from "./utils";
 
 import {
   Accordion,
@@ -19,6 +19,10 @@ import {
 import wave from "@/assets/bg_green_wave.png";
 
 export default function FullScreenResponsiveFAQAccordion() {
+  const { t } = useTranslation();
+
+  const faqData = t("customer.faqData", { returnObjects: true }) as Faqs[];
+
   const [activeCategory, setActiveCategory] = useState<Faqs | null>(
     faqData[0] || null,
   );
@@ -42,7 +46,7 @@ export default function FullScreenResponsiveFAQAccordion() {
               }`}
               onClick={() => setActiveCategory(category)}
             >
-              {category.category}
+              {t(category.category)}
             </Button>
           </Label>
         ))}
@@ -76,12 +80,12 @@ export default function FullScreenResponsiveFAQAccordion() {
                     >
                       <div className="flex w-full items-center justify-between">
                         <Label className="text-base font-semibold">
-                          {item.question}
+                          {t(item.question)}
                         </Label>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-left text-sm md:text-base lg:text-lg">
-                      <Label className="text-base">{item.answer}</Label>
+                      <Label className="text-base">{t(item.answer)}</Label>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -125,7 +129,7 @@ export default function FullScreenResponsiveFAQAccordion() {
           variant="heading1"
           className="mb-6 flex flex-col py-10 text-center font-bold lg:mb-10"
         >
-          FREQUENTLY ASKED QUESTIONS
+          {t(LocalizationKey.customer.heading)}
         </Label>
 
         {renderAccordionMenu()}
