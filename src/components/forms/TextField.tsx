@@ -8,20 +8,24 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import LocalizationKey from "@/i18n/key";
 import { cn } from "@/lib/utils";
 import { FieldValues } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 interface TextFieldProps<T extends FieldValues> extends FormFieldProps<T> {
   className?: string;
 }
 
 export const TextField = <T extends FieldValues>(props: TextFieldProps<T>) => {
+  const { t } = useTranslation();
+
   const {
     control,
     name,
     label,
     className,
-    placeholder = "Please input...",
+    placeholder = t(LocalizationKey.common.textfieldPlaceholder),
   } = props;
 
   return (

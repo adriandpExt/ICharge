@@ -33,9 +33,13 @@ import {
   TextArea,
   TextField,
 } from "@/components/forms";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
 type FormValues = z.infer<typeof formSchema>;
 export default function BookDemoCard() {
+  const { t } = useTranslation();
+
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
   const handleOptionChange = (value: string) => {
@@ -102,18 +106,22 @@ export default function BookDemoCard() {
   const renderIssue = () => {
     return (
       <>
-        <TextField control={form.control} name="address" label="Address" />
+        <TextField
+          control={form.control}
+          name="address"
+          label={t(LocalizationKey.bookDemo.renderIssue.address)}
+        />
         <SelectField
           control={form.control}
           name="issue"
-          label="Issue"
+          label={t(LocalizationKey.bookDemo.renderIssue.issue)}
           options={issueLabelValue}
         />
 
         <TextArea
           control={form.control}
           name="explainIssue"
-          label="Please explain the issue"
+          label={t(LocalizationKey.bookDemo.renderIssue.explainIssue)}
         />
       </>
     );
@@ -124,25 +132,31 @@ export default function BookDemoCard() {
       <>
         <TextField
           control={form.control}
-          label="Phone Number"
+          label={t(
+            LocalizationKey.bookDemo.renderWantChargeStation.phoneNumber,
+          )}
           name="phoneNumber"
         />
 
         <TextField
           control={form.control}
-          label="Company Name"
+          label={t(
+            LocalizationKey.bookDemo.renderWantChargeStation.companyName,
+          )}
           name="companyName"
         />
 
         <RadioField
           control={form.control}
-          label="Sector"
+          label={t(LocalizationKey.bookDemo.renderWantChargeStation.sector)}
           name="sector"
           options={sector}
         />
         <TextArea
           control={form.control}
-          label="Why are you interested in ICharge?"
+          label={t(
+            LocalizationKey.bookDemo.renderWantChargeStation.interestedIcharge,
+          )}
           name="interestedIcharge"
         />
       </>
@@ -154,19 +168,21 @@ export default function BookDemoCard() {
       <>
         <TextField
           control={form.control}
-          label="Phone Number"
+          label={t(LocalizationKey.bookDemo.renderBringICharge.phoneNumber)}
           name="phoneNumber"
         />
 
         <TextField
           control={form.control}
-          label="Country/Region"
+          label={t(LocalizationKey.bookDemo.renderBringICharge.country)}
           name="country"
         />
 
         <TextArea
           control={form.control}
-          label="Additional Information"
+          label={t(
+            LocalizationKey.bookDemo.renderBringICharge.additionalInformation,
+          )}
           name="additionalInformation"
         />
       </>
@@ -201,10 +217,14 @@ export default function BookDemoCard() {
         <Form<FormValues> forms={form} onSubmit={handleSubmit}>
           <CardHeader>
             <CardTitle>
-              <Label variant={"heading1"}> BOOK A DEMO</Label>
+              <Label variant={"heading1"}>
+                {t(LocalizationKey.bookDemo.heading)}
+              </Label>
             </CardTitle>
             <CardDescription>
-              <Label variant={"default"}>What&apos;s bring you here?</Label>
+              <Label variant={"default"}>
+                {t(LocalizationKey.bookDemo.whatBringYouHere)}
+              </Label>
             </CardDescription>
           </CardHeader>
 
@@ -214,7 +234,7 @@ export default function BookDemoCard() {
                 <SelectValue
                   placeholder={
                     <Label variant={"default"} className="text-gray-500">
-                      Please Select...
+                      {t(LocalizationKey.common.selectPlaceholder)}
                     </Label>
                   }
                 />
@@ -235,26 +255,26 @@ export default function BookDemoCard() {
             <TextField
               control={form.control}
               name="firstName"
-              label="First Name"
+              label={t(LocalizationKey.bookDemo.firstname)}
             />
 
             <TextField
               control={form.control}
               name="lastName"
-              label="Last Name"
+              label={t(LocalizationKey.bookDemo.lastname)}
             />
 
-            <TextField control={form.control} name="email" label="Email" />
+            <TextField
+              control={form.control}
+              name="email"
+              label={t(LocalizationKey.bookDemo.email)}
+            />
 
             {renderDynamicFields()}
 
             <CardDescription>
               <Label variant={"default"}>
-                ICHARGE needs the contact information you provide to us to
-                contact you about our products and services. You may unsubscribe
-                from these communications at any time. For information on how to
-                unsubscribe, as well as our privacy practices and commitment to
-                protecting your privacy, please review our Privacy Policy.
+                {t(LocalizationKey.bookDemo.demoFooter)}
               </Label>
             </CardDescription>
           </CardContent>
@@ -265,7 +285,7 @@ export default function BookDemoCard() {
               variant={"default"}
               className="h-12 rounded-xl shadow-xl"
             >
-              Continue <ArrowRight />
+              {t(LocalizationKey.bookDemo.bookDemoBtn)} <ArrowRight />
             </Button>
           </CardFooter>
         </Form>
