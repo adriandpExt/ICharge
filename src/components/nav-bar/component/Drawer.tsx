@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from "react"; // Added useCallback and useMemo
+import { useState, useCallback, useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
 import {
@@ -23,17 +23,16 @@ import {
   SelectValue,
 } from "../../ui/select";
 import { SvgIcons } from "../../svg-icons";
-
 import { language, linkList } from "../utils";
 import { Label } from "@/components/ui/label";
 import { IconName } from "@/components/svg-icons/utils";
 import { AccordionTrigger } from "./accordion";
-import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher"; // Import the custom hook
 
 export const Drawer = () => {
   const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
-
   const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const navigate = useNavigate();
 
   const handleBackHome = useCallback(() => {
@@ -42,6 +41,7 @@ export const Drawer = () => {
 
   const closeDrawer = useCallback(() => {
     setIsOpen(false);
+    setActiveIndex(null);
     window.scrollTo(0, 0);
   }, []);
 
@@ -52,13 +52,16 @@ export const Drawer = () => {
           key={index}
           type="single"
           collapsible
-          className="w-full rounded-lg hover:bg-[#38D430]"
+          className={`w-full rounded-lg ${activeIndex === index ? "bg-[#38D430]" : ""}`}
         >
           <AccordionItem
             value={`item-${index}`}
             className="flex flex-col justify-between border-b-0"
           >
-            <AccordionTrigger className="px-4 font-[600]">
+            <AccordionTrigger
+              className="px-4 font-[600]"
+              onClick={() => setActiveIndex(index)}
+            >
               {item.icon && <item.icon className="mr-2 text-green-500" />}{" "}
               {item.label}
             </AccordionTrigger>
@@ -79,8 +82,13 @@ export const Drawer = () => {
         <Button
           key={index}
           variant="ghost"
-          className="flex items-center justify-start rounded-xl active:bg-[#38D430]"
-          onClick={closeDrawer}
+          className={`flex items-center justify-start rounded-xl ${
+            activeIndex === index ? "bg-[#38D430]" : ""
+          }`}
+          onClick={() => {
+            setActiveIndex(index);
+            closeDrawer();
+          }}
         >
           {item.icon && <item.icon className="mr-2 text-green-500" />}
           <Link to={item.path as string} className="font-poppins">
@@ -89,10 +97,16 @@ export const Drawer = () => {
         </Button>
       ),
     );
-  }, [closeDrawer]);
+  }, [closeDrawer, activeIndex]);
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+    <Sheet
+      open={isOpen}
+      onOpenChange={(isOpen) => {
+        setIsOpen(isOpen);
+        if (!isOpen) setActiveIndex(null);
+      }}
+    >
       <SheetTrigger>
         <Menu
           className="inline-flex text-white lg:hidden"
@@ -132,7 +146,7 @@ export const Drawer = () => {
                 />
               </SelectTrigger>
 
-              <SelectContent className="flex flex-col items-center">
+              <SelectContent className="flex flex-col items-center bg-white">
                 <SelectGroup>
                   {language.map((item) => (
                     <SelectItem
