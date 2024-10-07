@@ -1,4 +1,15 @@
 {
+  "common": {
+    "selectPlaceholder": {
+      "label": "Pumili..."
+    },
+    "textfieldPlaceholder": {
+      "label": "Paki-input..."
+    },
+    "textareaPlaceholder": {
+      "label": "Paki-input..."
+    }
+  },
   "home": {
     "companyCarousel": {
       "label": "Aming Mga Pinagkakatiwalaang Kasosyo"
@@ -258,6 +269,53 @@
     },
     "partnerWithUsSubHeading": {
       "label": "Ang ICharge ay ang nangungunang tatak sa pagsingil ng smartphone sa mga merkado sa Kanluran. Simulan ang iyong scalable business venture ngayon at magsimulang umani ng mga gantimpala mula sa pagbibigay ng nangungunang solusyon sa pagsingil sa iyong napiling market!"
+    }
+  },
+  "bookDemo": {
+    "heading": { "label": "MAG-BOOK NG DEMO" },
+    "whatBringYouHere": { "label": "Anong nagdala sayo dito?" },
+    "firstname": { "label": "Pangalan" },
+    "lastname": { "label": "Apelyido" },
+    "email": {
+      "label": "Email"
+    },
+    "renderIssue": {
+      "address": { "label": "Address" },
+      "issue": {
+        "label": "Isyu"
+      },
+      "explainIssue": {
+        "label": "Pakipaliwanag ang isyu"
+      }
+    },
+    "renderWantChargeStation": {
+      "phoneNumber": {
+        "label": "Numero ng Telepono"
+      },
+      "companyName": {
+        "label": "Company Name"
+      },
+      "sector": {
+        "label": "Sector"
+      },
+      "interestedIcharge": {
+        "label": "Bakit ka interesado sa ICharge?"
+      }
+    },
+    "renderBringICharge": {
+      "phoneNumber": { "label": "Numero ng Telepono" },
+      "country": {
+        "label": "Bansa"
+      },
+      "additionalInformation": {
+        "label": "Karagdagang Impormasyon"
+      }
+    },
+    "demoFooter": {
+      "label": "Kailangan ng ICHARGE ang impormasyon sa pakikipag-ugnayan na ibinigay mo sa amin upang makipag-ugnayan sa iyo tungkol sa aming mga produkto at serbisyo. Maaari kang mag-unsubscribe sa mga komunikasyong ito anumang oras. Para sa impormasyon sa kung paano mag-unsubscribe, pati na rin ang aming mga kasanayan sa privacy at pangako sa pagprotekta sa iyong privacy, mangyaring suriin ang aming Patakaran sa Privacy."
+    },
+    "bookDemoBtn": {
+      "label": "Susunod"
     }
   }
 }
