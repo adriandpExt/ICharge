@@ -51,15 +51,18 @@ export const Footer = () => {
             </div>
           </div>
 
-          <SectionItem links={platformLinks} title="Platforms" />
+          <SectionItem
+            links={platformLinks}
+            title={t(LocalizationKey.footer.platforms)}
+          />
           <SectionItem
             links={aboutLinks}
-            title="About Us"
+            title={t(LocalizationKey.footer.aboutUs)}
             onClick={handleClick}
           />
           <SectionItem
             links={companyLinks}
-            title="Company"
+            title={t(LocalizationKey.footer.company)}
             onClick={handleClick}
           />
 
@@ -103,7 +106,7 @@ export const Footer = () => {
                   <img
                     loading="lazy"
                     src={playstore}
-                    alt={t(LocalizationKey.footer.googlePlay)}
+                    alt="playstore"
                     width={180.32}
                     height={48.72}
                   />
@@ -115,7 +118,7 @@ export const Footer = () => {
                   <img
                     loading="lazy"
                     src={applestore}
-                    alt={t(LocalizationKey.footer.appStore)}
+                    alt="applestore"
                     width={180.32}
                     height={48.72}
                   />

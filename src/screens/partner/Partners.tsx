@@ -5,8 +5,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 
 import { features } from "./utils";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
 const Partners = () => {
+  const { t } = useTranslation();
   const banner = () => {
     return (
       <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
@@ -14,19 +17,16 @@ const Partners = () => {
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
           <Label variant="title" className="text-white sm:mb-6">
-            PARTNER WITH US
+            {t(LocalizationKey.partnerWithUs.partnerWithUsHeading)}
           </Label>
           <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
-            ICharge is the leading brand in smartphone charging across Western
-            markets. Start your scalable business venture today & begin to reap
-            the rewards from providing the leading charging solution to your
-            chosen market!
+            {t(LocalizationKey.partnerWithUs.partnerWithUsSubHeading)}
           </Label>
           <Button
             variant={"custombutton"}
             className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
           >
-            Inquire
+            {t(LocalizationKey.partnerWithUs.inquire)}
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>

@@ -84,7 +84,7 @@
       "label": "Sundan Kami"
     },
     "platforms": {
-      "label": "Aming Mga Plataporma"
+      "label": "Mga Plataporma"
     },
     "aboutUs": {
       "label": "Tungkol sa Amin"
@@ -127,6 +127,15 @@
   "customer": {
     "heading": {
       "label": "MGA MADALAS NA TANONG"
+    },
+    "customerService": {
+      "label": "SERBISYO NG CUSTOMER"
+    },
+    "customerServicesubHeading": {
+      "label": "Gamitin ang form sa ibaba para magpadala sa amin ng email at tutugon kami sa loob ng 12 oras. Kung kailangan mo ng agarang sagot, isang click lang ang aming Customer Service team, makipag-chat sa amin!"
+    },
+    "chatWithUs": {
+      "label": "Makipagchat sa Amin"
     },
     "faqData": [
       {
@@ -245,6 +254,25 @@
         ]
       }
     ]
+  },
+  "sustainability": {
+    "sustainabilityHeading": {
+      "label": "Sustainability"
+    },
+    "sustainabilitySubHeading": {
+      "label": "Sa ICharge, lahat tayo ay tungkol sa paggawa ng negosyo sa tamang paraan. Higit pa sa pag-aalok ng isang makabagong serbisyo sa pagbabahagi ng power bank, kami ay nasa isang misyon na gamitin ang aming impluwensya para sa kabutihan. Ang aming pangako sa pagpapanatili ay hindi lamang isang tagline; ito ay tungkol sa pagtiyak na pinapatakbo natin ang mga bagay nang responsable at etikal sa ating pang-araw-araw na operasyon."
+    }
+  },
+  "partnerWithUs": {
+    "partnerWithUsHeading": {
+      "label": "PARTNER SA AMIN"
+    },
+    "partnerWithUsSubHeading": {
+      "label": "Ang ICharge ay ang nangungunang tatak sa pagsingil ng smartphone sa mga merkado sa Kanluran. Simulan ang iyong scalable business venture ngayon at magsimulang umani ng mga gantimpala mula sa pagbibigay ng nangungunang solusyon sa pagsingil sa iyong napiling market!"
+    },
+    "inquire": {
+      "label": "Magtanong"
+    }
   },
   "bookDemo": {
     "heading": { "label": "MAG-BOOK NG DEMO" },
