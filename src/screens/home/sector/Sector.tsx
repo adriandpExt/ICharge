@@ -4,15 +4,18 @@ import { ReactElement } from "react";
 import { HexGrid, Layout } from "react-hexgrid";
 import SectorPolygon from "./component/SectorPolygon";
 import Filters from "./component/Filters";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
 const Sector = (): ReactElement => {
+  const { t } = useTranslation();
   return (
     <PageContainer className="flex flex-col">
       <Label
         variant="heading1"
         className="hidden text-center dark:text-white lg:block lg:pb-14"
       >
-        Sectors
+        {t(LocalizationKey.home.sectors)}
       </Label>
       <Filters />
 

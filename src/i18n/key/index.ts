@@ -1,6 +1,8 @@
 const LocalizationKey = {
   home: {
     companyCarousel: "home.companyCarousel.label",
+    ichargeSubheader: "home.ichargeSubheader.label",
+    ichargeContinue: "home.ichargeContinue.label",
     whyIcharge: "home.whyIcharge.label",
     convenience: "home.convenience.label",
     costEffective: "home.costEffective.label",
@@ -18,6 +20,8 @@ const LocalizationKey = {
     chargeDescription: "home.chargeDescription.label",
     return: "home.return.label",
     returnDescription: "home.returnDescription.label",
+    products: "home.products.label",
+    sectors: "home.sectors.label",
   },
   customer: {
     heading: "customer.heading.label",
@@ -28,6 +32,21 @@ const LocalizationKey = {
     refundsAndDeposits: "customer.refundsAndDeposits.label",
     appAndTechnicalIssues: "customer.appAndTechnicalIssues.label",
     powerbankUsage: "customer.powerbankUsage.label",
+  },
+  footer: {
+    followUs: "footer.followUs.label",
+    platforms: "footer.platforms.label",
+    aboutUs: "footer.aboutUs.label",
+    company: "footer.company.label",
+    stayInTheLoop: "footer.stayInTheLoop.label",
+    joinNewsletter: "footer.joinNewsletter.label",
+    emailPlaceholder: "footer.emailPlaceholder.label",
+    subscribe: "footer.subscribe.label",
+    downloadApp: "footer.downloadApp.label",
+    googlePlay: "footer.googlePlay.label",
+    appStore: "footer.appStore.label",
+    copyright: "footer.copyright.label",
+    partnerWithUs: "footer.partnerWithUs.label",
   },
 };
 

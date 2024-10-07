@@ -3,6 +3,12 @@
     "companyCarousel": {
       "label": "Our Trusted Partners"
     },
+    "ichargeSubheader": {
+      "label": "icharge offers a one-stop self-service mobile power bank rental service, providing a solution for charging your mobile devices while on the go."
+    },
+    "ichargeContinue": {
+      "label": "Continue"
+    },
     "whyIcharge": {
       "label": "WHY "
     },
@@ -53,8 +59,67 @@
     },
     "returnDescription": {
       "label": "Return by inserting the powerbank in position to an empty slot at any machine near you."
+    },
+    "products": {
+      "label": "Products"
+    },
+    "sectors": {
+      "label": "Sectors"
     }
   },
+
+  "footer": {
+    "followUs": {
+      "label": "Follow Us"
+    },
+    "platforms": {
+      "label": "Our Platforms"
+    },
+    "aboutUs": {
+      "label": "About Us"
+    },
+    "company": {
+      "label": "Company"
+    },
+    "stayInTheLoop": {
+      "label": "Stay in the loop with everything you need to know."
+    },
+
+    "contactUs": {
+      "label": "Contact Us"
+    },
+
+    "joinNewsletter": {
+      "label": "Join our Newsletter"
+    },
+
+    "privacyPolicy": {
+      "label": "Privacy Policy"
+    },
+    "termsOfService": {
+      "label": "Terms of Service"
+    },
+    "downloadApp": {
+      "label": "Download the App"
+    },
+
+    "newsletter": {
+      "label": "Subscribe to our Newsletter"
+    },
+    "emailPlaceholder": {
+      "label": "Enter your Email..."
+    },
+    "subscribe": {
+      "label": "Subscribe"
+    },
+    "copyright": {
+      "label": "2024 Quanta Dance, Inc"
+    },
+    "rightsReserved": {
+      "label": "All Rights Reserved."
+    }
+  },
+
   "customer": {
     "heading": {
       "label": "FREQUENTLY ASKED QUESTIONS"

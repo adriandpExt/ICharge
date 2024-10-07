@@ -3,6 +3,12 @@
     "companyCarousel": {
       "label": "Aming Mga Pinagkakatiwalaang Kasosyo"
     },
+    "ichargeSubheader": {
+      "label": "Nag-aalok ang icharge ng one-stop self-service mobile power bank rental service, na nagbibigay ng solusyon sa pag-charge ng iyong mga mobile device habang on the go."
+    },
+    "ichargeContinue": {
+      "label": "Magpatuloy"
+    },
     "whyIcharge": {
       "label": "BAKIT "
     },
@@ -53,8 +59,60 @@
     },
     "returnDescription": {
       "label": "Ibalik ang powerbank sa pamamagitan ng pagpasok nito sa bakanteng slot sa alinmang makina na malapit sa iyo."
+    },
+    "products": {
+      "label": "Produkto"
+    },
+    "sectors": {
+      "label": "Sektor"
     }
   },
+
+  "footer": {
+    "followUs": {
+      "label": "Sundan Kami"
+    },
+    "platforms": {
+      "label": "Aming Mga Plataporma"
+    },
+    "aboutUs": {
+      "label": "Tungkol sa Amin"
+    },
+    "company": {
+      "label": "Kumpanya"
+    },
+    "stayInTheLoop": {
+      "label": "Manatiling updated sa lahat ng kailangan mong malaman."
+    },
+    "contactUs": {
+      "label": "Makipag-ugnayan sa Amin"
+    },
+    "joinNewsletter": {
+      "label": "Sumali sa aming Newsletter"
+    },
+    "privacyPolicy": {
+      "label": "Patakaran sa Pagkapribado"
+    },
+    "termsOfService": {
+      "label": "Mga Tuntunin ng Serbisyo"
+    },
+    "downloadApp": {
+      "label": "I-download ang App"
+    },
+    "newsletter": {
+      "label": "Mag-subscribe sa aming Newsletter"
+    },
+    "emailPlaceholder": {
+      "label": "Ilagay ang Email..."
+    },
+    "subscribe": {
+      "label": "subscribe"
+    },
+    "rightsReserved": {
+      "label": "Lahat ng Karapatan ay Nakalaan."
+    }
+  },
+
   "customer": {
     "heading": {
       "label": "MGA MADALAS NA TANONG"
