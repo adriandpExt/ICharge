@@ -15,7 +15,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import LocalizationKey from "@/i18n/key";
 import { FieldValues } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 interface SelectFieldProps<T extends FieldValues> extends FormFieldProps<T> {
   options: LabelValue[];
@@ -24,6 +26,8 @@ export const SelectField = <T extends FieldValues>(
   props: SelectFieldProps<T>,
 ) => {
   const { control, name, label, options } = props;
+
+  const { t } = useTranslation();
 
   return (
     <FormField
@@ -37,7 +41,9 @@ export const SelectField = <T extends FieldValues>(
               <SelectTrigger className="w-full border-white bg-gray-200">
                 <SelectValue
                   placeholder={
-                    <Label className="text-gray-500">Please Select...</Label>
+                    <Label className="text-gray-500">
+                      {t(LocalizationKey.common.selectPlaceholder)}
+                    </Label>
                   }
                 />
               </SelectTrigger>

@@ -6,34 +6,42 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import ProductModal from "./components/ProductModal";
-
+import ProductModal from "./components/ProductModal"; // Make sure this component exists and is functioning
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { initValue, products } from "./utils";
 import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
 import SvgIcons from "@/components/svg-icons/SvgIcons";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
 const Features = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState<Product>(initValue);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Function to handle opening the modal and passing product data
   const handleOpen = (e: { stopPropagation: () => void }, item: Product) => {
     e.stopPropagation();
-    setContent(item);
-    setOpen(true);
+    setContent(item); // Set the current product content
+    setOpen(true); // Open the modal
   };
+
   const handleOpenChange = () => {
-    setOpen((open) => !open);
+    setOpen(false); // Close the modal
   };
+
   const handleCarouselChange = (index: number) => {
-    setCurrentIndex(index);
+    setCurrentIndex(index); // Update the current carousel index
   };
+
   const carouselItemDarkTop =
     "dark:border-t-2 dark:border-green-400 dark:bg-[#2E3935] shadow-inner dark:shadow-[#414141]";
   const carouselItemDarkBottom =
     "dark:border-b-2 dark:border-green-400 dark:bg-[#194B21]/50 dark:shadow-green-400";
+
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
       <div className="container mx-auto flex flex-col place-items-center">
@@ -41,7 +49,7 @@ const Features = () => {
           variant={"heading1"}
           className="text-center text-black dark:text-white lg:mb-14"
         >
-          PRODUCTS
+          {t(LocalizationKey.home.products)}
         </Label>
         <Carousel
           opts={{ align: "center" }}
@@ -122,15 +130,19 @@ const Features = () => {
           {products.map((_, index) => (
             <div
               key={index}
-              className={`mx-2 h-3 w-3 cursor-pointer rounded-full ${currentIndex === index ? "bg-opacity-100" : "bg-opacity-25"} bg-green-500`}
+              className={`mx-2 h-3 w-3 cursor-pointer rounded-full ${
+                currentIndex === index ? "bg-opacity-100" : "bg-opacity-25"
+              } bg-green-500`}
               onClick={() => setCurrentIndex(index)}
             />
           ))}
         </div>
+
+        {/* Product Modal Component */}
         <ProductModal
           item={content}
           open={open}
-          handleOpenChange={handleOpenChange}
+          handleOpenChange={handleOpenChange} // Ensure this properly closes the modal
         />
       </div>
     </section>

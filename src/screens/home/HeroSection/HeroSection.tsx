@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import playstore from "@/assets/icons/ic_playstore_hero.svg";
 
 import VideoComponent from "./VideoComponent";
+import LocalizationKey from "@/i18n/key";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -55,9 +56,7 @@ const HeroSection = () => {
           variant={"subtitle"}
           className="mx-auto text-white md:w-10/12 lg:mx-0"
         >
-          icharge offers a one-stop self-service mobile power bank rental
-          service, providing a solution for charging your mobile devices while
-          on the go.
+          {t(LocalizationKey.home.ichargeSubheader)}
         </Label>
 
         <div className="items-center space-y-4 lg:w-48">
@@ -70,7 +69,7 @@ const HeroSection = () => {
                 "radial-gradient(circle, rgba(90, 255, 82, 0.2) 0%, rgba(6, 108, 1, 0.4) 100%)",
             }}
           >
-            Continue <ArrowRight />
+            {t(LocalizationKey.home.ichargeContinue)} <ArrowRight />
           </Button>
           <div className="flex items-center justify-center lg:block lg:space-y-2">
             <Link

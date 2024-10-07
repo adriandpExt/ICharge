@@ -1,5 +1,5 @@
-import { ReactElement, useState } from "react";
-import i18n from "@/i18n";
+import { ReactElement } from "react";
+
 import { Globe } from "lucide-react";
 
 import useScroll from "@/hooks/useScroll";
@@ -17,17 +17,10 @@ import { SvgIcons } from "../../svg-icons";
 import { language } from "../utils";
 import { IconName } from "../../svg-icons/utils";
 
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+
 export const Language = (): ReactElement => {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
-
-  const handleValueChange = (value: string) => {
-    setSelectedLanguage(value);
-    handleChangeLanguage(value);
-  };
-
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+  const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
 
   const isScroll = useScroll(window.innerHeight);
 
