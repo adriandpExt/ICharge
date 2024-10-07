@@ -48,6 +48,7 @@ const LocalizationKey = {
   partnerWithUs: {
     partnerWithUsHeading: "partnerWithUs.partnerWithUsHeading.label",
     partnerWithUsSubHeading: "partnerWithUs.partnerWithUsSubHeading.label",
+    inquire: "partnerWithUs.inquire.label",
   },
   footer: {
     followUs: "footer.followUs.label",

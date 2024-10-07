@@ -26,7 +26,7 @@ const Partners = () => {
             variant={"custombutton"}
             className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
           >
-            Inquire
+            {t(LocalizationKey.partnerWithUs.inquire)}
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
