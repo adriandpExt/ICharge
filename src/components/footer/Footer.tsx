@@ -15,25 +15,26 @@ import { IconName } from "../svg-icons/utils";
 import { Label } from "@/components/ui/label";
 import { ArrowRight } from "lucide-react";
 import SectionItem from "./SectionItem";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
-
   return (
     <footer className="bg-customGreen p-6 text-white md:p-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-6">
-          {/* Logo and social media */}
           <div className="col-span-1 hidden md:col-span-2 md:flex lg:col-span-1">
             <SvgIcons name="ic_footer_logo" size={200} />
           </div>
+
           <div>
-            {/* Follow Us */}
             <div>
               <Label className="mb-4 flex text-xl font-semibold">
-                {renderItems.follow.title}
+                {t(LocalizationKey.footer.followUs)}
               </Label>
               <div className="flex space-x-4">
                 {renderItems.follow.items.map((item) => (
@@ -65,31 +66,33 @@ export const Footer = () => {
           {/* Newsletter */}
           <div className="col-span-1 text-center md:col-span-2 lg:col-span-1 lg:text-start">
             <Label className="mb-4 text-2xl font-bold">
-              Stay in the loop with everything you need to know.
+              {t(LocalizationKey.footer.stayInTheLoop)}
             </Label>
             <div>
-              <Label className="mb-4">Join our newsletter</Label>
+              <Label className="mb-4">
+                {t(LocalizationKey.footer.joinNewsletter)}
+              </Label>
             </div>
 
             <div className="flex flex-col gap-2 sm:flex-row">
               <div className="flex flex-grow items-center">
                 <Input
                   type="email"
-                  placeholder="Enter your email..."
+                  placeholder={t(LocalizationKey.footer.emailPlaceholder)}
                   className="flex-grow border-white bg-green-900 text-white placeholder:text-xs"
                 />
                 <Button
                   variant="default"
                   className="ml-2 w-24 rounded-xl bg-[#38D430]"
                 >
-                  Subscribe <ArrowRight />
+                  {t(LocalizationKey.footer.subscribe)} <ArrowRight />
                 </Button>
               </div>
             </div>
 
             <div className="mt-5 grid grid-cols-1 place-items-center lg:text-start">
               <Label className="mb-1 text-left text-xl font-semibold">
-                Download the App
+                {t(LocalizationKey.footer.downloadApp)}
               </Label>
               <div className="flex">
                 <Link
@@ -100,7 +103,7 @@ export const Footer = () => {
                   <img
                     loading="lazy"
                     src={playstore}
-                    alt="Google Play"
+                    alt={t(LocalizationKey.footer.googlePlay)}
                     width={180.32}
                     height={48.72}
                   />
@@ -112,7 +115,7 @@ export const Footer = () => {
                   <img
                     loading="lazy"
                     src={applestore}
-                    alt="App Store"
+                    alt={t(LocalizationKey.footer.appStore)}
                     width={180.32}
                     height={48.72}
                   />
@@ -124,11 +127,13 @@ export const Footer = () => {
 
         {/* Bottom section */}
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
-          <Label variant={"default"}>&copy; 2024 Quanta Dance, Inc</Label>
+          <Label variant={"default"}>
+            {t(LocalizationKey.footer.copyright)}
+          </Label>
           <div className="mt-4 flex gap-4 sm:mt-0">
             {bottomLinks.map((item) => (
               <Link to={item.path} key={item.path} onClick={handleClick}>
-                <Label variant={"default"}>{item.label}</Label>
+                <Label variant={"default"}>{t(item.label)}</Label>
               </Link>
             ))}
           </div>
