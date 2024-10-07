@@ -107,18 +107,16 @@ export default function FullScreenResponsiveFAQAccordion() {
 
         <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
           <Label variant={"title"} className="text-white sm:mb-6">
-            CUSTOMER SERVICE
+            {t(LocalizationKey.customer.customerService)}
           </Label>
           <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
-            Use the form below to send us an email and we will respond within 12
-            hours. If you need an immediate answer, our Customer Service team is
-            just a click away, chat with us!
+            {t(LocalizationKey.customer.customerServicesubHeading)}
           </Label>
           <Button
             variant={"custombutton"}
             className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
           >
-            Chat with Us
+            {t(LocalizationKey.customer.chatWithUs)}
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>

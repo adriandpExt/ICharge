@@ -1,24 +1,24 @@
 import { Label } from "@/components/ui/label";
 import SustainablityCard from "./component/SustainablityCard";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
 const Sustainabilities = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="pt-[43vh]">
       <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
         <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
           <Label variant={"title"} className="text-white sm:mb-6">
-            Sustainability
+            {t(LocalizationKey.sustainability.sustainabilityHeading)}
           </Label>
 
           <Label
             variant={"subtitle"}
             className="mb-6 text-start text-white sm:mb-8"
           >
-            At ICharge, we are all about doing business the right way. Beyond
-            offering a cutting-edge power bank sharing service, we are on a
-            mission to use our influence for good. Our commitment to
-            sustainability is not just a tagline; it's about making sure we run
-            things responsibly and ethically in our day-to-day operations.
+            {t(LocalizationKey.sustainability.sustainabilitySubHeading)}
           </Label>
         </div>
       </main>

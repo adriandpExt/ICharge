@@ -24,6 +24,9 @@ const LocalizationKey = {
     sectors: "home.sectors.label",
   },
   customer: {
+    customerService: "customer.customerService.label",
+    customerServicesubHeading: "customer.customerServicesubHeading.label",
+    chatWithUs: "customer.chatWithUs.label",
     heading: "customer.heading.label",
     rentingAndReturning: "customer.rentingAndReturning.label",
     faqData: "customer.faqData",
@@ -32,6 +35,14 @@ const LocalizationKey = {
     refundsAndDeposits: "customer.refundsAndDeposits.label",
     appAndTechnicalIssues: "customer.appAndTechnicalIssues.label",
     powerbankUsage: "customer.powerbankUsage.label",
+  },
+  sustainability: {
+    sustainabilityHeading: "sustainability.sustainabilityHeading.label",
+    sustainabilitySubHeading: "sustainability.sustainabilitySubHeading.label",
+  },
+  partnerWithUs: {
+    partnerWithUsHeading: "partnerWithUs.partnerWithUsHeading.label",
+    partnerWithUsSubHeading: "partnerWithUs.partnerWithUsSubHeading.label",
   },
   footer: {
     followUs: "footer.followUs.label",
