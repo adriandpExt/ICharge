@@ -65,7 +65,7 @@ export const Drawer = () => {
             >
               {item.icon && (
                 <item.icon
-                  className={`mr-2 ${activeIndex === index && "data-[state=open]:text-white"}`}
+                  className={`mr-2 ${activeIndex === index ? "data-[state=open]:text-white" : "text-green-500"}`}
                 />
               )}
               {item.label}
