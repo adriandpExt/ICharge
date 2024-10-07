@@ -1,6 +1,9 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
+
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+
 import {
   Sheet,
   SheetContent,
@@ -12,8 +15,9 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "../../ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -21,56 +25,49 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../ui/select";
-import { SvgIcons } from "../../svg-icons";
-import { language, linkList } from "../utils";
+} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+
 import { IconName } from "@/components/svg-icons/utils";
-import { AccordionTrigger } from "./accordion";
-import useLanguageSwitcher from "@/hooks/useLanguageSwitcher"; // Import the custom hook
+import { SvgIcons } from "@/components/svg-icons";
+
+import { language, linkList } from "../utils";
 
 export const Drawer = () => {
   const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
   const [isOpen, setIsOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleBackHome = useCallback(() => {
+  const handleBackHome = () => {
+    closeDrawer();
     navigate("/");
-  }, [navigate]);
+  };
 
-  const closeDrawer = useCallback(() => {
+  const closeDrawer = () => {
     setIsOpen(false);
-    setActiveIndex(null);
     window.scrollTo(0, 0);
-  }, []);
+  };
 
   const renderDrawerMenu = () => {
     return linkList.map((item, index) =>
       item.subChild && item.subChild.length > 0 ? (
-        <Accordion
-          key={index}
-          type="single"
-          collapsible
-          className={`w-full rounded-xl py-1 ${activeIndex === index && "bg-[#38D430]"}`}
-        >
+        <Accordion key={index} type="single" collapsible>
           <AccordionItem
             value={`item-${index}`}
             className="flex flex-col justify-between border-b-0"
           >
-            <AccordionTrigger
-              className="h-8 px-4 font-[600] data-[state=open]:text-white"
-              onClick={() => setActiveIndex(index)}
-            >
+            <AccordionTrigger className="group h-8 border-none px-4 font-[600] hover:no-underline data-[state=open]:rounded-tl-xl data-[state=open]:rounded-tr-xl data-[state=open]:bg-[#38D430] data-[state=open]:text-white">
               {item.icon && (
                 <item.icon
-                  className={`mr-2 ${activeIndex === index ? "data-[state=open]:text-white" : "text-green-500"}`}
+                  id="sector"
+                  className="mr-2 group-data-[state=closed]:text-green-500 group-data-[state=open]:text-white"
                 />
               )}
               {item.label}
             </AccordionTrigger>
-            <AccordionContent className="px-4 text-left text-white">
+            <AccordionContent className="rounded-bl-xl rounded-br-xl border-none bg-[#38D430] px-4 text-left text-white">
               <ul className="space-y-2">
                 {item.subChild.map((child, childIndex) => (
                   <li key={childIndex} className="ml-8">
@@ -90,10 +87,7 @@ export const Drawer = () => {
           className={`flex items-center justify-start rounded-xl ${
             location.pathname === item.path && "bg-[#38D430]"
           }`}
-          onClick={() => {
-            setActiveIndex(index);
-            closeDrawer();
-          }}
+          onClick={closeDrawer}
         >
           {item.icon && (
             <item.icon
@@ -117,7 +111,6 @@ export const Drawer = () => {
       open={isOpen}
       onOpenChange={(isOpen) => {
         setIsOpen(isOpen);
-        if (!isOpen) setActiveIndex(null);
       }}
     >
       <SheetTrigger>
@@ -128,13 +121,7 @@ export const Drawer = () => {
       </SheetTrigger>
       <SheetContent side="left" className="bg-white">
         <SheetHeader>
-          <SheetTitle
-            className="flex justify-center"
-            onClick={() => {
-              handleBackHome();
-              closeDrawer();
-            }}
-          >
+          <SheetTitle className="flex justify-center" onClick={handleBackHome}>
             <SvgIcons name="ic_svl_g2" size={150} />
           </SheetTitle>
 
@@ -162,11 +149,7 @@ export const Drawer = () => {
               <SelectContent className="flex flex-col items-center bg-white">
                 <SelectGroup>
                   {language.map((item) => (
-                    <SelectItem
-                      value={item.id}
-                      key={item.id}
-                      onClick={closeDrawer}
-                    >
+                    <SelectItem value={item.id} key={item.id}>
                       <div className="flex items-center">
                         <SvgIcons name={item.icons as IconName} size={30} />
                         <span className="ml-2 font-poppins">{item.label}</span>
