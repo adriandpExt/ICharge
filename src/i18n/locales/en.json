@@ -135,8 +135,17 @@
     "heading": {
       "label": "FREQUENTLY ASKED QUESTIONS"
     },
+    "customerService": {
+      "label": "CUSTOMER SERVICE"
+    },
+    "customerServicesubHeading": {
+      "label": "Use the form below to send us an email and we will respond within 12 hours. If you need an immediate answer, our Customer Service team is just a click away, chat with us!"
+    },
     "rentingAndReturning": {
       "label": "Renting and Returning"
+    },
+    "chatWithUs": {
+      "label": "Chat With Us"
     },
     "faqData": [
       {
@@ -255,6 +264,26 @@
         ]
       }
     ]
+  },
+
+  "sustainability": {
+    "sustainabilityHeading": {
+      "label": "Sustainability"
+    },
+    "sustainabilitySubHeading": {
+      "label": "At ICharge, we are all about doing business the right way. Beyond offering a cutting-edge power bank sharing service, we are on a mission to use our influence for good. Our commitment to sustainability is not just a tagline; it's about making sure we run things responsibly and ethically in our day-to-day operations."
+    }
+  },
+  "partnerWithUs": {
+    "partnerWithUsHeading": {
+      "label": "PARTNER WITH US"
+    },
+    "partnerWithUsSubHeading": {
+      "label": "ICharge is the leading brand in smartphone charging across Western markets. Start your scalable business venture today & begin to reap the rewards from providing the leading charging solution to your chosen market!"
+    },
+    "inquire": {
+      "label": "Inquire"
+    }
   },
   "bookDemo": {
     "heading": { "label": "BOOK A DEMO" },
