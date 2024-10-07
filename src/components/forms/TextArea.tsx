@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/form";
 import { Textarea as ShadTextArea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
 interface TextAreaProps<T extends FieldValues> extends FormFieldProps<T> {
   className?: string;
@@ -18,6 +20,7 @@ interface TextAreaProps<T extends FieldValues> extends FormFieldProps<T> {
 
 export const TextArea = <T extends FieldValues>(props: TextAreaProps<T>) => {
   const { control, name, label, className } = props;
+  const { t } = useTranslation();
   return (
     <FormField
       control={control}
@@ -34,7 +37,7 @@ export const TextArea = <T extends FieldValues>(props: TextAreaProps<T>) => {
                 ),
                 className)
               }
-              placeholder="Please Input..."
+              placeholder={t(LocalizationKey.common.textareaPlaceholder)}
             />
           </FormControl>
           <FormMessage />

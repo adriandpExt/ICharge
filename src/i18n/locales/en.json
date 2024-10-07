@@ -1,4 +1,15 @@
 {
+  "common": {
+    "selectPlaceholder": {
+      "label": "Please Select..."
+    },
+    "textfieldPlaceholder": {
+      "label": "Please Input..."
+    },
+    "textareaPlaceholder": {
+      "label": "Please Input..."
+    }
+  },
   "home": {
     "companyCarousel": {
       "label": "Our Trusted Partners"
@@ -244,5 +255,52 @@
         ]
       }
     ]
+  },
+  "bookDemo": {
+    "heading": { "label": "BOOK A DEMO" },
+    "whatBringYouHere": { "label": "What's bring you here?" },
+    "firstname": { "label": "First Name" },
+    "lastname": { "label": "Last Name" },
+    "email": {
+      "label": "Email"
+    },
+    "renderIssue": {
+      "address": { "label": "Address" },
+      "issue": {
+        "label": "Issue"
+      },
+      "explainIssue": {
+        "label": "Please explain the issue"
+      }
+    },
+    "renderWantChargeStation": {
+      "phoneNumber": {
+        "label": "Phone Number"
+      },
+      "companyName": {
+        "label": "Company Name"
+      },
+      "sector": {
+        "label": "Sector"
+      },
+      "interestedIcharge": {
+        "label": "Why are you interested in ICharge?"
+      }
+    },
+    "renderBringICharge": {
+      "phoneNumber": { "label": "Phone Number" },
+      "country": {
+        "label": "Country"
+      },
+      "additionalInformation": {
+        "label": "Additional Information"
+      }
+    },
+    "demoFooter": {
+      "label": "ICHARGE needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our Privacy Policy."
+    },
+    "bookDemoBtn": {
+      "label": "Continue"
+    }
   }
 }

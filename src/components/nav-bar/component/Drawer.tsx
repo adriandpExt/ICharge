@@ -1,5 +1,5 @@
-import { useState, useCallback, useMemo } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useCallback } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Globe, Menu } from "lucide-react";
 import {
   Sheet,
@@ -34,6 +34,7 @@ export const Drawer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleBackHome = useCallback(() => {
     navigate("/");
@@ -45,30 +46,34 @@ export const Drawer = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const renderDrawerMenu = useMemo(() => {
+  const renderDrawerMenu = () => {
     return linkList.map((item, index) =>
       item.subChild && item.subChild.length > 0 ? (
         <Accordion
           key={index}
           type="single"
           collapsible
-          className={`w-full rounded-lg ${activeIndex === index ? "bg-[#38D430]" : ""}`}
+          className={`w-full rounded-xl py-1 ${activeIndex === index && "bg-[#38D430]"}`}
         >
           <AccordionItem
             value={`item-${index}`}
             className="flex flex-col justify-between border-b-0"
           >
             <AccordionTrigger
-              className="px-4 font-[600]"
+              className="h-8 px-4 font-[600] data-[state=open]:text-white"
               onClick={() => setActiveIndex(index)}
             >
-              {item.icon && <item.icon className="mr-2 text-green-500" />}{" "}
+              {item.icon && (
+                <item.icon
+                  className={`mr-2 ${activeIndex === index ? "data-[state=open]:text-white" : "text-green-500"}`}
+                />
+              )}
               {item.label}
             </AccordionTrigger>
             <AccordionContent className="px-4 text-left text-white">
               <ul className="space-y-2">
                 {item.subChild.map((child, childIndex) => (
-                  <li key={childIndex}>
+                  <li key={childIndex} className="ml-8">
                     <Link to={child.path as string} onClick={closeDrawer}>
                       <Label>{child.label}</Label>
                     </Link>
@@ -83,21 +88,29 @@ export const Drawer = () => {
           key={index}
           variant="ghost"
           className={`flex items-center justify-start rounded-xl ${
-            activeIndex === index ? "bg-[#38D430]" : ""
+            location.pathname === item.path && "bg-[#38D430]"
           }`}
           onClick={() => {
             setActiveIndex(index);
             closeDrawer();
           }}
         >
-          {item.icon && <item.icon className="mr-2 text-green-500" />}
+          {item.icon && (
+            <item.icon
+              className={`mr-2 text-green-500 ${location.pathname === item.path && "text-white"}`}
+            />
+          )}
           <Link to={item.path as string} className="font-poppins">
-            <Label>{item.label}</Label>
+            <Label
+              className={`${location.pathname === item.path && "text-white"}`}
+            >
+              {item.label}
+            </Label>
           </Link>
         </Button>
       ),
     );
-  }, [closeDrawer, activeIndex]);
+  };
 
   return (
     <Sheet
@@ -126,7 +139,7 @@ export const Drawer = () => {
           </SheetTitle>
 
           <div className="flex flex-col space-y-2">
-            {renderDrawerMenu}
+            {renderDrawerMenu()}
 
             <Select
               onValueChange={(value) => {
@@ -156,7 +169,7 @@ export const Drawer = () => {
                     >
                       <div className="flex items-center">
                         <SvgIcons name={item.icons as IconName} size={30} />
-                        <span className="ml-2">{item.label}</span>
+                        <span className="ml-2 font-poppins">{item.label}</span>
                       </div>
                     </SelectItem>
                   ))}
