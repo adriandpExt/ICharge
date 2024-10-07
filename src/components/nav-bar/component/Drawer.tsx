@@ -23,14 +23,14 @@ import {
   SelectValue,
 } from "../../ui/select";
 import { SvgIcons } from "../../svg-icons";
-import i18n from "@/i18n";
 import { language, linkList } from "../utils";
 import { Label } from "@/components/ui/label";
 import { IconName } from "@/components/svg-icons/utils";
 import { AccordionTrigger } from "./accordion";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher"; // Import the custom hook
 
 export const Drawer = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
+  const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const navigate = useNavigate();
@@ -43,11 +43,6 @@ export const Drawer = () => {
     setIsOpen(false);
     setActiveIndex(null);
     window.scrollTo(0, 0);
-  }, []);
-
-  const handleValueChange = useCallback((value: string) => {
-    setSelectedLanguage(value);
-    i18n.changeLanguage(value);
   }, []);
 
   const renderDrawerMenu = useMemo(() => {
