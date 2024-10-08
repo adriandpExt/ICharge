@@ -16,8 +16,6 @@ import {
   AccordionTrigger,
 } from "./component/accordion";
 
-import wave from "@/assets/bg_green_wave.png";
-
 export default function FullScreenResponsiveFAQAccordion() {
   const { t } = useTranslation();
 
@@ -96,22 +94,20 @@ export default function FullScreenResponsiveFAQAccordion() {
     );
   };
   return (
-    <section>
-      <main className="col-start-1 row-start-1 grid h-[65vh] w-full place-items-center">
-        <img
-          loading="lazy"
-          src={wave}
-          alt="wave"
-          className="col-start-1 row-start-1 grid h-[65vh] w-full bg-cover bg-bottom bg-no-repeat brightness-[30%]"
-        />
-
-        <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
+    <section className="pt-[43vh]">
+      <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
           <Label variant={"title"} className="text-white sm:mb-6">
             {t(LocalizationKey.customer.customerService)}
           </Label>
-          <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
+
+          <Label
+            variant={"subtitle"}
+            className="mb-6 text-start text-white sm:mb-8"
+          >
             {t(LocalizationKey.customer.customerServicesubHeading)}
           </Label>
+
           <Button
             variant={"custombutton"}
             className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
@@ -122,7 +118,7 @@ export default function FullScreenResponsiveFAQAccordion() {
         </div>
       </main>
 
-      <main>
+      <main className="px-4 pb-8 pt-10">
         <Label
           variant="heading1"
           className="mb-6 flex flex-col py-10 text-center font-bold lg:mb-10"
