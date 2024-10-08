@@ -10,14 +10,14 @@ const Header = ({ title }: Omit<FeatureCardProps, "description">) => {
     <div className="h-[65vh]">
       <img
         src={banner}
-        className="absolute -z-50 h-[65vh] w-full rounded-bl-[5rem] bg-no-repeat object-cover brightness-50"
+        className="absolute -z-50 h-[65vh] w-full rounded-bl-[5rem] bg-no-repeat object-cover brightness-50 top-0"
       />
-      <div className="absolute h-[65vh] w-full rounded-bl-[5rem] bg-gradient-to-b from-black/85 via-black/25 to-black/25 -z-40" />
-      <PageContainer>
+      <div className="absolute h-[65vh] w-full rounded-bl-[5rem] bg-gradient-to-b from-black/85 via-black/25 to-black/25 -z-40 top-0" />
+      <PageContainer className="md:-mt-20 -mt-16">
         <div className="flex h-full flex-col justify-center space-y-5 md:w-[50%]">
           <Label
             variant="title"
-            className="text-5xl tracking-wide text-white md:text-9xl"
+            className="text-5xl tracking-wide text-white md:text-7xl"
           >
             {title}
           </Label>
