@@ -115,6 +115,7 @@ export const Drawer = () => {
     >
       <SheetTrigger>
         <Menu
+          size={30}
           className="inline-flex text-white lg:hidden"
           onClick={() => setIsOpen(true)}
         />

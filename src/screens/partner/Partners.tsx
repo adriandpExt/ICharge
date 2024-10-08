@@ -12,16 +12,19 @@ const Partners = () => {
   const { t } = useTranslation();
   const banner = () => {
     return (
-      <div className="col-start-1 row-start-1 grid h-[50vh] w-full place-items-center border-b-2 border-white">
-        <div className="col-start-1 row-start-1 grid h-full w-full bg-[url('@/assets/man-using-smartphone.png')] bg-cover bg-bottom bg-no-repeat brightness-[30%]" />
-
-        <div className="container z-10 col-start-1 row-start-1 mx-auto flex flex-col items-center space-y-2 p-2 px-4 py-8">
-          <Label variant="title" className="text-white sm:mb-6">
+      <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
+        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
+          <Label variant={"title"} className="text-white sm:mb-6">
             {t(LocalizationKey.partnerWithUs.partnerWithUsHeading)}
           </Label>
-          <Label variant={"subtitle"} className="mb-6 text-white sm:mb-8">
+
+          <Label
+            variant={"subtitle"}
+            className="mb-6 text-start text-white sm:mb-8"
+          >
             {t(LocalizationKey.partnerWithUs.partnerWithUsSubHeading)}
           </Label>
+
           <Button
             variant={"custombutton"}
             className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
@@ -30,15 +33,15 @@ const Partners = () => {
             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
-      </div>
+      </main>
     );
   };
 
   return (
-    <section className="flex h-full flex-col">
+    <section className="pt-[43vh]">
       {banner()}
 
-      <div className="flex flex-col space-y-20 px-4 py-8">
+      <div className="flex flex-col space-y-20 px-4 pb-8 pt-20">
         <Label variant={"heading1"} className="text-center">
           WHY
           <span className="pl-2 font-staatliches text-4xl font-bold text-green-500 md:text-5xl">

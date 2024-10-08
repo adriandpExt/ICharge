@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-light-react";
 import { Home } from "lucide-react";
 
-import wipAnimation from "@/assets/wip.json";
+import wipAnimation from "@/assets/lottie/wip.json";
 
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";

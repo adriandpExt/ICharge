@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 
 const SustainablityCard = (): ReactElement => {
   return (
-    <Card className="h-[full] w-full rounded-xl border-0 bg-gradient-to-b from-[#495742] via-[#999999] to-[#999999] p-8">
+    <Card className="h-full w-full rounded-xl border-0 bg-gradient-to-b from-[#495742] to-transparent p-8">
       <div className="h-full rounded-xl border-4 border-green-300 p-5">
         <CardHeader className="flex flex-col items-center justify-center">
           <SvgIcons name="ic_lock" size={80} />
