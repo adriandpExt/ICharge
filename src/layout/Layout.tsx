@@ -23,7 +23,9 @@ const Layout = ({ children }: PropsWithChildren) => {
 
       <div className="relative z-10">
         <NavBar />
+
         <main>{children}</main>
+
         <CookieAlert />
         <Footer />
       </div>

@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { lazy } from "react";
 
 import App from "@/App";
 
@@ -6,15 +7,19 @@ import ErrorScreen from "@/screens/error-screen";
 
 import { sectorRoutes } from "@/screens/sectors/routes";
 
-import Home from "@/screens/home";
-import Sustainabilities from "@/screens/sustainability";
-import News from "@/screens/news/News";
-import Faqs from "@/screens/faqs";
-import TermsAndConditions from "@/screens/terms-and-conditions";
-import Partners from "@/screens/partner/Partners";
-import UserAgreements from "@/screens/user-agreement/UserAgreements";
-import Privacies from "@/screens/privacy/Privacies";
-import Cookie from "@/screens/cookies/Cookie";
+export const Home = lazy(() => import("@/screens/home"));
+export const Sustainabilities = lazy(() => import("@/screens/sustainability"));
+export const News = lazy(() => import("@/screens/news/News"));
+export const Faqs = lazy(() => import("@/screens/faqs"));
+export const TermsAndConditions = lazy(
+  () => import("@/screens/terms-and-conditions"),
+);
+export const Partners = lazy(() => import("@/screens/partner/Partners"));
+export const UserAgreements = lazy(
+  () => import("@/screens/user-agreement/UserAgreements"),
+);
+export const Privacies = lazy(() => import("@/screens/privacy/Privacies"));
+export const Cookie = lazy(() => import("@/screens/cookies/Cookie"));
 
 const router: RouteObject[] = [
   {
