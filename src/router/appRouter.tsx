@@ -8,8 +8,6 @@ import ErrorScreen from "@/screens/error-screen";
 import { sectorRoutes } from "@/screens/sectors/routes";
 
 export const Home = lazy(() => import("@/screens/home"));
-export const Sustainabilities = lazy(() => import("@/screens/sustainability"));
-export const News = lazy(() => import("@/screens/news/News"));
 export const Faqs = lazy(() => import("@/screens/faqs"));
 export const TermsAndConditions = lazy(
   () => import("@/screens/terms-and-conditions"),
@@ -33,8 +31,7 @@ const router: RouteObject[] = [
       },
       ...sectorRoutes,
       { path: "partner", element: <Partners /> },
-      { path: "sustainability", element: <Sustainabilities /> },
-      { path: "news", element: <News /> },
+
       { path: "customer-service", element: <>Customer service</> },
       {
         path: "faqs",
