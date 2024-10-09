@@ -1,17 +1,6 @@
-import { RouteObject } from "react-router-dom";
-import { Building2, Handshake, Leaf, Newspaper, Phone } from "lucide-react";
+import { LinkList } from "./type";
 
-interface SubChild extends Omit<RouteObject, "children"> {
-  label: string;
-  icon: string;
-  sublabel: string;
-}
-
-interface LinkList extends Omit<RouteObject, "children"> {
-  label: string;
-  icon?: React.ElementType;
-  subChild?: SubChild[];
-}
+import { Building2, Handshake, Phone } from "lucide-react";
 
 export const linkList: LinkList[] = [
   {
@@ -56,12 +45,7 @@ export const linkList: LinkList[] = [
     path: "/partner",
     icon: Handshake,
   },
-  { label: "Sustainability", icon: Leaf, path: "/sustainability" },
-  {
-    label: "News",
-    path: "/news",
-    icon: Newspaper,
-  },
+
   { label: "Customer Service", path: "/faqs", icon: Phone },
 ];
 
