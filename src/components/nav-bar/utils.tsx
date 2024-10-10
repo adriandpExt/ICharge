@@ -4,16 +4,15 @@ import { Handshake, Phone } from "lucide-react";
 
 export const linkList: LinkList[] = [
   {
+    label: "Partners With Us",
+    path: "/partner",
+    icon: Handshake,
+  },
+  {
     label: "Services",
     path: "/services",
     icon: Phone,
   },
-  {
-    label: "Partners",
-    path: "/partner",
-    icon: Handshake,
-  },
-
   { label: "About", path: "/about" },
 ];
 

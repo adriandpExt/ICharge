@@ -110,7 +110,7 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:backdrop-blur-none ${location.pathname === "/news" && "bg-gradient-to-t from-[#055c00] to-[#022700]"} ${
+      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:backdrop-blur-none ${location.pathname !== "/" && "bg-gradient-to-t from-[#055c00] to-[#022700]"} ${
         isScroll &&
         "border-b-[1px] bg-gradient-to-t from-[#055c00] to-[#022700]"
       } `}
