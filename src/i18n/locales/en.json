@@ -51,25 +51,25 @@
       "label": "Scan"
     },
     "scanDescription": {
-      "label": "Scan QR code provided at any iCharge stations to start your rental."
+      "label": "Scan the QR code at any iCharge station to rent and download the app."
     },
     "topUp": {
       "label": "Top up"
     },
     "topUpDescription": {
-      "label": "Top up your credit using Maya and Gcash."
+      "label": "Top up your credit using Maya, GCash, Alipay, Grab Pay, WeChat Pay, BDO and UnionBank."
     },
     "charge": {
       "label": "Charge"
     },
     "chargeDescription": {
-      "label": "Get the powerbank from the machine and charge your device whenever you want."
+      "label": "Grab the power bank and charge your device anywhere."
     },
     "return": {
       "label": "Return"
     },
     "returnDescription": {
-      "label": "Return by inserting the powerbank in position to an empty slot at any machine near you."
+      "label": "Insert the power bank to any iCharge Station, pay the rental fee."
     },
     "products": {
       "label": "Products"
