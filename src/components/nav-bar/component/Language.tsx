@@ -40,7 +40,7 @@ export const Language = (): ReactElement => {
             <SelectItem value={item.id} key={item.id}>
               <div className="flex items-center">
                 <SvgIcons name={item.icons as IconName} size={30} />
-                <span className="ml-2 font-poppins">{item.label}</span>
+                <span className="ml-2 font-poppins">{item.label}asdsa</span>
               </div>
             </SelectItem>
           ))}
