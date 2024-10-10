@@ -5,14 +5,14 @@ import App from "@/App";
 
 import ErrorScreen from "@/screens/error-screen";
 
-import { sectorRoutes } from "@/screens/sectors/routes";
-
+export const About = lazy(() => import("@/screens/about"));
+export const Services = lazy(() => import("@/screens/services"));
 export const Home = lazy(() => import("@/screens/home"));
 export const Faqs = lazy(() => import("@/screens/faqs"));
 export const TermsAndConditions = lazy(
   () => import("@/screens/terms-and-conditions"),
 );
-export const Partners = lazy(() => import("@/screens/partner/Partners"));
+export const Partners = lazy(() => import("@/screens/partner-with-us"));
 export const UserAgreements = lazy(
   () => import("@/screens/user-agreement/UserAgreements"),
 );
@@ -29,10 +29,10 @@ const router: RouteObject[] = [
         index: true,
         element: <Home />,
       },
-      ...sectorRoutes,
+      // ...sectorRoutes,
       { path: "partner", element: <Partners /> },
-      { path: "services", element: <>SERVICES</> },
-      { path: "about", element: <>Customer service</> },
+      { path: "services", element: <Services /> },
+      { path: "about", element: <About /> },
       {
         path: "faqs",
         element: <Faqs />,
