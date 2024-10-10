@@ -122,8 +122,8 @@ export const NavBar = () => {
       {renderNavigation()}
 
       <div className="flex items-center">
-        <Drawer />
         <Language />
+        <Drawer />
       </div>
     </header>
   );
