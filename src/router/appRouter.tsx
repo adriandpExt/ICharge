@@ -31,8 +31,8 @@ const router: RouteObject[] = [
       },
       ...sectorRoutes,
       { path: "partner", element: <Partners /> },
-
-      { path: "customer-service", element: <>Customer service</> },
+      { path: "services", element: <>SERVICES</> },
+      { path: "about", element: <>Customer service</> },
       {
         path: "faqs",
         element: <Faqs />,
