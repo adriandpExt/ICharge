@@ -4,3 +4,4 @@ export * from "./svg-icons";
 export * from "./page-container";
 export * from "./forms";
 export * from "./spinner";
+export * from "./floating-button";

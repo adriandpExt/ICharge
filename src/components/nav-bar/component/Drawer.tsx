@@ -59,7 +59,7 @@ export const Drawer = () => {
             value={`item-${index}`}
             className="flex flex-col justify-between border-b-0"
           >
-            <AccordionTrigger className="group h-8 border-none px-4 font-[600] hover:no-underline data-[state=open]:rounded-tl-xl data-[state=open]:rounded-tr-xl data-[state=open]:bg-[#38D430] data-[state=open]:text-white">
+            <AccordionTrigger className="group h-8 w-full border-none px-4 font-[600] hover:no-underline data-[state=open]:rounded-tl-xl data-[state=open]:rounded-tr-xl data-[state=open]:bg-[#38D430] data-[state=open]:text-white">
               {item.icon && (
                 <item.icon
                   id="sector"
@@ -138,7 +138,7 @@ export const Drawer = () => {
               }}
               value={selectedLanguage}
             >
-              <SelectTrigger className="group flex w-auto items-center justify-between space-x-5 whitespace-nowrap rounded-b-none rounded-t-xl border-0 shadow-none data-[state=open]:bg-[#38D430] data-[state=open]:text-white data-[state=open]:fade-in-35">
+              <SelectTrigger className="group flex w-full items-center justify-between space-x-5 whitespace-nowrap rounded-b-none rounded-t-xl border-0 shadow-none data-[state=open]:bg-[#38D430] data-[state=open]:text-white data-[state=open]:fade-in-35">
                 <SelectValue
                   placeholder={
                     <div className="flex items-center gap-3">

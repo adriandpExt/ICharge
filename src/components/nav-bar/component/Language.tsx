@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 import { Globe } from "lucide-react";
 
-import useScroll from "@/hooks/useScroll";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
 import {
   Select,
@@ -12,40 +12,35 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../ui/select";
+import { Label } from "@/components/ui/label";
 
 import { SvgIcons } from "../../svg-icons";
 import { language } from "../utils";
 import { IconName } from "../../svg-icons/utils";
 
-import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-
 export const Language = (): ReactElement => {
   const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
 
-  const isScroll = useScroll(window.innerHeight);
-
   return (
     <Select onValueChange={handleValueChange} value={selectedLanguage}>
-      <SelectTrigger
-        className={`hidden w-auto items-center justify-start space-x-2 whitespace-nowrap lg:flex ${
-          isScroll ? "text-black" : "text-white"
-        }`}
-      >
+      <SelectTrigger className="hidden w-36 items-center justify-between space-x-5 whitespace-nowrap rounded-b-none rounded-t-xl border-0 text-white shadow-none data-[state=open]:bg-[#38D430] data-[state=open]:fade-in-35 lg:flex [&>svg]:text-white">
         <SelectValue
           placeholder={
-            <div className="flex items-center gap-1">
-              <Globe />
+            <div className="flex items-center gap-3">
+              <Globe className="text-white" />
+              <Label>Language</Label>
             </div>
           }
         />
       </SelectTrigger>
-      <SelectContent className={`${isScroll ? "text-black" : "text-white"}`}>
+
+      <SelectContent className="-mt-1 flex flex-col items-center rounded-b-xl rounded-t-none border-0 bg-[#38D430] text-white transition-all data-[state=close]:animate-accordion-up data-[state=open]:animate-accordion-down">
         <SelectGroup>
           {language.map((item) => (
             <SelectItem value={item.id} key={item.id}>
               <div className="flex items-center">
                 <SvgIcons name={item.icons as IconName} size={30} />
-                <span className="ml-2">{item.label}</span>
+                <span className="ml-2 font-poppins">{item.label}</span>
               </div>
             </SelectItem>
           ))}
