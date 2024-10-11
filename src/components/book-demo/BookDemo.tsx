@@ -214,7 +214,7 @@ export default function BookDemoCard() {
           </div>
         </div>
 
-        <Form<FormValues> forms={form} onSubmit={handleSubmit}>
+        <Form forms={form} onSubmit={handleSubmit}>
           <CardHeader>
             <CardTitle>
               <Label variant={"heading1"}>
