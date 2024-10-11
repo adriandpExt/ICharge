@@ -1,7 +1,5 @@
 import { ReactElement } from "react";
-
 import { Globe } from "lucide-react";
-
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
 import {
@@ -13,7 +11,6 @@ import {
   SelectValue,
 } from "../../ui/select";
 import { Label } from "@/components/ui/label";
-
 import { SvgIcons } from "../../svg-icons";
 import { language } from "../utils";
 import { IconName } from "../../svg-icons/utils";
@@ -28,7 +25,8 @@ export const Language = (): ReactElement => {
           placeholder={
             <div className="flex items-center gap-3">
               <Globe className="text-white" />
-              <Label>Language</Label>
+
+              <Label className="max-w-[100px] truncate">Language</Label>
             </div>
           }
         />
@@ -40,7 +38,10 @@ export const Language = (): ReactElement => {
             <SelectItem value={item.id} key={item.id}>
               <div className="flex items-center">
                 <SvgIcons name={item.icons as IconName} size={30} />
-                <span className="ml-2 font-poppins">{item.label}</span>
+
+                <span className="ml-2 max-w-[150px] truncate font-poppins">
+                  {item.label}
+                </span>
               </div>
             </SelectItem>
           ))}

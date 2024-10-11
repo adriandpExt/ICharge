@@ -1,0 +1,185 @@
+{
+  "common": {
+    "selectPlaceholder": {
+      "label": "請選擇..."
+    },
+    "textfieldPlaceholder": {
+      "label": "請輸入..."
+    },
+    "textareaPlaceholder": {
+      "label": "請輸入..."
+    }
+  },
+  "home": {
+    "companyCarousel": {
+      "label": "我們的信賴夥伴"
+    },
+    "ichargeSubheader": {
+      "label": "iCharge 提供一站式的自助行動電源租賃服務，為您的行動設備提供隨時隨地的充電解決方案。"
+    },
+    "ichargeContinue": {
+      "label": "繼續"
+    },
+    "whyIcharge": {
+      "label": "為什麼選擇"
+    },
+    "convenience": {
+      "label": "租借行動電源提升了您地點的便利性，這可能會增加人流，並延長及增加訪客的次數。"
+    },
+    "costEffective": {
+      "label": "每 30 分鐘僅需 19 菲律賓披索的低廉費用，鼓勵顧客停留更長時間，享受更多場所提供的服務，從而提升整體顧客滿意度。"
+    },
+    "flexible": {
+      "label": "iCharge 無縫整合於各種企業和場所，無論在哪裡都能提供可靠且靈活的支持。"
+    },
+    "WeOfferServices": {
+      "label": "我們提供符合您需求的服務"
+    },
+    "freeUseOfEquipment": {
+      "label": "設備免費使用"
+    },
+    "saleOfEquipment": {
+      "label": "設備銷售"
+    },
+    "leaseOfEquipment": {
+      "label": "設備租賃"
+    },
+    "howtoUseIcharge": {
+      "label": "如何使用 iCharge？"
+    },
+    "scan": {
+      "label": "掃描"
+    },
+    "scanDescription": {
+      "label": "在任一 iCharge 站點掃描 QR 碼以開始租賃。"
+    },
+    "topUp": {
+      "label": "充值"
+    },
+    "topUpDescription": {
+      "label": "使用 Maya 和 Gcash 充值。"
+    },
+    "charge": {
+      "label": "充電"
+    },
+    "chargeDescription": {
+      "label": "從機器中取出行動電源，隨時為您的設備充電。"
+    },
+    "return": {
+      "label": "歸還"
+    },
+    "returnDescription": {
+      "label": "將行動電源插入任一空槽以歸還。"
+    },
+    "products": {
+      "label": "產品"
+    },
+    "sectors": {
+      "label": "行業"
+    }
+  },
+  "footer": {
+    "followUs": {
+      "label": "關注我們"
+    },
+    "platforms": {
+      "label": "我們的平台"
+    },
+    "aboutUs": {
+      "label": "關於我們"
+    },
+    "company": {
+      "label": "公司"
+    },
+    "stayInTheLoop": {
+      "label": "隨時了解最新資訊。"
+    },
+    "contactUs": {
+      "label": "聯絡我們"
+    },
+    "joinNewsletter": {
+      "label": "訂閱我們的電子報"
+    },
+    "privacyPolicy": {
+      "label": "隱私政策"
+    },
+    "termsOfService": {
+      "label": "服務條款"
+    },
+    "downloadApp": {
+      "label": "下載應用程序"
+    },
+    "newsletter": {
+      "label": "訂閱我們的電子報"
+    },
+    "emailPlaceholder": {
+      "label": "輸入您的電子郵件..."
+    },
+    "subscribe": {
+      "label": "訂閱"
+    },
+    "copyright": {
+      "label": "2024 Quanta Dance, Inc"
+    },
+    "rightsReserved": {
+      "label": "保留所有權利。"
+    }
+  },
+  "customer": {
+    "heading": {
+      "label": "常見問題"
+    },
+    "customerService": {
+      "label": "客服"
+    },
+    "customerServicesubHeading": {
+      "label": "使用下方的表格發送電子郵件，我們將在 12 小時內回覆您。如果需要立即解答，我們的客服團隊隨時為您服務，與我們聊天！"
+    },
+    "rentingAndReturning": {
+      "label": "租借與歸還"
+    },
+    "chatWithUs": {
+      "label": "與我們聊天"
+    },
+    "faqData": [
+      {
+        "category": "租借與歸還",
+        "items": [
+          {
+            "question": "我該如何租借行動電源？",
+            "answer": "您必須先下載 xxx 應用程序，該應用可在 App Store 或 Google Play 上獲取。您需要創建或登錄 xxx 帳戶，提供有效的手機號碼或電子郵件，並輸入我們發送到該號碼或郵件的四位數一次性密碼。 在應用程序主屏幕點擊“掃描租借”，掃描站點前的 QR 碼，這將釋放一個行動電源供您使用。 如果您需要尋找站點，請在應用程序中探索地圖。"
+          },
+          {
+            "question": "我該如何歸還行動電源？",
+            "answer": "要歸還，只需將行動電源完全插入同一站點中的空槽，推到卡扣並等待應用顯示您的租賃總結 — 如果未顯示，請聯繫應用內支持。"
+          }
+        ]
+      },
+      {
+        "category": "故障排除",
+        "items": [
+          {
+            "question": "我無法從站點釋放行動電源該怎麼辦？",
+            "answer": "請聯繫應用內支持團隊，我們將很高興為您指導安裝過程並嘗試解決這個問題。"
+          }
+        ]
+      }
+    ]
+  },
+  "sustainability": {
+    "sustainabilityHeading": {
+      "label": "可持續發展"
+    },
+    "sustainabilitySubHeading": {
+      "label": "在 iCharge，我們致力於正確地經營業務。不僅提供最先進的行動電源共享服務，我們的使命是用影響力做出好事。我們對可持續發展的承諾不僅僅是一句標語，而是確保我們每天的運營負責任且合乎道德。"
+    }
+  },
+  "partnerWithUs": {
+    "partnerWithUsHeading": {
+      "label": "與我們合作"
+    },
+    "partnerWithUsSubHeading": {
+      "label": "iCharge 是西方市場領先的智能手機充電品牌。開始..."
+    }
+  }
+}

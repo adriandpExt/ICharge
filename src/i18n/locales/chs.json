@@ -1,0 +1,185 @@
+{
+  "common": {
+    "selectPlaceholder": {
+      "label": "请选择..."
+    },
+    "textfieldPlaceholder": {
+      "label": "请输入..."
+    },
+    "textareaPlaceholder": {
+      "label": "请输入..."
+    }
+  },
+  "home": {
+    "companyCarousel": {
+      "label": "我们的信赖伙伴"
+    },
+    "ichargeSubheader": {
+      "label": "iCharge 提供一站式的自助行动电源租赁服务，为您的行动设备提供随时随地的充电解决方案。"
+    },
+    "ichargeContinue": {
+      "label": "继续"
+    },
+    "whyIcharge": {
+      "label": "为什么选择"
+    },
+    "convenience": {
+      "label": "租借行动电源提升了您地点的便利性，这可能会增加人流，并延长及增加访客的次数。"
+    },
+    "costEffective": {
+      "label": "每 30 分钟仅需 19 菲律宾比索的低廉费用，鼓励顾客停留更长时间，享受更多场所提供的服务，从而提升整体顾客满意度。"
+    },
+    "flexible": {
+      "label": "iCharge 无缝整合于各种企业和场所，无论在哪里都能提供可靠且灵活的支持。"
+    },
+    "WeOfferServices": {
+      "label": "我们提供符合您需求的服务"
+    },
+    "freeUseOfEquipment": {
+      "label": "设备免费使用"
+    },
+    "saleOfEquipment": {
+      "label": "设备销售"
+    },
+    "leaseOfEquipment": {
+      "label": "设备租赁"
+    },
+    "howtoUseIcharge": {
+      "label": "如何使用 iCharge？"
+    },
+    "scan": {
+      "label": "扫描"
+    },
+    "scanDescription": {
+      "label": "在任一 iCharge 站点扫描 QR 码以开始租赁。"
+    },
+    "topUp": {
+      "label": "充值"
+    },
+    "topUpDescription": {
+      "label": "使用 Maya 和 Gcash 充值。"
+    },
+    "charge": {
+      "label": "充电"
+    },
+    "chargeDescription": {
+      "label": "从机器中取出行动电源，随时为您的设备充电。"
+    },
+    "return": {
+      "label": "归还"
+    },
+    "returnDescription": {
+      "label": "将行动电源插入任一空槽以归还。"
+    },
+    "products": {
+      "label": "产品"
+    },
+    "sectors": {
+      "label": "行业"
+    }
+  },
+  "footer": {
+    "followUs": {
+      "label": "关注我们"
+    },
+    "platforms": {
+      "label": "我们的平台"
+    },
+    "aboutUs": {
+      "label": "关于我们"
+    },
+    "company": {
+      "label": "公司"
+    },
+    "stayInTheLoop": {
+      "label": "随时了解最新资讯。"
+    },
+    "contactUs": {
+      "label": "联系我们"
+    },
+    "joinNewsletter": {
+      "label": "订阅我们的电子报"
+    },
+    "privacyPolicy": {
+      "label": "隐私政策"
+    },
+    "termsOfService": {
+      "label": "服务条款"
+    },
+    "downloadApp": {
+      "label": "下载应用程序"
+    },
+    "newsletter": {
+      "label": "订阅我们的电子报"
+    },
+    "emailPlaceholder": {
+      "label": "输入您的电子邮件..."
+    },
+    "subscribe": {
+      "label": "订阅"
+    },
+    "copyright": {
+      "label": "2024 Quanta Dance, Inc"
+    },
+    "rightsReserved": {
+      "label": "保留所有权利。"
+    }
+  },
+  "customer": {
+    "heading": {
+      "label": "常见问题"
+    },
+    "customerService": {
+      "label": "客服"
+    },
+    "customerServicesubHeading": {
+      "label": "使用下方的表格发送电子邮件，我们将在 12 小时内回复您。如果需要立即解答，我们的客服团队随时为您服务，与我们聊天！"
+    },
+    "rentingAndReturning": {
+      "label": "租借与归还"
+    },
+    "chatWithUs": {
+      "label": "与我们聊天"
+    },
+    "faqData": [
+      {
+        "category": "租借与归还",
+        "items": [
+          {
+            "question": "我该如何租借行动电源？",
+            "answer": "您必须先下载 xxx 应用程序，该应用可在 App Store 或 Google Play 上获取。您需要创建或登录 xxx 账户，提供有效的手机号码或电子邮件，并输入我们发送到该号码或邮件的四位数一次性密码。 在应用程序主屏幕点击“扫描租借”，扫描站点前的 QR 码，这将释放一个行动电源供您使用。 如果您需要寻找站点，请在应用程序中探索地图。"
+          },
+          {
+            "question": "我该如何归还行动电源？",
+            "answer": "要归还，只需将行动电源完全插入同一站点中的空槽，推到卡扣并等待应用显示您的租赁总结 — 如果未显示，请联系应用内支持。"
+          }
+        ]
+      },
+      {
+        "category": "故障排除",
+        "items": [
+          {
+            "question": "我无法从站点释放行动电源该怎么办？",
+            "answer": "请联系应用内支持团队，我们将很高兴为您指导安装过程并尝试解决这个问题。"
+          }
+        ]
+      }
+    ]
+  },
+  "sustainability": {
+    "sustainabilityHeading": {
+      "label": "可持续发展"
+    },
+    "sustainabilitySubHeading": {
+      "label": "在 iCharge，我们致力于正确地经营业务。不仅提供最先进的行动电源共享服务，我们的使命是用影响力做出好事。我们对可持续发展的承诺不仅仅是一句标语，而是确保我们每天的运营负责任且合乎道德。"
+    }
+  },
+  "partnerWithUs": {
+    "partnerWithUsHeading": {
+      "label": "与我们合作"
+    },
+    "partnerWithUsSubHeading": {
+      "label": "iCharge 是西方市场领先的智能手机充电品牌。开始..."
+    }
+  }
+}
