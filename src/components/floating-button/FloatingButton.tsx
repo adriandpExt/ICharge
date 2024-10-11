@@ -41,20 +41,24 @@ export const FloatingButton = (): ReactElement => {
         .sendForm(serviceId, templateId, formRef.current, {
           publicKey: publicKey,
         })
-        .then(() => {
-          toast({
-            variant: "success",
-            title: "Successfully sent",
-            description: "You've sent an email to the ICharge Team.",
-          });
-        });
-    } else {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "There is an error.",
-      });
+        .then(toastSuccess, toastError);
     }
+  };
+
+  const toastSuccess = () => {
+    return toast({
+      variant: "success",
+      title: "Successfully sent",
+      description: "You've sent an email to the ICharge Team.",
+    });
+  };
+
+  const toastError = () => {
+    return toast({
+      variant: "destructive",
+      title: "Error",
+      description: "There is an error.",
+    });
   };
 
   const handleSubmit: SubmitHandler<FloatingForm> = (data) => {
@@ -69,10 +73,10 @@ export const FloatingButton = (): ReactElement => {
 
   return (
     <Popover open={isOpen} onOpenChange={setIsOpen}>
-      <PopoverTrigger className="fixed bottom-10 right-2 flex h-20 w-20 items-center justify-center rounded-full border-white bg-gradient-to-t from-[#055c00] to-[#022700] text-white shadow-2xl">
+      <PopoverTrigger className="fixed bottom-10 right-2 flex h-20 w-20 items-center justify-center rounded-full border-white bg-gradient-to-t from-[#055c00] to-[#022700] text-white shadow-2xl drop-shadow-2xl">
         <Bot className="h-16 w-16" />
       </PopoverTrigger>
-      <PopoverContent className="mr-2 h-full border-white bg-white shadow-2xl">
+      <PopoverContent className="mr-2 h-full rounded-xl border-white bg-white shadow-2xl drop-shadow-2xl">
         <Button className="ml-52" onClick={handleClose}>
           X
         </Button>
