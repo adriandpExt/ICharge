@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import applestore from "@/assets/icons/ic_apple_hero.svg";
 import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
-import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 
 import playstore from "@/assets/icons/ic_playstore_hero.svg";
+import applestore from "@/assets/icons/ic_apple_hero.svg";
 
 import VideoComponent from "./VideoComponent";
-import LocalizationKey from "@/i18n/key";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -60,17 +58,6 @@ const HeroSection = () => {
         </Label>
 
         <div className="items-center space-y-4 lg:w-48">
-          <Button
-            type="submit"
-            variant={"default"}
-            className="h-12 w-40 rounded-xl shadow-xl"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(90, 255, 82, 0.2) 0%, rgba(6, 108, 1, 0.4) 100%)",
-            }}
-          >
-            {t(LocalizationKey.home.ichargeContinue)} <ArrowRight />
-          </Button>
           <div className="flex items-center justify-center lg:block lg:space-y-2">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
