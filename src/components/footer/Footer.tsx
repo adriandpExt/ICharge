@@ -16,6 +16,7 @@ import { ArrowRight } from "lucide-react";
 import SectionItem from "./SectionItem";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
+import qrApp from "@/assets/icharge_app_qr.png";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -60,7 +61,11 @@ export const Footer = () => {
             onClick={handleClick}
           /> */}
           <div className="bg-white">
-            <img src="" alt="QR CODE" className="h-[250px] w-[250px] object-contain" />
+            <img
+              src={qrApp}
+              alt="QR CODE"
+              className="h-[250px] w-[250px] object-contain"
+            />
           </div>
           <SectionItem
             links={companyLinks}
