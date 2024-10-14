@@ -1,0 +1,270 @@
+{
+  "common": {
+    "selectPlaceholder": {
+      "label": "请选择..."
+    },
+    "textfieldPlaceholder": {
+      "label": "请输入..."
+    },
+    "textareaPlaceholder": {
+      "label": "请输入..."
+    }
+  },
+  "home": {
+    "companyCarousel": {
+      "label": "我们的信赖伙伴"
+    },
+    "ichargeSubheader": {
+      "label": "iCharge 提供一站式的自助行动电源租赁服务，为您的行动设备提供随时随地的充电解决方案。"
+    },
+    "ichargeContinue": {
+      "label": "继续"
+    },
+    "whyIcharge": {
+      "label": "为什么选择"
+    },
+    "convenience": {
+      "label": "租借行动电源提升了您地点的便利性，这可能会增加人流，并延长及增加访客的次数。"
+    },
+    "costEffective": {
+      "label": "每 30 分钟仅需 19 菲律宾比索的低廉费用，鼓励顾客停留更长时间，享受更多场所提供的服务，从而提升整体顾客满意度。"
+    },
+    "flexible": {
+      "label": "iCharge 无缝整合于各种企业和场所，无论在哪里都能提供可靠且灵活的支持。"
+    },
+    "WeOfferServices": {
+      "label": "我们提供符合您需求的服务"
+    },
+    "freeUseOfEquipment": {
+      "label": "设备免费使用"
+    },
+    "saleOfEquipment": {
+      "label": "设备销售"
+    },
+    "leaseOfEquipment": {
+      "label": "设备租赁"
+    },
+    "howtoUseIcharge": {
+      "label": "如何使用 iCharge？"
+    },
+    "scan": {
+      "label": "扫描"
+    },
+    "scanDescription": {
+      "label": "在任一 iCharge 站点扫描 QR 码以开始租赁。"
+    },
+    "topUp": {
+      "label": "充值"
+    },
+    "topUpDescription": {
+      "label": "使用 Maya 和 Gcash 充值。"
+    },
+    "charge": {
+      "label": "充电"
+    },
+    "chargeDescription": {
+      "label": "从机器中取出行动电源，随时为您的设备充电。"
+    },
+    "return": {
+      "label": "归还"
+    },
+    "returnDescription": {
+      "label": "将行动电源插入任一空槽以归还。"
+    },
+    "products": {
+      "label": "产品"
+    },
+    "sectors": {
+      "label": "行业"
+    }
+  },
+  "footer": {
+    "followUs": {
+      "label": "关注我们"
+    },
+    "platforms": {
+      "label": "我们的平台"
+    },
+    "aboutUs": {
+      "label": "关于我们"
+    },
+    "company": {
+      "label": "公司"
+    },
+    "stayInTheLoop": {
+      "label": "随时了解最新资讯。"
+    },
+    "contactUs": {
+      "label": "联系我们"
+    },
+    "joinNewsletter": {
+      "label": "订阅我们的电子报"
+    },
+    "privacyPolicy": {
+      "label": "隐私政策"
+    },
+    "termsOfService": {
+      "label": "服务条款"
+    },
+    "downloadApp": {
+      "label": "下载应用程序"
+    },
+    "newsletter": {
+      "label": "订阅我们的电子报"
+    },
+    "emailPlaceholder": {
+      "label": "输入您的电子邮件..."
+    },
+    "subscribe": {
+      "label": "订阅"
+    },
+    "copyright": {
+      "label": "2024 Quanta Dance, Inc"
+    },
+    "rightsReserved": {
+      "label": "保留所有权利。"
+    }
+  },
+  "customer": {
+    "heading": {
+      "label": "常见问题"
+    },
+    "customerService": {
+      "label": "客服"
+    },
+    "customerServicesubHeading": {
+      "label": "使用下方的表格发送电子邮件，我们将在 12 小时内回复您。如果需要立即解答，我们的客服团队随时为您服务，与我们聊天！"
+    },
+    "rentingAndReturning": {
+      "label": "租借与归还"
+    },
+    "chatWithUs": {
+      "label": "与我们聊天"
+    },
+    "faqData": [
+      {
+        "category": "寻找最近的 iCharge 站点",
+        "items": [
+          {
+            "question": "我如何找到最近的 iCharge 站点？",
+            "answer": "您可以使用 iCharge 应用程序或访问我们的网站，查看附近的站点。我们的实时地图会帮助您快速找到最近的站点。"
+          }
+        ]
+      },
+      {
+        "category": "租借充电宝",
+        "items": [
+          {
+            "question": "我如何租借充电宝？",
+            "answer": "从 App Store 或 Google Play 下载 iCharge 应用程序。使用该应用扫描任意 iCharge 站点的二维码，并按照说明操作。"
+          }
+        ]
+      },
+      {
+        "category": "使用充电宝",
+        "items": [
+          {
+            "question": "我可以用充电宝为任何设备充电吗？",
+            "answer": "可以，充电宝兼容大多数智能手机和设备。"
+          },
+          {
+            "question": "使用充电宝有时间限制吗？",
+            "answer": "没有，您可以根据需要租用充电宝，但请注意租赁费用将根据使用时间计算。"
+          },
+          {
+            "question": "我如何查看已使用的时间和费用？",
+            "answer": "在租赁开始后，应用程序会显示使用时长和费用，并提醒您是否有未支付的使用费用。"
+          }
+        ]
+      },
+      {
+        "category": "归还充电宝",
+        "items": [
+          {
+            "question": "我如何归还充电宝？",
+            "answer": "将充电宝插入任何 iCharge 站点的空槽中，确保完全插入。"
+          },
+          {
+            "question": "如果我要归还时站点已满怎么办？",
+            "answer": "您可以在相同或附近的 iCharge 站点归还充电宝。请通过 iCharge 应用查看是否有空位。"
+          }
+        ]
+      },
+      {
+        "category": "支付和退款",
+        "items": [
+          {
+            "question": "租借充电宝多少钱？",
+            "answer": "租赁费用根据租赁时长和地点而定。我们的标准每小时费率为 49 比索。请查看 iCharge 应用以获取最新费率。"
+          },
+          {
+            "question": "我如何支付租赁费用？",
+            "answer": "登录应用后，选择一种有效的支付方式（GrabPay、Maya、GCash、Alipay、微信支付、BDO 或 UnionBank）。应用会显示租赁费用并提醒您未支付的使用费。"
+          },
+          {
+            "question": "我如何退款我的押金？",
+            "answer": "在应用的“钱包”页面，点击“退款”按钮并提交。退款会退回到您用于充值的账户。"
+          },
+          {
+            "question": "退款需要多长时间？",
+            "answer": "退款处理后，可能需要最多 15 天才会反映到您的账户。"
+          },
+          {
+            "question": "如果我被多收了费用怎么办？",
+            "answer": "如果您认为被多收了费用，请通过应用内支持团队联系，他们会协助解决问题。"
+          }
+        ]
+      },
+      {
+        "category": "故障排除",
+        "items": [
+          {
+            "question": "如果我无法从站点取出充电宝怎么办？",
+            "answer": "如果遇到问题，请通过应用联系支持团队，他们会协助解决问题。"
+          },
+          {
+            "question": "如果站点没有充电宝怎么办？",
+            "answer": "请查看 iCharge 应用，寻找有充电宝的附近站点。"
+          },
+          {
+            "question": "如果应用无法正常工作怎么办？",
+            "answer": "请尝试刷新应用。如果问题仍然存在，请删除并重新安装 iCharge 应用。如果仍有问题，请联系客户支持。"
+          },
+          {
+            "question": "我没有收到应用的验证码，该怎么办？",
+            "answer": "请确保手机有良好的移动数据或 Wi-Fi 信号。如果问题持续，请检查您输入的手机号码或联系 iCharge 支持团队。"
+          }
+        ]
+      },
+      {
+        "category": "支持",
+        "items": [
+          {
+            "question": "我如何联系支持团队？",
+            "answer": "您可以通过 iCharge 应用联系支持团队，或发送电子邮件至 ichargebgc@gmail.com。我们乐意为您提供帮助！"
+          },
+          {
+            "question": "如果我弄丢了充电宝怎么办？",
+            "answer": "如果您丢失了充电宝，请通过 iCharge 应用联系客户支持。"
+          }
+        ]
+      }
+    ]
+  },
+  "sustainability": {
+    "sustainabilityHeading": {
+      "label": "可持续发展"
+    },
+    "sustainabilitySubHeading": {
+      "label": "在 iCharge，我们致力于正确地经营业务。不仅提供最先进的行动电源共享服务，我们的使命是用影响力做出好事。我们对可持续发展的承诺不仅仅是一句标语，而是确保我们每天的运营负责任且合乎道德。"
+    }
+  },
+  "partnerWithUs": {
+    "partnerWithUsHeading": {
+      "label": "与我们合作"
+    },
+    "partnerWithUsSubHeading": {
+      "label": "iCharge 是西方市场领先的智能手机充电品牌。开始..."
+    }
+  }
+}

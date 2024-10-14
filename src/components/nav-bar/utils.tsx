@@ -27,4 +27,14 @@ export const language = [
     icons: "ic_ph_flag",
     label: "Ph",
   },
+  {
+    id: "cht",
+    icons: "ic_cht_flag",
+    label: "Ch(Traditional)",
+  },
+  {
+    id: "chs",
+    icons: "ic_cht_flag",
+    label: "Ch(Simplified)",
+  },
 ];

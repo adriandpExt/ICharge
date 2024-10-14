@@ -139,96 +139,20 @@
     },
     "faqData": [
       {
-        "category": "Pag-upa at Pagbalik",
+        "category": "Paghanap ng Pinakamalapit na iCharge Station",
         "items": [
           {
-            "question": "Paano ako magrerenta ng power bank?",
-            "answer": "Kailangan mo munang i-download ang xxx app na available sa App Store o Google Play. Kakailanganin mong gumawa o mag-log in sa isang xxx account, na nagbibigay ng wastong mobile number o email at ilagay ang apat na digit na one-time-passcode na SMS na ipinapadala namin sa numero o email na iyon. I-tap ang \"I-scan para magrenta\" sa home screen ng app, i-scan ang QR code sa harap ng isang istasyon. Maglalabas ito ng power bank para magamit mo on the go. Kung naghahanap ka ng istasyon, galugarin ang mapa sa app."
-          },
-          {
-            "question": "Paano ko ibabalik ang power bank?",
-            "answer": "Para bumalik, itulak lang ang power bank sa isang bakanteng slot sa parehong istasyon. Itulak ito hanggang sa mag-click ito at hintayin na ipakita ng app ang iyong recap sa pagrenta — makipag-ugnayan sa in-app na suporta kung hindi."
-          },
-          {
-            "question": "Ano ang gagawin ko kung puno na ang istasyong gusto kong ibalik ang aking power bank?",
-            "answer": "Siguraduhin na ibinalik mo lang ang powerbank sa parehong istasyon na iyong nirentahan na palaging may puwang para sa bawat powerbank."
-          },
-          {
-            "question": "Ano ang gagawin ko kung walang laman ang istasyon?",
-            "answer": "Kung walang laman ang istasyon, hanapin ang susunod na malapit na istasyon sa pamamagitan ng app."
+            "question": "Paano ko mahahanap ang pinakamalapit na iCharge station?",
+            "answer": "Magagamit mo ang iCharge app o bisitahin ang aming website para makita ang mga malalapit na istasyon. Makakatulong ang aming real-time na mapa para mabilis mong mahanap ang pinakamalapit na istasyon."
           }
         ]
       },
       {
-        "category": "Pag-troubleshoot",
+        "category": "Pag-upa ng Power Bank",
         "items": [
           {
-            "question": "Ano ang gagawin ko kung hindi ako makapaglabas ng power bank mula sa istasyon?",
-            "answer": "Mangyaring makipag-ugnayan sa in-app na koponan ng suporta at malugod naming dadalhin ka sa proseso ng pag-install at subukan at ayusin ito para sa iyo."
-          },
-          {
-            "question": "Ano ang gagawin ko kung ang power bank ay hindi nag-eject ngunit ang tumatakbong order ay nagsimulang tumakbo?",
-            "answer": "I-refresh muna ang page ng order at tingnan kung natapos na ang order. Kung tumatakbo pa rin ito, piliin ang button na `Customer service` sa tumatakbong order at sundin ang sunud-sunod na mga tagubilin. (Kakailanganin mong magsumite ng malinaw na larawan na may front view ng istasyon kasama ang QR code na malinaw na nakasaad) . Matatapos ang order at maaari kang magpatuloy sa muling pagrenta."
-          },
-          {
-            "question": "Ano ang gagawin ko kung naibalik ko na ang power bank ngunit tumatakbo pa rin ang order?",
-            "answer": "Suriin muna at kumpirmahin na ang power bank ay maayos at ganap na naipasok. I-refresh ang page ng order para tingnan kung huminto na ang page ng order (maaaring maantala ng mahinang network ang mga tugon). Kung tumatakbo pa rin ang order, pindutin ang `Customer service`` na button sa home page at sundin ang sunud-sunod na mga tagubilin. (Kailangan mong magsumite ng malinaw na larawan na may front view ng istasyon kasama ang QR code na malinaw na nakasaad). Matatapos na ang order. Sisiyasatin at tutugon kami sa iyo sa loob ng 3 araw ng trabaho."
-          }
-        ]
-      },
-      {
-        "category": "Mga Pagsingil at Pagbayad",
-        "items": [
-          {
-            "question": "Magkano ang rentahan ng power bank?",
-            "answer": "Mangyaring tandaan na ang presyo ay nag-iiba depende sa lokasyon ng istasyon. Ipinapakita rin ang plano ng presyo pagkatapos ng pag-scan ng QR code ng istasyon."
-          },
-          {
-            "question": "Paano ko malalaman kung gaano katagal mayroon akong power bank at kung magkano ang halaga nito sa akin?",
-            "answer": "Ang impormasyong ito ay ipinapakita sa loob ng app sa sandaling simulan mo ang pagrenta ng power bank. Ang oras ay ipinapakita kasama ang eksaktong halaga na naipon nito."
-          },
-          {
-            "question": "Paano ako magbabayad para sa mga singil sa pag-upa?",
-            "answer": "Pagkatapos mag-log in sa unang pagkakataon, ipo-prompt kang magdagdag ng wastong credit/debit card. Sa pagbabalik ng power bank, ang mga singil sa pag-upa ay awtomatikong ibabawas mula sa na-default na card. Kung nabigo ang pagbabayad, ang isang hindi nabayarang order ay ipapakita sa homepage kapag muli kang nag-log in at kailangan mong manu-manong kumpletuhin ang pagbabayad para sa normal na serbisyo upang maipagpatuloy."
-          },
-          {
-            "question": "Ano ang gagawin ko kung na-overcharge ako?",
-            "answer": "Mangyaring makipag-ugnayan sa in-App na koponan ng suporta at malugod naming tutulungan ka."
-          }
-        ]
-      },
-      {
-        "category": "Mga Refund at Deposito",
-        "items": [
-          {
-            "question": "Paano i-refund ang aking deposito?",
-            "answer": "1. Pumunta sa `Wallet page` , pindutin ang `refund` na button at isumite. 2. Ibabalik ang refund sa parehong bank account na ginamit mo para mag-top up."
-          },
-          {
-            "question": "Kung bibigyan ako ng refund gaano katagal ito?",
-            "answer": "Sa kaso ng pagbaligtad na customer ay hindi makakakita ng refund credit sa kanilang statement— makikita mo na lang ang orihinal na awtorisasyon na ibinaba ang kanilang statement nang buo pagkatapos ng ilang araw. Walang babayaran, at walang refund. Lalabas na parang hindi nangyari ang buong transaksyon. Dapat na makumpirma ito ng iyong bangko para sa kanila. Depende sa iyong nagbigay ng card, mawawala ang orihinal na singil sa mga nakabinbing singil makalipas ang 7 araw ng trabaho."
-          },
-          {
-            "question": "Bakit kailangan kong gamitin ang aking credit/debit card?",
-            "answer": "Ang isang credit/debit card ay kinakailangan bilang isang paraan ng seguridad upang hikayatin ang patas at ligtas na paggamit ng aming mga serbisyo."
-          }
-        ]
-      },
-
-      {
-        "category": "Mga Isyu sa App at Teknikal",
-        "items": [
-          {
-            "question": "Hindi ako nakatanggap ng verification code para sa app. Ano ang dapat kong gawin?",
-            "answer": "Ito ay umaasa sa iyong telepono na may sapat na mobile signal upang matanggap ito. Maaaring kailanganin mong humakbang sa mas magandang hanay ng signal. Kung hindi, pakitiyak na naglagay ka ng tamang numero ng mobile. Kung gumagamit ka ng email, mangyaring tandaan na suriin ang junk mail. Kung wala nang iba pang gumagana, pagkatapos ay makipag-ugnayan sa in-App na team ng suporta at tutulong kami sa pagkuha ng setup ng account para sa iyo."
-          },
-          {
-            "question": "Ang App ay hindi gumagana. Ano ang dapat kong gawin?",
-            "answer": "Maaari mo munang subukang i-refresh ang iyong app. Kung hindi ito gumana mangyaring tanggalin at muling i-install ang app. Kung hindi ito makakatulong, makipag-ugnayan sa e-mail ng team ng suporta: ichargebgc@gmail.com at tutulungan ka namin!"
-          },
-          {
-            "question": "Paano ako mag-uulat ng may sira na power bank?",
-            "answer": "Mangyaring mag-ulat ng may sira na power bank sa pamamagitan ng app, o makipag-ugnayan sa in-App support team."
+            "question": "Paano ako makakapag-arkila ng power bank?",
+            "answer": "I-download ang iCharge app mula sa App Store o Google Play. Gamitin ang app para i-scan ang QR code sa anumang iCharge station at sundin ang mga instruksyon."
           }
         ]
       },
@@ -236,20 +160,88 @@
         "category": "Paggamit ng Power Bank",
         "items": [
           {
-            "question": "Ano ang mangyayari kung mawala/hindi ako magbabalik ng power bank?",
-            "answer": "Kakailanganin mong magbayad ng multa. Ang presyo ay ipapakita sa app, Kung magpasya kang huwag ibalik ito hindi mo na maaaring bawiin ang iyong security deposit."
+            "question": "Pwede ko bang gamitin ang power bank sa kahit anong device?",
+            "answer": "Oo, compatible ang mga power bank sa karamihan ng mga smartphone at device."
           },
           {
-            "question": "Paano mo suriin ang antas ng singil ng power bank?",
-            "answer": "Pindutin lang ang button sa harap ng power bank at makikita ng mga Led indicator ang antas ng kapangyarihan"
+            "question": "May oras bang limitasyon sa paggamit ng power bank?",
+            "answer": "Wala, maaari mong upahan ang power bank nang gaano katagal mo gusto. Tandaan lang na ang bayad ay depende sa haba ng paggamit."
           },
           {
-            "question": "Ang aking power bank ay hindi nagcha-charge ng aking telepono, ano ang gagawin ko?",
-            "answer": "Tiyaking nakasaksak nang maayos ang cable sa iyong device. Inirerekomenda naming tanggalin mo ang anumang makapal na case ng telepono upang payagan ang cable na pumasok nang buo. Kung wala ka pa ring nakikitang charge, ibalik ang power bank sa istasyon at makipag-ugnayan sa amin sa pamamagitan ng in-app na suporta."
+            "question": "Paano ko malalaman kung gaano katagal ko nang ginagamit ang power bank at kung magkano na ang bayad?",
+            "answer": "Makikita ang impormasyong ito sa app mula sa oras na simulan mo ang pag-upa. Ipinapakita nito ang tagal ng paggamit at halaga, at ipapaalam din sa iyo kung may hindi nabayarang paggamit."
+          }
+        ]
+      },
+      {
+        "category": "Pagbabalik ng Power Bank",
+        "items": [
+          {
+            "question": "Paano ko ibabalik ang power bank?",
+            "answer": "Ilagay lang ang power bank sa anumang bakanteng slot sa iCharge station. Siguraduhing maayos itong nakapasok."
           },
           {
-            "question": "Ano ang mangyayari kung nagrenta ako ng power bank at walang cable?",
-            "answer": "Kung walang cable, ibalik muna ang power bank at iulat sa prompt ng app. Hindi ka sisingilin para sa rental na ito. Mangyaring pagkatapos ay magpatuloy sa pagrenta ng isa pang power bank."
+            "question": "Paano kung puno ang istasyon kapag ibabalik ko ang power bank?",
+            "answer": "Pwede mong ibalik ang power bank sa parehong istasyon o sa ibang kalapit na iCharge station. Tingnan ang iCharge app para sa mga bakanteng slot."
+          }
+        ]
+      },
+      {
+        "category": "Bayad at Refund",
+        "items": [
+          {
+            "question": "Magkano ang pag-upa ng power bank?",
+            "answer": "Ang bayad sa pag-upa ay depende sa tagal at lokasyon. Ang karaniwang rate kada oras ay Php 49. Tingnan ang iCharge app para sa kasalukuyang mga rate."
+          },
+          {
+            "question": "Paano ako magbabayad para sa renta?",
+            "answer": "Pagkatapos mag-log in sa app, pumili ng valid na paraan ng pagbabayad (GrabPay, Maya, GCash, Alipay, WeChat Pay, BDO, o UnionBank). Ipapakita ng iCharge app ang bayad at ipapaalala sa iyo ang anumang hindi nabayarang paggamit."
+          },
+          {
+            "question": "Paano ako makakakuha ng refund ng deposit?",
+            "answer": "Pumunta sa 'Wallet' page sa app. Pindutin ang 'Refund' at isumite. Ang refund ay ibabalik sa parehong account na ginamit mo para mag-top-up."
+          },
+          {
+            "question": "Gaano katagal bago pumasok ang refund sa aking account?",
+            "answer": "Kapag na-proseso na ang refund, maaaring abutin ng hanggang 15 araw bago ito pumasok sa iyong account."
+          },
+          {
+            "question": "Paano kung nasobrahan ako sa singil?",
+            "answer": "Kung tingin mo'y nasobrahan ka ng singil, makipag-ugnayan sa in-app support team para matulungan ka nilang maresolba ang isyu."
+          }
+        ]
+      },
+      {
+        "category": "Pag-troubleshoot ng mga Isyu",
+        "items": [
+          {
+            "question": "Ano ang gagawin ko kung hindi ko mailabas ang power bank mula sa istasyon?",
+            "answer": "Kung may problema, kontakin ang support team sa app. Tutulungan ka nila sa iyong isyu."
+          },
+          {
+            "question": "Ano ang gagawin ko kung walang laman ang istasyon?",
+            "answer": "Tingnan ang iCharge app para sa mga kalapit na istasyon na may available na power bank."
+          },
+          {
+            "question": "Ano ang gagawin kung hindi gumagana ang app?",
+            "answer": "Subukang i-refresh ang app. Kung hindi pa rin gumagana, i-delete at i-reinstall ang iCharge app. Kung magpapatuloy ang isyu, kontakin ang customer support para sa tulong."
+          },
+          {
+            "question": "Hindi ko natanggap ang verification code para sa app. Ano ang gagawin ko?",
+            "answer": "Siguraduhing malakas ang iyong mobile data o Wi-Fi signal. Kung hindi pa rin gumana, i-double check ang numero ng telepono o kontakin ang iCharge support."
+          }
+        ]
+      },
+      {
+        "category": "Suporta",
+        "items": [
+          {
+            "question": "Paano ako makakakontak sa support?",
+            "answer": "Pwede kang makipag-ugnayan sa support sa pamamagitan ng iCharge app o mag-email sa amin sa ichargebgc@gmail.com. Nandito kami para tumulong!"
+          },
+          {
+            "question": "Ano ang mangyayari kung mawala ko ang power bank?",
+            "answer": "Kung mawala mo ang power bank, kontakin ang customer support sa iCharge app."
           }
         ]
       }
