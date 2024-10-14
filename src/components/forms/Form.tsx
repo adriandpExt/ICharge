@@ -1,4 +1,5 @@
-import { PropsWithChildren } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import  { forwardRef, PropsWithChildren, Ref } from "react";
 import {
   FieldValues,
   FormProvider,
@@ -9,18 +10,19 @@ import {
 interface FormProps<T extends FieldValues> extends PropsWithChildren {
   forms: UseFormReturn<T>;
   onSubmit: SubmitHandler<T>;
+  ref?: Ref<HTMLFormElement>;
 }
 
-export const Form = <T extends FieldValues>({
-  forms,
-  onSubmit,
-  children,
-}: FormProps<T>) => {
-  return (
-    <FormProvider {...forms}>
-      <form onSubmit={forms.handleSubmit(onSubmit)}>{children}</form>
-    </FormProvider>
-  );
-};
+export const Form = forwardRef<HTMLFormElement, FormProps<any>>(
+  ({ forms, onSubmit, children }, ref) => {
+    return (
+      <FormProvider {...forms}>
+        <form ref={ref} onSubmit={forms.handleSubmit(onSubmit)}>
+          {children}
+        </form>
+      </FormProvider>
+    );
+  },
+);
 
 export default Form;

@@ -1,9 +1,10 @@
+import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 import { AosInitializer } from "./lib/aosInitializer";
-import { Suspense } from "react";
-import Spinner from "./components/spinner/Spinner";
+import { Toaster } from "@/components/ui/toaster";
+import { FloatingButton, Spinner } from "./components";
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
       <Layout>
         <AosInitializer />
         <Outlet />
+        <FloatingButton />
+        <Toaster />
       </Layout>
     </Suspense>
   );
