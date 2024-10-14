@@ -5,7 +5,6 @@ import playstore from "@/assets/icons/ic_playstore_footer.svg";
 import applestore from "@/assets/icons/ic_apple_footer.svg";
 import { Link } from "react-router-dom";
 import {
-  aboutLinks,
   bottomLinks,
   companyLinks,
   platformLinks,
@@ -55,11 +54,14 @@ export const Footer = () => {
             links={platformLinks}
             title={t(LocalizationKey.footer.platforms)}
           />
-          <SectionItem
+          {/* <SectionItem
             links={aboutLinks}
             title={t(LocalizationKey.footer.aboutUs)}
             onClick={handleClick}
-          />
+          /> */}
+          <div className="bg-white">
+            <img src="" alt="QR CODE" className="h-[250px] w-[250px] object-contain" />
+          </div>
           <SectionItem
             links={companyLinks}
             title={t(LocalizationKey.footer.company)}
