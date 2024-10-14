@@ -69,7 +69,6 @@ export const Footer = () => {
             onClick={handleClick}
           />
 
-          {/* Newsletter */}
           <div className="col-span-1 text-center md:col-span-2 lg:col-span-1 lg:text-start">
             <Label className="mb-4 text-2xl font-bold">
               {t(LocalizationKey.footer.stayInTheLoop)}
@@ -131,7 +130,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom section */}
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
           <Label variant={"default"}>
             {t(LocalizationKey.footer.copyright)}
