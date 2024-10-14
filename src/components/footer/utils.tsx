@@ -22,16 +22,14 @@ export const renderItems = {
 };
 
 export const companyLinks = [
-  { label: "Partner with Us", path: "" },
-  { label: "Contact", path: "" },
-  { label: "Support", path: "" },
-  { label: "User Agreement", path: "/user-agreement" },
+  { label: "Partner with Us", path: "partner" },
+  { label: "services", path: "/services" },
+  { label: "About", path: "/about" },
+  { label: "FAQs", path: "/faqs" },
+  { label: "Certifications", path: "/certifications" },
 ];
 
-export const aboutLinks = [
-  { label: "Features", path: "/features" },
-  { label: "FAQs", path: "/faqs" },
-];
+// export const aboutLinks = [{ label: "Features", path: "/features" }];
 
 export const platformLinks = [
   { label: "Web", path: "#web" },
