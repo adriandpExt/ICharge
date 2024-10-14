@@ -7,7 +7,6 @@ import LocalizationKey from "@/i18n/key";
 
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import BookDemo from "@/components/book-demo";
 
 import {
   Accordion,
@@ -129,8 +128,6 @@ export default function FullScreenResponsiveFAQAccordion() {
         {renderAccordionMenu()}
 
         {renderAccordionQnA()}
-
-        <BookDemo />
       </main>
     </section>
   );
