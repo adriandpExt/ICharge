@@ -1,7 +1,5 @@
 import { ReactElement } from "react";
-
 import { Globe } from "lucide-react";
-
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
 import {
@@ -13,7 +11,6 @@ import {
   SelectValue,
 } from "../../ui/select";
 import { Label } from "@/components/ui/label";
-
 import { SvgIcons } from "../../svg-icons";
 import { language } from "../utils";
 import { IconName } from "../../svg-icons/utils";
@@ -23,11 +20,12 @@ export const Language = (): ReactElement => {
 
   return (
     <Select onValueChange={handleValueChange} value={selectedLanguage}>
-      <SelectTrigger className="hidden w-36 items-center justify-between space-x-5 whitespace-nowrap rounded-b-none rounded-t-xl border-0 text-white shadow-none data-[state=open]:bg-[#38D430] data-[state=open]:fade-in-35 lg:flex [&>svg]:text-white">
+      <SelectTrigger className="hidden w-52 items-center justify-between space-x-5 whitespace-nowrap rounded-b-none rounded-t-xl border-0 text-white shadow-none data-[state=open]:bg-[#38D430] data-[state=open]:fade-in-35 lg:flex [&>svg]:text-white">
         <SelectValue
           placeholder={
             <div className="flex items-center gap-3">
               <Globe className="text-white" />
+
               <Label>Language</Label>
             </div>
           }
@@ -40,6 +38,7 @@ export const Language = (): ReactElement => {
             <SelectItem value={item.id} key={item.id}>
               <div className="flex items-center">
                 <SvgIcons name={item.icons as IconName} size={30} />
+
                 <span className="ml-2 font-poppins">{item.label}</span>
               </div>
             </SelectItem>

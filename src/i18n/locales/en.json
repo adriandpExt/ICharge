@@ -149,117 +149,109 @@
     },
     "faqData": [
       {
-        "category": "Renting and Returning",
+        "category": "Finding the Nearest iCharge Station",
+        "items": [
+          {
+            "question": "How can I find the nearest iCharge station?",
+            "answer": "You can use the iCharge app or visit our website to locate nearby stations. Our real-time map will help you quickly find the closest station."
+          }
+        ]
+      },
+      {
+        "category": "Renting a Power Bank",
         "items": [
           {
             "question": "How do I rent the power bank?",
-            "answer": "You have to first download the xxx app available in the App Store or Google Play. You'll need to create or log into a xxx account, providing a valid mobile number or email and entering the four-digit one-time-passcode SMS we send to that number or email. Tap on \"Scan to rent\" in the app's home screen, scan the QR code in front of a station. This will release a power bank for you to use on the go. If you're seeking a station, explore the map in the app."
+            "answer": "Download the iCharge app from the App Store or Google Play. Use the app to scan the QR code on any iCharge station and follow the instructions."
+          }
+        ]
+      },
+      {
+        "category": "Using the Power Bank",
+        "items": [
+          {
+            "question": "Can I use the power bank to charge any device?",
+            "answer": "Yes, the power banks are compatible with most smartphones and devices."
           },
+          {
+            "question": "Is there a time limit for how long I can use the power bank?",
+            "answer": "No, you can rent the power bank for as long as you need. Keep in mind that rental charges will apply based on the duration."
+          },
+          {
+            "question": "How do I check how long I’ve had the power bank and the cost so far?",
+            "answer": "This information is available in the app as soon as you start the rental. It shows both the duration and the cost, and will inform you about any unpaid usage."
+          }
+        ]
+      },
+      {
+        "category": "Returning the Power Bank",
+        "items": [
           {
             "question": "How do I return the power bank?",
-            "answer": "To return, simply push the power bank into an empty slot in the same station. Push it in all the way until it clicks and wait for the app to show your rental recap — contact in-app support if it doesn't."
+            "answer": "Just place the power bank into any empty slot at an iCharge station. Make sure it's fully pushed in."
           },
           {
-            "question": "What do I do if the station I want to return my power bank to is full?",
-            "answer": "Make sure that you only return the powerbank to the same station that you rented to there is always a slot for each powerbank."
-          },
-          {
-            "question": "What do I do if the station is empty?",
-            "answer": "If the station is empty, locate the next nearer station via the app."
+            "question": "What if the station is full when I try to return the power bank?",
+            "answer": "You can return the power bank at the same station or any nearby iCharge station. Just check the iCharge app for available slots."
           }
         ]
       },
       {
-        "category": "Troubleshooting",
+        "category": "Payment and Refunds",
         "items": [
           {
-            "question": "What do I do if I cannot release a power bank from the station?",
-            "answer": "Please reach out to in-app support team and we will happily take you through the installation process and try and remedy this for you."
-          },
-          {
-            "question": "What do I do if power bank does not eject but the running order starts running?",
-            "answer": "First refresh the order page and check whether the order has ended. If it\"s still running, select `Customer service` button on the running order and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end and you can proceed to start renting again."
-          },
-          {
-            "question": "What do I do if I already returned power bank but the order is still running?",
-            "answer": "First check and confirm the power bank is properly and fully inserted. Refresh the order page to check if order page have stopped (poor network might delay responses). If order is still running, press `Customer service`` button on the home page and follow the step by step instructions. (You will need to submit a clear photo with the front view of the station along with the QR code clearly indicated). The order will end. We will investigate and reply to you in 3 working days."
-          }
-        ]
-      },
-      {
-        "category": "Charges and Payments",
-        "items": [
-          {
-            "question": "How much is a power bank to rent?",
-            "answer": "Please take note that price varies depends on the location of the station. Price plan also displays after scanning station QR code."
-          },
-          {
-            "question": "How do I check how long I have the power bank for and how much it has cost me?",
-            "answer": "This information is shown within the app as soon as you start renting the power bank. The time is shown along with the exact cost it accumulates."
+            "question": "How much does it cost to rent a power bank?",
+            "answer": "The rental fee depends on the duration and location. Our standard hourly rate is Php 49. Please check the iCharge app for current rates."
           },
           {
             "question": "How do I pay for the rental charges?",
-            "answer": "After logging in for the first time, you will be prompted to add a valid credit/debit card. Upon returning the power bank, rental charges will be automatically deducted from the defaulted card. Should the payment failed, an unpaid order will be shown on homepage when you login again and you will have to manually complete the payment for normal service to resume."
+            "answer": "After logging in to the app, use a valid payment method (GrabPay, Maya, GCash, Alipay, WeChat Pay, BDO, or UnionBank). The rental fee will be displayed in the iCharge app along with unpaid usage notifications."
           },
           {
-            "question": "What do I do if I am overcharged?",
-            "answer": "Please contact in-App support team and we will happily help you out."
+            "question": "How can I refund my deposit?",
+            "answer": "Go to the 'Wallet' page in the app. Press the 'Refund' button and submit. The refund will be returned to the same account you used to top-up."
+          },
+          {
+            "question": "If I’m issued a refund, how long will it take?",
+            "answer": "Once a refund is processed, it may take up to 15 days for the amount to reflect in your account."
+          },
+          {
+            "question": "What if I’m overcharged?",
+            "answer": "If you think you've been overcharged, contact the in-app support team. They will help resolve the issue."
           }
         ]
       },
       {
-        "category": "Refunds and Deposits",
+        "category": "Troubleshooting Issues",
         "items": [
           {
-            "question": "How to refund my deposit?",
-            "answer": "1. Go to `Wallet page` , press `refund` button and submit. 2. Refund will be returned to the same bank account that you use to top up."
+            "question": "What do I do if I can’t release a power bank from the station?",
+            "answer": "If you're having trouble, contact the support team through the app. They will assist you with the issue."
           },
           {
-            "question": "If I am issued a refund how long will it take?",
-            "answer": "In the case of a reversal customer won't see a refund credit on their statement— you will just see the original authorisation drop off their statement entirely after a few days. There will be no payment , and no refund. It'll appear as if the whole transaction never happened. Your bank should be able to confirm this for them. Depending on your card issuer, the original charge will disappear from pending charges 7 working days later."
+            "question": "What do I do if the station is empty?",
+            "answer": "Check the iCharge app for nearby stations with available power banks."
           },
           {
-            "question": "Why do I need to use my credit/debit card?",
-            "answer": "A credit/debit card is required as a form of security to encourage fair and safe usage of our services."
-          }
-        ]
-      },
-
-      {
-        "category": "App and Technical Issues",
-        "items": [
-          {
-            "question": "I have not received a verification code for the app. What should I do?",
-            "answer": "This relies on your phone having enough mobile signal to receive it. You may need to step into a better signal range. Otherwise please ensure that you have entered a correct mobile number. If you are using email, please remember to check junk mail. If nothing else works, then contact in-App support team and we will help get an account setup for you."
+            "question": "What should I do if the app isn’t working?",
+            "answer": "Try refreshing the app first. If that doesn’t help, delete and reinstall the iCharge app. If the issue persists, contact customer support for assistance."
           },
           {
-            "question": "The App is not working. What should I do?",
-            "answer": "You can first try to refresh your app. If this does not work please delete and re-install the app. If this doesn't help, contact the support team e-mail: ichargebgc@gmail.com and we will help you out!"
-          },
-          {
-            "question": "How do I report a faulty power bank?",
-            "answer": "Please report a faulty power bank via the app, or contact in-App support team."
+            "question": "I haven’t received a verification code for the app. What should I do?",
+            "answer": "Make sure your phone has a strong mobile data or Wi-Fi signal. If the issue persists, double-check the phone number you entered or contact iCharge support."
           }
         ]
       },
       {
-        "category": "Power Bank Usage",
+        "category": "Support",
         "items": [
           {
-            "question": "What happens if I lose/don't return a power bank?",
-            "answer": "You will need to pay a penalty. The price will show in the app, If you decide not to return it you cannot withdraw your security deposit anymore."
+            "question": "How can I contact support?",
+            "answer": "You can reach support through the iCharge app or by emailing us at ichargebgc@gmail.com. We're here to help!"
           },
           {
-            "question": "How do you check the charge level of the power bank?",
-            "answer": "Simply press the button on the front of the power bank and the Led indicators will reflect the level of power"
-          },
-          {
-            "question": "My power bank does not charge my phone, what do I do?",
-            "answer": "Make sure the cable is properly plugged into your device. We recommend you remove any thick phone case to allow the cable to go all the way in. If you still don't see a charge, return the power bank into the station and contact us via in-app support."
-          },
-          {
-            "question": "What happens if I rent the power bank and there is no cable?",
-            "answer": "If there is no cable present, first return the power bank and report within the app prompt. You will not be charged for this rental. Please then continue to rent another power bank."
+            "question": "What happens if I lose the power bank?",
+            "answer": "If you lose the power bank, contact customer support through the iCharge app."
           }
         ]
       }

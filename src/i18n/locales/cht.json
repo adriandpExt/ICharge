@@ -1,0 +1,270 @@
+{
+  "common": {
+    "selectPlaceholder": {
+      "label": "請選擇..."
+    },
+    "textfieldPlaceholder": {
+      "label": "請輸入..."
+    },
+    "textareaPlaceholder": {
+      "label": "請輸入..."
+    }
+  },
+  "home": {
+    "companyCarousel": {
+      "label": "我們的信賴夥伴"
+    },
+    "ichargeSubheader": {
+      "label": "iCharge 提供一站式的自助行動電源租賃服務，為您的行動設備提供隨時隨地的充電解決方案。"
+    },
+    "ichargeContinue": {
+      "label": "繼續"
+    },
+    "whyIcharge": {
+      "label": "為什麼選擇"
+    },
+    "convenience": {
+      "label": "租借行動電源提升了您地點的便利性，這可能會增加人流，並延長及增加訪客的次數。"
+    },
+    "costEffective": {
+      "label": "每 30 分鐘僅需 19 菲律賓披索的低廉費用，鼓勵顧客停留更長時間，享受更多場所提供的服務，從而提升整體顧客滿意度。"
+    },
+    "flexible": {
+      "label": "iCharge 無縫整合於各種企業和場所，無論在哪裡都能提供可靠且靈活的支持。"
+    },
+    "WeOfferServices": {
+      "label": "我們提供符合您需求的服務"
+    },
+    "freeUseOfEquipment": {
+      "label": "設備免費使用"
+    },
+    "saleOfEquipment": {
+      "label": "設備銷售"
+    },
+    "leaseOfEquipment": {
+      "label": "設備租賃"
+    },
+    "howtoUseIcharge": {
+      "label": "如何使用 iCharge？"
+    },
+    "scan": {
+      "label": "掃描"
+    },
+    "scanDescription": {
+      "label": "在任一 iCharge 站點掃描 QR 碼以開始租賃。"
+    },
+    "topUp": {
+      "label": "充值"
+    },
+    "topUpDescription": {
+      "label": "使用 Maya 和 Gcash 充值。"
+    },
+    "charge": {
+      "label": "充電"
+    },
+    "chargeDescription": {
+      "label": "從機器中取出行動電源，隨時為您的設備充電。"
+    },
+    "return": {
+      "label": "歸還"
+    },
+    "returnDescription": {
+      "label": "將行動電源插入任一空槽以歸還。"
+    },
+    "products": {
+      "label": "產品"
+    },
+    "sectors": {
+      "label": "行業"
+    }
+  },
+  "footer": {
+    "followUs": {
+      "label": "關注我們"
+    },
+    "platforms": {
+      "label": "我們的平台"
+    },
+    "aboutUs": {
+      "label": "關於我們"
+    },
+    "company": {
+      "label": "公司"
+    },
+    "stayInTheLoop": {
+      "label": "隨時了解最新資訊。"
+    },
+    "contactUs": {
+      "label": "聯絡我們"
+    },
+    "joinNewsletter": {
+      "label": "訂閱我們的電子報"
+    },
+    "privacyPolicy": {
+      "label": "隱私政策"
+    },
+    "termsOfService": {
+      "label": "服務條款"
+    },
+    "downloadApp": {
+      "label": "下載應用程序"
+    },
+    "newsletter": {
+      "label": "訂閱我們的電子報"
+    },
+    "emailPlaceholder": {
+      "label": "輸入您的電子郵件..."
+    },
+    "subscribe": {
+      "label": "訂閱"
+    },
+    "copyright": {
+      "label": "2024 Quanta Dance, Inc"
+    },
+    "rightsReserved": {
+      "label": "保留所有權利。"
+    }
+  },
+  "customer": {
+    "heading": {
+      "label": "常見問題"
+    },
+    "customerService": {
+      "label": "客服"
+    },
+    "customerServicesubHeading": {
+      "label": "使用下方的表格發送電子郵件，我們將在 12 小時內回覆您。如果需要立即解答，我們的客服團隊隨時為您服務，與我們聊天！"
+    },
+    "rentingAndReturning": {
+      "label": "租借與歸還"
+    },
+    "chatWithUs": {
+      "label": "與我們聊天"
+    },
+    "faqData": [
+      {
+        "category": "尋找最近的 iCharge 站點",
+        "items": [
+          {
+            "question": "我如何找到最近的 iCharge 站點？",
+            "answer": "您可以使用 iCharge 應用程序或訪問我們的網站，查看附近的站點。我們的實時地圖會幫助您快速找到最近的站點。"
+          }
+        ]
+      },
+      {
+        "category": "租借充電寶",
+        "items": [
+          {
+            "question": "我如何租借充電寶？",
+            "answer": "從 App Store 或 Google Play 下載 iCharge 應用程序。使用該應用掃描任意 iCharge 站點的二維碼，並按照說明操作。"
+          }
+        ]
+      },
+      {
+        "category": "使用充電寶",
+        "items": [
+          {
+            "question": "我可以用充電寶為任何設備充電嗎？",
+            "answer": "可以，充電寶兼容大多數智能手機和設備。"
+          },
+          {
+            "question": "使用充電寶有時間限制嗎？",
+            "answer": "沒有，您可以根據需要租用充電寶，但請注意租賃費用將根據使用時間計算。"
+          },
+          {
+            "question": "我如何查看已使用的時間和費用？",
+            "answer": "在租賃開始後，應用程序會顯示使用時長和費用，並提醒您是否有未支付的使用費用。"
+          }
+        ]
+      },
+      {
+        "category": "歸還充電寶",
+        "items": [
+          {
+            "question": "我如何歸還充電寶？",
+            "answer": "將充電寶插入任何 iCharge 站點的空槽中，確保完全插入。"
+          },
+          {
+            "question": "如果我要歸還時站點已滿怎麼辦？",
+            "answer": "您可以在相同或附近的 iCharge 站點歸還充電寶。請通過 iCharge 應用查看是否有空位。"
+          }
+        ]
+      },
+      {
+        "category": "支付和退款",
+        "items": [
+          {
+            "question": "租借充電寶多少錢？",
+            "answer": "租賃費用根據租賃時長和地點而定。我們的標準每小時費率為 49 比索。請查看 iCharge 應用以獲取最新費率。"
+          },
+          {
+            "question": "我如何支付租賃費用？",
+            "answer": "登錄應用後，選擇一種有效的支付方式（GrabPay、Maya、GCash、Alipay、微信支付、BDO 或 UnionBank）。應用會顯示租賃費用並提醒您未支付的使用費。"
+          },
+          {
+            "question": "我如何退款我的押金？",
+            "answer": "在應用的“錢包”頁面，點擊“退款”按鈕並提交。退款會退回到您用於充值的賬戶。"
+          },
+          {
+            "question": "退款需要多長時間？",
+            "answer": "退款處理後，可能需要最多 15 天才會反映到您的賬戶。"
+          },
+          {
+            "question": "如果我被多收了費用怎麼辦？",
+            "answer": "如果您認為被多收了費用，請通過應用內支持團隊聯繫，他們會協助解決問題。"
+          }
+        ]
+      },
+      {
+        "category": "故障排除",
+        "items": [
+          {
+            "question": "如果我無法從站點取出充電寶怎麼辦？",
+            "answer": "如果遇到問題，請通過應用聯繫支持團隊，他們會協助解決問題。"
+          },
+          {
+            "question": "如果站點沒有充電寶怎麼辦？",
+            "answer": "請查看 iCharge 應用，尋找有充電寶的附近站點。"
+          },
+          {
+            "question": "如果應用無法正常工作怎麼辦？",
+            "answer": "請嘗試刷新應用。如果問題仍然存在，請刪除並重新安裝 iCharge 應用。如果仍有問題，請聯繫客戶支持。"
+          },
+          {
+            "question": "我沒有收到應用的驗證碼，該怎麼辦？",
+            "answer": "請確保手機有良好的移動數據或 Wi-Fi 信號。如果問題持續，請檢查您輸入的手機號碼或聯繫 iCharge 支持團隊。"
+          }
+        ]
+      },
+      {
+        "category": "支持",
+        "items": [
+          {
+            "question": "我如何聯繫支持團隊？",
+            "answer": "您可以通過 iCharge 應用聯繫支持團隊，或發送電子郵件至 ichargebgc@gmail.com。我們樂意為您提供幫助！"
+          },
+          {
+            "question": "如果我弄丟了充電寶怎麼辦？",
+            "answer": "如果您丟失了充電寶，請通過 iCharge 應用聯繫客戶支持。"
+          }
+        ]
+      }
+    ]
+  },
+  "sustainability": {
+    "sustainabilityHeading": {
+      "label": "可持續發展"
+    },
+    "sustainabilitySubHeading": {
+      "label": "在 iCharge，我們致力於正確地經營業務。不僅提供最先進的行動電源共享服務，我們的使命是用影響力做出好事。我們對可持續發展的承諾不僅僅是一句標語，而是確保我們每天的運營負責任且合乎道德。"
+    }
+  },
+  "partnerWithUs": {
+    "partnerWithUsHeading": {
+      "label": "與我們合作"
+    },
+    "partnerWithUsSubHeading": {
+      "label": "iCharge 是西方市場領先的智能手機充電品牌。開始..."
+    }
+  }
+}

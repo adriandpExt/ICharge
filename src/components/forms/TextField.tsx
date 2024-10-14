@@ -45,20 +45,21 @@ export const TextField = <T extends FieldValues>({
             className={`${formState.errors[field.name] && "text-red-600"} `}
           >
             {label}
+
+            <FormControl>
+              <Input
+                type={type}
+                {...field}
+                placeholder={placeholderText}
+                className={cn(
+                  "w-full border-white bg-gray-200 placeholder:text-gray-500",
+                  formState.errors[field.name] && "border-red-600",
+                  className,
+                )}
+              />
+            </FormControl>
+            <FormMessage className="font-poppins text-red-600" />
           </FormLabel>
-          <FormControl>
-            <Input
-              type={type}
-              {...field}
-              placeholder={placeholderText}
-              className={cn(
-                "border-white bg-gray-200 placeholder:text-gray-500",
-                formState.errors[field.name] && "border-red-600",
-                className,
-              )}
-            />
-          </FormControl>
-          <FormMessage className="font-poppins text-red-600" />
         </FormItem>
       )}
     />
