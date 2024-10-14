@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 import SectionItem from "./SectionItem";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
-import qrApp from "@/assets/icharge_app_qr.png";
+import qrApp from "@/assets/qr-mobile-app.jpg";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -55,11 +55,7 @@ export const Footer = () => {
             links={platformLinks}
             title={t(LocalizationKey.footer.platforms)}
           />
-          {/* <SectionItem
-            links={aboutLinks}
-            title={t(LocalizationKey.footer.aboutUs)}
-            onClick={handleClick}
-          /> */}
+
           <div className="bg-white">
             <img
               src={qrApp}
@@ -73,7 +69,6 @@ export const Footer = () => {
             onClick={handleClick}
           />
 
-          {/* Newsletter */}
           <div className="col-span-1 text-center md:col-span-2 lg:col-span-1 lg:text-start">
             <Label className="mb-4 text-2xl font-bold">
               {t(LocalizationKey.footer.stayInTheLoop)}
@@ -135,7 +130,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom section */}
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
           <Label variant={"default"}>
             {t(LocalizationKey.footer.copyright)}
