@@ -7,6 +7,8 @@ import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
 
+import { chatId, publicKey, serviceId } from "@/lib/viteKey";
+
 import {
   Popover,
   PopoverContent,
@@ -16,13 +18,7 @@ import { Button } from "../ui/button";
 
 import { Form, TextArea, TextField } from "../forms";
 
-import {
-  formDefaultValues,
-  formSchema,
-  publicKey,
-  serviceId,
-  templateId,
-} from "./utils";
+import { formDefaultValues, formSchema } from "./utils";
 
 export const FloatingButton = (): ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +34,7 @@ export const FloatingButton = (): ReactElement => {
   const sendEmail = () => {
     if (formRef.current) {
       emailjs
-        .sendForm(serviceId, templateId, formRef.current, {
+        .sendForm(serviceId, chatId, formRef.current, {
           publicKey: publicKey,
         })
         .then(toastSuccess, toastError);
