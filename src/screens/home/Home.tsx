@@ -13,14 +13,11 @@ const Home = (): ReactElement => {
   return (
     <>
       <HeroSection />
-
       <WhyICharge />
-      <Sector />
       <Services />
+      <Sector />
       <Products />
       <HowTo />
-
-      <Sector />
     </>
   );
 };
