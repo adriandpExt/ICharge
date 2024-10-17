@@ -1,11 +1,9 @@
-export interface HexGridProps {
-  name: string;
-  q: number;
-  s: number;
-  r: number;
-  navigation?: string;
+export interface IndustryCard {
+  title: string;
+  bgImage: string;
 }
-
-export interface PolygonProps {
-  platform?: "desktop" | "mobile";
+export interface IndustryCardType {
+  card: IndustryCard;
+  isDesktop: boolean;
+  className?: string
 }

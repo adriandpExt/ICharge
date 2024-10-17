@@ -15,6 +15,7 @@ const Home = (): ReactElement => {
       <HeroSection />
 
       <WhyICharge />
+      <Sector />
       <Services />
       <Products />
       <HowTo />
