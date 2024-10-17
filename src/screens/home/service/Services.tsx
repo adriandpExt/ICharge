@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
 import LocalizationKey from "@/i18n/key";
@@ -8,7 +9,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { SvgIcons } from "@/components";
 import { IconName } from "@/components/svg-icons/utils";
-import { ReactElement } from "react";
 
 interface ServiceCardProps {
   icon: string;
