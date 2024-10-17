@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
 import LocalizationKey from "@/i18n/key";
@@ -24,10 +25,10 @@ const items: ServiceCardProps[] = [
   },
 ];
 
-const Services = () => {
+const Services = (): ReactElement => {
   const { t } = useTranslation();
 
-  const renderCard = (items: ServiceCardProps, ids: number) => {
+  const renderCard = (items: ServiceCardProps, ids: number): ReactElement => {
     return (
       <Card
         key={ids}
@@ -52,29 +53,29 @@ const Services = () => {
 
   return (
     <section className="h-fit w-full">
-      <section className="relative h-[50vh] w-full overflow-hidden">
+      <section className="relative h-full w-full overflow-hidden lg:h-[80vh]">
         <img
           src={bgImg}
           alt="Background"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover brightness-50"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#38D430] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#33E72A] to-transparent" />
 
         <div className="container relative z-10 mx-auto flex h-full flex-col gap-5 px-10 py-32 lg:px-0">
-          <Label variant={"heading1"} className="tracking-wider text-white">
+          <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
             24/7 SUPPORT
           </Label>
-          <Label variant={"heading1"} className="tracking-wider text-white">
+          <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
             REAL-TIME MONITORING
           </Label>
-          <Label variant={"heading1"} className="tracking-wider text-white">
+          <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
             EASY TO USE
           </Label>
         </div>
       </section>
 
-      <section className="container relative -top-28 mx-auto w-full space-y-20 rounded-3xl bg-white p-10 text-center shadow-2xl drop-shadow-2xl lg:p-32">
+      <section className="container relative -top-20 mx-auto w-full space-y-20 rounded-3xl bg-white p-10 text-center shadow-2xl drop-shadow-2xl lg:-top-52 lg:p-32">
         <Label variant={"heading1"} className="text-black">
           {t(LocalizationKey.home.weOfferServicesThatFitsYourNeeds)}
         </Label>
