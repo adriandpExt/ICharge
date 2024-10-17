@@ -52,7 +52,7 @@ const Features = () => {
           {t(LocalizationKey.home.products)}
         </Label>
         <Carousel
-          opts={{ align: "center" }}
+          opts={{ align: "center", loop: true }}
           className="w-[95%] lg:h-[100%] lg:w-[95%]"
           setApi={(api) => {
             if (api !== undefined) {

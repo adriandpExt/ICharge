@@ -40,7 +40,7 @@ const Gallery = () => {
         GALLERY
       </Label>
       <Carousel
-        opts={{ align: "center" }}
+        opts={{ align: "center", loop: true }}
         orientation="horizontal"
         setApi={(api) => {
           if (api !== undefined) {
@@ -60,7 +60,7 @@ const Gallery = () => {
                 className={cn(
                   "h-[20rem] w-[25rem] rounded-2xl",
                   image,
-                  currentIndex === index - 1 && "lg:scale-125",
+                  currentIndex === index && "lg:scale-125",
                 )}
               />
             </CarouselItem>
