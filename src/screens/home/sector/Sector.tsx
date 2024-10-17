@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 const Sector = (): ReactElement => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleCarouselChange = (index: number) => {
+  const handleCarouselChange = (index: number): void => {
     setCurrentIndex(index); // Update the current carousel index
   };
   return (
@@ -44,7 +44,7 @@ const Sector = (): ReactElement => {
         {/* desktop view */}
       </PageContainer>
       {/* mobile view */}
-      <div className="lg:hidden space-y-5">
+      <div className="space-y-5 lg:hidden">
         <div className="flex flex-col space-y-5 text-center">
           <Label variant="heading1">INDUSTRIES WE SERVE</Label>
           <Label variant="subtitle">Powering Anyone, Anytime, Anywhere</Label>
