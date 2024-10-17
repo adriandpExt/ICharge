@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
-import { IndustryCardType } from "../type";
+import { IndustryCardType } from "@/screens/home/sector/type";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const IndustryCard = (props: IndustryCardType): ReactElement => {
+export const IndustryCard = (props: IndustryCardType): ReactElement => {
   const {
     card: { title, bgImage },
     isDesktop,
@@ -19,7 +19,7 @@ const IndustryCard = (props: IndustryCardType): ReactElement => {
         className,
       )}
     >
-      <div className="flex h-full w-full items-end rounded-3xl rounded-tr-none bg-green-500/15 lg:hover:bg-transparent -ml-[0.1rem] -mb-[0.1rem]">
+      <div className="-mb-[0.1rem] -ml-[0.1rem] flex h-full w-full items-end rounded-3xl rounded-tr-none bg-green-500/15 lg:hover:bg-transparent">
         <Button className="h-[25%] w-[90%] justify-start rounded-3xl rounded-tl-none text-2xl md:text-3xl">
           {title}
         </Button>
@@ -27,5 +27,3 @@ const IndustryCard = (props: IndustryCardType): ReactElement => {
     </div>
   );
 };
-
-export default IndustryCard;

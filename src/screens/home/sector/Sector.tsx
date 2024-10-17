@@ -1,6 +1,6 @@
 import { ReactElement, useState } from "react";
 import { PageContainer } from "@/components";
-import IndustryCard from "./component/IndustryCard";
+import { IndustryCard } from "./component/IndustryCard";
 import { bottomSector, sector, topSector } from "./utils";
 import {
   Carousel,
