@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { SvgIcons } from "@/components";
 import { IconName } from "@/components/svg-icons/utils";
+import { ReactElement } from "react";
 
 interface ServiceCardProps {
   icon: string;
@@ -24,10 +25,10 @@ const items: ServiceCardProps[] = [
   },
 ];
 
-const Services = () => {
+const Services = (): ReactElement => {
   const { t } = useTranslation();
 
-  const renderCard = (items: ServiceCardProps, ids: number) => {
+  const renderCard = (items: ServiceCardProps, ids: number): ReactElement => {
     return (
       <Card
         key={ids}
@@ -56,10 +57,10 @@ const Services = () => {
         <img
           src={bgImg}
           alt="Background"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover brightness-50"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#38D430] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#33E72A] to-transparent" />
 
         <div className="container relative z-10 mx-auto flex h-full flex-col gap-5 px-10 py-32 lg:px-0">
           <Label variant={"heading1"} className="tracking-wider text-white">
