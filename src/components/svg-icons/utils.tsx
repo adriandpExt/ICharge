@@ -31,4 +31,6 @@ export type IconName =
   | "ic_events"
   | "ic_retail"
   | "ic_icharge_white"
-  | "ic_lock";
+  | "ic_lock"
+  | "ic_free"
+  | "ic_sale";
