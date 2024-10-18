@@ -28,7 +28,7 @@ export const IndustryCard = (props: IndustryCardType): ReactElement => {
           isHovered && "scale-105",
         )}
         src={bgImage}
-        alt="LOADING"
+        alt={title}
         onLoad={() => setIsLoaded(true)}
       />
       {isLoaded ? (
