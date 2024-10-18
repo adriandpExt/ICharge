@@ -44,7 +44,7 @@ const Services = (): ReactElement => {
           </div>
 
           <Label className="text-center text-2xl font-semibold">
-            {t(items.label)}s
+            {t(items.label)}
           </Label>
         </CardContent>
       </Card>
