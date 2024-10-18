@@ -1,27 +1,32 @@
 import { IndustryCard } from "./type";
+import sectorHospital from "@/assets/sectors/sectorHospitality.png";
+import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
+import sectorTransport from "@/assets/sectors/sectorTransport.jpg";
+import sectorEvents from "@/assets/sectors/sectorEvents.jpg";
+import sectorRetail from "@/assets/sectors/sectorRetail.jpg";
 
 export const topSector: IndustryCard[] = [
   {
     title: "HOSPITALITY",
-    bgImage: "bg-[url('@/assets/sectors/sectorHospitality.png')]",
+    bgImage: sectorHospital,
   },
   {
     title: "HEALTHCARE",
-    bgImage: "bg-[url('@/assets/sectors/sectorHealthcare.jpg')]",
+    bgImage: sectorHealthCare,
   },
 ];
 export const bottomSector: IndustryCard[] = [
   {
     title: "TRANSPORT",
-    bgImage: "bg-[url('@/assets/sectors/sectorTransport.jpg')]",
+    bgImage: sectorTransport,
   },
   {
     title: "EVENTS",
-    bgImage: "bg-[url('@/assets/sectors/sectorEvents.jpg')]",
+    bgImage: sectorEvents,
   },
   {
     title: "RETAIL",
-    bgImage: "bg-[url('@/assets/sectors/sectorRetail.jpg')]",
+    bgImage: sectorRetail,
   },
 ];
 
