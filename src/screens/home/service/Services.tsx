@@ -32,12 +32,12 @@ const Services = (): ReactElement => {
     return (
       <Card
         key={ids}
-        className="relative border-green-100 bg-green-50 bg-gradient-to-b from-green-100 p-12 shadow-2xl"
+        className="relative rounded-3xl border-green-100 bg-green-50 bg-gradient-to-b from-green-100 p-12 shadow-2xl"
       >
         <CardContent className="flex flex-col items-center p-6 pt-12">
           <div className="absolute left-6 top-0 hidden h-16 w-16 -translate-y-1/2 transform rounded-lg bg-green-200 bg-gradient-to-r from-green-300 lg:block" />
 
-          <div className="absolute -bottom-9 right-16 hidden h-24 w-24 translate-x-1/2 transform rounded-lg bg-green-200 bg-gradient-to-r from-green-300 lg:block" />
+          <div className="absolute -bottom-9 right-16 hidden h-24 w-24 translate-x-1/2 transform rounded-lg bg-green-200 bg-gradient-to-r from-green-300 to-transparent lg:block" />
 
           <div className="z-10 mb-4 rounded-full bg-green-500 p-3">
             <SvgIcons name={items.icon as IconName} size={100} />
