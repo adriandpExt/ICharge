@@ -13,8 +13,6 @@ export default function Component() {
             className="mx-auto h-[300px] w-full object-contain lg:h-[500px]"
           />
         </div>
-
-        {/* Text content */}
         <div className="w-full text-center text-white md:w-1/2 md:text-left">
           <Label className="mb-4 text-3xl font-bold md:text-4xl">
             STAY POWERED WITH ICHARGE
