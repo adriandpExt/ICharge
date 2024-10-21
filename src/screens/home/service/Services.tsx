@@ -52,30 +52,28 @@ const Services = (): ReactElement => {
   };
 
   return (
-    <section className="h-fit w-full">
-      <section className="relative h-full w-full overflow-hidden lg:h-[80vh]">
-        <img
-          src={bgImg}
-          alt="Background"
-          className="absolute inset-0 h-full w-full object-cover brightness-50"
-        />
+    <section className="relative h-full w-full pb-32">
+      <img
+        src={bgImg}
+        alt="Background"
+        className="absolute inset-0 h-[100vh] w-full brightness-50"
+      />
 
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#33E72A] to-transparent" />
+      <div className="absolute inset-0 h-[100vh] bg-gradient-to-tr from-[#33E72A] to-transparent" />
 
-        <div className="container relative z-10 mx-auto flex h-full flex-col gap-5 px-10 py-32 lg:px-0">
-          <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
-            24/7 SUPPORT
-          </Label>
-          <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
-            REAL-TIME MONITORING
-          </Label>
-          <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
-            EASY TO USE
-          </Label>
-        </div>
-      </section>
+      <div className="container relative z-10 mx-auto flex h-full flex-col gap-5 px-10 py-32">
+        <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
+          24/7 SUPPORT
+        </Label>
+        <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
+          REAL-TIME MONITORING
+        </Label>
+        <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
+          EASY TO USE
+        </Label>
+      </div>
 
-      <section className="container relative -top-20 mx-auto w-full space-y-20 rounded-3xl bg-white p-10 text-center shadow-2xl drop-shadow-2xl lg:-top-52 lg:p-32">
+      <section className="container relative mx-auto w-full space-y-20 rounded-3xl bg-white p-10 text-center shadow-2xl drop-shadow-2xl lg:p-32">
         <Label variant={"heading1"} className="text-black">
           {t(LocalizationKey.home.weOfferServicesThatFitsYourNeeds)}
         </Label>
