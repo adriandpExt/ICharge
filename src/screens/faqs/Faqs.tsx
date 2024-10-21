@@ -1,9 +1,10 @@
 import { Faqs } from "./types";
 
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
+
+import { Banner, PageContainer } from "@/components";
 
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -93,42 +94,12 @@ export default function FullScreenResponsiveFAQAccordion() {
     );
   };
   return (
-    <section className="pt-[43vh]">
-      <main className="absolute inset-0 h-[65vh] w-full bg-[url('@/assets/bg_green_wave.png')] bg-cover bg-bottom bg-no-repeat">
-        <div className="container mx-auto flex h-full flex-col items-center justify-center space-y-2 p-2 px-4 py-8 text-center">
-          <Label variant={"title"} className="text-white sm:mb-6">
-            {t(LocalizationKey.customer.customerService)}
-          </Label>
+    <PageContainer>
+      <Banner title={t(LocalizationKey.customer.heading)} />
 
-          <Label
-            variant={"subtitle"}
-            className="mb-6 text-start text-white sm:mb-8"
-          >
-            {t(LocalizationKey.customer.customerServicesubHeading)}
-          </Label>
+      {renderAccordionMenu()}
 
-          <Button
-            variant={"custombutton"}
-            className="h-12 w-52 rounded-md bg-white text-base text-green-600 hover:bg-green-100 sm:px-6 sm:py-3 sm:text-lg md:h-9"
-          >
-            {t(LocalizationKey.customer.chatWithUs)}
-            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-          </Button>
-        </div>
-      </main>
-
-      <main className="px-4 pb-8 pt-10">
-        <Label
-          variant="heading1"
-          className="mb-6 flex flex-col py-10 text-center font-bold lg:mb-10"
-        >
-          {t(LocalizationKey.customer.heading)}
-        </Label>
-
-        {renderAccordionMenu()}
-
-        {renderAccordionQnA()}
-      </main>
-    </section>
+      {renderAccordionQnA()}
+    </PageContainer>
   );
 }
