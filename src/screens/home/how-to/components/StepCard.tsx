@@ -15,23 +15,27 @@ const StepCard = ({
   currentStep,
   onClick,
 }: StepCardProps) => {
-  const isActive = currentStep === stepNumber;
+  const isActive = currentStep >= stepNumber;
   const cardStyle = isActive
-    ? "bg-green-500/40 dark:bg-green-900/90 dark:shadow-inner-card"
-    : "bg-green-300/20 dark:bg-[#323232]/70 dark:shadow-inner-card";
+    ? "bg-[#2FCE27] shadow-inner drop-shadow-lg"
+    : "bg-white shadow-inner drop-shadow-lg";
   const avatarStyle = isActive
     ? "bg-gradient-to-t from-green-500 to-green-800 text-white"
-    : "dark:bg-white dark:text-black bg-slate-200 text-black";
+    : "bg-slate-100 text-black";
 
   const renderLeft = () => {
     return stepNumber % 2 === 0 ? (
-      <div
-        className="col-start-1 col-end-5 hidden w-full flex-col items-end justify-center space-y-3 lg:flex"
-        data-aos="zoom-in"
-      >
-        <Label variant={"heading2"}>{title}</Label>
-        <Label className="text-end font-poppins text-xl">{description}</Label>
-      </div>
+      isActive && (
+        <div
+          className="col-start-1 col-end-5 hidden w-full flex-col items-end justify-center space-y-3 lg:flex"
+          data-aos="zoom-in"
+        >
+          <Label variant={"heading2"}>{title}</Label>
+          <Label variant={"subtitle"} className="text-end">
+            {description}
+          </Label>
+        </div>
+      )
     ) : (
       <HowToCard
         className={cn(
@@ -81,18 +85,22 @@ const StepCard = ({
         )}
       </HowToCard>
     ) : (
-      <div
-        className="col-start-6 col-end-12 hidden w-full flex-col items-start justify-center space-y-3 lg:flex"
-        data-aos="zoom-in"
-      >
-        <Label variant={"heading2"}>{title}</Label>
-        <Label className="text-start font-poppins text-xl">{description}</Label>
-      </div>
+      isActive && (
+        <div
+          className="col-start-6 col-end-12 hidden w-full flex-col items-start justify-center space-y-3 lg:flex"
+          data-aos="zoom-in"
+        >
+          <Label variant={"heading2"}>{title}</Label>
+          <Label variant={"subtitle"} className="text-start">
+            {description}
+          </Label>
+        </div>
+      )
     );
   };
 
   return (
-    <div
+    <section
       className={`flex ${stepNumber % 2 === 0 ? "gap-10" : "flex-row-reverse gap-10"} md:contents lg:gap-0`}
       onClick={onClick}
     >
@@ -107,8 +115,10 @@ const StepCard = ({
         >
           <div
             className={cn(
-              "w-2 bg-slate-200 dark:bg-slate-400",
+              "w-2",
               handleLenght(stepNumber).height,
+              currentStep >= stepNumber ? "bg-green-500" : "bg-slate-100",
+              "transition-colors duration-500 ease-in-out",
             )}
           />
         </div>
@@ -123,7 +133,7 @@ const StepCard = ({
       </div>
 
       {renderRight()}
-    </div>
+    </section>
   );
 };
 
