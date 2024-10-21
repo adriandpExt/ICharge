@@ -51,7 +51,7 @@ const HowTo = () => {
             setStep(index + 1);
           }
         },
-        { threshold: 0.5 },
+        { threshold: 1 },
       );
 
       if (stepRefs.current[index]) {
