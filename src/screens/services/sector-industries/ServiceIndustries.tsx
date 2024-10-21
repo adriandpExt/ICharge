@@ -2,6 +2,10 @@ import { Industries } from "./types";
 import { ReactElement } from "react";
 import { Check } from "lucide-react";
 import sectorHospitality from "@/assets/sectors/sectorHospitality.png";
+import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
+import sectorTransport from "@/assets/sectors/sectorTransport.jpg";
+import sectorEvents from "@/assets/sectors/sectorEvents.jpg";
+import sectorRetail from "@/assets/sectors/sectorRetail.jpg";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 
@@ -19,46 +23,46 @@ const ServiceIndustries = (): ReactElement => {
       ],
     },
     {
-      title: "HOSPITALITY",
+      title: "Healthcare",
       subTitle:
-        "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected.",
-      image: sectorHospitality,
+        "Offer peace of mind by providing charging stations in hospitals, clinics, gyms, and wellness centers, making the visit more comfortable for patients and visitors.",
+      image: sectorHealthCare,
       description: [
-        "Enhances guest satisfaction, leading to positive reviews and repeat visits.",
-        "Encourages guests to spend more time in common areas.",
-        "Differentiates your business by offering a unique, customer-focused service.",
+        "Improves the patient and visitor experience with convenient charging access.",
+        "Reduces stress for visitors who rely on their phones for essential communication.",
+        "Shows your facility’s commitment to innovation and customer care.",
       ],
     },
     {
-      title: "HOSPITALITY",
+      title: "Transport",
       subTitle:
-        "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected.",
-      image: sectorHospitality,
+        "Keep travelers connected in airports, bus terminals, train stations, and other transport hubs by offering convenient charging solutions.",
+      image: sectorTransport,
       description: [
-        "Enhances guest satisfaction, leading to positive reviews and repeat visits.",
-        "Encourages guests to spend more time in common areas.",
-        "Differentiates your business by offering a unique, customer-focused service.",
+        "Provides critical charging services to passengers, reducing stress over low battery levels.",
+        "Enhances customer satisfaction and improves perceptions of your transport hub.",
+        "Increases dwell time in commercial areas such as airport shops and cafés.",
       ],
     },
     {
-      title: "HOSPITALITY",
+      title: "Leisure & Events",
       subTitle:
-        "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected.",
-      image: sectorHospitality,
+        "Keep attendees engaged during concerts, festivals, exhibitions, and sports events by offering reliable charging options that ensure they can stay connected.",
+      image: sectorEvents,
       description: [
-        "Enhances guest satisfaction, leading to positive reviews and repeat visits.",
-        "Encourages guests to spend more time in common areas.",
-        "Differentiates your business by offering a unique, customer-focused service.",
+        "Keeps attendees connected, allowing them to share their experiences online.",
+        "Reduces frustration over low battery levels, enhancing the overall event experience..",
+        "Increases dwell time, especially for multi-day events.",
       ],
     },
     {
-      title: "HOSPITALITY",
+      title: "Retail",
       subTitle:
-        "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected.",
-      image: sectorHospitality,
+        "Enhance the shopping experience by offering charging stations in malls, supermarkets, department stores, and boutiques, encouraging customers to stay longer.",
+      image: sectorRetail,
       description: [
-        "Enhances guest satisfaction, leading to positive reviews and repeat visits.",
-        "Encourages guests to spend more time in common areas.",
+        "Increases dwell time, leading to more purchases.",
+        "Customizable branding to align with store aesthetics.",
         "Differentiates your business by offering a unique, customer-focused service.",
       ],
     },
