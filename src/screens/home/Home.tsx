@@ -8,6 +8,7 @@ import Sector from "./sector";
 
 import WhyICharge from "./why-icharge/WhyIcharge";
 import Services from "./service";
+import Staypowered from "./staypowered";
 
 const Home = (): ReactElement => {
   return (
@@ -17,6 +18,7 @@ const Home = (): ReactElement => {
       <Services />
       <Sector />
       <Products />
+      <Staypowered />
       <HowTo />
     </>
   );
