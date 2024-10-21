@@ -25,7 +25,7 @@ const PartnerWithUs = (): ReactElement => {
 
         <Button
           variant={"custombutton"}
-          className="group items-center bg-white text-green-600 hover:text-white"
+          className="group w-64 items-center bg-white text-green-600 hover:text-white"
         >
           Contact Us
           <ChevronRight className="text-green-600 group-hover:text-white" />
