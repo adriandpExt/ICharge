@@ -23,10 +23,12 @@ export default function Component() {
             Convenient, reliable charging solutions for all your devices,
             wherever you go.
           </p>
-          <button className="flex items-center rounded-md bg-white px-4 py-2 font-semibold text-green-500 transition-colors duration-300 hover:bg-green-500 hover:text-white">
-            View Products
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
+          <div className="flex justify-center md:justify-start">
+            <button className="flex items-center rounded-md bg-white px-4 py-2 font-semibold text-green-500 transition-colors duration-300 hover:bg-green-500 hover:text-white">
+              View Products
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
