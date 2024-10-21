@@ -65,13 +65,15 @@ const Sector = (): ReactElement => {
         >
           <CarouselContent className="flex h-[100%]">
             {sector.map(({ title, bgImage }, index) => (
-              <CarouselItem className="relative mr-4 min-w-0 flex-[0_0_70%]">
+              <CarouselItem
+                className="relative mr-4 min-w-0 flex-[0_0_70%]"
+                key={index}
+              >
                 <IndustryCard
                   card={{ title, bgImage }}
                   className={
                     index !== currentIndex ? "opacity-25" : "opacity-100"
                   }
-                  key={index}
                   isDesktop={false}
                 />
               </CarouselItem>
