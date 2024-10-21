@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import stayPoweredLogo from "@/assets/stayPoweredLogo.png";
+import { Label } from "@/components/ui/label";
 
 export default function Component() {
   return (
@@ -9,15 +10,15 @@ export default function Component() {
           <img
             src={stayPoweredLogo}
             alt="iCharge devices"
-            className="mx-auto h-[500px] w-full object-contain"
+            className="mx-auto h-[300px] w-full object-contain lg:h-[500px]"
           />
         </div>
 
         {/* Text content */}
         <div className="w-full text-center text-white md:w-1/2 md:text-left">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+          <Label className="mb-4 text-3xl font-bold md:text-4xl">
             STAY POWERED WITH ICHARGE
-          </h2>
+          </Label>
           <p className="mb-6 text-base md:text-lg">
             Convenient, reliable charging solutions for all your devices,
             wherever you go.
