@@ -15,7 +15,6 @@ const Home = (): ReactElement => {
       <WhyICharge />
       <Services />
       <Sector />
-
       <Staypowered />
       <HowTo />
     </>
