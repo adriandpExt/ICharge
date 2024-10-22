@@ -1,5 +1,6 @@
 export interface TInquiryForm {
-  fullname: string;
+  firstname: string;
+  lastname: string;
   company: string;
   email: string;
   phoneNumber: string;
