@@ -1,22 +1,22 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
+import { IconName } from "../svg-icons/utils";
+
+import LocalizationKey from "@/i18n/key";
+
+import qrApp from "@/assets/qr-mobile-app.jpg";
+
+import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
 import { SvgIcons } from "../svg-icons";
-import playstore from "@/assets/icons/ic_playstore_footer.svg";
-import applestore from "@/assets/icons/ic_apple_footer.svg";
-import { Link } from "react-router-dom";
-import {
-  bottomLinks,
-  companyLinks,
-  platformLinks,
-  renderItems,
-} from "../footer/utils";
-import { IconName } from "../svg-icons/utils";
-import { Label } from "@/components/ui/label";
-import { ArrowRight } from "lucide-react";
+
+import { bottomLinks, companyLinks, followUs, platformLinks } from "./utils";
+
 import SectionItem from "./SectionItem";
-import { useTranslation } from "react-i18next";
-import LocalizationKey from "@/i18n/key";
-import qrApp from "@/assets/qr-mobile-app.jpg";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -26,29 +26,9 @@ export const Footer = () => {
   return (
     <footer className="bg-customGreen p-6 text-white md:p-10">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-6">
-          <div className="col-span-1 hidden md:col-span-2 md:flex lg:col-span-1">
-            <SvgIcons name="ic_footer_logo" size={200} />
-          </div>
-
-          <div>
-            <div>
-              <Label className="mb-4 flex text-xl font-semibold">
-                {t(LocalizationKey.footer.followUs)}
-              </Label>
-              <div className="flex space-x-4">
-                {renderItems.follow.items.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.path}
-                    target={item.path.startsWith("http") ? "_blank" : "_self"}
-                    rel="noopener noreferrer"
-                  >
-                    <SvgIcons name={item.icon as IconName} size={24} />
-                  </Link>
-                ))}
-              </div>
-            </div>
+        <div className="grid grid-cols-2 gap-2 lg:grid-cols-5">
+          <div className="lg:flex lg:items-center lg:justify-center">
+            <SvgIcons name="ic_svl_sig" size={100} />
           </div>
 
           <SectionItem
@@ -56,31 +36,33 @@ export const Footer = () => {
             title={t(LocalizationKey.footer.platforms)}
           />
 
-          <div className="bg-white">
-            <img
-              src={qrApp}
-              alt="QR CODE"
-              className="h-[250px] w-[250px] object-contain"
-            />
-          </div>
           <SectionItem
             links={companyLinks}
             title={t(LocalizationKey.footer.company)}
             onClick={handleClick}
           />
 
-          <div className="col-span-1 text-center md:col-span-2 lg:col-span-1 lg:text-start">
+          <div className="flex flex-col gap-1">
+            <Label className="text-xl font-semibold">
+              {t(LocalizationKey.footer.downloadApp)}
+            </Label>
+            <img
+              src={qrApp}
+              alt="QR CODE"
+              className="h-28 w-28 rounded-3xl border-4 border-green-600 object-contain lg:h-40 lg:w-40"
+            />
+          </div>
+
+          <div className="hidden gap-3 text-start lg:flex lg:flex-col">
             <Label className="mb-4 text-2xl font-bold">
               {t(LocalizationKey.footer.stayInTheLoop)}
             </Label>
             <div>
-              <Label className="mb-4">
-                {t(LocalizationKey.footer.joinNewsletter)}
-              </Label>
+              <Label>{t(LocalizationKey.footer.joinNewsletter)}</Label>
             </div>
 
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <div className="flex flex-grow items-center">
+            <div className="flex flex-col sm:flex-row">
+              <div className="flex flex-grow items-center gap-2">
                 <Input
                   type="email"
                   placeholder={t(LocalizationKey.footer.emailPlaceholder)}
@@ -88,44 +70,44 @@ export const Footer = () => {
                 />
                 <Button
                   variant="default"
-                  className="ml-2 w-24 rounded-xl bg-[#38D430]"
+                  className="w-24 rounded-xl bg-[#38D430]"
                 >
                   {t(LocalizationKey.footer.subscribe)} <ArrowRight />
                 </Button>
               </div>
             </div>
 
-            <div className="mt-5 grid grid-cols-1 place-items-center lg:text-start">
-              <Label className="mb-1 text-left text-xl font-semibold">
-                {t(LocalizationKey.footer.downloadApp)}
-              </Label>
-              <div className="flex">
-                <Link
-                  to="https://play.google.com/store/apps/details?id=com.phl.charge"
-                  target="_blank"
-                  className="mr-1"
-                >
-                  <img
-                    loading="lazy"
-                    src={playstore}
-                    alt="playstore"
-                    width={180.32}
-                    height={48.72}
-                  />
-                </Link>
-                <Link
-                  to="https://apps.apple.com/us/app/icharge-ph/id6478515634"
-                  target="_blank"
-                >
-                  <img
-                    loading="lazy"
-                    src={applestore}
-                    alt="applestore"
-                    width={180.32}
-                    height={48.72}
-                  />
-                </Link>
-              </div>
+            <div className="flex gap-2">
+              {followUs.map((item) => (
+                <SvgIcons name={item.icon as IconName} size={30} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-5 flex flex-col text-start lg:hidden">
+          <Label className="mb-4 text-2xl font-bold">
+            {t(LocalizationKey.footer.stayInTheLoop)}
+          </Label>
+          <div>
+            <Label className="mb-4">
+              {t(LocalizationKey.footer.joinNewsletter)}
+            </Label>
+          </div>
+
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <div className="flex flex-grow items-center">
+              <Input
+                type="email"
+                placeholder={t(LocalizationKey.footer.emailPlaceholder)}
+                className="flex-grow border-white bg-green-900 text-white placeholder:text-xs"
+              />
+              <Button
+                variant="default"
+                className="ml-2 w-24 rounded-xl bg-[#38D430]"
+              >
+                {t(LocalizationKey.footer.subscribe)} <ArrowRight />
+              </Button>
             </div>
           </div>
         </div>
