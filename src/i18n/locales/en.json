@@ -258,14 +258,7 @@
     ]
   },
 
-  "sustainability": {
-    "sustainabilityHeading": {
-      "label": "Sustainability"
-    },
-    "sustainabilitySubHeading": {
-      "label": "At ICharge, we are all about doing business the right way. Beyond offering a cutting-edge power bank sharing service, we are on a mission to use our influence for good. Our commitment to sustainability is not just a tagline; it's about making sure we run things responsibly and ethically in our day-to-day operations."
-    }
-  },
+  
   "partnerWithUs": {
     "partnerWithUsHeading": {
       "label": "PARTNER WITH US"
@@ -277,51 +270,34 @@
       "label": "Inquire"
     }
   },
-  "bookDemo": {
-    "heading": { "label": "BOOK A DEMO" },
-    "whatBringYouHere": { "label": "What's bring you here?" },
-    "firstname": { "label": "First Name" },
-    "lastname": { "label": "Last Name" },
-    "email": {
-      "label": "Email"
+
+  "services": {
+    "serviceFreeEquipmentsubTitle": {
+      "label": "By partnering with iCharge, businesses can provide a valuable service to their customers without upfront costs. We handle everything from installation to maintenance and customer support, ensuring your customers remain powered and engaged longer."
     },
-    "renderIssue": {
-      "address": { "label": "Address" },
-      "issue": {
-        "label": "Issue"
-      },
-      "explainIssue": {
-        "label": "Please explain the issue"
-      }
+    "serviceFreeEquipmentbody1": {
+      "label": "No cost for equipment, hardware updates, or full-service maintenance."
     },
-    "renderWantChargeStation": {
-      "phoneNumber": {
-        "label": "Phone Number"
-      },
-      "companyName": {
-        "label": "Company Name"
-      },
-      "sector": {
-        "label": "Sector"
-      },
-      "interestedIcharge": {
-        "label": "Why are you interested in ICharge?"
-      }
+    "serviceFreeEquipmentbody2": {
+      "label": "Keeps visitors connected, enhancing their overall experience."
     },
-    "renderBringICharge": {
-      "phoneNumber": { "label": "Phone Number" },
-      "country": {
-        "label": "Country"
-      },
-      "additionalInformation": {
-        "label": "Additional Information"
-      }
+    "serviceFreeEquipmentbody3": {
+      "label": "Positions your business as tech-savvy and customer-focused."
     },
-    "demoFooter": {
-      "label": "ICHARGE needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our Privacy Policy."
+    "serviceSaleEquipmentsubTitle": {
+      "label": "For businesses looking to own their charging stations, we offer a purchase option, allowing you to provide this service while creating an additional revenue stream."
     },
-    "bookDemoBtn": {
-      "label": "Continue"
+    "serviceSaleEquipmentbody1": {
+      "label": "Ownership of stations and revenue from powerbank rentals."
+    },
+    "serviceSaleEquipmentbody2": {
+      "label": "Customization and branding opportunities."
+    },
+    "serviceSaleEquipmentbody3": {
+      "label": "Increases customer foot traffic and engagement."
+    },
+    "serviceSustainabilitySocialbody": {
+      "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
     }
   }
 }

@@ -1,7 +1,10 @@
+import { TInquiryForm } from "./type";
+
 import { z } from "zod";
 
-export const inquiryDefaultValues = {
-  fullname: "",
+export const inquiryDefaultValues: TInquiryForm = {
+  firstname: "",
+  lastname: "",
   company: "",
   email: "",
   phoneNumber: "",
@@ -9,7 +12,8 @@ export const inquiryDefaultValues = {
 };
 
 export const inquiryFormSchema = z.object({
-  fullname: z.string().min(1, "Fullname is requried"),
+  firstname: z.string().min(1, "First name is requried"),
+  lastname: z.string().min(1, "Last name is requried"),
   company: z.string().min(1, "Company is requried"),
   email: z.string().email({ message: "must be a valid email" }),
   phoneNumber: z
@@ -19,4 +23,4 @@ export const inquiryFormSchema = z.object({
       message: "Must be in the format +63 9xx xxx xxxx",
     }),
   content: z.string().min(1, "Content is required"),
-});
+}) as z.ZodType<TInquiryForm>;
