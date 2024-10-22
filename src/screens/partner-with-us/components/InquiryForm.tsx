@@ -112,7 +112,7 @@ export const InquiryForm = (): ReactElement => {
           />
 
           <div className="text-end">
-            <Button className="w-full lg:w-96">Contact Us</Button>
+            <Button className="w-full lg:w-80">Contact Us</Button>
           </div>
         </div>
       </Form>
@@ -150,7 +150,10 @@ export const InquiryForm = (): ReactElement => {
     );
   };
   return (
-    <PageContainer className="flex w-full items-center justify-center py-0">
+    <PageContainer
+      id="inquiryForm"
+      className="flex w-full items-center justify-center py-0"
+    >
       <Card className="grid h-full w-full grid-cols-1 rounded-xl border-0 bg-white shadow-2xl drop-shadow-2xl lg:grid-cols-2">
         {renderContact()}
 

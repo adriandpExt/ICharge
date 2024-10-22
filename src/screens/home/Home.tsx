@@ -2,7 +2,6 @@ import { ReactElement } from "react";
 
 import HeroSection from "./HeroSection";
 import HowTo from "./how-to";
-
 import Sector from "./sector";
 
 import WhyICharge from "./why-icharge/WhyIcharge";
