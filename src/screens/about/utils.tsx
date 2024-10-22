@@ -7,7 +7,7 @@ export const SumVal: SumStep[] = [
         list: [
             "Real-Time Monitoring: Efficiently manage stations with live data insights.",
             "Global Payment Integration: Supports various payment methods, including GCash, GrabPay, Alipay, and credit cards, enabling access to charging services both locally and internationally.",
-            "24/7 Technical support: Available for all partners and end-users, ensuring operational reliability and customer satisfaction."
+            "24/7 Technical Support: Available for all partners and end-users, ensuring operational reliability and customer satisfaction."
         ]
     },
     {

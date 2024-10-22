@@ -3,6 +3,8 @@ import { TInquiryForm } from "./type";
 import { ReactElement, useRef } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
+import { Mail, MapPin, Phone } from "lucide-react";
+
 import emailjs from "@emailjs/browser";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -19,6 +21,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
 
 import { inquiryDefaultValues, inquiryFormSchema } from "./utils";
 
@@ -71,11 +75,19 @@ export const InquiryForm = (): ReactElement => {
         onSubmit={handleInquiryFormSubmit}
       >
         <div className="flex flex-col gap-5">
-          <TextField
-            control={inquiryForm.control}
-            name="fullname"
-            label="Fullname*"
-          />
+          <div className="grid w-full grid-cols-1 gap-3 lg:grid-cols-2">
+            <TextField
+              control={inquiryForm.control}
+              name="firstname"
+              label="First name*"
+            />
+            <TextField
+              control={inquiryForm.control}
+              name="lastname"
+              label="Last name*"
+            />
+          </div>
+
           <TextField
             control={inquiryForm.control}
             name="company"
@@ -99,7 +111,7 @@ export const InquiryForm = (): ReactElement => {
             label="Content*"
           />
 
-          <div className="text-center">
+          <div className="text-end">
             <Button className="w-full lg:w-96">Contact Us</Button>
           </div>
         </div>
@@ -107,20 +119,50 @@ export const InquiryForm = (): ReactElement => {
     );
   };
 
+  const renderContact = (): ReactElement => {
+    return (
+      <div className="flex flex-col items-start justify-center gap-8 rounded-t-xl border-0 bg-white bg-gradient-to-b from-[#044F00] to-[#078E00] p-10 text-white shadow-2xl drop-shadow-2xl lg:rounded-l-xl lg:rounded-tr-none">
+        <Separator className="bg-white" />
+        <Label variant={"body"} className="flex items-center gap-5">
+          <Phone size={32} strokeWidth={3} /> +63 918 738 8888
+        </Label>
+        <Label variant={"body"} className="flex items-center gap-5">
+          <Mail size={32} strokeWidth={3} /> QDiCharge@gmail.com
+        </Label>
+
+        <Label
+          variant={"body"}
+          className="hidden items-center gap-5 whitespace-pre-line lg:flex"
+        >
+          <MapPin size={32} strokeWidth={3} />
+          Unit 2402 City Trade and Financial Tower, 7th Avenue, BGC, Taguig
+        </Label>
+
+        <div className="flex items-center gap-5 lg:hidden">
+          <MapPin size={32} strokeWidth={3} />
+          <div className="flex flex-col">
+            <Label variant={"body"}>Unit 2402 City</Label>
+            <Label variant={"body"}>Trade and Financial Tower,</Label>
+            <Label variant={"body"}> 7th Avenue, BGC, Taguig</Label>
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
-    <PageContainer className="flex w-full items-center justify-center">
-      <Card className="h-full w-full rounded-xl border-0 bg-slate-300 shadow-2xl drop-shadow-2xl lg:w-1/2">
-        <CardHeader className="rounded-t-xl bg-white py-20">
-          <CardTitle className="text-center text-3xl">
-            Franchise Inquiry Form
-          </CardTitle>
-          <CardDescription>
-            This form is only for inquiries regarding franchising and all other
-            inquiries will not be passed on. Please inquire at the appropriate
-            location if your inquiry pertains to a different subject.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="p-10">{renderForm()}</CardContent>
+    <PageContainer className="flex w-full items-center justify-center py-0">
+      <Card className="grid h-full w-full grid-cols-1 rounded-xl border-0 bg-white shadow-2xl drop-shadow-2xl lg:grid-cols-2">
+        {renderContact()}
+
+        <div>
+          <CardHeader className="rounded-t-xl bg-white py-20">
+            <CardTitle className="text-center">
+              <Label variant={"title"}>FRANCHISE INQUIRY FORM</Label>
+            </CardTitle>
+            <CardDescription />
+          </CardHeader>
+          <CardContent>{renderForm()}</CardContent>
+        </div>
       </Card>
     </PageContainer>
   );
