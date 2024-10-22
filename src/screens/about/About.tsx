@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactElement } from "react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { ChevronRight } from "lucide-react";
@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 import { Banner } from "@/components";
 import AboutComponent from "./AboutComponent";
 
-const Sustainabilities: React.FC = () => {
+const Sustainabilities = (): ReactElement => {
   return (
     <section className="">
       <Banner title="QUANTA DANCE INC">
