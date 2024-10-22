@@ -71,7 +71,12 @@ const ServiceIndustries = (): ReactElement => {
   return (
     <section className="space-y-10">
       <div className="flex flex-col space-y-5 text-center">
-        <Label variant="heading1">INDUSTRIES WE SERVE</Label>
+        <Label
+          variant="banner"
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+        >
+          INDUSTRIES WE SERVE
+        </Label>
         <Label variant="subtitle">Powering Anyone, Anytime, Anywhere</Label>
       </div>
       {/* desktop view */}
