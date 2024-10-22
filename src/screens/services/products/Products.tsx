@@ -1,4 +1,6 @@
 import { Product } from "./types";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Carousel,
   CarouselContent,
@@ -8,13 +10,12 @@ import {
 } from "@/components/ui/carousel";
 import ProductModal from "./components/ProductModal"; // Make sure this component exists and is functioning
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { initValue, products } from "./utils";
-import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
 import SvgIcons from "@/components/svg-icons/SvgIcons";
+import { cn } from "@/lib/utils";
 import LocalizationKey from "@/i18n/key";
-import { useTranslation } from "react-i18next";
+import { initValue, products } from "./utils";
+
 
 const Features = () => {
   const { t } = useTranslation();
@@ -68,7 +69,7 @@ const Features = () => {
                 key={index}
                 className="custom-lg:basisOneThird flex h-[30rem] w-full items-center justify-center md:h-[40rem]"
               >
-                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 shadow-md shadow-black/40 md:h-[30rem] lg:w-[25rem] lg:px-10">
+                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 text-center shadow-md shadow-black/40 md:h-[30rem] lg:w-[25rem] lg:px-10">
                   <div
                     className={cn(
                       "absolute -z-40 h-[50svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
@@ -93,12 +94,12 @@ const Features = () => {
                     <SvgIcons name="ic_svl_ig" size={50} />
                   </div>
                   <img
-                    src={data.image}
+                    src={data.productDetails.image}
                     className="h-[50%] w-auto object-contain"
                     alt="Product Image"
                   />
                   <h1 className="font-sans text-4xl font-semibold tracking-tighter text-white">
-                    {data.name}
+                    {data.productDetails.name}
                   </h1>
                   <Button
                     className="w-20 rounded-3xl bg-green-500 text-black hover:bg-green-400"

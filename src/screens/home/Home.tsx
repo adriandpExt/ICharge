@@ -2,7 +2,6 @@ import { ReactElement } from "react";
 
 import HeroSection from "./HeroSection";
 import HowTo from "./how-to";
-import Products from "./products/Products";
 
 import Sector from "./sector";
 
@@ -17,7 +16,6 @@ const Home = (): ReactElement => {
       <WhyICharge />
       <Services />
       <Sector />
-      <Products />
       <Staypowered />
       <HowTo />
     </>
