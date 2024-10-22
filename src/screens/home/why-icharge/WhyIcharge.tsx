@@ -11,12 +11,11 @@ const WhyICharge = () => {
 
   return (
     <PageContainer className="flex flex-col sm:px-6 lg:px-8">
-      <Label variant={"heading1"} className="mb-12 text-center">
-        {t(LocalizationKey.home.whyIcharge)}
-        <span className="font-staatliches text-4xl font-bold text-green-500 md:text-5xl">
-          I
-        </span>
-        Charge
+      <Label
+        variant={"banner"}
+        className="mb-12 bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent"
+      >
+        {t(LocalizationKey.home.whyIcharge)}ICharge
       </Label>
 
       <div className="space-y-24 sm:space-y-36">

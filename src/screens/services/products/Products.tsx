@@ -40,7 +40,10 @@ const Features = () => {
   return (
     <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20">
       <div className="container mx-auto flex flex-col place-items-center">
-        <Label variant={"heading1"} className="text-center text-black lg:mb-14">
+        <Label
+          variant={"banner"}
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:mb-14"
+        >
           {t(LocalizationKey.home.products)}
         </Label>
         <Carousel
