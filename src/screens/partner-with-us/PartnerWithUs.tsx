@@ -13,6 +13,13 @@ import { Banner, PageContainer } from "@/components";
 import { InquiryForm } from "./components";
 
 const PartnerWithUs = (): ReactElement => {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Banner title="EMPOWER YOUR BUSINESS">
@@ -24,6 +31,7 @@ const PartnerWithUs = (): ReactElement => {
         </Label>
 
         <Button
+          onClick={() => scrollToSection("inquiryForm")}
           variant={"custombutton"}
           className="group w-64 items-center bg-white text-green-600 hover:text-white"
         >
