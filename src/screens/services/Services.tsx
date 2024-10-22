@@ -18,9 +18,9 @@ const Services = (): ReactElement => {
         </Label>
         <Button
           variant="outline"
-          className="h-10 bg-slate-100 text-green-600 hover:bg-slate-200 border-0"
+          className="h-10 border-0 bg-slate-100 text-green-600 hover:bg-slate-200"
         >
-          <div className="flex w-32 justify-between items-center">
+          <div className="flex w-32 items-center justify-between">
             <Label>View Products</Label>
             <ChevronRight />
           </div>
