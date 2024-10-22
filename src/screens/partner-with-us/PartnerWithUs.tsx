@@ -51,7 +51,10 @@ const PartnerWithUs = (): ReactElement => {
           </div>
 
           <div>
-            <Label variant={"banner"} className="text-green-600">
+            <Label
+              variant={"banner"}
+              className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+            >
               WHY PARTNER WITH US?
             </Label>
 
@@ -81,7 +84,10 @@ const PartnerWithUs = (): ReactElement => {
           </div>
 
           <div>
-            <Label variant={"banner"} className="text-green-600">
+            <Label
+              variant={"banner"}
+              className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+            >
               JOIN US
             </Label>
 
