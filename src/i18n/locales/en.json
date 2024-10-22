@@ -323,5 +323,38 @@
     "bookDemoBtn": {
       "label": "Continue"
     }
+  },
+  "serviceFreeEquipment": {
+    "subTitle": {
+      "label": "By partnering with iCharge, businesses can provide a valuable service to their customers without upfront costs. We handle everything from installation to maintenance and customer support, ensuring your customers remain powered and engaged longer."
+    },
+    "body1": {
+      "label": "No cost for equipment, hardware updates, or full-service maintenance."
+    },
+    "body2": {
+      "label": "Keeps visitors connected, enhancing their overall experience."
+    },
+    "body3": {
+      "label": "Positions your business as tech-savvy and customer-focused."
+    }
+  },
+  "serviceSaleEquipments": {
+    "subTitle": {
+      "label": "For businesses looking to own their charging stations, we offer a purchase option, allowing you to provide this service while creating an additional revenue stream."
+    },
+    "body1": {
+      "label": "Ownership of stations and revenue from powerbank rentals."
+    },
+    "body2": {
+      "label": "Customization and branding opportunities."
+    },
+    "body3": {
+      "label": "Increases customer foot traffic and engagement."
+    }
+  },
+  "serviceSustainabilitySocial": {
+    "body": {
+      "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
+    }
   }
 }

@@ -92,6 +92,21 @@ const LocalizationKey = {
     demoFooter: "bookDemo.demoFooter.label",
     bookDemoBtn: "bookDemo.bookDemoBtn.label",
   },
+  serviceFreeEquipments: {
+    subTitle: "serviceFreeEquipment.subTitle.label",
+    body1: "serviceFreeEquipment.body1.label",
+    body2: "serviceFreeEquipment.body2.label",
+    body3: "serviceFreeEquipment.body3.label",
+  },
+  serviceSaleEquipments: {
+    subTitle: "serviceSaleEquipments.subTitle.label",
+    body1: "serviceSaleEquipments.body1.label",
+    body2: "serviceSaleEquipments.body2.label",
+    body3: "serviceSaleEquipments.body3.label",
+  },
+  serviceSustainabilitySocial: {
+    body: "serviceSustainabilitySocial.body.label",
+  },
 };
 
 export default LocalizationKey;
