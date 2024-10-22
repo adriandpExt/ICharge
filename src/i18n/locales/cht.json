@@ -251,14 +251,7 @@
       }
     ]
   },
-  "sustainability": {
-    "sustainabilityHeading": {
-      "label": "可持續發展"
-    },
-    "sustainabilitySubHeading": {
-      "label": "在 iCharge，我們致力於正確地經營業務。不僅提供最先進的行動電源共享服務，我們的使命是用影響力做出好事。我們對可持續發展的承諾不僅僅是一句標語，而是確保我們每天的運營負責任且合乎道德。"
-    }
-  },
+  
   "partnerWithUs": {
     "partnerWithUsHeading": {
       "label": "與我們合作"

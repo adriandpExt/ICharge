@@ -251,14 +251,7 @@
       }
     ]
   },
-  "sustainability": {
-    "sustainabilityHeading": {
-      "label": "可持续发展"
-    },
-    "sustainabilitySubHeading": {
-      "label": "在 iCharge，我们致力于正确地经营业务。不仅提供最先进的行动电源共享服务，我们的使命是用影响力做出好事。我们对可持续发展的承诺不仅仅是一句标语，而是确保我们每天的运营负责任且合乎道德。"
-    }
-  },
+
   "partnerWithUs": {
     "partnerWithUsHeading": {
       "label": "与我们合作"
