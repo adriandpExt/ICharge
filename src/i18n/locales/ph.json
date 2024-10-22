@@ -247,14 +247,7 @@
       }
     ]
   },
-  "sustainability": {
-    "sustainabilityHeading": {
-      "label": "Sustainability"
-    },
-    "sustainabilitySubHeading": {
-      "label": "Sa ICharge, lahat tayo ay tungkol sa paggawa ng negosyo sa tamang paraan. Higit pa sa pag-aalok ng isang makabagong serbisyo sa pagbabahagi ng power bank, kami ay nasa isang misyon na gamitin ang aming impluwensya para sa kabutihan. Ang aming pangako sa pagpapanatili ay hindi lamang isang tagline; ito ay tungkol sa pagtiyak na pinapatakbo natin ang mga bagay nang responsable at etikal sa ating pang-araw-araw na operasyon."
-    }
-  },
+
   "partnerWithUs": {
     "partnerWithUsHeading": {
       "label": "PARTNER SA AMIN"
@@ -264,53 +257,6 @@
     },
     "inquire": {
       "label": "Magtanong"
-    }
-  },
-  "bookDemo": {
-    "heading": { "label": "MAG-BOOK NG DEMO" },
-    "whatBringYouHere": { "label": "Anong nagdala sayo dito?" },
-    "firstname": { "label": "Pangalan" },
-    "lastname": { "label": "Apelyido" },
-    "email": {
-      "label": "Email"
-    },
-    "renderIssue": {
-      "address": { "label": "Address" },
-      "issue": {
-        "label": "Isyu"
-      },
-      "explainIssue": {
-        "label": "Pakipaliwanag ang isyu"
-      }
-    },
-    "renderWantChargeStation": {
-      "phoneNumber": {
-        "label": "Numero ng Telepono"
-      },
-      "companyName": {
-        "label": "Company Name"
-      },
-      "sector": {
-        "label": "Sector"
-      },
-      "interestedIcharge": {
-        "label": "Bakit ka interesado sa ICharge?"
-      }
-    },
-    "renderBringICharge": {
-      "phoneNumber": { "label": "Numero ng Telepono" },
-      "country": {
-        "label": "Bansa"
-      },
-      "additionalInformation": {
-        "label": "Karagdagang Impormasyon"
-      }
-    },
-    "demoFooter": {
-      "label": "Kailangan ng ICHARGE ang impormasyon sa pakikipag-ugnayan na ibinigay mo sa amin upang makipag-ugnayan sa iyo tungkol sa aming mga produkto at serbisyo. Maaari kang mag-unsubscribe sa mga komunikasyong ito anumang oras. Para sa impormasyon sa kung paano mag-unsubscribe, pati na rin ang aming mga kasanayan sa privacy at pangako sa pagprotekta sa iyong privacy, mangyaring suriin ang aming Patakaran sa Privacy."
-    },
-    "bookDemoBtn": {
-      "label": "Susunod"
     }
   }
 }

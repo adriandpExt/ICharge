@@ -2,8 +2,6 @@ import { ReactElement } from "react";
 
 import HeroSection from "./HeroSection";
 import HowTo from "./how-to";
-import Products from "./products/Products";
-
 import Sector from "./sector";
 
 import WhyICharge from "./why-icharge/WhyIcharge";
@@ -17,7 +15,7 @@ const Home = (): ReactElement => {
       <WhyICharge />
       <Services />
       <Sector />
-      <Products />
+
       <Staypowered />
       <HowTo />
     </>

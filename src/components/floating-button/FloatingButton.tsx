@@ -1,6 +1,6 @@
 import { FloatingForm } from "./type";
-import { ReactElement, useRef, useState } from "react";
-import { Bot } from "lucide-react";
+import { ReactElement, useRef } from "react";
+import { MessageCircleMore } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
@@ -14,15 +14,15 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
 
 import { Form, TextArea, TextField } from "../forms";
 
 import { formDefaultValues, formSchema } from "./utils";
 
 export const FloatingButton = (): ReactElement => {
-  const [isOpen, setIsOpen] = useState(false);
-
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
 
@@ -63,19 +63,24 @@ export const FloatingButton = (): ReactElement => {
     forms.reset();
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
   return (
-    <Popover open={isOpen} onOpenChange={setIsOpen}>
-      <PopoverTrigger className="fixed bottom-10 right-2 flex h-20 w-20 items-center justify-center rounded-full border-white bg-gradient-to-t from-[#055c00] to-[#022700] text-white shadow-2xl drop-shadow-2xl">
-        <Bot className="h-16 w-16" />
+    <Popover>
+      <PopoverTrigger className="data-[state=open]:rounded-eyedrop fixed bottom-10 right-10 hidden h-20 w-20 items-center justify-center rounded-full border-white bg-gradient-to-b from-[#38D430] to-[#1D6E19] text-white shadow-2xl drop-shadow-2xl sm:flex">
+        <MessageCircleMore size={48} strokeWidth={3} />
       </PopoverTrigger>
-      <PopoverContent className="mr-2 h-full rounded-xl border-white bg-white shadow-2xl drop-shadow-2xl">
-        <Button className="ml-52" onClick={handleClose}>
-          X
-        </Button>
+      <PopoverContent
+        align="end"
+        className="right-10 mr-2 flex h-full flex-col gap-3 rounded-xl border-white bg-white shadow-2xl drop-shadow-2xl"
+      >
+        <div className="flex flex-col gap-1">
+          <Label className="text-base font-semibold text-green-600">
+            We&apos;re Here to Help!
+          </Label>
+          <Label className="text-base font-semibold text-green-600">
+            Send Us a Message.
+          </Label>
+        </div>
+        <Separator className="bg-green-600" />
         <Form ref={formRef} forms={forms} onSubmit={handleSubmit}>
           <TextField name="fullname" control={forms.control} label="Fullname" />
           <TextField name="email" control={forms.control} label="Email" />
@@ -85,7 +90,7 @@ export const FloatingButton = (): ReactElement => {
             label="Message"
             className="h-36 w-full resize-none"
           />
-          <Button className="mt-2 w-full">Send</Button>
+          <Button className="mt-2 w-full">Send Message</Button>
         </Form>
       </PopoverContent>
     </Popover>
