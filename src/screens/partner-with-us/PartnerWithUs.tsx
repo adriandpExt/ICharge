@@ -33,7 +33,7 @@ const PartnerWithUs = (): ReactElement => {
         <Button
           onClick={() => scrollToSection("inquiryForm")}
           variant={"custombutton"}
-          className="group w-64 items-center bg-white text-green-600 hover:text-white"
+          className="group h-10 w-32 items-center bg-white text-green-600 hover:text-white"
         >
           Contact Us
           <ChevronRight className="text-green-600 group-hover:text-white" />
