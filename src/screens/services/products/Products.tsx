@@ -1,4 +1,6 @@
 import { Product } from "./types";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Carousel,
   CarouselContent,
@@ -8,13 +10,11 @@ import {
 } from "@/components/ui/carousel";
 import ProductModal from "./components/ProductModal"; // Make sure this component exists and is functioning
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { initValue, products } from "./utils";
-import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
 import SvgIcons from "@/components/svg-icons/SvgIcons";
+import { cn } from "@/lib/utils";
 import LocalizationKey from "@/i18n/key";
-import { useTranslation } from "react-i18next";
+import { initValue, products } from "./utils";
 
 const Features = () => {
   const { t } = useTranslation();
@@ -37,17 +37,12 @@ const Features = () => {
     setCurrentIndex(index); // Update the current carousel index
   };
 
-  const carouselItemDarkTop =
-    "dark:border-t-2 dark:border-green-400 dark:bg-[#2E3935] shadow-inner dark:shadow-[#414141]";
-  const carouselItemDarkBottom =
-    "dark:border-b-2 dark:border-green-400 dark:bg-[#194B21]/50 dark:shadow-green-400";
-
   return (
-    <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20 dark:bg-gradient-to-br">
+    <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20">
       <div className="container mx-auto flex flex-col place-items-center">
         <Label
-          variant={"heading1"}
-          className="text-center text-black dark:text-white lg:mb-14"
+          variant={"banner"}
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:mb-14"
         >
           {t(LocalizationKey.home.products)}
         </Label>
@@ -68,11 +63,10 @@ const Features = () => {
                 key={index}
                 className="custom-lg:basisOneThird flex h-[30rem] w-full items-center justify-center md:h-[40rem]"
               >
-                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 shadow-md shadow-black/40 md:h-[30rem] lg:w-[25rem] lg:px-10">
+                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 text-center shadow-md shadow-black/40 md:h-[30rem] lg:w-[25rem] lg:px-10">
                   <div
                     className={cn(
                       "absolute -z-40 h-[50svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
-                      carouselItemDarkTop,
                       "border-0 bg-[#C7E9C0]",
                     )}
                     style={{
@@ -82,7 +76,6 @@ const Features = () => {
                   <div
                     className={cn(
                       "absolute -z-50 h-[48svh] w-[80svw] rounded-[3rem] shadow-inner md:h-[28.8rem] lg:w-[25rem]",
-                      carouselItemDarkBottom,
                       "border-[#B7FAB1] border-x-[1] bg-[#E0EEDE]",
                     )}
                     style={{
@@ -93,12 +86,12 @@ const Features = () => {
                     <SvgIcons name="ic_svl_ig" size={50} />
                   </div>
                   <img
-                    src={data.image}
+                    src={data.productDetails.image}
                     className="h-[50%] w-auto object-contain"
                     alt="Product Image"
                   />
                   <h1 className="font-sans text-4xl font-semibold tracking-tighter text-white">
-                    {data.name}
+                    {data.productDetails.name}
                   </h1>
                   <Button
                     className="w-20 rounded-3xl bg-green-500 text-black hover:bg-green-400"
@@ -113,14 +106,12 @@ const Features = () => {
           <CarouselPrevious
             className={cn(
               "custom-lg:flex hidden aspect-square scale-150 rounded-e-none text-green-500 hover:text-green-200",
-              "dark:border-x-[0.5px] dark:border-t-[1.5] dark:bg-black/50 dark:text-white dark:shadow-inner dark:shadow-green-700 dark:hover:bg-black/40",
               "border-[#D1F9C9] bg-[#E0EFDF]",
             )}
           />
           <CarouselNext
             className={cn(
               "custom-lg:flex hidden aspect-square scale-150 rounded-s-none text-green-500 hover:text-green-200",
-              "dark:border-x-[0.5px] dark:border-t-[1.5] dark:bg-black/50 dark:text-white dark:shadow-inner dark:shadow-green-700 dark:hover:bg-black/40",
               "border-[#D1F9C9] bg-[#E0EFDF]",
             )}
           />

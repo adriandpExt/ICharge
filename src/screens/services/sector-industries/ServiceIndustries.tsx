@@ -7,6 +7,7 @@ import sectorTransport from "@/assets/sectors/sectorTransport.jpg";
 import sectorEvents from "@/assets/sectors/sectorEvents.jpg";
 import sectorRetail from "@/assets/sectors/sectorRetail.jpg";
 import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 const ServiceIndustries = (): ReactElement => {
@@ -70,7 +71,12 @@ const ServiceIndustries = (): ReactElement => {
   return (
     <section className="space-y-10">
       <div className="flex flex-col space-y-5 text-center">
-        <Label variant="heading1">INDUSTRIES WE SERVE</Label>
+        <Label
+          variant="banner"
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+        >
+          INDUSTRIES WE SERVE
+        </Label>
         <Label variant="subtitle">Powering Anyone, Anytime, Anywhere</Label>
       </div>
       {/* desktop view */}
@@ -80,7 +86,7 @@ const ServiceIndustries = (): ReactElement => {
         >
           <div
             className={cn(
-              "flex w-full bg-green-500/25 md:h-[25rem] lg:h-[30rem]",
+              "flex w-full border-t-4 border-green-500 bg-green-500/25 md:h-[25rem] lg:h-[30rem]",
               index % 2 !== 0 && "flex-row-reverse",
             )}
             key={index}
@@ -114,7 +120,9 @@ const ServiceIndustries = (): ReactElement => {
       {/* mobile view */}
       {serviceIndustries.map((data, index) => (
         <div
-          className={cn("flex w-full flex-col bg-green-500/25 md:hidden")}
+          className={cn(
+            "flex w-full flex-col border-b-4 border-green-500 bg-green-500/25 md:hidden",
+          )}
           key={index}
         >
           <img
@@ -125,7 +133,14 @@ const ServiceIndustries = (): ReactElement => {
             )}
           />
           <div className="flex w-full flex-col space-y-5 p-5">
-            <Label variant="title">{data.title}</Label>
+            <Label variant="title" className="text-center">
+              {data.title}
+            </Label>
+            <Separator
+              orientation="horizontal"
+              className="border-2 border-green-500"
+            />
+            <Separator orientation="vertical" className="" />
             <Label variant="subtitle">{data.subTitle}</Label>
             {data.description.map((data, index) => (
               <div className="flex w-full gap-5">

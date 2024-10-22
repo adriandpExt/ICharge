@@ -13,6 +13,13 @@ import { Banner, PageContainer } from "@/components";
 import { InquiryForm } from "./components";
 
 const PartnerWithUs = (): ReactElement => {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Banner title="EMPOWER YOUR BUSINESS">
@@ -24,8 +31,9 @@ const PartnerWithUs = (): ReactElement => {
         </Label>
 
         <Button
+          onClick={() => scrollToSection("inquiryForm")}
           variant={"custombutton"}
-          className="group w-64 items-center bg-white text-green-600 hover:text-white"
+          className="group h-10 w-32 items-center bg-white text-green-600 hover:text-white"
         >
           Contact Us
           <ChevronRight className="text-green-600 group-hover:text-white" />
@@ -43,7 +51,10 @@ const PartnerWithUs = (): ReactElement => {
           </div>
 
           <div>
-            <Label variant={"banner"} className="text-green-600">
+            <Label
+              variant={"banner"}
+              className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+            >
               WHY PARTNER WITH US?
             </Label>
 
@@ -73,7 +84,10 @@ const PartnerWithUs = (): ReactElement => {
           </div>
 
           <div>
-            <Label variant={"banner"} className="text-green-600">
+            <Label
+              variant={"banner"}
+              className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+            >
               JOIN US
             </Label>
 

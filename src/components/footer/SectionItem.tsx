@@ -12,16 +12,16 @@ interface SectionItemProps {
   onClick?: () => void;
 }
 
-const SectionItem = (props: SectionItemProps) => {
+export const SectionItem = (props: SectionItemProps) => {
   const { title, links, onClick } = props;
   return (
-    <div className="text-center lg:text-start">
+    <div className="flex flex-col gap-1 text-start">
       <Label className="mb-4 text-xl font-semibold">{title}</Label>
-      <ul className="grid grid-cols-1 space-y-2">
+      <ul className="grid grid-cols-1 space-y-1">
         {links.map((link) => (
           <li key={link.label}>
             <Link to={link.path} onClick={onClick}>
-              <Label>{link.label}</Label>
+              <Label className="font-light">{link.label}</Label>
             </Link>
           </li>
         ))}

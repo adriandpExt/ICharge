@@ -67,11 +67,12 @@ const HowTo = () => {
   }, [stepCard]);
 
   return (
-    <PageContainer
-      className="container mx-auto flex flex-col text-center"
-    >
+    <PageContainer className="container mx-auto flex flex-col text-center">
       <div className="space-y-14 lg:space-y-28">
-        <Label variant={"heading1"}>
+        <Label
+          variant={"banner"}
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+        >
           {t(LocalizationKey.home.howtoUseIcharge)}
         </Label>
         <div>
