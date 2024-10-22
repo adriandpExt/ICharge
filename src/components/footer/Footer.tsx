@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -23,12 +24,18 @@ export const Footer = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
+
+  const renderSvg = (): ReactElement[] => {
+    return followUs.map((item) => (
+      <SvgIcons name={item.icon as IconName} size={30} key={item.path} />
+    ));
+  };
   return (
     <footer className="bg-customGreen p-6 text-white md:p-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-2 lg:grid-cols-5">
-          <div className="lg:flex lg:items-center lg:justify-center">
-            <SvgIcons name="ic_svl_sig" size={100} />
+          <div className="lg:flex lg:items-center lg:justify-start">
+            <SvgIcons name="ic_footer_logo" size={150} />
           </div>
 
           <SectionItem
@@ -77,15 +84,11 @@ export const Footer = () => {
               </div>
             </div>
 
-            <div className="flex gap-2">
-              {followUs.map((item) => (
-                <SvgIcons name={item.icon as IconName} size={30} />
-              ))}
-            </div>
+            <div className="flex gap-5">{renderSvg()}</div>
           </div>
         </div>
 
-        <div className="mt-5 flex flex-col text-start lg:hidden">
+        <div className="mt-5 flex flex-col gap-3 text-start lg:hidden">
           <Label className="mb-4 text-2xl font-bold">
             {t(LocalizationKey.footer.stayInTheLoop)}
           </Label>
@@ -110,13 +113,17 @@ export const Footer = () => {
               </Button>
             </div>
           </div>
+
+          <div className="flex items-center justify-center gap-5">
+            {renderSvg()}
+          </div>
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between border-t border-green-800 pt-6 sm:flex-row">
           <Label variant={"default"}>
             {t(LocalizationKey.footer.copyright)}
           </Label>
-          <div className="mt-4 flex gap-4 sm:mt-0">
+          <div className="mt-4 hidden gap-4 sm:mt-0 sm:flex">
             {bottomLinks.map((item) => (
               <Link to={item.path} key={item.path} onClick={handleClick}>
                 <Label variant={"default"}>{t(item.label)}</Label>

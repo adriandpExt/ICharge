@@ -112,7 +112,9 @@ export const InquiryForm = (): ReactElement => {
           />
 
           <div className="text-end">
-            <Button className="w-full lg:w-80">Contact Us</Button>
+            <Button className="w-full shadow-2xl drop-shadow-2xl lg:w-80">
+              Contact Us
+            </Button>
           </div>
         </div>
       </Form>
