@@ -7,6 +7,10 @@ import UnionLogo from "@/assets/about/Union.png";
 import VectorLogo from "@/assets/about/Vector.png";
 import { Label } from "@/components/ui/label";
 import { SectionTitleProps, SectionContentProps } from "./types";
+import { PageContainer } from "@/components";
+import SummaryCard from "../component/SumCard";
+import bgSide from "@/assets/modern-man-using-smartphone-city-2.png";
+import { SumVal } from "../utils";
 
 const AboutComponent = () => {
   const SectionTitle: React.FC<SectionTitleProps> = ({
@@ -134,6 +138,16 @@ const AboutComponent = () => {
             </p>
           </SectionContent>
         </section>
+        <PageContainer className="space-y-20">
+          {SumVal.map((data, index) => (
+            <SummaryCard
+              stepSummary={data}
+              sideBg={bgSide}
+              key={index}
+              isFlipped={index === 1 ? true : false}
+            />
+          ))}
+        </PageContainer>
       </div>
     </div>
   );
