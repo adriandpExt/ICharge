@@ -2,8 +2,9 @@ import { ReactElement } from "react";
 
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-
+import Equipment from "./equipment/Equipment";
 import ServiceIndustries from "./sector-industries/ServiceIndustries";
+import SustainabilitySocial from "./sustainability-and-social-impact/SustainabilitySocial";
 import { Banner } from "@/components";
 import { ChevronRight } from "lucide-react";
 
@@ -26,8 +27,14 @@ const Services = (): ReactElement => {
           </div>
         </Button>
       </Banner>
+      <section className="mb-8">
+        <Equipment />
+      </section>
       <section className="space-y-10">
         <ServiceIndustries />
+      </section>
+      <section className="py-24">
+        <SustainabilitySocial />
       </section>
     </main>
   );
