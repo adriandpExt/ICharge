@@ -1,5 +1,5 @@
-import CostEffective from "@/assets/costeffective.svg";
 import SaleOfEquipment from "@/assets/sale-of-equipment.svg";
+import FreeUseofEquipment from "@/assets/free-use-of-equipment.svg";
 import { Check } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { useTranslation } from "react-i18next";
@@ -17,7 +17,7 @@ const Equipment = () => {
         >
           <div className="flex h-48 w-48 shrink-0 items-center justify-center sm:h-56 sm:w-56 lg:h-64 lg:w-64">
             <img
-              src={SaleOfEquipment}
+              src={FreeUseofEquipment}
               alt="Convenience"
               className="h-full w-full text-green-600"
             />
@@ -28,7 +28,7 @@ const Equipment = () => {
             </Label>
             <div className="mb-8">
               <Label variant="body">
-                {t(LocalizationKey.serviceFreeEquipments.subTitle)}
+                {t(LocalizationKey.services.serviceFreeEquipmentsubTitle)}
               </Label>
             </div>
             <div className="mb-2 flex items-center gap-2 sm:gap-5">
@@ -36,7 +36,7 @@ const Equipment = () => {
                 <Check className="h-4 w-4 sm:h-6 sm:w-6" color="white" />
               </div>
               <Label variant="subtitle" className="w-full">
-                {t(LocalizationKey.serviceFreeEquipments.body1)}
+                {t(LocalizationKey.services.serviceFreeEquipmentbody1)}
               </Label>
             </div>
             <div className="mb-2 flex items-center gap-2 sm:gap-5">
@@ -44,7 +44,7 @@ const Equipment = () => {
                 <Check className="h-4 w-4 sm:h-6 sm:w-6" color="white" />
               </div>
               <Label variant="subtitle" className="w-full">
-                {t(LocalizationKey.serviceFreeEquipments.body2)}
+                {t(LocalizationKey.services.serviceFreeEquipmentbody2)}
               </Label>
             </div>
             <div className="flex items-center gap-2 sm:gap-5">
@@ -52,7 +52,7 @@ const Equipment = () => {
                 <Check className="h-4 w-4 sm:h-6 sm:w-6" color="white" />
               </div>
               <Label variant="subtitle" className="w-full">
-                {t(LocalizationKey.serviceFreeEquipments.body3)}
+                {t(LocalizationKey.services.serviceFreeEquipmentbody3)}
               </Label>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Equipment = () => {
         >
           <div className="round block h-48 w-48 shrink-0 flex-row-reverse items-center justify-center sm:hidden sm:h-56 sm:w-56 lg:h-64 lg:w-64">
             <img
-              src={CostEffective}
+              src={SaleOfEquipment}
               alt="Cost-effective"
               className="h-full w-full text-green-600"
             />
@@ -78,7 +78,7 @@ const Equipment = () => {
             </Label>
             <div className="mb-8 text-center md:text-left">
               <Label variant={"body"}>
-                {t(LocalizationKey.serviceSaleEquipments.subTitle)}
+                {t(LocalizationKey.services.serviceSaleEquipmentsubTitle)}
               </Label>
             </div>
             <div className="flex flex-col gap-2">
@@ -87,7 +87,7 @@ const Equipment = () => {
                   <Check className="h-4 w-4 sm:h-6 sm:w-6" color="white" />
                 </div>
                 <Label variant="subtitle" className="w-full text-left">
-                  {t(LocalizationKey.serviceSaleEquipments.body1)}
+                  {t(LocalizationKey.services.serviceSaleEquipmentbody1)}
                 </Label>
               </div>
               <div className="flex items-center gap-2 sm:gap-5">
@@ -95,7 +95,7 @@ const Equipment = () => {
                   <Check className="h-4 w-4 sm:h-6 sm:w-6" color="white" />
                 </div>
                 <Label variant="subtitle" className="w-full text-left">
-                  {t(LocalizationKey.serviceSaleEquipments.body2)}
+                  {t(LocalizationKey.services.serviceSaleEquipmentbody2)}
                 </Label>
               </div>
               <div className="flex items-center gap-2 sm:gap-5">
@@ -103,14 +103,14 @@ const Equipment = () => {
                   <Check className="h-4 w-4 sm:h-6 sm:w-6" color="white" />
                 </div>
                 <Label variant="subtitle" className="w-full text-left">
-                  {t(LocalizationKey.serviceSaleEquipments.body3)}
+                  {t(LocalizationKey.services.serviceSaleEquipmentbody3)}
                 </Label>
               </div>
             </div>
           </div>
           <div className="round hidden h-48 w-48 shrink-0 flex-row-reverse items-center justify-center sm:block sm:h-56 sm:w-56 lg:h-64 lg:w-64">
             <img
-              src={CostEffective}
+              src={SaleOfEquipment}
               alt="Cost-effective"
               className="h-full w-full text-green-600"
             />

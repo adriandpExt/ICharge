@@ -92,20 +92,17 @@ const LocalizationKey = {
     demoFooter: "bookDemo.demoFooter.label",
     bookDemoBtn: "bookDemo.bookDemoBtn.label",
   },
-  serviceFreeEquipments: {
-    subTitle: "serviceFreeEquipment.subTitle.label",
-    body1: "serviceFreeEquipment.body1.label",
-    body2: "serviceFreeEquipment.body2.label",
-    body3: "serviceFreeEquipment.body3.label",
-  },
-  serviceSaleEquipments: {
-    subTitle: "serviceSaleEquipments.subTitle.label",
-    body1: "serviceSaleEquipments.body1.label",
-    body2: "serviceSaleEquipments.body2.label",
-    body3: "serviceSaleEquipments.body3.label",
-  },
-  serviceSustainabilitySocial: {
-    body: "serviceSustainabilitySocial.body.label",
+  services: {
+    serviceFreeEquipmentsubTitle: "services.serviceFreeEquipmentsubTitle.label",
+    serviceFreeEquipmentbody1: "services.serviceFreeEquipmentbody1.label",
+    serviceFreeEquipmentbody2: "services.serviceFreeEquipmentbody2.label",
+    serviceFreeEquipmentbody3: "services.serviceFreeEquipmentbody3.label",
+    serviceSaleEquipmentsubTitle: "services.serviceSaleEquipmentsubTitle.label",
+    serviceSaleEquipmentbody1: "services.serviceSaleEquipmentbody1.label",
+    serviceSaleEquipmentbody2: "services.serviceSaleEquipmentbody2.label",
+    serviceSaleEquipmentbody3: "services.serviceSaleEquipmentbody3.label",
+    serviceSustainabilitySocialbody:
+      "services.serviceSustainabilitySocialbody.label",
   },
 };
 
