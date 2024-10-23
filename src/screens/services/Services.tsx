@@ -23,7 +23,15 @@ const Services = (): ReactElement => {
           className="h-10 border-0 bg-slate-100 text-green-600 hover:bg-slate-200"
         >
           <div className="flex w-32 items-center justify-between">
-            <Label>View Products</Label>
+            <Label
+              onClick={() =>
+                document
+                  .getElementById("serviceProducts")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              View Products
+            </Label>
             <ChevronRight />
           </div>
         </Button>
