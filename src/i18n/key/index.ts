@@ -82,6 +82,12 @@ const LocalizationKey = {
     partnerWithUs: "footer.partnerWithUs.label",
   },
   services: {
+    servicesSubHeading: "services.servicesSubHeading.label",
+    viewProducts: "services.viewProducts.label",
+    serviceFreeEquipmentTitle: "services.serviceFreeEquipmentTitle.label",
+    serviceSaleEquipmentTitle: "services.serviceSaleEquipmentTitle.label",
+    serviceSustainabilitySocialTitle:
+      "services.serviceSustainabilitySocialTitle.label",
     serviceFreeEquipmentsubTitle: "services.serviceFreeEquipmentsubTitle.label",
     serviceFreeEquipmentbody1: "services.serviceFreeEquipmentbody1.label",
     serviceFreeEquipmentbody2: "services.serviceFreeEquipmentbody2.label",
@@ -90,7 +96,8 @@ const LocalizationKey = {
     serviceSaleEquipmentbody1: "services.serviceSaleEquipmentbody1.label",
     serviceSaleEquipmentbody2: "services.serviceSaleEquipmentbody2.label",
     serviceSaleEquipmentbody3: "services.serviceSaleEquipmentbody3.label",
-    serviceSustainabilitySocialbody: "serviceSustainabilitySocialbody.label",
+    serviceSustainabilitySocialbody:
+      "services.serviceSustainabilitySocialbody.label",
     sectorHeading: "services.sectorHeading.label",
     sectorSubHeading: "services.sectorSubHeading.label",
     hospitality: {

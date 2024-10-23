@@ -12,7 +12,7 @@ const SustainabilitySocial = (): ReactElement => {
           variant="banner"
           className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-[1.5em] text-transparent md:text-xl"
         >
-          Sustainability and Social Impact
+          {t(LocalizationKey.services.serviceSustainabilitySocialTitle)}
         </Label>
         <Label variant="subtitle" className="text-xs md:text-sm">
           {t(LocalizationKey.services.serviceSustainabilitySocialbody)}
