@@ -24,25 +24,25 @@ const Sector = (): ReactElement => {
 
   const topSector: IndustriesCard[] = [
     {
-      title: t(LocalizationKey.sectors.hospitality.title),
+      title: t(LocalizationKey.services.hospitality.title),
       bgImage: sectorHospital,
     },
     {
-      title: t(LocalizationKey.sectors.healthcare.title),
+      title: t(LocalizationKey.services.healthcare.title),
       bgImage: sectorHealthCare,
     },
   ];
   const bottomSector: IndustriesCard[] = [
     {
-      title: t(LocalizationKey.sectors.transport.title),
+      title: t(LocalizationKey.services.transport.title),
       bgImage: sectorTransport,
     },
     {
-      title: t(LocalizationKey.sectors.events.title),
+      title: t(LocalizationKey.services.events.title),
       bgImage: sectorEvents,
     },
     {
-      title: t(LocalizationKey.sectors.retail.title),
+      title: t(LocalizationKey.services.retail.title),
       bgImage: sectorRetail,
     },
   ];
@@ -62,10 +62,10 @@ const Sector = (): ReactElement => {
             variant="banner"
             className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
           >
-            {t(LocalizationKey.sectors.heading)}
+            {t(LocalizationKey.services.sectorHeading)}
           </Label>
           <Label variant="subtitle">
-            {t(LocalizationKey.sectors.subHeading)}
+            {t(LocalizationKey.services.sectorSubHeading)}
           </Label>
         </div>
         {/* desktop view */}
@@ -94,8 +94,15 @@ const Sector = (): ReactElement => {
       {/* mobile view */}
       <div className="space-y-5 lg:hidden">
         <div className="flex flex-col space-y-5 text-center">
-          <Label variant="heading1">INDUSTRIES WE SERVE</Label>
-          <Label variant="subtitle">Powering Anyone, Anytime, Anywhere</Label>
+          <Label
+            variant="banner"
+            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+          >
+            {t(LocalizationKey.services.sectorHeading)}
+          </Label>
+          <Label variant="subtitle">
+            {t(LocalizationKey.services.sectorSubHeading)}
+          </Label>
         </div>
         <Carousel
           className="overflow-hidden"

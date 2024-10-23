@@ -25,53 +25,53 @@ const ServiceIndustries = (): ReactElement => {
   }, [location.state?.value]);
   const serviceIndustries: Industries[] = [
     {
-      title: t(LocalizationKey.sectors.hospitality.title),
-      subTitle: t(LocalizationKey.sectors.hospitality.subtitle),
+      title: t(LocalizationKey.services.hospitality.title),
+      subTitle: t(LocalizationKey.services.hospitality.subtitle),
       image: sectorHospitality,
       description: [
-        t(LocalizationKey.sectors.description.hospitality[0]),
-        t(LocalizationKey.sectors.description.hospitality[1]),
-        t(LocalizationKey.sectors.description.hospitality[2]),
+        t(LocalizationKey.services.description.hospitality[0]),
+        t(LocalizationKey.services.description.hospitality[1]),
+        t(LocalizationKey.services.description.hospitality[2]),
       ],
     },
     {
-      title: t(LocalizationKey.sectors.healthcare.title),
-      subTitle: t(LocalizationKey.sectors.healthcare.subtitle),
+      title: t(LocalizationKey.services.healthcare.title),
+      subTitle: t(LocalizationKey.services.healthcare.subtitle),
       image: sectorHealthCare,
       description: [
-        t(LocalizationKey.sectors.description.healthcare[0]),
-        t(LocalizationKey.sectors.description.healthcare[1]),
-        t(LocalizationKey.sectors.description.healthcare[2]),
+        t(LocalizationKey.services.description.healthcare[0]),
+        t(LocalizationKey.services.description.healthcare[1]),
+        t(LocalizationKey.services.description.healthcare[2]),
       ],
     },
     {
-      title: t(LocalizationKey.sectors.transport.title),
-      subTitle: t(LocalizationKey.sectors.transport.subtitle),
+      title: t(LocalizationKey.services.transport.title),
+      subTitle: t(LocalizationKey.services.transport.subtitle),
       image: sectorTransport,
       description: [
-        t(LocalizationKey.sectors.description.transport[0]),
-        t(LocalizationKey.sectors.description.transport[1]),
-        t(LocalizationKey.sectors.description.transport[2]),
+        t(LocalizationKey.services.description.transport[0]),
+        t(LocalizationKey.services.description.transport[1]),
+        t(LocalizationKey.services.description.transport[2]),
       ],
     },
     {
-      title: t(LocalizationKey.sectors.events.title2),
-      subTitle: t(LocalizationKey.sectors.events.subtitle),
+      title: t(LocalizationKey.services.events.title2),
+      subTitle: t(LocalizationKey.services.events.subtitle),
       image: sectorEvents,
       description: [
-        t(LocalizationKey.sectors.description.events[0]),
-        t(LocalizationKey.sectors.description.events[1]),
-        t(LocalizationKey.sectors.description.events[2]),
+        t(LocalizationKey.services.description.events[0]),
+        t(LocalizationKey.services.description.events[1]),
+        t(LocalizationKey.services.description.events[2]),
       ],
     },
     {
-      title: t(LocalizationKey.sectors.retail.title),
-      subTitle: t(LocalizationKey.sectors.retail.subtitle),
+      title: t(LocalizationKey.services.retail.title),
+      subTitle: t(LocalizationKey.services.retail.subtitle),
       image: sectorRetail,
       description: [
-        t(LocalizationKey.sectors.description.retail[0]),
-        t(LocalizationKey.sectors.description.retail[1]),
-        t(LocalizationKey.sectors.description.retail[2]),
+        t(LocalizationKey.services.description.retail[0]),
+        t(LocalizationKey.services.description.retail[1]),
+        t(LocalizationKey.services.description.retail[2]),
       ],
     },
   ];
@@ -83,9 +83,11 @@ const ServiceIndustries = (): ReactElement => {
           variant="banner"
           className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
         >
-          INDUSTRIES WE SERVE
+          {t(LocalizationKey.services.sectorHeading)}
         </Label>
-        <Label variant="subtitle">Powering Anyone, Anytime, Anywhere</Label>
+        <Label variant="subtitle">
+          {t(LocalizationKey.services.sectorSubHeading)}
+        </Label>
       </div>
       {/* desktop view */}
       {serviceIndustries.map((data, index) => (
