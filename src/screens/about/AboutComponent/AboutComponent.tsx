@@ -1,10 +1,9 @@
-import { Zap } from "lucide-react";
 import { ReactElement } from "react";
-
 import costEffective from "@/assets/about/costeffective.png";
 import RocketLogo from "@/assets/about/rocket.png";
 import UnionLogo from "@/assets/about/Union.png";
 import VectorLogo from "@/assets/about/Vector.png";
+import Lightning from "@/assets/about/lightning-fill.png";
 import { Label } from "@/components/ui/label";
 import { SectionTitleProps, SectionContentProps } from "./types";
 import { PageContainer } from "@/components";
@@ -77,19 +76,20 @@ const AboutComponent = (): ReactElement => {
       </div>
 
       <div className="bg-[url('@/assets/about/about-banner.jpg')] bg-cover bg-center">
-        <div className="container relative mx-auto min-h-[200px]">
-          <div className="relative z-10 flex min-h-[200px] flex-col justify-center p-4 sm:p-6 md:p-8">
-            <div className="mx-auto max-w-md sm:mx-0">
+        <div className="container relative mx-auto min-h-[300px]">
+          <div className="relative z-10 flex min-h-[300px] flex-col justify-center p-4 sm:p-6 md:p-8">
+            <div className="mx-auto sm:mx-0">
               {["STAY POWERED", "STAY CONNECTED"].map((text, index) => (
                 <h2
                   key={index}
                   className="mb-4 flex items-center justify-center text-white sm:justify-start sm:text-3xl md:text-4xl"
                 >
-                  <Zap
-                    className="mr-2 h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10"
+                  <img
+                    src={Lightning}
+                    className="mr-2 h-6 w-6 sm:h-8 sm:w-8 md:h-16 md:w-16"
                     aria-hidden="true"
                   />
-                  <Label variant={"heading1"}>{text}</Label>
+                  <Label variant={"banner"}>{text}</Label>
                 </h2>
               ))}
             </div>
@@ -100,10 +100,10 @@ const AboutComponent = (): ReactElement => {
       <div className="mt-10 px-4 md:px-0">
         <section className="mb-8">
           <SectionTitle icon={RocketLogo}>
-            <Label variant={"heading1"}>OUR MISSION</Label>
+            <Label variant={"banner"}>OUR MISSION</Label>
           </SectionTitle>
-          <SectionContent className="md:mr-36">
-            <Label>
+          <SectionContent className="p-20 md:mr-36">
+            <Label variant={"subtitle"}>
               We aim to deliver convenient and reliable powerbank lending
               stations across the Philippines, with future expansion plans to
               serve global markets. By partnering with businesses, we enhance
@@ -116,10 +116,10 @@ const AboutComponent = (): ReactElement => {
 
         <section className="mb-8">
           <SectionTitle icon={UnionLogo} className="justify-end">
-            <Label variant={"heading1"}>OUR VISION</Label>
+            <Label variant={"banner"}>OUR VISION</Label>
           </SectionTitle>
-          <SectionContent className="md:ml-36">
-            <Label>
+          <SectionContent className="p-10 md:ml-36">
+            <Label variant={"subtitle"}>
               To be the leading provider of mobile charging solutions, ensuring
               that everyone, everywhere, remains connected at all times, whether
               locally or globally. Our vision includes scaling our solutions to
@@ -131,22 +131,22 @@ const AboutComponent = (): ReactElement => {
 
         <section className="mb-8">
           <SectionTitle icon={VectorLogo}>
-            <Label variant={"heading1"}>OUR REACH</Label>
+            <Label variant={"banner"}>OUR REACH</Label>
           </SectionTitle>
-          <SectionContent className="md:mr-36">
-            <Label className="mb-4">
+          <SectionContent className="p-10 md:mr-36">
+            <Label variant={"subtitle"}>
               Our iCharge stations are rapidly expanding in malls, restaurants,
               hospitals, transport hubs, and event venues across the country.
             </Label>
             <br />
-            <Label className="mb-4">
+            <Label variant={"subtitle"}>
               With integrated payment systems such as GCash, GrabPay, Alipay,
               Maya, WeChat Pay, UnionBank and BDO, our stations offer
               convenient, hassle-free access to mobile power, making it easier
               than ever to stay charged.
             </Label>
             <br />
-            <Label>
+            <Label variant={"subtitle"}>
               This flexibility mirrors global charging networks, offering
               customers a seamless experience wherever they go.
             </Label>
