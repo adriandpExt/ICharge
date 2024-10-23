@@ -1,9 +1,17 @@
-export interface IndustryCard {
+export interface IndustriesCard {
   title: string;
   bgImage: string;
 }
 export interface IndustryCardType {
-  card: IndustryCard;
+  card: IndustriesCard;
   isDesktop: boolean;
-  className?: string
+  className?: string;
+  onClick: () => void;
+}
+export interface SectorHeading {
+  hospitality: string;
+  healthcare: string;
+  transport: string;
+  events: string;
+  retail: string;
 }

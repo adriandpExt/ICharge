@@ -33,12 +33,12 @@ const Features = () => {
     setOpen(false); // Close the modal
   };
 
-  const handleCarouselChange = (index: number) => {
+  const handleCarouselChange = (index: number) => { 
     setCurrentIndex(index); // Update the current carousel index
   };
 
   return (
-    <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20">
+    <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat px-10 pt-16">
       <div className="container mx-auto flex flex-col place-items-center">
         <Label
           variant={"banner"}

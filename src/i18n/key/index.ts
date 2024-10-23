@@ -91,8 +91,59 @@ const LocalizationKey = {
     serviceSaleEquipmentbody1: "services.serviceSaleEquipmentbody1.label",
     serviceSaleEquipmentbody2: "services.serviceSaleEquipmentbody2.label",
     serviceSaleEquipmentbody3: "services.serviceSaleEquipmentbody3.label",
-    serviceSustainabilitySocialbody:
-      "services.serviceSustainabilitySocialbody.label",
+    serviceSustainabilitySocialbody: "serviceSustainabilitySocialbody.label",
+  },
+  sectors: {
+    heading: "sectors.heading.label",
+    subHeading: "sectors.subHeading.label",
+    hospitality: {
+      title: "sectors.hospitality.title.label",
+      subtitle: "sectors.hospitality.subtitle.label",
+    },
+    healthcare: {
+      title: "sectors.healthcare.title.label",
+      subtitle: "sectors.healthcare.subtitle.label",
+    },
+    transport: {
+      title: "sectors.transport.title.label",
+      subtitle: "sectors.transport.subtitle.label",
+    },
+    events: {
+      title: "sectors.events.title.label",
+      title2: "sectors.events.title2.label",
+      subtitle: "sectors.events.subtitle.label",
+    },
+    retail: {
+      title: "sectors.retail.title.label",
+      subtitle: "sectors.retail.subtitle.label",
+    },
+    description: {
+      hospitality: [
+        "sectors.hospitality.description.sub1.label",
+        "sectors.hospitality.description.sub2.label",
+        "sectors.hospitality.description.sub3.label",
+      ],
+      healthcare: [
+        "sectors.healthcare.description.sub1.label",
+        "sectors.healthcare.description.sub2.label",
+        "sectors.healthcare.description.sub3.label",
+      ],
+      transport: [
+        "sectors.transport.description.sub1.label",
+        "sectors.transport.description.sub2.label",
+        "sectors.transport.description.sub3.label",
+      ],
+      events: [
+        "sectors.events.description.sub1.label",
+        "sectors.events.description.sub2.label",
+        "sectors.events.description.sub3.label",
+      ],
+      retail: [
+        "sectors.retail.description.sub1.label",
+        "sectors.retail.description.sub2.label",
+        "sectors.retail.description.sub3.label",
+      ],
+    },
   },
   about: {
     aboutHeading: "about.aboutHeading.label",

@@ -301,6 +301,146 @@
       "formBtn": { "label": "I-submit" }
     }
   },
+  "bookDemo": {
+    "heading": { "label": "MAG-BOOK NG DEMO" },
+    "whatBringYouHere": { "label": "Anong nagdala sayo dito?" },
+    "firstname": { "label": "Pangalan" },
+    "lastname": { "label": "Apelyido" },
+    "email": {
+      "label": "Email"
+    },
+    "renderIssue": {
+      "address": { "label": "Address" },
+      "issue": {
+        "label": "Isyu"
+      },
+      "explainIssue": {
+        "label": "Pakipaliwanag ang isyu"
+      }
+    },
+    "renderWantChargeStation": {
+      "phoneNumber": {
+        "label": "Numero ng Telepono"
+      },
+      "companyName": {
+        "label": "Company Name"
+      },
+      "sector": {
+        "label": "Sector"
+      },
+      "interestedIcharge": {
+        "label": "Bakit ka interesado sa ICharge?"
+      }
+    },
+    "renderBringICharge": {
+      "phoneNumber": { "label": "Numero ng Telepono" },
+      "country": {
+        "label": "Bansa"
+      },
+      "additionalInformation": {
+        "label": "Karagdagang Impormasyon"
+      }
+    },
+    "demoFooter": {
+      "label": "Kailangan ng ICHARGE ang impormasyon sa pakikipag-ugnayan na ibinigay mo sa amin upang makipag-ugnayan sa iyo tungkol sa aming mga produkto at serbisyo. Maaari kang mag-unsubscribe sa mga komunikasyong ito anumang oras. Para sa impormasyon sa kung paano mag-unsubscribe, pati na rin ang aming mga kasanayan sa privacy at pangako sa pagprotekta sa iyong privacy, mangyaring suriin ang aming Patakaran sa Privacy."
+    },
+    "bookDemoBtn": {
+      "label": "Susunod"
+    }
+  },
+
+  "sectors": {
+    "heading": { "label": "Mga Industriyang Aming Pinagsisilbihan" },
+    "subHeading": {
+      "label": "Palakasin Kahit Sino, Kahit Kailan, Kahit Saan"
+    },
+    "hospitality": {
+      "title": { "label": "Pakikitungo" },
+      "subtitle": {
+        "label": "Pagandahin ang karanasan ng mga bisita sa mga hotel, restaurant, coffee shop, at bar sa pamamagitan ng pagbibigay ng mga maginhawang opsyon sa pag-charge na nagbibigay-daan sa mga bisita na manatiling konektado."
+      },
+      "description": {
+        "sub1": {
+          "label": "Pinapahusay ang kasiyahan ng mga bisita, na humahantong sa mga positibong review at paulit-ulit na pagbisita."
+        },
+        "sub2": {
+          "label": "Hinihikayat ang mga bisita na manatili ng mas matagal sa mga common areas."
+        },
+        "sub3": {
+          "label": "Nagiging iba ang iyong negosyo sa pamamagitan ng pagbibigay ng kakaibang, customer-focused na serbisyo."
+        }
+      }
+    },
+    "healthcare": {
+      "title": { "label": "Pangkalusugan" },
+      "subtitle": {
+        "label": "Magbigay ng kapanatagan ng loob sa pamamagitan ng pagbibigay ng charging stations sa mga ospital, klinika, gym, at wellness centers, na ginagawang mas komportable ang pagbisita para sa mga pasyente at bisita."
+      },
+      "description": {
+        "sub1": {
+          "label": "Pinapabuti ang karanasan ng pasyente at bisita sa pamamagitan ng maginhawang access sa pag-charge."
+        },
+        "sub2": {
+          "label": "Binabawasan ang stress para sa mga bisitang umaasa sa kanilang mga telepono para sa mahahalagang komunikasyon."
+        },
+        "sub3": {
+          "label": "Ipinapakita ang pangako ng iyong pasilidad sa inobasyon at customer care."
+        }
+      }
+    },
+    "transport": {
+      "title": { "label": "Transportasyon" },
+      "subtitle": {
+        "label": "Panatilihing konektado ang mga manlalakbay sa mga paliparan, terminal ng bus, estasyon ng tren, at iba pang transport hubs sa pamamagitan ng pagbibigay ng maginhawang solusyon sa pag-charge."
+      },
+      "description": {
+        "sub1": {
+          "label": "Nagbibigay ng kritikal na serbisyo sa pag-charge sa mga pasahero, na binabawasan ang stress sa mababang antas ng baterya."
+        },
+        "sub2": {
+          "label": "Pinapahusay ang kasiyahan ng mga customer at nagpapabuti ng impresyon sa iyong transport hub."
+        },
+        "sub3": {
+          "label": "Pinapahusay ang kasiyahan ng mga customer at nagpapabuti ng impresyon sa iyong transport hub."
+        }
+      }
+    },
+    "events": {
+      "title": { "label": "Mga Kaganapan" },
+      "title2": { "label": "Libangan at Kaganapan" },
+      "subtitle": {
+        "label": "Panatilihing aktibo ang mga kalahok sa mga konsyerto, festival, eksibisyon, at sports events sa pamamagitan ng pagbibigay ng mga maaasahang opsyon sa pag-charge na tinitiyak na mananatili silang konektado."
+      },
+      "description": {
+        "sub1": {
+          "label": "Pinapanatili ang konektado ng mga kalahok, na nagbibigay-daan sa kanilang ibahagi ang kanilang karanasan online."
+        },
+        "sub2": {
+          "label": "Binabawasan ang pagkabigo sa mababang antas ng baterya, na pinapaganda ang pangkalahatang karanasan sa kaganapan."
+        },
+        "sub3": {
+          "label": "Pinapataas ang oras ng pananatili, lalo na sa mga multi-day events."
+        }
+      }
+    },
+    "retail": {
+      "title": { "label": "Tingian" },
+      "subtitle": {
+        "label": "Pagandahin ang karanasan sa pamimili sa pamamagitan ng pagbibigay ng charging stations sa mga mall, supermarket, department stores, at boutiques, hinihikayat ang mga customer na manatili ng mas matagal."
+      },
+      "description": {
+        "sub1": {
+          "label": "Pinapataas ang oras ng pananatili, na nagreresulta sa mas maraming benta."
+        },
+        "sub2": {
+          "label": "Ipinapakita na ang iyong negosyo ay nagmamalasakit sa kasiyahan ng customer."
+        },
+        "sub3": {
+          "label": "Maaaring i-customize ang branding upang tumugma sa aesthetics ng tindahan."
+        }
+      }
+    }
+  },
   "about": {
     "aboutHeading": {
       "label": "Naniniwala kami sa isang mundo kung saan ang pananatiling konektado ay walang kahirap-hirap. Sa pamamagitan ng aming makabagong mga power bank station, tinitiyak namin na ang iyong mga customer ay laging may karga at handa para sa anumang adventure, kahit saan"

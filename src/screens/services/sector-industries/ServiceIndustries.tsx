@@ -1,5 +1,5 @@
 import { Industries } from "./types";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import { Check } from "lucide-react";
 import sectorHospitality from "@/assets/sectors/sectorHospitality.png";
 import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
@@ -9,65 +9,73 @@ import sectorRetail from "@/assets/sectors/sectorRetail.jpg";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
+import { useLocation } from "react-router-dom";
 
 const ServiceIndustries = (): ReactElement => {
+  const { t } = useTranslation();
+  const location = useLocation();
+  useEffect(() => {
+    const passedId = location.state?.value;
+    const element = document.getElementById(passedId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location.state?.value]);
   const serviceIndustries: Industries[] = [
     {
-      title: "HOSPITALITY",
-      subTitle:
-        "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected.",
+      title: t(LocalizationKey.sectors.hospitality.title),
+      subTitle: t(LocalizationKey.sectors.hospitality.subtitle),
       image: sectorHospitality,
       description: [
-        "Enhances guest satisfaction, leading to positive reviews and repeat visits.",
-        "Encourages guests to spend more time in common areas.",
-        "Differentiates your business by offering a unique, customer-focused service.",
+        t(LocalizationKey.sectors.description.hospitality[0]),
+        t(LocalizationKey.sectors.description.hospitality[1]),
+        t(LocalizationKey.sectors.description.hospitality[2]),
       ],
     },
     {
-      title: "Healthcare",
-      subTitle:
-        "Offer peace of mind by providing charging stations in hospitals, clinics, gyms, and wellness centers, making the visit more comfortable for patients and visitors.",
+      title: t(LocalizationKey.sectors.healthcare.title),
+      subTitle: t(LocalizationKey.sectors.healthcare.subtitle),
       image: sectorHealthCare,
       description: [
-        "Improves the patient and visitor experience with convenient charging access.",
-        "Reduces stress for visitors who rely on their phones for essential communication.",
-        "Shows your facility’s commitment to innovation and customer care.",
+        t(LocalizationKey.sectors.description.healthcare[0]),
+        t(LocalizationKey.sectors.description.healthcare[1]),
+        t(LocalizationKey.sectors.description.healthcare[2]),
       ],
     },
     {
-      title: "Transport",
-      subTitle:
-        "Keep travelers connected in airports, bus terminals, train stations, and other transport hubs by offering convenient charging solutions.",
+      title: t(LocalizationKey.sectors.transport.title),
+      subTitle: t(LocalizationKey.sectors.transport.subtitle),
       image: sectorTransport,
       description: [
-        "Provides critical charging services to passengers, reducing stress over low battery levels.",
-        "Enhances customer satisfaction and improves perceptions of your transport hub.",
-        "Increases dwell time in commercial areas such as airport shops and cafés.",
+        t(LocalizationKey.sectors.description.transport[0]),
+        t(LocalizationKey.sectors.description.transport[1]),
+        t(LocalizationKey.sectors.description.transport[2]),
       ],
     },
     {
-      title: "Leisure & Events",
-      subTitle:
-        "Keep attendees engaged during concerts, festivals, exhibitions, and sports events by offering reliable charging options that ensure they can stay connected.",
+      title: t(LocalizationKey.sectors.events.title2),
+      subTitle: t(LocalizationKey.sectors.events.subtitle),
       image: sectorEvents,
       description: [
-        "Keeps attendees connected, allowing them to share their experiences online.",
-        "Reduces frustration over low battery levels, enhancing the overall event experience..",
-        "Increases dwell time, especially for multi-day events.",
+        t(LocalizationKey.sectors.description.events[0]),
+        t(LocalizationKey.sectors.description.events[1]),
+        t(LocalizationKey.sectors.description.events[2]),
       ],
     },
     {
-      title: "Retail",
-      subTitle:
-        "Enhance the shopping experience by offering charging stations in malls, supermarkets, department stores, and boutiques, encouraging customers to stay longer.",
+      title: t(LocalizationKey.sectors.retail.title),
+      subTitle: t(LocalizationKey.sectors.retail.subtitle),
       image: sectorRetail,
       description: [
-        "Increases dwell time, leading to more purchases.",
-        "Customizable branding to align with store aesthetics.",
-        "Differentiates your business by offering a unique, customer-focused service.",
+        t(LocalizationKey.sectors.description.retail[0]),
+        t(LocalizationKey.sectors.description.retail[1]),
+        t(LocalizationKey.sectors.description.retail[2]),
       ],
     },
   ];
+
   return (
     <section className="space-y-10">
       <div className="flex flex-col space-y-5 text-center">
@@ -83,13 +91,14 @@ const ServiceIndustries = (): ReactElement => {
       {serviceIndustries.map((data, index) => (
         <div
           className={cn("hidden md:flex", index % 2 === 0 ? "pr-10" : "pl-10")}
+          key={index}
+          id={index === 3 ? "Events" : data.title}
         >
           <div
             className={cn(
               "flex w-full border-t-4 border-green-500 bg-green-500/25 md:h-[25rem] lg:h-[30rem]",
               index % 2 !== 0 && "flex-row-reverse",
             )}
-            key={index}
           >
             <img
               src={data.image}
@@ -102,12 +111,12 @@ const ServiceIndustries = (): ReactElement => {
               <Label variant="title">{data.title}</Label>
               <Label variant="subtitle">{data.subTitle}</Label>
               {data.description.map((data, index) => (
-                <div className="flex w-full gap-5">
+                <div className="flex w-full gap-5" key={index}>
                   <div className="flex h-8 w-9 place-content-center items-center rounded-full bg-gradient-to-b from-green-800 via-green-700 to-green-600">
                     <Check color="white" />
                   </div>
 
-                  <Label variant="subtitle" key={index} className="w-full">
+                  <Label variant="subtitle" className="w-full">
                     {data}
                   </Label>
                 </div>
@@ -124,6 +133,7 @@ const ServiceIndustries = (): ReactElement => {
             "flex w-full flex-col border-b-4 border-green-500 bg-green-500/25 md:hidden",
           )}
           key={index}
+          id={index === 3 ? "Events" : data.title}
         >
           <img
             src={data.image}
@@ -143,12 +153,12 @@ const ServiceIndustries = (): ReactElement => {
             <Separator orientation="vertical" className="" />
             <Label variant="subtitle">{data.subTitle}</Label>
             {data.description.map((data, index) => (
-              <div className="flex w-full gap-5">
+              <div className="flex w-full gap-5" key={index}>
                 <div className="flex h-8 w-9 place-content-center items-center rounded-full bg-gradient-to-b from-green-800 via-green-700 to-green-600">
                   <Check color="white" />
                 </div>
 
-                <Label variant="subtitle" key={index} className="w-full">
+                <Label variant="subtitle" className="w-full">
                   {data}
                 </Label>
               </div>

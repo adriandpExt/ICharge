@@ -5,11 +5,14 @@ import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 import { Spinner } from "@/components";
 
-export const IndustryCard = (props: IndustryCardType): ReactElement => {
+export const IndustryCard = (
+  props: IndustryCardType,
+): ReactElement => {
   const {
-    card: { title, bgImage },
+    card: { title, bgImage, },
     isDesktop,
     className,
+    onClick,
   } = props;
 
   const [isHovered, setIsHovered] = useState(false);
@@ -47,6 +50,7 @@ export const IndustryCard = (props: IndustryCardType): ReactElement => {
         className="absolute bottom-0 h-[25%] w-[90%] justify-between rounded-3xl rounded-tl-none text-2xl md:w-[95%] md:text-3xl"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={onClick}
       >
         {title}
         <ChevronRight size={50} />

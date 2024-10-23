@@ -338,6 +338,98 @@
       "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
     }
   },
+  "sectors": {
+    "heading": { "label": "INDUSTRIES WE SERVE" },
+    "subHeading": { "label": "Powering Anyone, Anytime, Anywhere" },
+    "hospitality": {
+      "title": { "label": "Hospitality" },
+      "subtitle": {
+        "label": "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected."
+      },
+      "description": {
+        "sub1": {
+          "label": "Enhances guest satisfaction, leading to positive reviews and repeat visits."
+        },
+        "sub2": {
+          "label": "Encourages guests to spend more time in common areas."
+        },
+        "sub3": {
+          "label": "Differentiates your business by offering a unique, customer-focused service."
+        }
+      }
+    },
+    "healthcare": {
+      "title": { "label": "Healthcare" },
+      "subtitle": {
+        "label": "Offer peace of mind by providing charging stations in hospitals, clinics, gyms, and wellness centers, making the visit more comfortable for patients and visitors."
+      },
+      "description": {
+        "sub1": {
+          "label": "Improves the patient and visitor experience with convenient charging access."
+        },
+        "sub2": {
+          "label": "Reduces stress for visitors who rely on their phones for essential communication."
+        },
+        "sub3": {
+          "label": "Shows your facility’s commitment to innovation and customer care."
+        }
+      }
+    },
+    "transport": {
+      "title": { "label": "Trasport" },
+      "subtitle": {
+        "label": "Keep travelers connected in airports, bus terminals, train stations, and other transport hubs by offering convenient charging solutions."
+      },
+      "description": {
+        "sub1": {
+          "label": "Provides critical charging services to passengers, reducing stress over low battery levels."
+        },
+        "sub2": {
+          "label": "Enhances customer satisfaction and improves perceptions of your transport hub."
+        },
+        "sub3": {
+          "label": "Increases dwell time in commercial areas such as airport shops and cafés."
+        }
+      }
+    },
+    "events": {
+      "title": { "label": "Events" },
+      "title2": { "label": "Liesure & Events" },
+      "subtitle": {
+        "label": "Keep attendees engaged during concerts, festivals, exhibitions, and sports events by offering reliable charging options that ensure they can stay connected."
+      },
+      "description": {
+        "sub1": {
+          "label": "Keeps attendees connected, allowing them to share their experiences online."
+        },
+        "sub2": {
+          "label": "Reduces frustration over low battery levels, enhancing the overall event experience."
+        },
+        "sub3": {
+          "label": "Increases dwell time, especially for multi-day events."
+        }
+      }
+    },
+    "retail": {
+      "title": {
+        "label": "Retail"
+      },
+      "subtitle": {
+        "label": "Enhance the shopping experience by offering charging stations in malls, supermarkets, department stores, and boutiques, encouraging customers to stay longer."
+      },
+      "description": {
+        "sub1": {
+          "label": "Increases dwell time, leading to more purchases."
+        },
+        "sub2": {
+          "label": "Customizable branding to align with store aesthetics."
+        },
+        "sub3": {
+          "label": "Differentiates your business by offering a unique, customer-focused service."
+        }
+      }
+    }
+  },
   "about": {
     "aboutHeading": {
       "label": "We believe in a world where staying connected is effortless. With our innovative power bank stations, we make sure your customers can stay powered and ready for any adventure, anywhere."
