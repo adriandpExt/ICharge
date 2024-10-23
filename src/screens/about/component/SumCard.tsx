@@ -61,10 +61,10 @@ const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
                     alt=""
                     className="h-full object-cover rounded-tl-[36px] rounded-tr-[36px] md:hidden" />
                 <CardContent className="flex w-full flex-col space-y-5 p-5">
-                    <Label className="font-poppins text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-b from-green-900 to-green-600">{header}</Label>
+                    <Label className="font-poppins text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-b from-green-900 to-green-600">{t(header)}</Label>
                     <Label variant="subtitle" className="text-center">
                         <div className="border-t border-green-700 pt-4 md:hidden" />
-                        {desc}
+                        {t(desc)}
                     </Label>
                     <div>
                         <Label className="font-bold">Key Features:</Label>
@@ -76,7 +76,7 @@ const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
                                     <Check className="text-white" />
                                 </div>
                                 <div className="col-start-3 col-end-13 flex-grow">
-                                    <Label>{data}</Label>
+                                    <Label>{t(data)}</Label>
                                 </div>
                             </div>
                         ))}
