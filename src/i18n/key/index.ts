@@ -104,6 +104,15 @@ const LocalizationKey = {
     serviceSustainabilitySocialbody:
       "services.serviceSustainabilitySocialbody.label",
   },
+  sectors: {
+    heading: "sectors.heading.label",
+    subHeading: "sectors.subHeading.label",
+    hospitality: "sectors.hospitality.label",
+    healthcare: "sectors.healthcare.label",
+    transport: "sectors.transport.label",
+    events: "sectors.events.label",
+    retail: "sectors.retail.label",
+  },
 };
 
 export default LocalizationKey;

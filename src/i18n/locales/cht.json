@@ -259,5 +259,14 @@
     "partnerWithUsSubHeading": {
       "label": "iCharge 是西方市場領先的智能手機充電品牌。開始..."
     }
+  },
+  "sectors": {
+    "heading": { "label": "我們服務的產業" },
+    "subHeading": { "label": "隨時隨地為任何人提供動力" },
+    "hospitality": { "label": "款待" },
+    "healthcare": { "label": "衛生保健" },
+    "transport": { "label": "運輸" },
+    "events": { "label": "事件" },
+    "retail": { "label": "零售" }
   }
 }

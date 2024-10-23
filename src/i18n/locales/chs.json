@@ -259,5 +259,14 @@
     "partnerWithUsSubHeading": {
       "label": "iCharge 是西方市场领先的智能手机充电品牌。开始..."
     }
+  },
+  "sectors": {
+    "heading": { "label": "我们服务的行业" },
+    "subHeading": { "label": "随时随地为任何人提供动力" },
+    "hospitality": { "label": "款待" },
+    "healthcare": { "label": "卫生保健" },
+    "transport": { "label": "运输" },
+    "events": { "label": "事件" },
+    "retail": { "label": "零售" }
   }
 }

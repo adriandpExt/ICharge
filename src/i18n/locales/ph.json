@@ -261,5 +261,61 @@
     "inquire": {
       "label": "Magtanong"
     }
+  },
+  "bookDemo": {
+    "heading": { "label": "MAG-BOOK NG DEMO" },
+    "whatBringYouHere": { "label": "Anong nagdala sayo dito?" },
+    "firstname": { "label": "Pangalan" },
+    "lastname": { "label": "Apelyido" },
+    "email": {
+      "label": "Email"
+    },
+    "renderIssue": {
+      "address": { "label": "Address" },
+      "issue": {
+        "label": "Isyu"
+      },
+      "explainIssue": {
+        "label": "Pakipaliwanag ang isyu"
+      }
+    },
+    "renderWantChargeStation": {
+      "phoneNumber": {
+        "label": "Numero ng Telepono"
+      },
+      "companyName": {
+        "label": "Company Name"
+      },
+      "sector": {
+        "label": "Sector"
+      },
+      "interestedIcharge": {
+        "label": "Bakit ka interesado sa ICharge?"
+      }
+    },
+    "renderBringICharge": {
+      "phoneNumber": { "label": "Numero ng Telepono" },
+      "country": {
+        "label": "Bansa"
+      },
+      "additionalInformation": {
+        "label": "Karagdagang Impormasyon"
+      }
+    },
+    "demoFooter": {
+      "label": "Kailangan ng ICHARGE ang impormasyon sa pakikipag-ugnayan na ibinigay mo sa amin upang makipag-ugnayan sa iyo tungkol sa aming mga produkto at serbisyo. Maaari kang mag-unsubscribe sa mga komunikasyong ito anumang oras. Para sa impormasyon sa kung paano mag-unsubscribe, pati na rin ang aming mga kasanayan sa privacy at pangako sa pagprotekta sa iyong privacy, mangyaring suriin ang aming Patakaran sa Privacy."
+    },
+    "bookDemoBtn": {
+      "label": "Susunod"
+    }
+  },
+  "sectors": {
+    "heading": { "label": "Mga Industriyang Aming Pinagsisilbihan" },
+    "subHeading": { "label": "Powering Kahit Sino, Kahit Kailan, Kahit Saan" },
+    "hospitality": { "label": "Pakikitungo" },
+    "healthcare": { "label": "Pangkalusugan" },
+    "transport": { "label": "Transportasyon" },
+    "events": { "label": "Mga Kaganapan" },
+    "retail": { "label": "Tingian" }
   }
 }

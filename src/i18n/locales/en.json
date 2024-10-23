@@ -299,5 +299,14 @@
     "serviceSustainabilitySocialbody": {
       "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
     }
+  },
+  "sectors": {
+    "heading": { "label": "INDUSTRIES WE SERVE" },
+    "subHeading": { "label": "Powering Anyone, Anytime, Anywhere" },
+    "hospitality": { "label": "Pakikitungo" },
+    "healthcare": { "label": "Pangkalusugan" },
+    "transport": { "label": "Transportasyon" },
+    "events": { "label": "Mga Kaganapan" },
+    "retail": { "label": "Tingian" }
   }
 }
