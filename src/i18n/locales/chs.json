@@ -302,9 +302,14 @@
       "formBtn": { "label": "提交" }
     }
   },
-  "sectors": {
-    "heading": { "label": "我們服務的行業" },
-    "subHeading": { "label": "為任何人、任何時間、任何地點提供電力" },
+  "services": {
+    "servicesHeading": { "label": "灵活的充电解决方案" },
+    "servicesSubHeading": {
+      "label": "为您的顾客提供轻松保持联系的电力。无论是免费使用还是拥有设备，iCharge 提供灵活的解决方案，适合您的业务并提升顾客体验。"
+    },
+    "viewProducts": { "label": "查看產品" },
+    "sectorHeading": { "label": "我們服務的行業" },
+    "sectorSubHeading": { "label": "為任何人、任何時間、任何地點提供電力" },
     "hospitality": {
       "title": { "label": "酒店业" },
       "subtitle": {
