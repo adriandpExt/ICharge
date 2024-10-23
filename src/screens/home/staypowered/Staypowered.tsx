@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 
 export default function Component() {
   return (
-    <div className="mx-min-h-[600px] w-full overflow-hidden bg-[#006400] px-4 py-8">
+    <div className="mx-min-h-[600px] w-full overflow-hidden bg-gradient-to-b from-green-900 to-green-600 px-4 py-8">
       <div className="container mx-auto flex h-full flex-col items-center justify-between gap-10 md:flex-row">
         <div className="mb-8 w-full md:mb-0 md:w-1/2">
           <img
@@ -17,13 +17,14 @@ export default function Component() {
           <Label className="mb-4 text-3xl font-bold md:text-4xl">
             STAY POWERED WITH ICHARGE
           </Label>
-          <p className="mb-6 text-base md:text-lg">
+          <br />
+          <Label className="mb-6 text-base md:text-lg">
             Convenient, reliable charging solutions for all your devices,
             wherever you go.
-          </p>
+          </Label>
           <div className="flex justify-center md:justify-start">
             <button className="flex items-center rounded-md bg-white px-4 py-2 font-semibold text-green-500 transition-colors duration-300 hover:bg-green-500 hover:text-white">
-              View Products
+              <Label>View Products</Label>
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
