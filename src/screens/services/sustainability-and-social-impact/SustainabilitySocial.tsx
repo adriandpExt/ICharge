@@ -10,7 +10,7 @@ const SustainabilitySocial = (): ReactElement => {
       <div className="flex flex-col space-y-5 border border-solid border-[#78e996] p-8 text-center md:p-10">
         <Label
           variant="banner"
-          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-[1.5em] text-transparent md:text-xl"
         >
           Sustainability and Social Impact
         </Label>
