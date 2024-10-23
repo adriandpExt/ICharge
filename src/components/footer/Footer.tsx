@@ -18,6 +18,7 @@ import { SvgIcons } from "../svg-icons";
 import { bottomLinks, companyLinks, followUs, platformLinks } from "./utils";
 
 import SectionItem from "./SectionItem";
+import { Avatar, AvatarFallback } from "../ui/avatar";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -25,9 +26,17 @@ export const Footer = () => {
     window.scrollTo(0, 0);
   };
 
+  const triggerOpenWindow = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   const renderSvg = (): ReactElement[] => {
     return followUs.map((item) => (
-      <SvgIcons name={item.icon as IconName} size={30} key={item.path} />
+      <Avatar key={item.path} onClick={() => triggerOpenWindow(item.path)}>
+        <AvatarFallback>
+          <SvgIcons name={item.icon as IconName} size={30} />
+        </AvatarFallback>
+      </Avatar>
     ));
   };
   return (
