@@ -24,25 +24,25 @@ const Sector = (): ReactElement => {
 
   const topSector: IndustriesCard[] = [
     {
-      title: t(LocalizationKey.sectors.hospitality.label),
+      title: t(LocalizationKey.sectors.hospitality.title),
       bgImage: sectorHospital,
     },
     {
-      title: t(LocalizationKey.sectors.healthcare.label),
+      title: t(LocalizationKey.sectors.healthcare.title),
       bgImage: sectorHealthCare,
     },
   ];
   const bottomSector: IndustriesCard[] = [
     {
-      title: t(LocalizationKey.sectors.transport.label),
+      title: t(LocalizationKey.sectors.transport.title),
       bgImage: sectorTransport,
     },
     {
-      title: t(LocalizationKey.sectors.events.label),
+      title: t(LocalizationKey.sectors.events.title),
       bgImage: sectorEvents,
     },
     {
-      title: t(LocalizationKey.sectors.retail.label),
+      title: t(LocalizationKey.sectors.retail.title),
       bgImage: sectorRetail,
     },
   ];
