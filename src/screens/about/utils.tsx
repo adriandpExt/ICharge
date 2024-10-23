@@ -25,7 +25,7 @@ export const SumVal: SumStep[] = [
         list: [
             "Scalability to meet the needs of both large and small spaces.",
             "High capacity for busy areas with heavy foot traffic.",
-            "Easity Accessibility for users to rent and return powerbanks seamlessly."
+            "Easy Accessibility for users to rent and return powerbanks seamlessly."
         ]
     },
 ]
