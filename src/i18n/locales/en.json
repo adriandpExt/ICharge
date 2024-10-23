@@ -260,13 +260,52 @@
 
   "partnerWithUs": {
     "partnerWithUsHeading": {
-      "label": "PARTNER WITH US"
+      "label": "EMPOWER YOUR BUSINESS"
     },
-    "partnerWithUsSubHeading": {
-      "label": "ICharge is the leading brand in smartphone charging across Western markets. Start your scalable business venture today & begin to reap the rewards from providing the leading charging solution to your chosen market!"
+    "heading1": {
+      "label": "Boost your business and keep your customers connected effortlessly."
     },
-    "inquire": {
-      "label": "Inquire"
+    "heading2": {
+      "label": "Partner with iCharge for seamless, reliable charging solutions."
+    },
+    "bannerBtn": {
+      "label": "Inquire Now"
+    },
+    "whyPartnerWithUs": {
+      "label": "WHY PARTNER WITH US?"
+    },
+    "whyPartnerWithUsDesc1": {
+      "label": "Quanta Dance Inc. provides more than just charging stations-we offer a comprehensive service that enhances the customer experience while reducing operational burdens."
+    },
+    "whyPartnerWithUsDesc2": {
+      "label": "Our focus on convenience, advanced global payment systems, and sustainability ensures that your business will benefit will benefit from an innovative, customer-centric solution."
+    },
+    "joinUs": {
+      "label": "JOIN US"
+    },
+    "joinUsDesc1": {
+      "label": "At Quanta Dance Inc., we are powering the future by providing innovative and sustainable charging solutions."
+    },
+    "joinUsDesc2": {
+      "label": " Together, we can ensure that everyone stays connected, charged, and ready for any adventure-locally and globally."
+    },
+    "wantToPartner": {
+      "label": "Want to Partner With Us?"
+    },
+    "getInTouch": {
+      "label": "Get in Touch"
+    },
+    "inquiryForm": {
+      "title": { "label": "FRANCHISE INQUIRY FORM" },
+      "firstname": { "label": "Firstname" },
+      "lastname": { "label": "Lastname" },
+      "company": {
+        "label": "Company"
+      },
+      "email": { "label": "Email" },
+      "phoneNumber": { "label": "Phone Number" },
+      "content": { "label": "Content" },
+      "formBtn": { "label": "Contact Us" }
     }
   },
 

@@ -253,13 +253,52 @@
 
   "partnerWithUs": {
     "partnerWithUsHeading": {
-      "label": "PARTNER SA AMIN"
+      "label": "EMPOWER YOUR BUSINESS"
     },
-    "partnerWithUsSubHeading": {
-      "label": "Ang ICharge ay ang nangungunang tatak sa pagsingil ng smartphone sa mga merkado sa Kanluran. Simulan ang iyong scalable business venture ngayon at magsimulang umani ng mga gantimpala mula sa pagbibigay ng nangungunang solusyon sa pagsingil sa iyong napiling market!"
+    "heading1": {
+      "label": "Palakasin ang iyong negosyo at panatilihing konektado ang iyong mga customer nang walang kahirap-hirap."
     },
-    "inquire": {
-      "label": "Magtanong"
+    "heading2": {
+      "label": "Maki-sosyo sa iCharge para sa walang tuloy tuloy, maaasahang solusyon pag karga."
+    },
+    "bannerBtn": {
+      "label": "Magtanong Ngayon"
+    },
+    "whyPartnerWithUs": {
+      "label": "BAKIT PARTNER SA AMIN?"
+    },
+    "whyPartnerWithUsDesc1": {
+      "label": "Nagbibigay ang Quanta Dance Inc. ng higit pa sa mga istasyon ng pagkarga-nag-aalok kami ng komprehensibong serbisyo na nagpapahusay sa karanasan ng customer habang binabawasan ang mga pasanin sa pagpapatakbo."
+    },
+    "whyPartnerWithUsDesc2": {
+      "label": "Tinitiyak ng aming pagtuon sa kaginhawahan, mga advanced na pandaigdigang sistema ng pagbabayad, at pagpapanatili na makikinabang ang iyong negosyo mula sa isang makabagong solusyon na nakasentro sa customer."
+    },
+    "joinUs": {
+      "label": "SUMALI SA AMIN"
+    },
+    "joinUsDesc1": {
+      "label": "Sa Quanta Dance Inc., pinapagana namin ang hinaharap sa pamamagitan ng pagbibigay ng mga makabago at napapanatiling solusyon sa pag karga."
+    },
+    "joinUsDesc2": {
+      "label": "Sama-sama, matitiyak nating mananatiling konektado, kargado, at handa ang lahat para sa anumang pakikipagsapalaran-lokal at sa buong mundo."
+    },
+    "wantToPartner": {
+      "label": "Gustong Makipagsosyo Sa Amin?"
+    },
+    "getInTouch": {
+      "label": "Makipag-ugnayan"
+    },
+    "inquiryForm": {
+      "title": { "label": "FRANCHISE INQUIRY FORM" },
+      "firstname": { "label": "Pangalan" },
+      "lastname": { "label": "Apelyido" },
+      "company": {
+        "label": "Kumpanya"
+      },
+      "email": { "label": "Email" },
+      "phoneNumber": { "label": "Telepono" },
+      "content": { "label": "Kontent" },
+      "formBtn": { "label": "I-submit" }
     }
   },
   "bookDemo": {
