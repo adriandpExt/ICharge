@@ -28,10 +28,10 @@ const PartnerWithUs = (): ReactElement => {
   return (
     <>
       <Banner title={t(LocalizationKey.partnerWithUs.partnerWithUsHeading)}>
-        <Label className="text-base text-white">
+        <Label className="text-base font-medium text-white">
           {t(LocalizationKey.partnerWithUs.heading1)}
         </Label>
-        <Label className="text-base text-white">
+        <Label className="text-base font-medium text-white">
           {t(LocalizationKey.partnerWithUs.heading2)}
         </Label>
 
