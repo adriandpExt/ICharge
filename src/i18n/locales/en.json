@@ -412,20 +412,20 @@
     },
     "retail": {
       "title": {
-        "label": "Retail",
-        "subtitle": {
-          "label": "Enhance the shopping experience by offering charging stations in malls, supermarkets, department stores, and boutiques, encouraging customers to stay longer."
+        "label": "Retail"
+      },
+      "subtitle": {
+        "label": "Enhance the shopping experience by offering charging stations in malls, supermarkets, department stores, and boutiques, encouraging customers to stay longer."
+      },
+      "description": {
+        "sub1": {
+          "label": "Increases dwell time, leading to more purchases."
         },
-        "description": {
-          "sub1": {
-            "label": "Increases dwell time, leading to more purchases."
-          },
-          "sub2": {
-            "label": "Customizable branding to align with store aesthetics."
-          },
-          "sub3": {
-            "label": "Differentiates your business by offering a unique, customer-focused service."
-          }
+        "sub2": {
+          "label": "Customizable branding to align with store aesthetics."
+        },
+        "sub3": {
+          "label": "Differentiates your business by offering a unique, customer-focused service."
         }
       }
     }
