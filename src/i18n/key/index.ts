@@ -82,6 +82,7 @@ const LocalizationKey = {
     partnerWithUs: "footer.partnerWithUs.label",
   },
   services: {
+    servicesHeading: "services.servicesHeading.label",
     servicesSubHeading: "services.servicesSubHeading.label",
     viewProducts: "services.viewProducts.label",
     serviceFreeEquipmentTitle: "services.serviceFreeEquipmentTitle.label",
