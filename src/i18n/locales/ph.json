@@ -440,5 +440,55 @@
         }
       }
     }
+  },
+  "about": {
+    "aboutHeading": {
+      "label": "Naniniwala kami sa isang mundo kung saan ang pananatiling konektado ay walang kahirap-hirap. Sa pamamagitan ng aming makabagong mga power bank station, tinitiyak namin na ang iyong mga customer ay laging may karga at handa para sa anumang adventure, kahit saan"
+    },
+    "aboutBtn": {
+      "label": "I-message Kami"
+    },
+    "whoWeAre": {
+      "label": "Sino Kami"
+    },
+    "whoWeAreDesc1": {
+      "label": "Ang Quanta Dance Inc. ay nagbibigay ng mga solusyon sa pag-charge on-the-go upang mapanatiling konektado ang mga tao sa makabagong digital na mundo."
+    },
+    "whoWeAreDesc2": {
+      "label": "Ang aming pambansang network ng mga iCharge powerbank station ay nagsisiguro na ang mga indibidwal at negosyo ay may maaasahang access sa kuryente anumang oras, kahit saan sa Pilipinas."
+    },
+    "whoWeAreDesc3": {
+      "label": "Naniniwala kami na mahalaga ang manatiling may lakas upang manatiling konektado, maging sa pang-araw-araw na gawain o sa mahahalagang sandali."
+    },
+    "stayPowered": {
+      "label": "MANATILING MAY ENERHIYA"
+    },
+    "stayConnected": {
+      "label": "MANATILING KONEKTADO"
+    },
+    "OurMission": {
+      "label": "Ang Aming Misyon"
+    },
+    "OurMissionDesc": {
+      "label": "Layunin naming maghatid ng maginhawa at maaasahang mga powerbank lending station sa buong Pilipinas, na may mga plano para sa hinaharap na pagpapalawak upang maglingkod sa mga pandaigdigang merkado. Sa pamamagitan ng pakikipagsosyo sa mga negosyo, pinahusay namin ang karanasan ng mga customer sa retail, hospitality, transportasyon, healthcare, at mga venue ng kaganapan, na nag-aalok ng isang tuloy-tuloy na solusyon para sa pananatiling may lakas habang on the go."
+    },
+    "ourVision": {
+      "label": "Ang Aming Bisyon"
+    },
+    "ourVisionDesc": {
+      "label": "Layunin naming maghatid ng maginhawa at maaasahang mga powerbank lending station sa buong Pilipinas, na may mga plano para sa hinaharap na pagpapalawak upang maglingkod sa mga pandaigdigang merkado. Sa pamamagitan ng pakikipagsosyo sa mga negosyo, pinahusay namin ang karanasan ng mga customer sa retail, hospitality, transportasyon, healthcare, at mga venue ng kaganapan, na nag-aalok ng isang tuloy-tuloy na solusyon para sa pananatiling may lakas habang on the go."
+    },
+    "ourReach": {
+      "label": "Ang Aming Saklaw"
+    },
+    "ourReachDesc1": {
+      "label": "Ang aming mga iCharge station ay mabilis na lumalawak sa mga mall, restaurant, ospital, mga transport hub, at mga venue ng kaganapan sa buong bansa."
+    },
+    "ourReachDesc2": {
+      "label": "Sa mga integrated payment system tulad ng GCash, GrabPay, Alipay, Maya, WeChat Pay, UnionBank, at BDO, nag-aalok ang aming mga station ng maginhawa at walang abalang access sa mobile power, na ginagawang mas madali kaysa dati ang pananatiling naka-charge."
+    },
+    "ourReachDesc3": {
+      "label": "Ang flexibility na ito ay sumasalamin sa mga global charging network, na nag-aalok sa mga customer ng tuloy-tuloy na karanasan saan man sila magpunta."
+    }
   }
 }

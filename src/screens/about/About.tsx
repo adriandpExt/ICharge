@@ -5,22 +5,23 @@ import { ChevronRight } from "lucide-react";
 
 import { Banner } from "@/components";
 import AboutComponent from "./AboutComponent";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
 const Sustainabilities = (): ReactElement => {
+  const { t } = useTranslation();
   return (
     <section className="">
       <Banner title="QUANTA DANCE INC">
         <Label variant="subtitle" className="text-white sm:mb-6">
-          We believe in a world where staying connected is effortless. With our
-          innovative power bank stations, we make sure your customers can stay
-          powered and ready for any adventure, anywhere.
+          {t(LocalizationKey.about.aboutHeading)}
         </Label>
         <Button
           variant="outline"
           className="h-10 border-0 bg-slate-100 text-green-600 hover:bg-slate-200"
         >
           <div className="flex w-32 items-center justify-between">
-            <Label>Message Us</Label>
+            <Label> {t(LocalizationKey.about.aboutBtn)}</Label>
             <ChevronRight />
           </div>
         </Button>

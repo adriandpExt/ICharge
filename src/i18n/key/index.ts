@@ -145,6 +145,24 @@ const LocalizationKey = {
       ],
     },
   },
+  about: {
+    aboutHeading: "about.aboutHeading.label",
+    aboutBtn: "about.aboutBtn.label",
+    whoWeAre: "about.whoWeAre.label",
+    whoWeAreDesc1: "about.whoWeAreDesc1.label",
+    whoWeAreDesc2: "about.whoWeAreDesc2.label",
+    whoWeAreDesc3: "about.whoWeAreDesc3.label",
+    stayPowered: "about.stayPowered.label",
+    stayConnected: "about.stayConnected.label",
+    ourMission: "about.OurMission.label",
+    ourMissionDesc: "about.OurMissionDesc.label",
+    ourVision: "about.ourVision.label",
+    ourVisionDesc: "about.ourVisionDesc.label",
+    ourReach: "about.ourReach.label",
+    ourReachDesc1: "about.ourReachDesc1.label",
+    ourReachDesc2: "about.ourReachDesc2.label",
+    ourReachDesc3: "about.ourReachDesc3.label",
+  },
 };
 
 export default LocalizationKey;
