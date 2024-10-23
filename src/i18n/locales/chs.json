@@ -412,6 +412,54 @@
     },
     "ourReachDesc3": {
       "label": "这种灵活性与全球充电网络相呼应，为客户提供无缝的体验，无论他们走到哪里。"
+    },
+    "summaryHead1": {
+      "label": "先进技术解决方案"
+    },
+    "summaryDesc1": {
+      "label": "我们的专有技术确保企业和终端用户都能享受无缝的充电体验。该系统具有实时监控和直观界面，简化了充电站的管理"
+    },
+    "keyFeaturesHead": {
+      "label": "主要功能："
+    },
+    "keyFeaturesList11": {
+      "label": "实时监控：通过即时数据洞察高效管理站点"
+    },
+    "keyFeaturesList12": {
+      "label": "全球支付集成：支持包括 GCash、GrabPay、Alipay 和信用卡在内的多种支付方式，使充电服务能够在本地和国际上使用"
+    },
+    "keyFeaturesList13": {
+      "label": "全天候技术支持：为所有合作伙伴和终端用户提供，确保运营稳定和客户满意度"
+    },
+    "summaryHead2": {
+      "label": "内部 IT 与软件解决方案"
+    },
+    "summaryDesc2": {
+      "label": "我们的专有软件确保无缝的充电体验，具有实时监控和简便的界面。该软件支持企业高效管理充电站，提供快捷交易和流畅运营"
+    },
+    "keyFeaturesList21": {
+      "label": "实时监控：通过实时数据洞察高效管理站点"
+    },
+    "keyFeaturesList22": {
+      "label": "用户友好界面：简化客户的充电体验"
+    },
+    "keyFeaturesList23": {
+      "label": "全天候技术支持：为企业和客户提供，确保运营稳定"
+    },
+    "summaryHead3": {
+      "label": "专有硬件"
+    },
+    "summaryDesc3": {
+      "label": "我们的充电宝站采用定制设计的硬件，适应不同场所。无论是大型购物中心还是小型咖啡馆，我们的站点都灵活高效"
+    },
+    "keyFeaturesList31": {
+      "label": "可扩展性，满足大小场所的需求"
+    },
+    "keyFeaturesList32": {
+      "label": "高容量，适用于人流密集的繁忙区域"
+    },
+    "keyFeaturesList33": {
+      "label": "便捷易用，让用户能轻松租借和归还充电宝"
     }
   }
 }

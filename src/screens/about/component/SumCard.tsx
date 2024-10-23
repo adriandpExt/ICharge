@@ -5,8 +5,10 @@ import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
 import { Check } from "lucide-react";
 import MobileBg from "@/assets/modern-man-using-smartphone-city.png";
+import { useTranslation } from "react-i18next";
 
 const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
+    const { t } = useTranslation();
     const {
         stepSummary: { header, desc, list },
         sideBg,
@@ -30,8 +32,8 @@ const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
                         : "rounded-bl-[36px] rounded-tl-[36px]",
                     )} />
                 <CardContent className="flex w-[60%] flex-col space-y-5 p-10">
-                    <Label variant="title" className="text-transparent bg-clip-text bg-gradient-to-b from-green-900 to-green-600">{header}</Label>
-                    <Label variant="subtitle">{desc}</Label>
+                    <Label variant="title" className="text-transparent bg-clip-text bg-gradient-to-b from-green-900 to-green-600">{t(header)}</Label>
+                    <Label variant="subtitle">{t(desc)}</Label>
                     <div>
                         <Label className="text-2xl font-bold md:flex">
                             Key Features:
@@ -44,7 +46,7 @@ const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <div className="col-start-2 col-end-13 flex-grow">
-                                    <Label className="text-lg">{data}</Label>
+                                    <Label className="text-lg">{t(data)}</Label>
                                 </div>
                             </div>
                         ))}
