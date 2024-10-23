@@ -10,8 +10,11 @@ import { PageContainer } from "@/components";
 import SummaryCard from "../component/SumCard";
 import bgSide from "@/assets/modern-man-using-smartphone-city-2.png";
 import { SumVal } from "../utils";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
 const AboutComponent = (): ReactElement => {
+  const { t } = useTranslation();
   const SectionTitle = ({
     children,
     icon,
@@ -50,24 +53,19 @@ const AboutComponent = (): ReactElement => {
             </div>
             <div className="w-full lg:w-2/3">
               <Label className="mb-8 text-5xl font-bold text-green-700 md:text-6xl lg:text-7xl">
-                WHO WE ARE
+                {t(LocalizationKey.about.whoWeAre)}
               </Label>
               <div className="space-y-6 text-lg text-gray-700 md:text-xl">
                 <Label className="text-base">
-                  Quanta Dance Inc. provides on-the-go charging solutions to
-                  keep people connected in today's digital world.
+                  {t(LocalizationKey.about.whoWeAreDesc1)}
                 </Label>
                 <br />
                 <Label className="text-base">
-                  Our nationwide network of iCharge powerbank stations ensures
-                  that individuals and businesses can access reliable power
-                  anytime, anywhere across the Philippines.
+                  {t(LocalizationKey.about.whoWeAreDesc2)}
                 </Label>
                 <br />
                 <Label className="text-base">
-                  We believe that staying powered is essential to staying
-                  connected, whether during everyday activities or critical
-                  moments.
+                  {t(LocalizationKey.about.whoWeAreDesc3)}
                 </Label>
               </div>
             </div>
@@ -79,7 +77,10 @@ const AboutComponent = (): ReactElement => {
         <div className="container relative mx-auto min-h-[300px]">
           <div className="relative z-10 flex min-h-[300px] flex-col justify-center p-4 sm:p-6 md:p-8">
             <div className="mx-auto sm:mx-0">
-              {["STAY POWERED", "STAY CONNECTED"].map((text, index) => (
+              {[
+                t(LocalizationKey.about.stayPowered),
+                t(LocalizationKey.about.stayConnected),
+              ].map((text, index) => (
                 <h2
                   key={index}
                   className="mb-4 flex items-center justify-center text-white sm:justify-start sm:text-3xl md:text-4xl"
@@ -100,55 +101,50 @@ const AboutComponent = (): ReactElement => {
       <div className="mt-10 px-4 md:px-0">
         <section className="mb-8">
           <SectionTitle icon={RocketLogo}>
-            <Label variant={"banner"}>OUR MISSION</Label>
+            <Label variant={"banner"}>
+              {" "}
+              {t(LocalizationKey.about.ourMission)}
+            </Label>
           </SectionTitle>
           <SectionContent className="p-20 md:mr-36">
             <Label variant={"subtitle"}>
-              We aim to deliver convenient and reliable powerbank lending
-              stations across the Philippines, with future expansion plans to
-              serve global markets. By partnering with businesses, we enhance
-              the customer experience in retail, hospitality, transport,
-              healthcare, and event venues, offering a seamless solution for
-              staying powered on the go.
+              {t(LocalizationKey.about.ourMissionDesc)}
             </Label>
           </SectionContent>
         </section>
 
         <section className="mb-8">
           <SectionTitle icon={UnionLogo} className="justify-end">
-            <Label variant={"banner"}>OUR VISION</Label>
+            <Label variant={"banner"}>
+              {" "}
+              {t(LocalizationKey.about.ourVision)}
+            </Label>
           </SectionTitle>
           <SectionContent className="p-10 md:ml-36">
             <Label variant={"subtitle"}>
-              To be the leading provider of mobile charging solutions, ensuring
-              that everyone, everywhere, remains connected at all times, whether
-              locally or globally. Our vision includes scaling our solutions to
-              reach high-traffic areas not just in the Philippines, but in major
-              cities worldwide.
+              {t(LocalizationKey.about.ourVisionDesc)}
             </Label>
           </SectionContent>
         </section>
 
         <section className="mb-8">
           <SectionTitle icon={VectorLogo}>
-            <Label variant={"banner"}>OUR REACH</Label>
+            <Label variant={"banner"}>
+              {" "}
+              {t(LocalizationKey.about.ourReach)}
+            </Label>
           </SectionTitle>
           <SectionContent className="p-10 md:mr-36">
             <Label variant={"subtitle"}>
-              Our iCharge stations are rapidly expanding in malls, restaurants,
-              hospitals, transport hubs, and event venues across the country.
+              {t(LocalizationKey.about.ourReachDesc1)}
             </Label>
             <br />
             <Label variant={"subtitle"}>
-              With integrated payment systems such as GCash, GrabPay, Alipay,
-              Maya, WeChat Pay, UnionBank and BDO, our stations offer
-              convenient, hassle-free access to mobile power, making it easier
-              than ever to stay charged.
+              {t(LocalizationKey.about.ourReachDesc2)}
             </Label>
             <br />
             <Label variant={"subtitle"}>
-              This flexibility mirrors global charging networks, offering
-              customers a seamless experience wherever they go.
+              {t(LocalizationKey.about.ourReachDesc3)}
             </Label>
           </SectionContent>
         </section>
