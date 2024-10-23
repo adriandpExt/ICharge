@@ -83,14 +83,22 @@ const LocalizationKey = {
     partnerWithUs: "footer.partnerWithUs.label",
   },
   services: {
-    serviceFreeEquipmentsubTitle: "services.services.serviceFreeEquipmentsubTitle.label",
-    serviceFreeEquipmentbody1: "services.services.serviceFreeEquipmentbody1.label",
-    serviceFreeEquipmentbody2: "services.services.serviceFreeEquipmentbody2.label",
-    serviceFreeEquipmentbody3: "services.services.serviceFreeEquipmentbody3.label",
-    serviceSaleEquipmentsubTitle: "services.services.serviceSaleEquipmentsubTitle.label",
-    serviceSaleEquipmentbody1: "services.services.serviceSaleEquipmentbody1.label",
-    serviceSaleEquipmentbody2: "services.services.serviceSaleEquipmentbody2.label",
-    serviceSaleEquipmentbody3: "services.services.serviceSaleEquipmentbody3.label",
+    serviceFreeEquipmentsubTitle:
+      "services.services.serviceFreeEquipmentsubTitle.label",
+    serviceFreeEquipmentbody1:
+      "services.services.serviceFreeEquipmentbody1.label",
+    serviceFreeEquipmentbody2:
+      "services.services.serviceFreeEquipmentbody2.label",
+    serviceFreeEquipmentbody3:
+      "services.services.serviceFreeEquipmentbody3.label",
+    serviceSaleEquipmentsubTitle:
+      "services.services.serviceSaleEquipmentsubTitle.label",
+    serviceSaleEquipmentbody1:
+      "services.services.serviceSaleEquipmentbody1.label",
+    serviceSaleEquipmentbody2:
+      "services.services.serviceSaleEquipmentbody2.label",
+    serviceSaleEquipmentbody3:
+      "services.services.serviceSaleEquipmentbody3.label",
     serviceSustainabilitySocialbody:
       "services.serviceSustainabilitySocialbody.label",
   },
@@ -99,7 +107,7 @@ const LocalizationKey = {
     subHeading: "services.sectors.subHeading.label",
     hospitality: {
       label: "services.sectors.hospitality.label",
-      subtitle: "sectors.hospitality.subtitle",
+      subtitle: "services.sectors.hospitality.subtitle",
     },
     healthcare: {
       label: "services.sectors.healthcare.label",

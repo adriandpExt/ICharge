@@ -46,7 +46,7 @@ const ServiceIndustries = (): ReactElement => {
     },
     {
       title: t(LocalizationKey.sectors.transport.label),
-      subTitle: t(LocalizationKey.sectors.hospitality.subtitle),
+      subTitle: t(LocalizationKey.sectors.transport.subtitle),
       image: sectorTransport,
       description: [
         t(LocalizationKey.sectors.description.transport[0]),
@@ -56,7 +56,7 @@ const ServiceIndustries = (): ReactElement => {
     },
     {
       title: t(LocalizationKey.sectors.events.label2),
-      subTitle: t(LocalizationKey.sectors.hospitality.subtitle),
+      subTitle: t(LocalizationKey.sectors.events.subtitle),
       image: sectorEvents,
       description: [
         t(LocalizationKey.sectors.description.events[0]),
@@ -66,7 +66,7 @@ const ServiceIndustries = (): ReactElement => {
     },
     {
       title: t(LocalizationKey.sectors.retail.label),
-      subTitle: t(LocalizationKey.sectors.hospitality.subtitle),
+      subTitle: t(LocalizationKey.sectors.retail.subtitle),
       image: sectorRetail,
       description: [
         t(LocalizationKey.sectors.description.retail[0]),
