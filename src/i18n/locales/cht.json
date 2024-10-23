@@ -71,9 +71,6 @@
     "returnDescription": {
       "label": "將行動電源插入任一空槽以歸還。"
     },
-    "products": {
-      "label": "產品"
-    },
     "sectors": {
       "label": "行業"
     }
@@ -367,7 +364,9 @@
         "sub2": { "label": "表明您的企業重視顧客滿意度" },
         "sub3": { "label": "可定制品牌設計以符合店鋪美學" }
       }
-    }
+    },
+    "productHeading": { "label": "產品" },
+    "productMore": { "label": "更多" }
   },
   "about": {
     "aboutHeading": {

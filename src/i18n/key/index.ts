@@ -25,7 +25,6 @@ const LocalizationKey = {
     chargeDescription: "home.chargeDescription.label",
     return: "home.return.label",
     returnDescription: "home.returnDescription.label",
-    products: "home.products.label",
     sectors: "home.sectors.label",
   },
   customer: {
@@ -142,6 +141,8 @@ const LocalizationKey = {
         "services.retail.description.sub3.label",
       ],
     },
+    products: "services.productHeading.label",
+    more: "services.productMore.label",
   },
   about: {
     aboutHeading: "about.aboutHeading.label",
