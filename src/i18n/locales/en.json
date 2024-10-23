@@ -308,7 +308,6 @@
       "formBtn": { "label": "Contact Us" }
     }
   },
-
   "services": {
     "serviceFreeEquipmentsubTitle": {
       "label": "By partnering with iCharge, businesses can provide a valuable service to their customers without upfront costs. We handle everything from installation to maintenance and customer support, ensuring your customers remain powered and engaged longer."
@@ -336,11 +335,9 @@
     },
     "serviceSustainabilitySocialbody": {
       "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
-    }
-  },
-  "sectors": {
-    "heading": { "label": "INDUSTRIES WE SERVE" },
-    "subHeading": { "label": "Powering Anyone, Anytime, Anywhere" },
+    },
+    "sectorHeading": { "label": "INDUSTRIES WE SERVE" },
+    "sectorSubHeading": { "label": "Powering Anyone, Anytime, Anywhere" },
     "hospitality": {
       "title": { "label": "Hospitality" },
       "subtitle": {

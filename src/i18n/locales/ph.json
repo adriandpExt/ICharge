@@ -349,9 +349,9 @@
     }
   },
 
-  "sectors": {
-    "heading": { "label": "Mga Industriyang Aming Pinagsisilbihan" },
-    "subHeading": {
+  "services": {
+    "sectorHeading": { "label": "Mga Industriyang Aming Pinagsisilbihan" },
+    "sectorSubHeading": {
       "label": "Palakasin Kahit Sino, Kahit Kailan, Kahit Saan"
     },
     "hospitality": {

@@ -302,9 +302,9 @@
       "formBtn": { "label": "提交" }
     }
   },
-  "sectors": {
-    "heading": { "label": "我們服務的行業" },
-    "subHeading": { "label": "為任何人、任何時間、任何地點提供電力" },
+  "services": {
+    "sectorHeading": { "label": "我們服務的行業" },
+    "sectorSubHeading": { "label": "為任何人、任何時間、任何地點提供電力" },
     "hospitality": {
       "title": { "label": "酒店业" },
       "subtitle": {
