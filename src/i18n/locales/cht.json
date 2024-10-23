@@ -300,6 +300,42 @@
     }
   },
   "services": {
+    "serviceFreeEquipmentTitle": {
+      "label": "免費使用設備"
+    },
+    "serviceSaleEquipmentTitle": {
+      "label": "銷售設備"
+    },
+    "serviceSustainabilitySocialTitle": {
+      "label": "可持續性與社會影響"
+    },
+    "serviceFreeEquipmentsubTitle": {
+      "label": "通過與 iCharge 合作，企業可以在無需前期成本的情況下向顧客提供有價值的服務。我們負責從安裝到維護和客戶支持的一切，確保您的顧客保持充電並持續互動."
+    },
+    "serviceFreeEquipmentbody1": {
+      "label": "無需支付設備費用、硬件升級費或全方位維護服務費用."
+    },
+    "serviceFreeEquipmentbody2": {
+      "label": "保持訪客聯繫，提升他們的整體體驗."
+    },
+    "serviceFreeEquipmentbody3": {
+      "label": "使您的企業成為技術先進且以顧客為中心的公司."
+    },
+    "serviceSaleEquipmentsubTitle": {
+      "label": "對於希望擁有充電站的企業，我們提供購買選項，使您能夠提供此服務，同時創造額外的收入來源."
+    },
+    "serviceSaleEquipmentbody1": {
+      "label": "擁有充電站並從移動電源租賃中獲取收入."
+    },
+    "serviceSaleEquipmentbody2": {
+      "label": "定制和品牌化機會."
+    },
+    "serviceSaleEquipmentbody3": {
+      "label": "增加顧客的進店流量和互動."
+    },
+    "serviceSustainabilitySocialbody": {
+      "label": "在 Quanta Dance Inc.，我們致力於通過使用耐用且可重複使用的移動電源來減少電子廢物。我們的充電站環保，推動支持綠色未來的生態解決方案，助力減少一次性電池廢物的全球努力."
+    },
     "servicesHeading": { "label": "靈活的充電解決方案" },
     "servicesSubHeading": {
       "label": "為您的顧客提供輕鬆保持聯繫的電力。無論是免費使用還是擁有設備，iCharge 提供靈活的解決方案，適合您的業務並提升顧客體驗。"

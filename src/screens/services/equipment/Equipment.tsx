@@ -24,7 +24,7 @@ const Equipment = () => {
           </div>
           <div className="text-center sm:text-left">
             <Label variant="heading2" className="mb-4 block">
-              Free Use of Equipment
+              {t(LocalizationKey.services.serviceFreeEquipmentTitle)}
             </Label>
             <div className="mb-8">
               <Label variant="body">
@@ -74,7 +74,7 @@ const Equipment = () => {
               variant={"heading2"}
               className="mb-4 block text-center md:text-left"
             >
-              Sale of Equipment
+              {t(LocalizationKey.services.serviceSaleEquipmentTitle)}
             </Label>
             <div className="mb-8 text-center md:text-left">
               <Label variant={"body"}>

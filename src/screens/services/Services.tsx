@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { ChevronRight } from "lucide-react";
-
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import Equipment from "./equipment/Equipment";
@@ -10,19 +11,18 @@ import { Banner } from "@/components";
 import Products from "./products/Products";
 
 const Services = (): ReactElement => {
+  const { t } = useTranslation();
   return (
     <main>
       <Banner title="flexible charging solutions">
         <Label variant="subtitle" className="text-white sm:mb-6">
-          Offer your customers the power to stay connected with ease. Whether
-          through free use or ownership, iCharge provides flexible solutions
-          that fit your business and elevate customer experiences.
+          {t(LocalizationKey.services.servicesSubHeading)}
         </Label>
         <Button
           variant="outline"
           className="h-10 border-0 bg-slate-100 text-green-600 hover:bg-slate-200"
         >
-          <div className="flex w-32 items-center justify-between">
+          <div className="w-38 flex items-center justify-between">
             <Label
               onClick={() =>
                 document
@@ -30,7 +30,7 @@ const Services = (): ReactElement => {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              View Products
+              {t(LocalizationKey.services.viewProducts)}
             </Label>
             <ChevronRight />
           </div>
