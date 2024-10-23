@@ -337,5 +337,56 @@
     "serviceSustainabilitySocialbody": {
       "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
     }
+  },
+  "about": {
+    "aboutHeading": {
+      "label": "We believe in a world where staying connected is effortless. With our innovative power bank stations, we make sure your customers can stay powered and ready for any adventure, anywhere."
+    },
+    "aboutBtn": {
+      "label": "Message Us"
+    },
+    "whoWeAre": {
+      "label": "WHO WE ARE"
+    },
+    "whoWeAreDesc1": {
+      "label": "Quanta Dance Inc. provides on-the-go charging solutions to keep people connected in today's digital world."
+    },
+    "whoWeAreDesc2": {
+      "label": "Our nationwide network of iCharge powerbank stations ensures that individuals and businesses can access reliable power anytime, anywhere across the Philippines."
+    },
+    "whoWeAreDesc3": {
+      "label": "We believe that staying powered is essential to staying connected, whether during everyday activities or critical moments."
+    },
+    "stayPowered": {
+      "label": "STAY POWERED"
+    },
+
+    "stayConnected": {
+      "label": "STAY CONNECTED"
+    },
+    "OurMission": {
+      "label": "Our Mission"
+    },
+    "OurMissionDesc": {
+      "label": "We aim to deliver convenient and reliable powerbank lending stations across the Philippines, with future expansion plans to serve global markets. By partnering with businesses, we enhance the customer experience in retail, hospitality, transport, healthcare, and event venues, offering a seamless solution for staying powered on the go."
+    },
+    "ourVision": {
+      "label": "Our Vision"
+    },
+    "ourVisionDesc": {
+      "label": "We aim to deliver convenient and reliable powerbank lending stations across the Philippines, with future expansion plans to serve global markets. By partnering with businesses, we enhance the customer experience in retail, hospitality, transport, healthcare, and event venues, offering a seamless solution for staying powered on the go."
+    },
+    "ourReach": {
+      "label": "Our Reach"
+    },
+    "ourReachDesc1": {
+      "label": "Our iCharge stations are rapidly expanding in malls, restaurants, hospitals, transport hubs, and event venues across the country."
+    },
+    "ourReachDesc2": {
+      "label": "With integrated payment systems such as GCash, GrabPay, Alipay, Maya, WeChat Pay, UnionBank and BDO, our stations offer convenient, hassle-free access to mobile power, making it easier than ever to stay charged."
+    },
+    "ourReachDesc3": {
+      "label": "This flexibility mirrors global charging networks, offering customers a seamless experience wherever they go."
+    }
   }
 }

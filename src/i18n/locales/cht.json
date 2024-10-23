@@ -301,5 +301,55 @@
       "content": { "label": "內容" },
       "formBtn": { "label": "提交" }
     }
+  },
+  "about": {
+    "aboutHeading": {
+      "label": "我們相信在這個世界中，保持連接是輕而易舉的。通過我們創新的充電寶站，我們確保您的客戶隨時隨地都能保持充電，隨時準備好迎接任何冒險。"
+    },
+    "aboutBtn": {
+      "label": "聯繫我們"
+    },
+    "whoWeAre": {
+      "label": "我們是誰"
+    },
+    "whoWeAreDesc1": {
+      "label": "Quanta Dance Inc. 提供便捷的充電解決方案，讓人們在當今的數位世界中保持連接。"
+    },
+    "whoWeAreDesc2": {
+      "label": "我們的全國 iCharge 充電寶站網絡確保個人和企業可以在菲律賓隨時隨地獲得可靠的電力。"
+    },
+    "whoWeAreDesc3": {
+      "label": "我們相信保持充電對於保持連接至關重要，無論是在日常活動還是關鍵時刻。"
+    },
+    "stayPowered": {
+      "label": "保持電力"
+    },
+    "stayConnected": {
+      "label": "保持連接"
+    },
+    "OurMission": {
+      "label": "我們的使命"
+    },
+    "OurMissionDesc": {
+      "label": "我們的目標是在菲律賓提供方便可靠的充電寶借用站，並計劃未來擴展到全球市場。通過與企業合作，我們提升零售、酒店、交通、醫療和活動場地的顧客體驗，提供隨時隨地保持充電的無縫解決方案。"
+    },
+    "ourVision": {
+      "label": "我們的願景"
+    },
+    "ourVisionDesc": {
+      "label": "我們的目標是在菲律賓提供方便可靠的充電寶借用站，並計劃未來擴展到全球市場。通過與企業合作，我們提升零售、酒店、交通、醫療和活動場地的顧客體驗，提供隨時隨地保持充電的無縫解決方案。"
+    },
+    "ourReach": {
+      "label": "我們的覆蓋範圍"
+    },
+    "ourReachDesc1": {
+      "label": "我們的 iCharge 站點在全國的購物中心、餐廳、醫院、交通樞紐和活動場地迅速擴展。"
+    },
+    "ourReachDesc2": {
+      "label": "配備 GCash、GrabPay、Alipay、Maya、WeChat Pay、UnionBank 和 BDO 等集成支付系統，我們的站點提供方便、無憂的移動電力接入，讓充電變得比以往任何時候都容易。"
+    },
+    "ourReachDesc3": {
+      "label": "這種靈活性與全球充電網絡相呼應，為客戶提供無縫的體驗，無論他們走到哪裡。"
+    }
   }
 }
