@@ -254,10 +254,52 @@
 
   "partnerWithUs": {
     "partnerWithUsHeading": {
-      "label": "与我们合作"
+      "label": "增强您的业务能力"
     },
-    "partnerWithUsSubHeading": {
-      "label": "iCharge 是西方市场领先的智能手机充电品牌。开始..."
+    "heading1": {
+      "label": "轻松促进您的业务并让您的客户保持联系。"
+    },
+    "heading2": {
+      "label": "与 iCharge 合作，提供无缝、可靠的充电解决方案。"
+    },
+    "bannerBtn": {
+      "label": "立即咨询"
+    },
+    "whyPartnerWithUs": {
+      "label": "为什么与我们合作？"
+    },
+    "whyPartnerWithUsDesc1": {
+      "label": "Quanta Dance Inc. 提供的不仅仅是充电站，我们还提供全面的服务，增强客户体验，同时减轻运营负担."
+    },
+    "whyPartnerWithUsDesc2": {
+      "label": "我们对便利性、先进的全球支付系统和可持续性的关注确保您的企业将从以客户为中心的创新解决方案中受益。"
+    },
+    "joinUs": {
+      "label": "加入我们"
+    },
+    "joinUsDesc1": {
+      "label": "在Quanta Dance Inc.，我们通过提供创新和可持续的充电解决方案为未来提供动力。"
+    },
+    "joinUsDesc2": {
+      "label": " 我们可以共同确保每个人保持联系、充电并为本地和全球的任何冒险做好准备。"
+    },
+    "wantToPartner": {
+      "label": "想与我们合作吗？"
+    },
+    "getInTouch": {
+      "label": "联系我们"
+    },
+    "inquiryForm": {
+      "title": { "label": "特许经营查询表" },
+      "firstname": { "label": "名" },
+      "lastname": { "label": "姓" },
+      "company": {
+        "label": "公司"
+      },
+      "email": { "label": "电子邮件" },
+      "phoneNumber": { "label": "电话号码" },
+      "content": { "label": "内容" },
+      "formBtn": { "label": "提交" }
     }
   }
 }

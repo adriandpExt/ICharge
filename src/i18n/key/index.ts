@@ -41,14 +41,31 @@ const LocalizationKey = {
     appAndTechnicalIssues: "customer.appAndTechnicalIssues.label",
     powerbankUsage: "customer.powerbankUsage.label",
   },
-  sustainability: {
-    sustainabilityHeading: "sustainability.sustainabilityHeading.label",
-    sustainabilitySubHeading: "sustainability.sustainabilitySubHeading.label",
-  },
+
   partnerWithUs: {
     partnerWithUsHeading: "partnerWithUs.partnerWithUsHeading.label",
-    partnerWithUsSubHeading: "partnerWithUs.partnerWithUsSubHeading.label",
-    inquire: "partnerWithUs.inquire.label",
+    heading1: "partnerWithUs.heading1.label",
+    heading2: "partnerWithUs.heading2.label",
+    bannerBtn: "partnerWithUs.bannerBtn.label",
+    whyPartnerWithUs: "partnerWithUs.whyPartnerWithUs.label",
+    whyPartnerWithUsDesc1: "partnerWithUs.whyPartnerWithUsDesc1.label",
+    whyPartnerWithUsDesc2: "partnerWithUs.whyPartnerWithUsDesc2.label",
+
+    joinUs: "partnerWithUs.joinUs.label",
+    joinUsDesc1: "partnerWithUs.joinUsDesc1.label",
+    joinUsDesc2: "partnerWithUs.joinUsDesc2.label",
+    wantToPartner: "partnerWithUs.wantToPartner.label",
+    getInTouch: "partnerWithUs.getInTouch.label",
+    inquiryForm: {
+      title: "partnerWithUs.inquiryForm.title.label",
+      firstname: "partnerWithUs.inquiryForm.firstname.label",
+      lastname: "partnerWithUs.inquiryForm.lastname.label",
+      company: "partnerWithUs.inquiryForm.company.label",
+      email: "partnerWithUs.inquiryForm.email.label",
+      phoneNumber: "partnerWithUs.inquiryForm.phoneNumber.label",
+      content: "partnerWithUs.inquiryForm.content.label",
+      formBtn: "partnerWithUs.inquiryForm.formBtn.label",
+    },
   },
   footer: {
     followUs: "footer.followUs.label",
@@ -64,33 +81,6 @@ const LocalizationKey = {
     appStore: "footer.appStore.label",
     copyright: "footer.copyright.label",
     partnerWithUs: "footer.partnerWithUs.label",
-  },
-  bookDemo: {
-    heading: "bookDemo.heading.label",
-    whatBringYouHere: "bookDemo.whatBringYouHere.label",
-    firstname: "bookDemo.firstname.label",
-    lastname: "bookDemo.lastname.label",
-    email: "bookDemo.email.label",
-    renderIssue: {
-      address: "bookDemo.renderIssue.address.label",
-      issue: "bookDemo.renderIssue.issue.label",
-      explainIssue: "bookDemo.renderIssue.explainIssue.label",
-    },
-    renderWantChargeStation: {
-      phoneNumber: "bookDemo.renderWantChargeStation.phoneNumber.label",
-      companyName: "bookDemo.renderWantChargeStation.companyName.label",
-      sector: "bookDemo.renderWantChargeStation.sector.label",
-      interestedIcharge:
-        "bookDemo.renderWantChargeStation.interestedIcharge.label",
-    },
-    renderBringICharge: {
-      phoneNumber: "bookDemo.renderBringICharge.phoneNumber.label",
-      country: "bookDemo.renderBringICharge.country.label",
-      additionalInformation:
-        "bookDemo.renderBringICharge.additionalInformation.label",
-    },
-    demoFooter: "bookDemo.demoFooter.label",
-    bookDemoBtn: "bookDemo.bookDemoBtn.label",
   },
   services: {
     serviceFreeEquipmentsubTitle: "services.serviceFreeEquipmentsubTitle.label",
