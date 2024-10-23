@@ -307,6 +307,11 @@
   },
   "services": {
     "servicesHeading": { "label": "FLEXIBLE CHARGING SOLUTIONS" },
+    "serviceFreeEquipmentTitle": { "label": "Free Use of Equipment" },
+    "serviceSaleEquipmentTitle": { "label": "Sale of Equipment" },
+    "serviceSustainabilitySocialTitle": {
+      "label": "Sustainability and Social Impact"
+    },
     "servicesSubHeading": {
       "label": "Offer your customers the power to stay connected with ease. Whether through free use or ownership, iCharge provides flexible solutions that fit your business and elevate customer experiences."
     },

@@ -300,6 +300,44 @@
   },
 
   "services": {
+    "serviceMainBody": {
+      "label": "Bigyan ang iyong mga customer ng kapangyarihan upang manatiling konektado nang madali. Sa pamamagitan ng libreng paggamit o pagbili, nag-aalok ang iCharge ng mga flexible na solusyon na akma sa iyong negosyo at nagpapahusay sa karanasan ng mga customer."
+    },
+    "serviceViewProducts": {
+      "label": "Tingnan ang Mga Produkto"
+    },
+    "serviceFreeEquipmentTitle": { "label": "Libreng Paggamit ng Kagamitan" },
+    "serviceSaleEquipmentTitle": { "label": "Pagbebenta ng Kagamitan" },
+    "serviceSustainabilitySocialTitle": {
+      "label": "Pagpapanatili at Epekto sa Lipunan"
+    },
+    "serviceFreeEquipmentsubTitle": {
+      "label": "Sa pamamagitan ng pakikipagtulungan sa iCharge, maaaring magbigay ang mga negosyo ng mahalagang serbisyo sa kanilang mga customer nang walang paunang gastos. Kami ang bahala sa lahat mula sa pag-install hanggang sa pagpapanatili at customer support, tinitiyak na ang iyong mga customer ay palaging may lakas at mas masaya."
+    },
+    "serviceFreeEquipmentbody1": {
+      "label": "Walang bayad para sa kagamitan, pag-update ng hardware, o full-service maintenance."
+    },
+    "serviceFreeEquipmentbody2": {
+      "label": "Pinapanatili ang konektado ng mga bisita, pinapahusay ang kanilang kabuuang karanasan."
+    },
+    "serviceFreeEquipmentbody3": {
+      "label": "Ipinoposisyon ang iyong negosyo bilang tech-savvy at customer-focused."
+    },
+    "serviceSaleEquipmentsubTitle": {
+      "label": "Para sa mga negosyo na nais magkaroon ng kanilang sariling charging stations, nag-aalok kami ng opsyon sa pagbili, na nagbibigay-daan sa iyo na magbigay ng serbisyong ito habang lumilikha ng karagdagang kita."
+    },
+    "serviceSaleEquipmentbody1": {
+      "label": "Pagmamay-ari ng mga istasyon at kita mula sa pag-rentang powerbank."
+    },
+    "serviceSaleEquipmentbody2": {
+      "label": "Mga oportunidad sa customization at branding."
+    },
+    "serviceSaleEquipmentbody3": {
+      "label": "Nagpapataas ng foot traffic ng mga customer at pakikisalamuha."
+    },
+    "serviceSustainabilitySocialbody": {
+      "label": "Sa Quanta Dance Inc., kami ay nakatuon sa mga sustainable na gawain sa pamamagitan ng pagbabawas ng electronic waste gamit ang mga matibay at reusable na powerbanks. Ang aming mga charging station ay environment-friendly, nagpo-promote ng eco-conscious na mga solusyon na sumusuporta sa mas berdeng hinaharap, na nag-aambag sa mga pandaigdigang pagsisikap na bawasan ang single-use na battery waste."
+    },
     "servicesHeading": { "label": "flexible na solusyon sa pag-charge" },
     "servicesSubHeading": {
       "label": "Bigyan ang iyong mga customer ng kapangyarihan upang manatiling konektado nang madali. Sa pamamagitan ng libreng paggamit o pagbili, nag-aalok ang iCharge ng mga flexible na solusyon na akma sa iyong negosyo at nagpapahusay sa karanasan ng mga customer."
