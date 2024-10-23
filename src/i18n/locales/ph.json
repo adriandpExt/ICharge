@@ -71,9 +71,6 @@
     "returnDescription": {
       "label": "Ibalik ang powerbank sa pamamagitan ng pagpasok nito sa bakanteng slot sa alinmang makina na malapit sa iyo."
     },
-    "products": {
-      "label": "Produkto"
-    },
     "sectors": {
       "label": "Sektor"
     }
@@ -397,7 +394,9 @@
           "label": "Maaaring i-customize ang branding upang tumugma sa aesthetics ng tindahan."
         }
       }
-    }
+    },
+    "productHeading": { "label": "Mga Produkto" },
+    "productMore": { "label": "Higit Pa" }
   },
   "about": {
     "aboutHeading": {

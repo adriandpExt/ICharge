@@ -71,9 +71,6 @@
     "returnDescription": {
       "label": "将行动电源插入任一空槽以归还。"
     },
-    "products": {
-      "label": "产品"
-    },
     "sectors": {
       "label": "行业"
     }
@@ -367,7 +364,9 @@
         "sub2": { "label": "表明您的企业重视顾客满意度" },
         "sub3": { "label": "可定制品牌设计以符合店铺美学." }
       }
-    }
+    },
+    "productHeading": { "label": "产品" },
+    "productMore": { "label": "更多" }
   },
   "about": {
     "aboutHeading": {
