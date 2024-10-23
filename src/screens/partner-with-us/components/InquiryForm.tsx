@@ -3,7 +3,7 @@ import { TInquiryForm } from "./type";
 import { ReactElement, useRef } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
+import iChargeLogo from "@/assets/icharge-big.svg";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import emailjs from "@emailjs/browser";
@@ -127,6 +127,9 @@ export const InquiryForm = (): ReactElement => {
   const renderContact = (): ReactElement => {
     return (
       <div className="flex flex-col items-start justify-center gap-8 rounded-t-xl border-0 bg-white bg-gradient-to-b from-[#044F00] to-[#078E00] p-10 text-white shadow-2xl drop-shadow-2xl lg:rounded-l-xl lg:rounded-tr-none">
+        <div className="flex w-full justify-center">
+          <img src={iChargeLogo} alt="iCharge Logo" className="mx-auto" />
+        </div>
         <Separator className="bg-white" />
         <Label variant={"body"} className="flex items-center gap-5">
           <Phone size={32} strokeWidth={3} /> +63 918 738 8888
@@ -148,7 +151,7 @@ export const InquiryForm = (): ReactElement => {
           <div className="flex flex-col">
             <Label variant={"body"}>Unit 2402 City</Label>
             <Label variant={"body"}>Trade and Financial Tower,</Label>
-            <Label variant={"body"}> 7th Avenue, BGC, Taguig</Label>
+            <Label variant={"body"}>7th Avenue, BGC, Taguig</Label>
           </div>
         </div>
       </div>
