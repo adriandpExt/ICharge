@@ -303,6 +303,11 @@
     }
   },
   "services": {
+    "servicesHeading": { "label": "靈活的充電解決方案" },
+    "servicesSubHeading": {
+      "label": "為您的顧客提供輕鬆保持聯繫的電力。無論是免費使用還是擁有設備，iCharge 提供靈活的解決方案，適合您的業務並提升顧客體驗。"
+    },
+    "viewProducts": { "label": "查看产品" },
     "sectorHeading": { "label": "我們服務的行業" },
     "sectorSubHeading": { "label": "為任何人、任何時間、任何地點提供電力" },
     "hospitality": {

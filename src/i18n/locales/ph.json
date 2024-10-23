@@ -350,6 +350,11 @@
   },
 
   "services": {
+    "servicesHeading": { "label": "flexible na solusyon sa pag-charge" },
+    "servicesSubHeading": {
+      "label": "Bigyan ang iyong mga customer ng kapangyarihan upang manatiling konektado nang madali. Sa pamamagitan ng libreng paggamit o pagbili, nag-aalok ang iCharge ng mga flexible na solusyon na akma sa iyong negosyo at nagpapahusay sa karanasan ng mga customer."
+    },
+    "viewProducts": { "label": "Tingnan ang Mga Produkto" },
     "sectorHeading": { "label": "Mga Industriyang Aming Pinagsisilbihan" },
     "sectorSubHeading": {
       "label": "Palakasin Kahit Sino, Kahit Kailan, Kahit Saan"
