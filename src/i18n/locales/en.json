@@ -71,9 +71,6 @@
     "returnDescription": {
       "label": "Return by inserting the powerbank in position to an empty slot at any machine near you."
     },
-    "products": {
-      "label": "Products"
-    },
     "sectors": {
       "label": "Sectors"
     }
@@ -430,7 +427,9 @@
           "label": "Differentiates your business by offering a unique, customer-focused service."
         }
       }
-    }
+    },
+    "productHeading": { "label": "Products" },
+    "productMore": { "label": "More" }
   },
   "about": {
     "aboutHeading": {
