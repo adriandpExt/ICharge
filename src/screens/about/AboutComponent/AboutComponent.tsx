@@ -1,5 +1,5 @@
 import { Zap } from "lucide-react";
-import React from "react";
+import { ReactElement } from "react";
 
 import costEffective from "@/assets/about/costeffective.png";
 import RocketLogo from "@/assets/about/rocket.png";
@@ -12,12 +12,12 @@ import SummaryCard from "../component/SumCard";
 import bgSide from "@/assets/modern-man-using-smartphone-city-2.png";
 import { SumVal } from "../utils";
 
-const AboutComponent = () => {
-  const SectionTitle: React.FC<SectionTitleProps> = ({
+const AboutComponent = (): ReactElement => {
+  const SectionTitle = ({
     children,
     icon,
     className = "",
-  }) => (
+  }: SectionTitleProps): ReactElement => (
     <h2
       className={`container mx-auto flex items-center text-2xl font-bold text-green-700 md:text-3xl ${className}`}
     >
@@ -26,16 +26,17 @@ const AboutComponent = () => {
     </h2>
   );
 
-  const SectionContent: React.FC<SectionContentProps> = ({
+  const SectionContent = ({
     children,
     className = "",
-  }) => (
+  }: SectionContentProps): ReactElement => (
     <div className={`mt-4 bg-green-100 p-4 ${className}`}>
       <div className="container mx-auto border-t border-green-700 pt-4">
         <p className="text-green-800">{children}</p>
       </div>
     </div>
   );
+
   return (
     <div>
       <div className="container mx-auto flex items-center justify-center p-8 lg:p-12">
@@ -53,20 +54,22 @@ const AboutComponent = () => {
                 WHO WE ARE
               </Label>
               <div className="space-y-6 text-lg text-gray-700 md:text-xl">
-                <p>
+                <Label className="text-base">
                   Quanta Dance Inc. provides on-the-go charging solutions to
                   keep people connected in today's digital world.
-                </p>
-                <p>
+                </Label>
+                <br />
+                <Label className="text-base">
                   Our nationwide network of iCharge powerbank stations ensures
                   that individuals and businesses can access reliable power
                   anytime, anywhere across the Philippines.
-                </p>
-                <p>
+                </Label>
+                <br />
+                <Label className="text-base">
                   We believe that staying powered is essential to staying
                   connected, whether during everyday activities or critical
                   moments.
-                </p>
+                </Label>
               </div>
             </div>
           </div>
@@ -80,13 +83,13 @@ const AboutComponent = () => {
               {["STAY POWERED", "STAY CONNECTED"].map((text, index) => (
                 <h2
                   key={index}
-                  className="mb-4 flex items-center justify-center text-2xl font-bold text-white sm:justify-start sm:text-3xl md:text-4xl"
+                  className="mb-4 flex items-center justify-center text-white sm:justify-start sm:text-3xl md:text-4xl"
                 >
                   <Zap
                     className="mr-2 h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10"
                     aria-hidden="true"
                   />
-                  <span>{text}</span>
+                  <Label variant={"heading1"}>{text}</Label>
                 </h2>
               ))}
             </div>
@@ -96,46 +99,57 @@ const AboutComponent = () => {
 
       <div className="mt-10 px-4 md:px-0">
         <section className="mb-8">
-          <SectionTitle icon={RocketLogo}>OUR MISSION</SectionTitle>
+          <SectionTitle icon={RocketLogo}>
+            <Label variant={"heading1"}>OUR MISSION</Label>
+          </SectionTitle>
           <SectionContent className="md:mr-36">
-            We aim to deliver convenient and reliable powerbank lending stations
-            across the Philippines, with future expansion plans to serve global
-            markets. By partnering with businesses, we enhance the customer
-            experience in retail, hospitality, transport, healthcare, and event
-            venues, offering a seamless solution for staying powered on the go.
+            <Label>
+              We aim to deliver convenient and reliable powerbank lending
+              stations across the Philippines, with future expansion plans to
+              serve global markets. By partnering with businesses, we enhance
+              the customer experience in retail, hospitality, transport,
+              healthcare, and event venues, offering a seamless solution for
+              staying powered on the go.
+            </Label>
           </SectionContent>
         </section>
 
         <section className="mb-8">
           <SectionTitle icon={UnionLogo} className="justify-end">
-            OUR VISION
+            <Label variant={"heading1"}>OUR VISION</Label>
           </SectionTitle>
           <SectionContent className="md:ml-36">
-            To be the leading provider of mobile charging solutions, ensuring
-            that everyone, everywhere, remains connected at all times, whether
-            locally or globally. Our vision includes scaling our solutions to
-            reach high-traffic areas not just in the Philippines, but in major
-            cities worldwide.
+            <Label>
+              To be the leading provider of mobile charging solutions, ensuring
+              that everyone, everywhere, remains connected at all times, whether
+              locally or globally. Our vision includes scaling our solutions to
+              reach high-traffic areas not just in the Philippines, but in major
+              cities worldwide.
+            </Label>
           </SectionContent>
         </section>
 
         <section className="mb-8">
-          <SectionTitle icon={VectorLogo}>OUR REACH</SectionTitle>
+          <SectionTitle icon={VectorLogo}>
+            <Label variant={"heading1"}>OUR REACH</Label>
+          </SectionTitle>
           <SectionContent className="md:mr-36">
-            <p className="mb-4">
+            <Label className="mb-4">
               Our iCharge stations are rapidly expanding in malls, restaurants,
               hospitals, transport hubs, and event venues across the country.
-            </p>
-            <p className="mb-4">
+            </Label>
+            <br />
+            <Label className="mb-4">
               With integrated payment systems such as GCash, GrabPay, Alipay,
               Maya, WeChat Pay, UnionBank and BDO, our stations offer
               convenient, hassle-free access to mobile power, making it easier
               than ever to stay charged.
-            </p>
-            <p>
+            </Label>
+            <br />
+            <Label>
               This flexibility mirrors global charging networks, offering
               customers a seamless experience wherever they go.
-            </p>
+            </Label>
           </SectionContent>
         </section>
         <PageContainer className="space-y-20">
