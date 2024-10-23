@@ -92,20 +92,20 @@ const ServiceIndustries = (): ReactElement => {
       {/* desktop view */}
       {serviceIndustries.map((data, index) => (
         <div
-          className={cn("hidden md:flex", index % 2 === 0 ? "pr-10" : "pl-10")}
+          className={cn("hidden lg:flex", index % 2 === 0 ? "pr-10" : "pl-10")}
           key={index}
           id={index === 3 ? "Events" : data.title}
         >
           <div
             className={cn(
-              "flex w-full border-t-4 border-green-500 bg-green-500/25 md:h-[25rem] lg:h-[30rem]",
+              "flex w-full border-t-4 border-green-500 bg-green-500/25",
               index % 2 !== 0 && "flex-row-reverse",
             )}
           >
             <img
               src={data.image}
               className={cn(
-                "h-full w-[52%] object-cover",
+                "min-h-[35rem] w-[52%] object-cover",
                 index % 2 === 0 ? "rounded-br-[15rem]" : "rounded-tl-[15rem]",
               )}
             />
@@ -132,7 +132,7 @@ const ServiceIndustries = (): ReactElement => {
       {serviceIndustries.map((data, index) => (
         <div
           className={cn(
-            "flex w-full flex-col border-b-4 border-green-500 bg-green-500/25 md:hidden",
+            "flex w-full flex-col border-b-4 border-green-500 bg-green-500/25 lg:hidden",
           )}
           key={index}
           id={index === 3 ? "Events" : data.title}
