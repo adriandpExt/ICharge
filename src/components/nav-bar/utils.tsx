@@ -1,6 +1,6 @@
 import { LinkList } from "./type";
 
-import { Handshake, Phone } from "lucide-react";
+import { Building2, Handshake, Phone } from "lucide-react";
 
 export const linkList: LinkList[] = [
   {
@@ -13,7 +13,7 @@ export const linkList: LinkList[] = [
     path: "/services",
     icon: Phone,
   },
-  { label: "About", path: "/about" },
+  { label: "About", path: "/about", icon: Building2 },
 ];
 
 export const language = [
