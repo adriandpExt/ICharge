@@ -17,7 +17,6 @@ import sectorEvents from "@/assets/sectors/sectorEvents.jpg";
 import sectorRetail from "@/assets/sectors/sectorRetail.jpg";
 import LocalizationKey from "@/i18n/key";
 
-
 const Sector = (): ReactElement => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useTranslation();
@@ -25,25 +24,25 @@ const Sector = (): ReactElement => {
 
   const topSector: IndustriesCard[] = [
     {
-      title: t(LocalizationKey.sectors.hospitality),
+      title: t(LocalizationKey.sectors.hospitality.label),
       bgImage: sectorHospital,
     },
     {
-      title: t(LocalizationKey.sectors.healthcare),
+      title: t(LocalizationKey.sectors.healthcare.label),
       bgImage: sectorHealthCare,
     },
   ];
   const bottomSector: IndustriesCard[] = [
     {
-      title: t(LocalizationKey.sectors.transport),
+      title: t(LocalizationKey.sectors.transport.label),
       bgImage: sectorTransport,
     },
     {
-      title: t(LocalizationKey.sectors.events),
+      title: t(LocalizationKey.sectors.events.label),
       bgImage: sectorEvents,
     },
     {
-      title: t(LocalizationKey.sectors.retail),
+      title: t(LocalizationKey.sectors.retail.label),
       bgImage: sectorRetail,
     },
   ];
@@ -52,12 +51,8 @@ const Sector = (): ReactElement => {
   const handleCarouselChange = (index: number): void => {
     setCurrentIndex(index); // Update the current carousel index
   };
-  const handleSectorNavigate = (): void => {
-    navigate("services");
-    window.scrollTo({
-      top: document.getElementById("industries")?.offsetTop,
-      behavior: "smooth",
-    });
+  const handleSectorNavigate = (id: string): void => {
+    navigate("services", { state: { value: id } });
   };
   return (
     <>
@@ -80,7 +75,7 @@ const Sector = (): ReactElement => {
               card={{ title, bgImage }}
               key={index}
               isDesktop={true}
-              onClick={handleSectorNavigate}
+              onClick={() => handleSectorNavigate(title)}
             />
           ))}
         </div>
@@ -90,7 +85,7 @@ const Sector = (): ReactElement => {
               card={{ title, bgImage }}
               key={index}
               isDesktop={true}
-              onClick={handleSectorNavigate}
+              onClick={() => handleSectorNavigate(title)}
             />
           ))}
         </div>
@@ -128,7 +123,7 @@ const Sector = (): ReactElement => {
                     index !== currentIndex ? "opacity-25" : "opacity-100"
                   }
                   isDesktop={false}
-                  onClick={handleSectorNavigate}
+                  onClick={() => handleSectorNavigate(title)}
                 />
               </CarouselItem>
             ))}

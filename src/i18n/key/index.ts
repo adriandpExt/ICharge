@@ -93,25 +93,68 @@ const LocalizationKey = {
     bookDemoBtn: "bookDemo.bookDemoBtn.label",
   },
   services: {
-    serviceFreeEquipmentsubTitle: "services.serviceFreeEquipmentsubTitle.label",
-    serviceFreeEquipmentbody1: "services.serviceFreeEquipmentbody1.label",
-    serviceFreeEquipmentbody2: "services.serviceFreeEquipmentbody2.label",
-    serviceFreeEquipmentbody3: "services.serviceFreeEquipmentbody3.label",
-    serviceSaleEquipmentsubTitle: "services.serviceSaleEquipmentsubTitle.label",
-    serviceSaleEquipmentbody1: "services.serviceSaleEquipmentbody1.label",
-    serviceSaleEquipmentbody2: "services.serviceSaleEquipmentbody2.label",
-    serviceSaleEquipmentbody3: "services.serviceSaleEquipmentbody3.label",
+    serviceFreeEquipmentsubTitle: "services.services.serviceFreeEquipmentsubTitle.label",
+    serviceFreeEquipmentbody1: "services.services.serviceFreeEquipmentbody1.label",
+    serviceFreeEquipmentbody2: "services.services.serviceFreeEquipmentbody2.label",
+    serviceFreeEquipmentbody3: "services.services.serviceFreeEquipmentbody3.label",
+    serviceSaleEquipmentsubTitle: "services.services.serviceSaleEquipmentsubTitle.label",
+    serviceSaleEquipmentbody1: "services.services.serviceSaleEquipmentbody1.label",
+    serviceSaleEquipmentbody2: "services.services.serviceSaleEquipmentbody2.label",
+    serviceSaleEquipmentbody3: "services.services.serviceSaleEquipmentbody3.label",
     serviceSustainabilitySocialbody:
       "services.serviceSustainabilitySocialbody.label",
   },
   sectors: {
-    heading: "sectors.heading.label",
-    subHeading: "sectors.subHeading.label",
-    hospitality: "sectors.hospitality.label",
-    healthcare: "sectors.healthcare.label",
-    transport: "sectors.transport.label",
-    events: "sectors.events.label",
-    retail: "sectors.retail.label",
+    heading: "services.sectors.heading.label",
+    subHeading: "services.sectors.subHeading.label",
+    hospitality: {
+      label: "services.sectors.hospitality.label",
+      subtitle: "sectors.hospitality.subtitle",
+    },
+    healthcare: {
+      label: "services.sectors.healthcare.label",
+      subtitle: "services.sectors.healthcare.subtitle",
+    },
+    transport: {
+      label: "services.sectors.transport.label",
+      subtitle: "services.sectors.transport.subtitle",
+    },
+    events: {
+      label: "services.sectors.events.label",
+      label2: "services.sectors.events.label2",
+      subtitle: "services.sectors.events.subtitle",
+    },
+    retail: {
+      label: "services.sectors.retail.label",
+      subtitle: "services.sectors.retail.subtitle",
+    },
+    description: {
+      hospitality: [
+        "services.sectors.hospitality.description.sub1",
+        "services.sectors.hospitality.description.sub2",
+        "services.sectors.hospitality.description.sub3",
+      ],
+      healthcare: [
+        "services.sectors.healthcare.description.sub1",
+        "services.sectors.healthcare.description.sub2",
+        "services.sectors.healthcare.description.sub3",
+      ],
+      transport: [
+        "services.sectors.transport.description.sub1",
+        "services.sectors.transport.description.sub2",
+        "services.sectors.transport.description.sub3",
+      ],
+      events: [
+        "services.sectors.events.description.sub1",
+        "services.sectors.events.description.sub2",
+        "services.sectors.events.description.sub3",
+      ],
+      retail: [
+        "services.sectors.retail.description.sub1",
+        "services.sectors.retail.description.sub2",
+        "services.sectors.retail.description.sub3",
+      ],
+    },
   },
 };
 

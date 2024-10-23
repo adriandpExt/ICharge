@@ -258,7 +258,6 @@
     ]
   },
 
-  
   "partnerWithUs": {
     "partnerWithUsHeading": {
       "label": "PARTNER WITH US"
@@ -272,41 +271,84 @@
   },
 
   "services": {
-    "serviceFreeEquipmentsubTitle": {
-      "label": "By partnering with iCharge, businesses can provide a valuable service to their customers without upfront costs. We handle everything from installation to maintenance and customer support, ensuring your customers remain powered and engaged longer."
+    "services": {
+      "serviceFreeEquipmentsubTitle": {
+        "label": "By partnering with iCharge, businesses can provide a valuable service to their customers without upfront costs. We handle everything from installation to maintenance and customer support, ensuring your customers remain powered and engaged longer."
+      },
+      "serviceFreeEquipmentbody1": {
+        "label": "No cost for equipment, hardware updates, or full-service maintenance."
+      },
+      "serviceFreeEquipmentbody2": {
+        "label": "Keeps visitors connected, enhancing their overall experience."
+      },
+      "serviceFreeEquipmentbody3": {
+        "label": "Positions your business as tech-savvy and customer-focused."
+      },
+      "serviceSaleEquipmentsubTitle": {
+        "label": "For businesses looking to own their charging stations, we offer a purchase option, allowing you to provide this service while creating an additional revenue stream."
+      },
+      "serviceSaleEquipmentbody1": {
+        "label": "Ownership of stations and revenue from powerbank rentals."
+      },
+      "serviceSaleEquipmentbody2": {
+        "label": "Customization and branding opportunities."
+      },
+      "serviceSaleEquipmentbody3": {
+        "label": "Increases customer foot traffic and engagement."
+      },
+      "serviceSustainabilitySocialbody": {
+        "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
+      }
     },
-    "serviceFreeEquipmentbody1": {
-      "label": "No cost for equipment, hardware updates, or full-service maintenance."
-    },
-    "serviceFreeEquipmentbody2": {
-      "label": "Keeps visitors connected, enhancing their overall experience."
-    },
-    "serviceFreeEquipmentbody3": {
-      "label": "Positions your business as tech-savvy and customer-focused."
-    },
-    "serviceSaleEquipmentsubTitle": {
-      "label": "For businesses looking to own their charging stations, we offer a purchase option, allowing you to provide this service while creating an additional revenue stream."
-    },
-    "serviceSaleEquipmentbody1": {
-      "label": "Ownership of stations and revenue from powerbank rentals."
-    },
-    "serviceSaleEquipmentbody2": {
-      "label": "Customization and branding opportunities."
-    },
-    "serviceSaleEquipmentbody3": {
-      "label": "Increases customer foot traffic and engagement."
-    },
-    "serviceSustainabilitySocialbody": {
-      "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
+    "sectors": {
+      "heading": { "label": "INDUSTRIES WE SERVE" },
+      "subHeading": { "label": "Powering Anyone, Anytime, Anywhere" },
+      "hospitality": {
+        "label": "Hospitality",
+        "subtitle": "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected.",
+        "description": {
+          "sub1": "Enhances guest satisfaction, leading to positive reviews and repeat visits.",
+          "sub2": "Encourages guests to spend more time in common areas.",
+          "sub3": "Differentiates your business by offering a unique, customer-focused service."
+        }
+      },
+      "healthcare": {
+        "label": "Healthcare",
+        "subtitle": "Offer peace of mind by providing charging stations in hospitals, clinics, gyms, and wellness centers, making the visit more comfortable for patients and visitors.",
+        "description": {
+          "sub1": "Improves the patient and visitor experience with convenient charging access.",
+          "sub2": "Reduces stress for visitors who rely on their phones for essential communication.",
+          "sub3": "Shows your facility’s commitment to innovation and customer care."
+        }
+      },
+      "transport": {
+        "label": "Trasport",
+        "subtitle": "Keep travelers connected in airports, bus terminals, train stations, and other transport hubs by offering convenient charging solutions.",
+        "description": {
+          "sub1": "Provides critical charging services to passengers, reducing stress over low battery levels.",
+          "sub2": "Enhances customer satisfaction and improves perceptions of your transport hub.",
+          "sub3": "Increases dwell time in commercial areas such as airport shops and cafés."
+        }
+      },
+      "events": {
+        "label": "Events",
+        "label2": "Liesure & Events",
+        "subtitle": "Keep attendees engaged during concerts, festivals, exhibitions, and sports events by offering reliable charging options that ensure they can stay connected.",
+        "description": {
+          "sub1": "Keeps attendees connected, allowing them to share their experiences online.",
+          "sub2": "Reduces frustration over low battery levels, enhancing the overall event experience.",
+          "sub3": "Increases dwell time, especially for multi-day events."
+        }
+      },
+      "retail": {
+        "label": "Retail",
+        "subtitle": "Enhance the shopping experience by offering charging stations in malls, supermarkets, department stores, and boutiques, encouraging customers to stay longer.",
+        "description": {
+          "sub1": "Increases dwell time, leading to more purchases.",
+          "sub2": "Customizable branding to align with store aesthetics.",
+          "sub3": "Differentiates your business by offering a unique, customer-focused service."
+        }
+      }
     }
-  },
-  "sectors": {
-    "heading": { "label": "INDUSTRIES WE SERVE" },
-    "subHeading": { "label": "Powering Anyone, Anytime, Anywhere" },
-    "hospitality": { "label": "Pakikitungo" },
-    "healthcare": { "label": "Pangkalusugan" },
-    "transport": { "label": "Transportasyon" },
-    "events": { "label": "Mga Kaganapan" },
-    "retail": { "label": "Tingian" }
   }
 }
