@@ -46,7 +46,10 @@ const PartnerWithUs = (): ReactElement => {
       </Banner>
 
       <PageContainer className="flex flex-col gap-20">
-        <div className="flex flex-col items-center gap-10 lg:flex-row">
+        <div
+          data-aos="fade"
+          className="flex flex-col items-center gap-10 lg:flex-row"
+        >
           <div>
             <img
               src={img1}
@@ -75,7 +78,11 @@ const PartnerWithUs = (): ReactElement => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-10 lg:flex-row-reverse">
+        <div
+          data-aos="fade"
+          data-aos-duration="3000"
+          className="flex flex-col items-center gap-10 lg:flex-row-reverse"
+        >
           <div>
             <img
               src={img1}
