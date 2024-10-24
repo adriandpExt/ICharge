@@ -380,7 +380,7 @@
       }
     },
     "transport": {
-      "title": { "label": "Trasport" },
+      "title": { "label": "Transport" },
       "subtitle": {
         "label": "Keep travelers connected in airports, bus terminals, train stations, and other transport hubs by offering convenient charging solutions."
       },
@@ -398,7 +398,7 @@
     },
     "events": {
       "title": { "label": "Events" },
-      "title2": { "label": "Liesure & Events" },
+      "title2": { "label": "Leisure & Events" },
       "subtitle": {
         "label": "Keep attendees engaged during concerts, festivals, exhibitions, and sports events by offering reliable charging options that ensure they can stay connected."
       },
