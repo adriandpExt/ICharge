@@ -92,7 +92,7 @@ const Sector = (): ReactElement => {
         {/* desktop view */}
       </PageContainer>
       {/* mobile view */}
-      <div className="space-y-5 lg:hidden">
+      <div className="space-y-5 pb-16 lg:hidden">
         <div className="flex flex-col space-y-5 text-center">
           <Label
             variant="banner"
