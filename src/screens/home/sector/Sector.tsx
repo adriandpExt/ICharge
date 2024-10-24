@@ -118,7 +118,7 @@ const Sector = (): ReactElement => {
             }
           }}
         >
-          <CarouselContent className="flex h-[100%]">
+          <CarouselContent className="flex h-[100%] py-10">
             {sector.map(({ title, bgImage }, index) => (
               <CarouselItem
                 className="relative mr-4 min-w-0 flex-[0_0_70%]"
