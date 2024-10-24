@@ -1,4 +1,4 @@
-import { TInquiryForm } from "./type";
+import { TInquiryForm } from "../type";
 
 import { ReactElement, useRef } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -26,7 +26,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 
-import { inquiryDefaultValues, inquiryFormSchema } from "./utils";
+import { inquiryFormSchema, inquiryDefaultValues } from "../utils";
 
 export const InquiryForm = (): ReactElement => {
   const inquiryFormRef = useRef<HTMLFormElement>(null);

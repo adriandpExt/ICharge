@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 
 import LocalizationKey from "@/i18n/key";
 
-import img1 from "@/assets/stayPoweredLogo.png";
 import bgImg from "@/assets/modern-man-using-smartphone-city-2.png";
 
 import { Label } from "@/components/ui/label";
@@ -13,7 +12,8 @@ import { Button } from "@/components/ui/button";
 
 import { Banner, PageContainer } from "@/components";
 
-import { InquiryForm } from "./components";
+import { InquiryForm, RenderItem } from "./components";
+import { data } from "./utils";
 
 const PartnerWithUs = (): ReactElement => {
   const { t } = useTranslation();
@@ -46,70 +46,14 @@ const PartnerWithUs = (): ReactElement => {
       </Banner>
 
       <PageContainer className="flex flex-col gap-20">
-        <div
-          data-aos="fade"
-          className="flex flex-col items-center gap-10 lg:flex-row"
-        >
-          <div>
-            <img
-              src={img1}
-              alt="Convenience"
-              className="h-96 w-full text-green-600"
-            />
-          </div>
-
-          <div>
-            <Label
-              variant={"banner"}
-              className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
-            >
-              {t(LocalizationKey.partnerWithUs.whyPartnerWithUs)}
-            </Label>
-
-            <div className="flex flex-col gap-5">
-              <Label className="text-base">
-                {t(LocalizationKey.partnerWithUs.whyPartnerWithUsDesc1)}
-              </Label>
-
-              <Label className="text-base">
-                {t(LocalizationKey.partnerWithUs.whyPartnerWithUsDesc2)}
-              </Label>
-            </div>
-          </div>
-        </div>
-
-        <div
-          data-aos="fade"
-          data-aos-duration="3000"
-          className="flex flex-col items-center gap-10 lg:flex-row-reverse"
-        >
-          <div>
-            <img
-              src={img1}
-              alt="Convenience"
-              className="h-96 w-full text-green-600"
-            />
-          </div>
-
-          <div>
-            <Label
-              variant={"banner"}
-              className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
-            >
-              {t(LocalizationKey.partnerWithUs.joinUs)}
-            </Label>
-
-            <div className="flex flex-col gap-5">
-              <Label className="text-base">
-                {t(LocalizationKey.partnerWithUs.joinUsDesc1)}
-              </Label>
-
-              <Label className="text-base">
-                {t(LocalizationKey.partnerWithUs.joinUsDesc2)}
-              </Label>
-            </div>
-          </div>
-        </div>
+        {data.map((item, ids) => (
+          <RenderItem
+            key={ids}
+            imgSrc={item.imgSrc}
+            title={t(item.title)}
+            list={item.list.map((label) => t(label))}
+          />
+        ))}
       </PageContainer>
 
       <section className="relative h-full w-full pb-16">

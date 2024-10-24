@@ -1,6 +1,29 @@
-import { TInquiryForm } from "./type";
+import { DataCardProps, TInquiryForm } from "./type";
 
 import { z } from "zod";
+
+import LocalizationKey from "@/i18n/key";
+
+import img1 from "@/assets/stayPoweredLogo.png";
+
+export const data: DataCardProps[] = [
+  {
+    imgSrc: img1,
+    title: LocalizationKey.partnerWithUs.whyPartnerWithUs,
+    list: [
+      LocalizationKey.partnerWithUs.whyPartnerWithUsDesc1,
+      LocalizationKey.partnerWithUs.whyPartnerWithUsDesc2,
+    ],
+  },
+  {
+    imgSrc: img1,
+    title: LocalizationKey.partnerWithUs.joinUs,
+    list: [
+      LocalizationKey.partnerWithUs.joinUsDesc1,
+      LocalizationKey.partnerWithUs.joinUsDesc2,
+    ],
+  },
+];
 
 export const inquiryDefaultValues: TInquiryForm = {
   firstname: "",

@@ -6,3 +6,9 @@ export interface TInquiryForm {
   phoneNumber: string;
   content: string;
 }
+
+export interface DataCardProps {
+  imgSrc: string;
+  title: string;
+  list: string[];
+}
