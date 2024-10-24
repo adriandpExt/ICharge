@@ -154,7 +154,6 @@ const LocalizationKey = {
   },
   about: {
     aboutHeading: "about.aboutHeading.label",
-    aboutBtn: "about.aboutBtn.label",
     whoWeAre: "about.whoWeAre.label",
     whoWeAreDesc1: "about.whoWeAreDesc1.label",
     whoWeAreDesc2: "about.whoWeAreDesc2.label",

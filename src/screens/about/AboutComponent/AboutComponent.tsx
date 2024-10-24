@@ -41,7 +41,10 @@ const AboutComponent = (): ReactElement => {
 
   return (
     <div>
-      <div className="container mx-auto flex items-center justify-center p-8 lg:p-12">
+      <div
+        className="container mx-auto flex items-center justify-center p-8 lg:p-12"
+        data-aos="fade-up"
+      >
         <div className="w-full max-w-7xl">
           <div className="flex flex-col items-center p-6 lg:flex-row lg:gap-24 lg:p-16">
             <div className="flex w-full justify-center lg:w-1/3">
@@ -99,7 +102,7 @@ const AboutComponent = (): ReactElement => {
       </div>
 
       <div className="mt-10 px-4 md:px-0">
-        <section className="mb-8">
+        <section className="mb-8" data-aos="fade-up">
           <SectionTitle icon={RocketLogo}>
             <Label variant={"banner"}>
               {" "}
@@ -113,7 +116,7 @@ const AboutComponent = (): ReactElement => {
           </SectionContent>
         </section>
 
-        <section className="mb-8">
+        <section className="mb-8" data-aos="fade-up">
           <SectionTitle icon={UnionLogo} className="justify-end">
             <Label variant={"banner"}>
               {" "}
@@ -127,7 +130,7 @@ const AboutComponent = (): ReactElement => {
           </SectionContent>
         </section>
 
-        <section className="mb-8">
+        <section className="mb-8" data-aos="fade-up">
           <SectionTitle icon={VectorLogo}>
             <Label variant={"banner"}>
               {" "}
