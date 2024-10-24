@@ -26,6 +26,9 @@ const LocalizationKey = {
     return: "home.return.label",
     returnDescription: "home.returnDescription.label",
     sectors: "home.sectors.label",
+    stayPowered: "home.stayPowered.label",
+    stayPoweredDesc: "home.stayPoweredDesc.label",
+    stayPoweredBtn: "home.stayPoweredBtn.label",
   },
   customer: {
     customerService: "customer.customerService.label",

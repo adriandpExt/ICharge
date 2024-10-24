@@ -73,6 +73,15 @@
     },
     "sectors": {
       "label": "Sectors"
+    },
+    "stayPowered": {
+      "label": " STAY POWERED WITH ICHARGE"
+    },
+    "stayPoweredDesc": {
+      "label": "Convenient, reliable charging solutions for all your devices, wherever you go."
+    },
+    "stayPoweredBtn": {
+      "label": "View Products"
     }
   },
 

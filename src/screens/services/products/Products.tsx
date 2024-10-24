@@ -68,7 +68,7 @@ const Features = () => {
                 <div className="flex h-[30rem] w-full flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 px-10 text-center md:w-[23rem]">
                   <div
                     className={cn(
-                      "absolute -z-40 h-[30rem] w-[95%] rounded-[3rem] md:w-[23rem] p-5",
+                      "absolute -z-40 h-[30rem] w-[95%] rounded-[3rem] p-5 md:w-[23rem]",
                       "border-0 bg-[#C7E9C0]",
                     )}
                     style={{
@@ -95,7 +95,10 @@ const Features = () => {
                     className="h-[50%] w-auto object-contain"
                     alt="Product Image"
                   />
-                  <Label variant="title">
+                  <Label
+                    variant="title"
+                    className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:mb-14"
+                  >
                     {data.productDetails.name.toLocaleUpperCase()}
                   </Label>
                   <Button

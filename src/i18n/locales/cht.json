@@ -73,6 +73,15 @@
     },
     "sectors": {
       "label": "行業"
+    },
+    "stayPowered": {
+      "label": "使用 ICHARGE 保持充電"
+    },
+    "stayPoweredDesc": {
+      "label": "方便可靠的充電解決方案，適用於所有設備，無論您身在何處。"
+    },
+    "stayPoweredBtn": {
+      "label": "查看產品"
     }
   },
   "footer": {

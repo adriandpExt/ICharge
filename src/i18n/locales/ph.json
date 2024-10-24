@@ -73,6 +73,15 @@
     },
     "sectors": {
       "label": "Sektor"
+    },
+    "stayPowered": {
+      "label": "MANATILING KONEKTADO SA ICHARGE"
+    },
+    "stayPoweredDesc": {
+      "label": "Madali at maaasahang solusyon sa pag-charge para sa lahat ng iyong mga device, kahit saan ka magpunta."
+    },
+    "stayPoweredBtn": {
+      "label": "Tingnan ang mga Produkto"
     }
   },
 
