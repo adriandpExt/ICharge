@@ -5,11 +5,9 @@ import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 import { Spinner } from "@/components";
 
-export const IndustryCard = (
-  props: IndustryCardType,
-): ReactElement => {
+export const IndustryCard = (props: IndustryCardType): ReactElement => {
   const {
-    card: { title, bgImage, },
+    card: { title, bgImage },
     isDesktop,
     className,
     onClick,
@@ -21,13 +19,15 @@ export const IndustryCard = (
     <div
       className={cn(
         "h-[25rem] w-full rounded-3xl rounded-tr-none border-0 bg-cover bg-no-repeat",
-        isDesktop && "shadow-2xl shadow-black/50 drop-shadow-2xl",
+        isDesktop
+          ? "shadow-2xl shadow-black/50 drop-shadow-2xl"
+          : "shadow-lg shadow-black/50 drop-shadow-lg",
         className,
       )}
     >
       <img
         className={cn(
-          "-z-10 h-full w-full rounded-3xl rounded-tr-none object-cover bg-no-repeat",
+          "-z-10 h-full w-full rounded-3xl rounded-tr-none bg-no-repeat object-cover",
           isHovered && "scale-105",
         )}
         src={bgImage}

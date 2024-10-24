@@ -22,19 +22,18 @@ const Features = () => {
   const [content, setContent] = useState<Product>(initValue);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle opening the modal and passing product data
   const handleOpen = (e: { stopPropagation: () => void }, item: Product) => {
     e.stopPropagation();
-    setContent(item); // Set the current product content
-    setOpen(true); // Open the modal
+    setContent(item);
+    setOpen(true);
   };
 
   const handleOpenChange = () => {
-    setOpen(false); // Close the modal
+    setOpen(false);
   };
 
   const handleCarouselChange = (index: number) => {
-    setCurrentIndex(index); // Update the current carousel index
+    setCurrentIndex(index);
   };
 
   return (
@@ -69,17 +68,21 @@ const Features = () => {
                 <div className="flex h-[30rem] w-full flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 px-10 text-center md:w-[23rem]">
                   <div
                     className={cn(
-                      "absolute -z-40 h-[30rem] w-[95%] rounded-[3rem] md:w-[23rem]",
+                      "absolute -z-40 h-[30rem] w-[95%] rounded-[3rem] md:w-[23rem] p-5",
                       "border-0 bg-[#C7E9C0]",
                     )}
                     style={{
                       clipPath: "polygon(100% 0%, 0% 0%, 0% 65%, 100% 25%)",
                       boxShadow: "inset 0 0 0 1px rgba(134, 239, 172, 1)",
                     }}
-                  />
+                  >
+                    <div className="hidden h-fit w-full justify-start lg:flex">
+                      <SvgIcons name="ic_svl_ig" size={50} />
+                    </div>
+                  </div>
                   <div
                     className={cn(
-                      "absolute -z-50 h-[30rem] w-[95%] rounded-[4rem] shadow-md md:w-[23rem] md:rounded-[3rem]",
+                      "absolute -z-50 h-[28rem] w-[95%] rounded-[4rem] shadow-md md:w-[23rem] md:rounded-[3rem]",
                       "bg-[#E0EEDE]",
                     )}
                     style={{
@@ -87,9 +90,6 @@ const Features = () => {
                       boxShadow: "inset 0 0 0 1px rgba(134, 239, 172, 1)",
                     }}
                   />
-                  <div className="hidden h-fit w-full justify-start lg:flex">
-                    <SvgIcons name="ic_svl_ig" size={50} />
-                  </div>
                   <img
                     src={data.productDetails.image}
                     className="h-[50%] w-auto object-contain"
@@ -134,11 +134,10 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Product Modal Component */}
         <ProductModal
           item={content}
           open={open}
-          handleOpenChange={handleOpenChange} // Ensure this properly closes the modal
+          handleOpenChange={handleOpenChange}
         />
       </div>
     </section>
