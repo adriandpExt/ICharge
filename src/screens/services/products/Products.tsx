@@ -39,7 +39,7 @@ const Features = () => {
 
   return (
     <section
-      className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat px-10 pt-16"
+      className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pt-16"
       id="serviceProducts"
     >
       <div className="container mx-auto flex flex-col place-items-center">
