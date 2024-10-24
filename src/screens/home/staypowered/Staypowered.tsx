@@ -1,8 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import stayPoweredLogo from "@/assets/stayPoweredLogo.png";
 import { Label } from "@/components/ui/label";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
-export default function Component() {
+const StayPowered = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="mx-min-h-[600px] w-full overflow-hidden bg-gradient-to-b from-green-900 to-green-600 px-4 py-8">
       <div className="container mx-auto flex h-full flex-col items-center justify-between gap-10 md:flex-row">
@@ -15,16 +19,15 @@ export default function Component() {
         </div>
         <div className="w-full text-center text-white md:w-1/2 md:text-left">
           <Label className="mb-4 text-3xl font-bold md:text-4xl">
-            STAY POWERED WITH ICHARGE
+            {t(LocalizationKey.home.stayPowered)}
           </Label>
           <br />
           <Label className="mb-6 text-base md:text-lg">
-            Convenient, reliable charging solutions for all your devices,
-            wherever you go.
+            {t(LocalizationKey.home.stayPoweredDesc)}
           </Label>
           <div className="flex justify-center md:justify-start">
             <button className="flex items-center rounded-md bg-white px-4 py-2 font-semibold text-green-500 transition-colors duration-300 hover:bg-green-500 hover:text-white">
-              <Label>View Products</Label>
+              <Label>{t(LocalizationKey.home.stayPoweredBtn)}</Label>
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
@@ -32,4 +35,6 @@ export default function Component() {
       </div>
     </div>
   );
-}
+};
+
+export default StayPowered;

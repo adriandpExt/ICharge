@@ -26,6 +26,9 @@ const LocalizationKey = {
     return: "home.return.label",
     returnDescription: "home.returnDescription.label",
     sectors: "home.sectors.label",
+    stayPowered: "home.stayPowered.label",
+    stayPoweredDesc: "home.stayPoweredDesc.label",
+    stayPoweredBtn: "home.stayPoweredBtn.label",
   },
   customer: {
     customerService: "customer.customerService.label",
@@ -154,7 +157,6 @@ const LocalizationKey = {
   },
   about: {
     aboutHeading: "about.aboutHeading.label",
-    aboutBtn: "about.aboutBtn.label",
     whoWeAre: "about.whoWeAre.label",
     whoWeAreDesc1: "about.whoWeAreDesc1.label",
     whoWeAreDesc2: "about.whoWeAreDesc2.label",
