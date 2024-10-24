@@ -484,6 +484,54 @@
     },
     "ourReachDesc3": {
       "label": "Ang flexibility na ito ay sumasalamin sa mga global charging network, na nag-aalok sa mga customer ng tuloy-tuloy na karanasan saan man sila magpunta."
+    },
+    "summaryHead1": {
+      "label": "Mga Advanced na Solusyon sa Teknolohiya"
+    },
+    "summaryDesc1": {
+      "label": "Ang aming proprietary technology ay tinitiyak ang seamless charging experience para sa parehong mga negosyo at end-users. May kasamang real-time monitoring at intuitive interface, pinapasimple nito ang pamamahala ng charging stations."
+    },
+    "keyFeaturesHead": {
+      "label": "Mga Pangunahing Tampok: "
+    },
+    "keyFeaturesList11": {
+      "label": "Real-Time Monitoring: Epektibong pamamahala ng mga stations gamit ang live data insights."
+    },
+    "keyFeaturesList12": {
+      "label": "Global Payment Integration: Sumusuporta sa iba't ibang paraan ng pagbabayad, kabilang ang GCash, GrabPay, Alipay, at credit cards, na nagbibigay-daan sa access sa charging services lokal man o internasyonal."
+    },
+    "keyFeaturesList13": {
+      "label": "24/7 Technical Support: Available para sa lahat ng partners at end-users, tinitiyak ang operational reliability at customer satisfaction."
+    },
+    "summaryHead2": {
+      "label": "In-House na IT at Software Solutions"
+    },
+    "summaryDesc2": {
+      "label": "Ang aming proprietary software ay nagtitiyak ng seamless charging experience sa pamamagitan ng real-time monitoring at user-friendly interface. Ang software ay sumusuporta sa mga negosyo sa epektibong pamamahala ng charging stations, nag-aalok ng mabilis na transaksyon at smooth operations."
+    },
+    "keyFeaturesList21": {
+      "label": "Real-Time Monitoring: Epektibong pamamahala ng mga stations gamit ang live data insights."
+    },
+    "keyFeaturesList22": {
+      "label": "User-Friendly Interface: Pinapasimple ang karanasan ng mga customer sa pag-charge."
+    },
+    "keyFeaturesList23": {
+      "label": "24/7 Technical Support: Available para sa parehong mga negosyo at customer, tinitiyak ang operational reliability."
+    },
+    "summaryHead3": {
+      "label": "Pinagmamay-ariang Hardware"
+    },
+    "summaryDesc3": {
+      "label": "Ang aming mga powerbank stations ay ginawa gamit ang custom-designed hardware na maaaring i-adapt sa iba't ibang lokasyon. Maging sa malalaking shopping malls o maliliit na cafés, ang aming mga stations ay versatile at efficient."
+    },
+    "keyFeaturesList31": {
+      "label": "Scalability: Akma sa pangangailangan ng parehong malaki at maliit na espasyo."
+    },
+    "keyFeaturesList32": {
+      "label": "High Capacity: Para sa mga lugar na may mataas na foot traffic."
+    },
+    "keyFeaturesList33": {
+      "label": "Easy Accessibility: Madaling pag-rent at pagbalik ng powerbanks para sa mga users."
     }
   }
 }
