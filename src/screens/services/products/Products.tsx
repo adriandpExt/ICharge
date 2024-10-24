@@ -83,7 +83,7 @@ const Features = () => {
                   </div>
                   <div
                     className={cn(
-                      "absolute -z-50 h-[25rem] w-[95%] rounded-[4rem] shadow-md md:w-[23rem] md:rounded-[3rem]",
+                      "absolute -z-50 h-[28rem] w-[95%] rounded-[4rem] shadow-md md:w-[23rem] md:rounded-[3rem]",
                       "bg-[#E0EEDE]",
                     )}
                     style={{
