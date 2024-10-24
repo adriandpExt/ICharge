@@ -1,6 +1,9 @@
 import { ReactElement } from "react";
 
 import { ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
+import LocalizationKey from "@/i18n/key";
 
 import img1 from "@/assets/stayPoweredLogo.png";
 import bgImg from "@/assets/modern-man-using-smartphone-city-2.png";
@@ -13,6 +16,8 @@ import { Banner, PageContainer } from "@/components";
 import { InquiryForm } from "./components";
 
 const PartnerWithUs = (): ReactElement => {
+  const { t } = useTranslation();
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -22,20 +27,20 @@ const PartnerWithUs = (): ReactElement => {
 
   return (
     <>
-      <Banner title="EMPOWER YOUR BUSINESS">
-        <Label className="text-base text-white">
-          Boost your business and keep your customers connected effortlessly.
+      <Banner title={t(LocalizationKey.partnerWithUs.partnerWithUsHeading)}>
+        <Label className="text-base font-medium text-white">
+          {t(LocalizationKey.partnerWithUs.heading1)}
         </Label>
-        <Label className="text-base text-white">
-          Partner with iCharge for seamless, reliable charging solutions.
+        <Label className="text-base font-medium text-white">
+          {t(LocalizationKey.partnerWithUs.heading2)}
         </Label>
 
         <Button
           onClick={() => scrollToSection("inquiryForm")}
           variant={"custombutton"}
-          className="group h-10 w-32 items-center bg-white text-green-600 hover:text-white"
+          className="group h-10 items-center bg-white text-green-600 hover:text-white"
         >
-          Contact Us
+          {t(LocalizationKey.partnerWithUs.bannerBtn)}
           <ChevronRight className="text-green-600 group-hover:text-white" />
         </Button>
       </Banner>
@@ -55,20 +60,16 @@ const PartnerWithUs = (): ReactElement => {
               variant={"banner"}
               className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
             >
-              WHY PARTNER WITH US?
+              {t(LocalizationKey.partnerWithUs.whyPartnerWithUs)}
             </Label>
 
             <div className="flex flex-col gap-5">
               <Label className="text-base">
-                Quanta Dance Inc. provides more than just charging stations-we
-                offer a comprehensive service that enhances the customer
-                experience while reducing operational burdens.
+                {t(LocalizationKey.partnerWithUs.whyPartnerWithUsDesc1)}
               </Label>
 
               <Label className="text-base">
-                Our focus on convenience, advanced global payment systems, and
-                sustainability ensures that your business will benefit will
-                benefit from an innovative, customer-centric solution.
+                {t(LocalizationKey.partnerWithUs.whyPartnerWithUsDesc2)}
               </Label>
             </div>
           </div>
@@ -88,18 +89,16 @@ const PartnerWithUs = (): ReactElement => {
               variant={"banner"}
               className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
             >
-              JOIN US
+              {t(LocalizationKey.partnerWithUs.joinUs)}
             </Label>
 
             <div className="flex flex-col gap-5">
               <Label className="text-base">
-                At Quanta Dance Inc., we are powering the future by providing
-                innovative and sustainable charging solutions.
+                {t(LocalizationKey.partnerWithUs.joinUsDesc1)}
               </Label>
 
               <Label className="text-base">
-                Together, we can ensure that everyone stays connected, charged,
-                and ready for any adventure-locally and globally.
+                {t(LocalizationKey.partnerWithUs.joinUsDesc2)}
               </Label>
             </div>
           </div>
@@ -117,10 +116,10 @@ const PartnerWithUs = (): ReactElement => {
 
         <div className="container relative z-10 mx-auto flex h-full flex-col gap-5 px-10 py-32">
           <Label variant={"banner"} className="text-white">
-            Want to Partner With Us?
+            {t(LocalizationKey.partnerWithUs.wantToPartner)}
           </Label>
           <Label variant={"banner"} className="text-white">
-            Get in Touch!
+            {t(LocalizationKey.partnerWithUs.getInTouch)}
           </Label>
         </div>
 

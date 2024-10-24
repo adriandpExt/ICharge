@@ -38,16 +38,19 @@ const Features = () => {
   };
 
   return (
-    <section className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat pb-32 pt-20">
+    <section
+      className="h-fit w-full overflow-hidden from-green-400 via-black to-green-400 bg-cover bg-no-repeat px-10 pt-16"
+      id="serviceProducts"
+    >
       <div className="container mx-auto flex flex-col place-items-center">
         <Label
           variant={"banner"}
           className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:mb-14"
         >
-          {t(LocalizationKey.home.products)}
+          {t(LocalizationKey.services.products)}
         </Label>
         <Carousel
-          opts={{ align: "center" }}
+          opts={{ align: "center", loop: true }}
           className="w-[95%] lg:h-[100%] lg:w-[95%]"
           setApi={(api) => {
             if (api !== undefined) {
@@ -97,7 +100,7 @@ const Features = () => {
                     className="w-20 rounded-3xl bg-green-500 text-black hover:bg-green-400"
                     onClick={(e) => handleOpen(e, data)}
                   >
-                    More
+                    {t(LocalizationKey.services.more)}
                   </Button>
                 </div>
               </CarouselItem>

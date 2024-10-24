@@ -71,9 +71,6 @@
     "returnDescription": {
       "label": "Return by inserting the powerbank in position to an empty slot at any machine near you."
     },
-    "products": {
-      "label": "Products"
-    },
     "sectors": {
       "label": "Sectors"
     }
@@ -258,20 +255,67 @@
     ]
   },
 
-  
   "partnerWithUs": {
     "partnerWithUsHeading": {
-      "label": "PARTNER WITH US"
+      "label": "EMPOWER YOUR BUSINESS"
     },
-    "partnerWithUsSubHeading": {
-      "label": "ICharge is the leading brand in smartphone charging across Western markets. Start your scalable business venture today & begin to reap the rewards from providing the leading charging solution to your chosen market!"
+    "heading1": {
+      "label": "Boost your business and keep your customers connected effortlessly."
     },
-    "inquire": {
-      "label": "Inquire"
+    "heading2": {
+      "label": "Partner with iCharge for seamless, reliable charging solutions."
+    },
+    "bannerBtn": {
+      "label": "Inquire Now"
+    },
+    "whyPartnerWithUs": {
+      "label": "WHY PARTNER WITH US?"
+    },
+    "whyPartnerWithUsDesc1": {
+      "label": "Quanta Dance Inc. provides more than just charging stations-we offer a comprehensive service that enhances the customer experience while reducing operational burdens."
+    },
+    "whyPartnerWithUsDesc2": {
+      "label": "Our focus on convenience, advanced global payment systems, and sustainability ensures that your business will benefit will benefit from an innovative, customer-centric solution."
+    },
+    "joinUs": {
+      "label": "JOIN US"
+    },
+    "joinUsDesc1": {
+      "label": "At Quanta Dance Inc., we are powering the future by providing innovative and sustainable charging solutions."
+    },
+    "joinUsDesc2": {
+      "label": " Together, we can ensure that everyone stays connected, charged, and ready for any adventure-locally and globally."
+    },
+    "wantToPartner": {
+      "label": "Want to Partner With Us?"
+    },
+    "getInTouch": {
+      "label": "Get in Touch"
+    },
+    "inquiryForm": {
+      "title": { "label": "FRANCHISE INQUIRY FORM" },
+      "firstname": { "label": "Firstname" },
+      "lastname": { "label": "Lastname" },
+      "company": {
+        "label": "Company"
+      },
+      "email": { "label": "Email" },
+      "phoneNumber": { "label": "Phone Number" },
+      "content": { "label": "Content" },
+      "formBtn": { "label": "Contact Us" }
     }
   },
-
   "services": {
+    "servicesHeading": { "label": "FLEXIBLE CHARGING SOLUTIONS" },
+    "serviceFreeEquipmentTitle": { "label": "Free Use of Equipment" },
+    "serviceSaleEquipmentTitle": { "label": "Sale of Equipment" },
+    "serviceSustainabilitySocialTitle": {
+      "label": "Sustainability and Social Impact"
+    },
+    "servicesSubHeading": {
+      "label": "Offer your customers the power to stay connected with ease. Whether through free use or ownership, iCharge provides flexible solutions that fit your business and elevate customer experiences."
+    },
+    "viewProducts": { "label": "View Products" },
     "serviceFreeEquipmentsubTitle": {
       "label": "By partnering with iCharge, businesses can provide a valuable service to their customers without upfront costs. We handle everything from installation to maintenance and customer support, ensuring your customers remain powered and engaged longer."
     },
@@ -298,6 +342,197 @@
     },
     "serviceSustainabilitySocialbody": {
       "label": " At Quanta Dance Inc., we are committed to sustainable practices by reducing electronic waste through the use of durable, reusable powerbanks. Our charging stations are environmentally friendly, promoting eco-conscious solutions that support a greener future, contributing to global efforts to reduce single-use battery waste."
+    },
+    "sectorHeading": { "label": "INDUSTRIES WE SERVE" },
+    "sectorSubHeading": { "label": "Powering Anyone, Anytime, Anywhere" },
+    "hospitality": {
+      "title": { "label": "Hospitality" },
+      "subtitle": {
+        "label": "Elevate guest experiences in hotels, restaurants, coffee shops, and bars by offering convenient charging options that allow visitors to stay connected."
+      },
+      "description": {
+        "sub1": {
+          "label": "Enhances guest satisfaction, leading to positive reviews and repeat visits."
+        },
+        "sub2": {
+          "label": "Encourages guests to spend more time in common areas."
+        },
+        "sub3": {
+          "label": "Differentiates your business by offering a unique, customer-focused service."
+        }
+      }
+    },
+    "healthcare": {
+      "title": { "label": "Healthcare" },
+      "subtitle": {
+        "label": "Offer peace of mind by providing charging stations in hospitals, clinics, gyms, and wellness centers, making the visit more comfortable for patients and visitors."
+      },
+      "description": {
+        "sub1": {
+          "label": "Improves the patient and visitor experience with convenient charging access."
+        },
+        "sub2": {
+          "label": "Reduces stress for visitors who rely on their phones for essential communication."
+        },
+        "sub3": {
+          "label": "Shows your facility’s commitment to innovation and customer care."
+        }
+      }
+    },
+    "transport": {
+      "title": { "label": "Transport" },
+      "subtitle": {
+        "label": "Keep travelers connected in airports, bus terminals, train stations, and other transport hubs by offering convenient charging solutions."
+      },
+      "description": {
+        "sub1": {
+          "label": "Provides critical charging services to passengers, reducing stress over low battery levels."
+        },
+        "sub2": {
+          "label": "Enhances customer satisfaction and improves perceptions of your transport hub."
+        },
+        "sub3": {
+          "label": "Increases dwell time in commercial areas such as airport shops and cafés."
+        }
+      }
+    },
+    "events": {
+      "title": { "label": "Events" },
+      "title2": { "label": "Leisure & Events" },
+      "subtitle": {
+        "label": "Keep attendees engaged during concerts, festivals, exhibitions, and sports events by offering reliable charging options that ensure they can stay connected."
+      },
+      "description": {
+        "sub1": {
+          "label": "Keeps attendees connected, allowing them to share their experiences online."
+        },
+        "sub2": {
+          "label": "Reduces frustration over low battery levels, enhancing the overall event experience."
+        },
+        "sub3": {
+          "label": "Increases dwell time, especially for multi-day events."
+        }
+      }
+    },
+    "retail": {
+      "title": {
+        "label": "Retail"
+      },
+      "subtitle": {
+        "label": "Enhance the shopping experience by offering charging stations in malls, supermarkets, department stores, and boutiques, encouraging customers to stay longer."
+      },
+      "description": {
+        "sub1": {
+          "label": "Increases dwell time, leading to more purchases."
+        },
+        "sub2": {
+          "label": "Customizable branding to align with store aesthetics."
+        },
+        "sub3": {
+          "label": "Differentiates your business by offering a unique, customer-focused service."
+        }
+      }
+    },
+    "productHeading": { "label": "Products" },
+    "productMore": { "label": "More" }
+  },
+  "about": {
+    "aboutHeading": {
+      "label": "We believe in a world where staying connected is effortless. With our innovative power bank stations, we make sure your customers can stay powered and ready for any adventure, anywhere."
+    },
+    "aboutBtn": {
+      "label": "Message Us"
+    },
+    "whoWeAre": {
+      "label": "WHO WE ARE"
+    },
+    "whoWeAreDesc1": {
+      "label": "Quanta Dance Inc. provides on-the-go charging solutions to keep people connected in today's digital world."
+    },
+    "whoWeAreDesc2": {
+      "label": "Our nationwide network of iCharge powerbank stations ensures that individuals and businesses can access reliable power anytime, anywhere across the Philippines."
+    },
+    "whoWeAreDesc3": {
+      "label": "We believe that staying powered is essential to staying connected, whether during everyday activities or critical moments."
+    },
+    "stayPowered": {
+      "label": "STAY POWERED"
+    },
+
+    "stayConnected": {
+      "label": "STAY CONNECTED"
+    },
+    "OurMission": {
+      "label": "Our Mission"
+    },
+    "OurMissionDesc": {
+      "label": "We aim to deliver convenient and reliable powerbank lending stations across the Philippines, with future expansion plans to serve global markets. By partnering with businesses, we enhance the customer experience in retail, hospitality, transport, healthcare, and event venues, offering a seamless solution for staying powered on the go."
+    },
+    "ourVision": {
+      "label": "Our Vision"
+    },
+    "ourVisionDesc": {
+      "label": "We aim to deliver convenient and reliable powerbank lending stations across the Philippines, with future expansion plans to serve global markets. By partnering with businesses, we enhance the customer experience in retail, hospitality, transport, healthcare, and event venues, offering a seamless solution for staying powered on the go."
+    },
+    "ourReach": {
+      "label": "Our Reach"
+    },
+    "ourReachDesc1": {
+      "label": "Our iCharge stations are rapidly expanding in malls, restaurants, hospitals, transport hubs, and event venues across the country."
+    },
+    "ourReachDesc2": {
+      "label": "With integrated payment systems such as GCash, GrabPay, Alipay, Maya, WeChat Pay, UnionBank and BDO, our stations offer convenient, hassle-free access to mobile power, making it easier than ever to stay charged."
+    },
+    "ourReachDesc3": {
+      "label": "This flexibility mirrors global charging networks, offering customers a seamless experience wherever they go."
+    },
+    "summaryHead1": {
+      "label": "Advanced Technology Solutions"
+    },
+    "summaryDesc1": {
+      "label": "Our proprietary technology ensures a seamless charging experience for both businesses and end-users. The system features real-time monitoring and an intuitive interface that simplifies the management of charging stations."
+    },
+    "keyFeaturesHead": {
+      "label": "Key Features: "
+    },
+    "keyFeaturesList11": {
+      "label": "Real-Time Monitoring: Efficiently manage stations with live data insights."
+    },
+    "keyFeaturesList12": {
+      "label": "Global Payment Integration: Supports various payment methods, including GCash, GrabPay, Alipay, and credit cards, enabling access to charging services both locally and internationally."
+    },
+    "keyFeaturesList13": {
+      "label": "24/7 Technical Support: Available for all partners and end-users, ensuring operational reliability and customer satisfaction."
+    },
+    "summaryHead2": {
+      "label": "In-House IT and Software Solutions"
+    },
+    "summaryDesc2": {
+      "label": "Our proprietary software ensures a seamless charging experience with real-time monitoring and an easy-to-use interface. The software supports businesses in efficiently managing charging stations, offering quick transactions and smooth operations."
+    },
+    "keyFeaturesList21": {
+      "label": "Real-Time Monitoring: Efficiently manage stations with live data insights."
+    },
+    "keyFeaturesList22": {
+      "label": "User-Friendly Interface: Simplifies the customer charging experience."
+    },
+    "keyFeaturesList23": {
+      "label": "24/7 Technical Support: Available for both businesses and customers, ensuring operational reliability."
+    },
+    "summaryHead3": {
+      "label": "Proprietary Hardware"
+    },
+    "summaryDesc3": {
+      "label": "Our powerbank stations are built with custom-designed hardware that is adaptable to different locations. Whether in large shopping malls or small cafes, our stations are versatile and efficient."
+    },
+    "keyFeaturesList31": {
+      "label": "Scalability to meet the needs of both large and small spaces."
+    },
+    "keyFeaturesList32": {
+      "label": "High capacity for busy areas with heavy foot traffic."
+    },
+    "keyFeaturesList33": {
+      "label": "Easy Accessibility for users to rent and return powerbanks seamlessly."
     }
   }
 }

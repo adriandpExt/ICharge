@@ -1,19 +1,58 @@
+import { IndustriesCard } from "./type";
 import { ReactElement, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { PageContainer } from "@/components";
 import { IndustryCard } from "./component/IndustryCard";
-import { bottomSector, sector, topSector } from "./utils";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Label } from "@/components/ui/label";
+import sectorHospital from "@/assets/sectors/sectorHospitality.png";
+import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
+import sectorTransport from "@/assets/sectors/sectorTransport.jpg";
+import sectorEvents from "@/assets/sectors/sectorEvents.jpg";
+import sectorRetail from "@/assets/sectors/sectorRetail.jpg";
+import LocalizationKey from "@/i18n/key";
 
 const Sector = (): ReactElement => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const topSector: IndustriesCard[] = [
+    {
+      title: t(LocalizationKey.services.hospitality.title),
+      bgImage: sectorHospital,
+    },
+    {
+      title: t(LocalizationKey.services.healthcare.title),
+      bgImage: sectorHealthCare,
+    },
+  ];
+  const bottomSector: IndustriesCard[] = [
+    {
+      title: t(LocalizationKey.services.transport.title),
+      bgImage: sectorTransport,
+    },
+    {
+      title: t(LocalizationKey.services.events.title),
+      bgImage: sectorEvents,
+    },
+    {
+      title: t(LocalizationKey.services.retail.title),
+      bgImage: sectorRetail,
+    },
+  ];
+  const sector: IndustriesCard[] = [...topSector, ...bottomSector];
 
   const handleCarouselChange = (index: number): void => {
     setCurrentIndex(index); // Update the current carousel index
+  };
+  const handleSectorNavigate = (id: string): void => {
+    navigate("services", { state: { value: id } });
   };
   return (
     <>
@@ -23,9 +62,11 @@ const Sector = (): ReactElement => {
             variant="banner"
             className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
           >
-            INDUSTRIES WE SERVE
+            {t(LocalizationKey.services.sectorHeading)}
           </Label>
-          <Label variant="subtitle">Powering Anyone, Anytime, Anywhere</Label>
+          <Label variant="subtitle">
+            {t(LocalizationKey.services.sectorSubHeading)}
+          </Label>
         </div>
         {/* desktop view */}
         <div className="grid grid-cols-2 gap-10">
@@ -34,6 +75,7 @@ const Sector = (): ReactElement => {
               card={{ title, bgImage }}
               key={index}
               isDesktop={true}
+              onClick={() => handleSectorNavigate(title)}
             />
           ))}
         </div>
@@ -43,6 +85,7 @@ const Sector = (): ReactElement => {
               card={{ title, bgImage }}
               key={index}
               isDesktop={true}
+              onClick={() => handleSectorNavigate(title)}
             />
           ))}
         </div>
@@ -51,8 +94,15 @@ const Sector = (): ReactElement => {
       {/* mobile view */}
       <div className="space-y-5 lg:hidden">
         <div className="flex flex-col space-y-5 text-center">
-          <Label variant="heading1">INDUSTRIES WE SERVE</Label>
-          <Label variant="subtitle">Powering Anyone, Anytime, Anywhere</Label>
+          <Label
+            variant="banner"
+            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+          >
+            {t(LocalizationKey.services.sectorHeading)}
+          </Label>
+          <Label variant="subtitle">
+            {t(LocalizationKey.services.sectorSubHeading)}
+          </Label>
         </div>
         <Carousel
           className="overflow-hidden"
@@ -80,6 +130,7 @@ const Sector = (): ReactElement => {
                     index !== currentIndex ? "opacity-25" : "opacity-100"
                   }
                   isDesktop={false}
+                  onClick={() => handleSectorNavigate(title)}
                 />
               </CarouselItem>
             ))}

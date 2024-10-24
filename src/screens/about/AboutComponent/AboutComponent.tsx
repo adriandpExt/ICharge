@@ -1,23 +1,25 @@
-import { Zap } from "lucide-react";
-import React from "react";
-
+import { ReactElement } from "react";
 import costEffective from "@/assets/about/costeffective.png";
 import RocketLogo from "@/assets/about/rocket.png";
 import UnionLogo from "@/assets/about/Union.png";
 import VectorLogo from "@/assets/about/Vector.png";
+import Lightning from "@/assets/about/lightning-fill.png";
 import { Label } from "@/components/ui/label";
 import { SectionTitleProps, SectionContentProps } from "./types";
 import { PageContainer } from "@/components";
 import SummaryCard from "../component/SumCard";
 import bgSide from "@/assets/modern-man-using-smartphone-city-2.png";
 import { SumVal } from "../utils";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
-const AboutComponent = () => {
-  const SectionTitle: React.FC<SectionTitleProps> = ({
+const AboutComponent = (): ReactElement => {
+  const { t } = useTranslation();
+  const SectionTitle = ({
     children,
     icon,
     className = "",
-  }) => (
+  }: SectionTitleProps): ReactElement => (
     <h2
       className={`container mx-auto flex items-center text-2xl font-bold text-green-700 md:text-3xl ${className}`}
     >
@@ -26,16 +28,17 @@ const AboutComponent = () => {
     </h2>
   );
 
-  const SectionContent: React.FC<SectionContentProps> = ({
+  const SectionContent = ({
     children,
     className = "",
-  }) => (
+  }: SectionContentProps): ReactElement => (
     <div className={`mt-4 bg-green-100 p-4 ${className}`}>
       <div className="container mx-auto border-t border-green-700 pt-4">
         <p className="text-green-800">{children}</p>
       </div>
     </div>
   );
+
   return (
     <div>
       <div className="container mx-auto flex items-center justify-center p-8 lg:p-12">
@@ -50,23 +53,20 @@ const AboutComponent = () => {
             </div>
             <div className="w-full lg:w-2/3">
               <Label className="mb-8 text-5xl font-bold text-green-700 md:text-6xl lg:text-7xl">
-                WHO WE ARE
+                {t(LocalizationKey.about.whoWeAre)}
               </Label>
               <div className="space-y-6 text-lg text-gray-700 md:text-xl">
-                <p>
-                  Quanta Dance Inc. provides on-the-go charging solutions to
-                  keep people connected in today's digital world.
-                </p>
-                <p>
-                  Our nationwide network of iCharge powerbank stations ensures
-                  that individuals and businesses can access reliable power
-                  anytime, anywhere across the Philippines.
-                </p>
-                <p>
-                  We believe that staying powered is essential to staying
-                  connected, whether during everyday activities or critical
-                  moments.
-                </p>
+                <Label className="text-base">
+                  {t(LocalizationKey.about.whoWeAreDesc1)}
+                </Label>
+                <br />
+                <Label className="text-base">
+                  {t(LocalizationKey.about.whoWeAreDesc2)}
+                </Label>
+                <br />
+                <Label className="text-base">
+                  {t(LocalizationKey.about.whoWeAreDesc3)}
+                </Label>
               </div>
             </div>
           </div>
@@ -74,19 +74,23 @@ const AboutComponent = () => {
       </div>
 
       <div className="bg-[url('@/assets/about/about-banner.jpg')] bg-cover bg-center">
-        <div className="container relative mx-auto min-h-[200px]">
-          <div className="relative z-10 flex min-h-[200px] flex-col justify-center p-4 sm:p-6 md:p-8">
-            <div className="mx-auto max-w-md sm:mx-0">
-              {["STAY POWERED", "STAY CONNECTED"].map((text, index) => (
+        <div className="container relative mx-auto min-h-[300px]">
+          <div className="relative z-10 flex min-h-[300px] flex-col justify-center p-4 sm:p-6 md:p-8">
+            <div className="mx-auto sm:mx-0">
+              {[
+                t(LocalizationKey.about.stayPowered),
+                t(LocalizationKey.about.stayConnected),
+              ].map((text, index) => (
                 <h2
                   key={index}
-                  className="mb-4 flex items-center justify-center text-2xl font-bold text-white sm:justify-start sm:text-3xl md:text-4xl"
+                  className="mb-4 flex items-center justify-center text-white sm:justify-start sm:text-3xl md:text-4xl"
                 >
-                  <Zap
-                    className="mr-2 h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10"
+                  <img
+                    src={Lightning}
+                    className="mr-2 h-6 w-6 sm:h-8 sm:w-8 md:h-16 md:w-16"
                     aria-hidden="true"
                   />
-                  <span>{text}</span>
+                  <Label variant={"banner"}>{text}</Label>
                 </h2>
               ))}
             </div>
@@ -96,46 +100,52 @@ const AboutComponent = () => {
 
       <div className="mt-10 px-4 md:px-0">
         <section className="mb-8">
-          <SectionTitle icon={RocketLogo}>OUR MISSION</SectionTitle>
-          <SectionContent className="md:mr-36">
-            We aim to deliver convenient and reliable powerbank lending stations
-            across the Philippines, with future expansion plans to serve global
-            markets. By partnering with businesses, we enhance the customer
-            experience in retail, hospitality, transport, healthcare, and event
-            venues, offering a seamless solution for staying powered on the go.
+          <SectionTitle icon={RocketLogo}>
+            <Label variant={"banner"}>
+              {" "}
+              {t(LocalizationKey.about.ourMission)}
+            </Label>
+          </SectionTitle>
+          <SectionContent className="p-20 md:mr-36">
+            <Label variant={"subtitle"}>
+              {t(LocalizationKey.about.ourMissionDesc)}
+            </Label>
           </SectionContent>
         </section>
 
         <section className="mb-8">
           <SectionTitle icon={UnionLogo} className="justify-end">
-            OUR VISION
+            <Label variant={"banner"}>
+              {" "}
+              {t(LocalizationKey.about.ourVision)}
+            </Label>
           </SectionTitle>
-          <SectionContent className="md:ml-36">
-            To be the leading provider of mobile charging solutions, ensuring
-            that everyone, everywhere, remains connected at all times, whether
-            locally or globally. Our vision includes scaling our solutions to
-            reach high-traffic areas not just in the Philippines, but in major
-            cities worldwide.
+          <SectionContent className="p-10 md:ml-36">
+            <Label variant={"subtitle"}>
+              {t(LocalizationKey.about.ourVisionDesc)}
+            </Label>
           </SectionContent>
         </section>
 
         <section className="mb-8">
-          <SectionTitle icon={VectorLogo}>OUR REACH</SectionTitle>
-          <SectionContent className="md:mr-36">
-            <p className="mb-4">
-              Our iCharge stations are rapidly expanding in malls, restaurants,
-              hospitals, transport hubs, and event venues across the country.
-            </p>
-            <p className="mb-4">
-              With integrated payment systems such as GCash, GrabPay, Alipay,
-              Maya, WeChat Pay, UnionBank and BDO, our stations offer
-              convenient, hassle-free access to mobile power, making it easier
-              than ever to stay charged.
-            </p>
-            <p>
-              This flexibility mirrors global charging networks, offering
-              customers a seamless experience wherever they go.
-            </p>
+          <SectionTitle icon={VectorLogo}>
+            <Label variant={"banner"}>
+              {" "}
+              {t(LocalizationKey.about.ourReach)}
+            </Label>
+          </SectionTitle>
+          <SectionContent className="p-10 md:mr-36">
+            <Label variant={"subtitle"}>
+              {t(LocalizationKey.about.ourReachDesc1)}
+            </Label>
+            <br />
+            <Label variant={"subtitle"}>
+              {t(LocalizationKey.about.ourReachDesc2)}
+            </Label>
+            <br />
+            <Label variant={"subtitle"}>
+              {t(LocalizationKey.about.ourReachDesc3)}
+            </Label>
           </SectionContent>
         </section>
         <PageContainer className="space-y-20">

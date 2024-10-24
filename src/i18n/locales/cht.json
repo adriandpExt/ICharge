@@ -71,9 +71,6 @@
     "returnDescription": {
       "label": "將行動電源插入任一空槽以歸還。"
     },
-    "products": {
-      "label": "產品"
-    },
     "sectors": {
       "label": "行業"
     }
@@ -251,13 +248,258 @@
       }
     ]
   },
-  
+
   "partnerWithUs": {
     "partnerWithUsHeading": {
-      "label": "與我們合作"
+      "label": "增強您的業務能力"
     },
-    "partnerWithUsSubHeading": {
-      "label": "iCharge 是西方市場領先的智能手機充電品牌。開始..."
+    "heading1": {
+      "label": "輕鬆促進您的業務並讓您的客戶保持聯繫。"
+    },
+    "heading2": {
+      "label": "與 iCharge 合作，提供無縫、可靠的充電解決方案。"
+    },
+    "bannerBtn": {
+      "label": "立即諮詢"
+    },
+    "whyPartnerWithUs": {
+      "label": "為什麼與我們合作？"
+    },
+    "whyPartnerWithUsDesc1": {
+      "label": "Quanta Dance Inc. 提供的不僅是充電站，我們還提供全面的服務，增強客戶體驗，同時減輕營運負擔。"
+    },
+    "whyPartnerWithUsDesc2": {
+      "label": "我們對便利性、先進的全球支付系統和永續性的關注確保您的企業將從以客戶為中心的創新解決方案中受益。"
+    },
+    "joinUs": {
+      "label": "加入我們"
+    },
+    "joinUsDesc1": {
+      "label": "在Quanta Dance Inc.，我們透過提供創新且永續的充電解決方案為未來提供動力。"
+    },
+    "joinUsDesc2": {
+      "label": " 我們可以共同確保每個人保持聯繫、充電並為本地和全球的任何冒險做好準備。"
+    },
+    "wantToPartner": {
+      "label": "想與我們合作嗎？"
+    },
+    "getInTouch": {
+      "label": "聯絡我們"
+    },
+    "inquiryForm": {
+      "title": { "label": "特許經營查詢表" },
+      "firstname": { "label": "名" },
+      "lastname": { "label": "姓" },
+      "company": {
+        "label": "公司"
+      },
+      "email": { "label": "電子郵件" },
+      "phoneNumber": { "label": "電話號碼" },
+      "content": { "label": "內容" },
+      "formBtn": { "label": "提交" }
+    }
+  },
+  "services": {
+    "serviceFreeEquipmentTitle": {
+      "label": "免費使用設備"
+    },
+    "serviceSaleEquipmentTitle": {
+      "label": "銷售設備"
+    },
+    "serviceSustainabilitySocialTitle": {
+      "label": "可持續性與社會影響"
+    },
+    "serviceFreeEquipmentsubTitle": {
+      "label": "通過與 iCharge 合作，企業可以在無需前期成本的情況下向顧客提供有價值的服務。我們負責從安裝到維護和客戶支持的一切，確保您的顧客保持充電並持續互動."
+    },
+    "serviceFreeEquipmentbody1": {
+      "label": "無需支付設備費用、硬件升級費或全方位維護服務費用."
+    },
+    "serviceFreeEquipmentbody2": {
+      "label": "保持訪客聯繫，提升他們的整體體驗."
+    },
+    "serviceFreeEquipmentbody3": {
+      "label": "使您的企業成為技術先進且以顧客為中心的公司."
+    },
+    "serviceSaleEquipmentsubTitle": {
+      "label": "對於希望擁有充電站的企業，我們提供購買選項，使您能夠提供此服務，同時創造額外的收入來源."
+    },
+    "serviceSaleEquipmentbody1": {
+      "label": "擁有充電站並從移動電源租賃中獲取收入."
+    },
+    "serviceSaleEquipmentbody2": {
+      "label": "定制和品牌化機會."
+    },
+    "serviceSaleEquipmentbody3": {
+      "label": "增加顧客的進店流量和互動."
+    },
+    "serviceSustainabilitySocialbody": {
+      "label": "在 Quanta Dance Inc.，我們致力於通過使用耐用且可重複使用的移動電源來減少電子廢物。我們的充電站環保，推動支持綠色未來的生態解決方案，助力減少一次性電池廢物的全球努力."
+    },
+    "servicesHeading": { "label": "靈活的充電解決方案" },
+    "servicesSubHeading": {
+      "label": "為您的顧客提供輕鬆保持聯繫的電力。無論是免費使用還是擁有設備，iCharge 提供靈活的解決方案，適合您的業務並提升顧客體驗。"
+    },
+    "viewProducts": { "label": "查看产品" },
+    "sectorHeading": { "label": "我們服務的行業" },
+    "sectorSubHeading": { "label": "為任何人、任何時間、任何地點提供電力" },
+    "hospitality": {
+      "title": { "label": "餐旅業" },
+      "subtitle": {
+        "label": "通過提供便捷的充電選項，在酒店、餐廳、咖啡廳和酒吧提升客人的體驗，使訪客能夠保持聯繫"
+      },
+      "description": {
+        "sub1": { "label": "提升客人滿意度，帶來正面評價和重複訪問" },
+        "sub2": { "label": "鼓勵客人花更多時間在公共區域" },
+        "sub3": {
+          "label": "通過提供獨特且以顧客為中心的服務，讓您的企業脫穎而出"
+        }
+      }
+    },
+    "healthcare": {
+      "title": { "label": "醫療" },
+      "subtitle": {
+        "label": "在醫院、診所、健身房和健康中心提供充電站，讓患者和訪客的訪問更加舒適，從而提供安心感"
+      },
+      "description": {
+        "sub1": { "label": "通過便捷的充電設施改善患者和訪客的體驗" },
+        "sub2": { "label": "減輕依賴手機進行重要通信的訪客的壓力" },
+        "sub3": { "label": "展示您的設施對創新和顧客服務的承諾" }
+      }
+    },
+    "transport": {
+      "title": { "label": "交通" },
+      "subtitle": {
+        "label": "在機場、巴士總站、火車站和其他交通樞紐提供便捷的充電解決方案，保持旅客的聯繫"
+      },
+      "description": {
+        "sub1": { "label": "為乘客提供重要的充電服務，減少低電量的壓力" },
+        "sub2": { "label": "提升顧客滿意度，改善對您交通樞紐的看法" },
+        "sub3": { "label": "增加旅客在機場商店和咖啡廳等商業區的停留時間" }
+      }
+    },
+    "events": {
+      "title": { "label": "活動" },
+      "title2": { "label": "休閒與活動" },
+      "subtitle": {
+        "label": "在音樂會、節日、展覽和體育賽事期間提供可靠的充電選項，保持參與者的互動和聯繫"
+      },
+      "description": {
+        "sub1": { "label": "讓參加者保持聯繫，便於他們在網上分享自己的體驗" },
+        "sub2": { "label": "減少因電量不足而帶來的煩惱，提升整體活動體驗" },
+        "sub3": { "label": "增加停留時間，尤其是在多日活動中" }
+      }
+    },
+    "retail": {
+      "title": { "label": "零售" },
+      "subtitle": {
+        "label": "通過在購物中心、超市、百貨公司和精品店提供充電站，增強購物體驗，鼓勵顧客逗留更長時間"
+      },
+      "description": {
+        "sub1": { "label": "增加停留時間，促進更多消費" },
+        "sub2": { "label": "表明您的企業重視顧客滿意度" },
+        "sub3": { "label": "可定制品牌設計以符合店鋪美學" }
+      }
+    },
+    "productHeading": { "label": "產品" },
+    "productMore": { "label": "更多" }
+  },
+  "about": {
+    "aboutHeading": {
+      "label": "我們相信在這個世界中，保持連接是輕而易舉的。通過我們創新的充電寶站，我們確保您的客戶隨時隨地都能保持充電，隨時準備好迎接任何冒險。"
+    },
+    "aboutBtn": {
+      "label": "聯繫我們"
+    },
+    "whoWeAre": {
+      "label": "我們是誰"
+    },
+    "whoWeAreDesc1": {
+      "label": "Quanta Dance Inc. 提供便捷的充電解決方案，讓人們在當今的數位世界中保持連接。"
+    },
+    "whoWeAreDesc2": {
+      "label": "我們的全國 iCharge 充電寶站網絡確保個人和企業可以在菲律賓隨時隨地獲得可靠的電力。"
+    },
+    "whoWeAreDesc3": {
+      "label": "我們相信保持充電對於保持連接至關重要，無論是在日常活動還是關鍵時刻。"
+    },
+    "stayPowered": {
+      "label": "保持電力"
+    },
+    "stayConnected": {
+      "label": "保持連接"
+    },
+    "OurMission": {
+      "label": "我們的使命"
+    },
+    "OurMissionDesc": {
+      "label": "我們的目標是在菲律賓提供方便可靠的充電寶借用站，並計劃未來擴展到全球市場。通過與企業合作，我們提升零售、酒店、交通、醫療和活動場地的顧客體驗，提供隨時隨地保持充電的無縫解決方案。"
+    },
+    "ourVision": {
+      "label": "我們的願景"
+    },
+    "ourVisionDesc": {
+      "label": "我們的目標是在菲律賓提供方便可靠的充電寶借用站，並計劃未來擴展到全球市場。通過與企業合作，我們提升零售、酒店、交通、醫療和活動場地的顧客體驗，提供隨時隨地保持充電的無縫解決方案。"
+    },
+    "ourReach": {
+      "label": "我們的覆蓋範圍"
+    },
+    "ourReachDesc1": {
+      "label": "我們的 iCharge 站點在全國的購物中心、餐廳、醫院、交通樞紐和活動場地迅速擴展。"
+    },
+    "ourReachDesc2": {
+      "label": "配備 GCash、GrabPay、Alipay、Maya、WeChat Pay、UnionBank 和 BDO 等集成支付系統，我們的站點提供方便、無憂的移動電力接入，讓充電變得比以往任何時候都容易。"
+    },
+    "ourReachDesc3": {
+      "label": "這種靈活性與全球充電網絡相呼應，為客戶提供無縫的體驗，無論他們走到哪裡。"
+    },
+    "summaryHead1": {
+      "label": "先進技術解決方案"
+    },
+    "summaryDesc1": {
+      "label": "我們的專有技術確保企業和終端用戶都能享受無縫的充電體驗。該系統具有實時監控和直觀界面，簡化了充電站的管理"
+    },
+    "keyFeaturesHead": {
+      "label": "主要功能："
+    },
+    "keyFeaturesList11": {
+      "label": "實時監控：透過即時數據洞察高效管理站點"
+    },
+    "keyFeaturesList12": {
+      "label": "全球支付集成：支持包括 GCash、GrabPay、Alipay 和信用卡在內的多種支付方式，使充電服務能夠在本地和國際上使用"
+    },
+    "keyFeaturesList13": {
+      "label": "全天候技術支持：為所有合作夥伴和終端用戶提供，確保運營穩定和客戶滿意度"
+    },
+    "summaryHead2": {
+      "label": "內部 IT 與軟體解決方案"
+    },
+    "summaryDesc2": {
+      "label": "我們的專有軟體確保無縫的充電體驗，具有實時監控和簡便的界面。該軟體支持企業高效管理充電站，提供快捷交易和流暢運營"
+    },
+    "keyFeaturesList21": {
+      "label": "實時監控：通過實時數據洞察高效管理站點"
+    },
+    "keyFeaturesList22": {
+      "label": "用戶友好界面：簡化客戶的充電體驗"
+    },
+    "keyFeaturesList23": {
+      "label": "全天候技術支持：為企業和客戶提供，確保運營穩定"
+    },
+    "summaryHead3": {
+      "label": "專有硬體"
+    },
+    "summaryDesc3": {
+      "label": "我們的充電寶站採用定制設計的硬體，適應不同場所。無論是大型購物中心還是小型咖啡館，我們的站點都靈活高效"
+    },
+    "keyFeaturesList31": {
+      "label": "可擴展性，滿足大小場所的需求"
+    },
+    "keyFeaturesList32": {
+      "label": "高容量，適用於人流密集的繁忙區域"
+    },
+    "keyFeaturesList33": {
+      "label": "便捷易用，讓用戶能輕鬆租借和歸還充電寶"
     }
   }
 }

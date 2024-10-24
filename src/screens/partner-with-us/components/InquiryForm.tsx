@@ -2,10 +2,12 @@ import { TInquiryForm } from "./type";
 
 import { ReactElement, useRef } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-
+import { useTranslation } from "react-i18next";
+import iChargeLogo from "@/assets/icharge-big.svg";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import emailjs from "@emailjs/browser";
+import LocalizationKey from "@/i18n/key";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
@@ -29,6 +31,7 @@ import { inquiryDefaultValues, inquiryFormSchema } from "./utils";
 export const InquiryForm = (): ReactElement => {
   const inquiryFormRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   const inquiryForm = useForm<TInquiryForm>({
     resolver: zodResolver(inquiryFormSchema),
@@ -79,41 +82,41 @@ export const InquiryForm = (): ReactElement => {
             <TextField
               control={inquiryForm.control}
               name="firstname"
-              label="First name*"
+              label={t(LocalizationKey.partnerWithUs.inquiryForm.firstname)}
             />
             <TextField
               control={inquiryForm.control}
               name="lastname"
-              label="Last name*"
+              label={t(LocalizationKey.partnerWithUs.inquiryForm.lastname)}
             />
           </div>
 
           <TextField
             control={inquiryForm.control}
             name="company"
-            label="Company*"
+            label={t(LocalizationKey.partnerWithUs.inquiryForm.company)}
           />
           <TextField
             control={inquiryForm.control}
             type="email"
             name="email"
-            label="Email*"
+            label={t(LocalizationKey.partnerWithUs.inquiryForm.email)}
           />
           <TextField
             control={inquiryForm.control}
             name="phoneNumber"
-            label="Phone Number*"
+            label={t(LocalizationKey.partnerWithUs.inquiryForm.phoneNumber)}
           />
           <TextArea
             className="h-52"
             control={inquiryForm.control}
             name="content"
-            label="Content*"
+            label={t(LocalizationKey.partnerWithUs.inquiryForm.content)}
           />
 
           <div className="text-end">
             <Button className="w-full shadow-2xl drop-shadow-2xl lg:w-80">
-              Contact Us
+              {t(LocalizationKey.partnerWithUs.inquiryForm.formBtn)}
             </Button>
           </div>
         </div>
@@ -124,6 +127,9 @@ export const InquiryForm = (): ReactElement => {
   const renderContact = (): ReactElement => {
     return (
       <div className="flex flex-col items-start justify-center gap-8 rounded-t-xl border-0 bg-white bg-gradient-to-b from-[#044F00] to-[#078E00] p-10 text-white shadow-2xl drop-shadow-2xl lg:rounded-l-xl lg:rounded-tr-none">
+        <div className="flex w-full justify-center">
+          <img src={iChargeLogo} alt="iCharge Logo" className="mx-auto" />
+        </div>
         <Separator className="bg-white" />
         <Label variant={"body"} className="flex items-center gap-5">
           <Phone size={32} strokeWidth={3} /> +63 918 738 8888
@@ -145,7 +151,7 @@ export const InquiryForm = (): ReactElement => {
           <div className="flex flex-col">
             <Label variant={"body"}>Unit 2402 City</Label>
             <Label variant={"body"}>Trade and Financial Tower,</Label>
-            <Label variant={"body"}> 7th Avenue, BGC, Taguig</Label>
+            <Label variant={"body"}>7th Avenue, BGC, Taguig</Label>
           </div>
         </div>
       </div>
@@ -162,7 +168,9 @@ export const InquiryForm = (): ReactElement => {
         <div>
           <CardHeader className="rounded-t-xl bg-white py-20">
             <CardTitle className="text-center">
-              <Label variant={"title"}>FRANCHISE INQUIRY FORM</Label>
+              <Label variant={"title"}>
+                {t(LocalizationKey.partnerWithUs.inquiryForm.title)}
+              </Label>
             </CardTitle>
             <CardDescription />
           </CardHeader>

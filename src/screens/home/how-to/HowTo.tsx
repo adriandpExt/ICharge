@@ -80,9 +80,9 @@ const HowTo = () => {
             <div
               className="mx-auto flex w-[80%] grid-cols-9 flex-col md:grid md:w-[70%]"
               ref={(el) => (stepRefs.current[index] = el)}
+              key={index}
             >
               <StepCard
-                key={index}
                 stepNumber={card.stepNumber}
                 title={card.title}
                 description={card.description}
