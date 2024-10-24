@@ -14,7 +14,7 @@ const Services = (): ReactElement => {
   const { t } = useTranslation();
   return (
     <main>
-      <Banner title="flexible charging solutions">
+      <Banner title={t(LocalizationKey.services.servicesHeading)}>
         <Label variant="subtitle" className="text-white sm:mb-6">
           {t(LocalizationKey.services.servicesSubHeading)}
         </Label>
