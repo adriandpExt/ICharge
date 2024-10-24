@@ -1,1 +1,1 @@
-export { default } from "./StayPowered";
+export { default } from "./Staypowered";
