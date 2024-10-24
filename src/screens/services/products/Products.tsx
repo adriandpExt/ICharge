@@ -22,19 +22,18 @@ const Features = () => {
   const [content, setContent] = useState<Product>(initValue);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle opening the modal and passing product data
   const handleOpen = (e: { stopPropagation: () => void }, item: Product) => {
     e.stopPropagation();
-    setContent(item); // Set the current product content
-    setOpen(true); // Open the modal
+    setContent(item);
+    setOpen(true);
   };
 
   const handleOpenChange = () => {
-    setOpen(false); // Close the modal
+    setOpen(false);
   };
 
   const handleCarouselChange = (index: number) => {
-    setCurrentIndex(index); // Update the current carousel index
+    setCurrentIndex(index);
   };
 
   return (
@@ -51,7 +50,7 @@ const Features = () => {
         </Label>
         <Carousel
           opts={{ align: "center", loop: true }}
-          className="w-[95%] lg:h-[100%] lg:w-[95%]"
+          className="w-full lg:h-[100%]"
           setApi={(api) => {
             if (api !== undefined) {
               api.on("select", () =>
@@ -64,38 +63,44 @@ const Features = () => {
             {products.map((data, index) => (
               <CarouselItem
                 key={index}
-                className="custom-lg:basisOneThird flex h-[30rem] w-full items-center justify-center md:h-[40rem]"
+                className="custom-lg:basisOneThird flex h-[32rem] w-[95%] justify-center"
               >
-                <div className="flex h-[50svh] w-[80svw] flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 text-center shadow-md shadow-black/40 md:h-[30rem] lg:w-[25rem] lg:px-10">
+                <div className="flex h-[30rem] w-full flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 px-10 text-center md:w-[23rem]">
                   <div
                     className={cn(
-                      "absolute -z-40 h-[50svh] w-[80svw] rounded-[3rem] md:h-[30rem] lg:w-[25rem]",
+                      "absolute -z-40 h-[30rem] w-[95%] rounded-[3rem] p-5 md:w-[23rem]",
                       "border-0 bg-[#C7E9C0]",
                     )}
                     style={{
                       clipPath: "polygon(100% 0%, 0% 0%, 0% 65%, 100% 25%)",
+                      boxShadow: "inset 0 0 0 1px rgba(134, 239, 172, 1)",
                     }}
-                  />
+                  >
+                    <div className="hidden h-fit w-full justify-start lg:flex">
+                      <SvgIcons name="ic_svl_ig" size={50} />
+                    </div>
+                  </div>
                   <div
                     className={cn(
-                      "absolute -z-50 h-[48svh] w-[80svw] rounded-[3rem] shadow-inner md:h-[28.8rem] lg:w-[25rem]",
-                      "border-[#B7FAB1] border-x-[1] bg-[#E0EEDE]",
+                      "absolute -z-50 h-[28rem] w-[95%] rounded-[4rem] shadow-md md:w-[23rem] md:rounded-[3rem]",
+                      "bg-[#E0EEDE]",
                     )}
                     style={{
                       clipPath: "polygon(100% 100%, 0% 100%, 0% 60%, 100% 20%)",
+                      boxShadow: "inset 0 0 0 1px rgba(134, 239, 172, 1)",
                     }}
                   />
-                  <div className="hidden h-fit w-full justify-start lg:flex">
-                    <SvgIcons name="ic_svl_ig" size={50} />
-                  </div>
                   <img
                     src={data.productDetails.image}
                     className="h-[50%] w-auto object-contain"
                     alt="Product Image"
                   />
-                  <h1 className="font-sans text-4xl font-semibold tracking-tighter text-white">
-                    {data.productDetails.name}
-                  </h1>
+                  <Label
+                    variant="title"
+                    className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:mb-14"
+                  >
+                    {data.productDetails.name.toLocaleUpperCase()}
+                  </Label>
                   <Button
                     className="w-20 rounded-3xl bg-green-500 text-black hover:bg-green-400"
                     onClick={(e) => handleOpen(e, data)}
@@ -132,11 +137,10 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Product Modal Component */}
         <ProductModal
           item={content}
           open={open}
-          handleOpenChange={handleOpenChange} // Ensure this properly closes the modal
+          handleOpenChange={handleOpenChange}
         />
       </div>
     </section>

@@ -20,7 +20,7 @@ const ServiceIndustries = (): ReactElement => {
     const passedId = location.state?.value;
     const element = document.getElementById(passedId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "instant" });
     }
   }, [location.state?.value]);
   const serviceIndustries: Industries[] = [

@@ -92,7 +92,7 @@ const Sector = (): ReactElement => {
         {/* desktop view */}
       </PageContainer>
       {/* mobile view */}
-      <div className="space-y-5 lg:hidden">
+      <div className="space-y-5 pb-16 lg:hidden">
         <div className="flex flex-col space-y-5 text-center">
           <Label
             variant="banner"
@@ -118,7 +118,7 @@ const Sector = (): ReactElement => {
             }
           }}
         >
-          <CarouselContent className="flex h-[100%]">
+          <CarouselContent className="flex h-[100%] py-8">
             {sector.map(({ title, bgImage }, index) => (
               <CarouselItem
                 className="relative mr-4 min-w-0 flex-[0_0_70%]"

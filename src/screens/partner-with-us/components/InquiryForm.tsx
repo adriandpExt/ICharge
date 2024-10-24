@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 
 import { inquiryId, publicKey, serviceId } from "@/lib/viteKey";
 
-import { Form, PageContainer, TextArea, TextField } from "@/components";
+import { Form, TextArea, TextField } from "@/components";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -64,8 +64,7 @@ export const InquiryForm = (): ReactElement => {
     });
   };
 
-  const handleInquiryFormSubmit: SubmitHandler<TInquiryForm> = (data) => {
-    console.log("Form data:", data);
+  const handleInquiryFormSubmit: SubmitHandler<TInquiryForm> = () => {
     sendEmail();
     inquiryForm.reset();
   };
@@ -126,7 +125,7 @@ export const InquiryForm = (): ReactElement => {
 
   const renderContact = (): ReactElement => {
     return (
-      <div className="flex flex-col items-start justify-center gap-8 rounded-t-xl border-0 bg-white bg-gradient-to-b from-[#044F00] to-[#078E00] p-10 text-white shadow-2xl drop-shadow-2xl lg:rounded-l-xl lg:rounded-tr-none">
+      <div className="flex flex-col items-start justify-center gap-8 rounded-none border-0 bg-gradient-to-b from-[#044F00] to-[#078E00] p-10 text-white shadow-none drop-shadow-none md:rounded-t-xl md:shadow-2xl md:drop-shadow-2xl lg:rounded-l-xl lg:rounded-tr-none">
         <div className="flex w-full justify-center">
           <img src={iChargeLogo} alt="iCharge Logo" className="mx-auto" />
         </div>
@@ -158,15 +157,15 @@ export const InquiryForm = (): ReactElement => {
     );
   };
   return (
-    <PageContainer
+    <section
       id="inquiryForm"
-      className="flex w-full items-center justify-center py-0"
+      className="mx-auto flex h-full w-full items-center justify-center py-0 md:container md:px-10"
     >
-      <Card className="grid h-full w-full grid-cols-1 rounded-xl border-0 bg-white shadow-2xl drop-shadow-2xl lg:grid-cols-2">
+      <Card className="grid h-full w-full grid-cols-1 rounded-none border-0 bg-transparent shadow-none md:rounded-xl md:bg-white md:shadow-2xl md:drop-shadow-2xl lg:grid-cols-2">
         {renderContact()}
 
         <div>
-          <CardHeader className="rounded-t-xl bg-white py-20">
+          <CardHeader className="rounded-t-xl py-20">
             <CardTitle className="text-center">
               <Label variant={"title"}>
                 {t(LocalizationKey.partnerWithUs.inquiryForm.title)}
@@ -177,7 +176,7 @@ export const InquiryForm = (): ReactElement => {
           <CardContent>{renderForm()}</CardContent>
         </div>
       </Card>
-    </PageContainer>
+    </section>
   );
 };
 
