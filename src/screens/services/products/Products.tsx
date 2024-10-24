@@ -22,19 +22,18 @@ const Features = () => {
   const [content, setContent] = useState<Product>(initValue);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle opening the modal and passing product data
   const handleOpen = (e: { stopPropagation: () => void }, item: Product) => {
     e.stopPropagation();
-    setContent(item); // Set the current product content
-    setOpen(true); // Open the modal
+    setContent(item);
+    setOpen(true);
   };
 
   const handleOpenChange = () => {
-    setOpen(false); // Close the modal
+    setOpen(false);
   };
 
   const handleCarouselChange = (index: number) => {
-    setCurrentIndex(index); // Update the current carousel index
+    setCurrentIndex(index);
   };
 
   return (
@@ -135,11 +134,10 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Product Modal Component */}
         <ProductModal
           item={content}
           open={open}
-          handleOpenChange={handleOpenChange} // Ensure this properly closes the modal
+          handleOpenChange={handleOpenChange}
         />
       </div>
     </section>
