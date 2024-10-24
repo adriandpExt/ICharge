@@ -27,7 +27,7 @@ export const IndustryCard = (
     >
       <img
         className={cn(
-          "-z-10 h-full w-full rounded-3xl rounded-tr-none",
+          "-z-10 h-full w-full rounded-3xl rounded-tr-none object-cover bg-no-repeat",
           isHovered && "scale-105",
         )}
         src={bgImage}
