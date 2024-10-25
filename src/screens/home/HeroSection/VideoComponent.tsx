@@ -1,5 +1,5 @@
 import { ReactElement, useEffect, useRef } from "react";
-import promotional from "@/assets/promotional.mp4";
+import promotional from "@/assets/icharge.mp4";
 
 const VideoComponent = (): ReactElement => {
   const videoRef = useRef<HTMLVideoElement>(null);
