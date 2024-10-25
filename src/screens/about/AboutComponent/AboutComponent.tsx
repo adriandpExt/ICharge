@@ -12,6 +12,7 @@ import bgSide from "@/assets/modern-man-using-smartphone-city-2.png";
 import { SumVal } from "../utils";
 import LocalizationKey from "@/i18n/key";
 import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
 
 const AboutComponent = (): ReactElement => {
   const { t } = useTranslation();
@@ -21,64 +22,71 @@ const AboutComponent = (): ReactElement => {
     className = "",
   }: SectionTitleProps): ReactElement => (
     <h2
-      className={`container mx-auto flex items-center text-2xl font-bold text-green-700 md:text-3xl ${className}`}
+      className={cn(
+        "container mx-auto flex items-center gap-2 bg-gradient-to-b from-[#044F00] to-[#078E00] bg-clip-text p-4 text-2xl font-bold text-transparent md:text-3xl",
+        className,
+      )}
     >
-      <img src={icon} alt="" className="mr-2 h-16 w-16" />
+      <img src={icon} alt="" className="h-16 w-16" />
       <Label variant="title">{children}</Label>
     </h2>
   );
 
   const SectionContent = ({
     children,
-    className = "",
+    className,
   }: SectionContentProps): ReactElement => (
-    <div className={`mt-4 bg-green-100 p-4 ${className}`}>
-      <div className="container mx-auto border-t border-green-700 pt-4">
-        <p className="text-green-800">{children}</p>
+    <div
+      className={cn(
+        "border-t-2 border-green-700 bg-[#38D430]/10 p-10",
+        className,
+      )}
+    >
+      <div className="container mx-auto max-w-7xl text-green-800">
+        {children}
       </div>
     </div>
   );
 
   return (
-    <div>
-      <div
-        className="container mx-auto flex items-center justify-center p-8 lg:p-12"
-        data-aos="fade-up"
-      >
-        <div className="w-full max-w-7xl">
-          <div className="flex flex-col items-center p-6 lg:flex-row lg:gap-24 lg:p-16">
-            <div className="flex w-full justify-center lg:w-1/3">
-              <img
-                src={costEffective}
-                alt="iCharge devices"
-                className="h-60 w-60 text-green-600 md:h-96 md:w-96"
-              />
-            </div>
-            <div className="w-full lg:w-2/3">
-              <Label className="mb-8 text-5xl font-bold text-green-700 md:text-6xl lg:text-7xl">
-                {t(LocalizationKey.about.whoWeAre)}
+    <>
+      <PageContainer>
+        <div className="flex max-w-7xl flex-col gap-3 lg:flex-row">
+          <div className="flex w-full justify-center">
+            <img
+              src={costEffective}
+              alt="iCharge devices"
+              className="h-96 w-96 text-green-600"
+            />
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <Label
+              variant={"banner"}
+              className="bg-gradient-to-b from-[#044F00] to-[#078E00] bg-clip-text font-medium text-transparent"
+            >
+              {t(LocalizationKey.about.whoWeAre)}
+            </Label>
+            <div className="flex flex-col gap-5 text-gray-700">
+              <Label className="text-base">
+                {t(LocalizationKey.about.whoWeAreDesc1)}
               </Label>
-              <div className="space-y-6 text-lg text-gray-700 md:text-xl">
-                <Label className="text-base">
-                  {t(LocalizationKey.about.whoWeAreDesc1)}
-                </Label>
-                <br />
-                <Label className="text-base">
-                  {t(LocalizationKey.about.whoWeAreDesc2)}
-                </Label>
-                <br />
-                <Label className="text-base">
-                  {t(LocalizationKey.about.whoWeAreDesc3)}
-                </Label>
-              </div>
+
+              <Label className="text-base">
+                {t(LocalizationKey.about.whoWeAreDesc2)}
+              </Label>
+
+              <Label className="text-base">
+                {t(LocalizationKey.about.whoWeAreDesc3)}
+              </Label>
             </div>
           </div>
         </div>
-      </div>
+      </PageContainer>
 
       <div className="bg-[url('@/assets/about/about-banner.jpg')] bg-cover bg-center">
-        <div className="container relative mx-auto min-h-[300px]">
-          <div className="relative z-10 flex min-h-[300px] flex-col justify-center p-4 sm:p-6 md:p-8">
+        <div className="container relative mx-auto min-h-[301px]">
+          <div className="relative z-10 flex min-h-[301px] flex-col justify-center p-4 sm:p-6 md:p-8">
             <div className="mx-auto sm:mx-0">
               {[
                 t(LocalizationKey.about.stayPowered),
@@ -101,57 +109,57 @@ const AboutComponent = (): ReactElement => {
         </div>
       </div>
 
-      <div className="mt-10 px-4 md:px-0">
-        <section className="mb-8" data-aos="fade-up">
+      <div className="mt-10 flex flex-col gap-10 px-4 md:px-0">
+        <section data-aos="fade-up">
           <SectionTitle icon={RocketLogo}>
             <Label variant={"banner"}>
-              {" "}
               {t(LocalizationKey.about.ourMission)}
             </Label>
           </SectionTitle>
-          <SectionContent className="p-20 md:mr-36">
+          <SectionContent className="rounded-none md:mr-36 md:rounded-br-[5rem]">
             <Label variant={"subtitle"}>
               {t(LocalizationKey.about.ourMissionDesc)}
             </Label>
           </SectionContent>
         </section>
 
-        <section className="mb-8" data-aos="fade-up">
+        <section data-aos="fade-up">
           <SectionTitle icon={UnionLogo} className="justify-end">
             <Label variant={"banner"}>
-              {" "}
               {t(LocalizationKey.about.ourVision)}
             </Label>
           </SectionTitle>
-          <SectionContent className="p-10 md:ml-36">
+          <SectionContent className="rounded-none md:ml-36 md:rounded-bl-[5rem]">
             <Label variant={"subtitle"}>
               {t(LocalizationKey.about.ourVisionDesc)}
             </Label>
           </SectionContent>
         </section>
 
-        <section className="mb-8" data-aos="fade-up">
+        <section data-aos="fade-up">
           <SectionTitle icon={VectorLogo}>
             <Label variant={"banner"}>
-              {" "}
               {t(LocalizationKey.about.ourReach)}
             </Label>
           </SectionTitle>
-          <SectionContent className="p-10 md:mr-36">
-            <Label variant={"subtitle"}>
-              {t(LocalizationKey.about.ourReachDesc1)}
-            </Label>
-            <br />
-            <Label variant={"subtitle"}>
-              {t(LocalizationKey.about.ourReachDesc2)}
-            </Label>
-            <br />
-            <Label variant={"subtitle"}>
-              {t(LocalizationKey.about.ourReachDesc3)}
-            </Label>
+          <SectionContent className="rounded-none md:mr-36 md:rounded-br-[5rem]">
+            <div className="flex flex-col gap-5">
+              <Label variant={"subtitle"}>
+                {t(LocalizationKey.about.ourReachDesc1)}
+              </Label>
+
+              <Label variant={"subtitle"}>
+                {t(LocalizationKey.about.ourReachDesc2)}
+              </Label>
+
+              <Label variant={"subtitle"}>
+                {t(LocalizationKey.about.ourReachDesc3)}
+              </Label>
+            </div>
           </SectionContent>
         </section>
-        <PageContainer className="space-y-20">
+
+        <PageContainer className="flex flex-col gap-20 px-0 md:px-10">
           {SumVal.map((data, index) => (
             <SummaryCard
               stepSummary={data}
@@ -162,7 +170,7 @@ const AboutComponent = (): ReactElement => {
           ))}
         </PageContainer>
       </div>
-    </div>
+    </>
   );
 };
 
