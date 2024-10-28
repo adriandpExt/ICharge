@@ -3,9 +3,26 @@ import stayPoweredLogo from "@/assets/stayPoweredLogo.png";
 import { Label } from "@/components/ui/label";
 import LocalizationKey from "@/i18n/key";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const StayPowered = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavigateProduct = () => {
+    navigate("/services");
+
+    setTimeout(() => {
+      scrollToSection("serviceProducts");
+    }, 100);
+  };
 
   return (
     <div className="mx-min-h-[600px] w-full overflow-hidden bg-gradient-to-b from-green-900 to-green-600 px-4 py-8">
@@ -26,7 +43,10 @@ const StayPowered = () => {
             {t(LocalizationKey.home.stayPoweredDesc)}
           </Label>
           <div className="flex justify-center md:justify-start">
-            <button className="flex items-center rounded-md bg-white px-4 py-2 font-semibold text-green-500 transition-colors duration-300 hover:bg-green-500 hover:text-white">
+            <button
+              onClick={handleNavigateProduct}
+              className="flex items-center rounded-md bg-white px-4 py-2 font-semibold text-green-500 transition-colors duration-300 hover:bg-green-500 hover:text-white"
+            >
               <Label>{t(LocalizationKey.home.stayPoweredBtn)}</Label>
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
