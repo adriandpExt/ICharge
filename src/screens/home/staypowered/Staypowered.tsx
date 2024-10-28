@@ -18,14 +18,14 @@ const StayPowered = () => {
           />
         </div>
         <div className="w-full text-center text-white md:w-1/2 md:text-left">
-          <Label className="mb-4 text-3xl font-bold md:text-4xl">
+          <Label variant={"banner"} className="mb-4 md:text-4xl">
             {t(LocalizationKey.home.stayPowered)}
           </Label>
           <br />
-          <Label className="mb-6 text-base md:text-lg">
+          <Label variant={"subtitle"} className="mb-6 text-base md:text-lg">
             {t(LocalizationKey.home.stayPoweredDesc)}
           </Label>
-          <div className="flex justify-center md:justify-start">
+          <div className="mt-5 flex justify-center md:justify-start">
             <button className="flex items-center rounded-md bg-white px-4 py-2 font-semibold text-green-500 transition-colors duration-300 hover:bg-green-500 hover:text-white">
               <Label>{t(LocalizationKey.home.stayPoweredBtn)}</Label>
               <ArrowRight className="ml-2 h-5 w-5" />
