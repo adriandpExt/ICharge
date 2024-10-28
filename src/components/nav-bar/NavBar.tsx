@@ -24,6 +24,13 @@ export const NavBar = () => {
   const location = useLocation();
   const isScroll = useScroll(window.innerHeight);
 
+  const footerClass =
+    location.pathname === "/cookies" ||
+    location.pathname === "/privacy" ||
+    location.pathname === "/terms-and-conditions"
+      ? "bg-gradient-to-t from-[#055c00] to-[#022700]"
+      : null;
+
   const handleBackHome = () => {
     return navigate("/");
   };
@@ -113,7 +120,7 @@ export const NavBar = () => {
       className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:backdrop-blur-none ${
         isScroll &&
         "border-b-[1px] bg-gradient-to-t from-[#055c00] to-[#022700]"
-      } `}
+      } ${footerClass}`}
     >
       <Button variant={"icon"} onClick={handleBackHome}>
         <SvgIcons name="ic_icharge_white" size={150} />

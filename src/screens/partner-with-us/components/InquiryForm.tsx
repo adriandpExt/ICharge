@@ -157,15 +157,12 @@ export const InquiryForm = (): ReactElement => {
     );
   };
   return (
-    <section
-      id="inquiryForm"
-      className="mx-auto flex h-full w-full items-center justify-center py-0 md:container md:px-10"
-    >
+    <section className="mx-auto flex h-full w-full items-center justify-center py-0 md:container md:px-10">
       <Card className="grid h-full w-full grid-cols-1 rounded-none border-0 bg-transparent shadow-none md:rounded-xl md:bg-white md:shadow-2xl md:drop-shadow-2xl lg:grid-cols-2">
         {renderContact()}
 
         <div>
-          <CardHeader className="rounded-t-xl py-20">
+          <CardHeader id="inquiryForm" className="rounded-t-xl py-20">
             <CardTitle className="text-center">
               <Label variant={"title"}>
                 {t(LocalizationKey.partnerWithUs.inquiryForm.title)}
