@@ -35,11 +35,11 @@ const StayPowered = () => {
           />
         </div>
         <div className="w-full text-center text-white md:w-1/2 md:text-left">
-          <Label className="mb-4 text-3xl font-bold md:text-4xl">
+          <Label variant={"banner"} className="mb-4 md:text-4xl">
             {t(LocalizationKey.home.stayPowered)}
           </Label>
           <br />
-          <Label className="mb-6 text-base md:text-lg">
+          <Label variant={"subtitle"} className="mb-6 text-base md:text-lg">
             {t(LocalizationKey.home.stayPoweredDesc)}
           </Label>
           <div className="flex justify-center md:justify-start">
