@@ -51,7 +51,10 @@ const AboutComponent = (): ReactElement => {
   return (
     <>
       <PageContainer>
-        <div className="flex max-w-7xl flex-col gap-3 lg:flex-row">
+        <div
+          className="flex max-w-7xl flex-col gap-3 lg:flex-row"
+          data-aos="fade-up"
+        >
           <div className="flex w-full justify-center">
             <img
               src={costEffective}

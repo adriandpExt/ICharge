@@ -1,4 +1,5 @@
 import { ReactElement, useEffect, useRef } from "react";
+import promotional from "@/assets/icharge.mp4";
 
 const VideoComponent = (): ReactElement => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -40,10 +41,11 @@ const VideoComponent = (): ReactElement => {
       autoPlay={false}
       playsInline
       aria-label="iCharge"
-      className="absolute inset-0 h-[90vh] w-full rounded-bl-[5rem] border-b-2 border-white object-cover shadow-2xl brightness-[30%] transition-opacity duration-1000"
+      className="absolute inset-0 h-[90vh] w-full rounded-bl-[5rem] border-b-2 border-white bg-black object-cover shadow-2xl brightness-[30%] transition-opacity duration-1000"
     >
       <source
-        src="https://joospower.com/wp-content/uploads/2023/10/Joos-Advert-final.mp4"
+        // src="https://joospower.com/wp-content/uploads/2023/10/Joos-Advert-final.mp4"
+        src={promotional}
         type="video/mp4"
       />
     </video>
