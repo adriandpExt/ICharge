@@ -4,7 +4,7 @@ import Products8Plus from "@/assets/Products/products/icharge8Plus.png";
 import Products8 from "@/assets/Products/products/icharge8.png";
 import Products6 from "@/assets/Products/products/icharge6.png";
 import Products24Max from "@/assets/Products/products/ichargeMax.png";
-import Products48ProMax from "@/assets/Products/products/ichargeMax.png";
+import Products48ProMax from "@/assets/Products/products/iCharge48ProMax.png";
 import ProductsQCRC from "@/assets/Products/products/ichargeQCRC.png";
 import ProductsQCSQ from "@/assets/Products/products/ichargeQCSQ.png";
 import { Product } from "./types";
@@ -134,7 +134,7 @@ export const initValue: Product = {
     name: "",
     description: "",
     image: "",
-    seatCapacity: ''
+    seatCapacity: "",
   },
   productDescriptions: {
     wattage: { fullLoad: "", standBy: "" },
