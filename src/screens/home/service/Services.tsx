@@ -21,7 +21,7 @@ const items: ServiceCardProps[] = [
   },
   {
     icon: "ic_sale",
-    label: "home.freeUseOfEquipment.label",
+    label: "home.saleOfEquipment.label",
   },
 ];
 

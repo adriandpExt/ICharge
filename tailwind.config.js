@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        lexendDeca: "lexendDeca",
+        eastman: "eastman",
         poppins: "poppins",
         staatliches: "staatliches",
       },
