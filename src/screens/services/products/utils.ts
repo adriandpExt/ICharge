@@ -80,7 +80,7 @@ export const products: Product[] = [
       name: "iCharge 24 Max",
       description: "High capacity with extensive advertisement space",
       image: Products24Max,
-      seatCapacity: "Shopping malls, Big lobbies, Ballrooms",,
+      seatCapacity: "Shopping malls, Big lobbies, Ballrooms",
     },
     productDescriptions: {
       wattage: { fullLoad: "160W", standBy: "24.2W" },
