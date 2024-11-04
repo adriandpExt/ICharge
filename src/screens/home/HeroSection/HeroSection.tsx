@@ -24,20 +24,20 @@ const HeroSection = () => {
       >
         <div className="font-bold">
           <Label variant={"default"} className="text-5xl lg:text-6xl">
-            <span className="font-lexendDeca text-green-500">i</span>
-            <span className="font-lexendDeca text-white">Charge</span>
+            <span className="font-eastman font-[950] text-[#44D62C]">i</span>
+            <span className="font-eastman font-[950] text-white">Charge</span>
           </Label>
           <br />
 
           <Label
             variant={"default"}
-            className="font-lexendDeca text-3xl text-white md:text-6xl lg:text-5xl"
+            className="font-eastman text-3xl text-white md:text-6xl lg:text-5xl"
           >
             Stay
-            <span className="ml-3 bg-gradient-to-r from-[#00FF8C] via-[#1fc0f1] to-[#00FBFF] bg-clip-text text-transparent">
+            <span className="ml-3 bg-gradient-to-r from-[#44D62C] via-[#54575A] to-[#fff] bg-clip-text text-transparent">
               <TypeAnimation
-                className="font-lexendDeca"
-                sequence={["Charge", 4000, "Connected", 4000]}
+                className="font-eastman italic"
+                sequence={["Charged", 4000, "Connected", 4000]}
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}

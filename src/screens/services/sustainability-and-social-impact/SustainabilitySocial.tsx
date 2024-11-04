@@ -7,7 +7,7 @@ const SustainabilitySocial = (): ReactElement => {
   const { t } = useTranslation();
   return (
     <section className="flex flex-col space-y-10 px-20 text-center">
-      <div className="flex flex-col space-y-5 border border-solid border-[#78e996] p-8 text-center md:p-10">
+      <div className="flex flex-col space-y-5 border border-solid border-[#78e996] p-8 md:p-10">
         <Label
           variant="banner"
           className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-[1.5em] text-transparent md:text-xl"
