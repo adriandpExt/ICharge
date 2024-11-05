@@ -32,9 +32,11 @@ const WhyICharge = () => {
           </div>
           <div className="text-center sm:text-left">
             <Label variant="heading2" className="mb-4 block">
-              Convenience
+              {t(LocalizationKey.home.convenience)}
             </Label>
-            <Label variant="body">{t(LocalizationKey.home.convenience)}</Label>
+            <Label variant="body">
+              {t(LocalizationKey.home.conveniencedesc)}
+            </Label>
           </div>
         </div>
 
@@ -51,10 +53,10 @@ const WhyICharge = () => {
           </div>
           <div className="text-center sm:text-right">
             <Label variant={"heading2"} className="mb-4 block">
-              Cost-effective
+              {t(LocalizationKey.home.costEffective)}
             </Label>
             <Label variant={"body"}>
-              {t(LocalizationKey.home.costEffective)}
+              {t(LocalizationKey.home.costEffectivedesc)}
             </Label>
           </div>
         </div>
@@ -72,9 +74,11 @@ const WhyICharge = () => {
           </div>
           <div className="text-center sm:text-left">
             <Label variant={"heading2"} className="mb-4 block">
-              Flexible
+              {t(LocalizationKey.home.flexible)}
             </Label>
-            <Label variant={"body"}>{t(LocalizationKey.home.flexible)}</Label>
+            <Label variant={"body"}>
+              {t(LocalizationKey.home.flexibledesc)}
+            </Label>
           </div>
         </div>
       </div>

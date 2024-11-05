@@ -2,6 +2,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { IconName } from "../svg-icons/utils";
 import useScroll from "@/hooks/useScroll";
+import { LinkList } from "./type";
+
+import { Building2, Handshake, Phone } from "lucide-react";
 
 import { SvgIcons } from "../svg-icons";
 
@@ -15,11 +18,13 @@ import {
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Drawer, Language } from "./component";
-import { linkList } from "./utils";
 
 import { Label } from "../ui/label";
+import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
 export const NavBar = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const isScroll = useScroll(window.innerHeight);
@@ -34,6 +39,24 @@ export const NavBar = () => {
   const handleBackHome = () => {
     return navigate("/");
   };
+
+  const linkList: LinkList[] = [
+    {
+      label: t(LocalizationKey.navigation.partnerwithUs),
+      path: "/partner",
+      icon: Handshake,
+    },
+    {
+      label: t(LocalizationKey.navigation.services),
+      path: "/services",
+      icon: Phone,
+    },
+    {
+      label: t(LocalizationKey.navigation.about),
+      path: "/about",
+      icon: Building2,
+    },
+  ];
 
   const renderNavigation = () => {
     return (

@@ -10,8 +10,11 @@ const LocalizationKey = {
     ichargeContinue: "home.ichargeContinue.label",
     whyIcharge: "home.whyIcharge.label",
     convenience: "home.convenience.label",
+    conveniencedesc: "home.conveniencedesc.label",
     costEffective: "home.costEffective.label",
+    costEffectivedesc: "home.costEffectivedesc.label",
     flexible: "home.flexible.label",
+    flexibledesc: "home.flexibledesc.label",
     weOfferServicesThatFitsYourNeeds: "home.WeOfferServices.label",
     freeUseOfEquipment: "home.freeUseOfEquipment.label",
     saleOfEquipment: "home.saleOfEquipment.label",
@@ -29,6 +32,13 @@ const LocalizationKey = {
     stayPowered: "home.stayPowered.label",
     stayPoweredDesc: "home.stayPoweredDesc.label",
     stayPoweredBtn: "home.stayPoweredBtn.label",
+  },
+  navigation: {
+    partnerwithUs: "navigation.partnerwithUs.label",
+    services: "navigation.services.label",
+    about: "navigation.about.label",
+    faqs: "navigation.faqs.label",
+    certifications: "navigation.certifications.label",
   },
   customer: {
     customerService: "customer.customerService.label",
@@ -83,6 +93,7 @@ const LocalizationKey = {
     appStore: "footer.appStore.label",
     copyright: "footer.copyright.label",
     partnerWithUs: "footer.partnerWithUs.label",
+    web: "footer.web.label",
   },
   services: {
     servicesHeading: "services.servicesHeading.label",
