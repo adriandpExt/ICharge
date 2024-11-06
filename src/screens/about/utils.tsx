@@ -1,12 +1,12 @@
 import LocalizationKey from "@/i18n/key";
 import { CertImage, SumStep } from "./types";
-import Image1 from "@/assets/about/certifications/1.png";
-import Image2 from "@/assets/about/certifications/2.png";
-import Image3 from "@/assets/about/certifications/3.png";
-import Image4 from "@/assets/about/certifications/4.png";
-import Image5 from "@/assets/about/certifications/5.png";
-import Image6 from "@/assets/about/certifications/6.png";
-import Image7 from "@/assets/about/certifications/7.png";
+import Image1 from "@/assets/about/certifications/1.1.png";
+import Image2 from "@/assets/about/certifications/2.1.png";
+import Image3 from "@/assets/about/certifications/3.1.png";
+import Image4 from "@/assets/about/certifications/4.1.png";
+import Image5 from "@/assets/about/certifications/5.1.png";
+import Image6 from "@/assets/about/certifications/6.1.png";
+import Image7 from "@/assets/about/certifications/7.1.png";
 
 export const SumVal: SumStep[] = [
     {
@@ -42,37 +42,37 @@ export const SumVal: SumStep[] = [
 export const Certs: CertImage[] = [ 
     {
         imageName: Image1,
-        imageHeight: "140px",
-        imageWidth: "140px"
+        imageHeight: "70px",
+        imageWidth: "70px"
     }, 
     {
         imageName: Image2,
-        imageHeight: "228px",
-        imageWidth: "228px"
+        imageHeight: "114px",
+        imageWidth: "114px"
     }, 
     {
         imageName: Image3,
-        imageHeight: "190px",
-        imageWidth: "189px"
+        imageHeight: "95px",
+        imageWidth: "94.5px"
     },
     {
         imageName: Image4,
-        imageHeight: "247px",
-        imageWidth: "247px"
+        imageHeight: "123.5px",
+        imageWidth: "123.5px"
     },
     {
         imageName: Image5,
-        imageHeight: "286px",
-        imageWidth: "286px"
+        imageHeight: "143px",
+        imageWidth: "143px"
     },
     {
         imageName: Image6,
-        imageHeight: "364px",
-        imageWidth: "364px"
+        imageHeight: "91px",
+        imageWidth: "91px"
     },
     {
         imageName: Image7,
-        imageHeight: "404px",
-        imageWidth: "404px"
+        imageHeight: "101px",
+        imageWidth: "101px"
     }
 ]
