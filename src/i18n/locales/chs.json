@@ -24,13 +24,22 @@
       "label": "为什么选择"
     },
     "convenience": {
-      "label": "租借行动电源提升了您地点的便利性，这可能会增加人流，并延长及增加访客的次数。"
+      "label": "便利性"
+    },
+    "conveniencedesc": {
+      "label": "提供可租赁的充电宝提升了您地点的便利性，这可能导致更多的人流，更长和更频繁的访问。"
     },
     "costEffective": {
-      "label": "每 30 分钟仅需 19 菲律宾比索的低廉费用，鼓励顾客停留更长时间，享受更多场所提供的服务，从而提升整体顾客满意度。"
+      "label": "性价比高"
+    },
+    "costEffectivedesc": {
+      "label": "每30分钟仅需19.00比索的低成本，顾客将被鼓励停留更长时间，享受更多您场所提供的服务，从而提升整体客户满意度。"
     },
     "flexible": {
-      "label": "iCharge 无缝整合于各种企业和场所，无论在哪里都能提供可靠且灵活的支持。"
+      "label": "灵活"
+    },
+    "flexibledesc": {
+      "label": "iCharge致力于与各种企业和场所无缝集成，无论在什么地点都能提供可靠和灵活的支持。"
     },
     "WeOfferServices": {
       "label": "我们提供符合您需求的服务"
@@ -84,6 +93,24 @@
       "label": "查看产品"
     }
   },
+  "navigation": {
+    "partnerwithUs": {
+      "label": "与我们合作"
+    },
+    "services": {
+      "label": "服务"
+    },
+    "about": {
+      "label": "关于"
+    },
+    "faqs": {
+      "label": "常见问题"
+    },
+    "certifications": {
+      "label": "认证"
+    }
+  },
+
   "footer": {
     "followUs": {
       "label": "关注我们"
@@ -129,6 +156,9 @@
     },
     "rightsReserved": {
       "label": "保留所有权利。"
+    },
+    "web": {
+      "label": "网页"
     }
   },
   "customer": {

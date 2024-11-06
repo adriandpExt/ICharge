@@ -24,13 +24,22 @@
       "label": "為什麼選擇"
     },
     "convenience": {
-      "label": "租借行動電源提升了您地點的便利性，這可能會增加人流，並延長及增加訪客的次數。"
+      "label": "便利性"
+    },
+    "conveniencedesc": {
+      "label": "提供可租用的充電寶提升了您地點的便利性，這可能導致更多的人流，更長和更頻繁的訪問。"
     },
     "costEffective": {
-      "label": "每 30 分鐘僅需 19 菲律賓披索的低廉費用，鼓勵顧客停留更長時間，享受更多場所提供的服務，從而提升整體顧客滿意度。"
+      "label": "性價比高"
+    },
+    "costEffectivedesc": {
+      "label": "每30分鐘僅需19.00比索的低成本，顧客將被鼓勵停留更長時間，享受更多您場所提供的服務，從而提升整體顧客滿意度。"
     },
     "flexible": {
-      "label": "iCharge 無縫整合於各種企業和場所，無論在哪裡都能提供可靠且靈活的支持。"
+      "label": "靈活"
+    },
+    "flexibledesc": {
+      "label": "iCharge致力於與各種企業和場所無縫整合，無論在什麼地點都能提供可靠和靈活的支持。"
     },
     "WeOfferServices": {
       "label": "我們提供符合您需求的服務"
@@ -84,6 +93,24 @@
       "label": "查看產品"
     }
   },
+  "navigation": {
+    "partnerwithUs": {
+      "label": "與我們合作"
+    },
+    "services": {
+      "label": "服務"
+    },
+    "about": {
+      "label": "關於"
+    },
+    "faqs": {
+      "label": "常見問題"
+    },
+    "certifications": {
+      "label": "認證"
+    }
+  },
+
   "footer": {
     "followUs": {
       "label": "關注我們"
@@ -129,6 +156,9 @@
     },
     "rightsReserved": {
       "label": "保留所有權利。"
+    },
+    "web": {
+      "label": "網頁"
     }
   },
   "customer": {

@@ -24,12 +24,21 @@
       "label": "WHY "
     },
     "convenience": {
+      "label": "Convenience"
+    },
+    "conveniencedesc": {
       "label": "Offering rentable power banks enhances the convenience of your location, which can lead to increased foot traffic, longer and frequent visits."
     },
     "costEffective": {
+      "label": "Cost-effective"
+    },
+    "costEffectivedesc": {
       "label": "At a very low cost of P19.00 per 30 minutes, patrons will be encouraged to stay longer and enjoy more of what your venue has to offer, thereby boosting overall customer satisfaction."
     },
     "flexible": {
+      "label": "Flexible"
+    },
+    "flexibledesc": {
       "label": "iCharge works to effortlessly and seamlessly integrate with a wide range of businesses and venues, offering reliable and flexible support no matter the location."
     },
     "WeOfferServices": {
@@ -84,6 +93,23 @@
       "label": "View Products"
     }
   },
+  "navigation": {
+    "partnerwithUs": {
+      "label": "Partner with Us"
+    },
+    "services": {
+      "label": "Services"
+    },
+    "about": {
+      "label": "About"
+    },
+    "faqs": {
+      "label": "FAQs"
+    },
+    "certifications": {
+      "label": "Certifications"
+    }
+  },
 
   "footer": {
     "followUs": {
@@ -134,6 +160,9 @@
     },
     "rightsReserved": {
       "label": "All Rights Reserved."
+    },
+    "web": {
+      "label": "Web"
     }
   },
 
