@@ -9,3 +9,9 @@ export interface SumStep {
   desc: string;
   list: string[];
 }
+
+export interface CertImage {
+  imageName: string;
+  imageHeight: string;
+  imageWidth: string;
+}
