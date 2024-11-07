@@ -33,7 +33,7 @@
       "label": "Cost-effective"
     },
     "costEffectivedesc": {
-      "label": "At a very low cost of P19.00 per 30 minutes, patrons will be encouraged to stay longer and enjoy more of what your venue has to offer, thereby boosting overall customer satisfaction."
+      "label": "At a very low cost of P19.00 per 30 minutes, patrons will be encouraged to stay longer and enjoy more of what your venue hast to offer, thereby boosting overall customer satisfaction."
     },
     "flexible": {
       "label": "Flexible"
@@ -60,7 +60,7 @@
       "label": "Scan"
     },
     "scanDescription": {
-      "label": "Scan the QR code at any iCharge station to rent Download the app."
+      "label": "Scan the QR code at any iCharge station to rent. Download the app."
     },
     "topUp": {
       "label": "Top up"
@@ -78,7 +78,7 @@
       "label": "Return"
     },
     "returnDescription": {
-      "label": "Insert the power bank to any iCharge Station, pay the rental fee."
+      "label": "Insert the power bank into iCharge station. Pay the rental fee."
     },
     "sectors": {
       "label": "Sectors"
@@ -464,10 +464,13 @@
           "label": "Increases dwell time, leading to more purchases."
         },
         "sub2": {
-          "label": "Customizable branding to align with store aesthetics."
+          "label": "Shows that your business cares about customer satisfaction."
         },
         "sub3": {
-          "label": "Differentiates your business by offering a unique, customer-focused service."
+          "label": "Customizable branding to align with store aesthetics."
+        },
+        "sub4": {
+          "label": "Provides an edge over competitors by offering a value-added service."
         }
       }
     },
