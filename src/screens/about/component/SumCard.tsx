@@ -8,8 +8,6 @@ import { cn } from "@/lib/utils";
 
 import LocalizationKey from "@/i18n/key";
 
-import MobileBg from "@/assets/modern-man-using-smartphone-city.png";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
@@ -19,6 +17,7 @@ const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
   const {
     stepSummary: { header, desc, list },
     sideBg,
+    mobileBg,
     isFlipped = false,
   } = stepSum;
 
@@ -42,7 +41,7 @@ const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
       />
 
       <img
-        src={MobileBg}
+        src={mobileBg}
         alt=""
         width={"100%"}
         className="h-full flex-col rounded-tl-[36px] rounded-tr-[36px] object-cover lg:hidden"
