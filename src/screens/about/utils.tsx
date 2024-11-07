@@ -1,8 +1,8 @@
 import LocalizationKey from "@/i18n/key";
-import { CertImage, SumStep } from "./types";
+import { CertImage, CertImageMobile, SumStep } from "./types";
 import Image1 from "@/assets/about/certifications/1.1.png";
 import Image2 from "@/assets/about/certifications/2.1.png";
-import Image3 from "@/assets/about/certifications/3.1.png";
+import Image3 from "@/assets/about/certifications/3.2.png";
 import Image4 from "@/assets/about/certifications/4.1.png";
 import Image5 from "@/assets/about/certifications/5.1.png";
 import Image6 from "@/assets/about/certifications/6.1.png";
@@ -42,37 +42,78 @@ export const SumVal: SumStep[] = [
 export const Certs: CertImage[] = [ 
     {
         imageName: Image1,
-        imageHeight: "70px",
-        imageWidth: "70px"
+        imageHeight: "130px",
+        imageWidth: "130px"
     }, 
     {
         imageName: Image2,
-        imageHeight: "114px",
-        imageWidth: "114px"
+        imageHeight: "145px",
+        imageWidth: "145px"
     }, 
     {
         imageName: Image3,
-        imageHeight: "95px",
-        imageWidth: "94.5px"
+        imageHeight: "155px",
+        imageWidth: "155px"
     },
     {
         imageName: Image4,
-        imageHeight: "123.5px",
-        imageWidth: "123.5px"
+        imageHeight: "125px",
+        imageWidth: "125px"
     },
     {
         imageName: Image5,
-        imageHeight: "143px",
-        imageWidth: "143px"
+        imageHeight: "146px",
+        imageWidth: "146px"
     },
     {
         imageName: Image6,
-        imageHeight: "91px",
-        imageWidth: "91px"
+        imageHeight: "144px",
+        imageWidth: "144px"
     },
     {
         imageName: Image7,
-        imageHeight: "101px",
-        imageWidth: "101px"
+        imageHeight: "221px",
+        imageWidth: "221px"
     }
+]
+
+export const CertsMobileTopRow: CertImageMobile [] = [
+    {
+        imageName: Image1,
+        imageHeight: "50px",
+        imageWidth: "50px"
+    }, 
+    {
+        imageName: Image2,
+        imageHeight: "50px",
+        imageWidth: "60px"
+    }, 
+    {
+        imageName: Image3,
+        imageHeight: "50px",
+        imageWidth: "60px"
+    },
+    {
+        imageName: Image4,
+        imageHeight: "50px",
+        imageWidth: "50px"
+    },
+]
+
+export const CertsMobileBottomRow: CertImageMobile [] = [
+    {
+        imageName: Image5,
+        imageHeight: "50px",
+        imageWidth: "50px"
+    }, 
+    {
+        imageName: Image6,
+        imageHeight: "50px",
+        imageWidth: "50px"
+    }, 
+    {
+        imageName: Image7,
+        imageHeight: "100px",
+        imageWidth: "100px"
+    },
 ]

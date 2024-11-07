@@ -15,3 +15,9 @@ export interface CertImage {
   imageHeight: string;
   imageWidth: string;
 }
+
+export interface CertImageMobile {
+  imageName: string;
+  imageHeight: string;
+  imageWidth: string;
+}
