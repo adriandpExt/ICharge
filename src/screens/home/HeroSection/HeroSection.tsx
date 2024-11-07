@@ -31,7 +31,7 @@ const HeroSection = () => {
 
           <Label
             variant={"default"}
-            className="font-eastman text-3xl text-white md:text-6xl lg:text-5xl"
+            className="font-eastman text-3xl text-white md:text-6xl lg:text-5xl italic"
           >
             Stay
             <span className="ml-3 bg-gradient-to-r from-[#44D62C] via-[#54575A] to-[#fff] bg-clip-text text-transparent">

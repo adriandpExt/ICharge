@@ -9,7 +9,7 @@ import { SectionTitleProps, SectionContentProps } from "./types";
 import { PageContainer } from "@/components";
 import SummaryCard from "../component/SumCard";
 import bgSide from "@/assets/modern-man-using-smartphone-city-2.png";
-import { SumVal } from "../utils";
+import { Certs, CertsMobileBottomRow, CertsMobileTopRow, SumVal } from "../utils";
 import LocalizationKey from "@/i18n/key";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
@@ -171,6 +171,39 @@ const AboutComponent = (): ReactElement => {
               isFlipped={index === 1 ? true : false}
             />
           ))}
+        </PageContainer>
+
+        <PageContainer className="hidden lg:flex lg:flex-row justify-center overflow-hidden gap-5">
+          {Certs.map((data,index) => (
+              <div>
+                <img
+                  src={data.imageName}
+                  key={index}
+                  width={data.imageWidth}
+                  height={data.imageHeight} />
+              </div>
+          ))}
+        </PageContainer>
+
+        <PageContainer className="flex flex-col lg:hidden items-center">
+          <div className="flex gap-3">
+            {CertsMobileTopRow.map((data, index) => (
+              <img
+                src={data.imageName}
+                key={index}
+                width={data.imageWidth}
+                height={data.imageHeight} />
+            ))}
+          </div>
+          <div className="flex gap-5 relative top-5">
+            {CertsMobileBottomRow.map((data, index) => (
+              <img
+                src={data.imageName}
+                key={index}
+                width={data.imageWidth}
+                height={data.imageHeight} />
+            ))}
+          </div>
         </PageContainer>
       </div>
     </>

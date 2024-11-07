@@ -9,11 +9,6 @@ export const language = [
     label: "En",
   },
   {
-    id: "ph",
-    icons: "ic_ph_flag",
-    label: "Ph",
-  },
-  {
     id: "cht",
     icons: "ic_cht_flag",
     label: "Ch(Traditional)",
