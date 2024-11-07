@@ -27,13 +27,13 @@
       "label": "便利性"
     },
     "conveniencedesc": {
-      "label": "提供可租赁的充电宝提升了您地点的便利性，这可能导致更多的人流，更长和更频繁的访问。"
+      "label": "提供可租借的移动电源提升了该地点的便利性，从而吸引更多人流，提高顾客停留的时间与频率"
     },
     "costEffective": {
       "label": "性价比高"
     },
     "costEffectivedesc": {
-      "label": "每30分钟仅需19.00比索的低成本，顾客将被鼓励停留更长时间，享受更多您场所提供的服务，从而提升整体客户满意度。"
+      "label": "每 30 分钟仅需 P29.00 的低成本，使顾客愿意停留更久，享受更多场地服务，进而提升整体顾客满意度"
     },
     "flexible": {
       "label": "灵活"
@@ -60,7 +60,7 @@
       "label": "扫描"
     },
     "scanDescription": {
-      "label": "在任一 iCharge 站点扫描 QR 码以开始租赁。"
+      "label": "在任何 iCharge 站点扫描二维码即可租借。下载应用程序。"
     },
     "topUp": {
       "label": "充值"
@@ -78,7 +78,7 @@
       "label": "归还"
     },
     "returnDescription": {
-      "label": "将行动电源插入任一空槽以归还。"
+      "label": "将移动电源插回 iCharge 充电站，支付租金。"
     },
     "sectors": {
       "label": "行业"
@@ -349,13 +349,13 @@
       "label": "可持续性与社会影响"
     },
     "serviceFreeEquipmentsubTitle": {
-      "label": "通过与 iCharge 合作，企业可以在无需前期成本的情况下向顾客提供有价值的服务。我们负责从安装到维护和客户支持的一切，确保您的顾客保持充电并持续互动."
+      "label": "通过与 iCharge 合作，企业可以在无需前期成本的情况下向顾客提供有价值的服务。我们负责从安装到维护和客户服务的一切，确保您的顾客保持充电并持续互动"
     },
     "serviceFreeEquipmentbody1": {
-      "label": "无需支付设备费用、硬件升级费或全方位维护服务费用."
+      "label": "无需支付设备费用、硬件升级费费用或全方位维护服务费用"
     },
     "serviceFreeEquipmentbody2": {
-      "label": "保持访客联系，提升他们的整体体验."
+      "label": "客户的设备保持充电，提升他们的整体体验"
     },
     "serviceFreeEquipmentbody3": {
       "label": "使您的企业成为技术先进且以顾客为中心的公司."
@@ -367,7 +367,7 @@
       "label": "拥有充电站并从移动电源租赁中获取收入."
     },
     "serviceSaleEquipmentbody2": {
-      "label": "定制和品牌化机会."
+      "label": "定制化和品牌推广机会"
     },
     "serviceSaleEquipmentbody3": {
       "label": "增加顾客的进店流量和互动."
@@ -435,9 +435,18 @@
         "label": "通过在购物中心、超市、百货公司和精品店提供充电站，增强购物体验，鼓励顾客逗留更长时间"
       },
       "description": {
-        "sub1": { "label": "增加停留时间，促进更多消费" },
-        "sub2": { "label": "表明您的企业重视顾客满意度" },
-        "sub3": { "label": "可定制品牌设计以符合店铺美学." }
+        "sub1": {
+          "label": "增加停留时间，促进更多消费"
+        },
+        "sub2": {
+          "label": "表明您的企业重视顾客满意度"
+        },
+        "sub3": {
+          "label": "可定制品牌设计以符合店铺美学"
+        },
+        "sub4": {
+          "label": "通过提供增值服务，使您比竞争对手更具优势"
+        }
       }
     },
     "productHeading": { "label": "产品" },

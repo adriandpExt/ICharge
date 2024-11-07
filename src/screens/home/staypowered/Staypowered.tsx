@@ -34,7 +34,7 @@ const StayPowered = () => {
             className="mx-auto h-[300px] w-full object-contain lg:h-[500px]"
           />
         </div>
-        <div className="w-full text-center text-white md:w-1/2 md:text-left">
+        <div className="w-full space-y-5 text-center text-white md:w-1/2 md:text-left">
           <Label variant={"banner"} className="mb-4 md:text-4xl">
             {t(LocalizationKey.home.stayPowered)}
           </Label>

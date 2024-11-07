@@ -72,6 +72,7 @@ const ServiceIndustries = (): ReactElement => {
         t(LocalizationKey.services.description.retail[0]),
         t(LocalizationKey.services.description.retail[1]),
         t(LocalizationKey.services.description.retail[2]),
+        t(LocalizationKey.services.description.retail[3]),
       ],
     },
   ];
