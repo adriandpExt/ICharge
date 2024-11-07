@@ -161,6 +161,7 @@ const LocalizationKey = {
         "services.retail.description.sub1.label",
         "services.retail.description.sub2.label",
         "services.retail.description.sub3.label",
+        "services.retail.description.sub4.label",
       ],
     },
     products: "services.productHeading.label",
