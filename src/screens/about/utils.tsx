@@ -12,7 +12,7 @@ import Image3 from "@/assets/about/certifications/3.2.png";
 import Image4 from "@/assets/about/certifications/4.1.png";
 import Image5 from "@/assets/about/certifications/5.1.png";
 import Image6 from "@/assets/about/certifications/6.1.png";
-import Image7 from "@/assets/about/certifications/7.1.png";
+import Image7 from "@/assets/about/certifications/7.2.1.png";
 
 export const SumVal: SumStep[] = [
     {
