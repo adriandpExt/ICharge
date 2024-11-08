@@ -1,8 +1,11 @@
 import { ProdModal } from "../types";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import LocalizationKey from "@/i18n/key";
+import { useTranslation } from "react-i18next";
 
 const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
+  const { t } = useTranslation();
   const {
     productDetails: { name, description, seatCapacity },
     productDescriptions: { content, dimensions, wattage },
@@ -17,7 +20,7 @@ const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
         </Label>
         <Label className="font-semibold text-white">{description}</Label>
         <Label className="hidden font-semibold text-white md:block">
-          Seat Capacity: {seatCapacity}
+          {seatCapacity}
         </Label>
       </div>
 
@@ -30,9 +33,15 @@ const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
 
         {/* Code */}
         <div className="flex flex-col space-y-5">
-          <Label className="text-xl">Contents</Label>
-          <Label>Slot: {content.slots}</Label>
-          <Label>Powerbank: {content.powerbanks}</Label>
+          <Label className="text-xl">
+            {t(LocalizationKey.services.contents)}
+          </Label>
+          <Label>
+            {t(LocalizationKey.services.slot)}: {content.slots}
+          </Label>
+          <Label>
+            {t(LocalizationKey.services.powerbanks)}: {content.powerbanks}
+          </Label>
         </div>
 
         <Separator
@@ -42,7 +51,7 @@ const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
 
         {/* Dimension */}
         <div className="flex flex-col space-y-5">
-          <Label className="text-xl">Size</Label>
+          <Label className="text-xl">{t(LocalizationKey.services.size)}</Label>
           <Label>h: {dimensions.h}</Label>
           <Label>w: {dimensions.w}</Label>
           <Label>l: {dimensions.l}</Label>
@@ -55,9 +64,15 @@ const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
 
         {/* Wattage */}
         <div className="flex flex-col space-y-5">
-          <Label className="text-xl">Wattage</Label>
-          <Label>Standby: {wattage.standBy}</Label>
-          <Label>fullLoad: {wattage.fullLoad}</Label>
+          <Label className="text-xl">
+            {t(LocalizationKey.services.wattage)}
+          </Label>
+          <Label>
+            {t(LocalizationKey.services.standby)}: {wattage.standBy}
+          </Label>
+          <Label>
+            {t(LocalizationKey.services.fullload)}: {wattage.fullLoad}
+          </Label>
         </div>
 
         <Separator
