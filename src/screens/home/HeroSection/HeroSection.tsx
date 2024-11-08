@@ -25,7 +25,7 @@ const HeroSection = () => {
         <div className="font-bold">
           <Label variant={"default"} className="text-5xl lg:text-6xl">
             <span className="font-galaxy font-[950] text-[#44D62C]">i</span>
-            <span className="font-galaxy font-[950] text-white">Charge</span>
+            <span className="font-galaxy font-[950] text-white">charge</span>
           </Label>
           <br />
 
