@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: galaxy;
+  src: url("./assets/font/Galaxy-Regular.otf");
+}
+
+@font-face {
   font-family: eastman;
   src: url("./assets/font/Eastman-Condensed.otf");
 }

@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        galaxy: "galaxy",
         eastman: "eastman",
         poppins: "poppins",
         staatliches: "staatliches",
