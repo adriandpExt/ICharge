@@ -24,14 +24,14 @@ const HeroSection = () => {
       >
         <div className="font-bold">
           <Label variant={"default"} className="text-5xl lg:text-6xl">
-            <span className="font-eastman font-[950] text-[#44D62C]">i</span>
-            <span className="font-eastman font-[950] text-white">Charge</span>
+            <span className="font-galaxy font-[950] text-[#44D62C]">i</span>
+            <span className="font-galaxy font-[950] text-white">Charge</span>
           </Label>
           <br />
 
           <Label
             variant={"default"}
-            className="font-eastman text-3xl text-white md:text-6xl lg:text-5xl italic"
+            className="font-eastman text-3xl italic text-white md:text-6xl lg:text-5xl"
           >
             Stay
             <span className="ml-3 bg-gradient-to-r from-[#44D62C] via-[#54575A] to-[#fff] bg-clip-text text-transparent">
@@ -54,18 +54,26 @@ const HeroSection = () => {
         </Label>
 
         <div className="items-center space-y-4 lg:w-48">
-          <div className="flex flex-row gap-2 items-center justify-center lg:flex lg:flex-col lg:space-y-2">
+          <div className="flex flex-row items-center justify-center gap-2 lg:flex lg:flex-col lg:space-y-2">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"
             >
-              <img src={playstore} alt="ic_playstore_hero" className="w-40 lg:w-48" />
+              <img
+                src={playstore}
+                alt="ic_playstore_hero"
+                className="w-40 lg:w-48"
+              />
             </Link>
             <Link
               to={"https://apps.apple.com/us/app/icharge-ph/id6478515634"}
               target="_blank"
             >
-              <img src={applestore} alt="ic_apple_hero" className="w-40 lg:w-48" />
+              <img
+                src={applestore}
+                alt="ic_apple_hero"
+                className="w-40 lg:w-48"
+              />
             </Link>
           </div>
         </div>
