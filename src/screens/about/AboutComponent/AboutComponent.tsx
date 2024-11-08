@@ -8,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { SectionTitleProps, SectionContentProps } from "./types";
 import { PageContainer } from "@/components";
 import SummaryCard from "../component/SumCard";
-import bgSide from "@/assets/modern-man-using-smartphone-city-2.png";
 import { Certs, CertsMobileBottomRow, CertsMobileTopRow, SumVal } from "../utils";
 import LocalizationKey from "@/i18n/key";
 import { useTranslation } from "react-i18next";
@@ -166,7 +165,8 @@ const AboutComponent = (): ReactElement => {
           {SumVal.map((data, index) => (
             <SummaryCard
               stepSummary={data}
-              sideBg={bgSide}
+              sideBg={data.SumImage}
+              mobileBg={data.SumImageMobile}
               key={index}
               isFlipped={index === 1 ? true : false}
             />
