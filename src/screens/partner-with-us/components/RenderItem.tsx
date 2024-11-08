@@ -6,7 +6,7 @@ export const RenderItem = (props: DataCardProps) => {
   const { imgSrc, title, list } = props;
   return (
     <div
-      data-aos="fade"
+      data-aos="fade-up"
       className="flex flex-col items-center gap-10 lg:flex-row even:lg:flex-row-reverse"
     >
       <div>
