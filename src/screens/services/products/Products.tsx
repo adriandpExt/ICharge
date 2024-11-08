@@ -14,7 +14,17 @@ import { Label } from "@/components/ui/label";
 import SvgIcons from "@/components/svg-icons/SvgIcons";
 import { cn } from "@/lib/utils";
 import LocalizationKey from "@/i18n/key";
-import { initValue, products } from "./utils";
+import { initValue } from "./utils";
+
+import Products12Pro from "@/assets/Products/products/icharge12Pro.png";
+import Products12 from "@/assets/Products/products/icharge12.png";
+import Products8Plus from "@/assets/Products/products/icharge8Plus.png";
+import Products8 from "@/assets/Products/products/icharge8.png";
+import Products6 from "@/assets/Products/products/icharge6.png";
+import Products24Max from "@/assets/Products/products/ichargeMax.png";
+import Products48ProMax from "@/assets/Products/products/iCharge48ProMax.png";
+import ProductsQCRC from "@/assets/Products/products/ichargeQCRC.png";
+import ProductsQCSQ from "@/assets/Products/products/ichargeQCSQ.png";
 
 const Features = () => {
   const { t } = useTranslation();
@@ -35,6 +45,126 @@ const Features = () => {
   const handleCarouselChange = (index: number) => {
     setCurrentIndex(index);
   };
+
+  const products: Product[] = [
+    {
+      productDetails: {
+        name: "iCharge 6",
+        description: t(LocalizationKey.services.icharge6desc),
+        image: Products6,
+        seatCapacity: t(LocalizationKey.services.icharge6desc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "75W", standBy: "3W" },
+        dimensions: { h: "1150mm", l: "260mm", w: "235mm" },
+        content: { code: "QI-6", slots: "6", powerbanks: "4" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge 8",
+        description: t(LocalizationKey.services.icharge8desc),
+        image: Products8,
+        seatCapacity: t(LocalizationKey.services.icharge8desc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "65W", standBy: "3W" },
+        dimensions: { h: "174mm", l: "343mm", w: "188mm" },
+        content: { code: "QI-8", slots: "8", powerbanks: "5" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge 8 Plus",
+        description: t(LocalizationKey.services.icharge8plusdesc),
+        image: Products8Plus,
+        seatCapacity: t(LocalizationKey.services.icharge8plusdesc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "65W", standBy: "3W" },
+        dimensions: { h: "174mm", l: "343mm", w: "188mm" },
+        content: { code: "QI-8Plus", slots: "8", powerbanks: "5" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge 12",
+        description: t(LocalizationKey.services.icharge12desc),
+        image: Products12,
+        seatCapacity: t(LocalizationKey.services.icharge12desc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "75W", standBy: "3W" },
+        dimensions: { h: "260mm", l: "260mm", w: "235mm" },
+        content: { code: "QI-12", slots: "12", powerbanks: "8" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge 12 Pro",
+        description: t(LocalizationKey.services.icharge12prodesc),
+        image: Products12Pro,
+        seatCapacity: t(LocalizationKey.services.icharge12prodesc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "75W", standBy: "3W" },
+        dimensions: { h: "260mm", l: "260mm", w: "235mm" },
+        content: { slots: "12", powerbanks: "8", code: "QI-12Pro" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge 24 Max",
+        description: t(LocalizationKey.services.icharge24maxdesc),
+        image: Products24Max,
+        seatCapacity: t(LocalizationKey.services.icharge24maxdesc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "160W", standBy: "24.2W" },
+        dimensions: { h: "1650mm", l: "540mm", w: "450mm" },
+        content: { code: "QI-Max", slots: "24", powerbanks: "16" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge 48 Pro Max",
+        description: t(LocalizationKey.services.icharge48promaxdesc),
+        image: Products48ProMax,
+        seatCapacity: t(LocalizationKey.services.icharge48promaxdesc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "--W", standBy: "--W" },
+        dimensions: { h: "1650mm", l: "540mm", w: "450mm" },
+        content: { code: "-", slots: "48", powerbanks: "32" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge Standee SR",
+        description: t(LocalizationKey.services.ichargestandeesrdesc),
+        image: ProductsQCRC,
+        seatCapacity: "",
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "-", standBy: "-" },
+        dimensions: { h: "890mm", l: "450mm", w: "288mm" },
+        content: { code: "-", slots: "-", powerbanks: "-" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge Standee SS",
+        description: t(LocalizationKey.services.ichargestandeessdesc),
+        image: ProductsQCSQ,
+        seatCapacity: "",
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "-", standBy: "-" },
+        dimensions: { h: "956mm", l: "360mm", w: "340mm" },
+        content: { code: "-", slots: "-", powerbanks: "-" },
+      },
+    },
+  ];
 
   return (
     <section

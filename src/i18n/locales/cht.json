@@ -450,7 +450,62 @@
       }
     },
     "productHeading": { "label": "產品" },
-    "productMore": { "label": "更多" }
+    "productMore": { "label": "更多" },
+    "contents": { "label": "內容" },
+    "size": { "label": "尺寸" },
+    "wattage": { "label": "瓦數" },
+    "slot": { "label": "插槽" },
+    "powerbanks": { "label": "行動電源" },
+    "standby": { "label": "待機" },
+    "fullload": { "label": "滿載" },
+    "icharge6desc": {
+      "label": "適合有限空間的小型型號"
+    },
+    "icharge6desc2": {
+      "label": "座位容量：40以下"
+    },
+    "icharge8desc": {
+      "label": "緊湊的標準型號"
+    },
+    "icharge8desc2": {
+      "label": "座位容量：40-80"
+    },
+    "icharge8plusdesc": {
+      "label": "帶有廣告功能的緊湊型號"
+    },
+    "icharge8plusdesc2": {
+      "label": "座位容量：眾多行人"
+    },
+    "icharge12desc": {
+      "label": "標準型號"
+    },
+    "icharge12desc2": {
+      "label": "座位容量：80以上"
+    },
+    "icharge12prodesc": {
+      "label": "帶有廣告功能的進階型號"
+    },
+    "icharge12prodesc2": {
+      "label": "座位容量：眾多行人"
+    },
+    "icharge24maxdesc": {
+      "label": "高容量並具有廣闊廣告空間"
+    },
+    "icharge24maxdesc2": {
+      "label": "座位容量：購物中心、大型大廳、宴會廳"
+    },
+    "icharge48promaxdesc": {
+      "label": "高容量並具有廣闊廣告空間"
+    },
+    "icharge48promaxdesc2": {
+      "label": "座位容量：眾多行人"
+    },
+    "ichargestandeesrdesc": {
+      "label": "展示型號（矩形）"
+    },
+    "ichargestandeessdesc": {
+      "label": "展示型號（矩形）"
+    }
   },
   "about": {
     "aboutHeading": {
