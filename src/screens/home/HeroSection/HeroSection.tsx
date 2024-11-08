@@ -54,18 +54,18 @@ const HeroSection = () => {
         </Label>
 
         <div className="items-center space-y-4 lg:w-48">
-          <div className="flex items-center justify-center lg:block lg:space-y-2">
+          <div className="flex flex-row gap-2 items-center justify-center lg:flex lg:flex-col lg:space-y-2">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"
             >
-              <img src={playstore} alt="ic_playstore_hero" className="w-48" />
+              <img src={playstore} alt="ic_playstore_hero" className="w-40 lg:w-48" />
             </Link>
             <Link
               to={"https://apps.apple.com/us/app/icharge-ph/id6478515634"}
               target="_blank"
             >
-              <img src={applestore} alt="ic_apple_hero" className="w-48" />
+              <img src={applestore} alt="ic_apple_hero" className="w-40 lg:w-48" />
             </Link>
           </div>
         </div>
