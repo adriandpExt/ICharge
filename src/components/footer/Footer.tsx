@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 
 import { SvgIcons } from "../svg-icons";
 
-import { bottomLinks, companyLinks, followUs, platformLinks } from "./utils";
+import { bottomLinks, followUs } from "./utils";
 
 import SectionItem from "./SectionItem";
 import { Avatar, AvatarFallback } from "../ui/avatar";
@@ -39,6 +39,30 @@ export const Footer = () => {
       </Avatar>
     ));
   };
+
+  const companyLinks = [
+    { label: t(LocalizationKey.navigation.partnerwithUs), path: "partner" },
+    { label: t(LocalizationKey.navigation.services), path: "/services" },
+    { label: t(LocalizationKey.navigation.about), path: "/about" },
+    { label: t(LocalizationKey.navigation.faqs), path: "/faqs" },
+    {
+      label: t(LocalizationKey.navigation.certifications),
+      path: "/certifications",
+    },
+  ];
+
+  const platformLinks = [
+    { label: t(LocalizationKey.footer.web), path: "#web" },
+    {
+      label: "iOS",
+      path: "https://apps.apple.com/us/app/icharge-ph/id6478515634",
+    },
+    {
+      label: "Android",
+      path: "https://play.google.com/store/apps/details?id=com.phl.charge",
+    },
+  ];
+
   return (
     <footer className="bg-customGreen p-6 text-white md:p-10">
       <div className="container mx-auto">

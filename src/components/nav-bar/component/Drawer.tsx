@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Globe, Menu } from "lucide-react";
+import { Building2, Globe, Handshake, Menu, Phone } from "lucide-react";
 
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
@@ -32,9 +32,13 @@ import { Label } from "@/components/ui/label";
 import { IconName } from "@/components/svg-icons/utils";
 import { SvgIcons } from "@/components/svg-icons";
 
-import { language, linkList } from "../utils";
+import { language } from "../utils";
+import LocalizationKey from "@/i18n/key";
+import { LinkList } from "../type";
+import { useTranslation } from "react-i18next";
 
 export const Drawer = () => {
+  const { t } = useTranslation();
   const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -50,6 +54,24 @@ export const Drawer = () => {
     setIsOpen(false);
     window.scrollTo(0, 0);
   };
+
+  const linkList: LinkList[] = [
+    {
+      label: t(LocalizationKey.navigation.partnerwithUs),
+      path: "/partner",
+      icon: Handshake,
+    },
+    {
+      label: t(LocalizationKey.navigation.services),
+      path: "/services",
+      icon: Phone,
+    },
+    {
+      label: t(LocalizationKey.navigation.about),
+      path: "/about",
+      icon: Building2,
+    },
+  ];
 
   const renderDrawerMenu = () => {
     return linkList.map((item, index) =>

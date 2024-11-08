@@ -24,13 +24,22 @@
       "label": "為什麼選擇"
     },
     "convenience": {
-      "label": "租借行動電源提升了您地點的便利性，這可能會增加人流，並延長及增加訪客的次數。"
+      "label": "便利性"
+    },
+    "conveniencedesc": {
+      "label": "提供可租借的行動電源提升了該地點的便利性，從而吸引更多人流，提高顧客停留的時間與頻率"
     },
     "costEffective": {
-      "label": "每 30 分鐘僅需 19 菲律賓披索的低廉費用，鼓勵顧客停留更長時間，享受更多場所提供的服務，從而提升整體顧客滿意度。"
+      "label": "性價比高"
+    },
+    "costEffectivedesc": {
+      "label": "每 30 分鐘僅需 P29.00 的低成本，使顧客願意停留更久，享受更多場地服務，進而提升整體顧客滿意度"
     },
     "flexible": {
-      "label": "iCharge 無縫整合於各種企業和場所，無論在哪裡都能提供可靠且靈活的支持。"
+      "label": "靈活"
+    },
+    "flexibledesc": {
+      "label": "iCharge致力於與各種企業和場所無縫整合，無論在什麼地點都能提供可靠和靈活的支持。"
     },
     "WeOfferServices": {
       "label": "我們提供符合您需求的服務"
@@ -51,7 +60,7 @@
       "label": "掃描"
     },
     "scanDescription": {
-      "label": "在任一 iCharge 站點掃描 QR 碼以開始租賃。"
+      "label": "在任何 iCharge 站點掃描 QR code 即可租借。下載應用程式。"
     },
     "topUp": {
       "label": "充值"
@@ -69,7 +78,7 @@
       "label": "歸還"
     },
     "returnDescription": {
-      "label": "將行動電源插入任一空槽以歸還。"
+      "label": "將行動電源插回 iCharge 充电站，支付租金。"
     },
     "sectors": {
       "label": "行業"
@@ -84,6 +93,24 @@
       "label": "查看產品"
     }
   },
+  "navigation": {
+    "partnerwithUs": {
+      "label": "與我們合作"
+    },
+    "services": {
+      "label": "服務"
+    },
+    "about": {
+      "label": "關於"
+    },
+    "faqs": {
+      "label": "常見問題"
+    },
+    "certifications": {
+      "label": "認證"
+    }
+  },
+
   "footer": {
     "followUs": {
       "label": "關注我們"
@@ -129,6 +156,9 @@
     },
     "rightsReserved": {
       "label": "保留所有權利。"
+    },
+    "web": {
+      "label": "網頁"
     }
   },
   "customer": {
@@ -316,16 +346,16 @@
       "label": "銷售設備"
     },
     "serviceSustainabilitySocialTitle": {
-      "label": "可持續性與社會影響"
+      "label": "永續性和社會影響"
     },
     "serviceFreeEquipmentsubTitle": {
       "label": "通過與 iCharge 合作，企業可以在無需前期成本的情況下向顧客提供有價值的服務。我們負責從安裝到維護和客戶支持的一切，確保您的顧客保持充電並持續互動."
     },
     "serviceFreeEquipmentbody1": {
-      "label": "無需支付設備費用、硬件升級費或全方位維護服務費用."
+      "label": "無需支付設備費用、硬體更新費用或全方位服務維護的費用"
     },
     "serviceFreeEquipmentbody2": {
-      "label": "保持訪客聯繫，提升他們的整體體驗."
+      "label": "客戶的裝置保持充電，提升他們的整體體驗"
     },
     "serviceFreeEquipmentbody3": {
       "label": "使您的企業成為技術先進且以顧客為中心的公司."
@@ -337,7 +367,7 @@
       "label": "擁有充電站並從移動電源租賃中獲取收入."
     },
     "serviceSaleEquipmentbody2": {
-      "label": "定制和品牌化機會."
+      "label": "客製化和品牌推廣機會"
     },
     "serviceSaleEquipmentbody3": {
       "label": "增加顧客的進店流量和互動."
@@ -350,7 +380,7 @@
       "label": "為您的顧客提供輕鬆保持聯繫的電力。無論是免費使用還是擁有設備，iCharge 提供靈活的解決方案，適合您的業務並提升顧客體驗。"
     },
     "viewProducts": { "label": "查看产品" },
-    "sectorHeading": { "label": "我們服務的行業" },
+    "sectorHeading": { "label": "我們服務的產業" },
     "sectorSubHeading": { "label": "為任何人、任何時間、任何地點提供電力" },
     "hospitality": {
       "title": { "label": "餐旅業" },
@@ -405,13 +435,77 @@
         "label": "通過在購物中心、超市、百貨公司和精品店提供充電站，增強購物體驗，鼓勵顧客逗留更長時間"
       },
       "description": {
-        "sub1": { "label": "增加停留時間，促進更多消費" },
-        "sub2": { "label": "表明您的企業重視顧客滿意度" },
-        "sub3": { "label": "可定制品牌設計以符合店鋪美學" }
+        "sub1": {
+          "label": "增加停留時間，促進更多消費"
+        },
+        "sub2": {
+          "label": "表明您的企業重視顧客滿意度"
+        },
+        "sub3": {
+          "label": "可定制品牌設計以符合店鋪美學"
+        },
+        "sub4": {
+          "label": "透過提供加值服務，提供超越競爭對手的優勢"
+        }
       }
     },
     "productHeading": { "label": "產品" },
-    "productMore": { "label": "更多" }
+    "productMore": { "label": "更多" },
+    "contents": { "label": "內容" },
+    "size": { "label": "尺寸" },
+    "wattage": { "label": "瓦數" },
+    "slot": { "label": "插槽" },
+    "powerbanks": { "label": "行動電源" },
+    "standby": { "label": "待機" },
+    "fullload": { "label": "滿載" },
+    "icharge6desc": {
+      "label": "適合有限空間的小型型號"
+    },
+    "icharge6desc2": {
+      "label": "座位容量：40以下"
+    },
+    "icharge8desc": {
+      "label": "緊湊的標準型號"
+    },
+    "icharge8desc2": {
+      "label": "座位容量：40-80"
+    },
+    "icharge8plusdesc": {
+      "label": "帶有廣告功能的緊湊型號"
+    },
+    "icharge8plusdesc2": {
+      "label": "座位容量：眾多行人"
+    },
+    "icharge12desc": {
+      "label": "標準型號"
+    },
+    "icharge12desc2": {
+      "label": "座位容量：80以上"
+    },
+    "icharge12prodesc": {
+      "label": "帶有廣告功能的進階型號"
+    },
+    "icharge12prodesc2": {
+      "label": "座位容量：眾多行人"
+    },
+    "icharge24maxdesc": {
+      "label": "高容量並具有廣闊廣告空間"
+    },
+    "icharge24maxdesc2": {
+      "label": "座位容量：購物中心、大型大廳、宴會廳"
+    },
+    "icharge48promaxdesc": {
+      "label": "高容量並具有廣闊廣告空間"
+    },
+    "icharge48promaxdesc2": {
+      "label": "座位容量：眾多行人"
+    },
+    "ichargestandeesrdesc": {
+      "label": "展示型號（矩形）"
+    },
+    "ichargestandeessdesc": {
+      "label": "展示型號（矩形）"
+    }
   },
   "about": {
     "aboutHeading": {

@@ -24,12 +24,21 @@
       "label": "WHY "
     },
     "convenience": {
+      "label": "Convenience"
+    },
+    "conveniencedesc": {
       "label": "Offering rentable power banks enhances the convenience of your location, which can lead to increased foot traffic, longer and frequent visits."
     },
     "costEffective": {
-      "label": "At a very low cost of P19.00 per 30 minutes, patrons will be encouraged to stay longer and enjoy more of what your venue has to offer, thereby boosting overall customer satisfaction."
+      "label": "Cost-effective"
+    },
+    "costEffectivedesc": {
+      "label": "At a very low cost of P19.00 per 30 minutes, patrons will be encouraged to stay longer and enjoy more of what your venue hast to offer, thereby boosting overall customer satisfaction."
     },
     "flexible": {
+      "label": "Flexible"
+    },
+    "flexibledesc": {
       "label": "iCharge works to effortlessly and seamlessly integrate with a wide range of businesses and venues, offering reliable and flexible support no matter the location."
     },
     "WeOfferServices": {
@@ -51,7 +60,7 @@
       "label": "Scan"
     },
     "scanDescription": {
-      "label": "Scan the QR code at any iCharge station to rent Download the app."
+      "label": "Scan the QR code at any iCharge station to rent. Download the app."
     },
     "topUp": {
       "label": "Top up"
@@ -69,7 +78,7 @@
       "label": "Return"
     },
     "returnDescription": {
-      "label": "Insert the power bank to any iCharge Station, pay the rental fee."
+      "label": "Insert the power bank into iCharge station. Pay the rental fee."
     },
     "sectors": {
       "label": "Sectors"
@@ -82,6 +91,23 @@
     },
     "stayPoweredBtn": {
       "label": "View Products"
+    }
+  },
+  "navigation": {
+    "partnerwithUs": {
+      "label": "Partner with Us"
+    },
+    "services": {
+      "label": "Services"
+    },
+    "about": {
+      "label": "About"
+    },
+    "faqs": {
+      "label": "FAQs"
+    },
+    "certifications": {
+      "label": "Certifications"
     }
   },
 
@@ -134,6 +160,9 @@
     },
     "rightsReserved": {
       "label": "All Rights Reserved."
+    },
+    "web": {
+      "label": "Web"
     }
   },
 
@@ -435,15 +464,73 @@
           "label": "Increases dwell time, leading to more purchases."
         },
         "sub2": {
-          "label": "Customizable branding to align with store aesthetics."
+          "label": "Shows that your business cares about customer satisfaction."
         },
         "sub3": {
-          "label": "Differentiates your business by offering a unique, customer-focused service."
+          "label": "Customizable branding to align with store aesthetics."
+        },
+        "sub4": {
+          "label": "Provides an edge over competitors by offering a value-added service."
         }
       }
     },
     "productHeading": { "label": "Products" },
-    "productMore": { "label": "More" }
+    "productMore": { "label": "More" },
+    "contents": { "label": "Contents" },
+    "size": { "label": "Size" },
+    "wattage": { "label": "Wattage" },
+    "slot": { "label": "Slot" },
+    "powerbanks": { "label": "Powerbank" },
+    "standby": { "label": "Standby" },
+    "fullload": { "label": "fullLoad" },
+    "icharge6desc": {
+      "label": "Smaller model for limited space"
+    },
+    "icharge6desc2": {
+      "label": "Seat Capacity: 40 below"
+    },
+    "icharge8desc": {
+      "label": "Compact standard model"
+    },
+    "icharge8desc2": {
+      "label": "Seat Capacity: 40-80"
+    },
+    "icharge8plusdesc": {
+      "label": "Compact model with advertisement capabilities"
+    },
+    "icharge8plusdesc2": {
+      "label": "Seat Capacity: Many Passerby"
+    },
+    "icharge12desc": {
+      "label": "Standard model"
+    },
+    "icharge12desc2": {
+      "label": "Seat Capacity: 80 above"
+    },
+    "icharge12prodesc": {
+      "label": "Advanced model with advertisement capabilities"
+    },
+    "icharge12prodesc2": {
+      "label": "Seat Capacity: Many Passerby"
+    },
+    "icharge24maxdesc": {
+      "label": "High capacity with extensive advertisement space"
+    },
+    "icharge24maxdesc2": {
+      "label": "Seat Capacity: Shopping malls, Big lobbies, Ballrooms"
+    },
+    "icharge48promaxdesc": {
+      "label": "High capacity with extensive advertisement space"
+    },
+    "icharge48promaxdesc2": {
+      "label": "Seat Capacity: Many Passerby"
+    },
+    "ichargestandeesrdesc": {
+      "label": "Standee model (rectangle)"
+    },
+    "ichargestandeessdesc": {
+      "label": "Standee model (rectangle)"
+    }
   },
   "about": {
     "aboutHeading": {

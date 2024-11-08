@@ -24,13 +24,22 @@
       "label": "BAKIT "
     },
     "convenience": {
-      "label": "Ang pag-aalok ng mga nauupahang power bank ay nagpapahusay sa kaginhawahan ng iyong lokasyon, na maaaring humantong sa pagtaas ng trapiko sa paa, mas mahaba at madalas na pagbisita."
+      "label": "Kaginhawahan"
+    },
+    "conveniencedesc": {
+      "label": "Ang pag-aalok ng mga paupahang power bank ay nagpapahusay sa kaginhawahan ng iyong lokasyon, na maaaring humantong sa pagdami ng mga tao, mas mahahabang pagbisita, at mas madalas na pagbisita."
     },
     "costEffective": {
-      "label": "Sa napakababang halaga na P19.00 kada 30 minuto, mahikayat ang mga parokyano na manatili nang mas matagal at mag-enjoy nang higit pa sa kung ano ang inaalok ng iyong venue, at sa gayon ay mapapalakas ang pangkalahatang kasiyahan ng customer."
+      "label": "Makatipid"
+    },
+    "costEffectivedesc": {
+      "label": "Sa napakababang halaga na P19.00 bawat 30 minuto, mahihikayat ang mga bisita na manatili nang mas matagal at mas ma-enjoy ang mga inaalok ng iyong lugar, kaya't pinapataas ang kabuuang kasiyahan ng mga customer."
     },
     "flexible": {
-      "label": "Gumagana ang iCharge sa walang kahirap-hirap at walang putol na pagsasama sa isang malawak na hanay ng mga negosyo at lugar, na nag-aalok ng maaasahan at flexible na suporta saanman ang lokasyon."
+      "label": "Nag-aangkop"
+    },
+    "flexibledesc": {
+      "label": "Ang iCharge ay nagtrabaho upang walang hirap at tuluy-tuloy na makipag-ugnayan sa iba't ibang mga negosyo at lugar, na nag-aalok ng maaasahan at nababanat na suporta anuman ang lokasyon."
     },
     "WeOfferServices": {
       "label": "NAG-aalok KAMI NG MGA SERBISYONG ANGKOP SA IYONG MGA PANGANGAILANGAN"
@@ -84,6 +93,23 @@
       "label": "Tingnan ang mga Produkto"
     }
   },
+  "navigation": {
+    "partnerwithUs": {
+      "label": "Makipagtulungan sa Amin"
+    },
+    "services": {
+      "label": "Mga Serbisyo"
+    },
+    "about": {
+      "label": "Tungkol"
+    },
+    "faqs": {
+      "label": "Mga Madalas na Tanong"
+    },
+    "certifications": {
+      "label": "Mga Sertipikasyon"
+    }
+  },
 
   "footer": {
     "followUs": {
@@ -130,6 +156,9 @@
     },
     "rightsReserved": {
       "label": "Lahat ng Karapatan ay Nakalaan."
+    },
+    "web": {
+      "label": "Web"
     }
   },
 

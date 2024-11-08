@@ -1,31 +1,12 @@
 import { LinkList } from "./type";
 
-import { Building2, Handshake, Phone } from "lucide-react";
-
-export const linkList: LinkList[] = [
-  {
-    label: "Partners With Us",
-    path: "/partner",
-    icon: Handshake,
-  },
-  {
-    label: "Services",
-    path: "/services",
-    icon: Phone,
-  },
-  { label: "About", path: "/about", icon: Building2 },
-];
+export const linkList: LinkList[] = [];
 
 export const language = [
   {
     id: "en",
     icons: "ic_uk_flag",
     label: "En",
-  },
-  {
-    id: "ph",
-    icons: "ic_ph_flag",
-    label: "Ph",
   },
   {
     id: "cht",
