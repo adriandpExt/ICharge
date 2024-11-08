@@ -3,9 +3,7 @@ import { Button } from "../ui/button";
 import { IconName } from "../svg-icons/utils";
 import useScroll from "@/hooks/useScroll";
 import { LinkList } from "./type";
-
 import { Building2, Handshake, Phone } from "lucide-react";
-
 import { SvgIcons } from "../svg-icons";
 
 import {

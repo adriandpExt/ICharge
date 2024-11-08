@@ -475,7 +475,62 @@
       }
     },
     "productHeading": { "label": "Products" },
-    "productMore": { "label": "More" }
+    "productMore": { "label": "More" },
+    "contents": { "label": "Contents" },
+    "size": { "label": "Size" },
+    "wattage": { "label": "Wattage" },
+    "slot": { "label": "Slot" },
+    "powerbanks": { "label": "Powerbank" },
+    "standby": { "label": "Standby" },
+    "fullload": { "label": "fullLoad" },
+    "icharge6desc": {
+      "label": "Smaller model for limited space"
+    },
+    "icharge6desc2": {
+      "label": "Seat Capacity: 40 below"
+    },
+    "icharge8desc": {
+      "label": "Compact standard model"
+    },
+    "icharge8desc2": {
+      "label": "Seat Capacity: 40-80"
+    },
+    "icharge8plusdesc": {
+      "label": "Compact model with advertisement capabilities"
+    },
+    "icharge8plusdesc2": {
+      "label": "Seat Capacity: Many Passerby"
+    },
+    "icharge12desc": {
+      "label": "Standard model"
+    },
+    "icharge12desc2": {
+      "label": "Seat Capacity: 80 above"
+    },
+    "icharge12prodesc": {
+      "label": "Advanced model with advertisement capabilities"
+    },
+    "icharge12prodesc2": {
+      "label": "Seat Capacity: Many Passerby"
+    },
+    "icharge24maxdesc": {
+      "label": "High capacity with extensive advertisement space"
+    },
+    "icharge24maxdesc2": {
+      "label": "Seat Capacity: Shopping malls, Big lobbies, Ballrooms"
+    },
+    "icharge48promaxdesc": {
+      "label": "High capacity with extensive advertisement space"
+    },
+    "icharge48promaxdesc2": {
+      "label": "Seat Capacity: Many Passerby"
+    },
+    "ichargestandeesrdesc": {
+      "label": "Standee model (rectangle)"
+    },
+    "ichargestandeessdesc": {
+      "label": "Standee model (rectangle)"
+    }
   },
   "about": {
     "aboutHeading": {
