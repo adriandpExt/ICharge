@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import costEffective from "@/assets/about/costeffective.png";
+import costEffective from "@/assets/ichargemodel.png";
 import RocketLogo from "@/assets/about/rocket.png";
 import UnionLogo from "@/assets/about/Union.png";
 import VectorLogo from "@/assets/about/Vector.png";
@@ -8,7 +8,12 @@ import { Label } from "@/components/ui/label";
 import { SectionTitleProps, SectionContentProps } from "./types";
 import { PageContainer } from "@/components";
 import SummaryCard from "../component/SumCard";
-import { Certs, CertsMobileBottomRow, CertsMobileTopRow, SumVal } from "../utils";
+import {
+  Certs,
+  CertsMobileBottomRow,
+  CertsMobileTopRow,
+  SumVal,
+} from "../utils";
 import LocalizationKey from "@/i18n/key";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
@@ -173,35 +178,38 @@ const AboutComponent = (): ReactElement => {
           ))}
         </PageContainer>
 
-        <PageContainer className="hidden lg:flex lg:flex-row justify-center overflow-hidden gap-5">
-          {Certs.map((data,index) => (
-              <div>
-                <img
-                  src={data.imageName}
-                  key={index}
-                  width={data.imageWidth}
-                  height={data.imageHeight} />
-              </div>
+        <PageContainer className="hidden justify-center gap-5 overflow-hidden lg:flex lg:flex-row">
+          {Certs.map((data, index) => (
+            <div>
+              <img
+                src={data.imageName}
+                key={index}
+                width={data.imageWidth}
+                height={data.imageHeight}
+              />
+            </div>
           ))}
         </PageContainer>
 
-        <PageContainer className="flex flex-col lg:hidden items-center">
+        <PageContainer className="flex flex-col items-center lg:hidden">
           <div className="flex gap-3">
             {CertsMobileTopRow.map((data, index) => (
               <img
                 src={data.imageName}
                 key={index}
                 width={data.imageWidth}
-                height={data.imageHeight} />
+                height={data.imageHeight}
+              />
             ))}
           </div>
-          <div className="flex gap-5 relative top-5">
+          <div className="relative top-5 flex gap-5">
             {CertsMobileBottomRow.map((data, index) => (
               <img
                 src={data.imageName}
                 key={index}
                 width={data.imageWidth}
-                height={data.imageHeight} />
+                height={data.imageHeight}
+              />
             ))}
           </div>
         </PageContainer>
