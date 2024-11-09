@@ -4,11 +4,12 @@ import { z } from "zod";
 
 import LocalizationKey from "@/i18n/key";
 
-import img1 from "@/assets/stayPoweredLogo.png";
+import ichargeModel from "@/assets/ichargemodel.png";
+import usingPhone from "@/assets/UsingPhone.png";
 
 export const data: DataCardProps[] = [
   {
-    imgSrc: img1,
+    imgSrc: ichargeModel,
     title: LocalizationKey.partnerWithUs.whyPartnerWithUs,
     list: [
       LocalizationKey.partnerWithUs.whyPartnerWithUsDesc1,
@@ -16,7 +17,7 @@ export const data: DataCardProps[] = [
     ],
   },
   {
-    imgSrc: img1,
+    imgSrc: usingPhone,
     title: LocalizationKey.partnerWithUs.joinUs,
     list: [
       LocalizationKey.partnerWithUs.joinUsDesc1,
