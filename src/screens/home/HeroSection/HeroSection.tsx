@@ -10,7 +10,7 @@ import applestore from "@/assets/icons/App Store Badge.png";
 import VideoComponent from "./VideoComponent";
 
 import { TypeAnimation } from "react-type-animation";
-import logo from "@/assets/icharge.png";
+import logo from "@/assets/ic_icharge.svg";
 
 const HeroSection = () => {
   const { t } = useTranslation();
