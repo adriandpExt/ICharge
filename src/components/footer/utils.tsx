@@ -5,12 +5,12 @@ export const followUs = [
     icon: "ic_facebook",
   },
   {
-    path: "https://www.instagram.com/keep_icharge/",
+    path: "https://www.instagram.com/icharge_ph/",
 
     icon: "ic_instagram",
   },
   {
-    path: "https://www.tiktok.com/@keep_icharge",
+    path: "https://www.tiktok.com/@icharge_ph",
 
     icon: "ic_tiktok",
   },
