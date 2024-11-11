@@ -92,36 +92,36 @@ export const Certs: CertImage[] = [
 export const CertsMobileTopRow: CertImageMobile [] = [
     {
         imageName: Image1,
-        imageHeight: "50px",
-        imageWidth: "50px"
+        imageHeight: "70px",
+        imageWidth: "70px"
     }, 
     {
         imageName: Image2,
-        imageHeight: "50px",
-        imageWidth: "60px"
+        imageHeight: "70px",
+        imageWidth: "80px"
     }, 
     {
         imageName: Image3,
-        imageHeight: "50px",
-        imageWidth: "60px"
+        imageHeight: "70px",
+        imageWidth: "80px"
     },
     {
         imageName: Image4,
-        imageHeight: "50px",
-        imageWidth: "50px"
+        imageHeight: "70px",
+        imageWidth: "70px"
     },
 ]
 
 export const CertsMobileBottomRow: CertImageMobile [] = [
     {
         imageName: Image5,
-        imageHeight: "50px",
-        imageWidth: "50px"
+        imageHeight: "60px",
+        imageWidth: "60px"
     }, 
     {
         imageName: Image6,
-        imageHeight: "50px",
-        imageWidth: "50px"
+        imageHeight: "60px",
+        imageWidth: "60px"
     }, 
     {
         imageName: Image7,
