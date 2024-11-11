@@ -13,7 +13,7 @@ export const RenderItem = (props: DataCardProps) => {
         <img
           src={imgSrc}
           alt="Convenience"
-          className="h-full w-full text-green-600"
+          className="h-200 w-196 text-green-600"
         />
       </div>
 

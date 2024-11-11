@@ -176,42 +176,40 @@ const AboutComponent = (): ReactElement => {
               isFlipped={index === 1 ? true : false}
             />
           ))}
-        </PageContainer>
-
-        <PageContainer className="hidden justify-center gap-5 overflow-hidden lg:flex lg:flex-row">
-          {Certs.map((data, index) => (
-            <div>
-              <img
-                src={data.imageName}
-                key={index}
-                width={data.imageWidth}
-                height={data.imageHeight}
-              />
-            </div>
+          <section className="hidden justify-center gap-5 overflow-hidden lg:flex lg:flex-row">
+            {Certs.map((data, index) => (
+              <div>
+                <img
+                  src={data.imageName}
+                  key={index}
+                  width={data.imageWidth}
+                  height={data.imageHeight}
+                />
+              </div>
           ))}
-        </PageContainer>
-
-        <PageContainer className="flex flex-col items-center lg:hidden">
-          <div className="flex gap-5">
-            {CertsMobileTopRow.map((data, index) => (
-              <img
-                src={data.imageName}
-                key={index}
-                width={data.imageWidth}
-                height={data.imageHeight}
-              />
-            ))}
-          </div>
-          <div className="relative top-5 flex gap-5">
-            {CertsMobileBottomRow.map((data, index) => (
-              <img
-                src={data.imageName}
-                key={index}
-                width={data.imageWidth}
-                height={data.imageHeight}
-              />
-            ))}
-          </div>
+          </section>
+          <section className="flex flex-col items-center relative -top-10 lg:hidden">
+            <div className="flex gap-5">
+              {CertsMobileTopRow.map((data, index) => (
+                <img
+                  src={data.imageName}
+                  key={index}
+                  width={data.imageWidth}
+                  height={data.imageHeight}
+                />
+              ))}
+            </div>
+            <div className="relative top-5 flex gap-5">
+              {CertsMobileBottomRow.map((data, index) => (
+                <img
+                  src={data.imageName}
+                  key={index}
+                  width={data.imageWidth}
+                  height={data.imageHeight}
+                />
+              ))}
+            </div>
+          </section>
         </PageContainer>
       </div>
     </>
