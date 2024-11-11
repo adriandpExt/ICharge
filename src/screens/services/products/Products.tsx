@@ -195,7 +195,7 @@ const Features = () => {
                 key={index}
                 className="custom-lg:basisOneThird flex h-[32rem] w-[95%] justify-center"
               >
-                <div className="flex h-[30rem] w-full flex-col place-content-center items-center space-y-5 rounded-[3rem] border-0 p-10 px-10 text-center md:w-[23rem]">
+                <div className="flex h-[30rem] w-full flex-col place-content-center items-center rounded-[3rem] border-0 text-center md:w-[23rem]">
                   <div
                     className={cn(
                       "absolute -z-40 h-[30rem] w-[95%] rounded-[3rem] p-5 md:w-[23rem]",
@@ -222,21 +222,23 @@ const Features = () => {
                   />
                   <img
                     src={data.productDetails.image}
-                    className="h-[50%] w-auto object-contain"
+                    className="h-[50%] w-auto object-contain px-16"
                     alt="Product Image"
                   />
-                  <Label
-                    variant="title"
-                    className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:mb-14"
-                  >
-                    {data.productDetails.name.toLocaleUpperCase()}
-                  </Label>
-                  <Button
-                    className="w-20 rounded-3xl bg-green-500 text-black hover:bg-green-400"
-                    onClick={(e) => handleOpen(e, data)}
-                  >
-                    {t(LocalizationKey.services.more)}
-                  </Button>
+                  <div className="flex flex-col items-center px-5">
+                    <Label
+                      variant="title"
+                      className="flex items-center h-[116px] bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent"
+                    >
+                      {data.productDetails.name.toLocaleUpperCase()}
+                    </Label>
+                    <Button
+                      className="w-20 rounded-3xl bg-green-500 text-black hover:bg-green-400"
+                      onClick={(e) => handleOpen(e, data)}
+                    >
+                      {t(LocalizationKey.services.more)}
+                    </Button>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
