@@ -25,7 +25,7 @@ const HeroSection = () => {
       >
         <div className="flex flex-col gap-1">
           <div className="flex flex-col items-center lg:items-start">
-            <img src={logo} alt="iCharge" className="text-5xl lg:text-6xl" />
+            <img src={logo} alt="iCharge" />
           </div>
 
           <Label
