@@ -42,7 +42,7 @@ const HeroSection = () => {
                 className="font-eastman italic"
                 sequence={["Charged", 4000, "Connected", 4000]}
                 wrapper="span"
-                cursor={true}
+                cursor={false}
                 repeat={Infinity}
               />
             </span>
