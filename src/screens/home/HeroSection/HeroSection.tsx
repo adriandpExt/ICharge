@@ -10,6 +10,7 @@ import applestore from "@/assets/icons/App Store Badge.png";
 import VideoComponent from "./VideoComponent";
 
 import { TypeAnimation } from "react-type-animation";
+import logo from "@/assets/icharge.png";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -22,12 +23,10 @@ const HeroSection = () => {
         className="space-y-5 px-10 text-center lg:pl-52 lg:text-start"
         data-aos="fade-up"
       >
-        <div className="font-bold">
-          <Label variant={"default"} className="text-5xl lg:text-6xl">
-            <span className="font-galaxy font-[950] text-[#44D62C]">i</span>
-            <span className="font-galaxy font-[950] text-white">charge</span>
-          </Label>
-          <br />
+        <div className="flex flex-col gap-1">
+          <div className="flex flex-col items-center lg:items-start">
+            <img src={logo} alt="iCharge" />
+          </div>
 
           <Label
             variant={"default"}
