@@ -63,7 +63,7 @@ const AboutComponent = (): ReactElement => {
             <img
               src={costEffective}
               alt="iCharge devices"
-              className="h-96 w-96 text-green-600"
+              className="h-75 w-72 text-green-600"
             />
           </div>
 
@@ -192,7 +192,7 @@ const AboutComponent = (): ReactElement => {
         </PageContainer>
 
         <PageContainer className="flex flex-col items-center lg:hidden">
-          <div className="flex gap-3">
+          <div className="flex gap-5">
             {CertsMobileTopRow.map((data, index) => (
               <img
                 src={data.imageName}
