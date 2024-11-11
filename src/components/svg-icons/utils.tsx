@@ -33,4 +33,5 @@ export type IconName =
   | "ic_icharge_white"
   | "ic_lock"
   | "ic_free"
-  | "ic_sale";
+  | "ic_sale"
+  | "ic_viber";
