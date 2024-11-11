@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 
 import { inquiryId, publicKey, serviceId } from "@/lib/viteKey";
 
-import { Form, TextArea, TextField } from "@/components";
+import { Form, SvgIcons, TextArea, TextField } from "@/components";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -131,8 +131,13 @@ export const InquiryForm = (): ReactElement => {
         </div>
         <Separator className="bg-white" />
         <Label variant={"body"} className="flex items-center gap-5">
+          <SvgIcons name="ic_viber" size={40} />
+          @icharge
+        </Label>
+        <Label variant={"body"} className="flex items-center gap-5">
           <Phone size={32} strokeWidth={3} /> +63 918 738 8888
         </Label>
+
         <Label variant={"body"} className="flex items-center gap-5">
           <Mail size={32} strokeWidth={3} /> QDiCharge@gmail.com
         </Label>
