@@ -33,7 +33,7 @@ const HeroSection = () => {
             className="font-eastman text-3xl italic text-white md:text-6xl lg:text-5xl"
           >
             Stay
-            <span className="ml-3 text-start inline-block min-w-[150px] bg-gradient-to-r from-[#44D62C] via-[#54575A] to-[#fff] bg-clip-text text-transparent md:min-w-[300px] lg:min-w-[400px]">
+            <span className="ml-3 text-start inline-block min-w-[150px] bg-gradient-to-r from-[#44D62C] via-[#54575A] to-[#fff] bg-clip-text text-transparent md:min-w-[200px] lg:min-w-[250px]">
               <TypeAnimation
                 className="font-eastman italic"
                 sequence={["Charged", 4000, "Connected", 4000]}
