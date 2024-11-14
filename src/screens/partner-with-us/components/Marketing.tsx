@@ -67,41 +67,47 @@ const Marketing = (): ReactElement => {
           <TextField
             control={inquiryForm.control}
             name="firstname"
-            label={t(LocalizationKey.partnerWithUs.inquiryForm.firstname)}
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.marketing.firstname,
+            )}
           />
           <TextField
             control={inquiryForm.control}
             name="lastname"
-            label={t(LocalizationKey.partnerWithUs.inquiryForm.lastname)}
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.marketing.lastname,
+            )}
           />
         </div>
 
         <TextField
           control={inquiryForm.control}
           name="company"
-          label={t(LocalizationKey.partnerWithUs.inquiryForm.company)}
+          label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.company)}
         />
         <TextField
           control={inquiryForm.control}
           type="email"
           name="email"
-          label={t(LocalizationKey.partnerWithUs.inquiryForm.email)}
+          label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.email)}
         />
         <TextField
           control={inquiryForm.control}
           name="phoneNumber"
-          label={t(LocalizationKey.partnerWithUs.inquiryForm.phoneNumber)}
+          label={t(
+            LocalizationKey.partnerWithUs.inquiryForm.marketing.phoneNumber,
+          )}
         />
         <TextArea
           className="h-52"
           control={inquiryForm.control}
           name="content"
-          label={t(LocalizationKey.partnerWithUs.inquiryForm.content)}
+          label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.content)}
         />
 
         <div className="text-end">
           <Button className="w-full shadow-2xl drop-shadow-2xl lg:w-80">
-            {t(LocalizationKey.partnerWithUs.inquiryForm.formBtn)}
+            {t(LocalizationKey.partnerWithUs.inquiryForm.marketing.formBtn)}
           </Button>
         </div>
       </div>

@@ -67,26 +67,32 @@ const Customer = (): ReactElement => {
           <TextField
             control={inquiryForm.control}
             name="firstname"
-            label={t(LocalizationKey.partnerWithUs.inquiryForm.firstname)}
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.customer.firstname,
+            )}
           />
 
           <TextField
             control={inquiryForm.control}
             name="lastname"
-            label={t(LocalizationKey.partnerWithUs.inquiryForm.lastname)}
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.customer.lastname,
+            )}
           />
 
           <TextField
             control={inquiryForm.control}
             type="email"
             name="email"
-            label={t(LocalizationKey.partnerWithUs.inquiryForm.email)}
+            label={t(LocalizationKey.partnerWithUs.inquiryForm.customer.email)}
           />
 
           <TextField
             control={inquiryForm.control}
             name="phoneNumber"
-            label={t(LocalizationKey.partnerWithUs.inquiryForm.phoneNumber)}
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.customer.phoneNumber,
+            )}
           />
         </div>
 
@@ -94,25 +100,33 @@ const Customer = (): ReactElement => {
           <TextField
             control={inquiryForm.control}
             name="rentalLocation"
-            label="Rental Location"
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.customer.rentalLocation,
+            )}
           />
 
           <TextField
             control={inquiryForm.control}
             name="rentalTime"
-            label="Rental Time"
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.customer.rentalTime,
+            )}
           />
 
           <TextField
             control={inquiryForm.control}
             name="returnLocation"
-            label="Return Location"
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.customer.returnLocation,
+            )}
           />
 
           <TextField
             control={inquiryForm.control}
             name="returnTime"
-            label="Return Time"
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.customer.returnTime,
+            )}
           />
         </div>
 

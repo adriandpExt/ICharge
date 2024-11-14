@@ -70,13 +70,30 @@ const LocalizationKey = {
     getInTouch: "partnerWithUs.getInTouch.label",
     inquiryForm: {
       title: "partnerWithUs.inquiryForm.title.label",
-      firstname: "partnerWithUs.inquiryForm.firstname.label",
-      lastname: "partnerWithUs.inquiryForm.lastname.label",
-      company: "partnerWithUs.inquiryForm.company.label",
-      email: "partnerWithUs.inquiryForm.email.label",
-      phoneNumber: "partnerWithUs.inquiryForm.phoneNumber.label",
-      content: "partnerWithUs.inquiryForm.content.label",
-      formBtn: "partnerWithUs.inquiryForm.formBtn.label",
+      attention: "partnerWithUs.inquiryForm.attention.label",
+      customer: {
+        firstname: "partnerWithUs.inquiryForm.customer.firstname.label",
+        lastname: "partnerWithUs.inquiryForm.customer.lastname.label",
+        email: "partnerWithUs.inquiryForm.customer.email.label",
+        phoneNumber: "partnerWithUs.inquiryForm.customer.phoneNumber.label",
+        rentalLocation:
+          "partnerWithUs.inquiryForm.customer.rentalLocation.label",
+        rentalTime: "partnerWithUs.inquiryForm.customer.rentalTime.label",
+        returnLocation:
+          "partnerWithUs.inquiryForm.customer.returnLocation.label",
+        returnTime: "partnerWithUs.inquiryForm.customer.returnTime.label",
+        content: "partnerWithUs.inquiryForm.customer.content.label",
+        formBtn: "partnerWithUs.inquiryForm.customer.formBtn.label",
+      },
+      marketing: {
+        firstname: "partnerWithUs.inquiryForm.marketing.firstname.label",
+        lastname: "partnerWithUs.inquiryForm.marketing.lastname.label",
+        company: "partnerWithUs.inquiryForm.marketing.company.label",
+        email: "partnerWithUs.inquiryForm.marketing.email.label",
+        phoneNumber: "partnerWithUs.inquiryForm.marketing.phoneNumber.label",
+        content: "partnerWithUs.inquiryForm.marketing.content.label",
+        formBtn: "partnerWithUs.inquiryForm.marketing.formBtn.label",
+      },
     },
   },
   footer: {
