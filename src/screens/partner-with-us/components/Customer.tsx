@@ -134,12 +134,12 @@ const Customer = (): ReactElement => {
           className="h-52"
           control={inquiryForm.control}
           name="content"
-          label="Inquiry Content"
+          label={t(LocalizationKey.partnerWithUs.inquiryForm.customer.content)}
         />
 
         <div className="text-end">
           <Button className="w-full shadow-2xl drop-shadow-2xl lg:w-80">
-            Submit Customer Service
+            {t(LocalizationKey.partnerWithUs.inquiryForm.customer.formBtn)}
           </Button>
         </div>
       </div>
