@@ -13,10 +13,10 @@ import { Form, TextArea, TextField } from "@/components";
 import { Button } from "@/components/ui/button";
 
 import { customerDefaultValues, customerFormSchema } from "../utils";
-import { inquiryId, publicKey, serviceId } from "@/lib/viteKey";
+import { chatId, publicKey, serviceId } from "@/lib/viteKey";
 
 const Customer = (): ReactElement => {
-  const inquiryFormRef = useRef<HTMLFormElement>(null);
+  const customerRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
   const { t } = useTranslation();
 
@@ -26,9 +26,9 @@ const Customer = (): ReactElement => {
   });
 
   const sendEmail = () => {
-    if (inquiryFormRef.current) {
+    if (customerRef.current) {
       emailjs
-        .sendForm(serviceId, inquiryId, inquiryFormRef.current, {
+        .sendForm(serviceId, chatId, customerRef.current, {
           publicKey: publicKey,
         })
         .then(toastSuccess, toastError);
@@ -59,7 +59,7 @@ const Customer = (): ReactElement => {
   return (
     <Form
       forms={inquiryForm}
-      ref={inquiryFormRef}
+      ref={customerRef}
       onSubmit={handleInquiryFormSubmit}
     >
       <div className="flex flex-col gap-5">
