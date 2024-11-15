@@ -327,15 +327,32 @@
     },
     "inquiryForm": {
       "title": { "label": "特许经营查询表" },
-      "firstname": { "label": "名" },
-      "lastname": { "label": "姓" },
-      "company": {
-        "label": "公司"
+      "attention": {
+        "label": "此表格仅用于有关特许经营的询问，所有其他询问将不会被传递。如果您的询问涉及其他主题，请在适当的地点询问。"
       },
-      "email": { "label": "电子邮件" },
-      "phoneNumber": { "label": "电话号码" },
-      "content": { "label": "内容" },
-      "formBtn": { "label": "提交" }
+      "customer": {
+        "firstname": { "label": "名" },
+        "lastname": { "label": "姓" },
+        "email": { "label": "电子邮件" },
+        "phoneNumber": { "label": "电话号码" },
+        "rentalLocation": { "label": "出租地点" },
+        "rentalTime": { "label": "租赁时间" },
+        "returnLocation": { "label": "出租地点" },
+        "returnTime": { "label": "返回时间" },
+        "content": { "label": "询价内容" },
+        "formBtn": { "label": "提交客服" }
+      },
+      "marketing": {
+        "firstname": { "label": "名" },
+        "lastname": { "label": "姓" },
+        "company": {
+          "label": "公司"
+        },
+        "email": { "label": "电子邮件" },
+        "phoneNumber": { "label": "电话号码" },
+        "content": { "label": "内容" },
+        "formBtn": { "label": "提交" }
+      }
     }
   },
   "services": {
