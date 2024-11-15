@@ -332,15 +332,32 @@
     },
     "inquiryForm": {
       "title": { "label": "FRANCHISE INQUIRY FORM" },
-      "firstname": { "label": "Firstname" },
-      "lastname": { "label": "Lastname" },
-      "company": {
-        "label": "Company"
+      "attention": {
+        "label": "This form is only for inquiries regarding franchising and all other inquiries will not be passed on. Please inquire at the appropriate location if your inquiry pertains to a different subject."
       },
-      "email": { "label": "Email" },
-      "phoneNumber": { "label": "Phone Number" },
-      "content": { "label": "Content" },
-      "formBtn": { "label": "Contact Us" }
+      "customer": {
+        "firstname": { "label": "Firstname" },
+        "lastname": { "label": "Lastname" },
+        "email": { "label": "Email" },
+        "phoneNumber": { "label": "Phone Number" },
+        "rentalLocation": { "label": "Rental Location" },
+        "rentalTime": { "label": "Rental Time" },
+        "returnLocation": { "label": "Rental Location" },
+        "returnTime": { "label": "Return Time" },
+        "content": { "label": "Inquiry Content" },
+        "formBtn": { "label": "Submit Customer Service" }
+      },
+      "marketing": {
+        "firstname": { "label": "Firstname" },
+        "lastname": { "label": "Lastname" },
+        "company": {
+          "label": "Company"
+        },
+        "email": { "label": "Email" },
+        "phoneNumber": { "label": "Phone Number" },
+        "content": { "label": "Content" },
+        "formBtn": { "label": "Contact Us" }
+      }
     }
   },
   "services": {

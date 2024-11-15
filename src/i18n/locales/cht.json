@@ -327,15 +327,32 @@
     },
     "inquiryForm": {
       "title": { "label": "特許經營查詢表" },
-      "firstname": { "label": "名" },
-      "lastname": { "label": "姓" },
-      "company": {
-        "label": "公司"
+      "attention": {
+        "label": "此表格僅用於有關特許經營的詢問，所有其他詢問將不會被傳遞。如果您的詢問涉及其他主題，請在適當的地點詢問。"
       },
-      "email": { "label": "電子郵件" },
-      "phoneNumber": { "label": "電話號碼" },
-      "content": { "label": "內容" },
-      "formBtn": { "label": "提交" }
+      "customer": {
+        "firstname": { "label": "名" },
+        "lastname": { "label": "姓" },
+        "email": { "label": "電子郵件" },
+        "phoneNumber": { "label": "電話號碼" },
+        "rentalLocation": { "label": "出租地點" },
+        "rentalTime": { "label": "租賃時間" },
+        "returnLocation": { "label": "出租地點" },
+        "returnTime": { "label": "返回時間" },
+        "content": { "label": "詢價內容" },
+        "formBtn": { "label": "提交客服" }
+      },
+      "marketing": {
+        "firstname": { "label": "名" },
+        "lastname": { "label": "姓" },
+        "company": {
+          "label": "公司"
+        },
+        "email": { "label": "電子郵件" },
+        "phoneNumber": { "label": "電話號碼" },
+        "content": { "label": "內容" },
+        "formBtn": { "label": "提交" }
+      }
     }
   },
   "services": {

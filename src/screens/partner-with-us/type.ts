@@ -1,4 +1,4 @@
-export interface TInquiryForm {
+export interface IMarketing {
   firstname: string;
   lastname: string;
   company: string;
@@ -7,6 +7,12 @@ export interface TInquiryForm {
   content: string;
 }
 
+export interface ICustomer extends IMarketing {
+  rentalLocation: string;
+  rentalTime: string;
+  returnLocation: string;
+  returnTime: string;
+}
 export interface DataCardProps {
   imgSrc: string;
   title: string;
