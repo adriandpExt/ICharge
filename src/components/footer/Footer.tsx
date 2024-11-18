@@ -45,10 +45,6 @@ export const Footer = () => {
     { label: t(LocalizationKey.navigation.services), path: "/services" },
     { label: t(LocalizationKey.navigation.about), path: "/about" },
     { label: t(LocalizationKey.navigation.faqs), path: "/faqs" },
-    {
-      label: t(LocalizationKey.navigation.certifications),
-      path: "/certifications",
-    },
   ];
 
   const platformLinks = [

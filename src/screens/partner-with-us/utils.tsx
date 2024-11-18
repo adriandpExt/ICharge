@@ -49,10 +49,9 @@ export const inquiryFormSchema = z.object({
   content: z.string().min(1, "Content is required"),
 }) as z.ZodType<IMarketing>;
 
-export const customerDefaultValues: ICustomer = {
+export const customerDefaultValues: Partial<ICustomer> = {
   firstname: "",
   lastname: "",
-  company: "",
   email: "",
   phoneNumber: "",
   content: "",
@@ -65,7 +64,6 @@ export const customerDefaultValues: ICustomer = {
 export const customerFormSchema = z.object({
   firstname: z.string().min(1, "First name is requried"),
   lastname: z.string().min(1, "Last name is requried"),
-  company: z.string().min(1, "Company is requried"),
   email: z.string().email({ message: "must be a valid email" }),
   phoneNumber: z
     .string()
@@ -78,4 +76,4 @@ export const customerFormSchema = z.object({
   rentalTime: z.string().min(1, "Rental Time is required"),
   returnLocation: z.string().min(1, "Return Location is required"),
   returnTime: z.string().min(1, "Return Location is required"),
-}) as z.ZodType<ICustomer>;
+}) as z.ZodType<Partial<ICustomer>>;

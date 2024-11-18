@@ -7,7 +7,7 @@ export interface IMarketing {
   content: string;
 }
 
-export interface ICustomer extends IMarketing {
+export interface ICustomer extends Partial<IMarketing> {
   rentalLocation: string;
   rentalTime: string;
   returnLocation: string;
