@@ -13,7 +13,14 @@ import { cn } from "@/lib/utils";
 import { FieldValues, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-type TextFieldTypes = "file" | "text" | "number" | "password" | "email" | "tel";
+type TextFieldTypes =
+  | "file"
+  | "text"
+  | "number"
+  | "password"
+  | "email"
+  | "tel"
+  | "time";
 
 interface TextFieldProps<T extends FieldValues> extends FormFieldProps<T> {
   className?: string;

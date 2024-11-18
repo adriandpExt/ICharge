@@ -107,6 +107,7 @@ const Customer = (): ReactElement => {
 
           <TextField
             control={inquiryForm.control}
+            type="time"
             name="rentalTime"
             label={t(
               LocalizationKey.partnerWithUs.inquiryForm.customer.rentalTime,
@@ -123,6 +124,7 @@ const Customer = (): ReactElement => {
 
           <TextField
             control={inquiryForm.control}
+            type="time"
             name="returnTime"
             label={t(
               LocalizationKey.partnerWithUs.inquiryForm.customer.returnTime,
