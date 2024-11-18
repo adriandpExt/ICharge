@@ -75,5 +75,5 @@ export const customerFormSchema = z.object({
   rentalLocation: z.string().min(1, "Rental Location is required"),
   rentalTime: z.string().min(1, "Rental Time is required"),
   returnLocation: z.string().min(1, "Return Location is required"),
-  returnTime: z.string().min(1, "Return Location is required"),
+  returnTime: z.string().min(1, "Return Time is required"),
 }) as z.ZodType<Partial<ICustomer>>;
