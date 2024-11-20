@@ -4,8 +4,8 @@ import LocalizationKey from "@/i18n/key";
 
 import { Label } from "@/components/ui/label";
 
-import playstore from "@/assets/icons/Google Play Store Badge.png";
-import applestore from "@/assets/icons/App Store Badge.png";
+import playstore from "@/assets/icons/google_play_store_badge.png";
+import applestore from "@/assets/icons/app_store_badge.png";
 
 import VideoComponent from "./VideoComponent";
 
