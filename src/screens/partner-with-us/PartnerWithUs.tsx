@@ -28,21 +28,25 @@ const PartnerWithUs = (): ReactElement => {
   return (
     <>
       <Banner title={t(LocalizationKey.partnerWithUs.partnerWithUsHeading)}>
-        <Label variant="subtitle" className="font-medium text-white">
-          {t(LocalizationKey.partnerWithUs.heading1)}
-        </Label>
-        <Label variant="subtitle" className="font-medium text-white">
-          {t(LocalizationKey.partnerWithUs.heading2)}
-        </Label>
+        <div className="flex flex-col items-center justify-center gap-16">
+          <div className="flex flex-col">
+            <Label variant="subtitle" className="font-medium text-white">
+              {t(LocalizationKey.partnerWithUs.heading1)}
+            </Label>
+            <Label variant="subtitle" className="font-medium text-white">
+              {t(LocalizationKey.partnerWithUs.heading2)}
+            </Label>
+          </div>
 
-        <Button
-          onClick={() => scrollToSection("inquiryForm")}
-          variant={"custombutton"}
-          className="group h-10 items-center bg-white text-green-600 hover:text-white"
-        >
-          {t(LocalizationKey.partnerWithUs.bannerBtn)}
-          <ChevronRight className="text-green-600 group-hover:text-white" />
-        </Button>
+          <Button
+            onClick={() => scrollToSection("inquiryForm")}
+            variant={"custombutton"}
+            className="group h-10 items-center bg-white text-green-600 hover:text-white"
+          >
+            {t(LocalizationKey.partnerWithUs.bannerBtn)}
+            <ChevronRight className="text-green-600 group-hover:text-white" />
+          </Button>
+        </div>
       </Banner>
 
       <PageContainer className="flex flex-col gap-20">

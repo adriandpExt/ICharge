@@ -44,6 +44,12 @@
     "WeOfferServices": {
       "label": "WE OFFER SERVICES THAT FITS YOUR NEEDS"
     },
+    "weOffer": {
+      "label": "WE OFFER SERVICES"
+    },
+    "fitsYourNeeds": {
+      "label": "THAT FITS YOUR NEEDS"
+    },
     "freeUseOfEquipment": {
       "label": "Free Use of Equipment"
     },
@@ -342,7 +348,7 @@
         "phoneNumber": { "label": "Phone Number" },
         "rentalLocation": { "label": "Rental Location" },
         "rentalTime": { "label": "Rental Time" },
-        "returnLocation": { "label": "Rental Location" },
+        "returnLocation": { "label": "Return Location" },
         "returnTime": { "label": "Return Time" },
         "content": { "label": "Inquiry Content" },
         "formBtn": { "label": "Submit Customer Service" }

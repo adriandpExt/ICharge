@@ -24,8 +24,8 @@ const Sector = (): ReactElement => {
 
   const topSector: IndustriesCard[] = [
     {
-      title: t(LocalizationKey.services.hospitality.title),
-      bgImage: sectorHospital,
+      title: t(LocalizationKey.services.retail.title),
+      bgImage: sectorRetail,
     },
     {
       title: t(LocalizationKey.services.healthcare.title),
@@ -42,8 +42,8 @@ const Sector = (): ReactElement => {
       bgImage: sectorEvents,
     },
     {
-      title: t(LocalizationKey.services.retail.title),
-      bgImage: sectorRetail,
+      title: t(LocalizationKey.services.hospitality.title),
+      bgImage: sectorHospital,
     },
   ];
   const sector: IndustriesCard[] = [...topSector, ...bottomSector];

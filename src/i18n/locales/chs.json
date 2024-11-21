@@ -44,6 +44,12 @@
     "WeOfferServices": {
       "label": "我们提供符合您需求的服务"
     },
+    "weOffer": {
+      "label": "我们提供服务"
+    },
+    "fitsYourNeeds": {
+      "label": "满足您的需求"
+    },
     "freeUseOfEquipment": {
       "label": "设备免费使用"
     },
@@ -337,7 +343,7 @@
         "phoneNumber": { "label": "电话号码" },
         "rentalLocation": { "label": "出租地点" },
         "rentalTime": { "label": "租赁时间" },
-        "returnLocation": { "label": "出租地点" },
+        "returnLocation": { "label": "返回地点" },
         "returnTime": { "label": "返回时间" },
         "content": { "label": "询价内容" },
         "formBtn": { "label": "提交客服" }
