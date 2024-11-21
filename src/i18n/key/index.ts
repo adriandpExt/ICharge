@@ -16,6 +16,8 @@ const LocalizationKey = {
     flexible: "home.flexible.label",
     flexibledesc: "home.flexibledesc.label",
     weOfferServicesThatFitsYourNeeds: "home.WeOfferServices.label",
+    weOffer: "home.weOffer.label",
+    fitsYourNeeds: "home.fitsYourNeeds.label",
     freeUseOfEquipment: "home.freeUseOfEquipment.label",
     saleOfEquipment: "home.saleOfEquipment.label",
     leaseOfEquipment: "home.leaseOfEquipment.label",
