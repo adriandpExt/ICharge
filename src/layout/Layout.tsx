@@ -2,8 +2,6 @@ import { PropsWithChildren } from "react";
 
 import { Footer, NavBar } from "@/components";
 
-import { CookieAlert } from "@/screens/cookies";
-
 const Layout = ({ children }: PropsWithChildren) => {
   return (
     <div className="bg-[url('@/assets/landing_bg.svg')] bg-cover bg-center bg-no-repeat">
@@ -12,7 +10,6 @@ const Layout = ({ children }: PropsWithChildren) => {
 
         <main>{children}</main>
 
-        <CookieAlert />
         <Footer />
       </div>
     </div>
