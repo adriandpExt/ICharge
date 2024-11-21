@@ -53,7 +53,7 @@ const HeroSection = () => {
         </Label>
 
         <div className="items-center space-y-4 lg:w-48">
-          <div className="flex flex-row items-center justify-center gap-3 lg:flex-col">
+          <div className="flex flex-row gap-3 lg:flex-col">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"
@@ -61,7 +61,7 @@ const HeroSection = () => {
               <img
                 src={playstore}
                 alt="ic_playstore_hero"
-                className="w-[240px] lg:w-48"
+                className="w-[178px]"
               />
             </Link>
             <Link
@@ -71,7 +71,7 @@ const HeroSection = () => {
               <img
                 src={applestore}
                 alt="ic_apple_hero"
-                className="w-[210px] lg:w-48"
+                className="w-[156px]"
               />
             </Link>
           </div>
