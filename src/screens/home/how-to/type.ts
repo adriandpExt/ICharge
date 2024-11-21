@@ -11,7 +11,6 @@ export interface StepCardProps {
 export interface HowToCardProps extends PropsWithChildren {
   className?: string;
   imgClassName: string;
-  even: boolean;
   onClick: () => void;
 }
 
