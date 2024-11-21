@@ -10,7 +10,7 @@ const Sustainabilities = (): ReactElement => {
   return (
     <section className="">
       <Banner title="QUANTA DANCE INC">
-        <Label variant="subtitle" className="text-white sm:mb-6">
+        <Label variant="subtitle" className="font-medium text-white">
           {t(LocalizationKey.about.aboutHeading)}
         </Label>
       </Banner>
