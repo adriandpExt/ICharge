@@ -1,21 +1,21 @@
-<svg width="537" height="590" viewBox="0 0 537 590" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<circle cx="147.843" cy="433.155" r="146.555" transform="rotate(143.758 147.843 433.155)" fill="url(#paint0_linear_1119_245)"/>
-<circle cx="440.958" cy="104.271" r="95.2799" fill="url(#paint1_linear_1119_245)"/>
-<mask id="mask0_1119_245" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="0" width="520" height="519">
-<circle cx="259.187" cy="259.5" r="259" fill="#D9D9D9" stroke="black"/>
+<svg width="538" height="590" viewBox="0 0 538 590" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="148.843" cy="433.155" r="146.555" transform="rotate(143.758 148.843 433.155)" fill="url(#paint0_linear_1119_245)"/>
+<circle cx="441.958" cy="104.271" r="95.2799" fill="url(#paint1_linear_1119_245)"/>
+<mask id="mask0_1119_245" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="520" height="519">
+<circle cx="260.187" cy="259.5" r="259" fill="#D9D9D9" stroke="black"/>
 </mask>
 <g mask="url(#mask0_1119_245)">
-<rect x="0.687256" y="-6" width="517" height="524" fill="url(#pattern0_1119_245)"/>
+<rect x="-9" y="-14" width="538" height="546" fill="url(#pattern0_1119_245)"/>
 </g>
 <defs>
 <pattern id="pattern0_1119_245" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1119_245" transform="matrix(0.000300219 0 0 0.000296209 -0.00676983 0)"/>
+<use xlink:href="#image0_1119_245" transform="matrix(0.000300613 0 0 0.000296209 -0.00743494 0)"/>
 </pattern>
-<linearGradient id="paint0_linear_1119_245" x1="59.7798" y1="356.839" x2="249.449" y2="531.579" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_1119_245" x1="60.7798" y1="356.839" x2="250.449" y2="531.579" gradientUnits="userSpaceOnUse">
 <stop stop-color="#38D430"/>
 <stop offset="1" stop-color="#09B600" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint1_linear_1119_245" x1="383.706" y1="54.6556" x2="507.015" y2="168.26" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_1119_245" x1="384.706" y1="54.6556" x2="508.015" y2="168.26" gradientUnits="userSpaceOnUse">
 <stop stop-color="#38D430"/>
 <stop offset="1" stop-color="#09B600" stop-opacity="0"/>
 </linearGradient>
