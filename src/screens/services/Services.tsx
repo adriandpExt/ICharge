@@ -15,26 +15,24 @@ const Services = (): ReactElement => {
   return (
     <main>
       <Banner title={t(LocalizationKey.services.servicesHeading)}>
-        <Label variant="subtitle" className="text-white sm:mb-6">
-          {t(LocalizationKey.services.servicesSubHeading)}
-        </Label>
-        <Button
-          variant="outline"
-          className="h-10 border-0 bg-slate-100 text-green-600 hover:bg-slate-200"
-        >
-          <div className="w-38 flex items-center justify-between">
-            <Label
-              onClick={() =>
-                document
-                  .getElementById("serviceProducts")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              {t(LocalizationKey.services.viewProducts)}
-            </Label>
+        <div className="flex flex-col items-center justify-center gap-16">
+          <Label variant="subtitle" className="font-medium text-white">
+            {t(LocalizationKey.services.servicesSubHeading)}
+          </Label>
+
+          <Button
+            variant="custombutton"
+            className="group h-10 items-center bg-white text-green-600 hover:text-white"
+            onClick={() =>
+              document
+                .getElementById("serviceProducts")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            {t(LocalizationKey.services.viewProducts)}
             <ChevronRight />
-          </div>
-        </Button>
+          </Button>
+        </div>
       </Banner>
       <section className="mb-8">
         <Equipment />
