@@ -343,7 +343,7 @@
         "phoneNumber": { "label": "電話號碼" },
         "rentalLocation": { "label": "出租地點" },
         "rentalTime": { "label": "租賃時間" },
-        "returnLocation": { "label": "出租地點" },
+        "returnLocation": { "label": "返回地點" },
         "returnTime": { "label": "返回時間" },
         "content": { "label": "詢價內容" },
         "formBtn": { "label": "提交客服" }
