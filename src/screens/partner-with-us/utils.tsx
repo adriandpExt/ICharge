@@ -5,7 +5,7 @@ import { z } from "zod";
 import LocalizationKey from "@/i18n/key";
 
 import ichargeModel from "@/assets/ichargemodel.png";
-import usingPhone from "@/assets/UsingPhone.png";
+import joinUs from "@/assets/pwu-join-us.svg";
 
 export const data: DataCardProps[] = [
   {
@@ -17,7 +17,7 @@ export const data: DataCardProps[] = [
     ],
   },
   {
-    imgSrc: usingPhone,
+    imgSrc: joinUs,
     title: LocalizationKey.partnerWithUs.joinUs,
     list: [
       LocalizationKey.partnerWithUs.joinUsDesc1,
