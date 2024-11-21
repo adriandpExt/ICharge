@@ -32,13 +32,9 @@ const Services = (): ReactElement => {
     return (
       <Card
         key={ids}
-        className="relative rounded-3xl border-green-100 bg-green-50 bg-gradient-to-b from-green-100 p-12 shadow-2xl"
+        className="relative rounded-3xl border-4 border-green-200 bg-gradient-to-b from-green-100 to-neutral-50 p-12 shadow-inner"
       >
         <CardContent className="flex flex-col items-center p-6 pt-12">
-          <div className="absolute left-6 top-0 hidden h-16 w-16 -translate-y-1/2 transform rounded-lg bg-green-200 bg-gradient-to-r from-green-300 lg:block" />
-
-          <div className="absolute -bottom-9 right-16 hidden h-24 w-24 translate-x-1/2 transform rounded-lg bg-green-200 bg-gradient-to-r from-green-300 to-transparent lg:block" />
-
           <div className="z-10 mb-4 rounded-full bg-green-500 p-3">
             <SvgIcons name={items.icon as IconName} size={100} />
           </div>
@@ -73,10 +69,28 @@ const Services = (): ReactElement => {
         </Label>
       </div>
 
-      <section className="container relative mx-auto w-full space-y-20 rounded-3xl bg-white p-10 text-center shadow-2xl drop-shadow-2xl lg:p-32">
-        <Label variant={"heading1"} className="text-black">
+      <section className="container relative mx-auto w-full space-y-20 rounded-none bg-white p-10 text-center shadow-none drop-shadow-none md:rounded-3xl md:shadow-2xl md:drop-shadow-2xl lg:p-32">
+        <Label
+          variant={"banner"}
+          className="block bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent md:hidden"
+        >
           {t(LocalizationKey.home.weOfferServicesThatFitsYourNeeds)}
         </Label>
+
+        <div className="hidden md:flex md:flex-col">
+          <Label
+            variant={"banner"}
+            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+          >
+            {t(LocalizationKey.home.weOffer)}
+          </Label>
+          <Label
+            variant={"banner"}
+            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+          >
+            {t(LocalizationKey.home.fitsYourNeeds)}
+          </Label>
+        </div>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {items.map((item, ids) => renderCard(item, ids))}
