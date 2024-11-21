@@ -176,7 +176,7 @@ const AboutComponent = (): ReactElement => {
               isFlipped={index === 1 ? true : false}
             />
           ))}
-          <section className="hidden justify-center gap-5 overflow-hidden lg:flex lg:flex-row">
+          <section className="hidden justify-center gap-3 overflow-hidden lg:flex lg:flex-row">
             {Certs.map((data, index) => (
               <div>
                 <img
@@ -188,25 +188,29 @@ const AboutComponent = (): ReactElement => {
               </div>
           ))}
           </section>
-          <section className="flex flex-col items-center relative -top-10 lg:hidden">
-            <div className="flex gap-5">
+          <section className="flex flex-col items-center relative -top-10 -space-x-1 lg:hidden">
+            <div className="flex gap-3">
               {CertsMobileTopRow.map((data, index) => (
-                <img
-                  src={data.imageName}
-                  key={index}
-                  width={data.imageWidth}
-                  height={data.imageHeight}
-                />
+                <div>
+                  <img
+                    src={data.imageName}
+                    key={index}
+                    width={data.imageWidth}
+                    height={data.imageHeight}
+                  />
+                </div>
               ))}
             </div>
-            <div className="relative top-5 flex gap-5">
+            <div className="flex relative top-3 gap-3">
               {CertsMobileBottomRow.map((data, index) => (
-                <img
-                  src={data.imageName}
-                  key={index}
-                  width={data.imageWidth}
-                  height={data.imageHeight}
-                />
+                <div>
+                  <img
+                    src={data.imageName}
+                    key={index}
+                    width={data.imageWidth}
+                    height={data.imageHeight}
+                  />
+                </div>
               ))}
             </div>
           </section>
