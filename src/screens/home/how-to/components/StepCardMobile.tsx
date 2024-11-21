@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { handleLenght } from "@/screens/home/how-to/utils";
 import HowToCard from "./HowToCard";
 
-const StepCardDesk = ({
+const StepCardMobile = ({
   stepNumber,
   title,
   description,
@@ -79,4 +79,4 @@ const StepCardDesk = ({
   );
 };
 
-export default StepCardDesk;
+export default StepCardMobile;
