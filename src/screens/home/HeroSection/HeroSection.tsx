@@ -53,7 +53,7 @@ const HeroSection = () => {
         </Label>
 
         <div className="items-center space-y-4 lg:w-48">
-          <div className="flex flex-row items-center justify-center gap-3 lg:flex lg:flex-col lg:space-y-2">
+          <div className="flex flex-row items-center justify-center gap-3 lg:flex-col">
             <Link
               to="https://play.google.com/store/apps/details?id=com.phl.charge"
               target="_blank"
