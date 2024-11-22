@@ -15,12 +15,8 @@ export interface SumStep {
 
 export interface CertImage {
   imageName: string;
-  imageHeight: string;
-  imageWidth: string;
 }
 
 export interface CertImageMobile {
   imageName: string;
-  imageHeight: string;
-  imageWidth: string;
 }

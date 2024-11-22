@@ -52,79 +52,51 @@ export const SumVal: SumStep[] = [
 
 export const Certs: CertImage[] = [
   {
-    imageName: Recycle,
-    imageHeight: "135px",
-    imageWidth: "135px",
+    imageName: Recycle
   },
   {
-    imageName: Durability,
-    imageHeight: "145px",
-    imageWidth: "145px",
+    imageName: Durability
   },
   {
-    imageName: cccCertification,
-    imageHeight: "170px",
-    imageWidth: "170px",
+    imageName: cccCertification
   },
   {
-    imageName: ceCertification,
-    imageHeight: "140px",
-    imageWidth: "140px",
+    imageName: ceCertification
   },
   {
-    imageName: iccCertification,
-    imageHeight: "137px",
-    imageWidth: "137px",
+    imageName: iccCertification
   },
   {
-    imageName: psCertification,
-    imageHeight: "144px",
-    imageWidth: "144px",
+    imageName: psCertification
   },
   {
-    imageName: PhilGeps,
-    imageHeight: "241px",
-    imageWidth: "241px",
+    imageName: PhilGeps
   },
 ];
 
 export const CertsMobileTopRow: CertImageMobile[] = [
   {
-    imageName: Recycle,
-    imageHeight: "57px",
-    imageWidth: "57px",
+    imageName: Recycle
   },
   {
-    imageName: Durability,
-    imageHeight: "65px",
-    imageWidth: "65px",
+    imageName: Durability
   },
   {
-    imageName: cccCertification,
-    imageHeight: "67px",
-    imageWidth: "77px",
+    imageName: cccCertification
   },
   {
-    imageName: ceCertification,
-    imageHeight: "62px",
-    imageWidth: "62px",
+    imageName: ceCertification
   },
 ];
 
 export const CertsMobileBottomRow: CertImageMobile[] = [
   {
-    imageName: iccCertification,
-    imageHeight: "60px",
-    imageWidth: "60px",
+    imageName: iccCertification
   },
   {
-    imageName: psCertification,
-    imageHeight: "60px",
-    imageWidth: "60px",
+    imageName: psCertification
   },
   {
-    imageName: PhilGeps,
-    imageHeight: "107px",
-    imageWidth: "107px",
+    imageName: PhilGeps
   },
 ];

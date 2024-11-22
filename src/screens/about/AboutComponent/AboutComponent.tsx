@@ -182,8 +182,7 @@ const AboutComponent = (): ReactElement => {
                 <img
                   src={data.imageName}
                   key={index}
-                  width={data.imageWidth}
-                  height={data.imageHeight}
+                  className="h-50"
                 />
               </div>
           ))}
@@ -195,8 +194,7 @@ const AboutComponent = (): ReactElement => {
                   <img
                     src={data.imageName}
                     key={index}
-                    width={data.imageWidth}
-                    height={data.imageHeight}
+                    className="h-50"
                   />
                 </div>
               ))}
@@ -207,8 +205,7 @@ const AboutComponent = (): ReactElement => {
                   <img
                     src={data.imageName}
                     key={index}
-                    width={data.imageWidth}
-                    height={data.imageHeight}
+                    className="h-50"
                   />
                 </div>
               ))}

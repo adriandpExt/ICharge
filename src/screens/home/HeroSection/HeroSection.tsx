@@ -52,6 +52,15 @@ const HeroSection = () => {
           {t(LocalizationKey.home.ichargeSubheader)}
         </Label>
 
+        {/*notes:
+        1. tried altering their sizes for them to be the same but was unable to do so due
+        to differing image dimensions.
+        2. conducted further research, found out that for both badges, their height should
+        be the only parameter to be changed, but not their width.
+        3.proceeded with research regarding guidelines for application badges, found out
+        that the width for the Play Store badge should be bigger than the App Store badge, while
+        maintaining the same height. must study further procedures on circumventing this issue.*/}
+        
         <div className="items-center space-y-4 lg:w-48">
           <div className="flex flex-row lg:items-left justify-center gap-3 lg:flex-col">
             <Link
