@@ -4,8 +4,8 @@ import LocalizationKey from "@/i18n/key";
 
 import { Label } from "@/components/ui/label";
 
-import playstore from "@/assets/icons/google_play_store_badge.png";
-import applestore from "@/assets/icons/app_store_badge.png";
+import playstore from "@/assets/icons/PlayStoreBadge.png";
+import applestore from "@/assets/icons/AppStoreBadge.png";
 
 import VideoComponent from "./VideoComponent";
 
@@ -52,15 +52,6 @@ const HeroSection = () => {
           {t(LocalizationKey.home.ichargeSubheader)}
         </Label>
 
-        {/*notes:
-        1. tried altering their sizes for them to be the same but was unable to do so due
-        to differing image dimensions.
-        2. conducted further research, found out that for both badges, their height should
-        be the only parameter to be changed, but not their width.
-        3.proceeded with research regarding guidelines for application badges, found out
-        that the width for the Play Store badge should be bigger than the App Store badge, while
-        maintaining the same height. must study further procedures on circumventing this issue.*/}
-        
         <div className="items-center space-y-4 lg:w-48">
           <div className="flex flex-row lg:items-left justify-center gap-3 lg:flex-col">
             <Link
@@ -70,7 +61,7 @@ const HeroSection = () => {
               <img
                 src={playstore}
                 alt="ic_playstore_hero"
-                className="w-[178px]"
+                className="w-40 lg:w-48"
               />
             </Link>
             <Link
@@ -80,7 +71,7 @@ const HeroSection = () => {
               <img
                 src={applestore}
                 alt="ic_apple_hero"
-                className="w-[156px]"
+                className="w-40 lg:w-48"
               />
             </Link>
           </div>

@@ -6,13 +6,13 @@ import Summary3 from "@/assets/about/SummaryImages/proprietary.png";
 import Summary1Mobile from "@/assets/about/SummaryImages/advanced_mobile.png";
 import Summary2Mobile from "@/assets/about/SummaryImages/inhouse_mobile.png";
 import Summary3Mobile from "@/assets/about/SummaryImages/proprietary_mobile.png";
-import Recycle from "@/assets/about/certifications/recycling_symbol.png";
-import Durability from "@/assets/about/certifications/durability_indicator.png";
-import cccCertification from "@/assets/about/certifications/ccc_certification.png";
-import ceCertification from "@/assets/about/certifications/ce_certification.png";
-import iccCertification from "@/assets/about/certifications/icc_mark.png";
-import psCertification from "@/assets/about/certifications/ps_mark.png";
-import PhilGeps from "@/assets/about/certifications/ps-philgeps_unified_logo.png";
+import Recycle from "@/assets/about/certifications/Recycle.png";
+import Durability from "@/assets/about/certifications/Durability.png";
+import cccCertification from "@/assets/about/certifications/TripleC.png";
+import ceCertification from "@/assets/about/certifications/CE.png";
+import iccCertification from "@/assets/about/certifications/ImportCommodityClearance.png";
+import psCertification from "@/assets/about/certifications/PhilippineStandard.png";
+import PhilGeps from "@/assets/about/certifications/Procurement.png";
 
 export const SumVal: SumStep[] = [
   {
