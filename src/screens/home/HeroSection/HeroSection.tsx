@@ -4,8 +4,8 @@ import LocalizationKey from "@/i18n/key";
 
 import { Label } from "@/components/ui/label";
 
-import playstore from "@/assets/icons/google_play_store_badge.png";
-import applestore from "@/assets/icons/app_store_badge.png";
+import playstore from "@/assets/icons/PlayStoreBadge.png";
+import applestore from "@/assets/icons/AppStoreBadge.png";
 
 import VideoComponent from "./VideoComponent";
 
@@ -61,7 +61,7 @@ const HeroSection = () => {
               <img
                 src={playstore}
                 alt="ic_playstore_hero"
-                className="w-[240px] lg:w-48"
+                className="w-40 lg:w-48"
               />
             </Link>
             <Link
@@ -71,7 +71,7 @@ const HeroSection = () => {
               <img
                 src={applestore}
                 alt="ic_apple_hero"
-                className="w-[210px] lg:w-48"
+                className="w-40 lg:w-48"
               />
             </Link>
           </div>
