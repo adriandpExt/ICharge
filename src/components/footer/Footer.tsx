@@ -76,7 +76,7 @@ export const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
           <div className="place-items-center lg:flex lg:justify-start">
-            <div className="block lg:hidden">
+            <div className="flex justify-center lg:hidden">
               <SvgIcons name="ic_footer_logo" size={280} />
             </div>
             <div className="hidden lg:block">
