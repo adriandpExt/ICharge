@@ -6,13 +6,13 @@ import Summary3 from "@/assets/about/SummaryImages/proprietary.png";
 import Summary1Mobile from "@/assets/about/SummaryImages/advanced_mobile.png";
 import Summary2Mobile from "@/assets/about/SummaryImages/inhouse_mobile.png";
 import Summary3Mobile from "@/assets/about/SummaryImages/proprietary_mobile.png";
-import Recycle from "@/assets/about/certifications/recycling_symbol.png";
-import Durability from "@/assets/about/certifications/durability_indicator.png";
-import cccCertification from "@/assets/about/certifications/ccc_certification.png";
-import ceCertification from "@/assets/about/certifications/ce_certification.png";
-import iccCertification from "@/assets/about/certifications/icc_mark.png";
-import psCertification from "@/assets/about/certifications/ps_mark.png";
-import PhilGeps from "@/assets/about/certifications/ps-philgeps_unified_logo.png";
+import Recycle from "@/assets/about/certifications/Recycle.png";
+import Durability from "@/assets/about/certifications/Durability.png";
+import cccCertification from "@/assets/about/certifications/TripleC.png";
+import ceCertification from "@/assets/about/certifications/CE.png";
+import iccCertification from "@/assets/about/certifications/ImportCommodityClearance.png";
+import psCertification from "@/assets/about/certifications/PhilippineStandard.png";
+import PhilGeps from "@/assets/about/certifications/Procurement.png";
 
 export const SumVal: SumStep[] = [
   {
@@ -52,79 +52,51 @@ export const SumVal: SumStep[] = [
 
 export const Certs: CertImage[] = [
   {
-    imageName: Recycle,
-    imageHeight: "135px",
-    imageWidth: "135px",
+    imageName: Recycle
   },
   {
-    imageName: Durability,
-    imageHeight: "145px",
-    imageWidth: "145px",
+    imageName: Durability
   },
   {
-    imageName: cccCertification,
-    imageHeight: "170px",
-    imageWidth: "170px",
+    imageName: cccCertification
   },
   {
-    imageName: ceCertification,
-    imageHeight: "140px",
-    imageWidth: "140px",
+    imageName: ceCertification
   },
   {
-    imageName: iccCertification,
-    imageHeight: "137px",
-    imageWidth: "137px",
+    imageName: iccCertification
   },
   {
-    imageName: psCertification,
-    imageHeight: "144px",
-    imageWidth: "144px",
+    imageName: psCertification
   },
   {
-    imageName: PhilGeps,
-    imageHeight: "241px",
-    imageWidth: "241px",
+    imageName: PhilGeps
   },
 ];
 
 export const CertsMobileTopRow: CertImageMobile[] = [
   {
-    imageName: Recycle,
-    imageHeight: "57px",
-    imageWidth: "57px",
+    imageName: Recycle
   },
   {
-    imageName: Durability,
-    imageHeight: "65px",
-    imageWidth: "65px",
+    imageName: Durability
   },
   {
-    imageName: cccCertification,
-    imageHeight: "67px",
-    imageWidth: "77px",
+    imageName: cccCertification
   },
   {
-    imageName: ceCertification,
-    imageHeight: "62px",
-    imageWidth: "62px",
+    imageName: ceCertification
   },
 ];
 
 export const CertsMobileBottomRow: CertImageMobile[] = [
   {
-    imageName: iccCertification,
-    imageHeight: "60px",
-    imageWidth: "60px",
+    imageName: iccCertification
   },
   {
-    imageName: psCertification,
-    imageHeight: "60px",
-    imageWidth: "60px",
+    imageName: psCertification
   },
   {
-    imageName: PhilGeps,
-    imageHeight: "107px",
-    imageWidth: "107px",
+    imageName: PhilGeps
   },
 ];
