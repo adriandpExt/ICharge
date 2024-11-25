@@ -72,7 +72,7 @@ export const Footer = () => {
   );
 
   return (
-    <footer className="bg-green-950 bg-gradient-to-r from-green-900 bg-cover p-6 text-white md:p-10">
+    <footer className="bg-gradient-to-r from-green-950 to-green-900 p-6 text-white md:p-10 lg:to-green-700">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
           <div className="place-items-center lg:flex lg:justify-start">
