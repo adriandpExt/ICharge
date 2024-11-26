@@ -179,14 +179,6 @@ const AboutComponent = (): ReactElement => {
             {Certs.map((data, index) => (
               <img src={data.imageName} key={index} className="h-[120px]" />
             ))}
-              <>
-                <img
-                  src={data.imageName}
-                  key={index}
-                  className="h-[120px]"
-                />
-              </>
-          ))}
           </section>
           <section className="relative -top-10 flex flex-col items-center -space-x-1 lg:hidden">
             <div className="flex gap-3">
