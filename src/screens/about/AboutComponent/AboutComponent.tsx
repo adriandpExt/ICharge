@@ -178,36 +178,36 @@ const AboutComponent = (): ReactElement => {
           ))}
           <section className="hidden justify-center gap-3 overflow-hidden lg:flex lg:flex-row">
             {Certs.map((data, index) => (
-              <div>
+              <>
                 <img
                   src={data.imageName}
                   key={index}
                   className="h-[120px]"
                 />
-              </div>
+              </>
           ))}
           </section>
           <section className="flex flex-col items-center relative -top-10 -space-x-1 lg:hidden">
             <div className="flex gap-3">
               {CertsMobileTopRow.map((data, index) => (
-                <div>
+                <>
                   <img
                     src={data.imageName}
                     key={index}
                     className="h-[60px]"
                   />
-                </div>
+                </>
               ))}
             </div>
             <div className="flex relative top-3 gap-3">
               {CertsMobileBottomRow.map((data, index) => (
-                <div>
+                <>
                   <img
                     src={data.imageName}
                     key={index}
                     className="h-[60px]"
                   />
-                </div>
+                </>
               ))}
             </div>
           </section>
