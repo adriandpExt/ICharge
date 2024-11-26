@@ -71,18 +71,25 @@ export const Footer = () => {
     </div>
   );
 
+  const renderLogo = () => {
+    return (
+      <div className="row-span-2 place-items-center md:row-span-1 lg:flex lg:justify-start">
+        <div className="ml-3 flex justify-center lg:hidden">
+          <SvgIcons name="ic_footer_logo" size={200} />
+        </div>
+        <div className="hidden lg:block">
+          <SvgIcons name="ic_footer_logo" size={220} />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <footer className="bg-gradient-to-b from-green-950 to-green-900 p-6 text-white md:p-10 lg:to-green-700">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
-          <div className="row-span-2 place-items-center md:row-span-1 lg:flex lg:justify-start">
-            <div className="-ml-3 flex justify-center lg:hidden">
-              <SvgIcons name="ic_footer_logo" size={200} />
-            </div>
-            <div className="hidden lg:block">
-              <SvgIcons name="ic_footer_logo" size={220} />
-            </div>
-          </div>
+          {renderLogo()}
+
           <div className="flex md:justify-center lg:justify-normal">
             <SectionItem
               links={links.platform}
@@ -100,6 +107,7 @@ export const Footer = () => {
             <NewsletterSection />
           </div>
         </div>
+
         <div className="mt-5 items-center border-t border-gray-500 pt-3 lg:hidden" />
         <div className="lg:hidden">
           <NewsletterSection />
