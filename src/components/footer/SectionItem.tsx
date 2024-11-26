@@ -15,8 +15,8 @@ interface SectionItemProps {
 export const SectionItem = (props: SectionItemProps) => {
   const { title, links, onClick } = props;
   return (
-    <div className="flex flex-col gap-1 text-start">
-      <Label className="mb-4 text-xl font-semibold">{title}</Label>
+    <div className="flex flex-col gap-1 text-center md:text-start">
+      <Label className="mb-1 text-xl font-semibold">{title}</Label>
       <ul className="grid grid-cols-1 space-y-1">
         {links.map((link) => (
           <li key={link.label}>

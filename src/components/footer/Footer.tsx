@@ -48,7 +48,7 @@ export const Footer = () => {
   };
 
   const NewsletterSection = () => (
-    <div className="flex flex-col gap-3 text-start">
+    <div className="flex flex-col gap-3 lg:text-start">
       <Label className="mb-4 text-2xl font-bold">
         {t(LocalizationKey.footer.stayInTheLoop)}
       </Label>
@@ -65,30 +65,32 @@ export const Footer = () => {
           </Button>
         </div>
       </div>
-      <div className="flex gap-5">{renderSvg()}</div>
+      <div className="flex justify-evenly gap-5 pt-5 lg:justify-start lg:gap-5">
+        {renderSvg()}
+      </div>
     </div>
   );
 
   return (
-    <footer className="bg-[url('@/assets/green_bg.webp')] bg-cover p-6 text-white md:p-10">
+    <footer className="bg-gradient-to-b from-green-950 to-green-900 p-6 text-white md:p-10 lg:to-green-700">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
-          <div className="lg:flex lg:items-center lg:justify-start">
-            <div className="block lg:hidden">
-              <SvgIcons name="ic_footer_logo" size={180} />
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="place-items-center lg:flex lg:justify-start">
+            <div className="flex justify-center lg:hidden">
+              <SvgIcons name="ic_footer_logo" size={185} />
             </div>
             <div className="hidden lg:block">
               <SvgIcons name="ic_footer_logo" size={220} />
             </div>
           </div>
-          <div>
+          <div className="flex justify-center lg:justify-normal">
             <SectionItem
               links={links.platform}
               title={t(LocalizationKey.footer.platforms)}
             />
           </div>
-          <div className="lg:hidden" />
-          <div>
+          <div className="md:hidden" />
+          <div className="flex justify-center lg:justify-normal">
             <SectionItem
               links={links.company}
               title={t(LocalizationKey.footer.company)}
@@ -103,7 +105,6 @@ export const Footer = () => {
         <div className="lg:hidden">
           <NewsletterSection />
         </div>
-
         <div className="mt-10 flex flex-col items-center justify-between border-t border-gray-500 pt-6 sm:flex-row">
           <Label variant="default">{t(LocalizationKey.footer.copyright)}</Label>
           <div className="mt-4 hidden gap-4 sm:mt-0 sm:flex">

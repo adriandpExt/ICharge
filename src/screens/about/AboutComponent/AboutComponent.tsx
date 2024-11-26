@@ -18,39 +18,38 @@ import LocalizationKey from "@/i18n/key";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 
+const SectionTitle = ({
+  children,
+  icon,
+  className = "",
+}: SectionTitleProps): ReactElement => (
+  <h2
+    className={cn(
+      "container mx-auto flex items-center gap-2 bg-gradient-to-b from-[#044F00] to-[#078E00] bg-clip-text p-4 text-2xl font-bold text-transparent md:text-3xl",
+      className,
+    )}
+  >
+    <img src={icon} alt="" className="h-16 w-16" />
+    <Label variant="title">{children}</Label>
+  </h2>
+);
+
+const SectionContent = ({
+  children,
+  className,
+}: SectionContentProps): ReactElement => (
+  <div
+    className={cn(
+      "border-t-2 border-green-700 bg-[#38D430]/10 p-10",
+      className,
+    )}
+  >
+    <div className="container mx-auto max-w-7xl text-green-800">{children}</div>
+  </div>
+);
+
 const AboutComponent = (): ReactElement => {
   const { t } = useTranslation();
-  const SectionTitle = ({
-    children,
-    icon,
-    className = "",
-  }: SectionTitleProps): ReactElement => (
-    <h2
-      className={cn(
-        "container mx-auto flex items-center gap-2 bg-gradient-to-b from-[#044F00] to-[#078E00] bg-clip-text p-4 text-2xl font-bold text-transparent md:text-3xl",
-        className,
-      )}
-    >
-      <img src={icon} alt="" className="h-16 w-16" />
-      <Label variant="title">{children}</Label>
-    </h2>
-  );
-
-  const SectionContent = ({
-    children,
-    className,
-  }: SectionContentProps): ReactElement => (
-    <div
-      className={cn(
-        "border-t-2 border-green-700 bg-[#38D430]/10 p-10",
-        className,
-      )}
-    >
-      <div className="container mx-auto max-w-7xl text-green-800">
-        {children}
-      </div>
-    </div>
-  );
 
   return (
     <>
@@ -178,6 +177,8 @@ const AboutComponent = (): ReactElement => {
           ))}
           <section className="hidden justify-center gap-3 overflow-hidden lg:flex lg:flex-row">
             {Certs.map((data, index) => (
+              <img src={data.imageName} key={index} className="h-[120px]" />
+            ))}
               <>
                 <img
                   src={data.imageName}
@@ -187,27 +188,15 @@ const AboutComponent = (): ReactElement => {
               </>
           ))}
           </section>
-          <section className="flex flex-col items-center relative -top-10 -space-x-1 lg:hidden">
+          <section className="relative -top-10 flex flex-col items-center -space-x-1 lg:hidden">
             <div className="flex gap-3">
               {CertsMobileTopRow.map((data, index) => (
-                <>
-                  <img
-                    src={data.imageName}
-                    key={index}
-                    className="h-[60px]"
-                  />
-                </>
+                <img src={data.imageName} key={index} className="h-[60px]" />
               ))}
             </div>
-            <div className="flex relative top-3 gap-3">
+            <div className="relative top-3 flex gap-3">
               {CertsMobileBottomRow.map((data, index) => (
-                <>
-                  <img
-                    src={data.imageName}
-                    key={index}
-                    className="h-[60px]"
-                  />
-                </>
+                <img src={data.imageName} key={index} className="h-[60px]" />
               ))}
             </div>
           </section>
