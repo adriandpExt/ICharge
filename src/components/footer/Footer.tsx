@@ -74,10 +74,10 @@ export const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-green-950 to-green-900 p-6 text-white md:p-10 lg:to-green-700">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
           <div className="place-items-center lg:flex lg:justify-start">
             <div className="flex justify-center lg:hidden">
-              <SvgIcons name="ic_footer_logo" size={200} />
+              <SvgIcons name="ic_footer_logo" size={185} />
             </div>
             <div className="hidden lg:block">
               <SvgIcons name="ic_footer_logo" size={220} />
