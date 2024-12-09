@@ -1,8 +1,8 @@
 import { ProdModal } from "../types";
+import { useTranslation } from "react-i18next";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import LocalizationKey from "@/i18n/key";
-import { useTranslation } from "react-i18next";
 
 const SubLabel = ({ item }: Omit<ProdModal, "open" | "handleOpenChange">) => {
   const { t } = useTranslation();

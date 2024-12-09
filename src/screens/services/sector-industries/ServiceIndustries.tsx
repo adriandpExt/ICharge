@@ -1,81 +1,24 @@
-import { Industries } from "./types";
 import { ReactElement, useEffect } from "react";
 import { Check } from "lucide-react";
-import sectorHospitality from "@/assets/sectors/sectorHospitality.png";
-import sectorHealthCare from "@/assets/sectors/sectorHealthcare.png";
-import sectorTransport from "@/assets/sectors/sectorTransport.png";
-import sectorEvents from "@/assets/sectors/sectorEvents.png";
-import sectorRetail from "@/assets/sectors/sectorRetail.png";
+import { useServices } from "@/screens/services/utils";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
-import { useLocation } from "react-router-dom";
 
 const ServiceIndustries = (): ReactElement => {
-  const { t } = useTranslation();
-  const location = useLocation();
+  const { location, serviceIndustries, t } = useServices();
   useEffect(() => {
     const passedId = location.state?.value;
     const element = document.getElementById(passedId);
+    const elementMobile = document.getElementById(`${passedId}M`);
     if (element) {
       element.scrollIntoView({ behavior: "instant" });
     }
+    if (elementMobile) {
+      elementMobile.scrollIntoView({ behavior: "instant" });
+    }
   }, [location.state?.value]);
-  const serviceIndustries: Industries[] = [
-    {
-      title: t(LocalizationKey.services.retail.title),
-      subTitle: t(LocalizationKey.services.retail.subtitle),
-      image: sectorRetail,
-      description: [
-        t(LocalizationKey.services.description.retail[0]),
-        t(LocalizationKey.services.description.retail[1]),
-        t(LocalizationKey.services.description.retail[2]),
-        t(LocalizationKey.services.description.retail[3]),
-      ],
-    },
-    {
-      title: t(LocalizationKey.services.hospitality.title),
-      subTitle: t(LocalizationKey.services.hospitality.subtitle),
-      image: sectorHospitality,
-      description: [
-        t(LocalizationKey.services.description.hospitality[0]),
-        t(LocalizationKey.services.description.hospitality[1]),
-        t(LocalizationKey.services.description.hospitality[2]),
-      ],
-    },
-    {
-      title: t(LocalizationKey.services.healthcare.title),
-      subTitle: t(LocalizationKey.services.healthcare.subtitle),
-      image: sectorHealthCare,
-      description: [
-        t(LocalizationKey.services.description.healthcare[0]),
-        t(LocalizationKey.services.description.healthcare[1]),
-        t(LocalizationKey.services.description.healthcare[2]),
-      ],
-    },
-    {
-      title: t(LocalizationKey.services.transport.title),
-      subTitle: t(LocalizationKey.services.transport.subtitle),
-      image: sectorTransport,
-      description: [
-        t(LocalizationKey.services.description.transport[0]),
-        t(LocalizationKey.services.description.transport[1]),
-        t(LocalizationKey.services.description.transport[2]),
-      ],
-    },
-    {
-      title: t(LocalizationKey.services.events.title2),
-      subTitle: t(LocalizationKey.services.events.subtitle),
-      image: sectorEvents,
-      description: [
-        t(LocalizationKey.services.description.events[0]),
-        t(LocalizationKey.services.description.events[1]),
-        t(LocalizationKey.services.description.events[2]),
-      ],
-    },
-  ];
 
   return (
     <section className="space-y-10">
@@ -136,7 +79,7 @@ const ServiceIndustries = (): ReactElement => {
             "flex w-full flex-col border-b-4 border-green-500 bg-green-500/25 lg:hidden",
           )}
           key={index}
-          id={index === 3 ? "Events" : data.title}
+          id={index === 3 ? "EventsM" : `${data.title}M`}
         >
           <img
             src={data.image}
