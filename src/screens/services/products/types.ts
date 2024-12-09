@@ -2,7 +2,7 @@ export interface ProductDetails {
   name: string;
   image: string;
   description: string;
-  seatCapacity: string;
+  seatCapacity?: string;
 }
 
 interface ProdSize {
