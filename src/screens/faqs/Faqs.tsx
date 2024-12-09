@@ -72,7 +72,7 @@ export default function FullScreenResponsiveFAQAccordion() {
                   >
                     <AccordionTrigger
                       className={`rounded-lg ${
-                        openIndex === index ? "bg-green-400" : "bg-green-100"
+                        openIndex === index ? "bg-green-400" : "bg-green-400"
                       } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
                       onClick={() => handleSetOpenIndex(index)}
                     >
