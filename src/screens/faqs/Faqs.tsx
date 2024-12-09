@@ -72,7 +72,7 @@ export default function FullScreenResponsiveFAQAccordion() {
                   >
                     <AccordionTrigger
                       className={`rounded-lg ${
-                        openIndex === index ? "bg-green-400" : "bg-green-100"
+                        openIndex === index ? "bg-green-400" : "bg-green-400"
                       } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
                       onClick={() => handleSetOpenIndex(index)}
                     >
@@ -83,7 +83,12 @@ export default function FullScreenResponsiveFAQAccordion() {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-left text-sm md:text-base lg:text-lg">
-                      <Label className="text-base">{t(item.answer)}</Label>
+                      <Label
+                        className="text-base"
+                        style={{ whiteSpace: "pre-line" }}
+                      >
+                        {t(item.answer)}
+                      </Label>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
