@@ -1,5 +1,6 @@
 import { Product } from "./types";
 import { useState } from "react";
+import { useServices } from "@/screens/services/utils";
 import {
   Carousel,
   CarouselContent,
@@ -13,7 +14,6 @@ import { Label } from "@/components/ui/label";
 import SvgIcons from "@/components/svg-icons/SvgIcons";
 import { cn } from "@/lib/utils";
 import LocalizationKey from "@/i18n/key";
-import { useServices } from "@/screens/services/utils";
 
 const Features = () => {
   const { productList, t, productInit } = useServices();

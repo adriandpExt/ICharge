@@ -1,11 +1,10 @@
 import { ReactElement, useEffect } from "react";
 import { Check } from "lucide-react";
-
+import { useServices } from "@/screens/services/utils";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import LocalizationKey from "@/i18n/key";
-import { useServices } from "@/screens/services/utils";
 
 const ServiceIndustries = (): ReactElement => {
   const { location, serviceIndustries, t } = useServices();
