@@ -300,8 +300,8 @@
         "category": "Account Deletion",
         "items": [
           {
-            "question": "How can I delete my account?",
-            "answer": "To delete your account:\n1. Open the app\n2. Tap Settings ->Account cancellation\n\n[Warning]\n\nOnce your account is deleted, your personal data will be removed and you will no longer be able to use your account.\n·Delete your user information.\n·Your user account is unable to recover.\n·Re-register will be an new account.\n\nPlease make sure that all transactions have been closed and no disputes. After the account is deleted, it is deemed to automatically give up the rights and interest such as the return of funds that may have occurred in historical transactions."
+            "question": "How to delete your account?",
+            "answer": "To delete your account.\n\n1. Open the app\n2. Tap Settings ->Account cancellation\n\nWarning\n\nOnce your account is deleted, your personal data will be removed and you will no longer be able to use your account.\n• Delete your user information.\n• Your user account is unable to recover.\n• Re-register will be a new account.\n\nPlease make sure that all transactions have been closed and no disputes.\nAfter the account is deleted, It is deemed to automatically give up the rights and interest such as the return of funds that may have occurred in historical transactions."
           }
         ]
       }
