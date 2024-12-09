@@ -1,13 +1,17 @@
 import { ReactElement } from "react";
 import { ChevronRight } from "lucide-react";
-import LocalizationKey from "@/i18n/key";
+
 import { useTranslation } from "react-i18next";
+
+import { Banner } from "@/components/banner";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import Equipment from "./equipment/Equipment";
+import LocalizationKey from "@/i18n/key";
+
 import ServiceIndustries from "./sector-industries/ServiceIndustries";
 import SustainabilitySocial from "./sustainability-and-social-impact/SustainabilitySocial";
-import { Banner } from "@/components";
+
 import Products from "./products/Products";
 
 const Services = (): ReactElement => {
