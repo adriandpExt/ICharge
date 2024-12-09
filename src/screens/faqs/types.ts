@@ -1,12 +1,6 @@
-interface ListItems {
-  item: string
-}
-
 interface CategoryItems {
     question:string;
-    answer:string;
-    answerList: ListItems[]
-    additionalList: ListItems[]
+    answer:string
   }
   
   export interface Faqs {

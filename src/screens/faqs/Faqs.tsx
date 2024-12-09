@@ -84,7 +84,7 @@ export default function FullScreenResponsiveFAQAccordion() {
                     </AccordionTrigger>
                     <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-left text-sm md:text-base lg:text-lg">
                       <Label className="text-base">
-                        {t(item.answer).split('\n').map(line => <p className="text-base">{line}</p>)}
+                        {t(item.answer).split('\n').map((line, index) => <p className="text-base" key={index}>{line}</p>)}
                       </Label>
                     </AccordionContent>
                   </AccordionItem>
