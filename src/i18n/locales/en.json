@@ -599,6 +599,21 @@
     "ourVisionDesc": {
       "label": "To be the leading provider of mobile charging solutions, ensuring that everyone, everywhere, remains connected at all times, whether locally or globally. Our vision includes scaling our solutions to reach high-traffic areas not just in the Philippines, but in major cities worldwide."
     },
+    "advocacy": {
+      "label": "Advocacy"
+    },
+    "advocacyHeader" : {
+      "label": "Power to Care-Charging for a Better Tomorrow"
+    },
+    "advocacyContentParagraph" : {
+      "label" : "iCharge is committed to making a meaningful impact on people, animals, and the planet. Through our \"Power to Care\" initiative, we aim to harness the power of small actions to create significant change. By contributing a portion of every power bank rental, we support initiatives that uplift underserved communities, provide aid to vulnerable animals through rescue and care programs, and protect the environment by backing sustainability efforts such as tree planting and responsible e-waste management. Together, we can charge forward toward a brighter, more compassionate future."
+    },
+    "advocacyContentListItems" : {
+      "label" : "Aid Communities: Funding educational programs, disaster relief efforts, and essential services for underprivileged individuals.\nProtect Animals: Partnering with shelters and rescue organizations to care for abandoned and injured animals.\nSustain the Planet: Promoting environmental responsibility by supporting tree-planting projects and e-waste recycling campaigns."
+    },
+    "advocacyFooter" : {
+      "label" : "Together, we charged forward toward a more compassionate and sustainable world."
+    },
     "ourReach": {
       "label": "Our Reach"
     },
