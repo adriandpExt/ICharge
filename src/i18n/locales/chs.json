@@ -578,7 +578,18 @@
       "header": {"label" : "Power to Care-Charging for a Better Tomorrow"},
       "content": {
         "paragraph": {"label" : "iCharge is committed to making a meaningful impact on people, animals, and the planet. Through our \"Power to Care\" initiative, we aim to harness the power of small actions to create significant change. By contributing a portion of every power bank rental, we support initiatives that uplift underserved communities, provide aid to vulnerable animals through rescue and care programs, and protect the environment by backing sustainability efforts such as tree planting and responsible e-waste management. Together, we can charge forward toward a brighter, more compassionate future."},
-        "list": {"label": "Aid Communities: Funding educational programs, disaster relief efforts, and essential services for underprivileged individuals.\nProtect Animals: Partnering with shelters and rescue organizations to care for abandoned and injured animals.\nSustain the Planet: Promoting environmental responsibility by supporting tree-planting projects and e-waste recycling campaigns."}
+        "list": {
+          "listTitles" : {
+            "listTitle1" : {"label": "Aid Communities: "},
+            "listTitle2" : {"label": "Protect Animals: "},
+            "listTitle3" : {"label": "Sustain the Planet: "}
+          },
+          "listContents": {
+            "listContent1" : {"label": "Funding educational programs, disaster relief efforts, and essential services for underprivileged individuals."},
+            "listContent2" : {"label": "Partnering with shelters and rescue organizations to care for abandoned and injured animals."},
+            "listContent3" : {"label": "Promoting environmental responsibility by supporting tree-planting projects and e-waste recycling campaigns."}
+          }
+        }
       },
       "footer": {"label" : "Together, we charged forward toward a more compassionate and sustainable world."}
     },

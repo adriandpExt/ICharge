@@ -50,6 +50,21 @@ export const SumVal: SumStep[] = [
   },
 ];
 
+export const Advocacies = [
+  {
+    ListTitle: LocalizationKey.about.advocacy.content.list.listTitles.listTitle1,
+    ListContent: LocalizationKey.about.advocacy.content.list.listContent.listContent1,
+  },
+  {
+    ListTitle: LocalizationKey.about.advocacy.content.list.listTitles.listTitle2,
+    ListContent: LocalizationKey.about.advocacy.content.list.listContent.listContent2,
+  },
+  {
+    ListTitle: LocalizationKey.about.advocacy.content.list.listTitles.listTitle3,
+    ListContent: LocalizationKey.about.advocacy.content.list.listContent.listContent3,
+  }
+]
+
 export const Certs: CertImage[] = [
   {
     imageName: Recycle

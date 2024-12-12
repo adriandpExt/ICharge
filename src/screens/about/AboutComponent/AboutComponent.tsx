@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import {
+  Advocacies,
   Certs,
   CertsMobileBottomRow,
   CertsMobileTopRow,
@@ -167,9 +168,13 @@ const AboutComponent = (): ReactElement => {
               <Label variant="subtitle">
                 {t(LocalizationKey.about.advocacy.content.paragraph)}
               </Label>
-              <Label variant="subtitle" className="whitespace-pre-line">
-                {t(LocalizationKey.about.advocacy.content.list)}
-              </Label>
+              {Advocacies.map((data,index) => (
+                <Label variant="subtitle" key={index}>
+                  <Label
+                    variant="subtitle"
+                    className="font-bold">{t(data.ListTitle)}</Label>{t(data.ListContent)}
+                </Label>
+              ))}
               <Label
                 variant="heading2"
                 className="bg-gradient-to-b from-green-900 to-green-400 bg-clip-text text-center italic text-transparent lg:px-24"

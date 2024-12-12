@@ -226,7 +226,18 @@ const LocalizationKey = {
       header: "about.advocacy.header.label",
       content: {
         paragraph: "about.advocacy.content.paragraph.label",
-        list: "about.advocacy.content.list.label"
+        list: {
+          listTitles: {
+            listTitle1: "about.advocacy.content.list.listTitles.listTitle1.label",
+            listTitle2: "about.advocacy.content.list.listTitles.listTitle2.label",
+            listTitle3: "about.advocacy.content.list.listTitles.listTitle3.label"
+          },
+          listContent: {
+            listContent1: "about.advocacy.content.list.listContents.listContent1.label",
+            listContent2: "about.advocacy.content.list.listContents.listContent2.label",
+            listContent3: "about.advocacy.content.list.listContents.listContent3.label"
+          }
+        }
       },
       footer: "about.advocacy.footer.label",
     },
