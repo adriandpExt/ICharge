@@ -573,20 +573,14 @@
     "ourVisionDesc": {
       "label": "成為移動充電解決方案的領先供應商，確保每個人無論身處本地還是全球任何地方，都能隨時保持連接。我們的願景包括將解決方案擴展至不僅僅是菲律賓的高流量區域，還涵蓋全球主要城市。"
     },
-    "advocacy": {
-      "label": "Advocacy"
-    },
-    "advocacyHeader" : {
-      "label": "Power to Care-Charging for a Better Tomorrow"
-    },
-    "advocacyContentParagraph" : {
-      "label" : "iCharge is committed to making a meaningful impact on people, animals, and the planet. Through our \"Power to Care\" initiative, we aim to harness the power of small actions to create significant change. By contributing a portion of every power bank rental, we support initiatives that uplift underserved communities, provide aid to vulnerable animals through rescue and care programs, and protect the environment by backing sustainability efforts such as tree planting and responsible e-waste management. Together, we can charge forward toward a brighter, more compassionate future."
-    },
-    "advocacyContentListItems" : {
-      "label" : "Aid Communities: Funding educational programs, disaster relief efforts, and essential services for underprivileged individuals.\nProtect Animals: Partnering with shelters and rescue organizations to care for abandoned and injured animals.\nSustain the Planet: Promoting environmental responsibility by supporting tree-planting projects and e-waste recycling campaigns."
-    },
-    "advocacyFooter" : {
-      "label" : "Together, we charged forward toward a more compassionate and sustainable world."
+    "advocacy" : {
+      "title": {"label" : "Advocacy"},
+      "header": {"label" : "Power to Care-Charging for a Better Tomorrow"},
+      "content": {
+        "paragraph": {"label" : "iCharge is committed to making a meaningful impact on people, animals, and the planet. Through our \"Power to Care\" initiative, we aim to harness the power of small actions to create significant change. By contributing a portion of every power bank rental, we support initiatives that uplift underserved communities, provide aid to vulnerable animals through rescue and care programs, and protect the environment by backing sustainability efforts such as tree planting and responsible e-waste management. Together, we can charge forward toward a brighter, more compassionate future."},
+        "list": {"label": "Aid Communities: Funding educational programs, disaster relief efforts, and essential services for underprivileged individuals.\nProtect Animals: Partnering with shelters and rescue organizations to care for abandoned and injured animals.\nSustain the Planet: Promoting environmental responsibility by supporting tree-planting projects and e-waste recycling campaigns."}
+      },
+      "footer": {"label" : "Together, we charged forward toward a more compassionate and sustainable world."}
     },
     "ourReach": {
       "label": "我們的覆蓋範圍"

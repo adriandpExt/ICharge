@@ -145,26 +145,26 @@ const AboutComponent = (): ReactElement => {
         <section data-aos="fade-up">
           <SectionTitle icon={VectorLogo}>
             <Label variant={"banner"}>
-              {t(LocalizationKey.about.advocacy)}
+              {t(LocalizationKey.about.advocacy.title)}
             </Label>
           </SectionTitle>
           <SectionContent className="rounded-none md:mr-36 md:rounded-br-[5rem]">
             <div className="flex flex-col gap-5">
-              <Label variant={"heading2"} className="font-bold">
-                {t(LocalizationKey.about.advocacyHeader)}
+              <Label variant={"heading2"}>
+                {t(LocalizationKey.about.advocacy.header)}
               </Label>
               <Label variant={"subtitle"}>
-                {t(LocalizationKey.about.advocacyContentParagraph)}
+                {t(LocalizationKey.about.advocacy.content.paragraph)}
               </Label>
-              <Label variant={"subtitle"} style={{ whiteSpace: "pre-line"}}>
-                {t(LocalizationKey.about.advocacyContentListItems)}
+              <Label variant={"subtitle"} className="whitespace-pre-line">
+                {t(LocalizationKey.about.advocacy.content.list)}
               </Label>
               <Label variant={"heading2"} className="italic text-center">
-                {t(LocalizationKey.about.advocacyContentListFooter)}
+                {t(LocalizationKey.about.advocacy.footer)}
               </Label>
             </div>
           </SectionContent>
-        </section>
+        </section>*
 
         <section data-aos="fade-up">
           <SectionTitle icon={VectorLogo} className="justify-end">
