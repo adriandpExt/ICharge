@@ -6,6 +6,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 import { useToast } from "@/hooks/use-toast";
+import { usePhoneNumberFormatter } from "@/hooks/usePhoneNumberFormatter ";
 import { zodResolver } from "@hookform/resolvers/zod";
 import LocalizationKey from "@/i18n/key";
 
@@ -24,6 +25,9 @@ const Customer = (): ReactElement => {
     resolver: zodResolver(customerFormSchema),
     defaultValues: customerDefaultValues,
   });
+
+  const { setValue } = inquiryForm;
+  const { handlePhoneNumberChange } = usePhoneNumberFormatter(setValue);
 
   const sendEmail = () => {
     if (customerRef.current) {
@@ -90,6 +94,7 @@ const Customer = (): ReactElement => {
           <TextField
             control={inquiryForm.control}
             name="phoneNumber"
+            onChange={handlePhoneNumberChange}
             label={t(
               LocalizationKey.partnerWithUs.inquiryForm.customer.phoneNumber,
             )}
