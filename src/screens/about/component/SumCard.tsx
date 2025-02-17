@@ -23,6 +23,7 @@ const SummaryCard = (stepSum: SummaryCardAppearance): ReactElement => {
 
   return (
     <Card
+      data-aos="zoom-in-up"
       className={cn(
         "rounded-[36px] border-0 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:flex",
         isFlipped && "flex-row-reverse",

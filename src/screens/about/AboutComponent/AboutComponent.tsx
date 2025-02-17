@@ -177,7 +177,11 @@ const AboutComponent = (): ReactElement => {
           ))}
           <section className="hidden justify-center gap-3 overflow-hidden lg:flex lg:flex-row">
             {Certs.map((data, index) => (
-              <img src={data.imageName} key={index} className="h-[90px] xl:h-[120px]" />
+              <img
+                src={data.imageName}
+                key={index}
+                className="h-[90px] xl:h-[120px]"
+              />
             ))}
           </section>
           <section className="relative -top-10 flex flex-col items-center -space-x-1 lg:hidden">
