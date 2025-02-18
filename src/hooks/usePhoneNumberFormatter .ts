@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback } from "react";
-import { UseFormSetValue } from "react-hook-form";
+import { FieldValues, UseFormSetValue } from "react-hook-form";
 
-export const usePhoneNumberFormatter = (setValue: UseFormSetValue<any>) => {
+export const usePhoneNumberFormatter = (
+  setValue: UseFormSetValue<FieldValues>,
+) => {
   const formatPhoneNumber = useCallback((value: string): string => {
     value = value.replace(/\D/g, "");
 
