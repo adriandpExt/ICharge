@@ -20,9 +20,12 @@ import { Drawer } from "./component";
 import { Label } from "../ui/label";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
+import { cn } from "@/lib/utils";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
 export const NavBar = () => {
   const { t } = useTranslation();
+  const { language, handleLanguageChange } = useLanguageSwitcher();
   const navigate = useNavigate();
   const location = useLocation();
   const isScroll = useScroll(window.innerHeight);
@@ -151,10 +154,22 @@ export const NavBar = () => {
 
       <div className="flex items-center">
         <div className="hidden flex-row gap-2 lg:flex">
-          <Label className="text-white">ENG</Label>
-          <Label className="text-white">CHI&#40;简化&#41;</Label>
-          <Label className="text-white">CHI&#40;传统的&#41;</Label>
+          {language.map(({ lng, active, code }, index) => {
+            return (
+              <Label
+                key={index}
+                className={cn(
+                  "p-2 text-white hover:rounded-md hover:font-extrabold",
+                  active ? "rounded-md font-extrabold bg-white/10" : "",
+                )}
+                onClick={() => handleLanguageChange(index, code)}
+              >
+                {lng}
+              </Label>
+            );
+          })}
         </div>
+
         <Drawer />
       </div>
     </header>
