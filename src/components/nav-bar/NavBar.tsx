@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Drawer, Language } from "./component";
+import { Drawer } from "./component";
 
 import { Label } from "../ui/label";
 import { useTranslation } from "react-i18next";
@@ -150,7 +150,11 @@ export const NavBar = () => {
       {renderNavigation()}
 
       <div className="flex items-center">
-        <Language />
+        <div className="hidden flex-row gap-2 lg:flex">
+          <Label className="text-white">ENG</Label>
+          <Label className="text-white">CHI&#40;简化&#41;</Label>
+          <Label className="text-white">CHI&#40;传统的&#41;</Label>
+        </div>
         <Drawer />
       </div>
     </header>

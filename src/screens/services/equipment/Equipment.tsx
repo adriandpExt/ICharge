@@ -22,6 +22,7 @@ const Equipment = () => {
               className="h-full w-full text-green-600"
             />
           </div>
+
           <div className="text-center sm:text-left">
             <Label variant="heading2" className="mb-4 block">
               {t(LocalizationKey.services.serviceFreeEquipmentTitle)}
@@ -59,7 +60,7 @@ const Equipment = () => {
         </div>
 
         <div
-          className="flex flex-col items-center gap-8 sm:flex-row"
+          className="flex flex-col items-center justify-between gap-8 sm:flex-row"
           data-aos="fade-up"
         >
           <div className="round block h-48 w-48 shrink-0 flex-row-reverse items-center justify-center sm:hidden sm:h-56 sm:w-56 lg:h-64 lg:w-64">

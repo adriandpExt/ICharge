@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Building2, Globe, Handshake, Menu, Phone } from "lucide-react";
+import { Building2, Handshake, Menu, Phone } from "lucide-react";
 
-import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+// import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
 import {
   Sheet,
@@ -19,27 +19,27 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 
-import { IconName } from "@/components/svg-icons/utils";
+// import { IconName } from "@/components/svg-icons/utils";
 import { SvgIcons } from "@/components/svg-icons";
 
-import { language } from "../utils";
+// import { language } from "../utils";
 import LocalizationKey from "@/i18n/key";
 import { LinkList } from "../type";
 import { useTranslation } from "react-i18next";
 
 export const Drawer = () => {
   const { t } = useTranslation();
-  const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
+  // const { selectedLanguage, handleValueChange } = useLanguageSwitcher();
   const [isOpen, setIsOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -153,7 +153,7 @@ export const Drawer = () => {
           <div className="flex flex-col space-y-2">
             {renderDrawerMenu()}
 
-            <Select
+            {/* <Select
               onValueChange={(value) => {
                 handleValueChange(value);
                 closeDrawer();
@@ -183,7 +183,7 @@ export const Drawer = () => {
                   ))}
                 </SelectGroup>
               </SelectContent>
-            </Select>
+            </Select> */}
           </div>
         </SheetHeader>
       </SheetContent>
