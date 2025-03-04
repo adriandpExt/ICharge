@@ -15,14 +15,17 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Drawer, Language } from "./component";
+import { Drawer } from "./component";
 
 import { Label } from "../ui/label";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
+import { cn } from "@/lib/utils";
+import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 
 export const NavBar = () => {
   const { t } = useTranslation();
+  const { language, handleLanguageChange } = useLanguageSwitcher();
   const navigate = useNavigate();
   const location = useLocation();
   const isScroll = useScroll(window.innerHeight);
@@ -150,7 +153,23 @@ export const NavBar = () => {
       {renderNavigation()}
 
       <div className="flex items-center">
-        <Language />
+        <div className="hidden flex-row gap-2 lg:flex">
+          {language.map(({ lng, active, code }, index) => {
+            return (
+              <Label
+                key={index}
+                className={cn(
+                  "p-2 text-white hover:rounded-md hover:font-extrabold",
+                  active ? "rounded-md bg-white/10 font-extrabold" : "",
+                )}
+                onClick={() => handleLanguageChange(index, code)}
+              >
+                {lng}
+              </Label>
+            );
+          })}
+        </div>
+
         <Drawer />
       </div>
     </header>
