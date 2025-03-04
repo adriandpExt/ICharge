@@ -1,11 +1,47 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+interface LanguageCode {
+  lng: string;
+  active: boolean;
+  code: string;
+}
+
+const langCode: LanguageCode[] = [
+  {
+    lng: "ENG",
+    active: true,
+    code: "en",
+  },
+  {
+    lng: "CHI(简化)",
+    active: false,
+    code: "zhTW",
+  },
+  {
+    lng: "CHI(传统的)",
+    active: false,
+    code: "zhCN",
+  },
+];
+
 const useLanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState<string>(
     i18n.language,
   );
+  const [language, setLanguage] = useState<LanguageCode[]>(langCode);
+
+  const handleLanguageChange = (index: number, lng: string) => {
+    handleValueChange(lng);
+    setLanguage(
+      language.map((data, idx) => {
+        return idx === index
+          ? { ...data, active: true }
+          : { ...data, active: false };
+      }),
+    );
+  };
 
   useEffect(() => {
     setSelectedLanguage(i18n.language);
@@ -23,6 +59,8 @@ const useLanguageSwitcher = () => {
   return {
     selectedLanguage,
     handleValueChange,
+    language,
+    handleLanguageChange,
   };
 };
 
