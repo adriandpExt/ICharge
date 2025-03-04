@@ -160,7 +160,7 @@ export const NavBar = () => {
                 key={index}
                 className={cn(
                   "p-2 text-white hover:rounded-md hover:font-extrabold",
-                  active ? "rounded-md font-extrabold bg-white/10" : "",
+                  active ? "rounded-md bg-white/10 font-extrabold" : "",
                 )}
                 onClick={() => handleLanguageChange(index, code)}
               >
