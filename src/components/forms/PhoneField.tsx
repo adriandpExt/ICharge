@@ -32,10 +32,14 @@ const PhoneField = ({ name, label, ...rest }: PhoneInputField) => {
         onChange={handlePhoneChange}
         inputStyle={{
           backgroundColor: "#e5e7eb",
-          borderColor: "white",
+          borderColor: error ? "#dc2626" : "white",
           width: "100%",
         }}
-        buttonStyle={{ borderColor: "white" }}
+        buttonStyle={{
+          borderColor: error ? "#dc2626" : "white",
+          backgroundColor: '#e5e7eb',
+          borderRightColor: "#e5e7eb",
+        }}
         enableAreaCodeStretch
         inputProps={{ required: true }}
         placeholder="12345678910"
