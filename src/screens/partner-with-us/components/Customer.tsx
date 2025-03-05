@@ -6,7 +6,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 import { useToast } from "@/hooks/use-toast";
-import { usePhoneNumberFormatter } from "@/hooks/usePhoneNumberFormatter ";
 import { zodResolver } from "@hookform/resolvers/zod";
 import LocalizationKey from "@/i18n/key";
 
@@ -15,6 +14,7 @@ import { Button } from "@/components/ui/button";
 
 import { customerDefaultValues, customerFormSchema } from "../utils";
 import { chatId, publicKey, serviceId } from "@/lib/viteKey";
+import PhoneField from "@/components/forms/PhoneField";
 
 const Customer = (): ReactElement => {
   const customerRef = useRef<HTMLFormElement>(null);
@@ -25,9 +25,6 @@ const Customer = (): ReactElement => {
     resolver: zodResolver(customerFormSchema),
     defaultValues: customerDefaultValues,
   });
-
-  const { setValue } = inquiryForm;
-  const { handlePhoneNumberChange } = usePhoneNumberFormatter(setValue);
 
   const sendEmail = () => {
     if (customerRef.current) {
@@ -90,14 +87,11 @@ const Customer = (): ReactElement => {
             name="email"
             label={t(LocalizationKey.partnerWithUs.inquiryForm.customer.email)}
           />
-
-          <TextField
-            control={inquiryForm.control}
-            name="phoneNumber"
-            onChange={handlePhoneNumberChange}
+          <PhoneField
             label={t(
               LocalizationKey.partnerWithUs.inquiryForm.customer.phoneNumber,
             )}
+            name="phoneNumber"
           />
         </div>
 
