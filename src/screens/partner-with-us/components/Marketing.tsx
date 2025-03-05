@@ -93,7 +93,9 @@ const Marketing = (): ReactElement => {
             label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.email)}
           />
           <PhoneField
-            label="Phone Number"
+            label={
+              LocalizationKey.partnerWithUs.inquiryForm.marketing.phoneNumber
+            }
             name="phoneNumber"
           />
         </div>
