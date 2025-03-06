@@ -54,7 +54,8 @@ const Marketing = (): ReactElement => {
   };
 
   const handleInquiryFormSubmit: SubmitHandler<IMarketing> = () => {
-    sendEmail();
+    // sendEmail();
+    console.log("send", inquiryForm.control._formValues);
     inquiryForm.reset();
   };
   return (
@@ -93,9 +94,10 @@ const Marketing = (): ReactElement => {
             label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.email)}
           />
           <PhoneField
-            label={
-              LocalizationKey.partnerWithUs.inquiryForm.marketing.phoneNumber
-            }
+            control={inquiryForm.control}
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.marketing.phoneNumber,
+            )}
             name="phoneNumber"
           />
         </div>

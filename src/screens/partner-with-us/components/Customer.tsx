@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { customerDefaultValues, customerFormSchema } from "../utils";
 import { chatId, publicKey, serviceId } from "@/lib/viteKey";
 import PhoneField from "@/components/forms/PhoneField";
+import { CountryData } from "react-phone-input-2";
 
 const Customer = (): ReactElement => {
   const customerRef = useRef<HTMLFormElement>(null);
@@ -52,8 +53,16 @@ const Customer = (): ReactElement => {
     });
   };
 
-  const handleInquiryFormSubmit: SubmitHandler<ICustomer> = () => {
-    sendEmail();
+  const handleInquiryFormSubmit: SubmitHandler<ICustomer> = (data) => {
+    // sendEmail();
+
+    const phoneNumber = data.phoneNumber;
+
+    console.log("phoneNumber", {
+      ...data,
+      phoneNumber: `+${phoneNumber}`,
+    });
+
     inquiryForm.reset();
   };
 
@@ -88,10 +97,11 @@ const Customer = (): ReactElement => {
             label={t(LocalizationKey.partnerWithUs.inquiryForm.customer.email)}
           />
           <PhoneField
+            control={inquiryForm.control}
+            name="phoneNumber"
             label={t(
               LocalizationKey.partnerWithUs.inquiryForm.customer.phoneNumber,
             )}
-            name="phoneNumber"
           />
         </div>
 
