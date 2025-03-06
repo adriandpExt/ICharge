@@ -14,7 +14,7 @@ const useLanguageSwitcher = () => {
   );
 
   const defaultLang = (code: string) => {
-    if (code === "enUS") {
+    if (selectedLanguage === "enUS" && code === "en") {
       return true;
     } else if (selectedLanguage === code) {
       return true;
