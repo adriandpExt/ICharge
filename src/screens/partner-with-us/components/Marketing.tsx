@@ -4,6 +4,7 @@ import { ReactElement, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SubmitHandler, useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import "react-phone-input-2/lib/style.css";
 
 import { useToast } from "@/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,6 +15,7 @@ import { Button } from "@/components/ui/button";
 
 import { inquiryDefaultValues, inquiryFormSchema } from "../utils";
 import { inquiryId, publicKey, serviceId } from "@/lib/viteKey";
+import PhoneField from "@/components/forms/PhoneField";
 
 const Marketing = (): ReactElement => {
   const inquiryFormRef = useRef<HTMLFormElement>(null);
@@ -55,7 +57,6 @@ const Marketing = (): ReactElement => {
     sendEmail();
     inquiryForm.reset();
   };
-
   return (
     <Form
       forms={inquiryForm}
@@ -78,26 +79,28 @@ const Marketing = (): ReactElement => {
               LocalizationKey.partnerWithUs.inquiryForm.marketing.lastname,
             )}
           />
+          <TextField
+            control={inquiryForm.control}
+            name="company"
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.marketing.company,
+            )}
+          />
+          <TextField
+            control={inquiryForm.control}
+            type="email"
+            name="email"
+            label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.email)}
+          />
+          <PhoneField
+            control={inquiryForm.control}
+            label={t(
+              LocalizationKey.partnerWithUs.inquiryForm.marketing.phoneNumber,
+            )}
+            name="phoneNumber"
+          />
         </div>
 
-        <TextField
-          control={inquiryForm.control}
-          name="company"
-          label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.company)}
-        />
-        <TextField
-          control={inquiryForm.control}
-          type="email"
-          name="email"
-          label={t(LocalizationKey.partnerWithUs.inquiryForm.marketing.email)}
-        />
-        <TextField
-          control={inquiryForm.control}
-          name="phoneNumber"
-          label={t(
-            LocalizationKey.partnerWithUs.inquiryForm.marketing.phoneNumber,
-          )}
-        />
         <TextArea
           className="h-52"
           control={inquiryForm.control}

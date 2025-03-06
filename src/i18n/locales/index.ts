@@ -6,10 +6,10 @@ export default {
   en: {
     translation: enTranslation,
   },
-  cht: {
+  zhTW: {
     translation: chtTranslation,
   },
-  chs: {
+  zhCN: {
     translation: chsTranslation,
   },
 };

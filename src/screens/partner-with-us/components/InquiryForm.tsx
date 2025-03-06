@@ -60,13 +60,13 @@ export const InquiryForm = (): ReactElement => {
           className="hidden items-center gap-5 whitespace-pre-line lg:flex"
         >
           <MapPin size={32} strokeWidth={3} />
-          Unit 2402 City Trade and Financial Tower, 7th Avenue, BGC, Taguig
+          Unit 2402 Trade and Financial Tower, 7th Avenue, BGC, Taguig
         </Label>
 
         <div className="flex items-center gap-5 lg:hidden">
           <MapPin size={32} strokeWidth={3} />
           <div className="flex flex-col">
-            <Label variant={"body"}>Unit 2402 City</Label>
+            <Label variant={"body"}>Unit 2402 </Label>
             <Label variant={"body"}>Trade and Financial Tower,</Label>
             <Label variant={"body"}>7th Avenue, BGC, Taguig</Label>
           </div>

@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 
 import { customerDefaultValues, customerFormSchema } from "../utils";
 import { chatId, publicKey, serviceId } from "@/lib/viteKey";
+import PhoneField from "@/components/forms/PhoneField";
 
 const Customer = (): ReactElement => {
   const customerRef = useRef<HTMLFormElement>(null);
@@ -86,8 +87,7 @@ const Customer = (): ReactElement => {
             name="email"
             label={t(LocalizationKey.partnerWithUs.inquiryForm.customer.email)}
           />
-
-          <TextField
+          <PhoneField
             control={inquiryForm.control}
             name="phoneNumber"
             label={t(

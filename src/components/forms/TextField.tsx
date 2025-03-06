@@ -10,6 +10,7 @@ import {
 import { Input } from "@/components/ui/input";
 import LocalizationKey from "@/i18n/key";
 import { cn } from "@/lib/utils";
+import { ChangeEventHandler } from "react";
 import { FieldValues, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -25,6 +26,7 @@ type TextFieldTypes =
 interface TextFieldProps<T extends FieldValues> extends FormFieldProps<T> {
   className?: string;
   type?: TextFieldTypes;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 export const TextField = <T extends FieldValues>({
@@ -34,6 +36,7 @@ export const TextField = <T extends FieldValues>({
   className,
   type = "text",
   placeholder,
+  onChange,
 }: TextFieldProps<T>) => {
   const { t } = useTranslation();
 
@@ -58,6 +61,10 @@ export const TextField = <T extends FieldValues>({
                 type={type}
                 {...field}
                 placeholder={placeholderText}
+                onChange={(event) => {
+                  field.onChange(event);
+                  onChange?.(event);
+                }}
                 className={cn(
                   "w-full border-white bg-gray-200 placeholder:text-gray-500",
                   formState.errors[field.name] && "border-red-600",

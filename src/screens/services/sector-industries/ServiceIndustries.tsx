@@ -36,6 +36,7 @@ const ServiceIndustries = (): ReactElement => {
       {/* desktop view */}
       {serviceIndustries.map((data, index) => (
         <div
+          data-aos="zoom-in-up"
           className={cn("hidden lg:flex", index % 2 === 0 ? "pr-10" : "pl-10")}
           key={index}
           id={index === 3 ? "Events" : data.title}
