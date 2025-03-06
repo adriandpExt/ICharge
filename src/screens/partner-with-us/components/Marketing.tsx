@@ -54,8 +54,7 @@ const Marketing = (): ReactElement => {
   };
 
   const handleInquiryFormSubmit: SubmitHandler<IMarketing> = () => {
-    // sendEmail();
-    console.log("send", inquiryForm.control._formValues);
+    sendEmail();
     inquiryForm.reset();
   };
   return (

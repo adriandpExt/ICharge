@@ -5,9 +5,10 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { ChangeEvent } from "react";
 import { FieldValues, useFormContext } from "react-hook-form";
 
-import PhoneInput, { PhoneInputProps } from "react-phone-input-2";
+import PhoneInput, { CountryData, PhoneInputProps } from "react-phone-input-2";
 
 interface PhoneInputField extends PhoneInputProps, FieldValues {
   name: string;
@@ -15,7 +16,20 @@ interface PhoneInputField extends PhoneInputProps, FieldValues {
 }
 
 const PhoneField = ({ name, label, control, ...rest }: PhoneInputField) => {
-  const { formState } = useFormContext();
+  const { formState, setValue, clearErrors, setError } = useFormContext();
+  const handlePhoneChange = (
+    _value: string,
+    _country: CountryData,
+    _event: ChangeEvent<HTMLInputElement>,
+    formattedValue: string,
+  ) => {
+    setValue(name, formattedValue);
+    if (formattedValue === "" || formattedValue === "+") {
+      setError(name, { type: "required", message: "Phone Number is required" });
+    } else {
+      clearErrors(name);
+    }
+  };
 
   const error = formState.errors[name];
   return (
@@ -41,7 +55,8 @@ const PhoneField = ({ name, label, control, ...rest }: PhoneInputField) => {
                 enableAreaCodeStretch
                 inputProps={{ required: true }}
                 placeholder="12345678910"
-                {...field}
+                value={field.value}
+                onChange={handlePhoneChange}
                 {...rest}
               />
             </FormControl>
