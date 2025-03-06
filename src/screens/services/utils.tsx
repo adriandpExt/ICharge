@@ -14,11 +14,11 @@ import Products24Max from "@/assets/Products/products/ichargeMax.png";
 import ProductsQCRC from "@/assets/Products/products/ichargeQCRC.png";
 import ProductsQCSQ from "@/assets/Products/products/ichargeQCSQ.png";
 
-import sectorHospitality from "@/assets/sectors/sectorHospitality.png";
-import sectorHealthCare from "@/assets/sectors/sectorHealthcare.png";
-import sectorTransport from "@/assets/sectors/sectorTransport.png";
-import sectorEvents from "@/assets/sectors/sectorEvents.png";
-import sectorRetail from "@/assets/sectors/sectorRetail.png";
+import sectorHospitality from "@/assets/sectors/sectorHospitality.jpg";
+import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
+import sectorTransport from "@/assets/sectors/sectorTransport.jpg";
+import sectorEvents from "@/assets/sectors/sectorEvents.jpg";
+import sectorRetail from "@/assets/sectors/sectorRetail.jpg";
 
 export const useServices = () => {
   const { t } = useTranslation();
