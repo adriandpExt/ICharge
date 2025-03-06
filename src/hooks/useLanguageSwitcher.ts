@@ -7,29 +7,37 @@ interface LanguageCode {
   code: string;
 }
 
-const langCode: LanguageCode[] = [
-  {
-    lng: "ENG",
-    active: true,
-    code: "en",
-  },
-  {
-    lng: "CHI(简化)",
-    active: false,
-    code: "zhTW",
-  },
-  {
-    lng: "CHI(传统的)",
-    active: false,
-    code: "zhCN",
-  },
-];
-
 const useLanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState<string>(
     i18n.language,
   );
+
+  const defaultLang = (code: string) => {
+    if (code === "enUS") {
+      return true;
+    } else if (selectedLanguage === code) {
+      return true;
+    } else return false;
+  };
+
+  const langCode: LanguageCode[] = [
+    {
+      lng: "ENG",
+      active: defaultLang("en"),
+      code: "en",
+    },
+    {
+      lng: "CHI(简化)",
+      active: defaultLang("zhTW"),
+      code: "zhTW",
+    },
+    {
+      lng: "CHI(传统的)",
+      active: defaultLang("zhCN"),
+      code: "zhCN",
+    },
+  ];
   const [language, setLanguage] = useState<LanguageCode[]>(langCode);
 
   const handleLanguageChange = (index: number, lng: string) => {
