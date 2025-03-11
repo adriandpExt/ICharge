@@ -5,29 +5,37 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { ChangeEvent } from "react";
 import { FieldValues, useFormContext } from "react-hook-form";
 
-import PhoneInput, { CountryData, PhoneInputProps } from "react-phone-input-2";
+import PhoneInput, { CountryData } from "react-phone-input-2";
+import { FormFieldProps } from "./types";
+import { ChangeEvent } from "react";
 
-interface PhoneInputField extends PhoneInputProps, FieldValues {
-  name: string;
-  label: string;
+interface PhoneInputField<T extends FieldValues> extends FormFieldProps<T> {
+  className?: string;
 }
 
-const PhoneField = ({ name, label, control, ...rest }: PhoneInputField) => {
-  const { formState, setValue, clearErrors, setError } = useFormContext();
+const PhoneField = <T extends FieldValues>({
+  name,
+  label,
+  control,
+}: PhoneInputField<T>) => {
+  const { formState, setValue, setError, clearErrors } = useFormContext();
+
   const handlePhoneChange = (
     _value: string,
-    _country: CountryData,
+    _data: CountryData,
     _event: ChangeEvent<HTMLInputElement>,
     formattedValue: string,
   ) => {
-    setValue(name, formattedValue);
-    if (formattedValue === "" || formattedValue === "+") {
-      setError(name, { type: "required", message: "Phone Number is required" });
+    setValue("phoneNumber", formattedValue);
+    if (formattedValue === _data.dialCode) {
+      setError("phoneNumber", {
+        type: "required",
+        message: "Phone Number is Required",
+      });
     } else {
-      clearErrors(name);
+      clearErrors("phoneNumber");
     }
   };
 
@@ -42,22 +50,24 @@ const PhoneField = ({ name, label, control, ...rest }: PhoneInputField) => {
             {label}
             <FormControl>
               <PhoneInput
+                {...field}
                 country={"ph"}
                 inputStyle={{
                   backgroundColor: "#e5e7eb",
                   borderColor: error ? "#dc2626" : "white",
                   width: "100%",
                 }}
+                inputProps={{
+                  name: name,
+                }}
                 buttonStyle={{
                   borderColor: error ? "#dc2626" : "white",
                   backgroundColor: "#e5e7eb",
                 }}
-                enableAreaCodeStretch
-                inputProps={{ required: true }}
+                enableAreaCodes={false}
+                countryCodeEditable={false}
                 placeholder="12345678910"
-                value={field.value}
                 onChange={handlePhoneChange}
-                {...rest}
               />
             </FormControl>
             <FormMessage className={`font-poppins text-red-600`} />

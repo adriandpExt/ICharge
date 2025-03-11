@@ -14,7 +14,7 @@ const useLanguageSwitcher = () => {
   );
 
   const defaultLang = (code: string) => {
-    if (code === "enUS") {
+    if (selectedLanguage === "enUS" && code === "en") {
       return true;
     } else if (selectedLanguage === code) {
       return true;
@@ -23,17 +23,17 @@ const useLanguageSwitcher = () => {
 
   const langCode: LanguageCode[] = [
     {
-      lng: "ENG",
+      lng: "EN",
       active: defaultLang("en"),
       code: "en",
     },
     {
-      lng: "CHI(简化)",
+      lng: "中(繁)",
       active: defaultLang("zhTW"),
       code: "zhTW",
     },
     {
-      lng: "CHI(传统的)",
+      lng: "中(简)",
       active: defaultLang("zhCN"),
       code: "zhCN",
     },
