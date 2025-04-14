@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 import { AosInitializer } from "./lib/aosInitializer";
@@ -7,6 +7,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Spinner } from "./components";
 
 const App = () => {
+  const location = useLocation();
+  const { id } = useParams<{ id: string }>();
+  const isBusinessCardPage = location.pathname.startsWith("/business-card");
+
   return (
     <Suspense
       fallback={
@@ -15,12 +19,17 @@ const App = () => {
         </div>
       }
     >
-      <Layout>
-        <AosInitializer />
-        <Outlet />
-        {/* <FloatingButton /> */}
-        <Toaster />
-      </Layout>
+      {!isBusinessCardPage ? (
+        <Layout>
+          <AosInitializer />
+          <Outlet />
+          <Toaster />
+        </Layout>
+      ) : (
+        <div>
+          <Outlet context={{ id }} />
+        </div>
+      )}
     </Suspense>
   );
 };

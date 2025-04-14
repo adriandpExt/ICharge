@@ -9,6 +9,7 @@ export const About = lazy(() => import("@/screens/about"));
 export const Services = lazy(() => import("@/screens/services"));
 export const Home = lazy(() => import("@/screens/home"));
 export const Faqs = lazy(() => import("@/screens/faqs"));
+export const BusinessCard = lazy(() => import("@/screens/business-card"));
 export const TermsAndConditions = lazy(
   () => import("@/screens/terms-and-conditions"),
 );
@@ -29,13 +30,16 @@ const router: RouteObject[] = [
         index: true,
         element: <Home />,
       },
-      // ...sectorRoutes,
       { path: "partner", element: <Partners /> },
       { path: "services", element: <Services /> },
       { path: "about", element: <About /> },
       {
         path: "faqs",
         element: <Faqs />,
+      },
+      {
+        path: "business-card/:id",
+        element: <BusinessCard />,
       },
       {
         path: "terms-and-conditions",

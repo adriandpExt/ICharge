@@ -34,4 +34,10 @@ export type IconName =
   | "ic_lock"
   | "ic_free"
   | "ic_sale"
-  | "ic_viber";
+  | "ic_viber"
+  | "ic_bc_viber"
+  | "ic_basil_viber_outline"
+  | "stay_powered_stay_connected"
+  | "bc_background"
+  | "ic_bc_email"
+  | "ic_bc_web";
