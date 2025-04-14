@@ -56,9 +56,7 @@ const BusinessCard = (): ReactElement => {
 
           <Button
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
-            onClick={() =>
-              (window.location.href = `mailto:${card.email || "example@example.com"}`)
-            }
+            onClick={() => (window.location.href = `mailto:${card.email}`)}
           >
             <SvgIcons name="ic_bc_email" size={30} />
             <Label className="font-poppins text-white">Email me</Label>
