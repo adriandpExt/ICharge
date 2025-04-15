@@ -9,7 +9,9 @@ import { Spinner } from "./components";
 const App = () => {
   const location = useLocation();
   const { id } = useParams<{ id: string }>();
-  const isBusinessCardPage = location.pathname.startsWith("/business-card");
+  const isBusinessCardPage =
+    location.pathname.startsWith("/business-card") ||
+    location.pathname.startsWith("/qr-code");
 
   return (
     <Suspense

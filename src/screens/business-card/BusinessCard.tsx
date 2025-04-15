@@ -36,7 +36,7 @@ const BusinessCard = (): ReactElement => {
 
       <div className="flex h-screen w-screen flex-col items-center rounded-lg bg-white bg-[url('@/assets/bg_pattern.svg')] p-10">
         <Avatar imageUrl={card.imgLink} altText={card.name} size={220} />
-        <Label className="p-2 font-poppins text-2xl font-semibold text-gray-800">
+        <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
           {card.name}
         </Label>
         <Label className="font-poppins text-lg font-semibold text-gray-800">
