@@ -10,6 +10,7 @@ export const Services = lazy(() => import("@/screens/services"));
 export const Home = lazy(() => import("@/screens/home"));
 export const Faqs = lazy(() => import("@/screens/faqs"));
 export const BusinessCard = lazy(() => import("@/screens/business-card"));
+export const QRCode = lazy(() => import("@/screens/qr-code"));
 export const TermsAndConditions = lazy(
   () => import("@/screens/terms-and-conditions"),
 );
@@ -40,6 +41,10 @@ const router: RouteObject[] = [
       {
         path: "business-card/:id",
         element: <BusinessCard />,
+      },
+      {
+        path: "qr-code/:id",
+        element: <QRCode />,
       },
       {
         path: "terms-and-conditions",
