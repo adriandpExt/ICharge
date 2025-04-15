@@ -18,7 +18,7 @@ export const Avatar = (props: IAvatar): ReactElement => {
       style={{ width: size, height: size }}
     >
       {isLoading && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center rounded-full bg-white">
+        <div className="absolute inset-0 z-10 flex items-center justify-center rounded-full border-4 border-[#078E00] bg-slate-100">
           <Spinner />
         </div>
       )}
