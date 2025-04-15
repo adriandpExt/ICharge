@@ -5,4 +5,5 @@ export interface CardInfo {
   viberLink: string;
   imgLink: string;
   email: string;
+  qrLink: string;
 }
