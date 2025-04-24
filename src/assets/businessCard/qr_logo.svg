@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="500" height="500"/>
+  <g>
+    <rect x="150" y="264.06" width="34" height="47.47"/>
+    <rect x="176.37" y="190.23" width="33.63" height="121.31"/>
+    <rect x="202.74" y="118.15" width="27.26" height="193.39"/>
+    <rect x="223.84" y="32" width="24.61" height="279.53"/>
+    <rect x="241" y="211.32" width="83.05" height="100.21"/>
+    <rect x="257.24" y="306.26" width="31.76" height="161.74"/>
+    <rect x="283.61" y="306.26" width="21.1" height="105.48"/>
+    <rect x="293" y="211.32" width="32.81" height="123.06"/>
+    <rect x="324.05" y="211.32" width="26.37" height="47.47"/>
+  </g>
+</svg>

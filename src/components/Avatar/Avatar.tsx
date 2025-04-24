@@ -14,7 +14,7 @@ export const Avatar = (props: IAvatar): ReactElement => {
 
   return (
     <div
-      className="relative mx-auto my-8 flex items-center justify-center"
+      className="relative mx-auto flex items-center justify-center"
       style={{ width: size, height: size }}
     >
       {isLoading && (
