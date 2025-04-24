@@ -35,17 +35,11 @@ const QRGenerator = (): ReactElement => {
       imageOptions: {
         crossOrigin: "anonymous",
         margin: 4,
-        imageSize: 0.7,
+        imageSize: 0.6,
       },
     });
 
     qrCode.current.append(qrRef.current);
-
-    const canvas = qrRef.current?.querySelector("canvas");
-    if (canvas) {
-      canvas.style.width = "260px";
-      canvas.style.height = "260px";
-    }
   }, [card, qrValue]);
 
   const handleDownload = () => {
@@ -77,18 +71,7 @@ const QRGenerator = (): ReactElement => {
       </div>
 
       <div className="mt-10 flex flex-col items-center">
-        <div
-          ref={qrRef}
-          className="qr-wrapper"
-          style={{
-            width: "260px",
-            height: "260px",
-            minWidth: "260px",
-            minHeight: "260px",
-            maxWidth: "260px",
-            maxHeight: "260px",
-          }}
-        />
+        <div ref={qrRef} />
         <Label className="mt-4 text-center text-2xl">{card.name}</Label>
         <div className="mt-6">
           <Button onClick={handleDownload}>Download</Button>
