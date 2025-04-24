@@ -34,6 +34,7 @@ const QRGenerator = (): ReactElement => {
         color: "#ffffff",
       },
       imageOptions: {
+        crossOrigin: "anonymous",
         margin: 4,
         imageSize: 0.7,
       },
