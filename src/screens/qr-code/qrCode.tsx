@@ -21,7 +21,6 @@ const QRGenerator = (): ReactElement => {
     if (!card || !qrRef.current) return;
 
     qrRef.current.innerHTML = "";
-
     qrCode.current = new QRCodeStyling({
       width: 260,
       height: 260,
@@ -41,6 +40,12 @@ const QRGenerator = (): ReactElement => {
     });
 
     qrCode.current.append(qrRef.current);
+
+    const canvas = qrRef.current?.querySelector("canvas");
+    if (canvas) {
+      canvas.style.width = "260px";
+      canvas.style.height = "260px";
+    }
   }, [card, qrValue]);
 
   const handleDownload = () => {
@@ -75,7 +80,14 @@ const QRGenerator = (): ReactElement => {
         <div
           ref={qrRef}
           className="qr-wrapper"
-          style={{ width: "260px", height: "260px" }}
+          style={{
+            width: "260px",
+            height: "260px",
+            minWidth: "260px",
+            minHeight: "260px",
+            maxWidth: "260px",
+            maxHeight: "260px",
+          }}
         />
         <Label className="mt-4 text-center text-2xl">{card.name}</Label>
         <div className="mt-6">
