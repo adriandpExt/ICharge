@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SvgIcons } from "@/components/svg-icons";
 import { Label } from "@/components/ui/label";
-import QRLogo from "@/assets/businessCard/qr_logo.svg";
+import QRLogo from "@/assets/businessCard/qr_logo.png";
 import Lottie from "lottie-light-react";
 import NotFound from "@/assets/lottie/404.json";
 import QRCodeStyling from "qr-code-styling";
