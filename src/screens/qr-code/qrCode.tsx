@@ -72,7 +72,11 @@ const QRGenerator = (): ReactElement => {
       </div>
 
       <div className="mt-10 flex flex-col items-center">
-        <div ref={qrRef} />
+        <div
+          ref={qrRef}
+          className="qr-wrapper"
+          style={{ width: "260px", height: "260px" }}
+        />
         <Label className="mt-4 text-center text-2xl">{card.name}</Label>
         <div className="mt-6">
           <Button onClick={handleDownload}>Download</Button>
