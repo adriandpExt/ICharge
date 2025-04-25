@@ -113,7 +113,9 @@ export const Footer = () => {
           <NewsletterSection />
         </div>
         <div className="mt-10 flex flex-col items-center justify-between border-t border-gray-500 pt-6 sm:flex-row">
-          <Label variant="default">{t(LocalizationKey.footer.copyright)}</Label>
+          <Label variant="default">
+            2018–{new Date().getFullYear()} Quanta Dance, Inc
+          </Label>
           <div className="mt-4 hidden gap-4 sm:mt-0 sm:flex">
             {bottomLinks.map((item) => (
               <Link to={item.path} key={item.path} onClick={handleClick}>
