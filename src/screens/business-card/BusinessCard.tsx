@@ -27,14 +27,14 @@ const BusinessCard = (): ReactElement => {
 
   return (
     <div className="flex-col overflow-x-hidden">
-      <div className="h-[100px] w-screen bg-gradient-to-b from-[#044F00] to-[#078E00]">
+      <div className="flex h-[100px] w-full items-center justify-center bg-gradient-to-b from-[#044F00] to-[#078E00]">
         <Button variant="icon" className="mx-3 mt-8 space-x-10">
           <SvgIcons name="ic_icharge_white" size={140} />
           <SvgIcons name="stay_powered_stay_connected" size={140} />
         </Button>
       </div>
 
-      <div className="flex h-screen w-screen flex-col items-center rounded-lg bg-white bg-[url('@/assets/bg_pattern.svg')] p-7">
+      <div className="flex h-screen w-screen flex-col items-center rounded-lg bg-white bg-[url('@/assets/businessCard/social_bg.svg')] p-7">
         <Avatar imageUrl={card.imgLink} altText={card.name} size={200} />
         <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
           {card.name}

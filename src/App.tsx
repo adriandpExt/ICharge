@@ -11,7 +11,8 @@ const App = () => {
   const { id } = useParams<{ id: string }>();
   const isBusinessCardPage =
     location.pathname.startsWith("/business-card") ||
-    location.pathname.startsWith("/qr-code");
+    location.pathname.startsWith("/qr-code") ||
+    location.pathname.startsWith("/social-media");
 
   return (
     <Suspense
