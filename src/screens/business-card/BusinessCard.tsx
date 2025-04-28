@@ -48,26 +48,36 @@ const BusinessCard = (): ReactElement => {
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
             onClick={() => window.open(card.viberLink, "_blank")}
           >
-            <SvgIcons name="ic_basil_viber_outline" size={35} />
-            <Label className="font-poppins text-white">
-              Chat with me on Viber
-            </Label>
+            <div className="flex w-full translate-x-[6%] items-center gap-2">
+              <SvgIcons name="ic_basil_viber_outline" size={40} />
+              <Label className="font-poppins font-bold text-white">
+                Chat with me on Viber
+              </Label>
+            </div>
           </Button>
 
           <Button
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
             onClick={() => (window.location.href = `mailto:${card.email}`)}
           >
-            <SvgIcons name="ic_bc_email" size={30} />
-            <Label className="font-poppins text-white">Email me</Label>
+            <div className="flex w-full translate-x-[7%] items-center gap-2">
+              <SvgIcons name="ic_bc_email" size={35} />
+              <Label className="font-poppins font-bold text-white">
+                Email me
+              </Label>
+            </div>
           </Button>
 
           <Button
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
             onClick={() => window.open(`https://chr.gg/`, "_blank")}
           >
-            <SvgIcons name="ic_bc_web" size={30} />
-            <Label className="font-poppins text-white">Visit our website</Label>
+            <div className="flex w-full translate-x-[7%] items-center gap-2">
+              <SvgIcons name="ic_bc_web" size={35} />
+              <Label className="font-poppins font-bold text-white">
+                Visit our website
+              </Label>
+            </div>
           </Button>
         </div>
       </div>
