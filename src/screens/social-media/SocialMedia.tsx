@@ -29,10 +29,10 @@ const SocialMedia = (): ReactElement => {
   return (
     <div className="flex flex-col items-center justify-center overflow-x-hidden">
       <div className="flex h-[100px] w-full items-center justify-center bg-gradient-to-b from-[#044F00] to-[#078E00]">
-        <div className="flex space-x-10">
-          <SvgIcons name="ic_icharge_white" size={130} />
-          <SvgIcons name="stay_powered_stay_connected" size={130} />
-        </div>
+        <Button variant="icon" className="mx-3 mb-8 mt-9 space-x-10">
+          <SvgIcons name="ic_icharge_white" size={150} />
+          <SvgIcons name="stay_powered_stay_connected" size={150} />
+        </Button>
       </div>
       <div className="flex h-screen w-screen flex-col items-center bg-[url('@/assets/businessCard/social_bg.svg')]">
         <Label className="mt-12 bg-gradient-to-b from-[#5CE65C] to-[#078E00] bg-clip-text text-center font-poppins text-2xl font-extrabold text-transparent">

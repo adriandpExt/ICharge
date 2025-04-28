@@ -63,9 +63,9 @@ const QRGenerator = (): ReactElement => {
   return (
     <div className="flex-col overflow-x-hidden">
       <div className="flex h-[100px] w-full items-center justify-center bg-gradient-to-b from-[#044F00] to-[#078E00]">
-        <Button variant="icon" className="mx-3 mt-8 space-x-10">
-          <SvgIcons name="ic_icharge_white" size={130} />
-          <SvgIcons name="stay_powered_stay_connected" size={130} />
+        <Button variant="icon" className="mx-3 mb-8 mt-9 space-x-10">
+          <SvgIcons name="ic_icharge_white" size={150} />
+          <SvgIcons name="stay_powered_stay_connected" size={150} />
         </Button>
       </div>
       <div className="mt-10 flex flex-col items-center">
