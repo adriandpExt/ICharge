@@ -13,6 +13,7 @@ import AleeBorromeo from "@/assets/businessCard/alee_borromeo.png";
 import MatthewOng from "@/assets/businessCard/matthew_ong.png";
 import GinalynMarcelo from "@/assets/businessCard/ginalyn_marcelo.png";
 import RoseRivera from "@/assets/businessCard/rose_rivera.png";
+import WillyElipe from "@/assets/businessCard/willy_elipe.png";
 
 export const businessCardInfo: CardInfo[] = [
   {
@@ -47,7 +48,7 @@ export const businessCardInfo: CardInfo[] = [
     name: "Willy Elipe",
     role: "General Manager",
     viberLink: "viber://chat?number=09063032912",
-    imgLink: NoImage,
+    imgLink: WillyElipe,
     email: "marketinginfo@icharge.com.ph",
     qrLink: "/business-card/004",
   },
@@ -186,5 +187,14 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: JohannLochiong,
     email: "johann@icharge.com.ph",
     qrLink: "/business-card/019",
+  },
+  {
+    id: "020",
+    name: "Social Media Accounts",
+    role: "",
+    viberLink: "",
+    imgLink: NoImage,
+    email: "",
+    qrLink: "/social-media",
   },
 ];
