@@ -15,13 +15,13 @@ const socialLinks = [
     icon: "ic_instagram",
     label: "icharge_ph",
     url: "https://www.instagram.com/icharge_ph/",
-    iconSize: 30,
+    iconSize: 35,
   },
   {
     icon: "ic_tiktok",
     label: "@icharge_ph",
     url: "https://www.tiktok.com/@icharge_ph",
-    iconSize: 30,
+    iconSize: 35,
   },
 ];
 
@@ -35,18 +35,20 @@ const SocialMedia = (): ReactElement => {
         </Button>
       </div>
       <div className="flex h-screen w-screen flex-col items-center bg-[url('@/assets/businessCard/social_bg.svg')]">
-        <Label className="mt-12 bg-gradient-to-b from-[#5CE65C] to-[#078E00] bg-clip-text text-center font-poppins text-2xl font-extrabold text-transparent">
+        <Label className="mt-10 bg-gradient-to-b from-[#5CE65C] to-[#078E00] bg-clip-text text-center font-poppins text-2xl font-extrabold text-transparent">
           FOLLOW US ON
         </Label>
-        <div className="mt-12 flex flex-col items-center justify-center space-y-6 pb-12">
+        <div className="mt-12 flex flex-col items-center justify-center space-y-6">
           {socialLinks.map(({ icon, label, url, iconSize }) => (
             <Button
               key={label}
-              className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
+              className="h-[50px] w-[260px] justify-start bg-[#078E00]"
               onClick={() => window.open(url, "_blank")}
             >
-              <SvgIcons name={icon as IconName} size={iconSize} />
-              <Label className="font-poppins text-white">{label}</Label>
+              <div className="flex w-full translate-x-[11%] items-center gap-2">
+                <SvgIcons name={icon as IconName} size={iconSize} />
+                <Label className="text-lg font-bold">{label}</Label>
+              </div>
             </Button>
           ))}
         </div>
