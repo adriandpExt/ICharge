@@ -14,7 +14,7 @@ import MatthewOng from "@/assets/businessCard/matthew_ong.png";
 import GinalynMarcelo from "@/assets/businessCard/ginalyn_marcelo.png";
 import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
-
+import ContactUS from "@/assets/businessCard/contact_us.png";
 export const businessCardInfo: CardInfo[] = [
   {
     id: "001",
@@ -196,5 +196,14 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: NoImage,
     email: "",
     qrLink: "/social-media",
+  },
+  {
+    id: "021",
+    name: "iCharge",
+    role: "",
+    viberLink: "viber://chat?number=09187388888",
+    imgLink: ContactUS,
+    email: "reachus@icharge.com.ph",
+    qrLink: "/business-card/021",
   },
 ];

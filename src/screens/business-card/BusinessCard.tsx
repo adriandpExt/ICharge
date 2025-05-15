@@ -70,7 +70,7 @@ const BusinessCard = (): ReactElement => {
 
           <Button
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
-            onClick={() => window.open(`https://chr.gg/`, "_blank")}
+            onClick={() => window.open(`https://icharge.com.ph/`, "_blank")}
           >
             <div className="flex w-full translate-x-[7%] items-center gap-2">
               <SvgIcons name="ic_bc_web" size={35} />
