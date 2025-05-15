@@ -24,6 +24,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: NoImage,
     email: "joe@icharge.com.ph",
     qrLink: "/business-card/001",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "002",
@@ -33,6 +35,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: NoImage,
     email: "leff@icharge.com.ph",
     qrLink: "/business-card/002",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "003",
@@ -42,6 +46,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: NoImage,
     email: "evonne@icharge.com.ph",
     qrLink: "/business-card/003",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "004",
@@ -51,6 +57,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: WillyElipe,
     email: "marketinginfo@icharge.com.ph",
     qrLink: "/business-card/004",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "005",
@@ -60,6 +68,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: RoseRivera,
     email: "official@icharge.com.ph",
     qrLink: "/business-card/005",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "006",
@@ -69,6 +79,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: NoImage,
     email: "elvin@icharge.com.ph",
     qrLink: "/business-card/006",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "007",
@@ -78,6 +90,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: AleeBorromeo,
     email: "careers@icharge.com.ph",
     qrLink: "/business-card/007",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   //NO VIBER
   {
@@ -88,6 +102,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: NoImage,
     email: "ads@icharge.com.ph",
     qrLink: "/business-card/008",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "009",
@@ -97,6 +113,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: GinalynMarcelo,
     email: "ginalyn@icharge.com.ph",
     qrLink: "/business-card/009",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "010",
@@ -106,6 +124,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: JaysonEyoy,
     email: "jayson@icharge.com.ph",
     qrLink: "/business-card/010",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "011",
@@ -115,6 +135,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: GloriaPalima,
     email: "ruby@icharge.com.ph",
     qrLink: "/business-card/011",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "012",
@@ -124,6 +146,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: CarlEspiritu,
     email: "carl@icharge.com.ph",
     qrLink: "/business-card/012",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "013",
@@ -133,6 +157,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: JessicaDorado,
     email: "jessica@icharge.com.ph",
     qrLink: "/business-card/013",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "014",
@@ -142,6 +168,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: MatthewOng,
     email: "matthew@icharge.com.ph",
     qrLink: "/business-card/014",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "015",
@@ -151,6 +179,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: EnosLola,
     email: "enos@icharge.com.ph",
     qrLink: "/business-card/015",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "016",
@@ -160,6 +190,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: CerilynSoleybar,
     email: "cerilyn@icharge.com.ph",
     qrLink: "/business-card/016",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "017",
@@ -169,6 +201,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: FloryOcampo,
     email: "floryjoy@icharge.com.ph",
     qrLink: "/business-card/017",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "018",
@@ -178,6 +212,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: JustynNunez,
     email: "justyn@icharge.com.ph",
     qrLink: "/business-card/018",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "019",
@@ -187,6 +223,8 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: JohannLochiong,
     email: "johann@icharge.com.ph",
     qrLink: "/business-card/019",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
   {
     id: "020",
@@ -196,5 +234,7 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: NoImage,
     email: "",
     qrLink: "/social-media",
+    phone: "09153627933",
+    homepage: "https://chr.gg/",
   },
 ];

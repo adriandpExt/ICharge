@@ -12,6 +12,29 @@ const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
 
+  const handleDownloadVCF = () => {
+    if (!card) return;
+
+    const vcard = `BEGIN:VCARD
+VERSION:4.0
+FN:${card.name}
+TEL;TYPE=work,voice:${card.phone}
+EMAIL:${card.email}
+URL:${card.homepage}
+END:VCARD`;
+
+    const blob = new Blob([vcard], { type: "text/vcard" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${card.name}.vcf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   if (!card) {
     return (
       <div className="flex h-screen items-center justify-center">
@@ -44,7 +67,7 @@ const BusinessCard = (): ReactElement => {
         </Label>
 
         <div className="mt-6 space-y-6">
-          <Button
+          {/* <Button
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
             onClick={() => window.open(card.viberLink, "_blank")}
           >
@@ -54,9 +77,9 @@ const BusinessCard = (): ReactElement => {
                 Chat with me on Viber
               </Label>
             </div>
-          </Button>
+          </Button> */}
 
-          <Button
+          {/* <Button
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
             onClick={() => (window.location.href = `mailto:${card.email}`)}
           >
@@ -66,9 +89,9 @@ const BusinessCard = (): ReactElement => {
                 Email me
               </Label>
             </div>
-          </Button>
+          </Button> */}
 
-          <Button
+          {/* <Button
             className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
             onClick={() => window.open(`https://chr.gg/`, "_blank")}
           >
@@ -76,6 +99,18 @@ const BusinessCard = (): ReactElement => {
               <SvgIcons name="ic_bc_web" size={35} />
               <Label className="font-poppins font-bold text-white">
                 Visit our website
+              </Label>
+            </div>
+          </Button> */}
+
+          <Button
+            className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#044F00] text-white"
+            onClick={handleDownloadVCF}
+          >
+            <div className="flex w-full translate-x-[7%] items-center gap-2">
+              <SvgIcons name="ic_download" size={35} />
+              <Label className="font-poppins font-bold text-white">
+                Save Contact
               </Label>
             </div>
           </Button>
