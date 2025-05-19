@@ -6,10 +6,11 @@ interface IAvatar extends PropsWithChildren {
   imageUrl: string;
   altText: string;
   size?: number;
+  hideBorder?: boolean;
 }
 
 export const Avatar = (props: IAvatar): ReactElement => {
-  const { imageUrl, altText, size = 220 } = props;
+  const { imageUrl, altText, size = 220, hideBorder = false } = props;
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -18,7 +19,11 @@ export const Avatar = (props: IAvatar): ReactElement => {
       style={{ width: size, height: size }}
     >
       {isLoading && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center rounded-full border-4 border-[#078E00] bg-slate-100">
+        <div
+          className={`absolute inset-0 z-10 flex items-center justify-center rounded-full ${
+            hideBorder ? "" : "border-4 border-[#078E00]"
+          } bg-slate-100`}
+        >
           <Spinner />
         </div>
       )}
@@ -27,9 +32,9 @@ export const Avatar = (props: IAvatar): ReactElement => {
         alt={altText}
         width={size}
         height={size}
-        className={`rounded-full border-4 border-[#078E00] transition-opacity duration-300 ${
-          isLoading ? "opacity-0" : "opacity-100"
-        }`}
+        className={`rounded-full transition-opacity duration-300 ${
+          hideBorder ? "" : "border-4 border-[#078E00]"
+        } ${isLoading ? "opacity-0" : "opacity-100"}`}
         onLoad={() => setIsLoading(false)}
       />
     </div>
