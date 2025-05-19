@@ -40,4 +40,5 @@ export type IconName =
   | "stay_powered_stay_connected"
   | "bc_background"
   | "ic_bc_email"
+  | "s_p_s_c"
   | "ic_bc_web";

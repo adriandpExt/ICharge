@@ -199,7 +199,7 @@ export const businessCardInfo: CardInfo[] = [
   },
   {
     id: "021",
-    name: "iCharge",
+    name: "",
     role: "",
     viberLink: "viber://chat?number=09187388888",
     imgLink: ContactUS,
