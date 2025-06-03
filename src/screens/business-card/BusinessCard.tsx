@@ -33,11 +33,11 @@ const BusinessCard = (): ReactElement => {
         </Button>
       </div>
 
-      <div className="flex h-screen w-screen flex-col items-center rounded-lg bg-white bg-[url('@/assets/businessCard/social_bg.svg')] p-7">
+      <div className="flex h-screen w-screen flex-col items-center rounded-lg bg-[url('@/assets/businessCard/social_bg.svg')] p-7">
         <Avatar
           imageUrl={card.imgLink}
           altText={card.name}
-          size={230}
+          size={card.id === "021" ? 324 : 230}
           hideBorder={card.id === "021"}
         />
         <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
