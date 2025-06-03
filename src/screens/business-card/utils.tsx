@@ -65,7 +65,7 @@ export const businessCardInfo: CardInfo[] = [
     id: "006",
     name: "Elvin Dela Cruz",
     role: "Sales and Marketing Director",
-    viberLink: "viber://chat?number=091718695059",
+    viberLink: "viber://chat?number=09171869505",
     imgLink: NoImage,
     email: "elvin@icharge.com.ph",
     qrLink: "/business-card/006",
