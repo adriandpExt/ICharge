@@ -137,7 +137,7 @@ export const businessCardInfo: CardInfo[] = [
   {
     id: "014",
     name: "Matthew Rothchild Y. Ong",
-    role: "Sales and Marketing Officer",
+    role: "Sales and Marketing Manager",
     viberLink: "viber://chat?number=09682756650",
     imgLink: MatthewOng,
     email: "matthew@icharge.com.ph",
