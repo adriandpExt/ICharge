@@ -218,6 +218,10 @@
           {
             "question": "How do I check how long I’ve had the power bank and the cost so far?",
             "answer": "This information is available in the app as soon as you start the rental. It shows both the duration and the cost, and will inform you about any unpaid usage."
+          },
+          {
+            "question": "Are the iCharge app and hardware/machine secure?",
+            "answer": "We securely store only basic user information, such as mobile numbers and emails, with payment data managed by trusted gateways like Gcash and Maya. Our app is built with advanced security measures to keep it safe and protected against tampering and is available exclusively through the Apple App Store and Google Play Store, both of which undergo strict security reviews. All sensitive data is encrypted, our servers are protected by continuous monitoring and advanced security, and our hardware is designed to eliminate any risk of data theft."
           }
         ]
       },
@@ -595,26 +599,6 @@
     },
     "ourVisionDesc": {
       "label": "To be the leading provider of mobile charging solutions, ensuring that everyone, everywhere, remains connected at all times, whether locally or globally. Our vision includes scaling our solutions to reach high-traffic areas not just in the Philippines, but in major cities worldwide."
-    },
-    "advocacy" : {
-      "title": {"label" : "Advocacy"},
-      "header": {"label" : "Power to Care-Charging for a Better Tomorrow"},
-      "content": {
-        "paragraph": {"label" : "iCharge is committed to making a meaningful impact on people, animals, and the planet. Through our \"Power to Care\" initiative, we aim to harness the power of small actions to create significant change. By contributing a portion of every power bank rental, we support initiatives that uplift underserved communities, provide aid to vulnerable animals through rescue and care programs, and protect the environment by backing sustainability efforts such as tree planting and responsible e-waste management. Together, we can charge forward toward a brighter, more compassionate future."},
-        "list": {
-          "listTitles" : {
-            "listTitle1" : {"label": "Aid Communities: "},
-            "listTitle2" : {"label": "Protect Animals: "},
-            "listTitle3" : {"label": "Sustain the Planet: "}
-          },
-          "listContents": {
-            "listContent1" : {"label": "Funding educational programs, disaster relief efforts, and essential services for underprivileged individuals."},
-            "listContent2" : {"label": "Partnering with shelters and rescue organizations to care for abandoned and injured animals."},
-            "listContent3" : {"label": "Promoting environmental responsibility by supporting tree-planting projects and e-waste recycling campaigns."}
-          }
-        }
-      },
-      "footer": {"label" : "Together, we charged forward toward a more compassionate and sustainable world."}
     },
     "ourReach": {
       "label": "Our Reach"

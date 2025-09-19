@@ -213,6 +213,10 @@
           {
             "question": "我如何查看已使用的时间和费用？",
             "answer": "在租赁开始后，应用程序会显示使用时长和费用，并提醒您是否有未支付的使用费用。"
+          },
+          {
+            "question": "iCharge 应用程序和硬件安全吗？",
+            "answer": "我们仅安全存储基本用户信息，例如手机号码和电子邮件地址，并由 Gcash 和 Maya 等值得信赖的网关管理支付数据。我们的应用程序采用先进的安全措施构建，确保其安全可靠，防止篡改，并仅通过 Apple App Store 和 Google Play Store 提供，这两个平台均经过严格的安全审核。所有敏感数据均经过加密，我们的服务器受到持续监控和高级安全保护，我们的硬件设计旨在消除任何数据被盗风险。"
           }
         ]
       },
@@ -569,26 +573,6 @@
     },
     "ourVisionDesc": {
       "label": "成为移动充电解决方案的领先供应商，确保每个人无论身处本地还是全球任何地方，都能随时保持连接。我们的愿景包括将解决方案扩展至不仅是菲律宾的高流量区域，还覆盖全球主要城市。"
-    },
-    "advocacy" : {
-      "title": {"label" : "Advocacy"},
-      "header": {"label" : "Power to Care-Charging for a Better Tomorrow"},
-      "content": {
-        "paragraph": {"label" : "iCharge is committed to making a meaningful impact on people, animals, and the planet. Through our \"Power to Care\" initiative, we aim to harness the power of small actions to create significant change. By contributing a portion of every power bank rental, we support initiatives that uplift underserved communities, provide aid to vulnerable animals through rescue and care programs, and protect the environment by backing sustainability efforts such as tree planting and responsible e-waste management. Together, we can charge forward toward a brighter, more compassionate future."},
-        "list": {
-          "listTitles" : {
-            "listTitle1" : {"label": "Aid Communities: "},
-            "listTitle2" : {"label": "Protect Animals: "},
-            "listTitle3" : {"label": "Sustain the Planet: "}
-          },
-          "listContents": {
-            "listContent1" : {"label": "Funding educational programs, disaster relief efforts, and essential services for underprivileged individuals."},
-            "listContent2" : {"label": "Partnering with shelters and rescue organizations to care for abandoned and injured animals."},
-            "listContent3" : {"label": "Promoting environmental responsibility by supporting tree-planting projects and e-waste recycling campaigns."}
-          }
-        }
-      },
-      "footer": {"label" : "Together, we charged forward toward a more compassionate and sustainable world."}
     },
     "ourReach": {
       "label": "我们的覆盖范围"

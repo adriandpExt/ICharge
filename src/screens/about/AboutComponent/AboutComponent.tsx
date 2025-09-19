@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import {
-  Advocacies,
   Certs,
   CertsMobileBottomRow,
   CertsMobileTopRow,
@@ -144,6 +143,7 @@ const AboutComponent = (): ReactElement => {
             </Label>
           </SectionContent>
         </section>
+
         <section data-aos="fade-up">
           <SectionTitle icon={UnionLogo} className="justify-end">
             <Label variant="banner">{t(LocalizationKey.about.ourVision)}</Label>
@@ -154,41 +154,12 @@ const AboutComponent = (): ReactElement => {
             </Label>
           </SectionContent>
         </section>
+
         <section data-aos="fade-up">
-          <SectionTitle icon={VectorLogo}>
-            <Label variant="banner">
-              {t(LocalizationKey.about.advocacy.title)}
-            </Label>
-          </SectionTitle>
-          <SectionContent className="rounded-none md:mr-36 md:rounded-br-[5rem]">
-            <div className="flex flex-col gap-5">
-              <Label variant="heading2">
-                "{t(LocalizationKey.about.advocacy.header)}"
-              </Label>
-              <Label variant="subtitle">
-                {t(LocalizationKey.about.advocacy.content.paragraph)}
-              </Label>
-              {Advocacies.map((data,index) => (
-                <Label variant="subtitle" key={index}>
-                  <Label
-                    variant="subtitle"
-                    className="font-bold">{t(data.ListTitle)}</Label>{t(data.ListContent)}
-                </Label>
-              ))}
-              <Label
-                variant="heading2"
-                className="bg-gradient-to-b from-green-900 to-green-400 bg-clip-text text-center italic text-transparent lg:px-24"
-              >
-                {t(LocalizationKey.about.advocacy.footer)}
-              </Label>
-            </div>
-          </SectionContent>
-        </section>
-        <section data-aos="fade-up">
-          <SectionTitle icon={VectorLogo} className="justify-end">
+          <SectionTitle icon={VectorLogo} className="justify-start">
             <Label variant="banner">{t(LocalizationKey.about.ourReach)}</Label>
           </SectionTitle>
-          <SectionContent className="rounded-none md:ml-36 md:rounded-bl-[5rem]">
+          <SectionContent className="rounded-none md:mr-36 md:rounded-br-[5rem]">
             <div className="flex flex-col gap-5">
               {[
                 LocalizationKey.about.ourReachDesc1,
@@ -202,6 +173,7 @@ const AboutComponent = (): ReactElement => {
             </div>
           </SectionContent>
         </section>
+
         <PageContainer className="flex flex-col gap-20 px-0 md:px-10">
           {SumVal.map((data, index) => (
             <SummaryCard

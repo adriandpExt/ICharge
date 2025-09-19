@@ -221,26 +221,6 @@ const LocalizationKey = {
     ourMissionDesc: "about.OurMissionDesc.label",
     ourVision: "about.ourVision.label",
     ourVisionDesc: "about.ourVisionDesc.label",
-    advocacy: {
-      title: "about.advocacy.title.label",
-      header: "about.advocacy.header.label",
-      content: {
-        paragraph: "about.advocacy.content.paragraph.label",
-        list: {
-          listTitles: {
-            listTitle1: "about.advocacy.content.list.listTitles.listTitle1.label",
-            listTitle2: "about.advocacy.content.list.listTitles.listTitle2.label",
-            listTitle3: "about.advocacy.content.list.listTitles.listTitle3.label"
-          },
-          listContent: {
-            listContent1: "about.advocacy.content.list.listContents.listContent1.label",
-            listContent2: "about.advocacy.content.list.listContents.listContent2.label",
-            listContent3: "about.advocacy.content.list.listContents.listContent3.label"
-          }
-        }
-      },
-      footer: "about.advocacy.footer.label",
-    },
     ourReach: "about.ourReach.label",
     ourReachDesc1: "about.ourReachDesc1.label",
     ourReachDesc2: "about.ourReachDesc2.label",
