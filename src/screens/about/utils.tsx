@@ -1,5 +1,5 @@
 import LocalizationKey from "@/i18n/key";
-import { CertImage, CertImageMobile, SumStep } from "./types";
+import { CertImage, SumStep } from "./types";
 import Summary1 from "@/assets/about/SummaryImages/advanced.png";
 import Summary2 from "@/assets/about/SummaryImages/inhouse.png";
 import Summary3 from "@/assets/about/SummaryImages/proprietary.png";
@@ -18,34 +18,34 @@ export const SumVal: SumStep[] = [
   {
     SumImage: Summary1,
     SumImageMobile: Summary1Mobile,
-    header: LocalizationKey.about.summaryHead1,
-    desc: LocalizationKey.about.summaryDesc1,
-    list: [
-      LocalizationKey.about.keyFeaturesList11,
-      LocalizationKey.about.keyFeaturesList12,
-      LocalizationKey.about.keyFeaturesList13,
+    header: LocalizationKey.about.advancedTechSolutions.head,
+    desc: LocalizationKey.about.advancedTechSolutions.desc,
+    footnote: [
+      LocalizationKey.about.advancedTechSolutions.footnote.numberOne,
+      LocalizationKey.about.advancedTechSolutions.footnote.numberTwo,
+      LocalizationKey.about.advancedTechSolutions.footnote.numberThree,
     ],
   },
   {
     SumImage: Summary2,
     SumImageMobile: Summary2Mobile,
-    header: LocalizationKey.about.summaryHead2,
-    desc: LocalizationKey.about.summaryDesc2,
-    list: [
-      LocalizationKey.about.keyFeaturesList21,
-      LocalizationKey.about.keyFeaturesList22,
-      LocalizationKey.about.keyFeaturesList23,
+    header: LocalizationKey.about.inHouseItSolutions.head,
+    desc: LocalizationKey.about.inHouseItSolutions.desc,
+    footnote: [
+      LocalizationKey.about.inHouseItSolutions.footnote.numberOne,
+      LocalizationKey.about.inHouseItSolutions.footnote.numberTwo,
+      LocalizationKey.about.inHouseItSolutions.footnote.numberThree,
     ],
   },
   {
     SumImage: Summary3,
     SumImageMobile: Summary3Mobile,
-    header: LocalizationKey.about.summaryHead3,
-    desc: LocalizationKey.about.summaryDesc3,
-    list: [
-      LocalizationKey.about.keyFeaturesList31,
-      LocalizationKey.about.keyFeaturesList32,
-      LocalizationKey.about.keyFeaturesList33,
+    header: LocalizationKey.about.proprietaryHardware.head,
+    desc: LocalizationKey.about.proprietaryHardware.desc,
+    footnote: [
+      LocalizationKey.about.proprietaryHardware.footnote.numberOne,
+      LocalizationKey.about.proprietaryHardware.footnote.numberTwo,
+      LocalizationKey.about.proprietaryHardware.footnote.numberThree,
     ],
   },
 ];
@@ -74,7 +74,7 @@ export const Certs: CertImage[] = [
   },
 ];
 
-export const CertsMobileTopRow: CertImageMobile[] = [
+export const CertsMobileTopRow: CertImage[] = [
   {
     imageName: Recycle
   },
@@ -89,7 +89,7 @@ export const CertsMobileTopRow: CertImageMobile[] = [
   },
 ];
 
-export const CertsMobileBottomRow: CertImageMobile[] = [
+export const CertsMobileBottomRow: CertImage[] = [
   {
     imageName: iccCertification
   },

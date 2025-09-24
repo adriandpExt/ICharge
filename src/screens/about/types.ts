@@ -1,8 +1,14 @@
-export interface SummaryCardAppearance {
-  stepSummary: SumStep;
-  sideBg: string;
-  mobileBg: string;
+import { PropsWithChildren } from "react";
+
+export interface ISummaryCard {
+  summaryCardContents: SumStep;
   isFlipped: boolean;
+}
+
+export interface ISection extends PropsWithChildren {
+  icon: string;
+  title?: string;
+  isFlipped?: boolean;
 }
 
 export interface SumStep {
@@ -10,13 +16,9 @@ export interface SumStep {
   SumImageMobile: string;
   header: string;
   desc: string;
-  list: string[];
+  footnote: string[];
 }
 
 export interface CertImage {
-  imageName: string;
-}
-
-export interface CertImageMobile {
   imageName: string;
 }

@@ -213,6 +213,10 @@
           {
             "question": "我如何查看已使用的時間和費用？",
             "answer": "在租賃開始後，應用程序會顯示使用時長和費用，並提醒您是否有未支付的使用費用。"
+          },
+          {
+            "question": "iCharge 應用程式和硬體安全嗎?",
+            "answer": "我們僅安全地儲存基本用戶訊息，例如手機號碼和電子郵件地址，並由 Gcash 和 Maya 等值得信賴的網關管理支付數據。我們的應用程式採用先進的安全措施構建，確保其安全可靠，防止篡改，並僅透過 Apple App Store 和 Google Play Store 提供，這兩個平台均經過嚴格的安全審核。所有敏感資料均經過加密，我們的伺服器受到持續監控和高級安全保護，我們的硬體設計旨在消除任何資料被盜風險。"
           }
         ]
       },
@@ -573,62 +577,68 @@
     "ourReach": {
       "label": "我們的覆蓋範圍"
     },
-    "ourReachDesc1": {
-      "label": "我們的 iCharge 站點在全國的購物中心、餐廳、醫院、交通樞紐和活動場地迅速擴展。"
-    },
-    "ourReachDesc2": {
-      "label": "配備 GCash、GrabPay、Alipay、Maya、WeChat Pay、UnionBank 和 BDO 等集成支付系統，我們的站點提供方便、無憂的移動電力接入，讓充電變得比以往任何時候都容易。"
-    },
-    "ourReachDesc3": {
-      "label": "這種靈活性與全球充電網絡相呼應，為客戶提供無縫的體驗，無論他們走到哪裡。"
-    },
-    "summaryHead1": {
-      "label": "先進技術解決方案"
-    },
-    "summaryDesc1": {
-      "label": "我們的專有技術確保企業和終端用戶都能享受無縫的充電體驗。該系統具有實時監控和直觀界面，簡化了充電站的管理"
+    "ourReachDesc": {
+      "label": "我們的 iCharge 站點在全國的購物中心、餐廳、醫院、交通樞紐和活動場地迅速擴展。 \n\n 配備 GCash、GrabPay、Alipay、Maya、WeChat Pay、UnionBank 和 BDO 等集成支付系統，我們的站點提供方便、無憂的移動電力接入，讓充電變得比以往任何時候都容易。 \n\n 這種靈活性與全球充電網絡相呼應，為客戶提供無縫的體驗，無論他們走到哪裡。"
     },
     "keyFeaturesHead": {
       "label": "主要功能："
     },
-    "keyFeaturesList11": {
-      "label": "實時監控：透過即時數據洞察高效管理站點"
+    "advancedTechSolutions": {
+      "head": {
+        "label": "先進技術解決方案"
+      },
+      "desc": {
+        "label": "我們的專有技術確保企業和終端用戶都能享受無縫的充電體驗。該系統具有實時監控和直觀界面，簡化了充電站的管理"
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "實時監控：透過即時數據洞察高效管理站點"
+        },
+        "numberTwo": {
+          "label": "全球支付集成：支持包括 GCash、GrabPay、Alipay 和信用卡在內的多種支付方式，使充電服務能夠在本地和國際上使用"
+        },
+        "numberThree": {
+          "label": "全天候技術支持：為所有合作夥伴和終端用戶提供，確保運營穩定和客戶滿意度"
+        }
+      }
     },
-    "keyFeaturesList12": {
-      "label": "全球支付集成：支持包括 GCash、GrabPay、Alipay 和信用卡在內的多種支付方式，使充電服務能夠在本地和國際上使用"
+    "inHouseItSolutions": {
+      "head": {
+        "label": "內部 IT 與軟體解決方案"
+      },
+      "desc": {
+        "label": "我們的專有軟體確保無縫的充電體驗，具有實時監控和簡便的界面。該軟體支持企業高效管理充電站，提供快捷交易和流暢運營"
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "實時監控：通過實時數據洞察高效管理站點"
+        },
+        "numberTwo": {
+          "label": "用戶友好界面：簡化客戶的充電體驗"
+        },
+        "numberThree": {
+          "label": "全天候技術支持：為企業和客戶提供，確保運營穩定"
+        }
+      }
     },
-    "keyFeaturesList13": {
-      "label": "全天候技術支持：為所有合作夥伴和終端用戶提供，確保運營穩定和客戶滿意度"
-    },
-    "summaryHead2": {
-      "label": "內部 IT 與軟體解決方案"
-    },
-    "summaryDesc2": {
-      "label": "我們的專有軟體確保無縫的充電體驗，具有實時監控和簡便的界面。該軟體支持企業高效管理充電站，提供快捷交易和流暢運營"
-    },
-    "keyFeaturesList21": {
-      "label": "實時監控：通過實時數據洞察高效管理站點"
-    },
-    "keyFeaturesList22": {
-      "label": "用戶友好界面：簡化客戶的充電體驗"
-    },
-    "keyFeaturesList23": {
-      "label": "全天候技術支持：為企業和客戶提供，確保運營穩定"
-    },
-    "summaryHead3": {
-      "label": "專有硬體"
-    },
-    "summaryDesc3": {
-      "label": "我們的充電寶站採用定制設計的硬體，適應不同場所。無論是大型購物中心還是小型咖啡館，我們的站點都靈活高效"
-    },
-    "keyFeaturesList31": {
-      "label": "可擴展性，滿足大小場所的需求"
-    },
-    "keyFeaturesList32": {
-      "label": "高容量，適用於人流密集的繁忙區域"
-    },
-    "keyFeaturesList33": {
-      "label": "便捷易用，讓用戶能輕鬆租借和歸還充電寶"
+    "proprietaryHardware": {
+      "head": {
+        "label": "專有硬體"
+      },
+      "desc": {
+        "label": "我們的充電寶站採用定制設計的硬體，適應不同場所。無論是大型購物中心還是小型咖啡館，我們的站點都靈活高效"
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "可擴展性，滿足大小場所的需求"
+        },
+        "numberTwo": {
+          "label": "高容量，適用於人流密集的繁忙區域"
+        },
+        "numberThree": {
+          "label": "便捷易用，讓用戶能輕鬆租借和歸還充電寶"
+        }
+      }
     }
   }
 }
