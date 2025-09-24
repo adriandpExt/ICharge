@@ -78,7 +78,7 @@ export default {
       },
       animation: {
         "accordion-down": "accordion-down 0.1s ease-out",
-        "accordion-up": "accordion-up 0.1ms ease-out",
+        "accordion-up": "accordion-up 0.1s ease-out",
       },
     },
   },
