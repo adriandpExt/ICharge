@@ -1,21 +1,20 @@
 import { Faqs } from "./types";
 
-import LocalizationKey from "@/i18n/key";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import LocalizationKey from "@/i18n/key";
 
 import { Banner, PageContainer } from "@/components";
 
-import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { cn } from "@/lib/utils";
+} from "./component/accordion";
 
 export default function FullScreenResponsiveFAQAccordion() {
   const { t } = useTranslation();
@@ -38,9 +37,11 @@ export default function FullScreenResponsiveFAQAccordion() {
           <Label className="font-bold" key={category.category}>
             <Button
               variant={"custombutton"}
-              className={cn('h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg',
-                activeCategory === t(category.category) ? 'bg-gradient-to-r from-[#63cc5e] via-[#55b550] to-[#3e8c3b]' : 'bg-green-100 text-gray-800 hover:bg-green-200'
-              )}
+              className={`h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg ${
+                activeCategory === t(category.category)
+                  ? "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e] text-white"
+                  : "bg-green-100 text-gray-800 hover:bg-green-200"
+              }`}
               onClick={() => setActiveCategory(category.category)}
             >
               {t(category.category)}
@@ -61,7 +62,7 @@ export default function FullScreenResponsiveFAQAccordion() {
                 key={category.category}
                 type="single"
                 collapsible
-                className="space-y-2"
+                className="container relative mx-auto space-y-2"
               >
                 {category.items.map((item, index) => (
                   <AccordionItem
@@ -70,14 +71,18 @@ export default function FullScreenResponsiveFAQAccordion() {
                     className="border-none"
                   >
                     <AccordionTrigger
-                      className='rounded-lg px-4 py-3 text-start text-base hover:bg-green-500 md:text-lg lg:text-xl bg-green-400'
+                      className={`rounded-lg ${
+                        openIndex === index ? "bg-green-400" : "bg-green-400"
+                      } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
                       onClick={() => handleSetOpenIndex(index)}
                     >
-                      <Label className="text-base font-semibold">
-                        {t(item.question)}
-                      </Label>
+                      <div className="flex w-full items-center justify-between">
+                        <Label className="text-base font-semibold">
+                          {t(item.question)}
+                        </Label>
+                      </div>
                     </AccordionTrigger>
-                    <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-left">
+                    <AccordionContent className="mt-1 rounded-lg border-2 border-green-300 bg-white px-4 py-3 text-left text-sm md:text-base lg:text-lg">
                       <Label
                         className="text-base"
                         style={{ whiteSpace: "pre-line" }}

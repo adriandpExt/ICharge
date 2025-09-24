@@ -26,14 +26,15 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 font-poppins text-sm transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all",
+        // Rotate icon, change the icon color to green, set background to white, and change text to white when accordion is open
+        "text0 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg]:bg-white [&[data-state=open]>svg]:text-green-500 [&[data-state=open]]:text-white",
         className,
       )}
       {...props}
     >
-      <div className="flex items-center font-poppins">{children}</div>
-
-      <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+      {children}
+      <ChevronDownIcon className="h-8 w-8 shrink-0 rounded-full bg-green-500 text-muted-foreground text-white transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
