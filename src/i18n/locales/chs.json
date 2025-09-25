@@ -491,6 +491,12 @@
     "powerbanks": { "label": "移动电源" },
     "standby": { "label": "待机" },
     "fullload": { "label": "满载" },
+    "icharge4desc": {
+      "label": "适用于有限空间的最小模型"
+    },
+    "icharge4desc2": {
+      "label": "座位容量:低于20个"
+    },
     "icharge6desc": {
       "label": "适合有限空间的小型型号"
     },
@@ -502,6 +508,12 @@
     },
     "icharge8desc2": {
       "label": "座位容量：40-80"
+    },
+    "icharge8Sdesc": {
+      "label": "紧凑的标准模型"
+    },
+    "icharge8Sdesc2": {
+      "label": "座位容量:40-80"
     },
     "icharge8plusdesc": {
       "label": "带有广告功能的紧凑型号"
@@ -532,6 +544,9 @@
     },
     "icharge48promaxdesc2": {
       "label": "座位容量：众多行人"
+    },
+    "ichargestandeedesc": {
+      "label": "标准模型(矩形)"
     },
     "ichargestandeesrdesc": {
       "label": "展示型号（矩形）"

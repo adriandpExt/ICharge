@@ -515,7 +515,13 @@
     "slot": { "label": "Slot" },
     "powerbanks": { "label": "Powerbank" },
     "standby": { "label": "Standby" },
-    "fullload": { "label": "fullLoad" },
+    "fullload": { "label": "Full load" },
+    "icharge4desc": {
+      "label": "Smallest model for limited space"
+    },
+    "icharge4desc2": {
+      "label": "Seat Capacity: 20 below"
+    },
     "icharge6desc": {
       "label": "Smaller model for limited space"
     },
@@ -526,6 +532,12 @@
       "label": "Compact standard model"
     },
     "icharge8desc2": {
+      "label": "Seat Capacity: 40-80"
+    },
+    "icharge8Sdesc": {
+      "label": "Compact standard model"
+    },
+    "icharge8Sdesc2": {
       "label": "Seat Capacity: 40-80"
     },
     "icharge8plusdesc": {
@@ -557,6 +569,9 @@
     },
     "icharge48promaxdesc2": {
       "label": "Seat Capacity: Many Passerby"
+    },
+    "ichargestandeedesc": {
+      "label": "Standee model (rectangle)"
     },
     "ichargestandeesrdesc": {
       "label": "Standee model (rectangle)"
