@@ -5,6 +5,9 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import LocalizationKey from "@/i18n/key";
 
+import Products4 from "@/assets/Products/products/icharge4.png";
+import Products8S from "@/assets/Products/products/icharge8S.png";
+import ProductsStandee from "@/assets/Products/products/ichargeStandee.png";
 import Products12Pro from "@/assets/Products/products/icharge12Pro.png";
 import Products12 from "@/assets/Products/products/icharge12.png";
 import Products8Plus from "@/assets/Products/products/icharge8Plus.png";
@@ -41,6 +44,19 @@ export const useServices = () => {
   const productList: Product[] = [
     {
       productDetails: {
+        name: 'iCharge 4',
+        description: t(LocalizationKey.services.icharge4desc),
+        image: Products4,
+        seatCapacity: t(LocalizationKey.services.icharge4desc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "75W", standBy: "3W" },
+        dimensions: { h: "190mm", l: "129mm", w: "190mm" },
+        content: { code: "QI-4", slots: "4", powerbanks: "3" },
+      }
+    },
+    {
+      productDetails: {
         name: "iCharge 6",
         description: t(LocalizationKey.services.icharge6desc),
         image: Products6,
@@ -64,6 +80,19 @@ export const useServices = () => {
         dimensions: { h: "174mm", l: "343mm", w: "188mm" },
         content: { code: "QI-8", slots: "8", powerbanks: "5" },
       },
+    },
+    {
+      productDetails: {
+        name: 'iCharge 8S',
+        description: t(LocalizationKey.services.icharge8Sdesc),
+        image: Products8S,
+        seatCapacity: t(LocalizationKey.services.icharge8Sdesc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "75W", standBy: "3W" },
+        dimensions: { h: "260mm", l: "191mm", w: "190mm" },
+        content: { code: "QI-8S", slots: "8", powerbanks: "5" },
+      }
     },
     {
       productDetails: {
@@ -115,6 +144,18 @@ export const useServices = () => {
         wattage: { fullLoad: "160W", standBy: "24.2W" },
         dimensions: { h: "1650mm", l: "540mm", w: "450mm" },
         content: { code: "QI-Max", slots: "24", powerbanks: "16" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge Standee",
+        description: t(LocalizationKey.services.ichargestandeedesc),
+        image: ProductsStandee,
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "-", standBy: "-" },
+        dimensions: { h: "850mm", l: "295mm", w: "98mm" },
+        content: { code: "-", slots: "-", powerbanks: "-" },
       },
     },
     {

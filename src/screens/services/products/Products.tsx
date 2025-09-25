@@ -102,7 +102,7 @@ const Features = () => {
                       {data.productDetails.name.toLocaleUpperCase()}
                     </Label>
                     <Button
-                      className="w-20 rounded-3xl bg-green-500 text-black hover:bg-green-400"
+                      className="w-20 rounded-3xl bg-green-500 text-white font-bold tracking-wider hover:bg-green-400"
                       onClick={(e) => handleOpen(e, data)}
                     >
                       {t(LocalizationKey.services.more)}
