@@ -7,7 +7,6 @@ import { SvgIcons } from "@/components/svg-icons";
 import { businessCardInfo } from "./utils";
 import Lottie from "lottie-light-react";
 import NotFound from "@/assets/lottie/404.json";
-
 const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
@@ -37,8 +36,8 @@ const BusinessCard = (): ReactElement => {
         <Avatar
           imageUrl={card.imgLink}
           altText={card.name}
-          size={card.id === "021" ? 324 : 230}
-          hideBorder={card.id === "021"}
+          size={card.id === "021" || card.id === "022" ? 324 : 230}
+          hideBorder={card.id === "021" || card.id === "022"}
         />
         <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
           {card.name}
@@ -67,7 +66,9 @@ const BusinessCard = (): ReactElement => {
             <div className="flex w-full translate-x-[7%] items-center gap-2">
               <SvgIcons name="ic_bc_email" size={35} />
               <Label className="font-poppins font-bold text-white">
-                Email me
+                {card.id === "021" || card.id === "022"
+                  ? "Partner with us"
+                  : "Email me"}
               </Label>
             </div>
           </Button>
@@ -83,6 +84,21 @@ const BusinessCard = (): ReactElement => {
               </Label>
             </div>
           </Button>
+
+          {card.vidLink && (
+            <Button
+              className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
+              onClick={() => window.open(card.vidLink, "_blank")}
+            >
+              <div className="flex w-full translate-x-[7%] items-center gap-2">
+                <SvgIcons name="ic_youtube" size={35} />
+
+                <Label className="font-poppins font-bold text-white">
+                  Visit our YouTube
+                </Label>
+              </div>
+            </Button>
+          )}
         </div>
       </div>
     </div>
