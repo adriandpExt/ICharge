@@ -41,4 +41,5 @@ export type IconName =
   | "bc_background"
   | "ic_bc_email"
   | "s_p_s_c"
+  | "ic_youtube"
   | "ic_bc_web";

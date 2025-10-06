@@ -7,10 +7,35 @@ import { SvgIcons } from "@/components/svg-icons";
 import { businessCardInfo } from "./utils";
 import Lottie from "lottie-light-react";
 import NotFound from "@/assets/lottie/404.json";
+import { IconName } from "@/components/svg-icons/utils";
+
+interface IBusinessCardBtn {
+  label: string;
+  onClick: () => void;
+  icon: IconName;
+}
+
+const BusinessCardButton = (props: IBusinessCardBtn) => {
+  const { onClick, icon, label } = props;
+
+  return (
+    <Button
+      className="flex h-[50px] w-[260px] items-center justify-start space-x-3 rounded-lg bg-[#078E00] text-white"
+      onClick={onClick}
+    >
+      <div className="flex w-full items-center gap-2">
+        <SvgIcons name={icon} size={40} />
+        <Label className="font-poppins font-bold text-white">{label}</Label>
+      </div>
+    </Button>
+  );
+};
 
 const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
+
+  const isNotStaff: boolean = card?.id === "021" || card?.id === "022";
 
   if (!card) {
     return (
@@ -37,8 +62,8 @@ const BusinessCard = (): ReactElement => {
         <Avatar
           imageUrl={card.imgLink}
           altText={card.name}
-          size={card.id === "021" ? 324 : 230}
-          hideBorder={card.id === "021"}
+          size={isNotStaff ? 324 : 230}
+          hideBorder={isNotStaff}
         />
         <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
           {card.name}
@@ -48,41 +73,33 @@ const BusinessCard = (): ReactElement => {
         </Label>
 
         <div className="mt-6 space-y-6">
-          <Button
-            className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
+          <BusinessCardButton
+            label={
+              isNotStaff ? "Chat with us on Viber" : "Chat with me on Viber"
+            }
+            icon="ic_basil_viber_outline"
             onClick={() => window.open(card.viberLink, "_blank")}
-          >
-            <div className="flex w-full translate-x-[6%] items-center gap-2">
-              <SvgIcons name="ic_basil_viber_outline" size={40} />
-              <Label className="font-poppins font-bold text-white">
-                Chat with me on Viber
-              </Label>
-            </div>
-          </Button>
+          />
 
-          <Button
-            className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
+          <BusinessCardButton
+            label={isNotStaff ? "Partner with us" : "Email me"}
+            icon="ic_bc_email"
             onClick={() => (window.location.href = `mailto:${card.email}`)}
-          >
-            <div className="flex w-full translate-x-[7%] items-center gap-2">
-              <SvgIcons name="ic_bc_email" size={35} />
-              <Label className="font-poppins font-bold text-white">
-                Email me
-              </Label>
-            </div>
-          </Button>
+          />
 
-          <Button
-            className="flex h-[50px] w-[260px] items-center justify-center space-x-3 rounded-lg bg-[#078E00] text-white"
+          <BusinessCardButton
+            label="Visit our website"
+            icon="ic_bc_web"
             onClick={() => window.open(`https://icharge.com.ph/`, "_blank")}
-          >
-            <div className="flex w-full translate-x-[7%] items-center gap-2">
-              <SvgIcons name="ic_bc_web" size={35} />
-              <Label className="font-poppins font-bold text-white">
-                Visit our website
-              </Label>
-            </div>
-          </Button>
+          />
+
+          {card.vidLink && (
+            <BusinessCardButton
+              label="How to return"
+              icon="ic_youtube"
+              onClick={() => window.open(card.vidLink, "_blank")}
+            />
+          )}
         </div>
       </div>
     </div>
