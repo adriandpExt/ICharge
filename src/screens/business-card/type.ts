@@ -6,4 +6,5 @@ export interface CardInfo {
   imgLink: string;
   email: string;
   qrLink: string;
+  vidLink?: string;
 }
