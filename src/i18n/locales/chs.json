@@ -548,11 +548,8 @@
     "ichargestandeedesc": {
       "label": "标准模型(矩形)"
     },
-    "ichargestandeesrdesc": {
-      "label": "展示型号（矩形）"
-    },
-    "ichargestandeessdesc": {
-      "label": "展示型号（矩形）"
+    "ichargestandeerectangledesc": {
+      "label": "标准模型(矩形)"
     }
   },
   "about": {
