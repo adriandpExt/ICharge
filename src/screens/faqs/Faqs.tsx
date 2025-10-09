@@ -1,6 +1,6 @@
 import { Faqs } from "./types";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
 
@@ -34,10 +34,6 @@ export default function FullScreenResponsiveFAQAccordion() {
   const handleSetOpenIndex = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
-  useEffect(() => {
-    console.log(activeCategory);
-  }, [activeCategory]);
 
   const renderAccordionMenu = () => {
     return (
