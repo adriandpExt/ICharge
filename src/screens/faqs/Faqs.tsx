@@ -1,6 +1,6 @@
 import { Faqs } from "./types";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
 
@@ -21,7 +21,11 @@ export default function FullScreenResponsiveFAQAccordion() {
   const { t } = useTranslation();
 
   const faqData = t("customer.faqData", { returnObjects: true }) as Faqs[];
-
+  const faqCategory = faqData.map((data) => data.category);
+  const faqIndeces = [2, 4, 5];
+  const filteredFaqData = faqCategory.filter((_, index) =>
+    faqIndeces.includes(index),
+  );
   const [activeCategory, setActiveCategory] = useState<string>(
     t(faqData[0]?.category),
   );
@@ -30,6 +34,10 @@ export default function FullScreenResponsiveFAQAccordion() {
   const handleSetOpenIndex = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  useEffect(() => {
+    console.log(activeCategory);
+  }, [activeCategory]);
 
   const renderAccordionMenu = () => {
     return (
@@ -56,7 +64,14 @@ export default function FullScreenResponsiveFAQAccordion() {
 
   const renderAccordionQnA = () => {
     return (
-      <div className="mb-28 h-full flex-grow px-3">
+      <div
+        className={cn(
+          "mb-28 flex-grow px-3",
+          filteredFaqData.includes(activeCategory)
+            ? "h-[300px]"
+            : "min-h-[200px]",
+        )}
+      >
         {faqData.map(
           (category) =>
             activeCategory === t(category.category) && (
