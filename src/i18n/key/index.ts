@@ -211,8 +211,7 @@ const LocalizationKey = {
     icharge48promaxdesc: "services.icharge48promaxdesc.label",
     icharge48promaxdesc2: "services.icharge48promaxdesc2.label",
     ichargestandeedesc: "services.ichargestandeedesc.label",
-    ichargestandeesrdesc: "services.ichargestandeesrdesc.label",
-    ichargestandeessdesc: "services.ichargestandeessdesc.label",
+    ichargestandeerectangledesc: "services.ichargestandeerectangledesc.label",
   },
   about: {
     aboutHeading: "about.aboutHeading.label",

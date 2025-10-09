@@ -8,14 +8,13 @@ import LocalizationKey from "@/i18n/key";
 import Products4 from "@/assets/Products/products/icharge4.png";
 import Products8S from "@/assets/Products/products/icharge8S.png";
 import ProductsStandee from "@/assets/Products/products/ichargeStandee.png";
+import ProductsStandeeRectangle from "@/assets/Products/products/ichargeStandeeNewRectangle.png";
 import Products12Pro from "@/assets/Products/products/icharge12Pro.png";
 import Products12 from "@/assets/Products/products/icharge12.png";
 import Products8Plus from "@/assets/Products/products/icharge8Plus.png";
 import Products8 from "@/assets/Products/products/icharge8.png";
 import Products6 from "@/assets/Products/products/icharge6.png";
 import Products24Max from "@/assets/Products/products/ichargeMax.png";
-import ProductsQCRC from "@/assets/Products/products/ichargeQCRC.png";
-import ProductsQCSQ from "@/assets/Products/products/ichargeQCSQ.png";
 
 import sectorHospitality from "@/assets/sectors/sectorHospitality.jpg";
 import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
@@ -160,28 +159,16 @@ export const useServices = () => {
     },
     {
       productDetails: {
-        name: "iCharge Standee SR",
-        description: t(LocalizationKey.services.ichargestandeesrdesc),
-        image: ProductsQCRC,
+        name: "iCharge Standee (Rectangle)",
+        description: t(LocalizationKey.services.ichargestandeerectangledesc),
+        image: ProductsStandeeRectangle,
       },
       productDescriptions: {
         wattage: { fullLoad: "-", standBy: "-" },
-        dimensions: { h: "890mm", l: "450mm", w: "288mm" },
+        dimensions: { h: "850mm", l: "295mm", w: "98mm" },
         content: { code: "-", slots: "-", powerbanks: "-" },
-      },
-    },
-    {
-      productDetails: {
-        name: "iCharge Standee SS",
-        description: t(LocalizationKey.services.ichargestandeessdesc),
-        image: ProductsQCSQ,
-      },
-      productDescriptions: {
-        wattage: { fullLoad: "-", standBy: "-" },
-        dimensions: { h: "956mm", l: "360mm", w: "340mm" },
-        content: { code: "-", slots: "-", powerbanks: "-" },
-      },
-    },
+      }
+    }
   ];
 
   const serviceIndustries: Industries[] = [

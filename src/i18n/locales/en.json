@@ -573,10 +573,7 @@
     "ichargestandeedesc": {
       "label": "Standee model (rectangle)"
     },
-    "ichargestandeesrdesc": {
-      "label": "Standee model (rectangle)"
-    },
-    "ichargestandeessdesc": {
+    "ichargestandeerectangledesc": {
       "label": "Standee model (rectangle)"
     }
   },
