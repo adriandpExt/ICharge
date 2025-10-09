@@ -5,14 +5,16 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import LocalizationKey from "@/i18n/key";
 
+import Products4 from "@/assets/Products/products/icharge4.png";
+import Products8S from "@/assets/Products/products/icharge8S.png";
+import ProductsStandee from "@/assets/Products/products/ichargeStandee.png";
+import ProductsStandeeRectangle from "@/assets/Products/products/ichargeStandeeNewRectangle.png";
 import Products12Pro from "@/assets/Products/products/icharge12Pro.png";
 import Products12 from "@/assets/Products/products/icharge12.png";
 import Products8Plus from "@/assets/Products/products/icharge8Plus.png";
 import Products8 from "@/assets/Products/products/icharge8.png";
 import Products6 from "@/assets/Products/products/icharge6.png";
 import Products24Max from "@/assets/Products/products/ichargeMax.png";
-import ProductsQCRC from "@/assets/Products/products/ichargeQCRC.png";
-import ProductsQCSQ from "@/assets/Products/products/ichargeQCSQ.png";
 
 import sectorHospitality from "@/assets/sectors/sectorHospitality.jpg";
 import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
@@ -41,6 +43,19 @@ export const useServices = () => {
   const productList: Product[] = [
     {
       productDetails: {
+        name: 'iCharge 4',
+        description: t(LocalizationKey.services.icharge4desc),
+        image: Products4,
+        seatCapacity: t(LocalizationKey.services.icharge4desc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "75W", standBy: "3W" },
+        dimensions: { h: "190mm", l: "129mm", w: "190mm" },
+        content: { code: "QI-4", slots: "4", powerbanks: "3" },
+      }
+    },
+    {
+      productDetails: {
         name: "iCharge 6",
         description: t(LocalizationKey.services.icharge6desc),
         image: Products6,
@@ -64,6 +79,19 @@ export const useServices = () => {
         dimensions: { h: "174mm", l: "343mm", w: "188mm" },
         content: { code: "QI-8", slots: "8", powerbanks: "5" },
       },
+    },
+    {
+      productDetails: {
+        name: 'iCharge 8S',
+        description: t(LocalizationKey.services.icharge8Sdesc),
+        image: Products8S,
+        seatCapacity: t(LocalizationKey.services.icharge8Sdesc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "75W", standBy: "3W" },
+        dimensions: { h: "260mm", l: "191mm", w: "190mm" },
+        content: { code: "QI-8S", slots: "8", powerbanks: "5" },
+      }
     },
     {
       productDetails: {
@@ -119,28 +147,28 @@ export const useServices = () => {
     },
     {
       productDetails: {
-        name: "iCharge Standee SR",
-        description: t(LocalizationKey.services.ichargestandeesrdesc),
-        image: ProductsQCRC,
+        name: "iCharge Standee",
+        description: t(LocalizationKey.services.ichargestandeedesc),
+        image: ProductsStandee,
       },
       productDescriptions: {
         wattage: { fullLoad: "-", standBy: "-" },
-        dimensions: { h: "890mm", l: "450mm", w: "288mm" },
+        dimensions: { h: "850mm", l: "295mm", w: "98mm" },
         content: { code: "-", slots: "-", powerbanks: "-" },
       },
     },
     {
       productDetails: {
-        name: "iCharge Standee SS",
-        description: t(LocalizationKey.services.ichargestandeessdesc),
-        image: ProductsQCSQ,
+        name: "iCharge Standee (Rectangle)",
+        description: t(LocalizationKey.services.ichargestandeerectangledesc),
+        image: ProductsStandeeRectangle,
       },
       productDescriptions: {
         wattage: { fullLoad: "-", standBy: "-" },
-        dimensions: { h: "956mm", l: "360mm", w: "340mm" },
+        dimensions: { h: "850mm", l: "295mm", w: "98mm" },
         content: { code: "-", slots: "-", powerbanks: "-" },
-      },
-    },
+      }
+    }
   ];
 
   const serviceIndustries: Industries[] = [

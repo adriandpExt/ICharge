@@ -15,12 +15,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./component/accordion";
+import { cn } from "@/lib/utils";
 
 export default function FullScreenResponsiveFAQAccordion() {
   const { t } = useTranslation();
 
   const faqData = t("customer.faqData", { returnObjects: true }) as Faqs[];
-
+  const faqCategory = faqData.map((data) => data.category);
+  const faqIndeces = [2, 4, 5];
+  const filteredFaqData = faqCategory.filter((_, index) =>
+    faqIndeces.includes(index),
+  );
   const [activeCategory, setActiveCategory] = useState<string>(
     t(faqData[0]?.category),
   );
@@ -34,19 +39,20 @@ export default function FullScreenResponsiveFAQAccordion() {
     return (
       <div className="container mx-auto mb-6 grid grid-cols-1 gap-2 px-3 md:grid-cols-2 lg:mb-10 lg:grid-cols-3">
         {faqData.map((category) => (
-          <Label className="font-bold" key={category.category}>
-            <Button
-              variant={"custombutton"}
-              className={`h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg ${
-                activeCategory === t(category.category)
-                  ? "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e] text-white"
-                  : "bg-green-100 text-gray-800 hover:bg-green-200"
-              }`}
-              onClick={() => setActiveCategory(category.category)}
-            >
+          <Button
+            variant={"custombutton"}
+            className={cn(
+              "h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg",
+              activeCategory === t(category.category)
+                ? "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e] text-white"
+                : "bg-green-100 text-gray-800 hover:bg-green-200",
+            )}
+            onClick={() => setActiveCategory(category.category)}
+          >
+            <Label className="font-bold" key={category.category}>
               {t(category.category)}
-            </Button>
-          </Label>
+            </Label>
+          </Button>
         ))}
       </div>
     );
@@ -54,7 +60,14 @@ export default function FullScreenResponsiveFAQAccordion() {
 
   const renderAccordionQnA = () => {
     return (
-      <div className="mb-28 h-full flex-grow px-3">
+      <div
+        className={cn(
+          "mb-28 flex-grow px-3",
+          filteredFaqData.includes(activeCategory)
+            ? "h-[300px]"
+            : "min-h-[200px]",
+        )}
+      >
         {faqData.map(
           (category) =>
             activeCategory === t(category.category) && (
@@ -71,9 +84,7 @@ export default function FullScreenResponsiveFAQAccordion() {
                     className="border-none"
                   >
                     <AccordionTrigger
-                      className={`rounded-lg ${
-                        openIndex === index ? "bg-green-400" : "bg-green-400"
-                      } px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl`}
+                      className="rounded-lg bg-green-300 px-4 py-3 text-left text-base hover:bg-green-500 md:text-lg lg:text-xl"
                       onClick={() => handleSetOpenIndex(index)}
                     >
                       <div className="flex w-full items-center justify-between">

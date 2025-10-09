@@ -206,4 +206,14 @@ export const businessCardInfo: CardInfo[] = [
     email: "reachus@icharge.com.ph",
     qrLink: "/business-card/021",
   },
+  {
+    id: "022",
+    name: "",
+    role: "",
+    viberLink: "viber://chat?number=09187388888",
+    imgLink: ContactUS,
+    email: "reachus@icharge.com.ph",
+    qrLink: "/business-card/022",
+    vidLink: "https://www.youtube.com/embed/GGAc5QctHFE"
+  },
 ];

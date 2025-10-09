@@ -50,10 +50,18 @@ export const InquiryForm = (): ReactElement => {
           <Phone size={32} strokeWidth={3} /> +63 918 738 8888
         </Label>
 
-        <Label variant={"body"} className="flex items-center gap-5">
+        <div className="flex items-center gap-5">
           <Mail size={32} strokeWidth={3} />
-          {form === "customer" ? "iChargeBGC@gmail.com" : "QDiCharge@gmail.com"}
-        </Label>
+
+          {form === "customer" ? (
+            <Label variant={"body"}>support@icharge.com.ph</Label>
+          ) : (
+            <div className="flex flex-col gap-1">
+              <Label variant={"body"}>official@icharge.com.ph</Label>
+              <Label variant={"body"}>reachus@icharge.com.ph</Label>
+            </div>
+          )}
+        </div>
 
         <Label
           variant={"body"}

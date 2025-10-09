@@ -218,6 +218,10 @@
           {
             "question": "How do I check how long I’ve had the power bank and the cost so far?",
             "answer": "This information is available in the app as soon as you start the rental. It shows both the duration and the cost, and will inform you about any unpaid usage."
+          },
+          {
+            "question": "Are the iCharge app and hardware/machine secure?",
+            "answer": "We securely store only basic user information, such as mobile numbers and emails, with payment data managed by trusted gateways like Gcash and Maya. Our app is built with advanced security measures to keep it safe and protected against tampering and is available exclusively through the Apple App Store and Google Play Store, both of which undergo strict security reviews. All sensitive data is encrypted, our servers are protected by continuous monitoring and advanced security, and our hardware is designed to eliminate any risk of data theft."
           }
         ]
       },
@@ -511,7 +515,13 @@
     "slot": { "label": "Slot" },
     "powerbanks": { "label": "Powerbank" },
     "standby": { "label": "Standby" },
-    "fullload": { "label": "fullLoad" },
+    "fullload": { "label": "Full load" },
+    "icharge4desc": {
+      "label": "Smallest model for limited space"
+    },
+    "icharge4desc2": {
+      "label": "Seat Capacity: 20 below"
+    },
     "icharge6desc": {
       "label": "Smaller model for limited space"
     },
@@ -522,6 +532,12 @@
       "label": "Compact standard model"
     },
     "icharge8desc2": {
+      "label": "Seat Capacity: 40-80"
+    },
+    "icharge8Sdesc": {
+      "label": "Compact standard model"
+    },
+    "icharge8Sdesc2": {
       "label": "Seat Capacity: 40-80"
     },
     "icharge8plusdesc": {
@@ -554,10 +570,10 @@
     "icharge48promaxdesc2": {
       "label": "Seat Capacity: Many Passerby"
     },
-    "ichargestandeesrdesc": {
+    "ichargestandeedesc": {
       "label": "Standee model (rectangle)"
     },
-    "ichargestandeessdesc": {
+    "ichargestandeerectangledesc": {
       "label": "Standee model (rectangle)"
     }
   },
@@ -568,14 +584,8 @@
     "whoWeAre": {
       "label": "WHO WE ARE"
     },
-    "whoWeAreDesc1": {
-      "label": "Quanta Dance Inc. provides on-the-go charging solutions to keep people connected in today's digital world."
-    },
-    "whoWeAreDesc2": {
-      "label": "Our nationwide network of iCharge powerbank stations ensures that individuals and businesses can access reliable power anytime, anywhere across the Philippines."
-    },
-    "whoWeAreDesc3": {
-      "label": "We believe that staying powered is essential to staying connected, whether during everyday activities or critical moments."
+    "whoWeAreDesc": {
+      "label": "Quanta Dance Inc. provides on-the-go charging solutions to keep people connected in today's digital world. \n\nOur nationwide network of iCharge powerbank stations ensures that individuals and businesses can access reliable power anytime, anywhere across the Philippines. \n\nWe believe that staying powered is essential to staying connected, whether during everyday activities or critical moments."
     },
     "stayPowered": {
       "label": "STAY POWERED"
@@ -599,62 +609,68 @@
     "ourReach": {
       "label": "Our Reach"
     },
-    "ourReachDesc1": {
-      "label": "Our iCharge stations are rapidly expanding in malls, restaurants, hospitals, transport hubs, and event venues across the country."
-    },
-    "ourReachDesc2": {
-      "label": "With integrated payment systems such as GCash, GrabPay, Alipay, Maya, WeChat Pay, UnionBank and BDO, our stations offer convenient, hassle-free access to mobile power, making it easier than ever to stay charged."
-    },
-    "ourReachDesc3": {
-      "label": "This flexibility mirrors global charging networks, offering customers a seamless experience wherever they go."
-    },
-    "summaryHead1": {
-      "label": "Advanced Technology Solutions"
-    },
-    "summaryDesc1": {
-      "label": "Our proprietary technology ensures a seamless charging experience for both businesses and end-users. The system features real-time monitoring and an intuitive interface that simplifies the management of charging stations."
+    "ourReachDesc": {
+      "label": "Our iCharge stations are rapidly expanding in malls, restaurants, hospitals, transport hubs, and event venues across the country. \n\nWith integrated payment systems such as GCash, GrabPay, Alipay, Maya, WeChat Pay, UnionBank and BDO, our stations offer convenient, hassle-free access to mobile power, making it easier than ever to stay charged. \n\nThis flexibility mirrors global charging networks, offering customers a seamless experience wherever they go."
     },
     "keyFeaturesHead": {
       "label": "Key Features: "
     },
-    "keyFeaturesList11": {
-      "label": "Real-Time Monitoring: Efficiently manage stations with live data insights."
+    "advancedTechSolutions": {
+      "head": {
+        "label": "Advanced Technology Solutions"
+      },
+      "desc": {
+        "label": "Our proprietary technology ensures a seamless charging experience for both businesses and end-users. The system features real-time monitoring and an intuitive interface that simplifies the management of charging stations."
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "Real-Time Monitoring: Efficiently manage stations with live data insights."
+        },
+        "numberTwo": {
+          "label": "Global Payment Integration: Supports various payment methods, including GCash, GrabPay, Alipay, and credit cards, enabling access to charging services both locally and internationally."
+        },
+        "numberThree": {
+          "label": "24/7 Technical Support: Available for all partners and end-users, ensuring operational reliability and customer satisfaction."
+        }
+      }
     },
-    "keyFeaturesList12": {
-      "label": "Global Payment Integration: Supports various payment methods, including GCash, GrabPay, Alipay, and credit cards, enabling access to charging services both locally and internationally."
+    "inHouseItSolutions": {
+      "head": {
+        "label": "In-House IT and Software Solutions"
+      },
+      "desc": {
+        "label": "Our proprietary software ensures a seamless charging experience with real-time monitoring and an easy-to-use interface. The software supports businesses in efficiently managing charging stations, offering quick transactions and smooth operations."
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "Real-Time Monitoring: Efficiently manage stations with live data insights."
+        },
+        "numberTwo": {
+          "label": "User-Friendly Interface: Simplifies the customer charging experience."
+        },
+        "numberThree": {
+          "label": "24/7 Technical Support: Available for both businesses and customers, ensuring operational reliability."
+        }
+      }
     },
-    "keyFeaturesList13": {
-      "label": "24/7 Technical Support: Available for all partners and end-users, ensuring operational reliability and customer satisfaction."
-    },
-    "summaryHead2": {
-      "label": "In-House IT and Software Solutions"
-    },
-    "summaryDesc2": {
-      "label": "Our proprietary software ensures a seamless charging experience with real-time monitoring and an easy-to-use interface. The software supports businesses in efficiently managing charging stations, offering quick transactions and smooth operations."
-    },
-    "keyFeaturesList21": {
-      "label": "Real-Time Monitoring: Efficiently manage stations with live data insights."
-    },
-    "keyFeaturesList22": {
-      "label": "User-Friendly Interface: Simplifies the customer charging experience."
-    },
-    "keyFeaturesList23": {
-      "label": "24/7 Technical Support: Available for both businesses and customers, ensuring operational reliability."
-    },
-    "summaryHead3": {
-      "label": "Proprietary Hardware"
-    },
-    "summaryDesc3": {
-      "label": "Our powerbank stations are built with custom-designed hardware that is adaptable to different locations. Whether in large shopping malls or small cafes, our stations are versatile and efficient."
-    },
-    "keyFeaturesList31": {
-      "label": "Scalability to meet the needs of both large and small spaces."
-    },
-    "keyFeaturesList32": {
-      "label": "High capacity for busy areas with heavy foot traffic."
-    },
-    "keyFeaturesList33": {
-      "label": "Easy Accessibility for users to rent and return powerbanks seamlessly."
+    "proprietaryHardware": {
+      "head": {
+        "label": "Proprietary Hardware"
+      },
+      "desc": {
+        "label": "Our powerbank stations are built with custom-designed hardware that is adaptable to different locations. Whether in large shopping malls or small cafes, our stations are versatile and efficient."
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "Scalability to meet the needs of both large and small spaces."
+        },
+        "numberTwo": {
+          "label": "High capacity for busy areas with heavy foot traffic."
+        },
+        "numberThree": {
+          "label": "Easy Accessibility for users to rent and return powerbanks seamlessly."
+        }
+      }
     }
   }
 }

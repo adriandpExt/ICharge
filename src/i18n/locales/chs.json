@@ -213,6 +213,10 @@
           {
             "question": "我如何查看已使用的时间和费用？",
             "answer": "在租赁开始后，应用程序会显示使用时长和费用，并提醒您是否有未支付的使用费用。"
+          },
+          {
+            "question": "iCharge 应用程序和硬件安全吗？",
+            "answer": "我们仅安全存储基本用户信息，例如手机号码和电子邮件地址，并由 Gcash 和 Maya 等值得信赖的网关管理支付数据。我们的应用程序采用先进的安全措施构建，确保其安全可靠，防止篡改，并仅通过 Apple App Store 和 Google Play Store 提供，这两个平台均经过严格的安全审核。所有敏感数据均经过加密，我们的服务器受到持续监控和高级安全保护，我们的硬件设计旨在消除任何数据被盗风险。"
           }
         ]
       },
@@ -487,6 +491,12 @@
     "powerbanks": { "label": "移动电源" },
     "standby": { "label": "待机" },
     "fullload": { "label": "满载" },
+    "icharge4desc": {
+      "label": "适用于有限空间的最小模型"
+    },
+    "icharge4desc2": {
+      "label": "座位容量:低于20个"
+    },
     "icharge6desc": {
       "label": "适合有限空间的小型型号"
     },
@@ -498,6 +508,12 @@
     },
     "icharge8desc2": {
       "label": "座位容量：40-80"
+    },
+    "icharge8Sdesc": {
+      "label": "紧凑的标准模型"
+    },
+    "icharge8Sdesc2": {
+      "label": "座位容量:40-80"
     },
     "icharge8plusdesc": {
       "label": "带有广告功能的紧凑型号"
@@ -529,11 +545,11 @@
     "icharge48promaxdesc2": {
       "label": "座位容量：众多行人"
     },
-    "ichargestandeesrdesc": {
-      "label": "展示型号（矩形）"
+    "ichargestandeedesc": {
+      "label": "标准模型(矩形)"
     },
-    "ichargestandeessdesc": {
-      "label": "展示型号（矩形）"
+    "ichargestandeerectangledesc": {
+      "label": "标准模型(矩形)"
     }
   },
   "about": {
@@ -573,62 +589,68 @@
     "ourReach": {
       "label": "我们的覆盖范围"
     },
-    "ourReachDesc1": {
-      "label": "我们的 iCharge 站点在全国的购物中心、餐厅、医院、交通枢纽和活动场所迅速扩展。"
-    },
-    "ourReachDesc2": {
-      "label": "配备 GCash、GrabPay、Alipay、Maya、WeChat Pay、UnionBank 和 BDO 等集成支付系统，我们的站点提供方便、无忧的移动电力接入，让充电变得比以往任何时候都容易。"
-    },
-    "ourReachDesc3": {
-      "label": "这种灵活性与全球充电网络相呼应，为客户提供无缝的体验，无论他们走到哪里。"
-    },
-    "summaryHead1": {
-      "label": "先进技术解决方案"
-    },
-    "summaryDesc1": {
-      "label": "我们的专有技术确保企业和终端用户都能享受无缝的充电体验。该系统具有实时监控和直观界面，简化了充电站的管理"
+    "ourReachDesc": {
+      "label": "我们的 iCharge 站点在全国的购物中心、餐厅、医院、交通枢纽和活动场所迅速扩展。 \n\n 配备 GCash、GrabPay、Alipay、Maya、WeChat Pay、UnionBank 和 BDO 等集成支付系统，我们的站点提供方便、无忧的移动电力接入，让充电变得比以往任何时候都容易。 \n\n 这种灵活性与全球充电网络相呼应，为客户提供无缝的体验，无论他们走到哪里。"
     },
     "keyFeaturesHead": {
       "label": "主要功能："
     },
-    "keyFeaturesList11": {
-      "label": "实时监控：通过即时数据洞察高效管理站点"
+    "advancedTechSolutions": {
+      "head": {
+        "label": "先进技术解决方案"
+      },
+      "desc": {
+        "label": "我们的专有技术确保企业和终端用户都能享受无缝的充电体验。该系统具有实时监控和直观界面，简化了充电站的管理"
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "实时监控：通过即时数据洞察高效管理站点"
+        },
+        "numberTwo": {
+          "label": "全球支付集成：支持包括 GCash、GrabPay、Alipay 和信用卡在内的多种支付方式，使充电服务能够在本地和国际上使用"
+        },
+        "numberThree": {
+          "label": "全天候技术支持：为所有合作伙伴和终端用户提供，确保运营稳定和客户满意度"
+        }
+      }
     },
-    "keyFeaturesList12": {
-      "label": "全球支付集成：支持包括 GCash、GrabPay、Alipay 和信用卡在内的多种支付方式，使充电服务能够在本地和国际上使用"
+    "inHouseItSolutions": {
+      "head": {
+        "label": "内部 IT 与软件解决方案"
+      },
+      "desc": {
+        "label": "我们的专有软件确保无缝的充电体验，具有实时监控和简便的界面。该软件支持企业高效管理充电站，提供快捷交易和流畅运营"
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "实时监控：通过实时数据洞察高效管理站点"
+        },
+        "numberTwo": {
+          "label": "用户友好界面：简化客户的充电体验"
+        },
+        "numberThree": {
+          "label": "全天候技术支持：为企业和客户提供，确保运营稳定"
+        }
+      }
     },
-    "keyFeaturesList13": {
-      "label": "全天候技术支持：为所有合作伙伴和终端用户提供，确保运营稳定和客户满意度"
-    },
-    "summaryHead2": {
-      "label": "内部 IT 与软件解决方案"
-    },
-    "summaryDesc2": {
-      "label": "我们的专有软件确保无缝的充电体验，具有实时监控和简便的界面。该软件支持企业高效管理充电站，提供快捷交易和流畅运营"
-    },
-    "keyFeaturesList21": {
-      "label": "实时监控：通过实时数据洞察高效管理站点"
-    },
-    "keyFeaturesList22": {
-      "label": "用户友好界面：简化客户的充电体验"
-    },
-    "keyFeaturesList23": {
-      "label": "全天候技术支持：为企业和客户提供，确保运营稳定"
-    },
-    "summaryHead3": {
-      "label": "专有硬件"
-    },
-    "summaryDesc3": {
-      "label": "我们的充电宝站采用定制设计的硬件，适应不同场所。无论是大型购物中心还是小型咖啡馆，我们的站点都灵活高效"
-    },
-    "keyFeaturesList31": {
-      "label": "可扩展性，满足大小场所的需求"
-    },
-    "keyFeaturesList32": {
-      "label": "高容量，适用于人流密集的繁忙区域"
-    },
-    "keyFeaturesList33": {
-      "label": "便捷易用，让用户能轻松租借和归还充电宝"
+    "proprietaryHardware": {
+      "head": {
+        "label": "专有硬件"
+      },
+      "desc": {
+        "label": "我们的充电宝站采用定制设计的硬件，适应不同场所。无论是大型购物中心还是小型咖啡馆，我们的站点都灵活高效"
+      },
+      "footnote": {
+        "numberOne": {
+          "label": "可扩展性，满足大小场所的需求"
+        },
+        "numberTwo": {
+          "label": "高容量，适用于人流密集的繁忙区域"
+        },
+        "numberThree": {
+          "label": "便捷易用，让用户能轻松租借和归还充电宝"
+        }
+      }
     }
   }
 }
