@@ -22,6 +22,7 @@ import { SvgIcons } from "@/components/svg-icons";
 import LocalizationKey from "@/i18n/key";
 import { cn } from "@/lib/utils";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 export const Drawer = () => {
   const { t } = useTranslation();
@@ -43,6 +44,11 @@ export const Drawer = () => {
   };
 
   const linkList: LinkList[] = [
+    {
+      label: "How to use?",
+      path: "/how-to",
+      icon: QuestionMarkCircledIcon,
+    },
     {
       label: t(LocalizationKey.navigation.partnerwithUs),
       path: "/partner",

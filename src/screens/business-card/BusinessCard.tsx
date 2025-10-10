@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Label } from "@/components/ui/label";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/button";
@@ -20,12 +20,12 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
 
   return (
     <Button
-      className="flex h-[50px] w-[260px] items-center justify-start space-x-3 rounded-lg bg-[#078E00] text-white"
+      className="flex h-[50px] w-[260px] space-x-3 rounded-lg bg-[#078E00] text-white"
       onClick={onClick}
     >
-      <div className="flex w-full items-center gap-2">
+      <div className="grid grid-cols-[20%_80%] w-full items-center gap-2">
         <SvgIcons name={icon} size={40} />
-        <Label className="font-poppins font-bold text-white">{label}</Label>
+        <Label className="font-poppins font-bold text-white truncate text-start">{label}</Label>
       </div>
     </Button>
   );
@@ -34,6 +34,8 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
 const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
+
+  const navigate = useNavigate();
 
   const isNotStaff: boolean = card?.id === "021" || card?.id === "022";
 
@@ -95,9 +97,9 @@ const BusinessCard = (): ReactElement => {
 
           {card.vidLink && (
             <BusinessCardButton
-              label="How to return"
+              label="How to use / return iCharge Power Bank"
               icon="ic_youtube"
-              onClick={() => window.open(card.vidLink, "_blank")}
+              onClick={() => navigate('/how-to')}
             />
           )}
         </div>

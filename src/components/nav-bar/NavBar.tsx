@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
 import { cn } from "@/lib/utils";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 export const NavBar = () => {
   const { t } = useTranslation();
@@ -33,6 +34,11 @@ export const NavBar = () => {
   };
 
   const linkList: LinkList[] = [
+    {
+      label: 'How to use?',
+      path: '/how-to',
+      icon: QuestionMarkCircledIcon,
+    },
     {
       label: t(LocalizationKey.navigation.partnerwithUs),
       path: "/partner",
