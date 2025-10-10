@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 import useScroll from "@/hooks/useScroll";
 import { LinkList } from "./type";
-import { Building2, Handshake, Phone } from "lucide-react";
+import { Building2, Handshake, MessageCircleQuestion, Phone } from "lucide-react";
 import { SvgIcons } from "../svg-icons";
 
 import { Drawer } from "./component";
@@ -33,6 +33,11 @@ export const NavBar = () => {
   };
 
   const linkList: LinkList[] = [
+    {
+      label: 'How to use?',
+      path: '/how-to',
+      icon: MessageCircleQuestion,
+    },
     {
       label: t(LocalizationKey.navigation.partnerwithUs),
       path: "/partner",
