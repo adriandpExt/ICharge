@@ -2,7 +2,7 @@ import { LinkList } from "../type";
 
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Building2, Handshake, Menu, Phone } from "lucide-react";
+import { Building2, Handshake, Menu, MessageCircleQuestion, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -22,7 +22,6 @@ import { SvgIcons } from "@/components/svg-icons";
 import LocalizationKey from "@/i18n/key";
 import { cn } from "@/lib/utils";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 export const Drawer = () => {
   const { t } = useTranslation();
@@ -47,7 +46,7 @@ export const Drawer = () => {
     {
       label: "How to use?",
       path: "/how-to",
-      icon: QuestionMarkCircledIcon,
+      icon: MessageCircleQuestion,
     },
     {
       label: t(LocalizationKey.navigation.partnerwithUs),

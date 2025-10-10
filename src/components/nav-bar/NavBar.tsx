@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 import useScroll from "@/hooks/useScroll";
 import { LinkList } from "./type";
-import { Building2, Handshake, Phone } from "lucide-react";
+import { Building2, Handshake, MessageCircleQuestion, Phone } from "lucide-react";
 import { SvgIcons } from "../svg-icons";
 
 import { Drawer } from "./component";
@@ -13,7 +13,6 @@ import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
 import { cn } from "@/lib/utils";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 export const NavBar = () => {
   const { t } = useTranslation();
@@ -37,7 +36,7 @@ export const NavBar = () => {
     {
       label: 'How to use?',
       path: '/how-to',
-      icon: QuestionMarkCircledIcon,
+      icon: MessageCircleQuestion,
     },
     {
       label: t(LocalizationKey.navigation.partnerwithUs),
