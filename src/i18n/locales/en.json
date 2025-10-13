@@ -100,6 +100,9 @@
     }
   },
   "navigation": {
+    "howTo": {
+      "label": "How to use"
+    }, 
     "partnerwithUs": {
       "label": "Partner with Us"
     },
@@ -307,6 +310,34 @@
         ]
       }
     ]
+  },
+
+  "howTo": {
+    "howToHeading": {
+      "label": "How To Use"
+    },
+    "howToBannerText": {
+      "label": "Get to know how to avail our services. This is an introduction on how will you rent our power banks when you're near our charging stations, and how to return them."
+    },
+    "howToCallToAction": {
+      "label": "Click here"
+    },
+    "howToRent": {
+      "howToRentHeader": {
+        "label": "How to rent an iCharge Power Bank!"
+      },
+      "howToRentDesc": {
+        "label": "Stay powered up anytime, anywhere with iCharge! Watch this quick guide to see just how easy it is to rent, charge, and return. No more searching for outlets just effortless charging on the go!"
+      }
+    },
+    "howToReturn": {
+      "howToReturnHeader": {
+        "label": "How to return an iCharge Power Bank!"
+      },
+      "howToReturnDesc": {
+        "label": "Done charging? Simply drop your iCharge power bank at any station, and your deposit will be refunded instantly! No waiting, no hassle. Just effortless charging on the go."
+      }
+    }
   },
 
   "partnerWithUs": {
