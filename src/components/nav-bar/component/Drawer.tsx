@@ -2,7 +2,7 @@ import { LinkList } from "../type";
 
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Building2, Handshake, Menu, Phone } from "lucide-react";
+import { Building2, Handshake, Menu, MessageCircleQuestion, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -43,6 +43,11 @@ export const Drawer = () => {
   };
 
   const linkList: LinkList[] = [
+    {
+      label: "How to use",
+      path: "/how-to",
+      icon: MessageCircleQuestion,
+    },
     {
       label: t(LocalizationKey.navigation.partnerwithUs),
       path: "/partner",

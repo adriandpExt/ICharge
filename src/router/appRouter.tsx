@@ -8,6 +8,7 @@ import ErrorScreen from "@/screens/error-screen";
 export const About = lazy(() => import("@/screens/about"));
 export const Services = lazy(() => import("@/screens/services"));
 export const Home = lazy(() => import("@/screens/home"));
+export const HowToUse = lazy(() => import("@/screens/how-to-use"));
 export const Faqs = lazy(() => import("@/screens/faqs"));
 export const BusinessCard = lazy(() => import("@/screens/business-card"));
 export const SocialMedia = lazy(() => import("@/screens/social-media"));
@@ -32,6 +33,7 @@ const router: RouteObject[] = [
         index: true,
         element: <Home />,
       },
+      { path: "how-to", element: <HowToUse /> },
       { path: "partner", element: <Partners /> },
       { path: "services", element: <Services /> },
       { path: "about", element: <About /> },
