@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { ReactElement } from "react";
 
 const HowToCard = ({
@@ -74,7 +74,7 @@ const HowToUse = (): ReactElement => {
             className="group h-10 items-center bg-white text-green-600 hover:text-white"
           >
             Click here
-            <ChevronDown className="text-green-600 group-hover:text-white" />
+            <ChevronRight className="text-green-600 group-hover:text-white" />
           </Button>
         </div>
       </Banner>
