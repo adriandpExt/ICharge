@@ -34,7 +34,7 @@ export const NavBar = () => {
 
   const linkList: LinkList[] = [
     {
-      label: 'How to use?',
+      label: 'How to use',
       path: '/how-to',
       icon: MessageCircleQuestion,
     },
