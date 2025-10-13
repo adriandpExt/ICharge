@@ -73,7 +73,7 @@ const HowToUse = (): ReactElement => {
             variant={"custombutton"}
             className="group h-10 items-center bg-white text-green-600 hover:text-white"
           >
-            Just click here!
+            Click here
             <ChevronDown className="text-green-600 group-hover:text-white" />
           </Button>
         </div>
