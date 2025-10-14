@@ -162,26 +162,30 @@ const Sustainabilities = (): ReactElement => {
         </div>
       </PageContainer>
 
-      <section className="bg-[url('@/assets/about/about-banner.jpg')] bg-cover bg-center">
-        <div className="container relative mx-auto min-h-[300px] flex flex-col justify-center p-4 sm:p-6 md:p-6 gap-5">
-          {[
-            t(LocalizationKey.about.stayPowered),
-            t(LocalizationKey.about.stayConnected),
-          ].map((text, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center text-white sm:justify-start sm:text-3xl md:text-4xl"
-            >
-              <img
-                src={Lightning}
-                className="h-6 sm:h-8 md:h-16"
-                aria-hidden="true"
-              />
-              <Label variant="banner" className="text-white">{text}</Label>
+      <div className="bg-[url('@/assets/about/about-banner.jpg')] bg-cover bg-center">
+        <div className="container relative mx-auto min-h-[301px]">
+          <div className="relative z-10 flex min-h-[301px] flex-col justify-center p-4 sm:p-6 md:p-8">
+            <div className="mx-auto sm:mx-0">
+              {[
+                t(LocalizationKey.about.stayPowered),
+                t(LocalizationKey.about.stayConnected),
+              ].map((text, index) => (
+                <h2
+                  key={index}
+                  className="mb-4 flex items-center justify-center text-white sm:justify-start sm:text-3xl md:text-4xl"
+                >
+                  <img
+                    src={Lightning}
+                    className="mr-2 h-6 w-6 sm:h-8 sm:w-8 md:h-16 md:w-16"
+                    aria-hidden="true"
+                  />
+                  <Label variant="banner">{text}</Label>
+                </h2>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </section>
+      </div>
 
       <div className="mt-10 flex flex-col gap-10 px-4 md:px-0">
         <Section icon={RocketLogo} title={t(LocalizationKey.about.ourMission)}>
