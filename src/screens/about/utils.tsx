@@ -1,5 +1,5 @@
 import LocalizationKey from "@/i18n/key";
-import { CertImage, SumStep } from "./types";
+import { SumStep } from "./types";
 import Summary1 from "@/assets/about/SummaryImages/advanced.png";
 import Summary2 from "@/assets/about/SummaryImages/inhouse.png";
 import Summary3 from "@/assets/about/SummaryImages/proprietary.png";
@@ -50,53 +50,12 @@ export const SumVal: SumStep[] = [
   },
 ];
 
-export const Certs: CertImage[] = [
-  {
-    imageName: Recycle
-  },
-  {
-    imageName: Durability
-  },
-  {
-    imageName: cccCertification
-  },
-  {
-    imageName: ceCertification
-  },
-  {
-    imageName: iccCertification
-  },
-  {
-    imageName: psCertification
-  },
-  {
-    imageName: PhilGeps
-  },
-];
-
-export const CertsMobileTopRow: CertImage[] = [
-  {
-    imageName: Recycle
-  },
-  {
-    imageName: Durability
-  },
-  {
-    imageName: cccCertification
-  },
-  {
-    imageName: ceCertification
-  },
-];
-
-export const CertsMobileBottomRow: CertImage[] = [
-  {
-    imageName: iccCertification
-  },
-  {
-    imageName: psCertification
-  },
-  {
-    imageName: PhilGeps
-  },
+export const Certs = [
+  Recycle,
+  Durability,
+  cccCertification,
+  ceCertification,
+  iccCertification,
+  psCertification,
+  PhilGeps,
 ];
