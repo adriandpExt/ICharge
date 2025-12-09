@@ -86,13 +86,13 @@ const HowToUse = (): ReactElement => {
           <HowToCard
             title={t(LocalizationKey.howTo.howToRent.howToRentHeader)}
             subtitle={t(LocalizationKey.howTo.howToRent.howToRentDesc)}
-            link="https://www.youtube.com/embed/GGAc5QctHFE"
+            link="https://www.youtube.com/embed/qD3iPkjB2bw?rel=0"
           />
 
           <HowToCard
-            title={t(LocalizationKey.howTo.howToReturn.howToReturnHeader)}
+            title={t(LocalizationKey.howTo.howToRent.howToRentHeader)}
             subtitle={t(LocalizationKey.howTo.howToReturn.howToReturnDesc)}
-            link="https://www.youtube.com/embed/GGAc5QctHFE"
+            link="https://www.youtube.com/embed/GGAc5QctHFE?rel=0"
             isFlipped
           />
         </PageContainer>
