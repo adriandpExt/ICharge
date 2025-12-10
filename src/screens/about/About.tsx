@@ -66,9 +66,7 @@ const SummaryCard = (props: ISummaryCard): ReactElement => {
         height={"100%"}
         className={cn(
           "hidden object-cover lg:flex",
-          isFlipped
-            ? "rounded-br-[36px] rounded-tr-[36px]"
-            : "rounded-bl-[36px] rounded-tl-[36px]",
+          isFlipped ? "rounded-r-[36px]" : "rounded-l-[36px]",
         )}
       />
 
@@ -76,7 +74,7 @@ const SummaryCard = (props: ISummaryCard): ReactElement => {
         src={SumImageMobile}
         alt=""
         width={"100%"}
-        className="flex-col rounded-tl-[36px] rounded-tr-[36px] object-cover lg:hidden"
+        className="flex-col rounded-t-[36px] object-cover lg:hidden"
       />
 
       <CardContent className="flex flex-col space-y-5 p-10 lg:w-[60%]">
@@ -91,13 +89,11 @@ const SummaryCard = (props: ISummaryCard): ReactElement => {
 
         <Label variant="subtitle">{t(desc)}</Label>
 
-        <div>
-          <Label variant={"subtitle"} className="font-bold md:flex">
-            {t(LocalizationKey.about.keyFeaturesHead)}
-          </Label>
-        </div>
+        <Label variant={"subtitle"} className="font-bold md:flex">
+          {t(LocalizationKey.about.keyFeaturesHead)}
+        </Label>
 
-        <div className="flex w-full flex-col items-start space-y-5 lg:flex">
+        <div className="w-full items-start space-y-5">
           {footnote.map((data, index) => (
             <div className="flex items-start gap-5" key={index}>
               <div className="rounded-full bg-gradient-to-t from-green-600 to-green-900 p-1">
@@ -163,27 +159,19 @@ const Sustainabilities = (): ReactElement => {
       </PageContainer>
 
       <div className="bg-[url('@/assets/about/about-banner.jpg')] bg-cover bg-center">
-        <div className="container relative mx-auto min-h-[301px]">
-          <div className="relative z-10 flex min-h-[301px] flex-col justify-center p-4 sm:p-6 md:p-8">
-            <div className="mx-auto sm:mx-0">
-              {[
-                t(LocalizationKey.about.stayPowered),
-                t(LocalizationKey.about.stayConnected),
-              ].map((text, index) => (
-                <h2
-                  key={index}
-                  className="mb-4 flex items-center justify-center text-white sm:justify-start sm:text-3xl md:text-4xl"
-                >
-                  <img
-                    src={Lightning}
-                    className="mr-2 h-6 w-6 sm:h-8 sm:w-8 md:h-16 md:w-16"
-                    aria-hidden="true"
-                  />
-                  <Label variant="banner">{text}</Label>
-                </h2>
-              ))}
+        <div className="container mx-auto space-y-2 p-4 py-14 sm:p-6 md:p-8">
+          {[
+            t(LocalizationKey.about.stayPowered),
+            t(LocalizationKey.about.stayConnected),
+          ].map((text, ids) => (
+            <div
+              key={ids}
+              className="flex items-center justify-center gap-2 text-white sm:justify-start"
+            >
+              <img src={Lightning} className="h-6 sm:h-8 md:h-16" />
+              <Label variant="banner">{text}</Label>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 
