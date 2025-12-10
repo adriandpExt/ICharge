@@ -90,7 +90,7 @@ const HowToUse = (): ReactElement => {
           />
 
           <HowToCard
-            title={t(LocalizationKey.howTo.howToRent.howToRentHeader)}
+            title={t(LocalizationKey.howTo.howToReturn.howToReturnHeader)}
             subtitle={t(LocalizationKey.howTo.howToReturn.howToReturnDesc)}
             link="https://www.youtube.com/embed/GGAc5QctHFE?rel=0"
             isFlipped
