@@ -36,6 +36,7 @@ const LocalizationKey = {
     stayPoweredBtn: "home.stayPoweredBtn.label",
   },
   navigation: {
+    howTo: "navigation.howTo.label",
     partnerwithUs: "navigation.partnerwithUs.label",
     services: "navigation.services.label",
     about: "navigation.about.label",
@@ -54,6 +55,20 @@ const LocalizationKey = {
     refundsAndDeposits: "customer.refundsAndDeposits.label",
     appAndTechnicalIssues: "customer.appAndTechnicalIssues.label",
     powerbankUsage: "customer.powerbankUsage.label",
+  },
+
+  howTo: {
+    howToHeading: 'howTo.howToHeading.label',
+    howToBannerText: 'howTo.howToBannerText.label',
+    howToCallToAction: 'howTo.howToCallToAction.label',
+    howToRent: {
+      howToRentHeader: 'howTo.howToRent.howToRentHeader.label',
+      howToRentDesc: 'howTo.howToRent.howToRentDesc.label',
+    },
+    howToReturn: {
+      howToReturnHeader: 'howTo.howToReturn.howToReturnHeader.label',
+      howToReturnDesc: 'howTo.howToReturn.howToReturnDesc.label',
+    }
   },
 
   partnerWithUs: {

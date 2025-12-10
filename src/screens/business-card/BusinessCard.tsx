@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Label } from "@/components/ui/label";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/button";
@@ -34,8 +34,6 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
 const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
-
-  const navigate = useNavigate();
 
   const isNotStaff: boolean = card?.id === "021" || card?.id === "022";
 
@@ -97,9 +95,9 @@ const BusinessCard = (): ReactElement => {
 
           {card.vidLink && (
             <BusinessCardButton
-              label="How to use / return iCharge Power Bank"
+              label="How to use iCharge"
               icon="ic_youtube"
-              onClick={() => navigate('/how-to')}
+              onClick={() => window.open(card.vidLink, '_blank')}
             />
           )}
         </div>

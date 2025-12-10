@@ -100,6 +100,9 @@
     }
   },
   "navigation": {
+    "howTo": {
+      "label": "如何使用"
+    },
     "partnerwithUs": {
       "label": "與我們合作"
     },
@@ -302,6 +305,34 @@
         ]
       }
     ]
+  },
+
+  "howTo": {
+    "howToHeading": {
+      "label": "如何使用"
+    },
+    "howToBannerText": {
+      "label": "瞭解如何使用我們的服務。 這是關於如何在靠近我們的充電站時租用我們的電源銀行以及如何歸還它們的介紹。"
+    },
+    "howToCallToAction": {
+      "label": "點擊這裏"
+    },
+    "howToRent": {
+      "howToRentHeader": {
+        "label": "如何租用一個 iCharge 電源銀行！"
+      },
+      "howToRentDesc": {
+        "label": "隨時隨地用 iCharge 保持電量充足！ 觀看這個快速指南，看看租房、收費和退房是多麼簡單。 無需再尋找電源插座，只需隨時隨地輕鬆充電！"
+      }
+    },
+    "howToReturn": {
+      "howToReturnHeader": {
+        "label": "如何歸還一個 iCharge 電源銀行！"
+      },
+      "howToReturnDesc": {
+        "label": "充電完成了嗎？ 只需在任何站點放下您的 iCharge 電源銀行，押金將立即退還！ 無需等待，無需麻煩。 隨時隨地輕鬆充電。"
+      }
+    }
   },
 
   "partnerWithUs": {

@@ -29,6 +29,7 @@ export const Footer = () => {
 
   const links = {
     company: [
+      { label: t(LocalizationKey.navigation.howTo), path: "how-to" },
       { label: t(LocalizationKey.navigation.partnerwithUs), path: "partner" },
       { label: t(LocalizationKey.navigation.services), path: "/services" },
       { label: t(LocalizationKey.navigation.about), path: "/about" },

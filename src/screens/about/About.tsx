@@ -9,40 +9,112 @@ import UnionLogo from "@/assets/about/Union.png";
 import VectorLogo from "@/assets/about/Vector.png";
 import Lightning from "@/assets/about/lightning-fill.png";
 import { PageContainer } from "@/components";
-import SummaryCard from "./component/SumCard";
-import {
-  Certs,
-  CertsMobileBottomRow,
-  CertsMobileTopRow,
-  SumVal,
-} from "./utils";
-import { Section } from "./component";
+import { Certs, SumVal } from "./utils";
+import { ISection, ISummaryCard } from "./types";
+import { cn } from "@/lib/utils";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Check } from "lucide-react";
 
-const CertificationSection = (): ReactElement => (
-  <>
-    <section className="hidden justify-center gap-3 overflow-hidden lg:flex lg:flex-row">
-      {Certs.map((data, index) => (
-        <img
-          src={data.imageName}
-          key={index}
-          className="h-[90px] xl:h-[120px]"
-        />
-      ))}
-    </section>
-    <section className="relative -top-10 flex flex-col items-center -space-x-1 lg:hidden">
-      <div className="flex gap-3">
-        {CertsMobileTopRow.map((data, index) => (
-          <img src={data.imageName} key={index} className="h-[60px]" />
-        ))}
+const Section = (props: ISection): ReactElement => {
+  const { icon, children, title, isFlipped = false } = props;
+
+  return (
+    <section data-aos="fade-up">
+      <div
+        className={cn(
+          "container mx-auto flex items-center gap-2 bg-gradient-to-b from-[#044F00] to-[#078E00]",
+          "bg-clip-text p-4 text-2xl font-bold text-transparent md:text-3xl",
+          isFlipped ? "justify-end" : "justify-start",
+        )}
+      >
+        <img src={icon} alt={icon} className="h-16" />
+        <Label variant="banner">{title}</Label>
       </div>
-      <div className="relative top-3 flex gap-3">
-        {CertsMobileBottomRow.map((data, index) => (
-          <img src={data.imageName} key={index} className="h-[60px]" />
-        ))}
+
+      <div
+        className={cn(
+          "border-t-2 border-green-700 bg-[#38D430]/10 p-10",
+          isFlipped
+            ? "md:ml-36 md:rounded-bl-[5rem]"
+            : "md:mr-36 md:rounded-br-[5rem]",
+        )}
+      >
+        <div className="container mx-auto max-w-7xl">{children}</div>
       </div>
     </section>
-  </>
-);
+  );
+};
+
+const SummaryCard = (props: ISummaryCard): ReactElement => {
+  const { t } = useTranslation();
+
+  const { summaryData, isFlipped } = props;
+  const { SumImage, SumImageMobile, header, desc, footnote } = summaryData;
+
+  return (
+    <Card
+      data-aos="zoom-in-up"
+      className={cn(
+        "rounded-[36px] border-0 bg-gradient-to-b from-[#e0eddf] via-[#d9e3da] to-[#e6e8e6] lg:flex",
+        isFlipped && "flex-row-reverse",
+      )}
+    >
+      <img
+        src={SumImage}
+        alt=""
+        height={"100%"}
+        className={cn(
+          "hidden object-cover lg:flex",
+          isFlipped
+            ? "rounded-br-[36px] rounded-tr-[36px]"
+            : "rounded-bl-[36px] rounded-tl-[36px]",
+        )}
+      />
+
+      <img
+        src={SumImageMobile}
+        alt=""
+        width={"100%"}
+        className="flex-col rounded-tl-[36px] rounded-tr-[36px] object-cover lg:hidden"
+      />
+
+      <CardContent className="flex flex-col space-y-5 p-10 lg:w-[60%]">
+        <Label
+          variant="heading2"
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:text-start"
+        >
+          {t(header)}
+        </Label>
+
+        <Separator className="bg-green-700 lg:hidden" />
+
+        <Label variant="subtitle">{t(desc)}</Label>
+
+        <div>
+          <Label variant={"subtitle"} className="font-bold md:flex">
+            {t(LocalizationKey.about.keyFeaturesHead)}
+          </Label>
+        </div>
+
+        <div className="flex w-full flex-col items-start space-y-5 lg:flex">
+          {footnote.map((data, index) => (
+            <div className="flex items-start gap-5" key={index}>
+              <div className="rounded-full bg-gradient-to-t from-green-600 to-green-900 p-1">
+                <Check
+                  className="h-3 w-3 text-white md:h-5 md:w-5"
+                  strokeWidth={5}
+                />
+              </div>
+
+              <Label variant={"subtitle"}>{t(data)}</Label>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 const Sustainabilities = (): ReactElement => {
   const { t } = useTranslation();
@@ -63,14 +135,14 @@ const Sustainabilities = (): ReactElement => {
             <img
               src={costEffective}
               alt="iCharge devices"
-              className="h-75 w-72 text-green-600"
+              className="w-72 text-green-600"
             />
           </div>
 
           <div className="flex flex-col gap-5">
             <Label
               variant="banner"
-              className="bg-gradient-to-b from-[#044F00] to-[#078E00] bg-clip-text font-medium text-transparent"
+              className="bg-gradient-to-b from-[#044F00] to-[#078E00] bg-clip-text text-transparent"
             >
               {t(LocalizationKey.about.whoWeAre)}
             </Label>
@@ -146,16 +218,25 @@ const Sustainabilities = (): ReactElement => {
           </div>
         </Section>
 
-        <PageContainer className="flex flex-col gap-20 px-0 md:px-10">
+        <PageContainer className="flex flex-col gap-10 px-0 md:px-10">
           {SumVal.map((data, index) => (
             <SummaryCard
               key={index}
-              summaryCardContents={data}
+              summaryData={data}
               isFlipped={index === 1}
             />
           ))}
 
-          <CertificationSection />
+          <section className="flex flex-wrap justify-center gap-3">
+            {Certs.map((data, index) => (
+              <img
+                src={data}
+                key={index}
+                alt={`CertImage ${index + 1}`}
+                className="h-[60px] lg:h-[90px] xl:h-[120px]"
+              />
+            ))}
+          </section>
         </PageContainer>
       </div>
     </section>

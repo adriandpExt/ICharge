@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 export interface ISummaryCard {
-  summaryCardContents: SumStep;
+  summaryData: SumStep;
   isFlipped: boolean;
 }
 
@@ -17,8 +17,4 @@ export interface SumStep {
   header: string;
   desc: string;
   footnote: string[];
-}
-
-export interface CertImage {
-  imageName: string;
 }

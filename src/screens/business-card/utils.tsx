@@ -205,6 +205,7 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: ContactUS,
     email: "reachus@icharge.com.ph",
     qrLink: "/business-card/021",
+    vidLink: 'https://www.icharge.com.ph/how-to'
   },
   {
     id: "022",
