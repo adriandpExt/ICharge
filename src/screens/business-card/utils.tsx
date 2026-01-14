@@ -1,17 +1,10 @@
 import { CardInfo } from "./type";
 import NoImage from "@/assets/businessCard/no_img.png";
-import JustynNunez from "@/assets/businessCard/justyn_nunez.png";
-import JohannLochiong from "@/assets/businessCard/johann_adrian_lochiong.png";
-import JessicaDorado from "@/assets/businessCard/jessica_dorado.png";
 import JaysonEyoy from "@/assets/businessCard/jayson_eyoy.png";
-import GloriaPalima from "@/assets/businessCard/gloria_ruby_palima.png";
 import FloryOcampo from "@/assets/businessCard/flory_joy_ocampo.png";
 import EnosLola from "@/assets/businessCard/enos_ephraim_lola.png";
-import CerilynSoleybar from "@/assets/businessCard/cerilyn_soleybar.png";
-import CarlEspiritu from "@/assets/businessCard/carl_dominic_espiritu.png";
 import AleeBorromeo from "@/assets/businessCard/alee_borromeo.png";
 import MatthewOng from "@/assets/businessCard/matthew_ong.png";
-import GinalynMarcelo from "@/assets/businessCard/ginalyn_marcelo.png";
 import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
 import ContactUS from "@/assets/businessCard/contact_us.png";
@@ -81,24 +74,6 @@ export const businessCardInfo: CardInfo[] = [
   },
   //NO VIBER
   {
-    id: "008",
-    name: "Kim Basagre",
-    role: "Digital Marketing Manager",
-    viberLink: "viber://chat?number",
-    imgLink: NoImage,
-    email: "ads@icharge.com.ph",
-    qrLink: "/business-card/008",
-  },
-  {
-    id: "009",
-    name: "Ginalyn S. Marcelo",
-    role: "Sales and Marketing Officer",
-    viberLink: "viber://chat?number=09614309185",
-    imgLink: GinalynMarcelo,
-    email: "ginalyn@icharge.com.ph",
-    qrLink: "/business-card/009",
-  },
-  {
     id: "010",
     name: "Jayson M. Eyoy",
     role: "Sales and Marketing Officer",
@@ -106,33 +81,6 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: JaysonEyoy,
     email: "jayson@icharge.com.ph",
     qrLink: "/business-card/010",
-  },
-  {
-    id: "011",
-    name: "Gloria Ruby C. Palima",
-    role: "Sales and Marketing Manager",
-    viberLink: "viber://chat?number=09852963333",
-    imgLink: GloriaPalima,
-    email: "ruby@icharge.com.ph",
-    qrLink: "/business-card/011",
-  },
-  {
-    id: "012",
-    name: "Carl Dominic C. Espiritu",
-    role: "Sales and Marketing Officer",
-    viberLink: "viber://chat?number=09399600672",
-    imgLink: CarlEspiritu,
-    email: "carl@icharge.com.ph",
-    qrLink: "/business-card/012",
-  },
-  {
-    id: "013",
-    name: "Jessica T. Dorado",
-    role: "Sales and Marketing Officer",
-    viberLink: "viber://chat?number=09266205786",
-    imgLink: JessicaDorado,
-    email: "jessica@icharge.com.ph",
-    qrLink: "/business-card/013",
   },
   {
     id: "014",
@@ -153,15 +101,6 @@ export const businessCardInfo: CardInfo[] = [
     qrLink: "/business-card/015",
   },
   {
-    id: "016",
-    name: "Cerilyn B. Soleybar",
-    role: "Sales and Marketing Officer",
-    viberLink: "viber://chat?number=09488016740",
-    imgLink: CerilynSoleybar,
-    email: "cerilyn@icharge.com.ph",
-    qrLink: "/business-card/016",
-  },
-  {
     id: "017",
     name: "Flory Joy S. Ocampo",
     role: "Sales and Marketing Officer",
@@ -169,24 +108,6 @@ export const businessCardInfo: CardInfo[] = [
     imgLink: FloryOcampo,
     email: "floryjoy@icharge.com.ph",
     qrLink: "/business-card/017",
-  },
-  {
-    id: "018",
-    name: "Justyn Ann N. Cuanan",
-    role: "Sales and Marketing Officer",
-    viberLink: "viber://chat?number=09855947777",
-    imgLink: JustynNunez,
-    email: "justyn@icharge.com.ph",
-    qrLink: "/business-card/018",
-  },
-  {
-    id: "019",
-    name: "Johann Adrian O. Lo Chiong",
-    role: "Sales and Marketing Manager",
-    viberLink: "viber://chat?number=09761785603",
-    imgLink: JohannLochiong,
-    email: "johann@icharge.com.ph",
-    qrLink: "/business-card/019",
   },
   {
     id: "020",
