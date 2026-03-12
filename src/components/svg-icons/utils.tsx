@@ -42,4 +42,5 @@ export type IconName =
   | "ic_bc_email"
   | "s_p_s_c"
   | "ic_youtube"
-  | "ic_bc_web";
+  | "ic_bc_web"
+  | "ic_tiktok";
