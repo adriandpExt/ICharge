@@ -323,16 +323,6 @@ export const businessCardInfo: ICardInfo[] = [
         link: "/iscreen",
         label: "View our brochure",
       },
-      {
-        icon: "ic_facebook",
-        link: "https://www.facebook.com/iscreen.official.ph",
-        label: "Visit our Facebook page",
-      },
-      {
-        icon: "ic_tiktok",
-        link: "https://www.tiktok.com/@iscreen_ph",
-        label: "Visit our TikTok page",
-      },
     ],
   },
 ];
