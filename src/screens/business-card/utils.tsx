@@ -26,7 +26,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "joe@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -47,7 +47,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "leff@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -68,7 +68,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "evonne@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -89,7 +89,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "marketinginfo@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -110,7 +110,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "official@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -131,7 +131,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "elvin@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -152,7 +152,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "careers@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -174,7 +174,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "jayson@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -195,7 +195,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "matthew@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -216,7 +216,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "enos@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -237,7 +237,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "floryjoy@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
     ],
@@ -272,7 +272,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "reachus@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph/",
+        link: "/",
         label: "Visit our website",
       },
       {

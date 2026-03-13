@@ -54,13 +54,13 @@ const BusinessCard = (): ReactElement => {
     );
   }
 
-  const renderButtons = (data: IButtonContent) => {
+  const renderButtons = (data: IButtonContent, key: string) => {
     switch (data.buttonType) {
       case "Email":
         return (
           <BusinessCardButton
             icon="ic_bc_email"
-            key={data.link}
+            key={key}
             onClick={() => (window.location.href = `mailto:${data.link}`)}
             label={isNotStaff ? "Partner with us" : "Email me"}
           />
@@ -69,7 +69,7 @@ const BusinessCard = (): ReactElement => {
         return (
           <BusinessCardButton
             icon="ic_basil_viber_outline"
-            key={data.link}
+            key={key}
             label={
               isNotStaff ? "Chat with us on Viber" : "Chat with me on Viber"
             }
@@ -82,7 +82,7 @@ const BusinessCard = (): ReactElement => {
         return (
           <BusinessCardButton
             label={data.label as string}
-            key={data.link}
+            key={key}
             icon={data.icon ?? "ic_bc_web"}
             onClick={() => window.open(data.link, "_blank")}
           />
@@ -93,15 +93,13 @@ const BusinessCard = (): ReactElement => {
   return (
     <div className="flex-col overflow-x-hidden">
       <div className="flex h-[100px] w-full items-center justify-center bg-gradient-to-b from-[#044F00] to-[#078E00]">
-        <Button variant="icon" className="mx-3 mb-8 mt-9 space-x-10">
-          <SvgIcons name="s_p_s_c" size={320} />
-        </Button>
+        <SvgIcons name="s_p_s_c" size={320} />
       </div>
 
-      <div className="flex h-screen w-screen flex-col items-center rounded-lg bg-[url('@/assets/businessCard/social_bg.svg')] p-7">
+      <div className="flex min-h-[calc(100vh-100px)] flex-col items-center rounded-lg bg-[url('@/assets/businessCard/social_bg.svg')] p-7">
         <Avatar
           imageUrl={card.img}
-          altText={card.name as string}
+          altText={card.name ?? "Person"}
           size={isNotStaff ? 324 : 230}
           hideBorder={isNotStaff}
         />
@@ -119,7 +117,11 @@ const BusinessCard = (): ReactElement => {
         )}
 
         <div className="mt-6 space-y-6">
-          {card.buttonContent.map((button) => renderButtons(button))}
+          {card.buttonContent.map((button, index) => {
+            const stringKey = `${button.buttonType}-${index}`;
+
+            return renderButtons(button, stringKey);
+          })}
         </div>
       </div>
     </div>
