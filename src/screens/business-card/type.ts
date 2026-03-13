@@ -1,10 +1,19 @@
-export interface CardInfo {
+import { IconName } from "@/components/svg-icons/utils";
+
+type IButtonType = "Viber" | "Email";
+
+export interface IButtonContent {
+  buttonType?: IButtonType;
+  label?: string;
+  icon?: IconName;
+  link: string;
+}
+
+export interface ICardInfo {
   id: string;
-  name: string;
-  role: string;
-  viberLink: string;
-  imgLink: string;
-  email: string;
+  img: string;
+  name?: string;
+  role?: string;
   qrLink: string;
-  vidLink?: string;
+  buttonContent: IButtonContent[];
 }

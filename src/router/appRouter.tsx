@@ -23,6 +23,8 @@ export const UserAgreements = lazy(
 export const Privacies = lazy(() => import("@/screens/privacy/Privacies"));
 export const Cookie = lazy(() => import("@/screens/cookies/Cookie"));
 
+export const IScreen = lazy(() => import("@/screens/iscreen"))
+
 const router: RouteObject[] = [
   {
     path: "/",
@@ -69,6 +71,10 @@ const router: RouteObject[] = [
         path: "cookies",
         element: <Cookie />,
       },
+      {
+        path: "iscreen",
+        element: <IScreen />
+      }
     ],
   },
 ];
