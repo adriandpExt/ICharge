@@ -39,7 +39,7 @@ const BusinessCard = (): ReactElement => {
   const card = businessCardInfo.find((card) => card.id === id);
 
   const isNotStaff: boolean =
-    card?.id === "021" || card?.id === "022" || card?.id === "023";
+    card?.id === "021" || card?.id === "022";
 
   if (!card) {
     return (
@@ -62,7 +62,7 @@ const BusinessCard = (): ReactElement => {
             icon="ic_bc_email"
             key={key}
             onClick={() => (window.location.href = `mailto:${data.link}`)}
-            label={isNotStaff ? "Partner with us" : "Email me"}
+            label={!card?.role ? "Partner with us" : "Email me"}
           />
         );
       case "Viber":
@@ -71,7 +71,7 @@ const BusinessCard = (): ReactElement => {
             icon="ic_basil_viber_outline"
             key={key}
             label={
-              isNotStaff ? "Chat with us on Viber" : "Chat with me on Viber"
+              !card?.role ? "Chat with us on Viber" : "Chat with me on Viber"
             }
             onClick={() =>
               window.open(`viber://chat?number=${data.link}`, "_blank")
@@ -101,20 +101,16 @@ const BusinessCard = (): ReactElement => {
           imageUrl={card.img}
           altText={card.name ?? "Person"}
           size={isNotStaff ? 324 : 230}
-          hideBorder={isNotStaff}
+          hideBorder={!isNotStaff}
         />
 
-        {card.name && (
-          <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
-            {card.name}
-          </Label>
-        )}
+        <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
+          {card.name}
+        </Label>
 
-        {card.role && (
-          <Label className="font-poppins text-lg font-semibold text-gray-800">
-            {card.role}
-          </Label>
-        )}
+        <Label className="font-poppins text-lg font-semibold text-gray-800">
+          {card.role}
+        </Label>
 
         <div className="mt-6 space-y-6">
           {card.buttonContent.map((button, index) => {
