@@ -9,7 +9,7 @@ import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
 import ContactUS from "@/assets/businessCard/contact_us.png";
 
-import iScreen from '@/assets/businessCard/iScreen_white_textless.png';
+import iScreen from '@/assets/businessCard/iScreen.png';
 
 export const businessCardInfo: ICardInfo[] = [
   {

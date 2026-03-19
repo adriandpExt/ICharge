@@ -38,8 +38,7 @@ const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
 
-  const isNotStaff: boolean =
-    card?.id === "021" || card?.id === "022";
+  const isNotStaff: boolean = card?.id === "021" || card?.id === "022";
 
   if (!card) {
     return (
@@ -93,7 +92,18 @@ const BusinessCard = (): ReactElement => {
   return (
     <div className="flex-col overflow-x-hidden">
       <div className="flex h-[100px] w-full items-center justify-center bg-gradient-to-b from-[#044F00] to-[#078E00]">
-        <SvgIcons name="s_p_s_c" size={320} />
+        <Label
+          variant={"default"}
+          className="bg-gradient-to-l from-[#44D62C] to-[#fff] bg-clip-text pr-1 font-eastman text-[23px] italic text-transparent"
+        >
+          {card?.id === "023" ? "Stay Visible" : "Stay Powered"},
+        </Label>
+        <Label
+          variant={"default"}
+          className="bg-gradient-to-l from-[#44D62C] to-[#fff] bg-clip-text pr-1 font-eastman text-[23px] italic text-transparent"
+        >
+          Stay Connected
+        </Label>
       </div>
 
       <div className="flex min-h-[calc(100vh-100px)] flex-col items-center rounded-lg bg-[url('@/assets/businessCard/social_bg.svg')] p-7">
@@ -101,7 +111,7 @@ const BusinessCard = (): ReactElement => {
           imageUrl={card.img}
           altText={card.name ?? "Person"}
           size={isNotStaff ? 324 : 230}
-          hideBorder={!isNotStaff}
+          hideBorder={isNotStaff}
         />
 
         <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
