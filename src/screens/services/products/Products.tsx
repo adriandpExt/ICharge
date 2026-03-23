@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useServices } from "@/screens/services/utils";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -19,6 +20,8 @@ const Features = () => {
   const { productList, t, productInit } = useServices();
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState<Product>(productInit);
+
+  const [api, setApi] = useState<CarouselApi>();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleOpen = (e: { stopPropagation: () => void }, item: Product) => {
@@ -27,12 +30,17 @@ const Features = () => {
     setOpen(true);
   };
 
-  const handleOpenChange = () => {
-    setOpen(false);
+  const carouselApiInit = (api: CarouselApi) => {
+    if (api !== undefined) {
+      setApi(api);
+      setCurrentIndex(api.selectedScrollSnap());
+
+      api.on("select", () => setCurrentIndex(api.selectedScrollSnap()));
+    }
   };
 
-  const handleCarouselChange = (index: number) => {
-    setCurrentIndex(index);
+  const handleOpenChange = () => {
+    setOpen(false);
   };
 
   return (
@@ -50,13 +58,7 @@ const Features = () => {
         <Carousel
           opts={{ align: "center", loop: true }}
           className="w-full lg:h-[100%]"
-          setApi={(api) => {
-            if (api !== undefined) {
-              api.on("select", () =>
-                handleCarouselChange(api.selectedScrollSnap()),
-              );
-            }
-          }}
+          setApi={carouselApiInit}
         >
           <CarouselContent>
             {productList.map((data, index) => (
@@ -79,6 +81,7 @@ const Features = () => {
                       <SvgIcons name="ic_svl_ig" size={50} />
                     </div>
                   </div>
+
                   <div
                     className={cn(
                       "absolute -z-50 h-[28rem] w-[95%] rounded-[4rem] shadow-md md:w-[23rem] md:rounded-[3rem]",
@@ -89,20 +92,23 @@ const Features = () => {
                       boxShadow: "inset 0 0 0 1px rgba(134, 239, 172, 1)",
                     }}
                   />
+
                   <img
                     src={data.productDetails.image}
                     className="h-[50%] w-auto object-contain px-16"
                     alt="Product Image"
                   />
+
                   <div className="flex flex-col items-center px-5">
                     <Label
                       variant="title"
-                      className="flex h-[116px] items-center bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent"
+                      className="flex h-[116px] items-center bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-4xl text-transparent sm:text-5xl"
                     >
                       {data.productDetails.name.toLocaleUpperCase()}
                     </Label>
+
                     <Button
-                      className="w-20 rounded-3xl bg-green-500 text-white font-bold tracking-wider hover:bg-green-400"
+                      className="w-20 rounded-3xl bg-green-500 font-bold tracking-wider text-white hover:bg-green-400"
                       onClick={(e) => handleOpen(e, data)}
                     >
                       {t(LocalizationKey.services.more)}
@@ -112,12 +118,14 @@ const Features = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+
           <CarouselPrevious
             className={cn(
               "custom-lg:flex hidden aspect-square scale-150 rounded-e-none text-green-500 hover:text-green-200",
               "border-[#D1F9C9] bg-[#E0EFDF]",
             )}
           />
+
           <CarouselNext
             className={cn(
               "custom-lg:flex hidden aspect-square scale-150 rounded-s-none text-green-500 hover:text-green-200",
@@ -130,10 +138,11 @@ const Features = () => {
           {productList.map((_, index) => (
             <div
               key={index}
-              className={`mx-2 h-3 w-3 cursor-pointer rounded-full ${
-                currentIndex === index ? "bg-opacity-100" : "bg-opacity-25"
-              } bg-green-500`}
-              onClick={() => setCurrentIndex(index)}
+              className={cn(
+                "mx-2 size-3 rounded-full bg-green-500",
+                currentIndex === index ? "bg-opacity-100" : "bg-opacity-25",
+              )}
+              onClick={() => api?.scrollTo(index)}
             />
           ))}
         </div>
