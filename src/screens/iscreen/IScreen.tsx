@@ -47,10 +47,10 @@ const IScreen = () => {
 
   return (
     <>
-      <Banner title="IScreen">
+      <Banner title="iScreen">
         <Label variant="subtitle" className="text-white">
           Looking forward to advertise with us? Below are the details to see
-          about iScreen - powered by us.
+          about iScreen - a digital LED advertising platform powered by iCharge.
         </Label>
       </Banner>
 
