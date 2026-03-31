@@ -206,7 +206,7 @@ const Sustainabilities = (): ReactElement => {
           </div>
         </Section>
 
-        <PageContainer className="flex flex-col gap-10 px-0 md:px-10">
+        <PageContainer className="space-y-10 px-0 md:px-10">
           {SumVal.map((data, index) => (
             <SummaryCard
               key={index}
