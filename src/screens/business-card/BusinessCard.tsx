@@ -26,10 +26,9 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
     >
       <div className="grid w-full grid-cols-[20%_80%] items-center gap-2">
         <SvgIcons name={icon} size={40} />
-        
-        <p className="truncate text-start font-poppins font-bold text-white">
+        <Label className="truncate text-start font-poppins font-bold text-white">
           {label}
-        </p>
+        </Label>
       </div>
     </Button>
   );

@@ -40,7 +40,6 @@ export default function FullScreenResponsiveFAQAccordion() {
       <div className="container mx-auto mb-6 grid grid-cols-1 gap-2 px-3 md:grid-cols-2 lg:mb-10 lg:grid-cols-3">
         {faqData.map((category) => (
           <Button
-            key={category.category}
             variant={"custombutton"}
             className={cn(
               "h-9 w-full whitespace-pre-wrap rounded-full border-2 border-green-500 px-3 py-2 text-sm transition-colors duration-200 sm:h-14 md:px-4 md:py-2 md:text-base lg:text-lg",
