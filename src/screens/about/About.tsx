@@ -80,7 +80,7 @@ const SummaryCard = (props: ISummaryCard): ReactElement => {
       <CardContent className="flex flex-col space-y-5 p-10 lg:w-[60%]">
         <Label
           variant="heading2"
-          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:text-start"
+          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:text-start py-0.5"
         >
           {t(header)}
         </Label>
