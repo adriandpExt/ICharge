@@ -32,6 +32,7 @@ export const Footer = () => {
       { label: t(LocalizationKey.navigation.howTo), path: "how-to" },
       { label: t(LocalizationKey.navigation.partnerwithUs), path: "partner" },
       { label: t(LocalizationKey.navigation.services), path: "/services" },
+      { label: "IScreen", path: "/iscreen" },
       { label: t(LocalizationKey.navigation.about), path: "/about" },
       { label: t(LocalizationKey.navigation.faqs), path: "/faqs" },
     ],

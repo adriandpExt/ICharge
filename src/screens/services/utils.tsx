@@ -5,16 +5,16 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import LocalizationKey from "@/i18n/key";
 
-import Products4 from "@/assets/Products/products/icharge4.png";
-import Products8S from "@/assets/Products/products/icharge8S.png";
-import ProductsStandee from "@/assets/Products/products/ichargeStandee.png";
-import ProductsStandeeRectangle from "@/assets/Products/products/ichargeStandeeNewRectangle.png";
-import Products12Pro from "@/assets/Products/products/icharge12Pro.png";
-import Products12 from "@/assets/Products/products/icharge12.png";
-import Products8Plus from "@/assets/Products/products/icharge8Plus.png";
-import Products8 from "@/assets/Products/products/icharge8.png";
-import Products6 from "@/assets/Products/products/icharge6.png";
-import Products24Max from "@/assets/Products/products/ichargeMax.png";
+import Products4 from "@/assets/products/icharge4.png";
+import Products8S from "@/assets/products/icharge8S.png";
+import ProductsStandee from "@/assets/products/ichargeStandee.png";
+import ProductsStandeeRectangle from "@/assets/products/ichargeStandeeNewRectangle.png";
+import Products12Pro from "@/assets/products/icharge12Pro.png";
+import Products12 from "@/assets/products/icharge12.png";
+import Products8Plus from "@/assets/products/icharge8Plus.png";
+import Products8 from "@/assets/products/icharge8.png";
+import Products6 from "@/assets/products/icharge6.png";
+import Products24Max from "@/assets/products/ichargeMax.png";
 
 import sectorHospitality from "@/assets/sectors/sectorHospitality.jpg";
 import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";

@@ -20,7 +20,7 @@ export type IconName =
   | "ic_apple"
   | "ic_uk_flag"
   | "ic_ph_flag"
-  | "ic_apple_hero"
+  | "ic_apple"
   | "ic_apple_footer"
   | "ic_playstore_hero"
   | "ic_footer_logo"
