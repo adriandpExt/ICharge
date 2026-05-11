@@ -9,7 +9,25 @@ import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
 import ContactUS from "@/assets/businessCard/contact_us.png";
 
-import iScreen from '@/assets/businessCard/iScreen.png';
+import iScreen from "@/assets/businessCard/iScreen.png";
+import SunnyFoods from "@/assets/businessCard/SunnyFoods.png";
+
+export const businessCardThemes = {
+  sunnyFoods: {
+    avatarBorder: "#7a1f1f",
+    button: "from-[#7a1f1f] via-[#a0433f] to-[#b81c21]",
+    bodyBg: "bg-[#f4ece3]",
+    headerTextColor: "from-[#fff] to-[#b81c21]",
+    headerBgColor: "from-[#460f0f] to-[#7a1f1f]",
+  },
+  iCharge: {
+    avatarBorder: "#078E00",
+    button: "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e]",
+    bodyBg: "bg-[url('@/assets/businessCard/social_bg.svg')]",
+    headerTextColor: "from-[#fff] to-[#44D62C]",
+    headerBgColor: "from-[#044F00] to-[#078E00]",
+  },
+};
 
 export const businessCardInfo: ICardInfo[] = [
   {
@@ -334,6 +352,25 @@ export const businessCardInfo: ICardInfo[] = [
         icon: "ic_tiktok",
         link: "https://www.tiktok.com/@iscreen_ph",
         label: "Visit our TikTok page",
+      },
+    ],
+  },
+  {
+    id: "024",
+    img: SunnyFoods,
+    qrLink: "/business-card/024",
+    buttonContent: [
+      {
+        buttonType: "Viber",
+        link: "09392379999",
+      },
+      {
+        buttonType: "Email",
+        link: "sales@sunnyfoods.com.ph",
+      },
+      {
+        link: "https://www.sunnyfoods.com.ph/",
+        label: "Visit our website",
       },
     ],
   },
