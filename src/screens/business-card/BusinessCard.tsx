@@ -1,38 +1,62 @@
 import { ReactElement } from "react";
 import { useParams } from "react-router-dom";
-import { Label } from "@/components/ui/label";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/button";
 import { SvgIcons } from "@/components/svg-icons";
-import { businessCardInfo } from "./utils";
+import { businessCardInfo, businessCardThemes } from "./utils";
 import Lottie from "lottie-light-react";
 import NotFound from "@/assets/lottie/404.json";
 import { IconName } from "@/components/svg-icons/utils";
-import { IButtonContent } from "./type";
+import { IButtonContent, ICardInfo } from "./type";
+import { cn } from "@/lib/utils";
 
 interface IBusinessCardBtn {
   label: string;
   onClick: () => void;
   icon: IconName;
+  buttonTheme: string;
 }
 
 const BusinessCardButton = (props: IBusinessCardBtn) => {
-  const { onClick, icon, label } = props;
+  const { onClick, icon, label, buttonTheme } = props;
 
   return (
     <Button
-      className="flex h-[50px] w-[260px] space-x-3 rounded-lg bg-[#078E00] text-white"
+      variant="custombutton"
+      className={cn(
+        "flex h-[50px] w-[260px] space-x-3 rounded-lg bg-gradient-to-l",
+        buttonTheme,
+      )}
       onClick={onClick}
     >
       <div className="grid w-full grid-cols-[20%_80%] items-center gap-2">
         <SvgIcons name={icon} size={40} />
-        
+
         <p className="truncate text-start font-poppins font-bold text-white">
           {label}
         </p>
       </div>
     </Button>
   );
+};
+
+const CardBase = (
+  data: ICardInfo,
+): { tagline: string; variant: keyof typeof businessCardThemes } => {
+  switch (data.id) {
+    case "023":
+      return {
+        tagline: "Stay Visible, Stay Connected",
+        variant: "iCharge",
+      };
+    case "024":
+      return {
+        tagline: "Premium Quality In Every Bite",
+        variant: "sunnyFoods",
+      };
+    default:
+      return { tagline: "Stay Powered, Stay Connected", variant: "iCharge" };
+  }
 };
 
 const BusinessCard = (): ReactElement => {
@@ -54,80 +78,89 @@ const BusinessCard = (): ReactElement => {
     );
   }
 
-  const renderButtons = (data: IButtonContent, key: string) => {
+  const { variant, tagline } = CardBase(card);
+  const theme = businessCardThemes[variant];
+
+  const renderButtonData = (data: IButtonContent): Partial<IButtonContent> => {
+    const isUserCard = !card.role;
+
     switch (data.buttonType) {
       case "Email":
-        return (
-          <BusinessCardButton
-            icon="ic_bc_email"
-            key={key}
-            onClick={() => (window.location.href = `mailto:${data.link}`)}
-            label={!card?.role ? "Partner with us" : "Email me"}
-          />
-        );
+        return {
+          icon: "ic_bc_email",
+          label: isUserCard ? "Partner with us" : "Email me",
+          link: `mailto:${data.link}`,
+        };
+
       case "Viber":
-        return (
-          <BusinessCardButton
-            icon="ic_basil_viber_outline"
-            key={key}
-            label={
-              !card?.role ? "Chat with us on Viber" : "Chat with me on Viber"
-            }
-            onClick={() =>
-              window.open(`viber://chat?number=${data.link}`, "_blank")
-            }
-          />
-        );
+        return {
+          icon: "ic_basil_viber_outline",
+          label: isUserCard ? "Chat with us on Viber" : "Chat with me on Viber",
+          link: `viber://chat?number=${data.link}`,
+        };
+
       default:
-        return (
-          <BusinessCardButton
-            label={data.label as string}
-            key={key}
-            icon={data.icon ?? "ic_bc_web"}
-            onClick={() => window.open(data.link, "_blank")}
-          />
-        );
+        return {
+          icon: data.icon ?? "ic_bc_web",
+          label: data.label,
+          link: data.link,
+        };
     }
   };
 
   return (
     <div className="flex-col overflow-x-hidden">
-      <div className="flex h-[100px] w-full items-center justify-center bg-gradient-to-b from-[#044F00] to-[#078E00]">
-        <Label
-          variant={"default"}
-          className="bg-gradient-to-l from-[#44D62C] to-[#fff] bg-clip-text pr-1 font-eastman text-[23px] italic text-transparent"
+      <div
+        className={cn(
+          "flex h-[100px] w-full items-center justify-center bg-gradient-to-b",
+          theme.headerBgColor,
+        )}
+      >
+        <p
+          className={cn(
+            "bg-gradient-to-r bg-clip-text pr-1 font-eastman text-[23px] italic text-transparent",
+            theme.headerTextColor,
+          )}
         >
-          {card?.id === "023" ? "Stay Visible" : "Stay Powered"},
-        </Label>
-        <Label
-          variant={"default"}
-          className="bg-gradient-to-l from-[#44D62C] to-[#fff] bg-clip-text pr-1 font-eastman text-[23px] italic text-transparent"
-        >
-          Stay Connected
-        </Label>
+          {tagline}
+        </p>
       </div>
 
-      <div className="flex min-h-[calc(100vh-100px)] flex-col items-center rounded-lg bg-[url('@/assets/businessCard/social_bg.svg')] p-7">
+      <div
+        className={cn(
+          "flex min-h-[calc(100vh-100px)] flex-col items-center rounded-lg p-7",
+          theme.bodyBg,
+        )}
+      >
         <Avatar
           imageUrl={card.img}
           altText={card.name ?? "Person"}
           size={isNotStaff ? 324 : 230}
           hideBorder={isNotStaff}
+          borderColor={theme.avatarBorder}
         />
 
-        <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
+        <p className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
           {card.name}
-        </Label>
+        </p>
 
-        <Label className="font-poppins text-lg font-semibold text-gray-800">
+        <p className="font-poppins text-lg font-semibold text-gray-800">
           {card.role}
-        </Label>
+        </p>
 
         <div className="mt-6 space-y-6">
-          {card.buttonContent.map((button, index) => {
-            const stringKey = `${button.buttonType}-${index}`;
+          {card.buttonContent.map((data, index) => {
+            const buttonData = renderButtonData(data);
 
-            return renderButtons(button, stringKey);
+            return (
+              <BusinessCardButton
+                key={`${data.buttonType}-${index}`}
+                icon={buttonData.icon as IconName}
+                label={buttonData.label as string}
+                onClick={() => window.open(buttonData.link, "_blank")}
+                buttonTheme={theme.button}
+              />
+            );
           })}
         </div>
       </div>
