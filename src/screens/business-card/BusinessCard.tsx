@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import { useParams } from "react-router-dom";
-import { Label } from "@/components/ui/label";
 import { Avatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/button";
 import { SvgIcons } from "@/components/svg-icons";
@@ -41,6 +40,25 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
   );
 };
 
+const CardBase = (
+  data: ICardInfo,
+): { tagline: string; variant: keyof typeof businessCardThemes } => {
+  switch (data.id) {
+    case "023":
+      return {
+        tagline: "Stay Visible, Stay Connected",
+        variant: "iCharge",
+      };
+    case "024":
+      return {
+        tagline: "Premium Quality In Every Bite",
+        variant: "sunnyFoods",
+      };
+    default:
+      return { tagline: "Stay Powered, Stay Connected", variant: "iCharge" };
+  }
+};
+
 const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
@@ -60,61 +78,33 @@ const BusinessCard = (): ReactElement => {
     );
   }
 
-  const renderTagline = (
-    data: ICardInfo,
-  ): { tagline: string; variant: keyof typeof businessCardThemes } => {
-    switch (data.id) {
-      case "023":
-        return {
-          tagline: "Stay Visible, Stay Connected",
-          variant: "iCharge",
-        };
-      case "024":
-        return {
-          tagline: "Premium Quality In Every Bite",
-          variant: "sunnyFoods",
-        };
-      default:
-        return { tagline: "Stay Powered, Stay Connected", variant: "iCharge" };
-    }
-  };
+  const { variant, tagline } = CardBase(card);
+  const theme = businessCardThemes[variant];
 
-  const renderButtons = (data: IButtonContent, key: string) => {
+  const renderButtonData = (data: IButtonContent): Partial<IButtonContent> => {
+    const isUserCard = !card.role;
+
     switch (data.buttonType) {
       case "Email":
-        return (
-          <BusinessCardButton
-            icon="ic_bc_email"
-            key={key}
-            onClick={() => (window.location.href = `mailto:${data.link}`)}
-            label={!card?.role ? "Partner with us" : "Email me"}
-            buttonTheme={businessCardThemes[renderTagline(card).variant].button}
-          />
-        );
+        return {
+          icon: "ic_bc_email",
+          label: isUserCard ? "Partner with us" : "Email me",
+          link: `mailto:${data.link}`,
+        };
+
       case "Viber":
-        return (
-          <BusinessCardButton
-            icon="ic_basil_viber_outline"
-            key={key}
-            label={
-              !card?.role ? "Chat with us on Viber" : "Chat with me on Viber"
-            }
-            onClick={() =>
-              window.open(`viber://chat?number=${data.link}`, "_blank")
-            }
-            buttonTheme={businessCardThemes[renderTagline(card).variant].button}
-          />
-        );
+        return {
+          icon: "ic_basil_viber_outline",
+          label: isUserCard ? "Chat with us on Viber" : "Chat with me on Viber",
+          link: `viber://chat?number=${data.link}`,
+        };
+
       default:
-        return (
-          <BusinessCardButton
-            label={data.label as string}
-            key={key}
-            icon={data.icon ?? "ic_bc_web"}
-            onClick={() => window.open(data.link, "_blank")}
-            buttonTheme={businessCardThemes[renderTagline(card).variant].button}
-          />
-        );
+        return {
+          icon: data.icon ?? "ic_bc_web",
+          label: data.label,
+          link: data.link,
+        };
     }
   };
 
@@ -123,24 +113,23 @@ const BusinessCard = (): ReactElement => {
       <div
         className={cn(
           "flex h-[100px] w-full items-center justify-center bg-gradient-to-b",
-          businessCardThemes[renderTagline(card).variant].headerBgColor,
+          theme.headerBgColor,
         )}
       >
-        <Label
-          variant={"default"}
+        <p
           className={cn(
             "bg-gradient-to-r bg-clip-text pr-1 font-eastman text-[23px] italic text-transparent",
-            businessCardThemes[renderTagline(card).variant].headerTextColor,
+            theme.headerTextColor,
           )}
         >
-          {renderTagline(card).tagline}
-        </Label>
+          {tagline}
+        </p>
       </div>
 
       <div
         className={cn(
           "flex min-h-[calc(100vh-100px)] flex-col items-center rounded-lg p-7",
-          businessCardThemes[renderTagline(card).variant].bodyBg,
+          theme.bodyBg,
         )}
       >
         <Avatar
@@ -148,24 +137,30 @@ const BusinessCard = (): ReactElement => {
           altText={card.name ?? "Person"}
           size={isNotStaff ? 324 : 230}
           hideBorder={isNotStaff}
-          borderColor={
-            businessCardThemes[renderTagline(card).variant].avatarBorder
-          }
+          borderColor={theme.avatarBorder}
         />
 
-        <Label className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
+        <p className="w-full break-words p-2 text-center font-poppins text-2xl font-semibold text-gray-800">
           {card.name}
-        </Label>
+        </p>
 
-        <Label className="font-poppins text-lg font-semibold text-gray-800">
+        <p className="font-poppins text-lg font-semibold text-gray-800">
           {card.role}
-        </Label>
+        </p>
 
         <div className="mt-6 space-y-6">
-          {card.buttonContent.map((button, index) => {
-            const stringKey = `${button.buttonType}-${index}`;
+          {card.buttonContent.map((data, index) => {
+            const buttonData = renderButtonData(data);
 
-            return renderButtons(button, stringKey);
+            return (
+              <BusinessCardButton
+                key={`${data.buttonType}-${index}`}
+                icon={buttonData.icon as IconName}
+                label={buttonData.label as string}
+                onClick={() => window.open(buttonData.link, "_blank")}
+                buttonTheme={theme.button}
+              />
+            );
           })}
         </div>
       </div>
