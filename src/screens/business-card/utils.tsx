@@ -362,7 +362,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09392379999",
+        link: "09187399999",
       },
       {
         buttonType: "Email",
