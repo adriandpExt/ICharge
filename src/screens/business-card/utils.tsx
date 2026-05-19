@@ -39,7 +39,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09388099999",
+        link: "639388099999",
       },
       {
         buttonType: "Email",
@@ -60,7 +60,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09177898088",
+        link: "639177898088",
       },
       {
         buttonType: "Email",
@@ -81,7 +81,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09125766666",
+        link: "639125766666",
       },
       {
         buttonType: "Email",
@@ -102,7 +102,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09063032912",
+        link: "639063032912",
       },
       {
         buttonType: "Email",
@@ -123,7 +123,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09958130999",
+        link: "639958130999",
       },
       {
         buttonType: "Email",
@@ -144,7 +144,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09171869505",
+        link: "639171869505",
       },
       {
         buttonType: "Email",
@@ -165,7 +165,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09193953911",
+        link: "639193953911",
       },
       {
         buttonType: "Email",
@@ -187,7 +187,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09670579366",
+        link: "639670579366",
       },
       {
         buttonType: "Email",
@@ -208,7 +208,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09682756650",
+        link: "639682756650",
       },
       {
         buttonType: "Email",
@@ -229,7 +229,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09917092340",
+        link: "639917092340",
       },
       {
         buttonType: "Email",
@@ -250,7 +250,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09482691111",
+        link: "639482691111",
       },
       {
         buttonType: "Email",
@@ -270,7 +270,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09187388888",
+        link: "639187388888",
       },
       {
         buttonType: "Email",
@@ -285,7 +285,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09187388888",
+        link: "639187388888",
       },
       {
         buttonType: "Email",
@@ -309,7 +309,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09187388888",
+        link: "639187388888",
       },
       {
         buttonType: "Email",
@@ -333,7 +333,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09856107777",
+        link: "639856107777",
       },
       {
         buttonType: "Email",
@@ -362,7 +362,7 @@ export const businessCardInfo: ICardInfo[] = [
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "09187399999",
+        link: "639187399999",
       },
       {
         buttonType: "Email",
