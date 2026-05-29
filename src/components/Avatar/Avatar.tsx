@@ -47,8 +47,8 @@ export const Avatar = (props: IAvatar): ReactElement => {
         height={size}
         className={cn(
           "rounded-full transition-opacity duration-300",
-          !hideBorder && `border-4`,
-          isLoading ? "opacity-0" : "opacity=100",
+          !hideBorder && "border-4",
+          isLoading ? "opacity-0" : "opacity-100",
         )}
         style={borderStyle}
         onLoad={() => setIsLoading(false)}
