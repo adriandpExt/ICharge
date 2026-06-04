@@ -118,7 +118,7 @@ const BusinessCard = (): ReactElement => {
       >
         <p
           className={cn(
-            "pr-1 font-eastman text-[23px] italic text-transparent",
+            "pr-1 font-eastman italic text-transparent",
             theme.headerTextColor,
           )}
         >

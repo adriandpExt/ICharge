@@ -16,14 +16,14 @@ export const businessCardThemes = {
     avatarBorder: "#ffc106",
     button: "bg-[#ffc106]",
     bodyBg: "bg-[#f4ece3]",
-    headerTextColor: "text-white",
+    headerTextColor: "text-white text-[17px]",
     headerBgColor: "bg-gradient-to-r from-[#2afc94] via-[#12c4ef] to-[#ffc106]",
   },
   iCharge: {
     avatarBorder: "#078E00",
     button: "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e]",
     bodyBg: "bg-[url('@/assets/businessCard/social_bg.svg')]",
-    headerTextColor: "bg-gradient-to-r from-[#fff] to-[#44D62C] bg-clip-text",
+    headerTextColor: "bg-gradient-to-r from-[#fff] to-[#44D62C] bg-clip-text text-[23px]",
     headerBgColor: "bg-gradient-to-b from-[#044F00] to-[#078E00]",
   },
 };
@@ -368,7 +368,7 @@ export const businessCardInfo: ICardInfo[] = [
         link: "iscreen@icharge.com.ph",
       },
       {
-        link: "/iscreen",
+        link: "/",
         label: "View our website",
       },
       {
