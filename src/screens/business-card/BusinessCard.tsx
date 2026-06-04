@@ -24,7 +24,7 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
     <Button
       variant="custombutton"
       className={cn(
-        "flex h-[50px] w-[260px] space-x-3 rounded-lg bg-gradient-to-l",
+        "flex h-[50px] w-[260px] space-x-3 rounded-lg",
         buttonTheme,
       )}
       onClick={onClick}
@@ -51,8 +51,8 @@ const CardBase = (
       };
     case "024":
       return {
-        tagline: "Premium Quality In Every Bite",
-        variant: "sunnyFoods",
+        tagline: "Smart Charging Stations - Smarter Advertising",
+        variant: "iScreen",
       };
     default:
       return { tagline: "Stay Powered, Stay Connected", variant: "iCharge" };
@@ -112,13 +112,13 @@ const BusinessCard = (): ReactElement => {
     <div className="flex-col overflow-x-hidden">
       <div
         className={cn(
-          "flex h-[100px] w-full items-center justify-center bg-gradient-to-b",
+          "flex h-[100px] w-full items-center justify-center",
           theme.headerBgColor,
         )}
       >
         <p
           className={cn(
-            "bg-gradient-to-r bg-clip-text pr-1 font-eastman text-[23px] italic text-transparent",
+            "pr-1 font-eastman italic text-transparent",
             theme.headerTextColor,
           )}
         >

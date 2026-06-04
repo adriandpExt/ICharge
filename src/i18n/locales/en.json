@@ -351,7 +351,10 @@
       "label": "Partner with iCharge for seamless, reliable charging solutions."
     },
     "bannerBtn": {
-      "label": "Inquire Now"
+      "label": "Inquire for iCharge"
+    },
+    "aboutIScreen": {
+      "label": "About \niScreen"
     },
     "whyPartnerWithUs": {
       "label": "WHY PARTNER WITH US?"

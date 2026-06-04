@@ -17,11 +17,6 @@ export const TermsAndConditions = lazy(
   () => import("@/screens/terms-and-conditions"),
 );
 export const Partners = lazy(() => import("@/screens/partner-with-us"));
-export const UserAgreements = lazy(
-  () => import("@/screens/user-agreement/UserAgreements"),
-);
-export const Privacies = lazy(() => import("@/screens/privacy/Privacies"));
-export const Cookie = lazy(() => import("@/screens/cookies/Cookie"));
 
 export const IScreen = lazy(() => import("@/screens/iscreen"))
 
@@ -58,18 +53,6 @@ const router: RouteObject[] = [
       {
         path: "terms-and-conditions",
         element: <TermsAndConditions />,
-      },
-      {
-        path: "user-agreement",
-        element: <UserAgreements />,
-      },
-      {
-        path: "privacy",
-        element: <Privacies />,
-      },
-      {
-        path: "cookies",
-        element: <Cookie />,
       },
       {
         path: "iscreen",
