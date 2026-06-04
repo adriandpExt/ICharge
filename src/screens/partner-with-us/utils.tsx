@@ -7,6 +7,25 @@ import LocalizationKey from "@/i18n/key";
 import ichargeModel from "@/assets/ichargemodel.png";
 import joinUs from "@/assets/pwu-join-us.svg";
 
+import PitchDeckPage1 from '@/assets/pitch_deck/pitch-deck-1.png';
+import PitchDeckPage2 from '@/assets/pitch_deck/pitch-deck-2.png';
+import PitchDeckPage3 from '@/assets/pitch_deck/pitch-deck-3.png';
+import PitchDeckPage4 from '@/assets/pitch_deck/pitch-deck-4.png';
+import PitchDeckPage5 from '@/assets/pitch_deck/pitch-deck-5.png';
+import PitchDeckPage6 from '@/assets/pitch_deck/pitch-deck-6.png';
+import PitchDeckPage7 from '@/assets/pitch_deck/pitch-deck-7.png';
+import PitchDeckPage8 from '@/assets/pitch_deck/pitch-deck-8.png';
+import PitchDeckPage9 from '@/assets/pitch_deck/pitch-deck-9.png';
+import PitchDeckPage10 from '@/assets/pitch_deck/pitch-deck-10.png';
+import PitchDeckPage11 from '@/assets/pitch_deck/pitch-deck-11.png';
+import PitchDeckPage12 from '@/assets/pitch_deck/pitch-deck-12.png';
+import PitchDeckPage13 from '@/assets/pitch_deck/pitch-deck-13.png';
+import PitchDeckPage14 from '@/assets/pitch_deck/pitch-deck-14.png';
+import PitchDeckPage15 from '@/assets/pitch_deck/pitch-deck-15.png';
+import PitchDeckPage16 from '@/assets/pitch_deck/pitch-deck-16.png';
+import PitchDeckPage17 from '@/assets/pitch_deck/pitch-deck-17.png';
+import PitchDeckPage18 from '@/assets/pitch_deck/pitch-deck-18.png';
+
 export const data: DataCardProps[] = [
   {
     imgSrc: ichargeModel,
@@ -25,6 +44,27 @@ export const data: DataCardProps[] = [
     ],
   },
 ];
+
+export const pitchDeck = [
+  PitchDeckPage1,
+  PitchDeckPage2,
+  PitchDeckPage3,
+  PitchDeckPage4,
+  PitchDeckPage5,
+  PitchDeckPage6,
+  PitchDeckPage7,
+  PitchDeckPage8,
+  PitchDeckPage9,
+  PitchDeckPage10,
+  PitchDeckPage11,
+  PitchDeckPage12,
+  PitchDeckPage13,
+  PitchDeckPage14,
+  PitchDeckPage15,
+  PitchDeckPage16,
+  PitchDeckPage17,
+  PitchDeckPage18,
+]
 
 export const inquiryDefaultValues: IMarketing = {
   firstname: "",

@@ -3,7 +3,12 @@ import { Button } from "../ui/button";
 
 import useScroll from "@/hooks/useScroll";
 import { LinkList } from "./type";
-import { Building2, Handshake, MessageCircleQuestion, Phone } from "lucide-react";
+import {
+  Building2,
+  Handshake,
+  MessageCircleQuestion,
+  Phone,
+} from "lucide-react";
 import { SvgIcons } from "../svg-icons";
 
 import { Drawer } from "./component";
@@ -22,8 +27,6 @@ export const NavBar = () => {
   const isScroll = useScroll(window.innerHeight);
 
   const footerClass =
-    location.pathname === "/cookies" ||
-    location.pathname === "/privacy" ||
     location.pathname === "/terms-and-conditions"
       ? "bg-gradient-to-t from-[#055c00] to-[#022700]"
       : null;
@@ -35,7 +38,7 @@ export const NavBar = () => {
   const linkList: LinkList[] = [
     {
       label: t(LocalizationKey.navigation.howTo),
-      path: '/how-to',
+      path: "/how-to",
       icon: MessageCircleQuestion,
     },
     {

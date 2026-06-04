@@ -21,9 +21,4 @@ export const bottomLinks = [
     path: "/terms-and-conditions",
     label: "Terms",
   },
-  {
-    path: "/privacy",
-    label: "Privacy",
-  },
-  { path: "/cookies", label: "Cookies" },
 ];
