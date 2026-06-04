@@ -59,7 +59,7 @@ const PartnerWithUs = (): ReactElement => {
             </Label>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-5">
+          <div className="flex flex-col gap-5 lg:flex-row">
             <Button
               onClick={() => scrollToSection("inquiryForm")}
               variant={"custombutton"}
@@ -74,7 +74,7 @@ const PartnerWithUs = (): ReactElement => {
               variant="custombutton"
               className="h-10 items-center bg-white text-green-600 hover:text-white"
             >
-              About iScreen
+              {t(LocalizationKey.partnerWithUs.aboutIScreen)}
               <ChevronRight className="text-green-600 group-hover:text-white" />
             </Button>
           </div>
@@ -95,7 +95,7 @@ const PartnerWithUs = (): ReactElement => {
       <PageContainer id="aboutIScreen" className="space-y-10">
         <div className="flex justify-center space-x-5">
           <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
-            About
+            {t(LocalizationKey.partnerWithUs.aboutIScreen).split("\n")[0]}
           </p>
           <p
             className={cn(
@@ -104,7 +104,7 @@ const PartnerWithUs = (): ReactElement => {
               "md:text-6xl lg:text-8xl",
             )}
           >
-            iScreen
+            {t(LocalizationKey.partnerWithUs.aboutIScreen).split("\n")[1]}
           </p>
         </div>
 
@@ -139,7 +139,7 @@ const PartnerWithUs = (): ReactElement => {
           />
         </Carousel>
 
-        <div className="place-self-center hidden lg:block">
+        <div className="hidden place-self-center lg:block">
           {pitchDeck.map((_, ids) => (
             <button
               key={ids}
@@ -152,7 +152,7 @@ const PartnerWithUs = (): ReactElement => {
           ))}
         </div>
 
-        <p className="place-self-center lg:hidden font-poppins text-xs">
+        <p className="place-self-center font-poppins text-xs lg:hidden">
           {currIndex + 1} out of {pitchDeck.length}
         </p>
       </PageContainer>

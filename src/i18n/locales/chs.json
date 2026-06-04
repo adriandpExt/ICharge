@@ -346,7 +346,10 @@
       "label": "与 iCharge 合作，提供无缝、可靠的充电解决方案。"
     },
     "bannerBtn": {
-      "label": "立即咨询"
+      "label": "立即咨询 iCharge"
+    },
+    "aboutIScreen": {
+      "label": "关于 \niScreen"
     },
     "whyPartnerWithUs": {
       "label": "为什么与我们合作？"

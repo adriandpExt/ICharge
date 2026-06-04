@@ -76,6 +76,7 @@ const LocalizationKey = {
     heading1: "partnerWithUs.heading1.label",
     heading2: "partnerWithUs.heading2.label",
     bannerBtn: "partnerWithUs.bannerBtn.label",
+    aboutIScreen: "partnerWithUs.aboutIScreen.label",
     whyPartnerWithUs: "partnerWithUs.whyPartnerWithUs.label",
     whyPartnerWithUsDesc1: "partnerWithUs.whyPartnerWithUsDesc1.label",
     whyPartnerWithUsDesc2: "partnerWithUs.whyPartnerWithUsDesc2.label",
