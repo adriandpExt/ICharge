@@ -6,35 +6,24 @@ import { cn } from "@/lib/utils";
 interface IAvatar extends PropsWithChildren {
   imageUrl: string;
   altText: string;
-  borderColor?: string;
-  size?: number;
-  hideBorder?: boolean;
+  borderColor: string;
 }
 
 export const Avatar = (props: IAvatar): ReactElement => {
-  const {
-    imageUrl,
-    altText,
-    size = 220,
-    hideBorder = false,
-    borderColor = "#078E00",
-  } = props;
+  const { imageUrl, altText, borderColor = "#078E00" } = props;
   const [isLoading, setIsLoading] = useState(true);
-
-  const borderStyle = !hideBorder ? { borderColor } : undefined
 
   return (
     <div
       className="relative mx-auto flex items-center justify-center"
-      style={{ width: size, height: size }}
+      style={{ width: 230, height: 230 }}
     >
       {isLoading && (
         <div
           className={cn(
-            "absolute inset-0 z-10 flex items-center justify-center rounded-full bg-slate-100",
-            !hideBorder && `border-4`,
+            "absolute inset-0 z-10 flex items-center justify-center rounded-full border-4 bg-slate-100",
           )}
-          style={borderStyle}
+          style={{ borderColor }}
         >
           <Spinner />
         </div>
@@ -43,14 +32,13 @@ export const Avatar = (props: IAvatar): ReactElement => {
       <img
         src={imageUrl}
         alt={altText}
-        width={size}
-        height={size}
+        width={230}
+        height={230}
         className={cn(
-          "rounded-full transition-opacity duration-300",
-          !hideBorder && "border-4",
+          "rounded-full border-4 transition-opacity duration-300",
           isLoading ? "opacity-0" : "opacity-100",
         )}
-        style={borderStyle}
+        style={{ borderColor }}
         onLoad={() => setIsLoading(false)}
       />
     </div>
