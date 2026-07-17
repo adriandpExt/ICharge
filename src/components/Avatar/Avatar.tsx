@@ -28,19 +28,17 @@ export const Avatar = (props: IAvatar): ReactElement => {
           <Spinner />
         </div>
       )}
-
+      <figure className={cn(
+          "rounded-full border-4 transition-opacity duration-300 overflow-hidden w-[230px] h-[230px]",
+          isLoading ? "opacity-0" : "opacity-100",
+        )} style={{ borderColor }}>
       <img
         src={imageUrl}
         alt={altText}
-        width={230}
-        height={230}
-        className={cn(
-          "rounded-full border-4 transition-opacity duration-300",
-          isLoading ? "opacity-0" : "opacity-100",
-        )}
-        style={{ borderColor }}
+        className="w-full h-full"
         onLoad={() => setIsLoading(false)}
       />
+      </figure>
     </div>
   );
 };
