@@ -125,6 +125,7 @@ const BusinessCard = (): ReactElement => {
         className={cn(
           "flex min-h-[calc(100vh-100px)] flex-col items-center rounded-lg p-7",
           theme.bodyBg,
+          "bg-cover bg-center",
         )}
       >
         <Avatar
