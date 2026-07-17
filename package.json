@@ -104,5 +104,8 @@
   "overrides": {
     "braces": "^3.0.3",
     "postcss": "^8.5.15"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
