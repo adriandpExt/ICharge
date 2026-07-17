@@ -7,7 +7,7 @@ import AleeBorromeo from "@/assets/businessCard/alee_borromeo.png";
 import MatthewOng from "@/assets/businessCard/matthew_ong.png";
 import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
-import JenniferOrtiz from '@/assets/businessCard/jennifer_ortiz.jpeg'
+import JenniferOrtiz from "@/assets/businessCard/jennifer_ortiz.jpeg";
 import ICharge from "@/assets/businessCard/icharge.png";
 
 import iScreen from "@/assets/businessCard/iScreen.png";
@@ -16,7 +16,8 @@ export const businessCardThemes = {
   iScreen: {
     avatarBorder: "#ffc106",
     button: "bg-[#ffc106]",
-    bodyBg: "bg-[#f4ece3]",
+    bodyBg:
+      "before:absolute before:inset-0 before:bg-[url('@/assets/bg_iscreen_pattern.png')] before:bg-cover before:opacity-40 before:content-[''] before:-z-10",
     headerTextColor: "text-white text-[17px]",
     headerBgColor: "bg-gradient-to-r from-[#2afc94] via-[#12c4ef] to-[#ffc106]",
   },
