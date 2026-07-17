@@ -7,6 +7,7 @@ import AleeBorromeo from "@/assets/businessCard/alee_borromeo.png";
 import MatthewOng from "@/assets/businessCard/matthew_ong.png";
 import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
+import JenniferOrtiz from '@/assets/businessCard/jennifer_ortiz.jpeg'
 import ICharge from "@/assets/businessCard/icharge.png";
 
 import iScreen from "@/assets/businessCard/iScreen.png";
@@ -295,7 +296,7 @@ export const businessCardInfo: ICardInfo[] = [
     id: "025",
     name: "Jennifer M. Ortiz",
     role: "Business Development Manager",
-    img: iScreen,
+    img: JenniferOrtiz,
     cardType: "i-screen",
     buttonContent: [
       {
