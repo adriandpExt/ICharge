@@ -115,6 +115,7 @@ const LocalizationKey = {
     },
   },
   footer: {
+    iScreen: "footer.iScreen.label",
     followUs: "footer.followUs.label",
     platforms: "footer.platforms.label",
     aboutUs: "footer.aboutUs.label",
@@ -230,6 +231,7 @@ const LocalizationKey = {
     ichargestandeerectangledesc: "services.ichargestandeerectangledesc.label",
   },
   about: {
+    aboutTitle: "about.aboutTitle.label",
     aboutHeading: "about.aboutHeading.label",
     whoWeAre: "about.whoWeAre.label",
     whoWeAreDesc: "about.whoWeAreDesc.label",

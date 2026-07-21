@@ -131,7 +131,7 @@
       "label": "About Us"
     },
     "company": {
-      "label": "QuantaDance Inc."
+      "label": "Quanta Dance Inc."
     },
     "stayInTheLoop": {
       "label": "Powering Anyone, Anytime, Anywhere."
@@ -612,6 +612,9 @@
     }
   },
   "about": {
+    "aboutTitle": {
+      "label": "Quanta Dance Inc"
+    },
     "aboutHeading": {
       "label": "We believe in a world where staying connected is effortless. With our innovative power bank stations, we make sure your customers can stay powered and ready for any adventure, anywhere."
     },
