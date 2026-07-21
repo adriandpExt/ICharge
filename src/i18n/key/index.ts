@@ -115,7 +115,6 @@ const LocalizationKey = {
     },
   },
   footer: {
-    iScreen: "footer.iScreen.label",
     followUs: "footer.followUs.label",
     platforms: "footer.platforms.label",
     aboutUs: "footer.aboutUs.label",
