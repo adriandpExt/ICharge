@@ -116,7 +116,7 @@ export const Footer = () => {
         </div>
         <div className="mt-10 flex flex-col items-center justify-between border-t border-gray-500 pt-6 sm:flex-row">
           <Label variant="default">
-            2018–{new Date().getFullYear()} Quanta Dance, Inc
+            2018–{new Date().getFullYear()} {t(LocalizationKey.footer.company)}
           </Label>
           <div className="mt-4 hidden gap-4 sm:mt-0 sm:flex">
             {bottomLinks.map((item) => (
