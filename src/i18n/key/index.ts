@@ -230,6 +230,7 @@ const LocalizationKey = {
     ichargestandeerectangledesc: "services.ichargestandeerectangledesc.label",
   },
   about: {
+    aboutTitle: "about.aboutTitle.label",
     aboutHeading: "about.aboutHeading.label",
     whoWeAre: "about.whoWeAre.label",
     whoWeAreDesc: "about.whoWeAreDesc.label",

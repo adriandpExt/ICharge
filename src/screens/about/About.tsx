@@ -116,7 +116,7 @@ const Sustainabilities = (): ReactElement => {
   const { t } = useTranslation();
   return (
     <section className="">
-      <Banner title="QUANTA DANCE INC">
+      <Banner title={t(LocalizationKey.about.aboutTitle)}>
         <Label variant="subtitle" className="font-medium text-white">
           {t(LocalizationKey.about.aboutHeading)}
         </Label>
