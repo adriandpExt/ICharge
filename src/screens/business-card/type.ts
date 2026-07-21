@@ -14,6 +14,6 @@ export interface ICardInfo {
   img: string;
   name?: string;
   role?: string;
-  qrLink: string;
+  cardType?: "i-charge" | "i-screen";
   buttonContent: IButtonContent[];
 }

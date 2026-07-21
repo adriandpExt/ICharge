@@ -43,27 +43,22 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
 const CardBase = (
   data: ICardInfo,
 ): { tagline: string; variant: keyof typeof businessCardThemes } => {
-  switch (data.id) {
-    case "023":
-      return {
-        tagline: "Stay Visible, Stay Connected",
-        variant: "iCharge",
-      };
-    case "024":
-      return {
-        tagline: "Smart Charging Stations - Smarter Advertising",
-        variant: "iScreen",
-      };
-    default:
-      return { tagline: "Stay Powered, Stay Connected", variant: "iCharge" };
+  if (data.cardType === "i-screen") {
+    return {
+      tagline: "Smart Charging Stations - Smarter Advertising",
+      variant: "iScreen",
+    };
+  } else {
+    return {
+      tagline: "Stay Powered, Stay Connected",
+      variant: "iCharge",
+    };
   }
 };
 
 const BusinessCard = (): ReactElement => {
   const { id } = useParams<{ id: string }>();
   const card = businessCardInfo.find((card) => card.id === id);
-
-  const isNotStaff: boolean = card?.id === "021" || card?.id === "022";
 
   if (!card) {
     return (
@@ -130,13 +125,12 @@ const BusinessCard = (): ReactElement => {
         className={cn(
           "flex min-h-[calc(100vh-100px)] flex-col items-center rounded-lg p-7",
           theme.bodyBg,
+          "bg-cover bg-center",
         )}
       >
         <Avatar
           imageUrl={card.img}
           altText={card.name ?? "Person"}
-          size={isNotStaff ? 324 : 230}
-          hideBorder={isNotStaff}
           borderColor={theme.avatarBorder}
         />
 

@@ -7,7 +7,8 @@ import AleeBorromeo from "@/assets/businessCard/alee_borromeo.png";
 import MatthewOng from "@/assets/businessCard/matthew_ong.png";
 import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
-import ContactUS from "@/assets/businessCard/contact_us.png";
+import JenniferOrtiz from "@/assets/businessCard/jennifer_ortiz.jpeg";
+import ICharge from "@/assets/businessCard/icharge.png";
 
 import iScreen from "@/assets/businessCard/iScreen.png";
 
@@ -15,7 +16,8 @@ export const businessCardThemes = {
   iScreen: {
     avatarBorder: "#ffc106",
     button: "bg-[#ffc106]",
-    bodyBg: "bg-[#f4ece3]",
+    bodyBg:
+      "before:absolute before:inset-0 before:bg-[url('@/assets/bg_iscreen_pattern.png')] before:bg-cover before:opacity-40 before:content-[''] before:-z-10",
     headerTextColor: "text-white text-[17px]",
     headerBgColor: "bg-gradient-to-r from-[#2afc94] via-[#12c4ef] to-[#ffc106]",
   },
@@ -23,18 +25,19 @@ export const businessCardThemes = {
     avatarBorder: "#078E00",
     button: "bg-gradient-to-l from-[#3e8c3b] via-[#55b550] to-[#63cc5e]",
     bodyBg: "bg-[url('@/assets/businessCard/social_bg.svg')]",
-    headerTextColor: "bg-gradient-to-r from-[#fff] to-[#44D62C] bg-clip-text text-[23px]",
+    headerTextColor:
+      "bg-gradient-to-r from-[#fff] to-[#44D62C] bg-clip-text text-[23px]",
     headerBgColor: "bg-gradient-to-b from-[#044F00] to-[#078E00]",
   },
 };
 
 export const businessCardInfo: ICardInfo[] = [
+  // ICharge Cards
   {
     id: "001",
     name: "Joe Wang",
     role: "CEO",
     img: NoImage,
-    qrLink: "/business-card/001",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -55,7 +58,6 @@ export const businessCardInfo: ICardInfo[] = [
     name: "Leff Shi",
     role: "COO",
     img: NoImage,
-    qrLink: "/business-card/002",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -76,7 +78,6 @@ export const businessCardInfo: ICardInfo[] = [
     name: "Evonne Huang",
     role: "CFO",
     img: NoImage,
-    qrLink: "/business-card/003",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -97,7 +98,6 @@ export const businessCardInfo: ICardInfo[] = [
     name: "Willy Elipe",
     role: "General Manager",
     img: WillyElipe,
-    qrLink: "/business-card/004",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -118,7 +118,6 @@ export const businessCardInfo: ICardInfo[] = [
     name: "Rose Rivera",
     role: "Executive Secretary",
     img: RoseRivera,
-    qrLink: "/business-card/005",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -139,7 +138,6 @@ export const businessCardInfo: ICardInfo[] = [
     name: "Elvin Dela Cruz",
     role: "Sales and Marketing Director",
     img: NoImage,
-    qrLink: "/business-card/006",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -160,7 +158,6 @@ export const businessCardInfo: ICardInfo[] = [
     name: "Alee Borromeo",
     role: "HR Manager",
     img: AleeBorromeo,
-    qrLink: "/business-card/007",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -176,13 +173,11 @@ export const businessCardInfo: ICardInfo[] = [
       },
     ],
   },
-  //NO VIBER
   {
     id: "010",
     name: "Jayson M. Eyoy",
-    role: "Sales and Marketing Officer",
+    role: "Business Development Manager",
     img: JaysonEyoy,
-    qrLink: "/business-card/010",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -203,7 +198,6 @@ export const businessCardInfo: ICardInfo[] = [
     name: "Matthew Rothchild Y. Ong",
     role: "Sales and Marketing Manager",
     img: MatthewOng,
-    qrLink: "/business-card/014",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -222,9 +216,8 @@ export const businessCardInfo: ICardInfo[] = [
   {
     id: "015",
     name: "Enos Ephraim L. Lola",
-    role: "Sales and Marketing Manager",
+    role: "Business Development Head",
     img: EnosLola,
-    qrLink: "/business-card/015",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -243,9 +236,8 @@ export const businessCardInfo: ICardInfo[] = [
   {
     id: "017",
     name: "Flory Joy S. Ocampo",
-    role: "Sales and Marketing Officer",
+    role: "Business Development Manager",
     img: FloryOcampo,
-    qrLink: "/business-card/017",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -265,7 +257,6 @@ export const businessCardInfo: ICardInfo[] = [
     id: "020",
     name: "Social Media Accounts",
     img: NoImage,
-    qrLink: "/social-media",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -279,8 +270,7 @@ export const businessCardInfo: ICardInfo[] = [
   },
   {
     id: "021",
-    img: ContactUS,
-    qrLink: "/business-card/021",
+    img: ICharge,
     buttonContent: [
       {
         buttonType: "Viber",
@@ -301,34 +291,33 @@ export const businessCardInfo: ICardInfo[] = [
       },
     ],
   },
+
+  // IScreen Cards
   {
-    id: "022",
-    img: ContactUS,
-    qrLink: "/business-card/022",
+    id: "025",
+    name: "Jennifer M. Ortiz",
+    role: "Business Development Manager",
+    img: JenniferOrtiz,
+    cardType: "i-screen",
     buttonContent: [
       {
         buttonType: "Viber",
-        link: "639187388888",
+        link: "639816237777",
       },
       {
         buttonType: "Email",
-        link: "reachus@icharge.com.ph",
+        link: "iscreen@icharge.com.ph",
       },
       {
-        link: "https://icharge.com.ph",
-        label: "Visit our website",
-      },
-      {
-        link: "https://www.youtube.com/embed/GGAc5QctHFE",
-        label: "How to use iCharge",
-        icon: "ic_youtube",
+        link: "/iscreen",
+        label: "View our brochure",
       },
     ],
   },
   {
     id: "023",
     img: iScreen,
-    qrLink: "/business-card/023",
+    cardType: "i-screen",
     buttonContent: [
       {
         buttonType: "Viber",
@@ -341,35 +330,6 @@ export const businessCardInfo: ICardInfo[] = [
       {
         link: "/iscreen",
         label: "View our brochure",
-      },
-      {
-        icon: "ic_facebook",
-        link: "https://www.facebook.com/iscreen.official.ph",
-        label: "Visit our Facebook page",
-      },
-      {
-        icon: "ic_tiktok",
-        link: "https://www.tiktok.com/@iscreen_ph",
-        label: "Visit our TikTok page",
-      },
-    ],
-  },
-  {
-    id: "024",
-    img: iScreen,
-    qrLink: "/business-card/024",
-    buttonContent: [
-      {
-        buttonType: "Viber",
-        link: "639856107777",
-      },
-      {
-        buttonType: "Email",
-        link: "iscreen@icharge.com.ph",
-      },
-      {
-        link: "/",
-        label: "View our website",
       },
       {
         icon: "ic_facebook",
