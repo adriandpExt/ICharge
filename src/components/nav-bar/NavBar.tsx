@@ -71,10 +71,16 @@ export const NavBar = () => {
           const isActive = location.pathname === item.path;
 
           return item.subChild ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Button
-                  key={item.label}
+            <DropdownMenu key={item.label}>
+              <DropdownMenuTrigger
+                className={cn(
+                  "inline-flex items-center justify-center gap-2 font-poppins text-sm font-normal focus-visible:outline-none focus-visible:ring-0",
+                  isActive &&
+                    "font-bold text-white underline underline-offset-4",
+                  isScroll ? "text-black" : "text-white",
+                )}
+              >
+                {/* <Button
                   variant="link"
                   className={cn(
                     "inline-flex items-center justify-center gap-2 font-poppins text-sm font-normal focus-visible:outline-none focus-visible:ring-0",
@@ -82,10 +88,10 @@ export const NavBar = () => {
                       "font-bold text-white underline underline-offset-4",
                     isScroll ? "text-black" : "text-white",
                   )}
-                >
-                  {item.label}
-                  <ChevronDown size={20} />
-                </Button>
+                > */}
+                {item.label}
+                <ChevronDown size={20} />
+                {/* </Button> */}
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 border-none bg-white">
                 {item.subChild.map((sub) => (
