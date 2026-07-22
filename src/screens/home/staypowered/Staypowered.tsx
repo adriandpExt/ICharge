@@ -25,7 +25,7 @@ const StayPowered = () => {
   };
 
   return (
-    <div className="mx-min-h-[600px] w-full overflow-hidden bg-gradient-to-b from-green-900 to-green-600 px-4 py-8">
+    <div className="mx-min-h-[600px] w-full overflow-hidden icharge-green-gradient px-4 py-8">
       <div className="container mx-auto flex h-full flex-col items-center justify-between gap-10 md:flex-row">
         <div className="mb-8 w-full md:mb-0 md:w-1/2">
           <img
@@ -35,7 +35,7 @@ const StayPowered = () => {
           />
         </div>
         <div className="w-full space-y-5 text-center text-white md:w-1/2 md:text-left">
-          <Label variant={"banner"} className="mb-4 md:text-4xl">
+          <Label variant={"banner"} className="mb-4 md:text-4xl !text-white">
             {t(LocalizationKey.home.stayPowered)}
           </Label>
           <br />

@@ -25,7 +25,6 @@ const ServiceIndustries = (): ReactElement => {
       <div className="flex flex-col space-y-5 text-center">
         <Label
           variant="banner"
-          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
         >
           {t(LocalizationKey.services.sectorHeading)}
         </Label>

@@ -13,7 +13,7 @@ const WhyICharge = () => {
     <PageContainer className="flex flex-col sm:px-6 lg:px-8">
       <Label
         variant={"banner"}
-        className="mb-12 bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent"
+        className="mb-12"
       >
         {t(LocalizationKey.home.whyIcharge)}ICharge
       </Label>
@@ -27,7 +27,7 @@ const WhyICharge = () => {
             <img
               src={Convenience}
               alt="Convenience"
-              className="h-full w-full text-green-600"
+              className="h-full w-full"
             />
           </div>
           <div className="text-center sm:text-left">
@@ -48,7 +48,7 @@ const WhyICharge = () => {
             <img
               src={CostEffective}
               alt="Cost-effective"
-              className="h-full w-full text-green-600"
+              className="h-full w-full"
             />
           </div>
           <div className="text-center sm:text-right">
@@ -69,7 +69,7 @@ const WhyICharge = () => {
             <img
               src={FLexible}
               alt="Flexible"
-              className="h-full w-full text-green-600"
+              className="h-full w-full"
             />
           </div>
           <div className="text-center sm:text-left">

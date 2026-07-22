@@ -12,12 +12,11 @@ export const IndustryCard = (props: IndustryCardType): ReactElement => {
     className,
     onClick,
   } = props;
-
-  const [isHovered, setIsHovered] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   return (
     <div
       className={cn(
+        "group",
         "h-[25rem] w-full rounded-3xl rounded-tr-none border-0 bg-cover bg-no-repeat",
         isDesktop
           ? "shadow-2xl shadow-black/50 drop-shadow-2xl"
@@ -28,7 +27,7 @@ export const IndustryCard = (props: IndustryCardType): ReactElement => {
       <img
         className={cn(
           "-z-10 h-full w-full rounded-3xl rounded-tr-none bg-no-repeat object-cover",
-          isHovered && "scale-105",
+          "transition-all duration-100 group-hover:scale-105",
         )}
         src={bgImage}
         alt={title}
@@ -36,10 +35,11 @@ export const IndustryCard = (props: IndustryCardType): ReactElement => {
       />
       {isLoaded ? (
         <div
-          className="absolute inset-0 hidden rounded-3xl rounded-tr-none bg-green-500 md:flex"
-          style={{ opacity: isHovered ? 0 : 0.15 }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          className={cn(
+            "absolute inset-0 hidden rounded-3xl rounded-tr-none bg-[#39d431] md:flex",
+            "opacity-15 group-hover:opacity-0",
+            "transition-all duration-100",
+          )}
         />
       ) : (
         <div className="absolute inset-0 flex h-full w-full place-content-center items-center rounded-3xl rounded-tr-none bg-slate-100">
@@ -48,8 +48,6 @@ export const IndustryCard = (props: IndustryCardType): ReactElement => {
       )}
       <Button
         className="absolute bottom-0 h-[25%] w-[90%] justify-between rounded-3xl rounded-tl-none text-2xl md:w-[95%] md:text-3xl"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
       >
         {title}

@@ -51,7 +51,7 @@ const Features = () => {
       <div className="container mx-auto flex flex-col place-items-center">
         <Label
           variant={"banner"}
-          className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center text-transparent lg:mb-14"
+          className="lg:mb-14"
         >
           {t(LocalizationKey.services.products)}
         </Label>

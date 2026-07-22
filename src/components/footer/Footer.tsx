@@ -1,13 +1,10 @@
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { IconName } from "../svg-icons/utils";
 import LocalizationKey from "@/i18n/key";
 import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { SvgIcons } from "../svg-icons";
 import { bottomLinks, followUs } from "./utils";
 import SectionItem from "./SectionItem";
@@ -51,22 +48,10 @@ export const Footer = () => {
 
   const NewsletterSection = () => (
     <div className="flex flex-col gap-3 lg:text-start">
-      <Label className="mb-4 text-2xl font-bold">
+      <Label className="text-md mb-1 font-semibold md:text-xl">
         {t(LocalizationKey.footer.stayInTheLoop)}
       </Label>
-      <Label>{t(LocalizationKey.footer.joinNewsletter)}</Label>
-      <div className="flex flex-col sm:flex-row">
-        <div className="flex flex-grow items-center gap-2">
-          <Input
-            type="email"
-            placeholder={t(LocalizationKey.footer.emailPlaceholder)}
-            className="flex-grow border-white bg-green-900 text-white placeholder:text-xs"
-          />
-          <Button variant="default" className="w-24 rounded-xl bg-[#38D430]">
-            {t(LocalizationKey.footer.subscribe)} <ArrowRight />
-          </Button>
-        </div>
-      </div>
+
       <div className="flex justify-evenly gap-5 pt-5 lg:justify-start lg:gap-5">
         {renderSvg()}
       </div>
@@ -87,7 +72,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-green-950 to-green-900 p-6 text-white md:p-10 lg:to-green-700">
+    <footer className="bg-gradient-to-b from-green-800 to-green-700 p-6 text-white md:p-10 lg:to-[#39d431]">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
           {renderLogo()}

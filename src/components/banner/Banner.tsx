@@ -19,7 +19,7 @@ export const Banner = (props: IBanner): ReactElement => {
         }}
       >
         <div className="container mx-auto flex h-full flex-col items-center justify-center gap-2 p-2 px-4 py-8 text-center">
-          <Label variant="banner" className="mt-20 text-white sm:mb-6">
+          <Label variant="banner" className="mt-20 !text-white sm:mb-6">
             {title}
           </Label>
           {children}

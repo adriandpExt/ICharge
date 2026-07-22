@@ -14,6 +14,16 @@ export const followUs = [
 
     icon: "ic_tiktok",
   },
+  {
+    path: "https://www.tiktok.com/@icharge_ph",
+
+    icon: "ic_viber",
+  },
+  {
+    path: "https://www.tiktok.com/@icharge_ph",
+
+    icon: "ic_linkedin",
+  },
 ];
 
 export const bottomLinks = [
