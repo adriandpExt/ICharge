@@ -63,22 +63,36 @@ const IScreen = () => {
   return (
     <>
       <Banner title="">
-        <p
-          className={cn(
-            "text-center font-poppins text-5xl font-bold text-white",
-            "md:text-6xl lg:text-8xl",
-          )}
-        >
-          {t(LocalizationKey.partnerWithUs.aboutIScreen).split("\n")[1]}
-        </p>
+        <div className="space-y-7">
+          <div>
+            <p
+              className={cn(
+                "text-center font-poppins text-5xl font-bold text-white",
+                "md:text-6xl lg:text-8xl",
+              )}
+            >
+              {t(LocalizationKey.partnerWithUs.aboutIScreen).split("\n")[1]}
+            </p>
 
-        <Button
-          onClick={handleDownload}
-          variant={"custombutton"}
-          className="bg-[#ffc106] hover:bg-[#ffda69]"
-        >
-          Download the brochure here
-        </Button>
+            <p className="font-poppins text-2xl font-bold uppercase tracking-widest text-white">
+              Media Network
+            </p>
+
+            <p className="font-poppins text-sm text-white lg:text-xl">
+              Powered by iCharge.
+            </p>
+          </div>
+
+          <p className="hidden lg:block text-4xl font-poppins text-white">Commercial Space + DOOH Advertising Solution</p>
+
+          <Button
+            onClick={handleDownload}
+            variant={"custombutton"}
+            className="bg-white text-green-600 hover:bg-[#ffc106] hover:text-white"
+          >
+            Download the brochure here
+          </Button>
+        </div>
       </Banner>
 
       <PageContainer className="space-y-7">
