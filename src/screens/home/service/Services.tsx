@@ -35,7 +35,7 @@ const Services = (): ReactElement => {
         className="relative rounded-3xl border-4 border-green-200 bg-gradient-to-b from-green-100 to-neutral-50 p-12 shadow-inner"
       >
         <CardContent className="flex flex-col items-center p-6 pt-12">
-          <div className="z-10 mb-4 rounded-full bg-green-500 p-3">
+          <div className="z-10 mb-4 rounded-full bg-[#39d431] p-3">
             <SvgIcons name={items.icon as IconName} size={100} />
           </div>
 
@@ -55,7 +55,7 @@ const Services = (): ReactElement => {
         className="absolute inset-0 h-[100vh] w-full brightness-50"
       />
 
-      <div className="absolute inset-0 h-[100vh] bg-gradient-to-tr from-[#33E72A] to-transparent" />
+      <div className="absolute inset-0 h-[100vh] bg-gradient-to-tr from-[#39d431] to-transparent" />
 
       <div className="container relative z-10 mx-auto flex h-full flex-col gap-5 px-10 py-32">
         <Label className="font-staatliches text-5xl tracking-wider text-white md:text-6xl lg:text-8xl">
@@ -72,7 +72,7 @@ const Services = (): ReactElement => {
       <section className="container relative mx-auto w-full space-y-20 rounded-none bg-white p-10 text-center shadow-none drop-shadow-none md:rounded-3xl md:shadow-2xl md:drop-shadow-2xl lg:p-32">
         <Label
           variant={"banner"}
-          className="block bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent md:hidden"
+          className="block md:hidden"
         >
           {t(LocalizationKey.home.weOfferServicesThatFitsYourNeeds)}
         </Label>
@@ -80,13 +80,13 @@ const Services = (): ReactElement => {
         <div className="hidden md:flex md:flex-col">
           <Label
             variant={"banner"}
-            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+
           >
             {t(LocalizationKey.home.weOffer)}
           </Label>
           <Label
             variant={"banner"}
-            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
+
           >
             {t(LocalizationKey.home.fitsYourNeeds)}
           </Label>

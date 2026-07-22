@@ -58,10 +58,7 @@ const Sector = (): ReactElement => {
     <>
       <PageContainer className="hidden flex-col space-y-10 lg:flex">
         <div className="flex flex-col space-y-5 text-center">
-          <Label
-            variant="banner"
-            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
-          >
+          <Label variant="banner">
             {t(LocalizationKey.services.sectorHeading)}
           </Label>
           <Label variant="subtitle">
@@ -94,10 +91,7 @@ const Sector = (): ReactElement => {
       {/* mobile view */}
       <div className="space-y-5 pb-16 lg:hidden">
         <div className="flex flex-col space-y-5 text-center">
-          <Label
-            variant="banner"
-            className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-transparent"
-          >
+          <Label variant="banner">
             {t(LocalizationKey.services.sectorHeading)}
           </Label>
           <Label variant="subtitle">

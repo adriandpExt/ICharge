@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import tailwindcssAnimate from 'tailwindcss-animate'
+import tailwindcssAnimate from "tailwindcss-animate";
 export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -17,6 +17,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        "icharge-green": "hsl(var(--icharge-green))",
         customGreen: "#022700",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -84,4 +85,4 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
-};                                                                                                                                              
+};

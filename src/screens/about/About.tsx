@@ -138,7 +138,6 @@ const Sustainabilities = (): ReactElement => {
           <div className="flex flex-col gap-5">
             <Label
               variant="banner"
-              className="bg-gradient-to-b from-[#044F00] to-[#078E00] bg-clip-text text-transparent"
             >
               {t(LocalizationKey.about.whoWeAre)}
             </Label>
@@ -169,7 +168,7 @@ const Sustainabilities = (): ReactElement => {
               className="flex items-center justify-center gap-2 text-white sm:justify-start"
             >
               <img src={Lightning} className="h-6 sm:h-8 md:h-16" />
-              <Label variant="banner">{text}</Label>
+              <Label variant="banner" className="!text-white">{text}</Label>
             </div>
           ))}
         </div>

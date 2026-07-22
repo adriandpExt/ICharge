@@ -94,7 +94,7 @@ const PartnerWithUs = (): ReactElement => {
 
       <PageContainer id="aboutIScreen" className="space-y-10">
         <div className="flex justify-center space-x-5">
-          <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+          <p className="icharge-green-gradient-text font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
             {t(LocalizationKey.partnerWithUs.aboutIScreen).split("\n")[0]}
           </p>
           <p
@@ -167,10 +167,10 @@ const PartnerWithUs = (): ReactElement => {
         <div className="absolute inset-0 h-[90vh] bg-gradient-to-tr from-[#33E72A] to-transparent" />
 
         <div className="container relative z-10 mx-auto flex h-full flex-col gap-5 px-10 py-32">
-          <Label variant={"banner"} className="text-white">
+          <Label variant={"banner"} className="!text-white">
             {t(LocalizationKey.partnerWithUs.wantToPartner)}
           </Label>
-          <Label variant={"banner"} className="text-white">
+          <Label variant={"banner"} className="!text-white">
             {t(LocalizationKey.partnerWithUs.getInTouch)}
           </Label>
         </div>

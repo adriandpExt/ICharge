@@ -16,10 +16,10 @@ const StepCardMobile = ({
 }: StepCardProps) => {
   const isActive = currentStep >= stepNumber;
   const cardStyle = isActive
-    ? "bg-[#2FCE27] shadow-inner drop-shadow-lg"
+    ? "bg-[#39d431] shadow-inner drop-shadow-lg"
     : "bg-white shadow-inner drop-shadow-lg";
   const avatarStyle = isActive
-    ? "bg-gradient-to-t from-green-500 to-green-800 text-white"
+    ? "bg-gradient-to-t from-[#39d431] from-30% to-green-600 text-white"
     : "bg-slate-100 text-black";
 
   const renderRight = () => {
@@ -58,7 +58,7 @@ const StepCardMobile = ({
             className={cn(
               "w-2",
               handleLenght(stepNumber).height,
-              currentStep > stepNumber ? "bg-green-500" : "bg-slate-100",
+              currentStep > stepNumber ? "bg-[#39d431]" : "bg-slate-100",
               "transition-colors duration-500 ease-in-out",
             )}
           />
