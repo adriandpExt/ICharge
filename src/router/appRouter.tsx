@@ -18,7 +18,7 @@ export const TermsAndConditions = lazy(
 );
 export const Partners = lazy(() => import("@/screens/partner-with-us"));
 
-export const IScreen = lazy(() => import("@/screens/iscreen"))
+export const IScreen = lazy(() => import("@/screens/iscreen"));
 
 const router: RouteObject[] = [
   {
@@ -31,9 +31,10 @@ const router: RouteObject[] = [
         element: <Home />,
       },
       { path: "how-to", element: <HowToUse /> },
-      { path: "partner", element: <Partners /> },
-      { path: "services", element: <Services /> },
+      { path: "icharge-solution", element: <Partners /> },
+      { path: "iscreen-solution", element: <Services /> },
       { path: "about", element: <About /> },
+      { path: "contact-us", element: <>Contact us</> },
       {
         path: "faqs",
         element: <Faqs />,
@@ -56,8 +57,8 @@ const router: RouteObject[] = [
       },
       {
         path: "iscreen",
-        element: <IScreen />
-      }
+        element: <IScreen />,
+      },
     ],
   },
 ];

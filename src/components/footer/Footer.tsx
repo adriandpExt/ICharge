@@ -16,10 +16,10 @@ export const Footer = () => {
   const handleClick = () => window.scrollTo(0, 0);
 
   const renderSvg = (): ReactElement[] =>
-    followUs.map((item) => (
-      <Avatar key={item.path} onClick={() => window.open(item.path, "_blank")}>
+    followUs.map((item, index) => (
+      <Avatar key={index} onClick={() => window.open(item.path, "_blank")}>
         <AvatarFallback>
-          <SvgIcons name={item.icon as IconName} size={30} />
+          <SvgIcons name={item.icon as IconName} color="#ffffff" size={30} />
         </AvatarFallback>
       </Avatar>
     ));
@@ -104,8 +104,8 @@ export const Footer = () => {
             2018–{new Date().getFullYear()} {t(LocalizationKey.footer.company)}
           </Label>
           <div className="mt-4 hidden gap-4 sm:mt-0 sm:flex">
-            {bottomLinks.map((item) => (
-              <Link to={item.path} key={item.path} onClick={handleClick}>
+            {bottomLinks.map((item, index) => (
+              <Link to={item.path} key={index} onClick={handleClick}>
                 <Label variant="default">{t(item.label)}</Label>
               </Link>
             ))}
