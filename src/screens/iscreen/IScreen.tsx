@@ -1,103 +1,258 @@
-import { useState } from "react";
-
 import { Banner, PageContainer } from "@/components";
-import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
 
+import { t } from "i18next";
+import LocalizationKey from "@/i18n/key";
+import {
+  benefitsForAdvertisers,
+  iScreenDetails,
+  productOverview,
+  whyAdvertise,
+} from "./utils";
+
+import iScreenSample from "@/assets/about/SummaryImages/proprietary.png";
+import iScreenMobileSample from "@/assets/about/SummaryImages/proprietary_mobile.png";
+import Pdf from "@/assets/iscreen/iScreen-pdf.pdf";
+
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselApi,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
-
-import iScreenLogo from "@/assets/businessCard/iScreen.png";
-
-import iScreenImageOne from "@/assets/iscreen/desktop/iScreen-pdf-1.png";
-import iScreenImageTwo from "@/assets/iscreen/desktop/iScreen-pdf-2.png";
-
-import WhyAdvertise from "@/assets/iscreen/mobile/why-advertise.png";
-import PackageSolution from "@/assets/iscreen/mobile/package-solution.png";
-import Cover from "@/assets/iscreen/mobile/cover.png";
-import PartnerWithIScreen from "@/assets/iscreen/mobile/partner-with-iscreen.png";
-import PackagePricing from "@/assets/iscreen/mobile/package-pricing.png";
-import PackageDetails from "@/assets/iscreen/mobile/details.png";
-
-const baseClass = "rounded-3xl border-2 border-amber-500 h-full pointer-events-none";
-
-const mobileBrochureView = [
-  Cover,
-  WhyAdvertise,
-  PackageSolution,
-  PartnerWithIScreen,
-  PackagePricing,
-  PackageDetails,
-];
+import { useState } from "react";
+import { IIScreenProduct } from "./type";
+import { ProductItem } from "./components";
+import { ProductModal } from "./components/ProductModal";
+import { Button } from "@/components/ui/button";
 
 const IScreen = () => {
   const [api, setApi] = useState<CarouselApi>();
-  const [currIndex, setCurrIndex] = useState<number>(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [modalContent, setModalContent] = useState<IIScreenProduct | null>(
+    null,
+  );
 
   const carouselApiInit = (api: CarouselApi) => {
     if (!api) return;
 
     setApi(api);
-    setCurrIndex(api.selectedScrollSnap());
+    setCurrentIndex(api.selectedScrollSnap());
 
-    api.on("select", () => setCurrIndex(api.selectedScrollSnap()));
+    api.on("select", () => setCurrentIndex(api.selectedScrollSnap()));
+  };
+
+  const handleOpen = (
+    e: { stopPropagation: () => void },
+    item: IIScreenProduct,
+  ) => {
+    e.stopPropagation();
+    setModalContent(item);
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = Pdf;
+    link.download = "iScreen-brochure.pdf";
+    link.click();
   };
 
   return (
     <>
       <Banner title="">
-        <div className="flex w-full flex-col items-center gap-10">
-          <img
-            src={iScreenLogo}
-            className="size-60 rounded-full border-4 border-[#078E00] lg:size-80"
-          />
+        <div className="space-y-7">
+          <div>
+            <p
+              className={cn(
+                "text-center font-poppins text-5xl font-bold text-white",
+                "md:text-6xl lg:text-8xl",
+              )}
+            >
+              {t(LocalizationKey.partnerWithUs.aboutIScreen).split("\n")[1]}
+            </p>
 
-          <Label variant="subtitle" className="text-white">
-            Looking forward to advertise with us? Below are the details to see
-            about iScreen - a digital LED advertising platform powered by
-            iCharge.
-          </Label>
+            <p className="font-poppins text-2xl font-bold uppercase tracking-widest text-white">
+              Media Network
+            </p>
+
+            <p className="font-poppins text-sm text-white lg:text-xl">
+              Powered by iCharge.
+            </p>
+          </div>
+
+          <p className="hidden lg:block text-4xl font-poppins text-white">Commercial Space + DOOH Advertising Solution</p>
+
+          <Button
+            onClick={handleDownload}
+            variant={"custombutton"}
+            className="bg-white text-green-600 hover:bg-[#ffc106] hover:text-white"
+          >
+            Download the brochure here
+          </Button>
         </div>
       </Banner>
 
-      <section id="iscreen">
-        <PageContainer>
-          <div className="hidden space-y-10 lg:block">
-            <img src={iScreenImageOne} className={baseClass} />
+      <PageContainer className="space-y-7">
+        <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+          About
+        </p>
 
-            <img src={iScreenImageTwo} className={baseClass} />
-          </div>
+        <Card className="rounded-2xl border-none bg-gradient-to-b from-[#fde396] via-[#fcefc7] to-[#fff7df] lg:flex">
+          <img
+            src={iScreenSample}
+            className="hidden h-full w-1/3 rounded-l-2xl lg:block"
+          />
 
-          <div className="flex flex-col items-center space-y-10 lg:hidden">
-            <Carousel opts={{ align: "center" }} setApi={carouselApiInit}>
-              <CarouselContent>
-                {mobileBrochureView.map((img, ids) => (
-                  <CarouselItem key={ids}>
-                    <img key={ids} src={img} className={baseClass} />
-                  </CarouselItem>
+          <img
+            src={iScreenMobileSample}
+            className="w-full rounded-t-2xl lg:hidden"
+          />
+
+          <CardContent className="flex flex-col space-y-5 p-10 lg:w-3/5">
+            <p className="font-poppins text-sm lg:text-xl">
+              <span className="font-poppins font-bold">
+                {t(iScreenDetails.title).split("\n")[1]}
+              </span>{" "}
+              {iScreenDetails.text.split("\n")[0]}
+            </p>
+
+            <p className="font-poppins text-sm lg:text-xl">
+              {iScreenDetails.text.split("\n")[2]}
+            </p>
+
+            <div className="space-y-2">
+              <p className="font-poppins text-sm font-bold lg:text-xl">
+                Key features:
+              </p>
+
+              <ul className="list-inside list-disc text-sm lg:text-xl">
+                {iScreenDetails.keyFeatures.map((item, ids) => (
+                  <li key={ids} className="font-poppins">
+                    {item}
+                  </li>
                 ))}
-              </CarouselContent>
-            </Carousel>
-
-            <div>
-              {mobileBrochureView.map((_, ids) => (
-                <button
-                  key={ids}
-                  className={cn(
-                    "mx-2 size-3 rounded-full bg-green-500",
-                    currIndex === ids ? "bg-opacity-100" : "bg-opacity-25",
-                  )}
-                  onClick={() => api?.scrollTo(ids)}
-                />
-              ))}
+              </ul>
             </div>
+          </CardContent>
+        </Card>
+      </PageContainer>
+
+      <PageContainer className="space-y-7">
+        <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+          Product Overview
+        </p>
+
+        <p className="font-poppins text-sm lg:text-xl">
+          {productOverview.flavorText}
+        </p>
+
+        <Carousel
+          opts={{ align: "center", loop: true }}
+          className="w-full lg:h-full"
+          setApi={carouselApiInit}
+        >
+          <CarouselContent>
+            {productOverview.products.map((data, index) => (
+              <CarouselItem
+                key={index}
+                className="custom-lg:basisOneThird flex h-[32rem] w-[95%] justify-center"
+              >
+                <ProductItem data={data} onClick={handleOpen} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <CarouselPrevious
+            className={cn(
+              "custom-lg:flex hidden aspect-square scale-150 rounded-e-none text-green-500 hover:text-green-200",
+              "border-[#D1F9C9] bg-[#E0EFDF]",
+            )}
+          />
+
+          <CarouselNext
+            className={cn(
+              "custom-lg:flex hidden aspect-square scale-150 rounded-s-none text-green-500 hover:text-green-200",
+              "border-[#D1F9C9] bg-[#E0EFDF]",
+            )}
+          />
+        </Carousel>
+
+        <div className="custom-lg:hidden mt-5 flex justify-center">
+          {productOverview.products.map((_, index) => (
+            <div
+              key={index}
+              className={cn(
+                "mx-2 size-3 rounded-full bg-green-500",
+                currentIndex === index ? "bg-opacity-100" : "bg-opacity-25",
+              )}
+              onClick={() => api?.scrollTo(index)}
+            />
+          ))}
+        </div>
+      </PageContainer>
+
+      <PageContainer className="space-y-7">
+        <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+          Why advertise
+        </p>
+
+        <p className="font-poppins text-sm lg:text-xl">
+          Partner with iScreen Media Network and connect your brand with
+          consumers in the moments that matter. We invite brands, agencies, and
+          strategic partners to explore innovative digital advertising
+          opportunities.
+        </p>
+
+        <div className="space-y-5">
+          {whyAdvertise.map((item, ids) => (
+            <div
+              key={ids}
+              className={cn(
+                "space-y-2 rounded-2xl border border-[#ffc106] bg-[#faf6eb] p-5",
+                ids % 2 === 0 ? "text-start" : "text-end",
+              )}
+            >
+              <p className="font-poppins text-lg font-bold text-[#ffc106] lg:text-2xl">
+                {item.title}
+              </p>
+
+              <p className="font-poppins text-sm lg:text-xl">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="rounded-2xl border border-[#ffc106] bg-[#faf6eb] p-5 text-center">
+          <p className="font-poppins text-lg font-bold text-[#ffc106] lg:text-2xl">
+            Benefits for advertisers
+          </p>
+
+          <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {benefitsForAdvertisers.map((item, ids) => {
+              const Icon = item.icon;
+
+              return (
+                <div key={ids} className="place-items-center space-y-3">
+                  <Icon
+                    size={80}
+                    className="rounded-full bg-[#ffc106] p-2 text-white"
+                  />
+
+                  <p className="font-poppins text-sm lg:text-xl">{item.text}</p>
+                </div>
+              );
+            })}
           </div>
-        </PageContainer>
-      </section>
+        </div>
+      </PageContainer>
+
+      <ProductModal
+        item={modalContent as IIScreenProduct}
+        open={!!modalContent}
+        handleClose={() => setModalContent(null)}
+      />
     </>
   );
 };

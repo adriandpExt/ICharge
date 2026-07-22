@@ -73,7 +73,7 @@ export const Drawer = () => {
         },
         {
           label: "IScreen Solution",
-          path: "/iscreen-solution",
+          path: "/iscreen",
         },
       ],
     },

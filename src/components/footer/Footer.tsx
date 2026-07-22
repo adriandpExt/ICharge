@@ -79,7 +79,7 @@ export const Footer = () => {
           <div className="flex md:justify-center lg:justify-normal">
             <SectionItem
               links={links.platform}
-              title={t(LocalizationKey.footer.platforms)}
+              title={t(LocalizationKey.footer.downloadApp)}
             />
           </div>
           <div className="col-start-2 flex md:col-start-3 md:justify-center lg:justify-normal">
