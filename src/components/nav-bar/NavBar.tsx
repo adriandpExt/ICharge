@@ -3,13 +3,7 @@ import { Button } from "../ui/button";
 
 import useScroll from "@/hooks/useScroll";
 import { LinkList } from "./type";
-import {
-  Building2,
-  ChevronDown,
-  Handshake,
-  MessageCircleQuestion,
-  Phone,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { SvgIcons } from "../svg-icons";
 
 import { Drawer } from "./component";
