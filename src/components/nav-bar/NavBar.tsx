@@ -1,10 +1,11 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 
 import useScroll from "@/hooks/useScroll";
 import { LinkList } from "./type";
 import {
   Building2,
+  ChevronDown,
   Handshake,
   MessageCircleQuestion,
   Phone,
@@ -18,6 +19,12 @@ import { useTranslation } from "react-i18next";
 import LocalizationKey from "@/i18n/key";
 import { cn } from "@/lib/utils";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 export const NavBar = () => {
   const { t } = useTranslation();
@@ -39,48 +46,87 @@ export const NavBar = () => {
     {
       label: t(LocalizationKey.navigation.howTo),
       path: "/how-to",
-      icon: MessageCircleQuestion,
     },
     {
-      label: t(LocalizationKey.navigation.partnerwithUs),
-      path: "/partner",
-      icon: Handshake,
-    },
-    {
-      label: t(LocalizationKey.navigation.services),
-      path: "/services",
-      icon: Phone,
+      label: "Solutions",
+      subChild: [
+        {
+          label: "ICharge Solution",
+          path: "/icharge-solution",
+        },
+        {
+          label: "IScreen Solution",
+          path: "/iscreen-solution",
+        },
+      ],
     },
     {
       label: t(LocalizationKey.navigation.about),
       path: "/about",
-      icon: Building2,
+    },
+    {
+      label: "Contact Us",
+      path: "/contact-us",
     },
   ];
 
   const renderNavigation = () => {
     return (
-      <div className="hidden gap-5 lg:flex">
-        {linkList.map((item, index) => {
+      <div className="hidden gap-1 lg:flex">
+        {linkList.map((item) => {
           const isActive = location.pathname === item.path;
 
-          return (
-            <Button
-              key={index}
-              variant="link"
-              className={`font-normal hover:text-gray-500 hover:no-underline ${
-                isActive ? "font-bold text-white underline" : ""
-              } ${isScroll ? "text-black" : "text-white"}`}
+          return item.subChild ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <Button
+                  key={item.label}
+                  variant="link"
+                  className={cn(
+                    "inline-flex items-center justify-center gap-2 font-poppins text-sm font-normal focus-visible:outline-none focus-visible:ring-0",
+                    isActive &&
+                      "font-bold text-white underline underline-offset-4",
+                    isScroll ? "text-black" : "text-white",
+                  )}
+                >
+                  {item.label}
+                  <ChevronDown size={20} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 border-none bg-white">
+                {item.subChild.map((sub) => (
+                  <DropdownMenuItem className="p-0" key={sub.label}>
+                    <NavLink
+                      to={sub.path as string}
+                      className={cn(
+                        "inline-flex w-full items-center justify-start rounded-md px-4 py-2 font-poppins text-sm font-normal hover:bg-gray-100 hover:underline hover:underline-offset-4",
+                        isActive && "font-bold underline underline-offset-4",
+                      )}
+                    >
+                      {sub.label}
+                    </NavLink>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <NavLink
+              key={item.label}
+              to={item.path as string}
+              className={cn(
+                "inline-flex items-center justify-center rounded-md px-4 py-2 font-poppins text-sm font-normal hover:underline hover:underline-offset-4",
+                isActive && "font-bold text-white underline underline-offset-4",
+                isScroll ? "text-black" : "text-white",
+              )}
             >
-              <Link to={item.path as string} className="font-poppins">
-                {item.label}
-              </Link>
-            </Button>
+              {item.label}
+            </NavLink>
           );
         })}
       </div>
     );
   };
+
   return (
     <header
       className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:backdrop-blur-none ${

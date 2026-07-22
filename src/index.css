@@ -94,19 +94,14 @@
     font-size: 2.5rem;
   }
   .icharge-green-gradient-text {
-      background-image: linear-gradient(to bottom,
-          #15803d 5%,
-          #39d431,
-          #39d431);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-align: center;
+    background-image: linear-gradient(to bottom, #15803d 5%, #39d431, #39d431);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
   }
   .icharge-green-gradient {
-    background-image: linear-gradient(to bottom,
-          #15803d,
-          #39d431);
+    background-image: linear-gradient(to bottom, #15803d, #39d431);
   }
   .subtitle {
     font-weight: 600;
@@ -131,6 +126,16 @@
   .rounded-eyedrop {
     border-radius: 9999px 150rem 9999px 9999px;
     /* Equivalent to rounded-full */
+  }
+
+  .no-scrollbar {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
   }
 }
 
