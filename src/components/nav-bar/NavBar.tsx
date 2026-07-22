@@ -50,7 +50,7 @@ export const NavBar = () => {
         },
         {
           label: "IScreen Solution",
-          path: "/iscreen-solution",
+          path: "/iscreen",
         },
       ],
     },

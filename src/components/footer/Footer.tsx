@@ -1,14 +1,13 @@
 import { ReactElement } from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { IconName } from "../svg-icons/utils";
 import LocalizationKey from "@/i18n/key";
 import { Label } from "@/components/ui/label";
 import { SvgIcons } from "../svg-icons";
-import { bottomLinks, followUs } from "./utils";
 import SectionItem from "./SectionItem";
 import { Avatar, AvatarFallback } from "../ui/avatar";
+import { followUs } from "./utils";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -46,7 +45,7 @@ export const Footer = () => {
     ],
   };
 
-  const NewsletterSection = () => (
+  const SocialLinks = () => (
     <div className="flex flex-col gap-3 lg:text-start">
       <Label className="text-md mb-1 font-semibold md:text-xl">
         {t(LocalizationKey.footer.stayInTheLoop)}
@@ -80,7 +79,7 @@ export const Footer = () => {
           <div className="flex md:justify-center lg:justify-normal">
             <SectionItem
               links={links.platform}
-              title={t(LocalizationKey.footer.platforms)}
+              title={t(LocalizationKey.footer.downloadApp)}
             />
           </div>
           <div className="col-start-2 flex md:col-start-3 md:justify-center lg:justify-normal">
@@ -91,25 +90,18 @@ export const Footer = () => {
             />
           </div>
           <div className="hidden lg:block">
-            <NewsletterSection />
+            <SocialLinks />
           </div>
         </div>
 
-        <div className="mt-5 items-center border-t border-gray-500 pt-3 lg:hidden" />
+        <div className="mt-5 items-center border-t border-white pt-3 lg:hidden" />
         <div className="lg:hidden">
-          <NewsletterSection />
+          <SocialLinks />
         </div>
-        <div className="mt-10 flex flex-col items-center justify-between border-t border-gray-500 pt-6 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between border-t border-white pt-6 sm:flex-row">
           <Label variant="default">
             2018–{new Date().getFullYear()} {t(LocalizationKey.footer.company)}
           </Label>
-          <div className="mt-4 hidden gap-4 sm:mt-0 sm:flex">
-            {bottomLinks.map((item, index) => (
-              <Link to={item.path} key={index} onClick={handleClick}>
-                <Label variant="default">{t(item.label)}</Label>
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
