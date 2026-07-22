@@ -71,6 +71,14 @@ const IScreen = () => {
         >
           {t(LocalizationKey.partnerWithUs.aboutIScreen).split("\n")[1]}
         </p>
+
+        <Button
+          onClick={handleDownload}
+          variant={"custombutton"}
+          className="bg-[#ffc106] hover:bg-[#ffda69]"
+        >
+          Download the brochure here
+        </Button>
       </Banner>
 
       <PageContainer className="space-y-7">
@@ -202,12 +210,12 @@ const IScreen = () => {
           ))}
         </div>
 
-        <div className="rounded-2xl bg-[#faf6eb] p-5 text-center">
+        <div className="rounded-2xl border border-[#ffc106] bg-[#faf6eb] p-5 text-center">
           <p className="font-poppins text-lg font-bold text-[#ffc106] lg:text-2xl">
             Benefits for advertisers
           </p>
 
-          <div className="mt-5 grid grid-cols-4">
+          <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
             {benefitsForAdvertisers.map((item, ids) => {
               const Icon = item.icon;
 
@@ -224,14 +232,6 @@ const IScreen = () => {
             })}
           </div>
         </div>
-
-        <Button
-          onClick={handleDownload}
-          variant={"custombutton"}
-          className="bg-[#ffc106] hover:bg-[#ffda69]"
-        >
-          Download the brochure here
-        </Button>
       </PageContainer>
 
       <ProductModal
