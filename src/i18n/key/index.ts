@@ -41,6 +41,7 @@ const LocalizationKey = {
       solution: "navigation.solutions.solution.label",
       ichargeSolution: "navigation.solutions.ichargeSolution.label",
       iscreenSolution: "navigation.solutions.iscreenSolution.label",
+      socials: "navigation.solutions.socials.label",
     },
     contactUs: "navigation.contactUs.label",
     about: "navigation.about.label",
