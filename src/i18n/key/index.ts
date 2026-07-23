@@ -37,8 +37,12 @@ const LocalizationKey = {
   },
   navigation: {
     howTo: "navigation.howTo.label",
-    partnerwithUs: "navigation.partnerwithUs.label",
-    services: "navigation.services.label",
+    solutions: {
+      solution: "navigation.solutions.solution.label",
+      ichargeSolution: "navigation.solutions.ichargeSolution.label",
+      iscreenSolution: "navigation.solutions.iscreenSolution.label",
+    },
+    contactUs: "navigation.contactUs.label",
     about: "navigation.about.label",
     faqs: "navigation.faqs.label",
     certifications: "navigation.certifications.label",
@@ -58,17 +62,17 @@ const LocalizationKey = {
   },
 
   howTo: {
-    howToHeading: 'howTo.howToHeading.label',
-    howToBannerText: 'howTo.howToBannerText.label',
-    howToCallToAction: 'howTo.howToCallToAction.label',
+    howToHeading: "howTo.howToHeading.label",
+    howToBannerText: "howTo.howToBannerText.label",
+    howToCallToAction: "howTo.howToCallToAction.label",
     howToRent: {
-      howToRentHeader: 'howTo.howToRent.howToRentHeader.label',
-      howToRentDesc: 'howTo.howToRent.howToRentDesc.label',
+      howToRentHeader: "howTo.howToRent.howToRentHeader.label",
+      howToRentDesc: "howTo.howToRent.howToRentDesc.label",
     },
     howToReturn: {
-      howToReturnHeader: 'howTo.howToReturn.howToReturnHeader.label',
-      howToReturnDesc: 'howTo.howToReturn.howToReturnDesc.label',
-    }
+      howToReturnHeader: "howTo.howToReturn.howToReturnHeader.label",
+      howToReturnDesc: "howTo.howToReturn.howToReturnDesc.label",
+    },
   },
 
   partnerWithUs: {
@@ -244,30 +248,30 @@ const LocalizationKey = {
     ourReachDesc: "about.ourReachDesc.label",
     keyFeaturesHead: "about.keyFeaturesHead.label",
     advancedTechSolutions: {
-      head: 'about.advancedTechSolutions.head.label',
-      desc: 'about.advancedTechSolutions.desc.label',
+      head: "about.advancedTechSolutions.head.label",
+      desc: "about.advancedTechSolutions.desc.label",
       footnote: {
-        numberOne: 'about.advancedTechSolutions.footnote.numberOne.label',
-        numberTwo: 'about.advancedTechSolutions.footnote.numberTwo.label',
-        numberThree: 'about.advancedTechSolutions.footnote.numberThree.label',
+        numberOne: "about.advancedTechSolutions.footnote.numberOne.label",
+        numberTwo: "about.advancedTechSolutions.footnote.numberTwo.label",
+        numberThree: "about.advancedTechSolutions.footnote.numberThree.label",
       },
     },
     inHouseItSolutions: {
-      head: 'about.inHouseItSolutions.head.label',
-      desc: 'about.inHouseItSolutions.desc.label',
+      head: "about.inHouseItSolutions.head.label",
+      desc: "about.inHouseItSolutions.desc.label",
       footnote: {
-        numberOne: 'about.inHouseItSolutions.footnote.numberOne.label',
-        numberTwo: 'about.inHouseItSolutions.footnote.numberTwo.label',
-        numberThree: 'about.inHouseItSolutions.footnote.numberThree.label',
+        numberOne: "about.inHouseItSolutions.footnote.numberOne.label",
+        numberTwo: "about.inHouseItSolutions.footnote.numberTwo.label",
+        numberThree: "about.inHouseItSolutions.footnote.numberThree.label",
       },
     },
     proprietaryHardware: {
-      head: 'about.proprietaryHardware.head.label',
-      desc: 'about.proprietaryHardware.desc.label',
+      head: "about.proprietaryHardware.head.label",
+      desc: "about.proprietaryHardware.desc.label",
       footnote: {
-        numberOne: 'about.proprietaryHardware.footnote.numberOne.label',
-        numberTwo: 'about.proprietaryHardware.footnote.numberTwo.label',
-        numberThree: 'about.proprietaryHardware.footnote.numberThree.label',
+        numberOne: "about.proprietaryHardware.footnote.numberOne.label",
+        numberTwo: "about.proprietaryHardware.footnote.numberTwo.label",
+        numberThree: "about.proprietaryHardware.footnote.numberThree.label",
       },
     },
   },

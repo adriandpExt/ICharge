@@ -47,14 +47,14 @@ export const NavBar = () => {
       path: "/how-to",
     },
     {
-      label: "Solutions",
+      label: t(LocalizationKey.navigation.solutions.solution),
       subChild: [
         {
-          label: "ICharge Solution",
+          label: t(LocalizationKey.navigation.solutions.ichargeSolution),
           path: "/icharge-solution",
         },
         {
-          label: "IScreen Solution",
+          label: t(LocalizationKey.navigation.solutions.iscreenSolution),
           path: "/iscreen",
         },
       ],
