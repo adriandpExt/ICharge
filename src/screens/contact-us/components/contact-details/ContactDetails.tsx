@@ -17,7 +17,7 @@ interface IContactData {
   contact: {
     viber: string;
     phone: string;
-    email: string[];
+    social: string[];
   };
 }
 interface IContactCard {
@@ -26,7 +26,7 @@ interface IContactCard {
 
 const ContactCard = ({ data }: IContactCard) => {
   const {
-    contact: { viber, phone, email },
+    contact: { viber, phone, social },
     subTitle,
     title,
   } = data;
@@ -38,6 +38,12 @@ const ContactCard = ({ data }: IContactCard) => {
   };
   const handleEmail = (email: string) => {
     window.open(`mailto:$${email}`, "_blank");
+  };
+  const handleFacebook = (facebook: string) => {
+    window.open(`https://www.facebook.com/${facebook}`, "_blank");
+  };
+  const handleTikTok = (tiktok: string) => {
+    window.open(`https://www.tiktok.com/${tiktok}`);
   };
   const handleOpenMap = () => {
     const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -96,7 +102,7 @@ const ContactCard = ({ data }: IContactCard) => {
         className="flex cursor-pointer items-center gap-5 hover:underline"
         onClick={handleCall}
       >
-        <Phone size={32} strokeWidth={3} /> {data.contact.phone}
+        <Phone size={32} strokeWidth={3} /> +{data.contact.phone}
       </Label>
 
       <div className="flex cursor-pointer items-center gap-5">
@@ -107,16 +113,55 @@ const ContactCard = ({ data }: IContactCard) => {
         )}
 
         <div className="flex flex-col gap-1">
-          {email.map((item, index) => (
-            <Label
-              variant={"body"}
-              key={index}
-              onClick={() => handleEmail(item)}
-              className="cursor-pointer hover:underline"
-            >
-              {item}
-            </Label>
-          ))}
+          {title === "iCharge" &&
+            social.map((item, index) => (
+              <Label
+                variant={"body"}
+                key={index}
+                onClick={() => handleEmail(item)}
+                className="cursor-pointer hover:underline"
+              >
+                {item}
+              </Label>
+            ))}
+          {title === "iScreen" &&
+            social.map((item, index) => {
+              switch (index) {
+                case 0:
+                  return (
+                    <Label
+                      variant={"body"}
+                      key={index}
+                      onClick={() => handleEmail(item)}
+                      className="cursor-pointer hover:underline"
+                    >
+                      {item}
+                    </Label>
+                  );
+                case 1:
+                  return (
+                    <Label
+                      variant={"body"}
+                      key={index}
+                      onClick={() => handleFacebook(item)}
+                      className="cursor-pointer hover:underline"
+                    >
+                      {item}
+                    </Label>
+                  );
+                default:
+                  return (
+                    <Label
+                      variant={"body"}
+                      key={index}
+                      onClick={() => handleTikTok(item)}
+                      className="cursor-pointer hover:underline"
+                    >
+                      {item}
+                    </Label>
+                  );
+              }
+            })}
         </div>
       </div>
 
@@ -155,8 +200,8 @@ export const ContactDetails = (): ReactElement => {
     subTitle: t(LocalizationKey.partnerWithUs.inquiryForm.attention),
     contact: {
       viber: "@icharge",
-      phone: "+63 918 738 8888",
-      email: [
+      phone: "639187388888",
+      social: [
         "official@icharge.com.ph",
         "support@icharge.com.ph",
         "reachus@icharge.com.ph",
@@ -168,8 +213,8 @@ export const ContactDetails = (): ReactElement => {
     subTitle: t(LocalizationKey.partnerWithUs.inquiryForm.attention),
     contact: {
       viber: "@iscreen",
-      phone: "+63 985 610 7777",
-      email: ["iscreen@icharge.com.ph", "@iscreen.official.ph", "@iscreen_ph"],
+      phone: "639856107777",
+      social: ["iscreen@icharge.com.ph", "@iscreen.official.ph", "@iscreen_ph"],
     },
   };
   return (
