@@ -347,6 +347,15 @@
     "brand": {
       "label": "iScreen"
     },
+    "mediaNetwork": {
+      "label": "媒體網絡" 
+    },
+    "poweredByICharge":{
+      "label": "iCharge提供动力"
+    },
+    "bannerText": {
+      "label": "商業空間 +DOOH廣告解決方案"
+    },
     "downloadButton": {
       "label": "在這裏下載小冊子"
     },

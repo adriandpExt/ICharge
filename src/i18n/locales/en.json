@@ -352,6 +352,15 @@
     "brand": {
       "label": "iScreen"
     },
+    "mediaNetwork": {
+      "label": "Media Network" 
+    },
+    "poweredByICharge":{
+      "label": "Powered by iCharge"
+    },
+    "bannerText": {
+      "label": "Commercial Space + DOOH Advertising Solution"
+    },
     "downloadButton": {
       "label": "Download the brochure here"
     },

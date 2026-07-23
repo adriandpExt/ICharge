@@ -77,6 +77,9 @@ const LocalizationKey = {
 
   iScreen: {
     brand: "iScreen.brand.label",
+    mediaNetwork: "iScreen.mediaNetwork.label",
+    poweredByICharge: "iScreen.poweredByICharge.label",
+    bannerText: "iScreen.bannerText.label",
     downloadButton: "iScreen.downloadButton.label",
     about: {
       aboutTitle: "iScreen.about.aboutTitle.label",
