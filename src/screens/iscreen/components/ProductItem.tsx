@@ -43,7 +43,7 @@ export const ProductItem = (props: {
       />
 
       <div className="mt-5 place-items-center space-y-3 px-5">
-        <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text font-staatliches text-4xl text-transparent">
+        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text font-staatliches text-4xl text-transparent">
           {data.name}
         </p>
 
