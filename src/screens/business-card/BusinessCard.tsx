@@ -26,11 +26,12 @@ const BusinessCardButton = (props: IBusinessCardBtn) => {
       className={cn(
         "flex h-[50px] w-[260px] space-x-3 rounded-lg",
         buttonTheme,
+        "hover:bg-[#ffc106]",
       )}
       onClick={onClick}
     >
       <div className="grid w-full grid-cols-[20%_80%] items-center gap-2">
-        <SvgIcons name={icon} size={40} />
+        <SvgIcons name={icon} size={40} color="#FFFFFF" />
 
         <p className="truncate text-start font-poppins font-bold text-white">
           {label}
