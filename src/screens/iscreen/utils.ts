@@ -9,73 +9,72 @@ import { IIScreenDetails, IProductOverview } from "./type";
 import { CirclePlay, LucideIcon, Repeat, Target, Users } from "lucide-react";
 
 export const iScreenDetails: IIScreenDetails = {
-  title: LocalizationKey.partnerWithUs.aboutIScreen,
-  text: "is a modern digital media network seamlessly integrated into iCharge charging stations - transforming everyday moments into refined brand experiences through premium commercial spaces thoughtfully designed to capture attention, enhance visibility, and create lasting impressions.\n\nWe position brands within moments of pause, allowing businesses to connect with audiences in a natural, engaging, and elevated way - when they are most attentive, relaxed, and receptive.",
+  title: LocalizationKey.iScreen.brand,
+  text: LocalizationKey.iScreen.about.aboutText,
   keyFeatures: [
-    "Integrated digital LED screens within smart charging stations",
-    "Thoughtfully positioned in high foot traffic environments",
-    "Seamless, continuous ad playback",
-    "Expanding nationwide network for premium brand visibility",
+    LocalizationKey.iScreen.about.aboutKeyFeatures.keyFeatureOne,
+    LocalizationKey.iScreen.about.aboutKeyFeatures.keyFeatureTwo,
+    LocalizationKey.iScreen.about.aboutKeyFeatures.keyFeatureThree,
+    LocalizationKey.iScreen.about.aboutKeyFeatures.keyFeatureFour,
   ],
 };
 
 export const productOverview: IProductOverview = {
-  flavorText:
-    "Each ad runs for 10-15 seconds in a continuous loop. Supported formats include MP4 (10-20MB) and imaged (JPG, WEBP, PNG), with a total file size of up to 200MB for iScreen Pro and iScreen Max, and up to 700MB for iScreen Pro Max. Ads are shown at least once every 2 minutes (depending on system performance), delivering high-frequency exposure of around 30-300 plays per hour for string visibility and consistent audience engagement.",
+  flavorText: LocalizationKey.iScreen.productOverview.productOverviewFlavorText,
   products: [
     {
       img: ProOne,
       name: 'iScreen Pro (11")',
-      desc: "The professional standard for point-of-rental advertising",
+      desc: LocalizationKey.iScreen.productOverview.products.proOne.desc,
       specs: {
         height: "800px",
         width: "1280px",
         supportedFormats: [
-          "Video: MP4 (10MB - 20MB)",
-          "Image: .jpg, .webp, .png",
-          "File capacity: 200MB",
+          LocalizationKey.iScreen.productOverview.products.proOne.formats.video,
+          LocalizationKey.iScreen.productOverview.products.proOne.formats.image,
+          LocalizationKey.iScreen.productOverview.products.proOne.formats.fileCapacity,
         ],
       },
     },
     {
       img: ProTwo,
       name: 'iScreen Pro (11")',
-      desc: "The professional standard for point-of-rental advertising",
+      desc: LocalizationKey.iScreen.productOverview.products.proTwo.desc,
       specs: {
         height: "800px",
         width: "1280px",
         supportedFormats: [
-          "Video: MP4 (10MB - 20MB)",
-          "Image: .jpg, .webp, .png",
-          "File capacity: 200MB",
+          LocalizationKey.iScreen.productOverview.products.proTwo.formats.video,
+          LocalizationKey.iScreen.productOverview.products.proTwo.formats.image,
+          LocalizationKey.iScreen.productOverview.products.proTwo.formats.fileCapacity,
         ],
       },
     },
     {
       img: Max,
       name: 'iScreen Max (24")',
-      desc: "Maximum screen real estate for high-traffic visibility",
+      desc: LocalizationKey.iScreen.productOverview.products.max.desc,
       specs: {
         height: "1440px",
         width: "1080px",
         supportedFormats: [
-          "Video: MP4 (10MB - 20MB)",
-          "Image: .jpg, .webp, .png",
-          "File capacity: 200MB",
+          LocalizationKey.iScreen.productOverview.products.max.formats.video,
+          LocalizationKey.iScreen.productOverview.products.max.formats.image,
+          LocalizationKey.iScreen.productOverview.products.max.formats.fileCapacity,
         ],
       },
     },
     {
       img: ProMax,
       name: 'iScreen Pro Max (43")',
-      desc: "The pinnacle of the iCharge ecosystem - Ultra impact",
+      desc: LocalizationKey.iScreen.productOverview.products.proMax.desc,
       specs: {
         height: "1920px",
         width: "1080px",
         supportedFormats: [
-          "Video: MP4 (10MB - 20MB)",
-          "Image: .jpg, .webp, .png",
-          "File capacity: 700MB",
+          LocalizationKey.iScreen.productOverview.products.proMax.formats.video,
+          LocalizationKey.iScreen.productOverview.products.proMax.formats.image,
+          LocalizationKey.iScreen.productOverview.products.proMax.formats.fileCapacity,
         ],
       },
     },
@@ -84,43 +83,42 @@ export const productOverview: IProductOverview = {
 
 export const whyAdvertise: { title: string; desc: string }[] = [
   {
-    title:
-      "Positioned in High-Traffic Areas to Ensure Your Brand Gets Seen, Everyday",
-    desc: "Strategically placed in malls, terminals, hospitals, convenience stores, and more - where people go often and brands get noticed.",
+    title: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseOne.title,
+    desc: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseOne.desc,
   },
   {
-    title: "Customer Rents Powerbank",
-    desc: "A practical solution that customers value and use - creating a positive connection with your brand from the start.",
+    title: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseTwo.title,
+    desc: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseTwo.desc,
   },
   {
-    title: "Ads Play Continuously on Screens",
-    desc: "Your ads run in a loop on high-visibility digital screens - capturing attention during charging moments.",
+    title: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseThree.title,
+    desc: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseThree.desc,
   },
   {
-    title: "Advertisers invest in Audience Reach and Visibility",
-    desc: "Connect with real people in the right places at the right moment - maximizing your brand's visibility and impact.",
+    title: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseFour.title,
+    desc: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseFour.desc,
   },
   {
-    title: "Enhance Brand Awareness",
-    desc: "Build stronger brand recognition and trust through consistent exposure in everyday high-traffic environments.",
+    title: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseFive.title,
+    desc: LocalizationKey.iScreen.whyAdvertise.whyAdvertiseFive.desc,
   },
 ];
 
 export const benefitsForAdvertisers: { icon: LucideIcon; text: string }[] = [
   {
     icon: Users,
-    text: "Access to a captive and attentive audience",
+    text: LocalizationKey.iScreen.benefitsForAdvertisers.benefitOne,
   },
   {
     icon: Repeat,
-    text: "Increased recall through repeated exposure",
+    text: LocalizationKey.iScreen.benefitsForAdvertisers.benefitTwo,
   },
   {
     icon: Target,
-    text: "Flexible and dynamic digital content delivery",
+    text: LocalizationKey.iScreen.benefitsForAdvertisers.benefitThree,
   },
   {
     icon: CirclePlay,
-    text: "Influence closer to the point of decision",
+    text: LocalizationKey.iScreen.benefitsForAdvertisers.benefitFour,
   },
 ];

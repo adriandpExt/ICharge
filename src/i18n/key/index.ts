@@ -75,6 +75,104 @@ const LocalizationKey = {
     },
   },
 
+  iScreen: {
+    brand: "iScreen.brand.label",
+    downloadButton: "iScreen.downloadButton.label",
+    about: {
+      aboutTitle: "iScreen.about.aboutTitle.label",
+      aboutText: "iScreen.about.aboutText.label",
+      aboutKeyFeatures: {
+        keyFeaturesTitle: "iScreen.about.aboutKeyFeatures.keyFeaturesTitle.label",
+        keyFeatureOne: "iScreen.about.aboutKeyFeatures.keyFeatureOne.label",
+        keyFeatureTwo: "iScreen.about.aboutKeyFeatures.keyFeatureTwo.label",
+        keyFeatureThree: "iScreen.about.aboutKeyFeatures.keyFeatureThree.label",
+        keyFeatureFour: "iScreen.about.aboutKeyFeatures.keyFeatureFour.label",
+      },
+    },
+    productOverview: {
+      productOverviewTitle:
+        "iScreen.productOverview.productOverviewTitle.label",
+      productOverviewFlavorText: "iScreen.productOverview.flavorText.label",
+      productOverviewHeight: "iScreen.productOverview.height.label",
+      productOverviewWidth: "iScreen.productOverview.width.label",
+      products: {
+        proOne: {
+          desc: "iScreen.productOverview.products.proOne.desc.label",
+          formats: {
+            video:
+              "iScreen.productOverview.products.proOne.formats.video.label",
+            image:
+              "iScreen.productOverview.products.proOne.formats.image.label",
+            fileCapacity:
+              "iScreen.productOverview.products.proOne.formats.fileCapacity.label",
+          },
+        },
+        proTwo: {
+          desc: "iScreen.productOverview.products.proTwo.desc.label",
+          formats: {
+            video:
+              "iScreen.productOverview.products.proTwo.formats.video.label",
+            image:
+              "iScreen.productOverview.products.proTwo.formats.image.label",
+            fileCapacity:
+              "iScreen.productOverview.products.proTwo.formats.fileCapacity.label",
+          },
+        },
+        max: {
+          desc: "iScreen.productOverview.products.max.desc.label",
+          formats: {
+            video: "iScreen.productOverview.products.max.formats.video.label",
+            image: "iScreen.productOverview.products.max.formats.image.label",
+            fileCapacity:
+              "iScreen.productOverview.products.max.formats.fileCapacity.label",
+          },
+        },
+        proMax: {
+          desc: "iScreen.productOverview.products.proMax.desc.label",
+          formats: {
+            video:
+              "iScreen.productOverview.products.proMax.formats.video.label",
+            image:
+              "iScreen.productOverview.products.proMax.formats.image.label",
+            fileCapacity:
+              "iScreen.productOverview.products.proMax.formats.fileCapacity.label",
+          },
+        },
+      },
+    },
+    whyAdvertise: {
+      whyAdvertiseTitle: "iScreen.whyAdvertise.whyAdvertiseTitle.label",
+      whyAdvertiseFlavorText: "iScreen.whyAdvertise.whyAdvertiseFlavorText.label",
+      whyAdvertiseOne: {
+        title: "iScreen.whyAdvertise.whyAdvertiseOne.title.label",
+        desc: "iScreen.whyAdvertise.whyAdvertiseOne.desc.label",
+      },
+      whyAdvertiseTwo: {
+        title: "iScreen.whyAdvertise.whyAdvertiseTwo.title.label",
+        desc: "iScreen.whyAdvertise.whyAdvertiseTwo.desc.label",
+      },
+      whyAdvertiseThree: {
+        title: "iScreen.whyAdvertise.whyAdvertiseThree.title.label",
+        desc: "iScreen.whyAdvertise.whyAdvertiseThree.desc.label",
+      },
+      whyAdvertiseFour: {
+        title: "iScreen.whyAdvertise.whyAdvertiseFour.title.label",
+        desc: "iScreen.whyAdvertise.whyAdvertiseFour.desc.label",
+      },
+      whyAdvertiseFive: {
+        title: "iScreen.whyAdvertise.whyAdvertiseFive.title.label",
+        desc: "iScreen.whyAdvertise.whyAdvertiseFive.desc.label",
+      },
+    },
+    benefitsForAdvertisers: {
+      benefitsForAdvertisersTitle: "iScreen.benefitsForAdvertisers.benefitsForAdvertisersTitle.label",
+      benefitOne: "iScreen.benefitsForAdvertisers.benefitOne.label",
+      benefitTwo: "iScreen.benefitsForAdvertisers.benefitTwo.label",
+      benefitThree: "iScreen.benefitsForAdvertisers.benefitThree.label",
+      benefitFour: "iScreen.benefitsForAdvertisers.benefitFour.label",
+    }
+  },
+
   partnerWithUs: {
     partnerWithUsHeading: "partnerWithUs.partnerWithUsHeading.label",
     heading1: "partnerWithUs.heading1.label",
