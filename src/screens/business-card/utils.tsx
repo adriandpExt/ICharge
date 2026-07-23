@@ -9,6 +9,7 @@ import RoseRivera from "@/assets/businessCard/rose_rivera.png";
 import WillyElipe from "@/assets/businessCard/willy_elipe.png";
 import JenniferOrtiz from "@/assets/businessCard/jennifer_ortiz.jpeg";
 import ICharge from "@/assets/businessCard/icharge.png";
+import SamanthaJamito from '@/assets/businessCard/samantha_jamito.jpeg'
 
 import iScreen from "@/assets/businessCard/iScreen.png";
 
@@ -308,6 +309,27 @@ export const businessCardInfo: ICardInfo[] = [
       {
         buttonType: "Email",
         link: "iscreen@icharge.com.ph",
+      },
+      {
+        link: "/iscreen",
+        label: "Visit our website",
+      },
+    ],
+  },
+  {
+    id: "026",
+    name: "Samantha Jamito",
+    role: "Growth & Marketing Manager",
+    img: SamanthaJamito,
+    cardType: "i-screen",
+    buttonContent: [
+      {
+        buttonType: "Viber",
+        link: "639705314263",
+      },
+      {
+        buttonType: "Email",
+        link: "growthmarketing@icharge.com.ph",
       },
       {
         link: "/iscreen",
