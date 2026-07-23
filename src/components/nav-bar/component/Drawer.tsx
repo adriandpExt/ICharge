@@ -107,7 +107,12 @@ export const Drawer = () => {
       };
 
       return item.subChild ? (
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion
+          key={item.label}
+          type="single"
+          collapsible
+          className="w-full"
+        >
           <AccordionItem className="border-b-0" value="test">
             <AccordionTrigger className="p-2 font-poppins text-base hover:no-underline">
               {renderIcon()}
@@ -136,6 +141,7 @@ export const Drawer = () => {
         </Accordion>
       ) : (
         <NavLink
+          key={item.label}
           to={item.path as string}
           onClick={closeDrawer}
           className={({ isActive }) =>
