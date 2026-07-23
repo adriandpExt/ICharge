@@ -162,12 +162,10 @@ export const ContactDetails = (): ReactElement => {
     title: "iScreen",
     subTitle: t(LocalizationKey.partnerWithUs.inquiryForm.attention),
     contact: {
-      viber: "@icharge",
-      phone: "+63 918 738 8888",
+      viber: "@iscreen",
+      phone: "+63 985 610 7777",
       email: [
-        "official@icharge.com.ph",
-        "support@icharge.com.ph",
-        "reachus@icharge.com.ph",
+        "iscreen@icharge.com.ph",
       ],
     },
   };
