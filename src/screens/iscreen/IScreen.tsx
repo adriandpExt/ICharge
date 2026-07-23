@@ -62,12 +62,13 @@ const IScreen = () => {
 
   return (
     <>
-      <Banner title="" backgroundColor="#ffc106">
+      <Banner title="" backgroundColor="#fadd88">
         <div className="space-y-7">
           <div>
             <p
               className={cn(
-                "text-center font-poppins text-5xl font-bold text-white",
+                "bg-gradient-to-r from-[#2afc94] from-30% via-[#12c4ef] via-50% to-[#ffc106] to-60%",
+                "bg-clip-text text-center font-poppins text-5xl font-bold text-transparent",
                 "md:text-6xl lg:text-8xl",
               )}
             >
@@ -79,11 +80,13 @@ const IScreen = () => {
             </p>
 
             <p className="font-poppins text-sm text-white lg:text-xl">
-              Powered by iCharge.
+              Powered by iCharge
             </p>
           </div>
 
-          <p className="hidden lg:block text-4xl font-poppins text-white">Commercial Space + DOOH Advertising Solution</p>
+          <p className="hidden font-poppins text-4xl text-white lg:block">
+            Commercial Space + DOOH Advertising Solution
+          </p>
 
           <Button
             onClick={handleDownload}
@@ -95,23 +98,20 @@ const IScreen = () => {
         </div>
       </Banner>
 
-      <PageContainer className="space-y-7">
-        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
-          About
-        </p>
+      <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-4xl text-transparent md:text-5xl lg:text-7xl">
+        About
+      </p>
 
-        <Card className="rounded-2xl border-none bg-gradient-to-b from-[#fde396] via-[#fcefc7] to-[#fff7df] xl:flex">
+      <img src={iScreenMobileSample} className="w-full xl:hidden mt-10" />
+
+      <PageContainer className="space-y-7">
+        <Card className="-mt-10 rounded-2xl border-none from-[#fde396] via-[#fcefc7] to-[#fff7df] shadow-none lg:bg-gradient-to-b lg:shadow xl:flex">
           <img
             src={iScreenSample}
             className="hidden h-full rounded-l-2xl xl:block"
           />
 
-          <img
-            src={iScreenMobileSample}
-            className="w-full rounded-t-2xl xl:hidden"
-          />
-
-          <CardContent className="flex flex-col space-y-5 p-10 xl:w-3/5">
+          <CardContent className="flex flex-col justify-center space-y-5 p-5 xl:w-3/5">
             <p className="font-poppins text-sm lg:text-xl">
               <span className="font-poppins font-bold">
                 {t(iScreenDetails.title).split("\n")[1]}
@@ -141,7 +141,7 @@ const IScreen = () => {
       </PageContainer>
 
       <PageContainer className="space-y-7">
-        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-4xl text-transparent md:text-5xl lg:text-7xl">
           Product Overview
         </p>
 
@@ -195,7 +195,7 @@ const IScreen = () => {
       </PageContainer>
 
       <PageContainer className="space-y-7">
-        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-4xl text-transparent md:text-5xl lg:text-7xl">
           Why advertise
         </p>
 
@@ -212,7 +212,6 @@ const IScreen = () => {
               key={ids}
               className={cn(
                 "space-y-2 rounded-2xl border border-[#ffc106] bg-[#faf6eb] p-5",
-                ids % 2 === 0 ? "text-start" : "text-end",
               )}
             >
               <p className="font-poppins text-lg font-bold text-[#ffc106] lg:text-2xl">
