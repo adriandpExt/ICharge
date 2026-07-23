@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { IIScreenProduct } from "../type";
 import { Dialog, DialogContent } from "@/components/dialog/Dialog";
 import { Separator } from "@radix-ui/react-separator";
+import { t } from "i18next";
+import LocalizationKey from "@/i18n/key";
 
 export const ProductModal = (props: {
   item: IIScreenProduct;
@@ -41,7 +43,7 @@ export const ProductModal = (props: {
             </h1>
 
             <h2 className="font-poppins font-semibold text-white">
-              {item.desc}
+              {t(item.desc)}
             </h2>
           </div>
 
@@ -49,19 +51,19 @@ export const ProductModal = (props: {
 
           <div className="hidden space-y-3 text-start lg:block">
             <p className="font-poppins text-white">
-              <span className="font-poppins font-bold text-white">Height:</span>{" "}
+              <span className="font-poppins font-bold text-white">{t(LocalizationKey.iScreen.productOverview.productOverviewHeight)}:</span>{" "}
               {item.specs.height}
             </p>
 
             <p className="font-poppins text-white">
-              <span className="font-poppins font-bold text-white">Width:</span>{" "}
+              <span className="font-poppins font-bold text-white">{t(LocalizationKey.iScreen.productOverview.productOverviewWidth)}:</span>{" "}
               {item.specs.width}
             </p>
 
             <ul className="list-inside list-disc">
               {item.specs.supportedFormats.map((item, ids) => (
                 <li key={ids} className="font-poppins text-white">
-                  {item}
+                  {t(item)}
                 </li>
               ))}
             </ul>

@@ -1,7 +1,6 @@
 import { Banner, PageContainer } from "@/components";
 import { cn } from "@/lib/utils";
 
-import { t } from "i18next";
 import LocalizationKey from "@/i18n/key";
 import {
   benefitsForAdvertisers,
@@ -28,6 +27,7 @@ import { IIScreenProduct } from "./type";
 import { ProductItem } from "./components";
 import { ProductModal } from "./components/ProductModal";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const IScreen = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -35,6 +35,7 @@ const IScreen = () => {
   const [modalContent, setModalContent] = useState<IIScreenProduct | null>(
     null,
   );
+  const { t } = useTranslation();
 
   const carouselApiInit = (api: CarouselApi) => {
     if (!api) return;
@@ -93,13 +94,13 @@ const IScreen = () => {
             variant={"custombutton"}
             className="bg-white text-[#ffc106] hover:bg-[#ffc106] hover:text-white"
           >
-            Download the brochure here
+            {t(LocalizationKey.iScreen.downloadButton)}
           </Button>
         </div>
       </Banner>
 
       <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-4xl text-transparent md:text-5xl lg:text-7xl">
-        About
+        {t(LocalizationKey.iScreen.about.aboutTitle)}
       </p>
 
       <img src={iScreenMobileSample} className="w-full xl:hidden mt-10" />
@@ -114,9 +115,9 @@ const IScreen = () => {
           <CardContent className="flex flex-col justify-center space-y-5 p-5 xl:w-3/5">
             <p className="font-poppins text-sm lg:text-xl">
               <span className="font-poppins font-bold">
-                {t(iScreenDetails.title).split("\n")[1]}
+                {t(iScreenDetails.title)}
               </span>{" "}
-              {iScreenDetails.text.split("\n")[0]}
+              {t(iScreenDetails.text).split("\n")[0]}
             </p>
 
             <p className="font-poppins text-sm lg:text-xl">
@@ -125,13 +126,13 @@ const IScreen = () => {
 
             <div className="space-y-2">
               <p className="font-poppins text-sm font-bold lg:text-xl">
-                Key features:
+                {t(LocalizationKey.iScreen.about.aboutKeyFeatures.keyFeaturesTitle)}
               </p>
 
               <ul className="list-inside list-disc text-sm lg:text-xl">
                 {iScreenDetails.keyFeatures.map((item, ids) => (
                   <li key={ids} className="font-poppins">
-                    {item}
+                    {t(item)}
                   </li>
                 ))}
               </ul>
@@ -142,11 +143,11 @@ const IScreen = () => {
 
       <PageContainer className="space-y-7">
         <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-4xl text-transparent md:text-5xl lg:text-7xl">
-          Product Overview
+          {t(LocalizationKey.iScreen.productOverview.productOverviewTitle)}
         </p>
 
         <p className="font-poppins text-sm lg:text-xl">
-          {productOverview.flavorText}
+          {t(productOverview.flavorText)}
         </p>
 
         <Carousel
@@ -196,14 +197,11 @@ const IScreen = () => {
 
       <PageContainer className="space-y-7">
         <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-4xl text-transparent md:text-5xl lg:text-7xl">
-          Why advertise
+          {t(LocalizationKey.iScreen.whyAdvertise.whyAdvertiseTitle)}
         </p>
 
         <p className="font-poppins text-sm lg:text-xl">
-          Partner with iScreen Media Network and connect your brand with
-          consumers in the moments that matter. We invite brands, agencies, and
-          strategic partners to explore innovative digital advertising
-          opportunities.
+          {t(LocalizationKey.iScreen.whyAdvertise.whyAdvertiseFlavorText)}
         </p>
 
         <div className="space-y-5">
@@ -215,17 +213,17 @@ const IScreen = () => {
               )}
             >
               <p className="font-poppins text-lg font-bold text-[#ffc106] lg:text-2xl">
-                {item.title}
+                {t(item.title)}
               </p>
 
-              <p className="font-poppins text-sm lg:text-xl">{item.desc}</p>
+              <p className="font-poppins text-sm lg:text-xl">{t(item.desc)}</p>
             </div>
           ))}
         </div>
 
         <div className="rounded-2xl border border-[#ffc106] bg-[#faf6eb] p-5 text-center">
           <p className="font-poppins text-lg font-bold text-[#ffc106] lg:text-2xl">
-            Benefits for advertisers
+            {t(LocalizationKey.iScreen.benefitsForAdvertisers.benefitsForAdvertisersTitle)}
           </p>
 
           <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -239,7 +237,7 @@ const IScreen = () => {
                     className="rounded-full bg-[#ffc106] p-2 text-white"
                   />
 
-                  <p className="font-poppins text-sm lg:text-xl">{item.text}</p>
+                  <p className="font-poppins text-sm lg:text-xl">{t(item.text)}</p>
                 </div>
               );
             })}

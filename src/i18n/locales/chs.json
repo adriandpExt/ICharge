@@ -344,6 +344,185 @@
     }
   },
 
+  "iScreen": {
+    "brand": {
+      "label": "iScreen"
+    },
+    "downloadButton": {
+      "label": "在这里下载小册子"
+    },
+    "about": {
+      "aboutTitle": {
+        "label": "关于"
+      },
+      "aboutText": {
+        "label": "这是一个现代数字媒体网络，无缝集成到 iCharge 充电站中——通过精心设计的高端商业空间，将日常时刻转化为精致的品牌体验，旨在吸引注意力、提升可见度并创造持久的印象。\n\n我们将品牌定位在暂停的时刻，让企业能够以自然、吸引人且提升的方式与受众建立联系——在他们最专注、放松和乐于接受的时候。"
+      },
+      "aboutKeyFeatures": {
+        "keyFeaturesTitle": {
+          "label": "主要功能："
+        },
+        "keyFeatureOne": {
+          "label": "智能充电站内的集成数字电子显示屏"
+        },
+        "keyFeatureTwo": {
+          "label": "精心布置在高人流量环境中"
+        },
+        "keyFeatureThree": {
+          "label": "无缝连续的广告播放"
+        },
+        "keyFeatureFour": {
+          "label": "扩大全国网络以提升高端品牌知名度"
+        }
+      }
+    },
+    "productOverview": {
+      "productOverviewTitle": {
+        "label": "产品概述"
+      },
+      "flavorText" :{
+        "label": "每個廣告連續播放10到15秒。 支持的格式包括MP4 (10-20MB)和(JPG, WEBP, PNG)圖片，iScreen Pro和iScreen Max的總文件大小最多可達200MB，而iScreen Pro Max的總文件大小最多可達700兆字節。 廣告至少每2分鐘展示一次（根據系統性能而定），提供大約每小時30到300次的高頻曝光，以實現強大的可見性和穩定的觀衆參與度。"
+      },
+      "height": {
+        "label": "高度"
+      },
+      "width": {
+        "label": "宽度"
+      },
+      "products": {
+        "proOne": {
+          "desc": {
+            "label": "租赁点广告的专业标准"
+          },
+          "formats": {
+            "video": {
+              "label": "视频: MP4 (10MB - 20MB)"
+            },
+            "image": {
+              "label": "图像: .jpg, .webp, .png"
+            },
+            "fileCapacity": {
+              "label": "文件容量: 200MB"
+            }
+          }
+        },
+        "proTwo": {
+          "desc": {
+            "label": "租赁点广告的专业标准"
+          },
+          "formats": {
+            "video": {
+              "label": "视频: MP4 (10MB - 20MB)"
+            },
+            "image": {
+              "label": "图像: .jpg, .webp, .png"
+            },
+            "fileCapacity": {
+              "label": "文件容量: 200MB"
+            }
+          }
+        },
+        "max": {
+          "desc": {
+            "label": "高流量可见性的最大屏幕空间"
+          },
+          "formats": {
+            "video": {
+              "label": "视频: MP4 (10MB - 20MB)"
+            },
+            "image": {
+              "label": "图像: .jpg, .webp, .png"
+            },
+            "fileCapacity": {
+              "label": "文件容量: 200MB"
+            }
+          }
+        },
+        "proMax": {
+          "desc": {
+            "label": "充电生态系统的巅峰——超影响"
+          },
+          "formats": {
+            "video": {
+              "label": "视频: MP4 (10MB - 20MB)"
+            },
+            "image": {
+              "label": "图像: .jpg, .webp, .png"
+            },
+            "fileCapacity": {
+              "label": "文件容量: 700MB"
+            }
+          }
+        }
+      }
+    },
+    "whyAdvertise": {
+      "whyAdvertiseTitle": {
+        "label": "为什么要做广告"
+      },
+      "whyAdvertiseFlavorText": {
+        "label": "与 iScreen Media Network 合作，在关键时刻将您的品牌与消费者连接起来。 我们邀请品牌、机构和战略合作伙伴探索创新的数字广告机会。"
+      },
+      "whyAdvertiseOne": {
+        "title": {
+          "label": "位于高流量区域，确保您的品牌每天都能被看到"
+        },
+        "desc": {
+          "label": "战略性地位于商场、航站楼、医院、便利店等场所，这里人们经常光顾，品牌也因此脱颖而出。"
+        }
+      },
+      "whyAdvertiseTwo": {
+        "title": {
+          "label": "客户租赁电源银行"
+        },
+        "desc": {
+          "label": "一个客户重视并使用的实用解决方案——从一开始就与您的品牌建立积极的联系。"
+        }
+      },
+      "whyAdvertiseThree": {
+        "title": {
+          "label": "广告在屏幕上持续播放"
+        },
+        "desc": {
+          "label": "您的广告在高可见度的数字屏幕上循环播放——在充电时刻吸引注意力。"
+        }
+      },
+      "whyAdvertiseFour": {
+        "title": {
+          "label": "广告商投资于受众覆盖和可见度"
+        },
+        "desc": {
+          "label": "在正确的时间，在正确的地方与真实的人建立联系——最大化您品牌的可见度和影响。"
+        }
+      },
+      "whyAdvertiseFive": {
+        "title": {
+          "label": "提升品牌意识"
+        },
+        "desc": {
+          "label": "通过在日常高流量环境中持续曝光，建立更强的品牌认知和信任。"
+        }
+      }
+    },
+    "benefitsForAdvertisers": {
+      "benefitsForAdvertisersTitle": {
+        "label": "广告商的好处"
+      },
+      "benefitOne": {
+        "label": "接触被俘且专注的听众"
+      },
+      "benefitTwo": {
+        "label": "通过反复接触增加召回率"
+      },
+      "benefitThree": {
+        "label": "灵活且动态的数字内容分发"
+      },
+      "benefitFour": {
+        "label": "更接近决策点的影响"
+      }
+    }
+  },
+
   "partnerWithUs": {
     "partnerWithUsHeading": {
       "label": "增强您的业务能力"
