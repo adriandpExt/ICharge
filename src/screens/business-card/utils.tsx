@@ -27,7 +27,7 @@ export const businessCardThemes = {
     bodyBg: "bg-[url('@/assets/businessCard/social_bg.svg')]",
     headerTextColor:
       "bg-gradient-to-r from-[#fff] to-[#44D62C] bg-clip-text text-[23px]",
-    headerBgColor: "bg-gradient-to-b from-[#044F00] to-[#078E00]",
+    headerBgColor: "bg-[#21B619]",
   },
 };
 
@@ -273,6 +273,10 @@ export const businessCardInfo: ICardInfo[] = [
     img: ICharge,
     buttonContent: [
       {
+        link: "/",
+        label: "Visit our website",
+      },
+      {
         buttonType: "Viber",
         link: "639187388888",
       },
@@ -280,10 +284,7 @@ export const businessCardInfo: ICardInfo[] = [
         buttonType: "Email",
         link: "reachus@icharge.com.ph",
       },
-      {
-        link: "/",
-        label: "Visit our website",
-      },
+
       {
         link: "/how-to",
         label: "How to use iCharge",
@@ -320,16 +321,16 @@ export const businessCardInfo: ICardInfo[] = [
     cardType: "i-screen",
     buttonContent: [
       {
+        link: "/iscreen",
+        label: "Visit our website",
+      },
+      {
         buttonType: "Viber",
         link: "639856107777",
       },
       {
         buttonType: "Email",
         link: "iscreen@icharge.com.ph",
-      },
-      {
-        link: "/iscreen",
-        label: "View our brochure",
       },
       {
         icon: "ic_facebook",

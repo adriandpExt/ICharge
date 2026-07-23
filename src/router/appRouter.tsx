@@ -31,7 +31,7 @@ const router: RouteObject[] = [
         element: <Home />,
       },
       { path: "how-to", element: <HowToUse /> },
-      { path: "icharge-solution", element: <Partners /> },
+      { path: "icharge-solution", element: <Services /> },
       { path: "iscreen", element: <IScreen /> },
       { path: "about", element: <About /> },
       { path: "contact-us", element: <>Contact us</> },
