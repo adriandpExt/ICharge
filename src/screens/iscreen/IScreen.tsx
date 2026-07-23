@@ -9,8 +9,7 @@ import {
   whyAdvertise,
 } from "./utils";
 
-import iScreenSample from "@/assets/about/SummaryImages/proprietary.png";
-import iScreenMobileSample from "@/assets/about/SummaryImages/proprietary_mobile.png";
+import iScreenSample from "@/assets/iscreen/iScreen-about.jpeg";
 import Pdf from "@/assets/iscreen/iScreen-Brochure.pdf";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -103,13 +102,13 @@ const IScreen = () => {
         {t(LocalizationKey.iScreen.about.aboutTitle)}
       </p>
 
-      <img src={iScreenMobileSample} className="w-full xl:hidden mt-10" />
+      <img src={iScreenSample} className="mt-10 w-full xl:hidden" />
 
       <PageContainer className="space-y-7">
-        <Card className="-mt-10 rounded-2xl border-none from-[#fde396] via-[#fcefc7] to-[#fff7df] shadow-none lg:bg-gradient-to-b lg:shadow xl:flex">
+        <Card className="-mt-10 rounded-2xl border-[#ffc106] from-[#fde396] via-[#fcefc7] to-[#fff7df] shadow-none lg:bg-gradient-to-b lg:shadow xl:flex">
           <img
             src={iScreenSample}
-            className="hidden h-full rounded-l-2xl xl:block"
+            className="hidden w-1/2 rounded-l-2xl xl:block"
           />
 
           <CardContent className="flex flex-col justify-center space-y-5 p-5 xl:w-3/5">
@@ -126,7 +125,10 @@ const IScreen = () => {
 
             <div className="space-y-2">
               <p className="font-poppins text-sm font-bold lg:text-xl">
-                {t(LocalizationKey.iScreen.about.aboutKeyFeatures.keyFeaturesTitle)}
+                {t(
+                  LocalizationKey.iScreen.about.aboutKeyFeatures
+                    .keyFeaturesTitle,
+                )}
               </p>
 
               <ul className="list-inside list-disc text-sm lg:text-xl">
@@ -223,7 +225,10 @@ const IScreen = () => {
 
         <div className="rounded-2xl border border-[#ffc106] bg-[#faf6eb] p-5 text-center">
           <p className="font-poppins text-lg font-bold text-[#ffc106] lg:text-2xl">
-            {t(LocalizationKey.iScreen.benefitsForAdvertisers.benefitsForAdvertisersTitle)}
+            {t(
+              LocalizationKey.iScreen.benefitsForAdvertisers
+                .benefitsForAdvertisersTitle,
+            )}
           </p>
 
           <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -237,7 +242,9 @@ const IScreen = () => {
                     className="rounded-full bg-[#ffc106] p-2 text-white"
                   />
 
-                  <p className="font-poppins text-sm lg:text-xl">{t(item.text)}</p>
+                  <p className="font-poppins text-sm lg:text-xl">
+                    {t(item.text)}
+                  </p>
                 </div>
               );
             })}
