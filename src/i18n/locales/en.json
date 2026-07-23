@@ -102,12 +102,20 @@
   "navigation": {
     "howTo": {
       "label": "How to use"
-    }, 
-    "partnerwithUs": {
-      "label": "Partner with Us"
     },
-    "services": {
-      "label": "Services"
+    "solutions": {
+      "solution": {
+        "label": "Solutions"
+      },
+      "ichargeSolution": {
+        "label": "ICharge Solution"
+      },
+      "iscreenSolution": {
+        "label": "IScreen Solution"
+      }
+    },
+    "contactUs": {
+      "label": "Contact Us"
     },
     "about": {
       "label": "About"

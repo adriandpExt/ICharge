@@ -103,11 +103,19 @@
     "howTo": {
       "label": "如何使用"
     },
-    "partnerwithUs": {
-      "label": "与我们合作"
+    "solutions": {
+      "solution": {
+        "label": "解决方案"
+      },
+      "ichargeSolution": {
+        "label": "ICharge 解決方案"
+      },
+      "iscreenSolution": {
+        "label": "IScreen 解決方案"
+      }
     },
-    "services": {
-      "label": "服务"
+    "contactUs": {
+      "label": "聯絡我們"
     },
     "about": {
       "label": "关于"
