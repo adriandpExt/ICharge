@@ -111,17 +111,15 @@ const IScreen = () => {
             className="hidden w-1/2 rounded-l-2xl xl:block"
           />
 
-          <CardContent className="flex flex-col justify-center space-y-5 p-5 xl:w-3/5">
-            <p className="font-poppins text-sm lg:text-xl">
+          <CardContent className="flex flex-col justify-evenly space-y-5 p-5 xl:w-3/5">
+            <p className="font-poppins text-sm lg:text-xl text-justify">
               <span className="font-poppins font-bold">
                 {t(iScreenDetails.title)}
               </span>{" "}
               {t(iScreenDetails.text).split("\n")[0]}
             </p>
 
-            <p className="font-poppins text-sm lg:text-xl">
-              {iScreenDetails.text.split("\n")[2]}
-            </p>
+            <p className="font-poppins text-sm lg:text-xl text-justify">{t(iScreenDetails.text).split("\n")[2]}</p>
 
             <div className="space-y-2">
               <p className="font-poppins text-sm font-bold lg:text-xl">

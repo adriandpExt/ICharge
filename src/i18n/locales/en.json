@@ -27,19 +27,19 @@
       "label": "Convenience"
     },
     "conveniencedesc": {
-      "label": "Offering rentable power banks enhances the convenience of your location, which can lead to increased foot traffic, longer and frequent visits."
+      "label": "Offering rentable power banks enhances the convenience of your location, leading to increased foot traffic, longer customer stays, and more frequent visits."
     },
     "costEffective": {
       "label": "Cost-effective"
     },
     "costEffectivedesc": {
-      "label": "At a very low cost of P29.00 per 30 minutes, patrons will be encouraged to stay longer and enjoy more of what your venue hast to offer, thereby boosting overall customer satisfaction."
+      "label": "At just ₱29.00 for 30 minutes, customers can conveniently keep their devices charged while enjoying everything your venue has to offer. This encourages longer stays, enhances their overall experience, and increases customer satisfaction"
     },
     "flexible": {
-      "label": "Flexible"
+      "label": "Versatile"
     },
     "flexibledesc": {
-      "label": "iCharge works to effortlessly and seamlessly integrate with a wide range of businesses and venues, offering reliable and flexible support no matter the location."
+      "label": "iCharge seamlessly integrates with a wide range of businesses and venues, providing a reliable charging solution tailored to different industries and customer environments."
     },
     "WeOfferServices": {
       "label": "WE OFFER SERVICES THAT FITS YOUR NEEDS"
@@ -66,25 +66,25 @@
       "label": "Scan"
     },
     "scanDescription": {
-      "label": "Scan the QR code at any iCharge station to rent. Download the app."
+      "label": "Scan the QR code at any iCharge station and download the iCharge app to start your rental."
     },
     "topUp": {
       "label": "Top up"
     },
     "topUpDescription": {
-      "label": "Top up your credit using any payment method."
+      "label": "Add funds to your iCharge wallet using your preferred payment method."
     },
     "charge": {
       "label": "Charge"
     },
     "chargeDescription": {
-      "label": "Grab a power bank and charge your device anywhere."
+      "label": "Take a power bank from the station and charge your device anytime, anywhere."
     },
     "return": {
       "label": "Return"
     },
     "returnDescription": {
-      "label": "Insert the power bank into iCharge station. Pay the rental fee."
+      "label": "Return the power bank to any iCharge station and settle your rental fee."
     },
     "sectors": {
       "label": "Sectors"
@@ -373,7 +373,7 @@
         "label": "About"
       },
       "aboutText": {
-        "label": "is a modern digital media network seamlessly integrated into iCharge charging stations - transforming everyday moments into refined brand experiences through premium commercial spaces thoughtfully designed to capture attention, enhance visibility, and create lasting impressions.\n\nWe position brands within moments of pause, allowing businesses to connect with audiences in a natural, engaging, and elevated way - when they are most attentive, relaxed, and receptive."
+        "label": "is a modern digital media network seamlessly integrated into iCharge charging stations - transforming everyday moments into refined brand experiences through premium commercial spaces thoughtfully designed to capture attention, enhance visibility, and create lasting impressions. \n\nWe position brands within moments of pause, allowing businesses to connect with audiences in a natural, engaging, and elevated way - when they are most attentive, relaxed, and receptive."
       },
       "aboutKeyFeatures": {
         "keyFeaturesTitle": {
