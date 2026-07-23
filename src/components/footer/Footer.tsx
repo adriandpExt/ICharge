@@ -71,7 +71,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-green-800 to-green-700 p-6 text-white md:p-10 lg:to-[#39d431]">
+    <footer className="bg-gradient-to-t from-green-600 to-[#39d431] p-6 text-white md:p-10 lg:to-[#39d431]">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
           {renderLogo()}
