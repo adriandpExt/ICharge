@@ -4,6 +4,8 @@ import { lazy } from "react";
 import App from "@/App";
 
 import ErrorScreen from "@/screens/error-screen";
+import PartnerWithUs from "@/screens/partner-with-us";
+import ContactUs from "@/screens/contact-us";
 
 export const About = lazy(() => import("@/screens/about"));
 export const Services = lazy(() => import("@/screens/services"));
@@ -34,7 +36,8 @@ const router: RouteObject[] = [
       { path: "icharge-solution", element: <Services /> },
       { path: "iscreen", element: <IScreen /> },
       { path: "about", element: <About /> },
-      { path: "contact-us", element: <>Contact us</> },
+      { path: "contact-us", element: <ContactUs /> },
+      { path: "partner-with-us", element: <PartnerWithUs /> },
       {
         path: "faqs",
         element: <Faqs />,
