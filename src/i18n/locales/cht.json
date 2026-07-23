@@ -156,6 +156,9 @@
     "termsOfService": {
       "label": "服務條款"
     },
+    "accessWebPlatform": {
+      "label": "訪問我們的網絡平臺"
+    },
     "downloadApp": {
       "label": "下載應用程序"
     },

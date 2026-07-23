@@ -159,6 +159,9 @@
     "termsOfService": {
       "label": "Terms of Service"
     },
+    "accessWebPlatform": {
+      "label": "Access our web platform"
+    },
     "downloadApp": {
       "label": "Download the App"
     },

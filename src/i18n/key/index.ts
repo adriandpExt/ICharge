@@ -228,6 +228,7 @@ const LocalizationKey = {
     joinNewsletter: "footer.joinNewsletter.label",
     emailPlaceholder: "footer.emailPlaceholder.label",
     subscribe: "footer.subscribe.label",
+    accessWebPlatform: "footer.accessWebPlatform.label",
     downloadApp: "footer.downloadApp.label",
     googlePlay: "footer.googlePlay.label",
     appStore: "footer.appStore.label",
