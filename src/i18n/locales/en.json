@@ -112,7 +112,8 @@
       },
       "iscreenSolution": {
         "label": "IScreen Solution"
-      }
+      },
+      "socials": { "label": "Socials" }
     },
     "contactUs": {
       "label": "Contact Us"

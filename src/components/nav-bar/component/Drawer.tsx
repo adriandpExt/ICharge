@@ -64,15 +64,15 @@ export const Drawer = () => {
       icon: MessageCircleQuestion,
     },
     {
-      label: "Solutions",
+      label: t(LocalizationKey.navigation.solutions.solution),
       icon: Lightbulb,
       subChild: [
         {
-          label: "ICharge Solution",
+          label: t(LocalizationKey.navigation.solutions.ichargeSolution),
           path: "/icharge-solution",
         },
         {
-          label: "IScreen Solution",
+          label: t(LocalizationKey.navigation.solutions.iscreenSolution),
           path: "/iscreen",
         },
       ],
@@ -83,7 +83,7 @@ export const Drawer = () => {
       icon: Building2,
     },
     {
-      label: "Contact Us",
+      label: t(LocalizationKey.navigation.contactUs),
       path: "/contact-us",
       icon: Headset,
     },
@@ -197,7 +197,9 @@ export const Drawer = () => {
         <div className="no-scrollbar space-y-4 overflow-y-auto">
           <div className="flex flex-col space-y-1">{renderDrawerMenu()}</div>
           <Separator className="bg-slate-300" />
-          <Label className="font-bold">Socials</Label>
+          <Label className="font-bold">
+            {t(LocalizationKey.navigation.solutions.socials)}
+          </Label>
           <div className="flex items-center justify-evenly">{renderSvg()}</div>
         </div>
         <SheetFooter className="mt-auto flex-row justify-between">
