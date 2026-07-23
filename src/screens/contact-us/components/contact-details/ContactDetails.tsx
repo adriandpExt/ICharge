@@ -67,7 +67,7 @@ const ContactCard = ({ data }: IContactCard) => {
       >
         {title === "iCharge" ? (
           <>
-            <span className="text-[#39d431] font-poppins">i</span>
+            <span className="font-poppins text-[#39d431]">i</span>
             {title.slice(1)}
           </>
         ) : (
@@ -126,10 +126,16 @@ const ContactCard = ({ data }: IContactCard) => {
 
       <div className="flex items-center gap-5 lg:hidden">
         <MapPin size={32} strokeWidth={3} />
-        <div className="flex flex-col">
-          <Label variant={"body"}>Unit 2402 </Label>
-          <Label variant={"body"}>Trade and Financial Tower,</Label>
-          <Label variant={"body"}>7th Avenue, BGC, Taguig</Label>
+        <div className="group flex flex-col" onClick={handleOpenMap}>
+          <Label variant={"body"} className="group-hover:underline">
+            Unit 2402
+          </Label>
+          <Label variant={"body"} className="group-hover:underline">
+            Trade and Financial Tower,
+          </Label>
+          <Label variant={"body"} className="group-hover:underline">
+            7th Avenue, BGC, Taguig
+          </Label>
         </div>
       </div>
     </div>
