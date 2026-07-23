@@ -12,7 +12,7 @@ import {
 
 import iScreenSample from "@/assets/about/SummaryImages/proprietary.png";
 import iScreenMobileSample from "@/assets/about/SummaryImages/proprietary_mobile.png";
-import Pdf from "@/assets/iscreen/iScreen-pdf.pdf";
+import Pdf from "@/assets/iscreen/iScreen-Brochure.pdf";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -56,7 +56,7 @@ const IScreen = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = Pdf;
-    link.download = "iScreen-brochure.pdf";
+    link.download = "iScreen-Brochure.pdf";
     link.click();
   };
 
@@ -91,7 +91,7 @@ const IScreen = () => {
           <Button
             onClick={handleDownload}
             variant={"custombutton"}
-            className="bg-white text-green-600 hover:bg-[#ffc106] hover:text-white"
+            className="bg-white text-[#ffc106] hover:bg-[#ffc106] hover:text-white"
           >
             Download the brochure here
           </Button>
