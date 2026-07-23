@@ -28,8 +28,6 @@ export const Footer = () => {
   const links = {
     company: [
       { label: t(LocalizationKey.navigation.howTo), path: "how-to" },
-      { label: t(LocalizationKey.navigation.partnerwithUs), path: "partner" },
-      { label: t(LocalizationKey.navigation.services), path: "/services" },
       { label: "iScreen", path: "/iscreen" },
       { label: t(LocalizationKey.navigation.about), path: "/about" },
       { label: t(LocalizationKey.navigation.faqs), path: "/faqs" },
@@ -61,7 +59,7 @@ export const Footer = () => {
 
   const renderLogo = () => {
     return (
-      <div className="row-span-2 place-items-center md:row-span-1 lg:flex lg:justify-start place-content-center">
+      <div className="row-span-2 place-content-center place-items-center md:row-span-1 lg:flex lg:justify-start">
         <div className="ml-3 flex justify-center lg:hidden">
           <SvgIcons name="ic_footer_logo" size={200} />
         </div>
