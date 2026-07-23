@@ -64,7 +64,7 @@ export const NavBar = () => {
       path: "/about",
     },
     {
-      label: "Contact Us",
+      label: t(LocalizationKey.navigation.contactUs),
       path: "/contact-us",
     },
   ];
