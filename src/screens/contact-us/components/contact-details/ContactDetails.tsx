@@ -31,7 +31,7 @@ const ContactCard = ({ data }: IContactCard) => {
     title,
   } = data;
   const handleViber = () => {
-    window.open(`viber://chat?number=${viber}`, "_blank");
+    window.open(`viber://chat?number=${phone}`, "_blank");
   };
   const handleCall = () => {
     window.location.href = `tel:${phone}`;
@@ -58,7 +58,7 @@ const ContactCard = ({ data }: IContactCard) => {
     <div
       className={cn(
         "flex flex-col items-start justify-center gap-8 p-10",
-        data.title === "iCharge"
+        title === "iCharge"
           ? "bg-gradient-to-b from-[#15803d] from-5% via-[#39d431] to-[#39d431] text-white"
           : "bg-gradient-to-b from-[#fde396] from-20% via-[#fcefc7] to-[#fcefc7] text-black",
       )}
@@ -83,7 +83,7 @@ const ContactCard = ({ data }: IContactCard) => {
       <Label className="text-center">{subTitle}</Label>
 
       <Separator
-        className={cn(data.title === "iCharge" ? "bg-white" : "bg-black")}
+        className={cn(title === "iCharge" ? "bg-white" : "bg-black")}
       />
       <Label
         variant={"body"}
@@ -92,17 +92,17 @@ const ContactCard = ({ data }: IContactCard) => {
       >
         <SvgIcons
           name="ic_viber"
-          color={data.title === "iCharge" ? "white" : "black"}
+          color={title === "iCharge" ? "white" : "black"}
           size={35}
         />
-        {data.contact.viber}
+        {viber}
       </Label>
       <Label
         variant={"body"}
         className="flex cursor-pointer items-center gap-5 hover:underline"
         onClick={handleCall}
       >
-        <Phone size={32} strokeWidth={3} /> +{data.contact.phone}
+        <Phone size={32} strokeWidth={3} /> +{phone}
       </Label>
 
       <div className="flex cursor-pointer items-center gap-5">
