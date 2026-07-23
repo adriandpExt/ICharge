@@ -15,6 +15,7 @@ import Products8Plus from "@/assets/Products/products/icharge8Plus.png";
 import Products8 from "@/assets/Products/products/icharge8.png";
 import Products6 from "@/assets/Products/products/icharge6.png";
 import Products24Max from "@/assets/Products/products/ichargeMax.png";
+import ProductsProMax from "@/assets/Products/products/iChargeProMax.png";
 
 import sectorHospitality from "@/assets/sectors/sectorHospitality.jpg";
 import sectorHealthCare from "@/assets/sectors/sectorHealthcare.jpg";
@@ -138,6 +139,19 @@ export const useServices = () => {
         description: t(LocalizationKey.services.icharge24maxdesc),
         image: Products24Max,
         seatCapacity: t(LocalizationKey.services.icharge24maxdesc2),
+      },
+      productDescriptions: {
+        wattage: { fullLoad: "160W", standBy: "24.2W" },
+        dimensions: { h: "1650mm", l: "540mm", w: "450mm" },
+        content: { code: "QI-Max", slots: "24", powerbanks: "16" },
+      },
+    },
+    {
+      productDetails: {
+        name: "iCharge Pro Max",
+        description: t(LocalizationKey.services.ichargepromaxdesc),
+        image: ProductsProMax,
+        seatCapacity: t(LocalizationKey.services.ichargepromaxdesc2),
       },
       productDescriptions: {
         wattage: { fullLoad: "160W", standBy: "24.2W" },

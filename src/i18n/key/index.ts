@@ -331,6 +331,8 @@ const LocalizationKey = {
     icharge12prodesc2: "services.icharge12prodesc2.label",
     icharge24maxdesc: "services.icharge24maxdesc.label",
     icharge24maxdesc2: "services.icharge24maxdesc2.label",
+    ichargepromaxdesc: "services.ichargepromaxdesc.label",
+    ichargepromaxdesc2: "services.ichargepromaxdesc2.label",
     icharge48promaxdesc: "services.icharge48promaxdesc.label",
     icharge48promaxdesc2: "services.icharge48promaxdesc2.label",
     ichargestandeedesc: "services.ichargestandeedesc.label",

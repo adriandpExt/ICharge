@@ -798,6 +798,12 @@
     "icharge24maxdesc2": {
       "label": "Seat Capacity: Shopping malls, Big lobbies, Ballrooms"
     },
+    "ichargepromaxdesc": {
+      "label": "The pinnacle of the iCharge ecosystem - Ultra impact"
+    },
+    "ichargepromaxdesc2": {
+      "label": "Seat Capacity: Shopping malls, Big lobbies, Ballrooms"
+    },
     "icharge48promaxdesc": {
       "label": "High capacity with extensive advertisement space"
     },
