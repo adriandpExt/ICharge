@@ -62,7 +62,7 @@ const IScreen = () => {
 
   return (
     <>
-      <Banner title="">
+      <Banner title="" backgroundColor="#ffc106">
         <div className="space-y-7">
           <div>
             <p
@@ -96,22 +96,22 @@ const IScreen = () => {
       </Banner>
 
       <PageContainer className="space-y-7">
-        <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
           About
         </p>
 
-        <Card className="rounded-2xl border-none bg-gradient-to-b from-[#fde396] via-[#fcefc7] to-[#fff7df] lg:flex">
+        <Card className="rounded-2xl border-none bg-gradient-to-b from-[#fde396] via-[#fcefc7] to-[#fff7df] xl:flex">
           <img
             src={iScreenSample}
-            className="hidden h-full w-1/3 rounded-l-2xl lg:block"
+            className="hidden h-full rounded-l-2xl xl:block"
           />
 
           <img
             src={iScreenMobileSample}
-            className="w-full rounded-t-2xl lg:hidden"
+            className="w-full rounded-t-2xl xl:hidden"
           />
 
-          <CardContent className="flex flex-col space-y-5 p-10 lg:w-3/5">
+          <CardContent className="flex flex-col space-y-5 p-10 xl:w-3/5">
             <p className="font-poppins text-sm lg:text-xl">
               <span className="font-poppins font-bold">
                 {t(iScreenDetails.title).split("\n")[1]}
@@ -141,7 +141,7 @@ const IScreen = () => {
       </PageContainer>
 
       <PageContainer className="space-y-7">
-        <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
           Product Overview
         </p>
 
@@ -167,15 +167,15 @@ const IScreen = () => {
 
           <CarouselPrevious
             className={cn(
-              "custom-lg:flex hidden aspect-square scale-150 rounded-e-none text-green-500 hover:text-green-200",
-              "border-[#D1F9C9] bg-[#E0EFDF]",
+              "custom-lg:flex hidden aspect-square scale-150 rounded-e-none text-[#ffc106] hover:text-[#fadd88]",
+              "border-[#ffc106] bg-[#faf6eb]",
             )}
           />
 
           <CarouselNext
             className={cn(
-              "custom-lg:flex hidden aspect-square scale-150 rounded-s-none text-green-500 hover:text-green-200",
-              "border-[#D1F9C9] bg-[#E0EFDF]",
+              "custom-lg:flex hidden aspect-square scale-150 rounded-s-none text-[#ffc106] hover:text-[#fadd88]",
+              "border-[#ffc106] bg-[#faf6eb]",
             )}
           />
         </Carousel>
@@ -185,7 +185,7 @@ const IScreen = () => {
             <div
               key={index}
               className={cn(
-                "mx-2 size-3 rounded-full bg-green-500",
+                "mx-2 size-3 rounded-full bg-[#ffc106]",
                 currentIndex === index ? "bg-opacity-100" : "bg-opacity-25",
               )}
               onClick={() => api?.scrollTo(index)}
@@ -195,7 +195,7 @@ const IScreen = () => {
       </PageContainer>
 
       <PageContainer className="space-y-7">
-        <p className="bg-gradient-to-b from-green-900 to-green-600 bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
+        <p className="bg-gradient-to-b from-[#ffc106] to-[#fadd88] bg-clip-text text-center font-staatliches text-5xl text-transparent md:text-6xl lg:text-8xl">
           Why advertise
         </p>
 
