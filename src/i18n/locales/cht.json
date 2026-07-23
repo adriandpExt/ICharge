@@ -393,7 +393,7 @@
         "label": "產品概述"
       },
       "flavorText" :{
-        "label": "每個廣告連續播放10到15秒。 支持的格式包括MP4 (10-20MB)和 (JPG, WEBP, PNG)，iScreen ProiScreen Max和 iScreen Pro Max的總文件大小可達200MB，700MB。 廣告至少每2分鐘展示一次（根據系統性能而定），提供大約每小時30到300次的高頻曝光，以實現強大的可見性和穩定的觀衆參與度。"
+        "label": "每個廣告連續播放10秒。 支持的格式包括MP4 (10-20MB)和(JPG, WEBP, PNG圖片，iScreen Pro和iScreen Max的總文件大小可達200兆字節，iScreen Pro Max700MB。 廣告至少每2分鐘展示一次（根據系統性能而定），提供大約每小時30到300次的高頻曝光，以實現強大的可見性和穩定的觀衆參與度。"
       },
       "height": {
         "label": "高額"
@@ -420,7 +420,7 @@
         },
         "proTwo": {
           "desc": {
-            "label": "租賃點廣告的專業標準"
+            "label": "高級。 強大的。 可靠。"
           },
           "formats": {
             "video": {

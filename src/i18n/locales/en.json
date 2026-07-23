@@ -398,7 +398,7 @@
         "label": "Product Overview"
       },
       "flavorText" :{
-        "label": "Each ad runs for 10-15 seconds in a continuous loop. Supported formats include MP4 (10-20MB) and images (JPG, WEBP, PNG), with a total file size of up to 200MB for iScreen Pro and iScreen Max, and up to 700MB for iScreen Pro Max. Ads are shown at least once every 2 minutes (depending on system performance), delivering high-frequency exposure of around 30-300 plays per hour for strong visibility and consistent audience engagement."
+        "label": "Each ad runs for 10 seconds in a continuous loop. Supported formats include MP4 (10-20MB) and images (JPG, WEBP, PNG), with a total file size of up to 200MB for iScreen Pro and iScreen Max, and up to 700MB for iScreen Pro Max. Ads are shown at least once every 2 minutes (depending on system performance), delivering high-frequency exposure of around 30-300 plays per hour for strong visibility and consistent audience engagement."
       },
       "height": {
         "label": "Height"
@@ -425,7 +425,7 @@
         },
         "proTwo": {
           "desc": {
-            "label": "The professional standard for point-of-rental advertising"
+            "label": "Advanced. Powerful. Reliable."
           },
           "formats": {
             "video": {
