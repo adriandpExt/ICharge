@@ -9,6 +9,8 @@ import SectionItem from "./SectionItem";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { followUs } from "./utils";
 
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   const { t } = useTranslation();
 
@@ -59,7 +61,7 @@ export const Footer = () => {
 
   const renderLogo = () => {
     return (
-      <div className="row-span-2 place-items-center md:row-span-1 lg:flex lg:justify-start">
+      <div className="row-span-2 place-items-center md:row-span-1 lg:flex lg:justify-start place-content-center">
         <div className="ml-3 flex justify-center lg:hidden">
           <SvgIcons name="ic_footer_logo" size={200} />
         </div>
@@ -77,11 +79,26 @@ export const Footer = () => {
           {renderLogo()}
 
           <div className="flex md:justify-center lg:justify-normal">
-            <SectionItem
-              links={links.platform}
-              title={t(LocalizationKey.footer.downloadApp)}
-            />
+            <div className="space-y-5 lg:space-y-10">
+              <div className="space-y-1 text-start">
+                <p className="text-md mb-1 font-poppins font-semibold md:text-xl">
+                  Access our web platform
+                </p>
+
+                <Link to={links.platform[0].path}>
+                  <Label className="font-light">
+                    {links.platform[0].label}
+                  </Label>
+                </Link>
+              </div>
+
+              <SectionItem
+                links={links.platform.filter((i) => i.label !== "Web")}
+                title={t(LocalizationKey.footer.downloadApp)}
+              />
+            </div>
           </div>
+
           <div className="col-start-2 flex md:col-start-3 md:justify-center lg:justify-normal">
             <SectionItem
               links={links.company}
@@ -89,6 +106,7 @@ export const Footer = () => {
               onClick={handleClick}
             />
           </div>
+
           <div className="hidden lg:block">
             <SocialLinks />
           </div>

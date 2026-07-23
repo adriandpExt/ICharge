@@ -311,7 +311,7 @@ export const businessCardInfo: ICardInfo[] = [
       },
       {
         link: "/iscreen",
-        label: "View our brochure",
+        label: "Visit our website",
       },
     ],
   },
