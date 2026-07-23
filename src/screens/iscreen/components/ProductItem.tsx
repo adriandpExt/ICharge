@@ -11,10 +11,10 @@ export const ProductItem = (props: {
   const { data, onClick } = props;
 
   return (
-    <div className="flex h-[30rem] flex-col place-content-center items-center rounded-[3rem] border-none text-center md:w-[23rem]">
+    <div className="flex h-[30rem] flex-col place-content-center items-center rounded-2xl border-none text-center md:w-[23rem]">
       <div
         className={cn(
-          "absolute -z-40 h-[30rem] w-[95%] rounded-[3rem] p-5 md:w-[23rem]",
+          "absolute -z-40 h-[30rem] w-[95%] rounded-2xl p-5 md:w-[23rem]",
           "border-0 bg-[#fde396]",
         )}
         style={{
@@ -27,7 +27,7 @@ export const ProductItem = (props: {
 
       <div
         className={cn(
-          "absolute -z-50 h-[28rem] w-[95%] rounded-[4rem] shadow-md md:w-[23rem] md:rounded-[3rem]",
+          "absolute -z-50 h-[28rem] w-[95%] rounded-2xl shadow-md md:w-[23rem] md:rounded-2xl",
           "bg-[#fcefc7]",
         )}
         style={{
