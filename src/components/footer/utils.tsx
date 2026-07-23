@@ -15,20 +15,13 @@ export const followUs = [
     icon: "ic_tiktok",
   },
   {
-    path: "https://www.tiktok.com/@icharge_ph",
+    path: "viber://chat?number=639187388888",
 
     icon: "ic_viber",
   },
   {
-    path: "https://www.tiktok.com/@icharge_ph",
+    path: "https://www.linkedin.com/company/official-icharge/",
 
     icon: "ic_linkedin",
-  },
-];
-
-export const bottomLinks = [
-  {
-    path: "/terms-and-conditions",
-    label: "Terms",
   },
 ];

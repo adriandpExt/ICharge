@@ -27,10 +27,15 @@ export const NavBar = () => {
   const location = useLocation();
   const isScroll = useScroll(window.innerHeight);
 
-  const footerClass =
-    location.pathname === "/terms-and-conditions"
-      ? "bg-gradient-to-t from-[#055c00] to-[#022700]"
-      : null;
+  const getHeaderBg = () => {
+    if (location.pathname === "/iscreen") return "bg-[#fadd88]";
+    if (location.pathname !== "/") return "bg-[#21B619]";
+    if (isScroll) return "bg-[#21B619]";
+
+    return "lg:bg-transparent";
+  };
+
+  const headerBgClass = getHeaderBg();
 
   const handleBackHome = () => {
     return navigate("/");
@@ -71,29 +76,25 @@ export const NavBar = () => {
           const isActive = location.pathname === item.path;
 
           return item.subChild ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Button
-                  key={item.label}
-                  variant="link"
-                  className={cn(
-                    "inline-flex items-center justify-center gap-2 font-poppins text-sm font-normal focus-visible:outline-none focus-visible:ring-0",
-                    isActive &&
-                      "font-bold text-white underline underline-offset-4",
-                    isScroll ? "text-black" : "text-white",
-                  )}
-                >
-                  {item.label}
-                  <ChevronDown size={20} />
-                </Button>
+            <DropdownMenu key={item.label}>
+              <DropdownMenuTrigger
+                className={cn(
+                  "inline-flex items-center justify-center gap-2 font-poppins text-sm font-normal focus-visible:outline-none focus-visible:ring-0",
+                  isActive &&
+                    "font-bold text-white underline underline-offset-4",
+                  isScroll ? "text-black" : "text-white",
+                )}
+              >
+                {item.label}
+                <ChevronDown size={20} />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 border-none bg-white">
                 {item.subChild.map((sub) => (
-                  <DropdownMenuItem className="p-0" key={sub.label}>
+                  <DropdownMenuItem asChild className="p-0" key={sub.label}>
                     <NavLink
                       to={sub.path as string}
                       className={cn(
-                        "inline-flex w-full items-center justify-start rounded-md px-4 py-2 font-poppins text-sm font-normal hover:bg-gray-100 hover:underline hover:underline-offset-4",
+                        "inline-flex w-full items-center justify-start rounded-md px-4 py-2 font-poppins text-sm font-normal hover:cursor-pointer hover:underline hover:underline-offset-4 data-[highlighted]:bg-gray-100",
                         isActive && "font-bold underline underline-offset-4",
                       )}
                     >
@@ -123,10 +124,10 @@ export const NavBar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-3xl transition-all lg:relative lg:backdrop-blur-none ${
-        isScroll &&
-        "border-b-[1px] bg-gradient-to-t from-[#055c00] to-[#022700]"
-      } ${footerClass}`}
+      className={cn(
+        "sticky top-0 z-50 mx-auto flex h-14 w-full items-center justify-between px-4 py-14 backdrop-blur-xl transition-all lg:relative lg:backdrop-blur-none",
+        headerBgClass,
+      )}
     >
       <Button variant={"icon"} onClick={handleBackHome}>
         <SvgIcons name="ic_icharge_white" size={150} />
