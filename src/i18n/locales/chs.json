@@ -112,7 +112,8 @@
       },
       "iscreenSolution": {
         "label": "IScreen 解決方案"
-      }
+      },
+      "socials": { "label": "社交媒体" }
     },
     "contactUs": {
       "label": "聯絡我們"
