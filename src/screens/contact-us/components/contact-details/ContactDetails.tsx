@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { AtSign, Mail, MapPin, Phone } from "lucide-react";
 
 import LocalizationKey from "@/i18n/key";
 
@@ -100,7 +100,12 @@ const ContactCard = ({ data }: IContactCard) => {
       </Label>
 
       <div className="flex cursor-pointer items-center gap-5">
-        <Mail size={32} strokeWidth={3} />
+        {title === "iCharge" ? (
+          <Mail size={32} strokeWidth={3} />
+        ) : (
+          <AtSign size={32} strokeWidth={3} />
+        )}
+
         <div className="flex flex-col gap-1">
           {email.map((item, index) => (
             <Label
@@ -162,13 +167,9 @@ export const ContactDetails = (): ReactElement => {
     title: "iScreen",
     subTitle: t(LocalizationKey.partnerWithUs.inquiryForm.attention),
     contact: {
-      viber: "@icharge",
-      phone: "+63 918 738 8888",
-      email: [
-        "official@icharge.com.ph",
-        "support@icharge.com.ph",
-        "reachus@icharge.com.ph",
-      ],
+      viber: "@iscreen",
+      phone: "+63 985 610 7777",
+      email: ["iscreen@icharge.com.ph", "@iscreen.official.ph", "@iscreen_ph"],
     },
   };
   return (
