@@ -25,10 +25,3 @@ export const followUs = [
     icon: "ic_linkedin",
   },
 ];
-
-export const bottomLinks = [
-  {
-    path: "/terms-and-conditions",
-    label: "Terms",
-  },
-];
