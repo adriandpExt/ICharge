@@ -160,6 +160,9 @@
     "termsOfService": {
       "label": "Terms of Service"
     },
+    "accessWebPlatform": {
+      "label": "Access our web platform"
+    },
     "downloadApp": {
       "label": "Download the App"
     },
@@ -352,6 +355,15 @@
   "iScreen": {
     "brand": {
       "label": "iScreen"
+    },
+    "mediaNetwork": {
+      "label": "Media Network" 
+    },
+    "poweredByICharge":{
+      "label": "Powered by iCharge"
+    },
+    "bannerText": {
+      "label": "Commercial Space + DOOH Advertising Solution"
     },
     "downloadButton": {
       "label": "Download the brochure here"
@@ -784,6 +796,12 @@
       "label": "High capacity with extensive advertisement space"
     },
     "icharge24maxdesc2": {
+      "label": "Seat Capacity: Shopping malls, Big lobbies, Ballrooms"
+    },
+    "ichargepromaxdesc": {
+      "label": "The pinnacle of the iCharge ecosystem - Ultra impact"
+    },
+    "ichargepromaxdesc2": {
       "label": "Seat Capacity: Shopping malls, Big lobbies, Ballrooms"
     },
     "icharge48promaxdesc": {

@@ -77,16 +77,16 @@ const IScreen = () => {
             </p>
 
             <p className="font-poppins text-2xl font-bold uppercase tracking-widest text-white">
-              Media Network
+              {t(LocalizationKey.iScreen.mediaNetwork)}
             </p>
 
             <p className="font-poppins text-sm text-white lg:text-xl">
-              Powered by iCharge
+              {t(LocalizationKey.iScreen.poweredByICharge)}
             </p>
           </div>
 
           <p className="hidden font-poppins text-4xl text-white lg:block">
-            Commercial Space + DOOH Advertising Solution
+            {t(LocalizationKey.iScreen.bannerText)}
           </p>
 
           <Button

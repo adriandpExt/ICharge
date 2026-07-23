@@ -80,7 +80,7 @@ export const Footer = () => {
             <div className="space-y-5 lg:space-y-10">
               <div className="space-y-1 text-start">
                 <p className="text-md mb-1 font-poppins font-semibold md:text-xl">
-                  Access our web platform
+                  {t(LocalizationKey.footer.accessWebPlatform)}
                 </p>
 
                 <Link to={links.platform[0].path}>

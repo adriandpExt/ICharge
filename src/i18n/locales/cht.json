@@ -157,6 +157,9 @@
     "termsOfService": {
       "label": "服務條款"
     },
+    "accessWebPlatform": {
+      "label": "訪問我們的網絡平臺"
+    },
     "downloadApp": {
       "label": "下載應用程序"
     },
@@ -348,6 +351,15 @@
     "brand": {
       "label": "iScreen"
     },
+    "mediaNetwork": {
+      "label": "媒體網絡" 
+    },
+    "poweredByICharge":{
+      "label": "iCharge提供动力"
+    },
+    "bannerText": {
+      "label": "商業空間 +DOOH廣告解決方案"
+    },
     "downloadButton": {
       "label": "在這裏下載小冊子"
     },
@@ -461,7 +473,7 @@
         "label": "爲什麼要做廣告"
       },
       "whyAdvertiseFlavorText": {
-        "label": "與iScreen Media Network合作，在關鍵時刻將您的品牌與消費者連接起來。 我們邀請品牌、機構和戰略合作伙伴探索創新的數字廣告機會。"
+        "label": "與iScreen媒體網絡合作，在關鍵時刻將您的品牌與消費者連接起來。 我們邀請品牌、機構和戰略合作伙伴探索創新的數字廣告機會。"
       },
       "whyAdvertiseOne": {
         "title": {
@@ -759,6 +771,12 @@
       "label": "高容量並具有廣闊廣告空間"
     },
     "icharge24maxdesc2": {
+      "label": "座位容量：購物中心、大型大廳、宴會廳"
+    },
+    "ichargepromaxdesc": {
+      "label": "充电生态系统的巅峰——超影响"
+    },
+    "ichargepromaxdesc2": {
       "label": "座位容量：購物中心、大型大廳、宴會廳"
     },
     "icharge48promaxdesc": {

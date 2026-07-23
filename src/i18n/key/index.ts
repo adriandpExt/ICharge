@@ -78,6 +78,9 @@ const LocalizationKey = {
 
   iScreen: {
     brand: "iScreen.brand.label",
+    mediaNetwork: "iScreen.mediaNetwork.label",
+    poweredByICharge: "iScreen.poweredByICharge.label",
+    bannerText: "iScreen.bannerText.label",
     downloadButton: "iScreen.downloadButton.label",
     about: {
       aboutTitle: "iScreen.about.aboutTitle.label",
@@ -226,6 +229,7 @@ const LocalizationKey = {
     joinNewsletter: "footer.joinNewsletter.label",
     emailPlaceholder: "footer.emailPlaceholder.label",
     subscribe: "footer.subscribe.label",
+    accessWebPlatform: "footer.accessWebPlatform.label",
     downloadApp: "footer.downloadApp.label",
     googlePlay: "footer.googlePlay.label",
     appStore: "footer.appStore.label",
@@ -327,6 +331,8 @@ const LocalizationKey = {
     icharge12prodesc2: "services.icharge12prodesc2.label",
     icharge24maxdesc: "services.icharge24maxdesc.label",
     icharge24maxdesc2: "services.icharge24maxdesc2.label",
+    ichargepromaxdesc: "services.ichargepromaxdesc.label",
+    ichargepromaxdesc2: "services.ichargepromaxdesc2.label",
     icharge48promaxdesc: "services.icharge48promaxdesc.label",
     icharge48promaxdesc2: "services.icharge48promaxdesc2.label",
     ichargestandeedesc: "services.ichargestandeedesc.label",
