@@ -86,6 +86,12 @@
     "returnDescription": {
       "label": "Insert the power bank into iCharge station. Pay the rental fee."
     },
+    "refund": {
+      "label": "Refund"
+    },
+    "refundDescription": {
+      "label": "Tap \"Refund\" in your iCharge Wallet to receive your security deposit in real time."
+    },
     "sectors": {
       "label": "Sectors"
     },
@@ -385,7 +391,7 @@
       "productOverviewTitle": {
         "label": "Product Overview"
       },
-      "flavorText" :{
+      "flavorText": {
         "label": "Each ad runs for 10-15 seconds in a continuous loop. Supported formats include MP4 (10-20MB) and images (JPG, WEBP, PNG), with a total file size of up to 200MB for iScreen Pro and iScreen Max, and up to 700MB for iScreen Pro Max. Ads are shown at least once every 2 minutes (depending on system performance), delivering high-frequency exposure of around 30-300 plays per hour for strong visibility and consistent audience engagement."
       },
       "height": {

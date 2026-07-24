@@ -30,6 +30,8 @@ const LocalizationKey = {
     chargeDescription: "home.chargeDescription.label",
     return: "home.return.label",
     returnDescription: "home.returnDescription.label",
+    refund: "home.refund.label",
+    refundDescription: "home.refundDescription.label",
     sectors: "home.sectors.label",
     stayPowered: "home.stayPowered.label",
     stayPoweredDesc: "home.stayPoweredDesc.label",
@@ -83,7 +85,8 @@ const LocalizationKey = {
       aboutTitle: "iScreen.about.aboutTitle.label",
       aboutText: "iScreen.about.aboutText.label",
       aboutKeyFeatures: {
-        keyFeaturesTitle: "iScreen.about.aboutKeyFeatures.keyFeaturesTitle.label",
+        keyFeaturesTitle:
+          "iScreen.about.aboutKeyFeatures.keyFeaturesTitle.label",
         keyFeatureOne: "iScreen.about.aboutKeyFeatures.keyFeatureOne.label",
         keyFeatureTwo: "iScreen.about.aboutKeyFeatures.keyFeatureTwo.label",
         keyFeatureThree: "iScreen.about.aboutKeyFeatures.keyFeatureThree.label",
@@ -143,7 +146,8 @@ const LocalizationKey = {
     },
     whyAdvertise: {
       whyAdvertiseTitle: "iScreen.whyAdvertise.whyAdvertiseTitle.label",
-      whyAdvertiseFlavorText: "iScreen.whyAdvertise.whyAdvertiseFlavorText.label",
+      whyAdvertiseFlavorText:
+        "iScreen.whyAdvertise.whyAdvertiseFlavorText.label",
       whyAdvertiseOne: {
         title: "iScreen.whyAdvertise.whyAdvertiseOne.title.label",
         desc: "iScreen.whyAdvertise.whyAdvertiseOne.desc.label",
@@ -166,12 +170,13 @@ const LocalizationKey = {
       },
     },
     benefitsForAdvertisers: {
-      benefitsForAdvertisersTitle: "iScreen.benefitsForAdvertisers.benefitsForAdvertisersTitle.label",
+      benefitsForAdvertisersTitle:
+        "iScreen.benefitsForAdvertisers.benefitsForAdvertisersTitle.label",
       benefitOne: "iScreen.benefitsForAdvertisers.benefitOne.label",
       benefitTwo: "iScreen.benefitsForAdvertisers.benefitTwo.label",
       benefitThree: "iScreen.benefitsForAdvertisers.benefitThree.label",
       benefitFour: "iScreen.benefitsForAdvertisers.benefitFour.label",
-    }
+    },
   },
 
   partnerWithUs: {
