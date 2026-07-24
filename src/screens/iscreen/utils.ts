@@ -38,7 +38,7 @@ export const productOverview: IProductOverview = {
     },
     {
       img: ProTwo,
-      name: 'iScreen Pro (11")',
+      name: 'iScreen Pro 12',
       desc: LocalizationKey.iScreen.productOverview.products.proTwo.desc,
       specs: {
         height: "800px",
