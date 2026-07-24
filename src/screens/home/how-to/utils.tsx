@@ -34,7 +34,7 @@ export const cardItems: CardItems[] = [
 ];
 
 export const handleLenght = (step: number) => {
-  if (step === 4) {
+  if (step === 5) {
     return {
       item: "items-start",
       height: "h-0",
@@ -77,6 +77,12 @@ export const useStepReference = () => {
         title: t(LocalizationKey.home.return),
         description: t(LocalizationKey.home.returnDescription),
         imgClassName: "bg-[url('@/assets/timeline/timeline4.jpg')]",
+      },
+      {
+        stepNumber: 5,
+        title: t(LocalizationKey.home.refund),
+        description: t(LocalizationKey.home.refundDescription),
+        imgClassName: "bg-[url('@/assets/timeline/timeline5.jpeg')]",
       },
     ],
     [t],

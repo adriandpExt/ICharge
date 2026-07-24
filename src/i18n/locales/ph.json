@@ -80,6 +80,12 @@
     "returnDescription": {
       "label": "Ibalik ang powerbank sa pamamagitan ng pagpasok nito sa bakanteng slot sa alinmang makina na malapit sa iyo."
     },
+    "refund": {
+      "label": "Refund"
+    },
+    "refundDescription": {
+      "label": "I-tap ang \"Refund\" sa iyong iCharge Wallet upang matanggap agad ang iyong security deposit."
+    },
     "sectors": {
       "label": "Sektor"
     },

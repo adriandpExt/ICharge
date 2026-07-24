@@ -86,6 +86,12 @@
     "returnDescription": {
       "label": "將行動電源插回 iCharge 充电站，支付租金。"
     },
+    "refund": {
+      "label": "退款"
+    },
+    "refundDescription": {
+      "label": "輕點 iCharge 錢包中的「退款，即可立即領取您的押金。"
+    },
     "sectors": {
       "label": "行業"
     },
